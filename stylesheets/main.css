@@ -746,9 +746,9 @@ body {
  *********************************************/
 
 .theme-beige body {
-	color: #ccc;
+	color: #eae6d1;
 
-	background: #ccc;
+	background: #eae6d1;
 	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(247,242,211,1) 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(247,242,211,1)));
 	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
