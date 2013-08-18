@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <script type="text/javascript" src="d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+    <title>Marey's Train</title>
+</head>
+<style>
+
+svg {
+  font: 10px sans-serif;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.station line {
+  stroke: #ddd;
+  stroke-dasharray: 1,1;
+  shape-rendering: crispEdges;
+}
+
+.station text {
+  text-anchor: end;
+}
+
+.train line {
+  stroke-width: 1.5px;
+}
+
+.train circle {
+  fill: #777;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+</style> 
+
+<body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <h1 id="project_title">Mareys-Trains</h1>
+        </header>
+        <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Mareys-Trains/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Mareys-Trains/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Mareys-Trains" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+         
+    <!-- MAIN CONTENT -->
+    <div>
+      <section id="main_content" class="inner">
+        <h2> Trains moving from Chennai to Bangalore and viceversa</h2>
+        <script src="mareys_trains.js"></script>
+      </section>
+    </div>
+    
+</body>
+</html>

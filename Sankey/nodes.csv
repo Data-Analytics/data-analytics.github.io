@@ -1,0 +1,39 @@
+ID,name,index,complete,failingTests,estimate
+1,Confirm viewer : List pending confirms,0,12,0,
+2,Confirm viewer : List all confirms during period,1,86,20,
+3,Trayport : Emphasise confirms functionality,2,51,25,
+4,Joule user : View full trade/confirm details,3,58,10,
+5,Joule user : View counterparty public confirm steps,4,87,32,
+6,Trade Counterparty Confirm Viewer : View own counterparty workflow steps,5,71,25,
+7,Trade Counterparty Confirm Viewer : View pending confirms for role,6,70,12,
+8,Preconfirmer : Change pre-defined trade terms,7,82,90,
+9,Confirmer : Confirm acceptance,8,28,,
+10,Confirmer : Reject trade,9,30,,
+11,Confirmer : Edit trade terms,10,88,,
+12,Confirmer : Restart workflow if counterparty changes trade,11,57,,
+13,Counterparty : Receive trade change notifications,12,32,,
+14,Broker : Receive rejection notifications,13,,,
+15,Broker : Receive contract term change notifications,14,,,
+16,API Connected Application : Receive workflow state changes,15,54,,
+17,API Connected Application : Receive confirmation ID when trade confirmed,16,29,,
+18,Trader Client Manager : Confirm details in Barri,17,64,,
+19,Broker Client Manager : Confirm details in Barri,18,67,,
+1,Joule confirms panel (trader),19,48,,4
+2,Web main page (trader),20,23,,4
+3,Web login,21,40,,1.5
+4,Web main page (broker),22,,,1.5
+5,Joule trade details dialogue,23,,,3
+6,Queued workflow event message handler,24,,,4
+7,Authentication service,25,42,,2
+8,Workflow repository service,26,29,,3
+9,Workflow timed transition service,27,62,,3
+10,New trade leg message handler,28,85,,2.5
+11,Query confirms service,29,46,,1.5
+12,Logging service,30,98,,1.25
+13,Confirm update publisher,31,85,,1.5
+14,Amended trade leg message handler,32,58,,0.75
+15,Confirm workflow service,33,27,,12.5
+16,Deleted trade leg message handler,34,,,0.75
+17,Confirm notes service,35,97,,1.5
+18,Billing extract service,36,27,,1.5
+19,SMTP mail service,37,90,,3

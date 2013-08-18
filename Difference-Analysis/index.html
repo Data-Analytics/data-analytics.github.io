@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <title>Difference Chart</title>
+	<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.area.above {
+  fill: rgb(252,141,89);
+}
+
+.area.below {
+  fill: rgb(145,207,96);
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+	</style>
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+  </head>
+  <body>
+
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <h1 id="project_title">Difference Chart</h1> 
+           </header>
+            <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Difference-Chart/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Difference-Chart/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Difference-Chart" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+
+        </div>
+    
+  <!-- MAIN CONTENT -->
+        <div>
+          <section id="main_content" class="inner" >   
+			<div>
+			  <div style="width:20%;float:left;display:inline-block" >
+<textarea id="input_data" name="input_data" rows="22" cols="24">
+date,"New York","Paris"
+20120901,73,64
+20120902,77,63
+20120903,69,66
+20120904,89,56
+20120905,52,51
+20120906,89,52
+20120907,78,76
+20120908,51,76
+20120909,74,72
+20120910,89,63
+20120911,72,80
+20120912,73,68
+20120913,53,84
+20120914,57,81
+20120915,59,51
+20120916,55,55
+20120917,82,86
+20120918,51,58
+20120919,76,57
+20120920,76,70
+</textarea></br>
+			<button id="render" class="name">render</button>
+			</div>
+			<div id="marimekkomap" style="width:78%;float:right;display:inline-block"></div>
+			<script type="text/javascript" src="difference_chart.js"></script>
+		  </div>
+		</section>
+      </div>
+</body>
+</html>

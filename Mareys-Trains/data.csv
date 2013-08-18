@@ -1,0 +1,17 @@
+number,Train_Name,type,direction,stop|Chennai Central (MAS)|0|1,stop|Perambur (PER)|6|1,stop|Trivellore (TRL)|42|1,stop|Arakkonam (AJJ)|69|1,stop|ANAVARDIKHANPET (AVN)|81|1,stop|Sholinghur (SHU)|90|1,stop|Walajah Road Jn (WJR)|105|1,stop|Mukundarayapurm (MCN)|113|1,stop|Katpadi Jn (KPD)|130|1,stop|Gudiyattam (GYM)|155|1,stop|Ambur (AB)|182 |1,stop|Vaniyambadi (VN)|198|1,stop|Jolarpettai (JTJ)|214|1,stop|Kuppam (KPN)|257 |1,stop|Bangarapet (BWT)|292|1,stop|Malur (MLO)|318|1,stop|Whitefield (WFD)|338|1,stop|Krishnarajapurm (KJM)|348 |1,stop|Bangalore East (BNCE)|355 |1,stop|Bangalore Cant (BNC)|357 |1,stop|Bangalore Cy Jn (SBC)|362 |1
+12007,Shatabdi Express,N,S,6:00am,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,10:50am
+12008,Shatabdi Express,L,N,9:25pm,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4:25pm
+12027,Shatabdi Express,B,S,5:30pm,-,-,-,-,-,-,-,7:05pm,-,-,-,-,-,-,-,-,-,-,10:11pm,10:30pm
+12028,Shatabdi Express,N,N,11:00am,-,-,-,-,-,-,-,9:00am,-,-,-,-,-,-,-,-,-,-,6:10am,6:00am
+12295,Sangha Mitra Express,L,N,3:05pm,-,-,1:35pm,-,-,-,-,12:35pm,-,-,-,11:30am,-,10:15am,-,-,9:28am,-,9:12am,9:00am
+12296,Sangha Mitra Express,B,S,1:55pm,-,-,3:05pm,-,-,-,-,4:00pm,-,-,-,5:30pm,-,6:45pm,-,-,7:38pm,7:48pm,8:05pm,8:20pm
+12607,Lalbagh Express ,N,S,3:35pm,3:47pm,-,4:40pm,-,5:00pm,5:15pm,-,5:45pm,-,6:25pm,-,6:55pm,7:38pm,8:10pm,-,-,8:55pm,-,9:10pm,9:35pm
+12608,Lalbagh Express ,L,N,12:15pm,11:35am,-,10:45am,-,10:20am,10:10am,-,9:50am,-,9:10am,-,8:45am,8:03am,7:35am,-,-,6:53am,-,6:42am,6:30am
+12609,Bangalore Express,B,S,1:35pm,-,2.10pm,2:20pm,-,3:00pm,3:15pm,3:25pm,3:45pm,4:05pm,4:25pm,4:40pm,5:08pm,5:47pm,6:20pm,6:45pm,7:02pm,7:15pm,7:29pm,7:38pm,8:05pm
+12610,CHENNAI EXPRESS,N,N,2:30pm,1:55pm,1:25pm,1:00pm,-,12:35pm,12:20pm,12:10pm,11:50am,11:25am,11:00am,10:45am,10:30am,9:48am,9:20am,8:53am,8:35am,8:24am,-,8:12am,8:00am
+12639,Brindavan Express,L,S,7:50am,-,-,8:55am,-,-,9:30am,-,9:55am,-,10:35am,10:50am,11:07am,11:35am,12:07pm,-,-,12:57pm,-,1:40pm,2:00pm
+12640,Brindavan Express,B,N,9:15pm,8:25pm,-,7:35pm,-,-,7:00pm,-,6:40pm,-,5:55pm,5:40pm,5:25pm,4:40pm,4:15pm,-,-,3:33pm,-,3:22pm,3:10pm
+17311,MAS VASCO EXP,N,S,1:50pm,-,-,2:55pm,-,-,-,-,3:55pm,-,-,-,5:45pm,-,7:10pm,-,-,8:10pm,-,-,-
+17312,VSG CHENNAI EXP,L,N,11:55am,11:15am,-,10:25am,-,-,-,-,9:30am,-,-,-,8:25am,-,7:10am,-,-,6:10am,-,-,-
+22625,SBC DOUBLE DECK,B,S,7:25am,-,-,8:30am,-,-,-,-,9:20am,-,10:00am,-,10:35am,-,11:45am,-,-,12:35pm,-,1:05pm,1:30pm
+22626,MAS DOUBLE DECK,N,N,8:45pm,8:10pm,-,7:10pm,-,-,-,-,6:15pm,-,5:30pm,-,5:02pm,-,3:45pm,-,-,3:01pm,-,2:51pm,2:40pm

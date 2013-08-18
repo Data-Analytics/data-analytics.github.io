@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Dynamic Treemap</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link type="text/css" rel="stylesheet" href="treemap.css"/>
+  <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+    </script>
+
+ </head>
+ <style>
+    body {
+        background: #cccccc;
+        }
+</style>
+ <body>
+    <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <h1 id="project_title">Tree Map</h1>
+           </header>
+           
+            <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-treemap/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-treemap/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-treemap" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+    <div>
+      <!-- MAIN CONTENT -->
+     <div>
+          <section id="main_content" class="inner" >   
+            <div style="width:25%;float:left;display:inline-block" ><br/><br/>
+                  <textarea id="input_data" name="input_data" rows="20" cols="22">
+Group,name,param1,param2
+Alpha,A,25,41
+Alpha,B,9,69
+Alpha,C,91,52
+Alpha,D,76,44
+Beta,E,77,26
+Beta,F,1,40
+Beta,G,94,84
+Beta,H,49,77
+Gamma,I,85,28
+Gamma,J,38,100
+Gamma,K,92,74
+Gamma,L,58,98
+Delta,M,99,54
+Delta,N,85,7
+Delta,O,70,1
+Delta,P,98,40
+                  </textarea></br>
+                  <button id="param1" class="name">param1</button>
+                  <button id="param2" class="name">param2</button>
+                  <button id="render" class="name">render</button><br/>
+  
+        heading needs to be the same you can alter the other values and click render to generate output for new data in the similar format
+         </div>
+         <div id="chart" style="width:73%;float:right;display:inline-block">
+            <b>According to Group, name the corresponding the tree map would be rendered either on param1 or param2</b>
+                <div id="Wrappertreemap"></div>
+         </div>
+    </section>
+    </div>
+   <script type="text/javascript" src="treemap.js"></script>
+
+  </body>
+</html>

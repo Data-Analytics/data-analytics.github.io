@@ -110,7 +110,7 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #f2f2f2;
+  color: #007edf;
   text-shadow: none;
 
   transition: color 0.5s ease;
@@ -123,32 +123,6 @@ a {
   -o-transition: text-shadow 0.5s ease;
   -ms-transition: color 0.5s ease;
   -ms-transition: text-shadow 0.5s ease;
-}
-
-button {
-  font: 14px Helvetica Neue;
-  background-color: #222;
-  
-  background-image: -moz-linear-gradient(top, rgba(255,255,255,.25), rgba(255,255,255,.11));
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(255,255,255,.25)),color-stop(1, rgba(255,255,255,.11)));
-  background-image: -webkit-linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.11));
-  color: #fff;
-  text-rendering: optimizeLegibility;
-  text-shadow: 0 -1px 1px #222;
-  padding: 6px 10px 6px 10px;
-  border: 0;
-  border-radius: 0;
-  border-bottom: 1px solid #222;
-  margin: 0;
-  -moz-box-shadow: 0 1px 3px #999;
-  -webkit-box-shadow: 0 1px 3px #999;
-  
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  
-  
 }
 
 #main_content a:hover {
@@ -289,7 +263,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 1200px;
+  max-width: 960px;
   padding: 20px 10px;
   margin: 0 auto;
 }
@@ -301,8 +275,8 @@ Full-Width Styles
   right: 10px;
   z-index: 10;
   padding: 10px 50px 10px 10px;
-  color: #ffcc00;
-  background: url('../images/blacktocat.png') #bbbbbb no-repeat 95% 50%;
+  color: #fff;
+  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
@@ -333,6 +307,13 @@ Full-Width Styles
 #project_tagline {
   color: #fff;
   font-size: 24px;
+  font-weight: 300;
+  background: none;
+  text-shadow: #111 0px 0px 10px;
+}
+
+#contact {
+  color: #aaa;
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
@@ -388,7 +369,7 @@ Full-Width Styles
 }
 
 #footer_wrap {
-  background: #212121;
+  background: #4276b6;
 }
 
 
@@ -447,6 +428,7 @@ Small Device Styles
 
 }
 
+
 #banner {
   z-index: 100;
   left: 0;
@@ -454,7 +436,7 @@ Small Device Styles
   height: 50px;
   margin-right: -382px;
   position: fixed;
-  top: 115px;
+  top: 185px;
   background: #ffcc00;
   border: 1px solid #f0b500;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -524,7 +506,6 @@ Small Device Styles
   line-height: 52px;
   font-size: 90%;
   color: #9d7f0d;
-  text-transform: uppercase;
   text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
 }
 #banner ul {

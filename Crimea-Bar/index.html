@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Crimea bar</title>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <style type="text/css">
+
+    svg {
+      width: 820px;
+      height: 450px;
+      font: 10px sans-serif;
+      shape-rendering: crispEdges;
+    }
+        
+
+    </style>
+   <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+
+  </head>
+  <body>
+  
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <h1 id="project_title">Crimea bar</h1> 
+           </header>
+           <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Crimea/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Crimea/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Crimea" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+    
+   <!-- MAIN CONTENT -->
+           <div >
+          <section id="main_content" class="inner" >   
+  <div>
+  <div style="width:25%;float:left;display:inline-block" >
+    <table border="1"><tr><td width="40px" bgcolor="lightblue">Param3</td><td width="40px" bgcolor="Darkgray">Param2</td><td width="40px" bgcolor="Lightpink">Param1</td></tr></table>
+  <textarea id="input_data" name="input_data" rows="20" cols="25">
+Group,param1,param2,param3
+1,230,460,1440
+2,180,520,1270
+3,155,350,935
+4,195,195,560
+5,180,155,550
+6,330,130,650
+7,260,130,430
+8,290,110,490
+9,355,100,290
+10,135,95,245
+11,100,140,325
+12,40,120,215
+</textarea></br>
+<button id="render" class="name">render</button>
+</div>
+  
+  <div id="crimeamap" style="width:72%;float:right;display:inline-block"></div>
+    <script type="text/javascript" src="crimea-stacked-bar.js"></script>
+
+    </div>
+        </section>
+        </div>
+  </body>
+</html>

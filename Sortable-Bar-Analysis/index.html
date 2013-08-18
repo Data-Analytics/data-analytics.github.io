@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+  fill-opacity: .9;
+}
+
+.x.axis path {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+</style>
+<script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+<title>Sortable Bar Chart</title> 
+</head>
+<body>
+
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <h1 id="project_title">Sortable Bar Chart</h1> 
+              
+           </header>
+            <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Sortable-Bar-Chart/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Sortable-Bar-Chart/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Sortable-Bar-Chart" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+
+        </div>
+	<!-- MAIN CONTENT -->
+	   <div>
+			<section id="main_content" class="inner" >       
+				<label><input type="checkbox"> Sort values</label>		
+			  <div>
+  <div style="width:25%;float:left;display:inline-block" >
+  <textarea id="input_data" name="input_data" rows="24" cols="20">
+Group,Param
+A,0.81
+B,0.14
+C,0.27
+D,0.42
+E,0.27
+F,0.22
+G,0.20
+H,0.60
+I,0.69
+J,0.01
+K,0.07
+L,0.40
+M,0.25
+N,0.67
+O,0.75
+P,0.19
+Q,0.09
+R,0.59
+S,0.63
+
+</textarea></br>
+<button id="render" class="name">render</button>
+</div>
+  <div>
+  <div id="sortedmap" style="width:72%;float:right;display:inline-block">
+    <script type="text/javascript" src="sortable_bar.js"></script></div>
+    </div>
+        </section>
+        </div>
+		
+			</section>
+		</div>
+
+</body>
+</html>

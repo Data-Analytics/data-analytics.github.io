@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Character - Visualizer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+        <style>
+             .label {
+        box-sizing:border-box;
+        float:left;
+        margin-right:1px;
+        padding-top:4px;
+        font-family:arial;
+        text-align:center;
+        color:#fff;
+        background-color:  #6D7B8D;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+                    }
+
+
+        #data-box {
+        position:absolute;
+        font-family:arial;
+        width:60px;
+        height:30px;
+        padding:2px;
+        box-sizing:border-box;
+        border:1px solid #555;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 15px;
+        background-color:  #D9D9D9;
+        text-align:center;
+        visibility:hidden;
+        }       
+        </style>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <h1 id="project_title">Character Visualisation</h1>
+            </header>
+            <div id="banner">
+             <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/character-Visualisation/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/character-Visualisation/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/character-Visualisation" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+        
+        <!-- MAIN CONTENT -->
+
+  <!-- MAIN CONTENT -->
+        <div>
+          <section id="main_content" class="inner" >   
+			<div>
+            <div style="width:20%;float:left;display:inline-block">
+            <textarea id="source" name="input_data" rows="26" cols="24" placeholder="type a text"  >
+            Data visualization is closely related to information graphics, information visualization, scientific visualization, and statistical graphics. In the new millennium, data visualization has become an active area of research, teaching and development. According to Post et al. (2002), it has united scientific and information visualization. Brian Willison has demonstrated that data visualization has also been linked to enhancing agile software development and customer engagement.</textarea>
+            <button id="change-to-descending" class="name" >←</button>
+            <button id="change-to-ascending" class="name">→</button>
+            <button id="change-to-alphabetic" class="name">Render</button>
+            </div>
+            <div style="width:78%;float:right;display:inline-block">
+            <div id="data-box"></div>
+            <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+            <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+            <script type="text/javascript" src="/./javascripts/klass.min.js"></script>
+            <script src="Character-Analysis.js"></script>
+            </div>
+            </div>
+        </section>
+        </div>
+       
+    </body>
+</html>

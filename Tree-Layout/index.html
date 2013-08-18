@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<style>
+.link {
+  fill: none;
+  stroke: #005555;
+}
+</style>
+<title>Tree layout</title>
+<script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <h1 id="project_title">Tree layout</h1> 
+           </header>
+            <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Tree/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Tree/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Tree" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+	
+	 <!-- MAIN CONTENT -->
+           <div >
+          <section id="main_content" class="inner" >   
+  <div>
+  <div style="width:20%;float:left;display:inline-block" >
+  <textarea id="input_data" name="input_data" rows="20" cols="18">
+source,target
+A1,A2
+A2,A3
+A2,A4
+A2,A5
+A3,A6
+A3,A7
+A3,A8
+A4,A9
+A4,A10
+A4,A11
+A5,A12
+A5,A13
+A5,A14
+</textarea></br>
+<button id="render" class="name">render</button>
+</div>
+  
+  <div id="treemap" style="width:78%;float:right;display:inline-block"></div>
+    <script type="text/javascript" src="tree_layout.js"></script>
+    </div>
+        </section>
+        </div>
+
+</body>
+</html>

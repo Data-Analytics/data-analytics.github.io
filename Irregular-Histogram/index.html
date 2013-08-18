@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <title>Irregular Histogram</title>
+	<style>
+
+	.svg {
+        font: 10px sans-serif;
+        }
+
+    rect {
+        fill: steelblue;
+        }
+
+    .axis path, .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+            }
+
+	</style>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+  </head>
+  <body>
+
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <h1 id="project_title">Irregular Histogram</h1> 
+           </header>
+           <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Irregular-Histogram/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Irregular-Histogram/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Irregular-Histogram" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+    
+  <!-- MAIN CONTENT -->
+        <div>
+          <section id="main_content" class="inner" >   
+			<div>
+			  <div style="width:20%;float:left;display:inline-block" >
+<textarea id="input_data" name="input_data" rows="22" cols="20">
+Income,People
+0,245981
+8.8,150444
+30,126063
+49.9,123519
+70,115029
+90.7,27714
+150.3,353239
+170.2,396008
+190,396725
+210,398640
+230.1,401932
+250,416079
+270,412727
+289.8,385192
+309.7,343178
+329.7,293707
+389.3,165132
+442.3,442075
+543.4,196526
+883.9,48600
+</textarea></br>
+			<button id="render" class="name">render</button>
+			</div>
+			<div id="crimeamap" style="width:78%;float:right;display:inline-block"></div>
+			<script type="text/javascript" src="Irregular_Histogram.js"></script>
+		  </div>
+		</section>
+      </div>
+</body>
+</html>
