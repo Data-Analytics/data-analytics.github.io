@@ -688,7 +688,8 @@ body {
 
 .reveal.page .slides>section.stack {
 	padding: 0;
-	background: none;
+	background: url(../images/body-background.png) no-repeat;
+    background-size: 100%;
 }
 
 .reveal.page .slides>section.past {
