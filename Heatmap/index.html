@@ -23,12 +23,13 @@
 	</style>
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
-  </head>
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+    </head>
   <body>
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
-            <header class="inner">
+            <header class="inner container">
               <h1 id="project_title">Heat Map</h1> 
            </header>
             <div id="banner">
@@ -48,10 +49,10 @@
         </div>
     
   <!-- MAIN CONTENT -->
-        <div>
-          <section id="main_content" class="inner" >   
+        <div class="container heatmap">
+          <section id="main_content" class="inner">   
 			<div>
-			  <div style="width:20%;float:left;display:inline-block" >
+			  <div style="width:25%;float:left;display:inline-block" >
 <textarea id="input_data" name="input_data" rows="22" cols="20">
 date,bucket,count
 2013-05-20,800,119
@@ -77,7 +78,7 @@ date,bucket,count
 </textarea></br>
 			<button id="render" class="name">render</button>
 			</div>
-			<div id="crimeamap" style="width:78%;float:right;display:inline-block"></div>
+			<div id="crimeamap" style="width:70%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="heatmap.js"></script>
 		  </div>
 		</section>

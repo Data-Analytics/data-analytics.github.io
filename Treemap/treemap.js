@@ -1,6 +1,6 @@
-var width = 840,
-    height = 450,
-    color = d3.scale.category20b();
+var width = 710,
+    height = 420,
+    color = d3.scale.category20();
 
  d3.select("#render").on("click", function() {
     

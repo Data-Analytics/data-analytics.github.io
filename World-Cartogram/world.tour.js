@@ -1,11 +1,11 @@
-var width = 960,
+var width = 920,
     height = 500;
 
 var projection = d3.geo.orthographic()
-    .scale(248)
+    .scale(228)
     .clipAngle(90);
 
-var canvas = d3.select("body").append("canvas")
+var canvas = d3.select(".tour").append("canvas")
     .attr("width", width)
     .attr("height", height);
 
@@ -40,7 +40,7 @@ function ready(error, world, names) {
 
   (function transition() {
     d3.transition()
-        .duration(400)
+        .duration(300)
         .each("start", function() {
           title.text(countries[i = (i + 1) % n].name);
         })

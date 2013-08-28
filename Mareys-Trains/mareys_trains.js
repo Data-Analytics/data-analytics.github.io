@@ -3,8 +3,8 @@ var stations = []; // lazily loaded
 var formatTime = d3.time.format("%I:%M%p");
 
 var margin = {top: 20, right: 30, bottom: 20, left: 200},
-    width = 1200 - margin.left - margin.right,
-    height = 550 - margin.top - margin.bottom;
+    width = 960 - margin.left - margin.right,
+    height = 480 - margin.top - margin.bottom;
 
 var x = d3.time.scale()
     .domain([parseTime("5:30AM"), parseTime("10:45PM")])
@@ -23,7 +23,7 @@ var xAxis = d3.svg.axis()
     .ticks(14)
     .tickFormat(formatTime);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".trains").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

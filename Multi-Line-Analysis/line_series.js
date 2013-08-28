@@ -1,6 +1,6 @@
 var margin = {top: 20, right: 80, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 680 - margin.left - margin.right,
+    height = 420 - margin.top - margin.bottom;
 
 var parseDate = d3.time.format("%Y%m%d").parse;
 
@@ -10,7 +10,7 @@ var x = d3.time.scale()
 var y = d3.scale.linear()
     .range([height, 0]);
 
-var color = d3.scale.category10();
+var color = d3.scale.category20();
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -32,7 +32,7 @@ d3.select("#render").on("click", function() {
     d3.select("svg")
 		.remove();
 	   
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".multi-line").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

@@ -1,5 +1,5 @@
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
+    width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
 
 var formatPercent = d3.format(".0%");
@@ -25,7 +25,7 @@ d3.select("#render").on("click", function() {
     d3.selectAll("svg")
        .remove(); 
 
-	var svg = d3.select("body").append("svg")
+	var svg = d3.select(".sortable-bar").append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -81,7 +81,7 @@ d3.select("#render").on("click", function() {
         .map(function(d) { return d.Group; }))
         .copy();
 
-    var transition = svg.transition().duration(500),
+    var transition = svg.transition().duration(400),
         delay = function(d, i) { return i * 50; };
 
     transition.selectAll(".bar")

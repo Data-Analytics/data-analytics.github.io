@@ -7,6 +7,7 @@
   <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
   <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
   <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     </script>
 
  </head>
@@ -14,7 +15,7 @@
  <body>
     <!-- HEADER -->
         <div id="header_wrap" class="outer">
-            <header class="inner">
+            <header class="inner container">
               <h1 id="project_title">Tree Map</h1>
            </header>
            
@@ -33,11 +34,14 @@
             </div>
           </div><!-- end banner -->
         </div>
+    <div class="container">
+        
     <div>
       <!-- MAIN CONTENT -->
      <div>
           <section id="main_content" class="inner" >   
-            <div style="width:25%;float:left;display:inline-block" ><br/><br/>
+            <div style="width:25%;float:left;display:inline-block" >
+        Alter the values and click render to generate output for new data 
                   <textarea id="input_data" name="input_data" rows="20" cols="22">
 Group,name,param1,param2
 Alpha,A,25,41
@@ -59,17 +63,15 @@ Delta,P,98,40
                   </textarea></br>
                   <button id="param1" class="name">param1</button>
                   <button id="param2" class="name">param2</button>
-                  <button id="render" class="name">render</button><br/>
-  
-        heading needs to be the same you can alter the other values and click render to generate output for new data in the similar format
+                  <button id="render" class="name">render</button>
          </div>
          <div id="chart" style="width:73%;float:right;display:inline-block">
-            <b>According to Group, name the corresponding the tree map would be rendered either on param1 or param2</b>
                 <div id="Wrappertreemap"></div>
+                <b>According to Group, name the corresponding the tree map would be rendered either on param1 or param2</b>
          </div>
     </section>
     </div>
    <script type="text/javascript" src="treemap.js"></script>
-
+   </div>
   </body>
 </html>

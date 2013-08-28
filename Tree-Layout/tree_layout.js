@@ -1,6 +1,6 @@
 var margin = {top: 40, right: 40, bottom: 40, left: 40},
-    width = 960 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 680 - margin.left - margin.right,
+    height = 420 - margin.top - margin.bottom;
 
 var tree = d3.layout.tree()
     .size([height, width]);
@@ -13,7 +13,7 @@ d3.select("#render").on("click", function() {
     d3.select("svg")
        .remove();
            
-	var svg = d3.select("body").append("svg")
+	var svg = d3.select(".tree-layout").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

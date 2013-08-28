@@ -3,8 +3,8 @@ var parseDate = d3.time.format("%Y-%m").parse,
     formatDate = function(d) { return "Q" + ((d.getMonth() / 3 | 0) + 1) + formatYear(d.getFullYear() % 100); };
 
 var margin = {top: 10, right: 20, bottom: 20, left: 100},
-    width = 940 - margin.left - margin.right,
-    height = 450 - margin.top - margin.bottom;
+    width = 680 - margin.left - margin.right,
+    height = 420 - margin.top - margin.bottom;
 
 var y0 = d3.scale.ordinal()
     .rangeRoundBands([height, 0], .2);
@@ -36,7 +36,7 @@ d3.select("#render").on("click", function() {
     d3.selectAll("svg")
        .remove(); 
 	  
-	var svg = d3.select("body").append("svg")
+	var svg = d3.select(".multiple-stack").append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 	  .append("g")

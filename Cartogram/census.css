@@ -1,8 +1,4 @@
 
-      #container {
-        width: 1200px;
-        margin: 20px auto;
-      }
 
       h1 {
         font-size: 100%;
@@ -28,8 +24,8 @@
       }
 
       #map-container {
-        width: 1200px;
-        height: 500px;
+        width: 960px;
+        height: 420px;
         text-align: center;
         position: relative;
         margin: 20px 0;

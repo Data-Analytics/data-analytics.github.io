@@ -20,21 +20,17 @@
   display: none;
 }
 
-label {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
 </style>
 <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
 <title>Sortable Bar Chart</title> 
 </head>
 <body>
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
-            <header class="inner">
+            <header class="inner container">
               <h1 id="project_title">Sortable Bar Chart</h1> 
               
            </header>
@@ -55,12 +51,11 @@ label {
 
         </div>
 	<!-- MAIN CONTENT -->
-	   <div>
+	   <div class="container">
 			<section id="main_content" class="inner" >       
-				<label><input type="checkbox"> Sort values</label>		
-			  <div>
+
   <div style="width:25%;float:left;display:inline-block" >
-  <textarea id="input_data" name="input_data" rows="24" cols="20">
+  <textarea id="input_data" name="input_data" rows="20" cols="20">
 Group,Param
 A,0.81
 B,0.14
@@ -79,21 +74,16 @@ N,0.67
 O,0.75
 P,0.19
 Q,0.09
-R,0.59
-S,0.63
-
 </textarea></br>
 <button id="render" class="name">render</button>
 </div>
-  <div>
-  <div id="sortedmap" style="width:72%;float:right;display:inline-block">
+  <label><input type="checkbox"> Sort values</label>	
+  <div class="sortable-bar" style="width:72%;float:right;display:inline-block">
+    	
+
     <script type="text/javascript" src="sortable_bar.js"></script></div>
-    </div>
         </section>
         </div>
-		
-			</section>
-		</div>
 
 </body>
 </html>

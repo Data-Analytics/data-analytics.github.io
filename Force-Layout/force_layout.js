@@ -1,5 +1,5 @@
-var width = 960,
-    height = 400;
+var width = 680,
+    height = 420;
 	
 
 var force = d3.layout.force()
@@ -10,7 +10,7 @@ d3.select("#render").on("click", function() {
     d3.select("svg")
        .remove();
            
-	var svg = d3.select("body").append("svg")
+	var svg = d3.select(".force-layout").append("svg")
 		.attr("width", width)
 		.attr("height", height);
 

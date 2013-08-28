@@ -1,5 +1,5 @@
 var margin = {top: 20, right: 50, bottom: 90, left: 20},
-    width = 820 - margin.right - margin.left,
+    width = 680 - margin.right - margin.left,
     height = 450 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
@@ -9,14 +9,14 @@ var y = d3.scale.linear()
     .range([0, height]);
 
 var z = d3.scale.ordinal()
-    .range(["lightpink", "darkgray", "lightblue"]);
+    .range(["#E7E1EF", "#C994C7", "#DD1C77"]);
 
 d3.select("#render").on("click", function() {
     
     d3.select("svg")
        .remove();
            
-     var svg = d3.select("body").append("svg")
+     var svg = d3.select(".bar-criema").append("svg")
         .attr("width", width)
         .attr("height", height)
         .append("g")

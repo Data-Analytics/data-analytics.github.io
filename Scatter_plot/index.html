@@ -20,12 +20,13 @@
 <title>Scatter plot</title>
 <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
 </head>
 <body>
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
-            <header class="inner">
+            <header class="inner container">
               <h1 id="project_title">Scatter plot</h1> 
            </header>
            <div id="banner">
@@ -45,10 +46,10 @@
         </div>
 	
 	 <!-- MAIN CONTENT -->
-           <div >
+           <div class="container">
           <section id="main_content" class="inner" >   
   <div>
-  <div style="width:20%;float:left;display:inline-block" >
+  <div style="width:26%;float:left;display:inline-block" >
   <textarea id="input_data" name="input_data" rows="20" cols="18">
 x,y
 0.51,0.74
@@ -67,7 +68,7 @@ x,y
 <button id="render" class="name">render</button>
 </div>
   
-  <div id="scattermap" style="width:78%;float:right;display:inline-block"></div>
+  <div class="scatter-plot" style="width:72%;float:right;display:inline-block"></div>
     <script type="text/javascript" src="scatter_plot.js"></script>
     </div>
         </section>

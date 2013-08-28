@@ -1,7 +1,7 @@
 
 var margin = {top: 20, right: 90, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 680 - margin.left - margin.right,
+    height = 420 - margin.top - margin.bottom;
 
 var parseDate = d3.time.format("%Y-%m-%d").parse,
     formatDate = d3.time.format("%b %d");
@@ -21,7 +21,7 @@ d3.select("#render").on("click", function() {
     d3.select("svg")
 		.remove();
 	   
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select(".heatmap").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

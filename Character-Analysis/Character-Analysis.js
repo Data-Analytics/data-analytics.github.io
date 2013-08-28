@@ -89,18 +89,18 @@ $(document).ready(function () {
             drawBarGraph: function () {
                 
                 // Introducing and defining all variables here
-                var svgWidth = ($("body").width() - 1)*.75,
-                    svgHeight = 400,
-                    barPadding = 1,
+                var svgWidth = ($("body").width())*.45,
+                    svgHeight = 42mb n` 98iok09oilm,uyhgbn  bnm,./ 0,
+                    barPadding = 1
                     data = this.data,
                     minFrequency = this.minFrequency,
                     maxFrequency = this.maxFrequency,
-                    svg = d3.select("body")
+                    svg = d3.select(".character")
                             .append("svg")
                             .attr("id", "graph")
                             .attr("width", svgWidth)
                             .attr("height", svgHeight),
-                    labelcontainer = d3.select("body")
+                    labelcontainer = d3.select(".character")
                                        .append("div")
                                        .attr("id", "labels")
                                        .attr("width", svgWidth)
@@ -173,8 +173,8 @@ $(document).ready(function () {
             updateBarGraph: function (sortorder) {
                 
                 // Definitions
-                var svgWidth = ($("body").width() - 1)*.75,
-                    svgHeight = 400,
+                var svgWidth = ($("body").width())*.45,
+                    svgHeight = 420,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -322,7 +322,7 @@ $(document).ready(function () {
     $("rect").live("mouseover", function (event) {
         
             var top = "420 px",
-                left = (event.pageX-100) + "px";
+                left = (event.pageX-220) + "px";
         
         $("#data-box").text( $(this).attr("data-letter") + " = " + $(this).attr("data-frequency") )
                       .css( "visibility", "visible" )
@@ -333,7 +333,7 @@ $(document).ready(function () {
         
     }).live("mousemove", function () {
             var top = "420px",
-                left = (event.pageX-100) + "px";
+                left = (event.pageX-220) + "px";
         
         $("#data-box").css("top", top)
                       .css("left", left);

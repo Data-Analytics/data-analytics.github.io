@@ -10,7 +10,7 @@ var force = d3.layout.force()
     .charge(-60)
     .on("tick", tick);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".graph").append("svg")
     .attr("width", width)
     .attr("height", height)
     .on("mousemove", mousemove)

@@ -43,7 +43,7 @@
             .reverse()
             .map(function(rgb) { return d3.hsl(rgb); });
 
-      var body = d3.select("body"),
+      var body = d3.select(".cartogram"),
           stat = d3.select("#status");
 
       var fieldSelect = d3.select("#field")
@@ -74,8 +74,8 @@
 
       var map = d3.select("#map"),
           zoom = d3.behavior.zoom()
-            .translate([178, 32])
-            .scale(.94)
+            .translate([-50, -22])
+            .scale(.95)
             .scaleExtent([0.5, 10.0])
             .on("zoom", updateZoom),
           layer = map.append("g")

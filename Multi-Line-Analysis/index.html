@@ -29,12 +29,13 @@
 	</style>
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
-  </head>
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+    </head>
   <body>
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
-            <header class="inner">
+            <header class="inner container">
               <h1 id="project_title">Multi-Series Line Chart</h1> 
              </header>
            <div id="banner">
@@ -54,7 +55,7 @@
         </div>
     
   <!-- MAIN CONTENT -->
-        <div>
+        <div class="container">
           <section id="main_content" class="inner" >   
 			<div>
 			  <div style="width:25%;float:left;display:inline-block" >
@@ -83,7 +84,7 @@ date,Delhi,Mumbai,Chennai
 </textarea></br>
 			<button id="render" class="name">render</button>
 			</div>
-			<div id="Multi-Line-Analysis" style="width:72%;float:right;display:inline-block"></div>
+			<div class="multi-line" style="width:72%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="line_series.js"></script>
 		  </div>
 		</section>

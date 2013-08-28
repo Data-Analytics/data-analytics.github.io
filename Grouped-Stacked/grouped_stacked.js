@@ -6,8 +6,8 @@ var n = 5, // number of layers
     yStackMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y0 + d.y; }); });
 
 var margin = {top: 40, right: 10, bottom: 20, left: 150},
-    width = 1200 - margin.left - margin.right,
-    height = 450 - margin.top - margin.bottom;
+    width = 920 - margin.left - margin.right,
+    height = 380 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
     .domain(d3.range(m))
@@ -25,7 +25,7 @@ var xAxis = d3.svg.axis()
     .tickPadding(6)
     .orient("bottom");
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".grouped-stack").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

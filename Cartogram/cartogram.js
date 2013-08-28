@@ -1,31 +1,5 @@
 (function(exports) {
 
-  /*
-   * d3.cartogram is a d3-friendly implementation of An Algorithm to Construct
-   * Continuous Area Cartograms:
-   *
-   * <http://chrisman.scg.ulaval.ca/G360/dougenik.pdf>
-   *
-   * It requires topojson to decode TopoJSON-encoded topologies:
-   *
-   * <http://github.com/mbostock/topojson/>
-   *
-   * Usage:
-   *
-   * var cartogram = d3.cartogram()
-   *  .projection(d3.geo.albersUsa())
-   *  .value(function(d) {
-   *    return Math.random() * 100;
-   *  });
-   * d3.json("path/to/topology.json", function(topology) {
-   *  var features = cartogram(topology);
-   *  d3.select("svg").selectAll("path")
-   *    .data(features)
-   *    .enter()
-   *    .append("path")
-   *      .attr("d", cartogram.path);
-   * });
-   */
   d3.cartogram = function() {
 
     function carto(topology, geometries) {
@@ -97,10 +71,6 @@
 
         var sizeError = d3.mean(sizeErrors),
             forceReductionFactor = 1 / (1 + sizeError);
-
-        // console.log("meta:", meta);
-        // console.log("  total area:", totalArea);
-        // console.log("  force reduction factor:", forceReductionFactor, "mean error:", sizeError);
 
         projectedArcs.forEach(function(arc) {
           arc.forEach(function(coord) {

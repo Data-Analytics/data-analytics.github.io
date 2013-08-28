@@ -1,26 +1,26 @@
 // From http://mkweb.bcgsc.ca/circos/guide/tables/
 var matrix = [
-  [11975,  5871, 8916, 2868],
-  [ 1951, 10048, 2060, 6171],
-  [ 8010, 16145, 8090, 8045],
-  [ 1013,   990,  940, 6907]
-];
+[12890,	 9471,   3435,	6981],
+[13260,	14400,	12698,	11672],
+[ 9308,	 7768,	 3436,	8115],
+[11694,	10691,	10081,	5190]];
+
 
 var chord = d3.layout.chord()
     .padding(.05)
     .sortSubgroups(d3.descending)
     .matrix(matrix);
 
-var width = 960,
-    height = 500,
+var width = 460,
+    height = 460,
     innerRadius = Math.min(width, height) * .41,
     outerRadius = innerRadius * 1.1;
 
 var fill = d3.scale.ordinal()
     .domain(d3.range(4))
-    .range(["#000000", "#FFDD89", "#957244", "#F26223"]);
+    .range(["#777777", "#FFDD89", "#957244", "#F26223"]);
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select(".chord-diagram").append("svg")
     .attr("width", width)
     .attr("height", height)
   .append("g")

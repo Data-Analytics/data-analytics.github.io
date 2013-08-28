@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+    
         <style>
              .label {
         box-sizing:border-box;
@@ -44,7 +46,7 @@
     <body>
         <!-- HEADER -->
         <div id="header_wrap" class="outer">
-            <header class="inner">
+            <header class="inner container">
               <h1 id="project_title">Character Visualisation</h1>
             </header>
             <div id="banner">
@@ -66,17 +68,18 @@
         <!-- MAIN CONTENT -->
 
   <!-- MAIN CONTENT -->
+        <div class="container"> 
         <div>
           <section id="main_content" class="inner" >   
 			<div>
-            <div style="width:20%;float:left;display:inline-block">
-            <textarea id="source" name="input_data" rows="26" cols="24" placeholder="type a text"  >
+            <div style="width:25%;float:left;display:inline-block">
+            <textarea id="source" name="input_data" rows="20" cols="24" placeholder="type a text"  >
             Data visualization is closely related to information graphics, information visualization, scientific visualization, and statistical graphics. In the new millennium, data visualization has become an active area of research, teaching and development. According to Post et al. (2002), it has united scientific and information visualization. Brian Willison has demonstrated that data visualization has also been linked to enhancing agile software development and customer engagement.</textarea>
             <button id="change-to-descending" class="name" >←</button>
             <button id="change-to-ascending" class="name">→</button>
             <button id="change-to-alphabetic" class="name">Render</button>
             </div>
-            <div style="width:78%;float:right;display:inline-block">
+            <div class="character" style="width:72%;float:right;display:inline-block">
             <div id="data-box"></div>
             <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
             <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
@@ -86,6 +89,6 @@
             </div>
         </section>
         </div>
-       
+        </div>
     </body>
 </html>
