@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <title>Marimekko Chart</title>
+	<style>
+
+    body {
+      font: 10px sans-serif;
+    }
+
+    rect {
+      stroke: #000;
+    }
+
+    svg {
+      shape-rendering: crispEdges;
+    }
+
+	</style>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+  </head>
+  <body>
+
+    <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner container">
+              <h1 id="project_title">Marimekko Chart</h1> 
+           </header>
+           <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Marimekko-Chart/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Marimekko-Chart/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Marimekko-Chart" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+        
+  <!-- MAIN CONTENT -->
+        <div class="container" >
+          <section id="main_content" class="inner" >   
+			<div>
+			  <div style="width:25%;float:left;display:inline-block" >
+<textarea id="input_data" name="input_data" rows="22" cols="20">
+group,names,value
+A,lovers,3840
+A,Berry,1920
+A,Carrots,960
+A,Delicious,400
+B,lovers,1600
+B,Berry,1440
+B,Carrots,960
+B,Delicious,400
+C,lovers,640
+C,Berry,960
+C,Carrots,640
+C,Delicious,400
+D,lovers,320
+D,Berry,480
+D,Carrots,640
+D,Delicious,400
+E,lovers,230
+E,Berry,495
+E,Carrots,170
+E,Delicious,720
+</textarea></br>
+			<button id="render" class="name">render</button>
+			</div>
+			<div id="marimekkomap" style="width:72%;float:right;display:inline-block"></div>
+			<script type="text/javascript" src="marimekko_chart.js"></script>
+		  </div>
+		</section>
+      </div>
+</body>
+</html>

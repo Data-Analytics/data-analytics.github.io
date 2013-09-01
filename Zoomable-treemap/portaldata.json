@@ -1,0 +1,1702 @@
+{
+    "name": "Chicago Data Portal",
+    "children": [
+        {
+            "name": "FOIA",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Budget-Management/c323-fb2i",
+                    "name": "FOIA Log - Budget & Management",
+                    "size": 104,
+                    "value": 4.6443908991413725
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Business-Affairs-Consumer-Protect/ybhx-inqb",
+                    "name": "FOIA Log - Business Affairs & Consumer Protection",
+                    "size": 3250,
+                    "value": 8.086410275323782
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Compliance/pv55-neb6",
+                    "name": "FOIA Log - Compliance",
+                    "size": 55,
+                    "value": 4.007333185232471
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Cultural-Affairs/npw8-6cq9",
+                    "name": "FOIA Log - Cultural Affairs",
+                    "size": 35,
+                    "value": 3.5553480614894135
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Community-Development/rpya-q7ut",
+                    "name": "FOIA Log - Community Development",
+                    "size": 114,
+                    "value": 4.736198448394496
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Mayor-s-Office-for-People-with-Di/fazv-a8mb",
+                    "name": "FOIA Log - Mayors Office for People with Disabilities",
+                    "size": 6,
+                    "value": 1.791759469228055
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Environment/s7ek-ru5b",
+                    "name": "FOIA Log - Environment",
+                    "size": 1751,
+                    "value": 7.467942332285852
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Fleet-Management/ten5-q8vs",
+                    "name": "FOIA Log - Fleet Management",
+                    "size": 52,
+                    "value": 3.9512437185814275
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Graphics-and-Reproduction-Center/57s6-wkzs",
+                    "name": "FOIA Log - Graphics & Reproduction Center",
+                    "size": 5,
+                    "value": 1.6094379124341003
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Health/4h87-zdcp",
+                    "name": "FOIA Log - Health",
+                    "size": 1440,
+                    "value": 7.272398392570047
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Human-Relations/52q7-yupi",
+                    "name": "FOIA Log - Human Relations",
+                    "size": 73,
+                    "value": 4.290459441148391
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Human-Resources/7zkx-3pp7",
+                    "name": "FOIA Log - Human Resources",
+                    "size": 496,
+                    "value": 6.206575926724928
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Independent-Police-Review-Authori/gzxp-vdqf",
+                    "name": "FOIA Log - Independent Police Review Authority",
+                    "size": 372,
+                    "value": 5.918893854273146
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Law/44bx-ncpi",
+                    "name": "FOIA Log - Law",
+                    "size": 378,
+                    "value": 5.934894195619588
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Revenue/zrv6-shhf",
+                    "name": "FOIA Log - Revenue",
+                    "size": 303,
+                    "value": 5.713732805509369
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Special-Events/kpzx-wx3r",
+                    "name": "FOIA Log - Special Events",
+                    "size": 15,
+                    "value": 2.70805020110221
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Zoning-and-Land-Use-Planning/2nra-kpzu",
+                    "name": "FOIA Log - Zoning & Land Use Planning",
+                    "size": 414,
+                    "value": 6.025865973825314
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Chicago-Public-Library/n379-5uzu",
+                    "name": "FOIA Log - Chicago Public Library",
+                    "size": 41,
+                    "value": 3.713572066704308
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Police/wjkc-agnm",
+                    "name": "FOIA Log - Police",
+                    "size": 14247,
+                    "value": 9.564301637217232
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-City-Clerk/72qm-3bwf",
+                    "name": "FOIA Log - City Clerk",
+                    "size": 407,
+                    "value": 6.008813185442595
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Housing-And-Economic-Development/5ztz-espx",
+                    "name": "FOIA Log - Housing & Economic Development",
+                    "size": 1528,
+                    "value": 7.331714969726466
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Chicago-Police-Board/9pd8-s9t4",
+                    "name": "FOIA Log - Chicago Police Board",
+                    "size": 131,
+                    "value": 4.875197323201151
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Family-and-Support-Services/yfhi-bd8g",
+                    "name": "FOIA Log - Family & Support Services",
+                    "size": 79,
+                    "value": 4.3694478524670215
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Fire/un3c-ixb7",
+                    "name": "FOIA Log - Fire",
+                    "size": 18874,
+                    "value": 9.845540592581278
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Aviation/jbth-h7cm",
+                    "name": "FOIA Log - Aviation",
+                    "size": 416,
+                    "value": 6.030685260261263
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Innovation-and-Technology/4nng-j9hd",
+                    "name": "FOIA Log - Innovation & Technology",
+                    "size": 120,
+                    "value": 4.787491742782046
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-311/j2p9-gdf5",
+                    "name": "FOIA Log - 311",
+                    "size": 597,
+                    "value": 6.391917113392602
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Ethics/fhb6-wwuu",
+                    "name": "FOIA Log - Ethics",
+                    "size": 236,
+                    "value": 5.4638318050256105
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-License-Appeal-Commission/4nkr-n688",
+                    "name": "FOIA Log - License Appeal Commission",
+                    "size": 11,
+                    "value": 2.3978952727983707
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Finance/7avf-ek45",
+                    "name": "FOIA Log - Finance",
+                    "size": 463,
+                    "value": 6.137727054086234
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Buildings/ucsz-xe6d",
+                    "name": "FOIA Log - Buildings",
+                    "size": 69277,
+                    "value": 11.145868239758318
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Streets-Sanitation/zpd8-zq4w",
+                    "name": "FOIA Log - Streets & Sanitation",
+                    "size": 5459,
+                    "value": 8.605020901781758
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Administrative-Hearings/t58s-ja5s",
+                    "name": "FOIA Log - Administrative Hearings",
+                    "size": 3023,
+                    "value": 8.014004994779459
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Procurement-Services/bcyv-67qk",
+                    "name": "FOIA Log - Procurement Services",
+                    "size": 791,
+                    "value": 6.673297967767654
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Water-Management/cxfr-dd4a",
+                    "name": "FOIA Log - Water Management",
+                    "size": 958,
+                    "value": 6.86484777797086
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Transportation/u9qt-tv7d",
+                    "name": "FOIA Log - Transportation",
+                    "size": 1872,
+                    "value": 7.534762657037537
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-OEMC/8pxc-mzcv",
+                    "name": "FOIA Log - OEMC",
+                    "size": 4434,
+                    "value": 8.397057390176256
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Chicago-Treasurer-s-Office/8gyi-fawp",
+                    "name": "FOIA Log - Chicago Treasurers Office",
+                    "size": 40,
+                    "value": 3.6888794541139363
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Animal-Care-and-Control/b989-387c",
+                    "name": "FOIA Log - Animal Care & Control",
+                    "size": 1727,
+                    "value": 7.454141078146678
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/CTA-Performance-Unscheduled-Days-Off/spus-59r8",
+                    "name": "CTA - Performance - Unscheduled Days Off",
+                    "size": 4,
+                    "value": 1.3862943611198906
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/CTA-Performance-Bus-Runs-Held-Due-to-Absenteeism-2/t58d-f8en",
+                    "name": "CTA - Performance - Bus Runs Held Due to Absenteeism (2011- Jan-Aug)",
+                    "size": 7,
+                    "value": 1.9459101490553132
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Fleet-Facility-Management/nd4p-ckx9",
+                    "name": "FOIA Log - Fleet & Facility Management",
+                    "size": 85,
+                    "value": 4.442651256490317
+                },
+                {
+                    "url": "https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Cultural-Affairs-Special-Events/ikdf-ernx",
+                    "name": "FOIA Log - Cultural Affairs & Special Events",
+                    "size": 41,
+                    "value": 3.713572066704308
+                }
+            ]
+        },{
+            "name": "Transportation",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Average-Daily-Traffic-Counts/pfsx-4n4m",
+                    "name": "Average Daily Traffic Counts",
+                    "size": 1279,
+                    "value": 7.153833801578843
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Chicago-Street-Names/i6bp-fvbx",
+                    "name": "Chicago Street Names",
+                    "size": 2582,
+                    "value": 7.856319571406588
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Bike-Racks/cbyb-69xx",
+                    "name": "Bike Racks",
+                    "size": 5164,
+                    "value": 8.549466751966532
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-System-Information-List-of-L-Stops/8pix-ypme",
+                    "name": "CTA - System Information - List of L Stops",
+                    "size": 298,
+                    "value": 5.697093486505405
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-Ridership-Bus-Routes-Monthly-Day-Type-Averages/bynn-gwxy",
+                    "name": "CTA - Ridership - Bus Routes - Monthly Day-Type Averages & Totals",
+                    "size": 21140,
+                    "value": 9.958922259424229
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Monthly-Day-Type-A/t2rn-p8d7",
+                    "name": "CTA - Ridership - L Station Entries - Monthly Day-Type Averages & Totals",
+                    "size": 20986,
+                    "value": 9.951610827717856
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-Ridership-Bus-Routes-Daily-Totals-by-Route/jyb9-n7fm",
+                    "name": "CTA - Ridership - Bus Routes - Daily Totals by Route",
+                    "size": 562715,
+                    "value": 13.24052856225463
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-Ridership-L-Station-Entries-Daily-Totals/5neh-572f",
+                    "name": "CTA - Ridership - L Station Entries - Daily Totals",
+                    "size": 639134,
+                    "value": 13.36786941403555
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-Ridership-Annual-Boarding-Totals/w8km-9pzd",
+                    "name": "CTA - Ridership - Annual Boarding Totals",
+                    "size": 25,
+                    "value": 3.2188758248682006
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-Ridership-Avg-Weekday-Bus-Stop-Boardings-in-Oc/mq3i-nnqe",
+                    "name": "CTA - Ridership - Avg. Weekday Bus Stop Boardings in October 2012",
+                    "size": 11593,
+                    "value": 9.358156746670401
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97",
+                    "name": "CTA - Ridership - Daily Boarding Totals",
+                    "size": 4535,
+                    "value": 8.419580362549237
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Towed-Vehicles/ygr5-vcbg",
+                    "name": "Towed Vehicles",
+                    "size": 5937,
+                    "value": 8.688959234270676
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Relocated-Vehicles/5k2z-suxx",
+                    "name": "Relocated Vehicles",
+                    "size": 3876,
+                    "value": 8.262558973010657
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Street-Closure-Permits-Current/avwc-kf7i",
+                    "name": "Street Closure Permits - Current",
+                    "size": 108,
+                    "value": 4.68213122712422
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Congestion-Estimates-by-Se/n4j6-wkkf",
+                    "name": "Chicago Traffic Tracker - Congestion Estimates by Segments",
+                    "size": 1257,
+                    "value": 7.136483208590247
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Congestion-Estimates-by-Re/t2qc-9pjd",
+                    "name": "Chicago Traffic Tracker - Congestion Estimates by Regions",
+                    "size": 29,
+                    "value": 3.367295829986474
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Public-Right-of-Way-Use-Permits/hwmb-iu8j",
+                    "name": "Public Right-of-Way Use Permits",
+                    "size": 505242,
+                    "value": 13.132792801394842
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Historical-Congestion-Esti/77hq-huss",
+                    "name": "Chicago Traffic Tracker - Historical Congestion Estimates by Segment",
+                    "size": 6768091,
+                    "value": 15.727729625804281
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Historical-Congestion-Esti/emtn-qqdi",
+                    "name": "Chicago Traffic Tracker - Historical Congestion Estimates by Region",
+                    "size": 2168225,
+                    "value": 14.589419418444487
+                }
+            ]
+        },{
+            "name": "Historic Preservation",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Historic-Preservation/Landmark-Districts/zidz-sdfj",
+                    "name": "Landmark Districts",
+                    "size": 59,
+                    "value": 4.07753744390572
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Historic-Preservation/Individual-Landmarks/tdab-kixi",
+                    "name": "Individual Landmarks",
+                    "size": 317,
+                    "value": 5.75890177387728
+                }
+            ]
+        },{
+            "name": "Facilities & Geographic Boundaries",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Ward-Offices/htai-wnw4",
+                    "name": "Ward Offices",
+                    "size": 50,
+                    "value": 3.912023005428146
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Public-Technology-Resources/nen3-vcxj",
+                    "name": "Public Technology Resources",
+                    "size": 250,
+                    "value": 5.521460917862246
+                }
+            ]
+        },{
+            "name": "Public Safety",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Public-Safety/Fire-Stations/28km-gtjn",
+                    "name": "Fire Stations",
+                    "size": 92,
+                    "value": 4.5217885770490405
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Public-Safety/Police-Stations/z8bn-74gv",
+                    "name": "Police Stations",
+                    "size": 23,
+                    "value": 3.1354942159291497
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Public-Safety/Chicago-Police-Department-Illinois-Uniform-Crime-R/c7ck-438e",
+                    "name": "Chicago Police Department - Illinois Uniform Crime Reporting (IUCR) Codes",
+                    "size": 384,
+                    "value": 5.950642552587727
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Public-Safety/Sex-Offenders/vc9r-bqvy",
+                    "name": "Sex Offenders",
+                    "size": 1616,
+                    "value": 7.38770923908104
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Public-Safety/Crimes-One-year-prior-to-present/x2n5-8w5q",
+                    "name": "Crimes - One year prior to present",
+                    "size": 313022,
+                    "value": 12.654028754592172
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2",
+                    "name": "Crimes - 2001 to present",
+                    "size": 5256320,
+                    "value": 15.47494172009391
+                }
+            ]
+        },{
+            "name": "Health & Human Services",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Community-Service-Centers/bspy-6mw8",
+                    "name": "Community Service Centers",
+                    "size": 6,
+                    "value": 1.791759469228055
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Neighborhood-Health-Clinics/mw69-m6xi",
+                    "name": "Neighborhood Health Clinics",
+                    "size": 7,
+                    "value": 1.9459101490553132
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Workforce-Centers/cs4s-nsna",
+                    "name": "Workforce Centers",
+                    "size": 5,
+                    "value": 1.6094379124341003
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/STI-Speciality-Clinics/ajzs-akmm",
+                    "name": "STI Speciality Clinics",
+                    "size": 5,
+                    "value": 1.6094379124341003
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Mental-Health-Clinics/v56e-cy8y",
+                    "name": "Mental Health Clinics",
+                    "size": 6,
+                    "value": 1.791759469228055
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Women-Infant-Children-Health-Clinics/g85x-gwmp",
+                    "name": "Women- Infant- Children Health Clinics",
+                    "size": 19,
+                    "value": 2.9444389791664403
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Senior-Centers/qhfc-4cw2",
+                    "name": "Senior Centers",
+                    "size": 21,
+                    "value": 3.044522437723423
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Youth-Centers/meks-hp6f",
+                    "name": "Youth Centers",
+                    "size": 221,
+                    "value": 5.3981627015177525
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5",
+                    "name": "Food Inspections",
+                    "size": 63418,
+                    "value": 11.05750301180195
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Condom-Distribution-Sites/azpf-uc4s",
+                    "name": "Condom Distribution Sites",
+                    "size": 222,
+                    "value": 5.402677381872279
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Services-Licensed-Substance-Abuse-Tr/9zqv-3uhs",
+                    "name": "Public Health Services - Licensed Substance Abuse Treatment Providers in Chicago- 2011",
+                    "size": 204,
+                    "value": 5.318119993844216
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-General-fertility-rates-i/g5zk-9ycw",
+                    "name": "Public Health Statistics - General fertility rates in Chicago- by year- 1999-2009",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/Snow-Alerts/jpfu-k3rv",
+                    "name": "Snow Alerts",
+                    "size": 1,
+                    "value": 0.0
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Births-to-mothers-aged-15/9kva-bt6k",
+                    "name": "Public Health Statistics - Births to mothers aged 15-19 years old in Chicago- by year- 1999-2009",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Prenatal-care-in-Chicago-/2q9j-hh6g",
+                    "name": "Public Health Statistics - Prenatal care in Chicago- by year- 1999  2009",
+                    "size": 389,
+                    "value": 5.963579343618446
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Preterm-births-in-Chicago/rhy3-4x2f",
+                    "name": "Public Health Statistics - Preterm births in Chicago- by year- 1999  2009",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Births-and-birth-rates-in/4arr-givg",
+                    "name": "Public Health Statistics - Births & birth rates in Chicago- by year- 1999  2009",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2",
+                    "name": "Census Data - Selected socioeconomic indicators in Chicago- 2007  2011",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Census-Data-Languages-spoken-in-Chicago-2007-2011/a2fk-ec6q",
+                    "name": "Census Data - Languages spoken in Chicago- 2007  2011",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Screening-for-elevated-bl/v2z5-jyrq",
+                    "name": "Public Health Statistics - Screening for elevated blood lead levels in children aged 0-6 years by year- Chicago- 1999 - 2011",
+                    "size": 79,
+                    "value": 4.3694478524670215
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Asthma-hospitalizations-i/vazh-t57q",
+                    "name": "Public Health Statistics - Asthma hospitalizations in Chicago- by year- 2000 - 2011",
+                    "size": 49,
+                    "value": 3.8918202981106265
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Tuberculosis-cases-and-av/ndk3-zftj",
+                    "name": "Public Health Statistics- Tuberculosis cases & average annual incidence rate- Chicago- 2007- 2011",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Diabetes-hospitalizations/vekt-28b5",
+                    "name": "Public Health Statistics- Diabetes hospitalizations in Chicago- 2000 - 2011",
+                    "size": 49,
+                    "value": 3.8918202981106265
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-health-statistics-Gonorrhea-cases-for-males/m5qn-gmjx",
+                    "name": "Public health statistics- Gonorrhea cases for males aged 15-44 in Chicago- by year- 2000 - 2011",
+                    "size": 79,
+                    "value": 4.3694478524670215
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Gonorrhea-cases-for-femal/cgjw-mn43",
+                    "name": "Public Health Statistics- Gonorrhea cases for females aged 15 - 44 in Chicago- by year- 2000 - 2011",
+                    "size": 79,
+                    "value": 4.3694478524670215
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Chlamydia-cases-among-fem/bz6k-73ti",
+                    "name": "Public Health Statistics- Chlamydia cases among females aged 15-44 in Chicago- by year- 2000-2011.",
+                    "size": 79,
+                    "value": 4.3694478524670215
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Selected-public-health-in/iqnk-2tcu",
+                    "name": "Public Health Statistics- Selected public health indicators by Chicago community area",
+                    "size": 77,
+                    "value": 4.343805421853684
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Infant-mortality-in-Chica/bfhr-4ckq",
+                    "name": "Public Health Statistics- Infant mortality in Chicago- 2005 2009",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Selected-underlying-cause/j6cj-r444",
+                    "name": "Public Health Statistics- Selected underlying causes of death in Chicago- 2005  2009",
+                    "size": 1404,
+                    "value": 7.247080584585756
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Low-birth-weight-in-Chica/fbxr-9u99",
+                    "name": "Public Health Statistics - Low birth weight in Chicago- by year- 1999  2009",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Cooling-Centers/msrk-w9ih",
+                    "name": "Cooling Centers",
+                    "size": 113,
+                    "value": 4.727387818712341
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Flu-Shot-Clinic-Locations-2012/4jy7-7m68",
+                    "name": "Flu Shot Clinic Locations - 2012",
+                    "size": 1058,
+                    "value": 6.964135612418245
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Health-Human-Services/Warming-Centers/h243-v2q5",
+                    "name": "Warming Centers",
+                    "size": 113,
+                    "value": 4.727387818712341
+                }
+            ]
+        },{
+            "name": "Education",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Education/Schools/kqmn-byj8",
+                    "name": "Schools",
+                    "size": 1021,
+                    "value": 6.928537818164665
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-Summer-Reads-for-Adults/8kfs-9r64",
+                    "name": "Libraries - Summer Reads for Adults",
+                    "size": 2,
+                    "value": 0.6931471805599453
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2011-Circulation-by-Location/tfmt-mmy2",
+                    "name": "Libraries - 2011 Circulation by Location",
+                    "size": 83,
+                    "value": 4.418840607796598
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2011-Computer-Sessions-by-Location/6uah-qehh",
+                    "name": "Libraries - 2011 Computer Sessions by Location",
+                    "size": 80,
+                    "value": 4.382026634673881
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2011-Holds-Filled-by-Location/ngxm-jbc3",
+                    "name": "Libraries - 2011 Holds Filled by Location",
+                    "size": 80,
+                    "value": 4.382026634673881
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2011-Holds-Placed-by-Location/rgy2-2ae9",
+                    "name": "Libraries - 2011 Holds Placed by Location",
+                    "size": 82,
+                    "value": 4.406719247264253
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2011-Children-s-Summer-Reading-Program/vuf2-qfik",
+                    "name": "Libraries - 2011 Childrens Summer Reading Program",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2011-Visitors-by-Location/xxwy-zyzu",
+                    "name": "Libraries - 2011 Visitors by Location",
+                    "size": 81,
+                    "value": 4.394449154672439
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-WiFi-Usage/vbts-zqt4",
+                    "name": "Libraries - WiFi Usage",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-Popular-Fiction-Titles-at-the-Chicago-Pu/nv46-bxa3",
+                    "name": "Libraries - Popular Fiction Titles at the Chicago Public Library",
+                    "size": 25,
+                    "value": 3.2188758248682006
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-Popular-Nonfiction-Titles-at-the-Chicago/y4km-wdbp",
+                    "name": "Libraries - Popular Nonfiction Titles at the Chicago Public Library",
+                    "size": 25,
+                    "value": 3.2188758248682006
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Chicago-Public-Schools-Progress-Report-Cards-2011-/9xs2-f89t",
+                    "name": "Chicago Public Schools - Progress Report Cards (2011-2012)",
+                    "size": 566,
+                    "value": 6.338594078203183
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2012-Circulation-by-Location/jsdv-pwf2",
+                    "name": "Libraries - 2012 Circulation by Location",
+                    "size": 82,
+                    "value": 4.406719247264253
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2012-Computer-Sessions-by-Location/7fu8-t497",
+                    "name": "Libraries - 2012 Computer Sessions by Location",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2012-Holds-Filled-by-Location/egku-46f2",
+                    "name": "Libraries - 2012 Holds Filled by Location",
+                    "size": 79,
+                    "value": 4.3694478524670215
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2012-Holds-Placed-by-Location/cpva-49fs",
+                    "name": "Libraries - 2012 Holds Placed by Location",
+                    "size": 81,
+                    "value": 4.394449154672439
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2012-Visitors-by-Location/zh3n-jtnt",
+                    "name": "Libraries - 2012 Visitors by Location",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-Children-s-Summer-Reading-Program/gy9e-qh3y",
+                    "name": "Libraries - Childrens Summer Reading Program",
+                    "size": 2,
+                    "value": 0.6931471805599453
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Connect-Chicago-Locations/bmus-hp7e",
+                    "name": "Connect Chicago Locations",
+                    "size": 273,
+                    "value": 5.60947179518496
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2013-Holds-Placed-by-Location/dgeh-7h9y",
+                    "name": "Libraries - 2013 Holds Placed by Location",
+                    "size": 81,
+                    "value": 4.394449154672439
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2013-Holds-Filled-by-Location/7pb7-6889",
+                    "name": "Libraries - 2013 Holds Filled by Location",
+                    "size": 79,
+                    "value": 4.3694478524670215
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2013-Computer-Sessions-by-Location/qrxi-q28n",
+                    "name": "Libraries - 2013 Computer Sessions by Location",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2013-Visitors-by-Location/x74m-smqb",
+                    "name": "Libraries - 2013 Visitors by Location",
+                    "size": 78,
+                    "value": 4.356708826689592
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Education/Libraries-2013-Circulation-by-Location/ti44-vee7",
+                    "name": "Libraries - 2013 Circulation by Location",
+                    "size": 82,
+                    "value": 4.406719247264253
+                }
+            ]
+        },{
+            "name": "Community & Economic Development",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/TIF-Projection-Reports/zai4-r88e",
+                    "name": "TIF Projection Reports",
+                    "size": 3035,
+                    "value": 8.017966703493599
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/TIF-Balance-Sheets/hezc-e4be",
+                    "name": "TIF Balance Sheets",
+                    "size": 4588,
+                    "value": 8.431199478249262
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/Small-Business-Improvement-Fund-SBIF-Grant-Agreeme/jp7n-tgmf",
+                    "name": "Small Business Improvement Fund (SBIF) Grant Agreements",
+                    "size": 1238,
+                    "value": 7.121252453244542
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Owners/ezma-pppn",
+                    "name": "Business Owners",
+                    "size": 216042,
+                    "value": 12.283228112208876
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+                    "name": "Business Licenses",
+                    "size": 413978,
+                    "value": 12.933568111298849
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/TIF-Status-and-Eligibility/3qsz-jemf",
+                    "name": "TIF Status & Eligibility",
+                    "size": 174,
+                    "value": 5.159055299214529
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/TIF-Funding-Sources-and-Uses-by-TIF-Fiscal-Year-an/pner-h2in",
+                    "name": "TIF Funding Sources & Uses by TIF- Fiscal Year- and Type",
+                    "size": 7192,
+                    "value": 8.880724576151456
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/City-Owned-Land-Inventory/aksk-kvfp",
+                    "name": "City-Owned Land Inventory",
+                    "size": 15373,
+                    "value": 9.640368002912599
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/TIF-Balances-by-Fiscal-Year/hz8p-ewk5",
+                    "name": "TIF Balances by Fiscal Year",
+                    "size": 980,
+                    "value": 6.887552571664617
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/Public-Chauffeurs/97wa-y6ff",
+                    "name": "Public Chauffeurs",
+                    "size": 28607,
+                    "value": 10.26140672210502
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Community-Economic-Development/Affordable-Rental-Housing-Developments/s6ha-ppgi",
+                    "name": "Affordable Rental Housing Developments",
+                    "size": 229,
+                    "value": 5.43372200355424
+                }
+            ]
+        },{
+            "name": "Administration & Finance",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2011-Budget-Ordinance-Appropriations/drv3-jzqp",
+                    "name": "Budget - 2011 Budget Ordinance - Appropriations",
+                    "size": 4271,
+                    "value": 8.359603270841466
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2011-Budget-Ordinance-Positions-and-Salarie/g398-fhbm",
+                    "name": "Budget - 2011 Budget Ordinance - Positions & Salaries",
+                    "size": 8216,
+                    "value": 9.013838751608395
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Public-Health-Immunization-Pro/7g62-yrf5",
+                    "name": "Performance Metrics - Public Health - Immunization Program - Monthly Vaccine Distribution",
+                    "size": 15,
+                    "value": 2.70805020110221
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Employee-Overtime-and-Supplemental-Earnings/92xk-4rg9",
+                    "name": "Employee Overtime & Supplemental Earnings",
+                    "size": 13385,
+                    "value": 9.501889955954454
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Housing-Economic-Development-L/2wk4-c5se",
+                    "name": "Performance Metrics - Housing & Economic Development - Landmark Permitting Review",
+                    "size": 19,
+                    "value": 2.9444389791664403
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Public-Health-School-Based-Ora/uvy2-xbnp",
+                    "name": "Performance Metrics - Public Health - School-Based Oral Health Programming",
+                    "size": 15,
+                    "value": 2.70805020110221
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Public-Health-Lead-Inspections/3mg2-a24n",
+                    "name": "Performance Metrics - Public Health - Lead Inspections Performed",
+                    "size": 17,
+                    "value": 2.833213344056216
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Public-Health-Percent-Served-a/5t3t-6y9q",
+                    "name": "Performance Metrics - Public Health - Percent Served at STI Specialty Clinics",
+                    "size": 16,
+                    "value": 2.772588722239781
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Family-Support-Services-Childe/vjbu-ywct",
+                    "name": "Performance Metrics - Family & Support Services - Childen Services Program Monthly Utilization",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Family-Support-Services-Youth-/xczi-kmtf",
+                    "name": "Performance Metrics - Family & Support Services - Youth Services Program Monthly Utilization",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Family-Support-Services-Senior/m3we-umj3",
+                    "name": "Performance Metrics - Family & Support Services - Senior Services Nutrition Monthly Utilization",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Family-Support-Services-Homele/vg8w-2w9y",
+                    "name": "Performance Metrics - Family & Support Services - Homeless Shelter System Monthly Utilization",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Family-Support-Services-Domest/hbuv-eka5",
+                    "name": "Performance Metrics - Family & Support Services - Domestic Violence Service Help Line Monthly Utilization",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Family-Support-Services-Workfo/uava-8jbh",
+                    "name": "Performance Metrics - Family & Support Services - Workforce Services Monthly Utilization",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Housing-Economic-Development-Z/icic-3jsa",
+                    "name": "Performance Metrics - Housing & Economic Development - Zoning Permit Scheduling & Review",
+                    "size": 19,
+                    "value": 2.9444389791664403
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Housing-Economic-Development-A/dsvs-yfj6",
+                    "name": "Performance Metrics - Housing & Economic Development - Affordable Multi Family Homes",
+                    "size": 7,
+                    "value": 1.9459101490553132
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Housing-Economic-Development-S/mvrj-qzai",
+                    "name": "Performance Metrics - Housing & Economic Development - Single Family Homes",
+                    "size": 7,
+                    "value": 1.9459101490553132
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Business-Affairs-Consumer-Prot/emvs-38e6",
+                    "name": "Performance Metrics - Business Affairs & Consumer Protection - Business Licenses",
+                    "size": 509,
+                    "value": 6.2324480165505225
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-City-Colleges-of-Chicago-Cours/vz8e-347q",
+                    "name": "Performance Metrics - City Colleges of Chicago - Course Success Rates",
+                    "size": 22,
+                    "value": 3.091042453358316
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-City-Colleges-of-Chicago-Gradu/vvxi-nsph",
+                    "name": "Performance Metrics - City Colleges of Chicago - Graduation Rates",
+                    "size": 12,
+                    "value": 2.4849066497880004
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Town-Hall-Answers/8piv-mrrj",
+                    "name": "Town Hall Answers",
+                    "size": 317,
+                    "value": 5.75890177387728
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Procurement-Services-Task-Orde/nfhf-cbk5",
+                    "name": "Performance Metrics - Procurement Services - Task Order Request (TOR)",
+                    "size": 115,
+                    "value": 4.74493212836325
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Procurement-Services-City-Auct/s9wg-6is6",
+                    "name": "Performance Metrics - Procurement Services - City Auctions",
+                    "size": 114,
+                    "value": 4.736198448394496
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Debarred-Firms-and-Individuals/y93d-d9e3",
+                    "name": "Debarred Firms & Individuals",
+                    "size": 148,
+                    "value": 4.997212273764115
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Ethics-Statements-Of-Financial/xx5x-8bka",
+                    "name": "Performance Metrics - Ethics - Statements Of Financial Interests Filed",
+                    "size": 30,
+                    "value": 3.4011973816621555
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Ethics-Lobbyists-Completing-Et/i9uw-idjh",
+                    "name": "Performance Metrics - Ethics - Lobbyists Completing Ethics Training",
+                    "size": 27,
+                    "value": 3.295836866004329
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Ethics-Lobbyists-Registrations/myh9-inim",
+                    "name": "Performance Metrics - Ethics - Lobbyists Registrations & Activity Reports Received",
+                    "size": 32,
+                    "value": 3.4657359027997265
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Business-Affairs-Consumer-Prot/7483-qiqw",
+                    "name": "Performance Metrics - Business Affairs & Consumer Protection - Limited Business Licenses",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Business-Affairs-Consumer-Prot/uxj2-up34",
+                    "name": "Performance Metrics - Business Affairs & Consumer Protection - Retail Food Licenses",
+                    "size": 28,
+                    "value": 3.332204510175204
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Ethics-Mandatory-Annual-Ethics/u2nq-s7gg",
+                    "name": "Performance Metrics - Ethics - Mandatory Annual Ethics Training",
+                    "size": 29,
+                    "value": 3.367295829986474
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Streets-Sanitation-Rodent-Bait/ga2y-gwbs",
+                    "name": "Performance Metrics - Streets & Sanitation - Rodent Baiting",
+                    "size": 57,
+                    "value": 4.04305126783455
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Streets-Sanitation-Garbage-Car/6htv-6453",
+                    "name": "Performance Metrics - Streets & Sanitation - Garbage Cart Requests",
+                    "size": 66,
+                    "value": 4.189654742026425
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Streets-Sanitation-Sanitation-/64yp-nqnb",
+                    "name": "Performance Metrics - Streets & Sanitation - Sanitation Code Complaints",
+                    "size": 67,
+                    "value": 4.204692619390966
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Streets-Sanitation-Graffiti-Re/qcfn-tiw7",
+                    "name": "Performance Metrics - Streets & Sanitation - Graffiti Removal",
+                    "size": 67,
+                    "value": 4.204692619390966
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Innovation-Technology-311-Webs/tqmn-3v6t",
+                    "name": "Performance Metrics - Innovation & Technology - 311 Website Availability",
+                    "size": 25,
+                    "value": 3.2188758248682006
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Innovation-Technology-City-Web/icwn-eia9",
+                    "name": "Performance Metrics - Innovation & Technology - City Website Availability",
+                    "size": 25,
+                    "value": 3.2188758248682006
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Innovation-Technology-Map-Chic/7aze-tpzr",
+                    "name": "Performance Metrics - Innovation & Technology - Map Chicago Website Availability",
+                    "size": 25,
+                    "value": 3.2188758248682006
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Innovation-Technology-Zoning-M/vqj9-rmbv",
+                    "name": "Performance Metrics - Innovation & Technology - Zoning Map Website Availability",
+                    "size": 25,
+                    "value": 3.2188758248682006
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Streets-Sanitation-Tree-Debris/hwpp-nx6b",
+                    "name": "Performance Metrics - Streets & Sanitation - Tree Debris",
+                    "size": 58,
+                    "value": 4.060443010546419
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Transportation-Pavement-Cave-i/euee-qccq",
+                    "name": "Performance Metrics - Transportation - Pavement Cave-ins",
+                    "size": 82,
+                    "value": 4.406719247264253
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Buildings-Time-To-Issue-Green-/z2qz-687z",
+                    "name": "Performance Metrics - Buildings - Time To Issue Green Permits",
+                    "size": 98,
+                    "value": 4.584967478670572
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Transportation-Traffic-Lights-/vfmv-4fbs",
+                    "name": "Performance Metrics - Transportation - Traffic Lights Out",
+                    "size": 56,
+                    "value": 4.02535169073515
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Transportation-Stop-Sign-Out/hybd-quwr",
+                    "name": "Performance Metrics - Transportation - Stop Sign Out",
+                    "size": 82,
+                    "value": 4.406719247264253
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Transportation-Street-Lights-A/phrs-x2nm",
+                    "name": "Performance Metrics - Transportation - Street Lights All Out",
+                    "size": 82,
+                    "value": 4.406719247264253
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Transportation-Pothole-Repair/sbt5-2ec8",
+                    "name": "Performance Metrics - Transportation - Pothole Repair",
+                    "size": 72,
+                    "value": 4.276666119016055
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-311-Call-Center/kj88-xnxq",
+                    "name": "Performance Metrics - 311 Call Center",
+                    "size": 70,
+                    "value": 4.248495242049359
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Buildings-Time-to-Issue-Easy-P/7ray-xvet",
+                    "name": "Performance Metrics - Buildings - Time to Issue Easy Permits",
+                    "size": 98,
+                    "value": 4.584967478670572
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Buildings-Time-to-Issue-Standa/4ygs-9x34",
+                    "name": "Performance Metrics - Buildings - Time to Issue Standard Plan Review Program Permits",
+                    "size": 98,
+                    "value": 4.584967478670572
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Buildings-Time-to-Issue-Develo/ijdy-a94t",
+                    "name": "Performance Metrics - Buildings - Time to Issue Developer Services Permits",
+                    "size": 98,
+                    "value": 4.584967478670572
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w",
+                    "name": "Current Employee Names- Salaries- & Position Titles",
+                    "size": 32210,
+                    "value": 10.380032242325244
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/Bureau-of-Sanitation-Unscheduled-Absences-by-Day-o/tcj9-8qd8",
+                    "name": "Bureau of Sanitation - Unscheduled Absences by Day of Week for Refuse Truck Drivers",
+                    "size": 5,
+                    "value": 1.6094379124341003
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/Bureau-of-Sanitation-Unscheduled-Absences-by-Day-o/zfrs-dbnr",
+                    "name": "Bureau of Sanitation - Unscheduled Absences by Day of Week for Refuse Collectors",
+                    "size": 5,
+                    "value": 1.6094379124341003
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/CTA-System-Information-Bus-Stop-Shelters-in-Digita/5cq6-qygt",
+                    "name": "CTA - System Information - Bus Stop Shelters in Digital Sign Project",
+                    "size": 152,
+                    "value": 5.0238805208462765
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Innovation-Technology-Site-Ava/zfg3-p7xv",
+                    "name": "Performance Metrics - Innovation & Technology - Site Availability",
+                    "size": 522,
+                    "value": 6.257667587882639
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Contracts/rsxa-ify5",
+                    "name": "Contracts",
+                    "size": 89902,
+                    "value": 11.406475467153298
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Payments/s4vu-giwb",
+                    "name": "Payments",
+                    "size": 644961,
+                    "value": 13.376945128833542
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2012-Budget-Recommendations-Appropriations/8dps-5d4x",
+                    "name": "Budget - 2012 Budget Recommendations - Appropriations",
+                    "size": 4978,
+                    "value": 8.512783482927537
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2012-Budget-Recommendations-Positions-and-S/rdd7-bjqm",
+                    "name": "Budget - 2012 Budget Recommendations - Positions & Salaries",
+                    "size": 8025,
+                    "value": 8.990316947998217
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Employee-Indebtedness-to-the-City-of-Chicago/pasx-mnuv",
+                    "name": "Employee Indebtedness to the City of Chicago",
+                    "size": 1407,
+                    "value": 7.249215057114389
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/CTA-List-of-Fare-Media-Sales-Outlets/ag7u-gr9m",
+                    "name": "CTA - List of Fare Media Sales Outlets",
+                    "size": 841,
+                    "value": 6.734591659972948
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Employee-Reimbursements/g5h3-jkgt",
+                    "name": "Employee Reimbursements",
+                    "size": 3077,
+                    "value": 8.031710375322042
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Chicago-Park-District-Faciliti/sya9-5zxj",
+                    "name": "Performance Metrics - Chicago Park District - Facilities Work Order Management",
+                    "size": 58,
+                    "value": 4.060443010546419
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2012-Budget-Ordinance-Appropriations/8ix6-nb7q",
+                    "name": "Budget - 2012 Budget Ordinance - Appropriations",
+                    "size": 3894,
+                    "value": 8.267192185932146
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2012-Budget-Ordinance-Positions-and-Salarie/4n2t-us8h",
+                    "name": "Budget - 2012 Budget Ordinance - Positions & Salaries",
+                    "size": 6645,
+                    "value": 8.801619971147346
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Housing-Economic-Development-S/2w3t-v2um",
+                    "name": "Performance Metrics - Housing & Economic Development - Small Business Improvement Fund (SBIF)",
+                    "size": 21,
+                    "value": 3.044522437723423
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Chicago-Park-District-Park-Sec/wrvx-zpw5",
+                    "name": "Performance Metrics - Chicago Park District - Park Security Checks",
+                    "size": 55,
+                    "value": 4.007333185232471
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Chicago-Park-District-Comptrol/q93p-dagd",
+                    "name": "Performance Metrics - Chicago Park District - Comptroller Accounts Payable Aging",
+                    "size": 14,
+                    "value": 2.6390573296152584
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Chicago-Park-District-Natural-/kes6-wskt",
+                    "name": "Performance Metrics - Chicago Park District - Natural Resources Recycling",
+                    "size": 12,
+                    "value": 2.4849066497880004
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Chicago-Park-District-Natural-/cnj6-r3qn",
+                    "name": "Performance Metrics - Chicago Park District - Natural Resources Trees & Shrubs",
+                    "size": 54,
+                    "value": 3.9889840465642745
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Water-Exemptions/8k9i-ia3x",
+                    "name": "Water Exemptions",
+                    "size": 7274,
+                    "value": 8.892061625546935
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2013-Budget-Recommendations-Appropriations/d6tb-pwze",
+                    "name": "Budget - 2013 Budget Recommendations - Appropriations",
+                    "size": 4382,
+                    "value": 8.385260520155413
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2013-Budget-Recommendations-Positions-and-S/gfmr-d54f",
+                    "name": "Budget - 2013 Budget Recommendations - Positions & Salaries",
+                    "size": 7219,
+                    "value": 8.88447171813916
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Budget-2013-Budget-Ordinance-Appropriations/b24i-nwag",
+                    "name": "Budget - 2013 Budget Ordinance - Appropriations",
+                    "size": 3591,
+                    "value": 8.186185994226083
+                },
+                {
+                    "url": "https://data.cityofchicago.org/dataset/Budget-2013-Budget-Ordinance-Positions-and-Salarie/78az-bt2s",
+                    "name": "Budget - 2013 Budget Ordinance - Positions & Salaries",
+                    "size": 7215,
+                    "value": 8.88391747120797
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/Housing-and-Economic-Development-Payment-Receipts/w7c3-qjgj",
+                    "name": "Housing & Economic Development Payment Receipts",
+                    "size": 541,
+                    "value": 6.293419278846481
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Administration-Finance/7th-Ward-Alderman-Applicants-2013/2b3m-wnm2",
+                    "name": "7th Ward Alderman Applicants - 2013",
+                    "size": 59,
+                    "value": 4.07753744390572
+                }
+            ]
+        },{
+            "name": "Ethics",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Agency-Report-2010/2g5r-pikx",
+                    "name": "Lobbyist Data - Lobbyist Agency Report - 2010",
+                    "size": 4504,
+                    "value": 8.412721169819527
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Compensation-Report-2010/ina9-6kq2",
+                    "name": "Lobbyist Data - Lobbyist Compensation Report - 2010",
+                    "size": 1972,
+                    "value": 7.586803535162581
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Major-Expenditures-Report-2/dqw9-xyre",
+                    "name": "Lobbyist Data - Lobbyist Major Expenditures Report - 2010",
+                    "size": 170,
+                    "value": 5.135798437050262
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Gift-Report-2010/5d24-2bpp",
+                    "name": "Lobbyist Data - Lobbyist Gift Report - 2010",
+                    "size": 52,
+                    "value": 3.9512437185814275
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Registry-2010/2ft4-4uik",
+                    "name": "Lobbyist Data - Lobbyist Registry - 2010",
+                    "size": 1537,
+                    "value": 7.337587743538596
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Termination-Report-2010/2mtu-ysnw",
+                    "name": "Lobbyist Data - Lobbyist Termination Report - 2010",
+                    "size": 176,
+                    "value": 5.170483995038151
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Categorized-Expenditures-Re/zugr-hsc5",
+                    "name": "Lobbyist Data - Lobbyist Categorized Expenditures Report - 2010",
+                    "size": 1972,
+                    "value": 7.586803535162581
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Ethics-Pledge/9wf2-y3bn",
+                    "name": "Ethics Pledge",
+                    "size": 949,
+                    "value": 6.855408798609928
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Registry-2011/tpf5-fgtw",
+                    "name": "Lobbyist Data - Lobbyist Registry - 2011",
+                    "size": 2028,
+                    "value": 7.614805364711073
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Compensation-Report/hu4d-qydy",
+                    "name": "Lobbyist Data - Lobbyist Compensation Report",
+                    "size": 2131,
+                    "value": 7.664346632098617
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Major-Expenditures-Report/txma-ntnk",
+                    "name": "Lobbyist Data - Lobbyist Major Expenditures Report",
+                    "size": 347,
+                    "value": 5.849324779946859
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Categorized-Expenditures-Re/bc2p-hky6",
+                    "name": "Lobbyist Data - Lobbyist Categorized Expenditures Report",
+                    "size": 2131,
+                    "value": 7.664346632098617
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Gift-Report/b9g2-hn9c",
+                    "name": "Lobbyist Data - Lobbyist Gift Report",
+                    "size": 61,
+                    "value": 4.110873864173311
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Agency-Report/4pay-mbmj",
+                    "name": "Lobbyist Data - Lobbyist Agency Report",
+                    "size": 2206,
+                    "value": 7.698936199813447
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Termination-Report/ru3t-7gty",
+                    "name": "Lobbyist Data - Lobbyist Termination Report",
+                    "size": 144,
+                    "value": 4.969813299576001
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Lobbyist-Registry-2012-to-present/ypez-j3yg",
+                    "name": "Lobbyist Data - Lobbyist Registry - 2012 to present",
+                    "size": 9290,
+                    "value": 9.136693831807884
+                }
+            ]
+        },{
+            "name": "Environment & Sustainable Development",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/Farmers-Markets/hu6v-hsqb",
+                    "name": "Farmers Markets",
+                    "size": 44,
+                    "value": 3.784189633918261
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Storage-Tanks/ug5u-hxnx",
+                    "name": "CDPH Storage Tanks",
+                    "size": 53790,
+                    "value": 10.892842855267288
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Environmental-Permits/ir7v-8mc8",
+                    "name": "CDPH Environmental Permits",
+                    "size": 45741,
+                    "value": 10.730750330040017
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Environmental-Inspections/i9rk-duva",
+                    "name": "CDPH Environmental Inspections",
+                    "size": 185733,
+                    "value": 12.132065437530343
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Environmental-Enforcement/yqn4-3th2",
+                    "name": "CDPH Environmental Enforcement",
+                    "size": 18191,
+                    "value": 9.808682245262217
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Environmental-Complaints/fypr-ksnz",
+                    "name": "CDPH Environmental Complaints",
+                    "size": 42694,
+                    "value": 10.661813674121044
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/Green-Roofs/q3z3-udcz",
+                    "name": "Green Roofs",
+                    "size": 359,
+                    "value": 5.883322388488279
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Asbestos-and-Demolition-Notification/qhb4-qx8k",
+                    "name": "CDPH Asbestos & Demolition Notification",
+                    "size": 42297,
+                    "value": 10.652471440533471
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Environmental-Records-Lookup-Table/a9u4-3dwb",
+                    "name": "CDPH Environmental Records Lookup Table",
+                    "size": 99279,
+                    "value": 11.505689347305601
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/CDPH-Environmental-Hold-on-City-Issued-Permits-and/6gqn-e2ij",
+                    "name": "CDPH Environmental Hold on City-Issued Permits & LUST NFR",
+                    "size": 1255,
+                    "value": 7.134890851565884
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/Christmas-Tree-Recycling-Locations-2013/spxm-tnai",
+                    "name": "Christmas Tree Recycling Locations 2013",
+                    "size": 23,
+                    "value": 3.1354942159291497
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/Alternative-Fuel-Locations/f7f2-ggz5",
+                    "name": "Alternative Fuel Locations",
+                    "size": 133,
+                    "value": 4.890349128221754
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Environment-Sustainable-Development/Energy-Usage-2010/8yq3-m6wp",
+                    "name": "Energy Usage 2010",
+                    "size": 67051,
+                    "value": 11.11320880284171
+                }
+            ]
+        },{
+            "name": "Buildings",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Buildings/Elevation-Benchmarks/zgvr-7yfd",
+                    "name": "Elevation Benchmarks",
+                    "size": 358,
+                    "value": 5.8805329864007
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu",
+                    "name": "Building Permits",
+                    "size": 307173,
+                    "value": 12.635166385768047
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Buildings/Vacant-and-Abandoned-Buildings-Violations/kc9i-wq85",
+                    "name": "Vacant & Abandoned Buildings - Violations",
+                    "size": 6356,
+                    "value": 8.757154527656606
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Buildings/Life-Safety-Evaluations/qqqh-hgyw",
+                    "name": "Life Safety Evaluations",
+                    "size": 620,
+                    "value": 6.429719478039138
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Buildings/Building-Permits-Waived-Fees/rfav-vmja",
+                    "name": "Building Permits - Waived Fees",
+                    "size": 514,
+                    "value": 6.2422232654551655
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Buildings/Building-Violations/22u3-xenr",
+                    "name": "Building Violations",
+                    "size": 1134196,
+                    "value": 13.94143458784098
+                }
+            ]
+        },{
+            "name": "Service Requests",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Street-Lights-All-Out/zuxi-7xem",
+                    "name": "311 Service Requests - Street Lights - All Out",
+                    "size": 163206,
+                    "value": 12.002768485542221
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Graffiti-Removal/hec5-y4x5",
+                    "name": "311 Service Requests - Graffiti Removal",
+                    "size": 362681,
+                    "value": 12.801278939007762
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Sanitation-Code-Complaints/me59-5fac",
+                    "name": "311 Service Requests - Sanitation Code Complaints",
+                    "size": 45290,
+                    "value": 10.72084153655026
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Tree-Trims/uxic-zsuj",
+                    "name": "311 Service Requests - Tree Trims",
+                    "size": 116161,
+                    "value": 11.662732438836994
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Tree-Debris/mab8-y9h3",
+                    "name": "311 Service Requests - Tree Debris",
+                    "size": 50315,
+                    "value": 10.826058522367434
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Rodent-Baiting/97t6-zrhs",
+                    "name": "311 Service Requests - Rodent Baiting",
+                    "size": 87788,
+                    "value": 11.38268009602275
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Garbage-Carts/9ksk-na4q",
+                    "name": "311 Service Requests - Garbage Carts",
+                    "size": 127503,
+                    "value": 11.75589517271557
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Abandoned-Vehicles/3c9v-pnva",
+                    "name": "311 Service Requests - Abandoned Vehicles",
+                    "size": 55556,
+                    "value": 10.92514680003611
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Vacant-and-Abandoned-Building/7nii-7srd",
+                    "name": "311 Service Requests - Vacant & Abandoned Buildings Reported",
+                    "size": 38906,
+                    "value": 10.568903759357763
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Pot-Holes-Reported/7as2-ds3y",
+                    "name": "311 Service Requests - Pot Holes Reported",
+                    "size": 172383,
+                    "value": 12.05747402446102
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Street-Lights-One-Out/3aav-uy2v",
+                    "name": "311 Service Requests - Street Lights - One Out",
+                    "size": 74157,
+                    "value": 11.213939746347055
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Service-Requests/311-Service-Requests-Alley-Lights-Out/t28b-ys7j",
+                    "name": "311 Service Requests - Alley Lights Out",
+                    "size": 74982,
+                    "value": 11.225003363713839
+                }
+            ]
+        },{
+            "name": "Events",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Events/Public-Right-of-Way-Use-Permits-Parades/a2eb-d767",
+                    "name": "Public Right-of-Way Use Permits - Parades",
+                    "size": 593,
+                    "value": 6.385194398997726
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Events/Chicago-Park-District-Event-Permits/pk66-w54g",
+                    "name": "Chicago Park District - Event Permits",
+                    "size": 13829,
+                    "value": 9.534523115464658
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Events/Public-Building-Commission-Event-Permits/knv6-r5ad",
+                    "name": "Public Building Commission - Event Permits",
+                    "size": 153,
+                    "value": 5.030437921392435
+                }
+            ]
+        },{
+            "name": "Parks & Recreation",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Parks-Recreation/Parks-Public-Art/sj6t-9cju",
+                    "name": "Parks - Public Art",
+                    "size": 194,
+                    "value": 5.267858159063328
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Parks-Recreation/Parks-Locations/wwy2-k7b3",
+                    "name": "Parks - Locations",
+                    "size": 581,
+                    "value": 6.364750756851911
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Parks-Recreation/Parks-Facilities-Features/y7qa-tvqx",
+                    "name": "Parks - Facilities & Features",
+                    "size": 4152,
+                    "value": 8.331345424845724
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Parks-Recreation/Parks-Buildings/2u2y-n6dm",
+                    "name": "Parks - Buildings",
+                    "size": 642,
+                    "value": 6.464588303689961
+                }
+            ]
+        },{
+            "name": "Sanitation",
+            "children": [
+                {
+                    "url": "https://data.cityofchicago.org/Sanitation/Street-Sweeping-Schedule-2012/k3hy-v5xb",
+                    "name": "Street Sweeping Schedule - 2012",
+                    "size": 4086,
+                    "value": 8.315321775377567
+                },
+                {
+                    "url": "https://data.cityofchicago.org/Sanitation/Street-Sweeping-Schedule-2013/8h6a-imtk",
+                    "name": "Street Sweeping Schedule - 2013",
+                    "size": 4025,
+                    "value": 8.300280189852664
+                }
+            ]
+        }
+    ]
+}
