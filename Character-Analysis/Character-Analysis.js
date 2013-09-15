@@ -89,7 +89,7 @@ $(document).ready(function () {
             drawBarGraph: function () {
                 
                 // Introducing and defining all variables here
-                var svgWidth = ($(".character").width() - 1),
+                var svgWidth = ($("body").width() - 1)*.45,
                     svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
@@ -173,7 +173,7 @@ $(document).ready(function () {
             updateBarGraph: function (sortorder) {
                 
                 // Definitions
-                var svgWidth = ($(".character").width() - 1),
+                var svgWidth = ($("body").width() - 1)*.45,
                     svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
