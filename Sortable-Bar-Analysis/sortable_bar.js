@@ -63,7 +63,8 @@ d3.select("#render").on("click", function() {
       .attr("x", function(d) { return x(d.Group); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.Param); })
-      .attr("height", function(d) { return height - y(d.Param); });
+      .attr("height", function(d) { return height - y(d.Param); })
+      .attr("stroke",'grey');
 
   d3.select("input").on("change", change);
 
