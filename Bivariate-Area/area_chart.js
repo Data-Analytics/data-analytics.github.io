@@ -50,6 +50,8 @@ var svg = d3.select("#Bivariate-Area").append("svg")
   svg.append("path")
       .datum(data)
       .attr("class", "area")
+      .style("fill", "lightgreen")
+      .style("stroke", "grey")
       .attr("d", area);
 
   svg.append("g")
@@ -65,5 +67,6 @@ var svg = d3.select("#Bivariate-Area").append("svg")
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
+      .style("fill", "brown")
       .text("Temperature (ºF)");
 });
