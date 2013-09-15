@@ -89,7 +89,7 @@ $(document).ready(function () {
             drawBarGraph: function () {
                 
                 // Introducing and defining all variables here
-                var svgWidth = ($(".character").width() - 1)*.75,
+                var svgWidth = ($(".character").width() - 1),
                     svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
@@ -145,7 +145,7 @@ $(document).ready(function () {
                           .each("end", function () {
                                 d3.select(this)
                                   .transition()
-                                  .delay(250)
+                                  .delay(200)
                                   .attr("y", function (d) {
                                     return svgHeight - scale(d.frequency);
                                   })
@@ -173,7 +173,7 @@ $(document).ready(function () {
             updateBarGraph: function (sortorder) {
                 
                 // Definitions
-                var svgWidth = ($(".character").width() - 1)*.75,
+                var svgWidth = ($(".character").width() - 1),
                     svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
@@ -217,7 +217,7 @@ $(document).ready(function () {
                         return "rgb(75, 180, "+ (Math.floor(255 - (255 * normalizedFrequency))) +")";
                    })
                    .transition()
-                   .delay(250)
+                   .delay(200)
                    .attr("y", function (d) {
                         return svgHeight - scale(d.frequency);
                    });
@@ -322,7 +322,7 @@ $(document).ready(function () {
     $("rect").live("mouseover", function (event) {
         
             var top = "420 px",
-                left = (event.pageX-100) + "px";
+                left = (event.pageX-220) + "px";
         
         $("#data-box").text( $(this).attr("data-letter") + " = " + $(this).attr("data-frequency") )
                       .css( "visibility", "visible" )
@@ -333,7 +333,7 @@ $(document).ready(function () {
         
     }).live("mousemove", function () {
             var top = "420px",
-                left = (event.pageX-100) + "px";
+                left = (event.pageX-220) + "px";
         
         $("#data-box").css("top", top)
                       .css("left", left);
