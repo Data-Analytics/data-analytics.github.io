@@ -89,18 +89,18 @@ $(document).ready(function () {
             drawBarGraph: function () {
                 
                 // Introducing and defining all variables here
-                var svgWidth = ($("body").width() - 1)*.75,
+                var svgWidth = ($(".character").width() - 1)*.75,
                     svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
                     maxFrequency = this.maxFrequency,
-                    svg = d3.select("body")
+                    svg = d3.select(".character")
                             .append("svg")
                             .attr("id", "graph")
                             .attr("width", svgWidth)
                             .attr("height", svgHeight),
-                    labelcontainer = d3.select("body")
+                    labelcontainer = d3.select(".character")
                                        .append("div")
                                        .attr("id", "labels")
                                        .attr("width", svgWidth)
@@ -173,7 +173,7 @@ $(document).ready(function () {
             updateBarGraph: function (sortorder) {
                 
                 // Definitions
-                var svgWidth = ($("body").width() - 1)*.75,
+                var svgWidth = ($(".character").width() - 1)*.75,
                     svgHeight = 400,
                     barPadding = 1,
                     data = this.data,
