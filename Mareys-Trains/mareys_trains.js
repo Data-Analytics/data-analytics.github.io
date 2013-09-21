@@ -20,8 +20,8 @@ var z = d3.scale.linear()
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .ticks(14)
-    .tickFormat(formatTime);
+    .ticks(10);
+    
 
 var svg = d3.select(".trains").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -52,7 +52,8 @@ d3.csv("data.csv", type, function(error, trains) {
       .text(function(d) { return d.name; });
 
   station.append("line")
-      .attr("x2", width);
+      .attr("x2", width)
+      .style("stroke",'#555');
 
   svg.append("g")
       .attr("class", "x top axis")
@@ -87,7 +88,14 @@ d3.csv("data.csv", type, function(error, trains) {
       .attr("transform", function(d) { return "translate(" + x(d.time) + "," + y(d.station.distance) + ")"; })
       .attr("r", 3)
   circle.append("title")
-        .text(function(d) { return  d.time.getHours()+' : '+d.time.getMinutes()+' .hrs' ; });
+        .text(function(d) { 
+        var dd = "AM";
+        var hours = d.time.getHours();
+    if (hours >= 12) {
+        hours = d.time.getHours()-12;
+        dd = "PM";
+    }
+        return  hours+' : '+d.time.getMinutes()+' .'+dd ; });
       });
 
 function type(d, i) {
