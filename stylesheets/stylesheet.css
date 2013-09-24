@@ -57,8 +57,8 @@ Theme Styles
 
 body {
   box-sizing: border-box;
+  background: url(../images/body-background.png);
   color:#373737;
-  background: url(../images/body-background.png) ;
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -430,7 +430,7 @@ Small Device Styles
   right: 50%;
   height: 50px;
   margin-right: -382px;
-  position: fixed;
+  position: absolute;
   top: 185px;
   background: #ffcc00 url(../images/background.jpg) ;
   border: 1px solid #f0b500;
