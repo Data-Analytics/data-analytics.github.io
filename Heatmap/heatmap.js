@@ -1,7 +1,7 @@
 
-var margin = {top: 20, right: 90, bottom: 30, left: 50},
-    width = 680 - margin.left - margin.right,
-    height = 420 - margin.top - margin.bottom;
+var margin = {top: 10, right: 20, bottom: 30, left: 50},
+    width = 670 - margin.left - margin.right,
+    height = 360 - margin.top - margin.bottom;
 
 var parseDate = d3.time.format("%Y-%m-%d").parse,
     formatDate = d3.time.format("%b %d");
@@ -14,7 +14,6 @@ var x = d3.time.scale().range([0, width]),
 // This could be inferred from the data if it weren't sparse.
 var xStep = 864e5,
     yStep = 100;
-
 
 d3.select("#render").on("click", function() {
     
