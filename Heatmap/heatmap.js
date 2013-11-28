@@ -15,6 +15,7 @@ var x = d3.time.scale().range([0, width]),
 var xStep = 864e5,
     yStep = 100;
 
+    
 d3.select("#render").on("click", function() {
     
     d3.select("svg")
