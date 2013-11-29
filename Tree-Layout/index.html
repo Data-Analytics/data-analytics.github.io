@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
 </head>
-<body>
+<body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -57,7 +57,7 @@ A5,A12
 A5,A13
 A5,A14
 </textarea></br>
-<button id="render" class="name">render</button>
+<button id="render" class="name" onClick='onRender();'>render</button>
 </div>
   
   <div class="tree-layout" style="width:78%;float:right;display:inline-block"></div>

@@ -27,7 +27,7 @@ var line = d3.svg.line()
 
 
 
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
 		.remove();
@@ -94,4 +94,4 @@ var svg = d3.select(".multi-line").append("svg")
       .attr("x", 3)
       .attr("dy", ".35em")
       .text(function(d) { return d.name; });
-});
+};

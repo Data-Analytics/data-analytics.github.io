@@ -20,7 +20,7 @@ var yAxis = d3.svg.axis()
     .tickFormat(formatPercent);
 
 
-d3.select("#render").on("click", function() {
+function onRender() {
 
     d3.selectAll("svg")
        .remove(); 
@@ -94,4 +94,4 @@ d3.select("#render").on("click", function() {
       .selectAll("g")
         .delay(delay);
   }
-});
+};

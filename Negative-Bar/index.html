@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     </head>
-  <body>
+  <body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -78,7 +78,7 @@ R,1
 S,-4
 T,-3
 </textarea></br>
-			<button id="render" class="name">render</button>
+			<button id="render" class="name" onClick='onRender();'>render</button>
 			</div>
 			<div class="negative_bar" style="width:70%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="negative_bar.js"></script>

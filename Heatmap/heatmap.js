@@ -16,7 +16,7 @@ var xStep = 864e5,
     yStep = 100;
 
     
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
 		.remove();
@@ -108,4 +108,4 @@ d3.select("#render").on("click", function() {
       .attr("text-anchor", "end")
       .attr("transform", "rotate(-90)")
       .text("Value");
-});
+};

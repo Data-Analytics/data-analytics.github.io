@@ -24,7 +24,7 @@ var area = d3.svg.area()
     .y1(function(d) { return y(d.high); });
 
 
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
 		.remove();
@@ -69,4 +69,4 @@ var svg = d3.select("#Bivariate-Area").append("svg")
       .style("text-anchor", "end")
       .style("fill", "brown")
       .text("Temperature (ºF)");
-});
+};

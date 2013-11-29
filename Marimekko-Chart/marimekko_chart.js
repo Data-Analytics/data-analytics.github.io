@@ -14,7 +14,7 @@ var n = d3.format(",d"),
     p = d3.format("%");
 
 
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
        .remove();
@@ -101,4 +101,4 @@ d3.select("#render").on("click", function() {
       .attr("height", function(d) { return y(d.value / d.parent.sum); })
       .attr("width", function(d) { return x(d.parent.sum / sum); })
       .style("fill", function(d) { return z(d.group); });
-});
+};

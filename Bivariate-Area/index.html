@@ -30,7 +30,7 @@ body {
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
 	<script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
   </head>
-  <body>
+  <body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -79,7 +79,7 @@ date,high,low
 20130617,54.3,51.8
 20130618,54.9,51.4
 </textarea></br>
-			<button id="render" class="name">render</button>
+			<button id="render" class="name" onClick='onRender();' >render</button>
 			</div>
 			<div id="Bivariate-Area" style="width:75%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="area_chart.js"></script>

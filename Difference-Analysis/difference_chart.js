@@ -28,7 +28,7 @@ var area = d3.svg.area()
     .x(function(d) { return x(d.date); })
     .y1(function(d) { return y(d["New York"]); });
 
-d3.select("#render").on("click", function() {
+function onRender() {
 
     d3.selectAll("svg")
        .remove(); 
@@ -96,4 +96,4 @@ d3.select("#render").on("click", function() {
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .text("Temperature (ºF)");
-});
+};

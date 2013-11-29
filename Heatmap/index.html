@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     </head>
-  <body>
+  <body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -76,7 +76,7 @@ date,bucket,count
 2013-05-24,1000,220
 2013-05-24,1100,255
 </textarea></br>
-			<button id="render" class="name">render</button>
+			<button id="render" class="name" onClick='onRender();'>render</button>
 			</div>
 			<div id="crimeamap" style="width:70%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="heatmap.js"></script>

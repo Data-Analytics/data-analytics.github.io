@@ -8,7 +8,7 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal()
     .projection(function(d) { return [d.y, d.x]; });
 
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
        .remove();
@@ -54,4 +54,4 @@ d3.select("#render").on("click", function() {
   function nodeByName(name) {
     return nodesByName[name] || (nodesByName[name] = {name: name});
   }
-});
+};

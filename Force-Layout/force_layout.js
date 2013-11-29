@@ -5,7 +5,7 @@ var width = 680,
 var force = d3.layout.force()
     .size([width, height]);
 
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
        .remove();
@@ -62,4 +62,4 @@ d3.select("#render").on("click", function() {
   function nodeByName(name) {
     return nodesByName[name] || (nodesByName[name] = {name: name});
   }
-});
+};

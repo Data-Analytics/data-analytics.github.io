@@ -9,10 +9,8 @@
   <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
   <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     </script>
-
  </head>
- </style>
- <body>
+<body onLoad="onRender();">
     <!-- HEADER -->
         <div id="header_wrap" class="outer">
             <header class="inner container">
@@ -63,7 +61,7 @@ Delta,P,98,40
                   </textarea></br>
                   <button id="param1" class="name">param1</button>
                   <button id="param2" class="name">param2</button>
-                  <button id="render" class="name">render</button>
+                  <button id="render" class="name" onClick='onRender();'>render</button>
          </div>
          <div id="chart" style="width:73%;float:right;display:inline-block">
                 <div id="Wrappertreemap"></div>

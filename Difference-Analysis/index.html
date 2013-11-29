@@ -38,7 +38,7 @@ body {
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
   </head>
-  <body>
+  <body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -90,7 +90,7 @@ date,"New York","Paris"
 20120919,76,57
 20120920,76,70
 </textarea></br>
-			<button id="render" class="name">render</button>
+			<button id="render" class="name" onClick='onRender();'>render</button>
 			</div>
 			<div class="difference-analysis" style="width:72%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="difference_chart.js"></script>

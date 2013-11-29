@@ -2,7 +2,7 @@ var width = 710,
     height = 420,
     color = d3.scale.category20();
 
- d3.select("#render").on("click", function() {
+function onRender() {
     
     var div = document.getElementById("Wrappertreemap");
            div.parentNode.removeChild(div);
@@ -63,7 +63,7 @@ var width = 710,
         d3.select("#param1").classed("active", false);
         d3.select("#param2").classed("active", true);
       });
-});
+};
 function cell() {
   this
       .style("left", function(d) { return d.x + "px"; })

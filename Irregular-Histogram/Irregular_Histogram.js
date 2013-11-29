@@ -10,7 +10,7 @@ var x = d3.scale.linear()
 var y = d3.scale.linear()
     .range([height, 0]);
     
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
        .remove();
@@ -69,4 +69,4 @@ d3.select("#render").on("click", function() {
       .scale(y)
       .orient("left"));
 
-});
+};

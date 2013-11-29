@@ -31,7 +31,7 @@ var stack = d3.layout.stack()
 var color = d3.scale.category10();
 
 
-d3.select("#render").on("click", function() {
+function onRender() {
 
     d3.selectAll("svg")
        .remove(); 
@@ -108,4 +108,4 @@ d3.select("#stacked").on("click", function() {
         d3.select("#stacked").classed("active", true);
       });
 
-});
+};

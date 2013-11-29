@@ -11,7 +11,7 @@ var y = d3.scale.linear()
 var z = d3.scale.ordinal()
     .range(["#E7E1EF", "#C994C7", "#DD1C77"]);
 
-d3.select("#render").on("click", function() {
+function onRender() {
 
     d3.selectAll("svg")
        .remove(); 
@@ -77,4 +77,4 @@ d3.select("#render").on("click", function() {
       .attr("x", width + 6)
       .attr("dy", ".35em")
       .text(d3.format(",d"));
-});
+};

@@ -23,8 +23,8 @@
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
-    </head>
-  <body>
+</head>
+<body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -73,7 +73,7 @@ Income,People
 389.3,165132
 442.3,442075
 </textarea></br>
-			<button id="render" class="name">render</button>
+			<button id="render" class="name" onClick='onRender();'>render</button>
 			</div>
 			<div id="histogram" style="width:72%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="Irregular_Histogram.js"></script>

@@ -26,7 +26,7 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
 <title>Sortable Bar Chart</title> 
 </head>
-<body>
+<body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -75,7 +75,7 @@ O,0.75
 P,0.19
 Q,0.09
 </textarea></br>
-<button id="render" class="name">render</button>
+<button id="render" class="name" onClick='onRender();'>render</button>
 </div>
   <label><input type="checkbox"> Sort values</label>	
   <div class="sortable-bar" style="width:72%;float:right;display:inline-block">

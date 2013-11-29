@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
 </head>
-<body>
+<body onLoad="onRender();">
 
  <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -62,7 +62,7 @@ group,date,value
 </textarea></br>
 	<button id="multiples" class="name">multiples</button>
 	<button id="stacked" class="name">stack</button>
-	<button id="render" class="name">render</button><br/>
+	<button id="render" class="name" onClick='onRender();'>render</button><br/>
 </div>
 	<div class="multiple-stack" style="width:72%;float:right;display:inline-block">
 	</div>

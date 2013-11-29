@@ -24,7 +24,7 @@ body {
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
 <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
 </head>
-<body>
+<body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -73,7 +73,7 @@ sepalLength,sepalWidth,species
 7.3,2.9,virginica
 6.7,2.5,virginica
 </textarea></br>
-<button id="render" class="name">render</button>
+<button id="render" class="name" onClick='onRender();'>render</button>
 </div>
   
   <div class="scatter-plot" style="width:72%;float:right;display:inline-block"></div>

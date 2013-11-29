@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     </head>
-  <body>
+  <body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -82,7 +82,7 @@ date,Delhi,Mumbai,Chennai
 20130619,62.1,58.9,61.6
 20130620,65.1,57.2,67.4
 </textarea></br>
-			<button id="render" class="name">render</button>
+			<button id="render" class="name" onClick='onRender();'>render</button>
 			</div>
 			<div class="multi-line" style="width:72%;float:right;display:inline-block"></div>
 			<script type="text/javascript" src="line_series.js"></script>

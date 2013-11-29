@@ -16,7 +16,7 @@
    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     
   </head>
-  <body>
+  <body onLoad="onRender();">
   
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
@@ -60,7 +60,7 @@ date,param1,param2,param3
 11/2012,100,140,325
 12/2012,40,120,215
 </textarea></br>
-<button id="render" class="name">render</button>
+<button id="render" class="name" onClick='onRender();'>render</button>
 </div>
   <div>
   <div class="area-criema" style="width:72%;float:right;display:inline-block">

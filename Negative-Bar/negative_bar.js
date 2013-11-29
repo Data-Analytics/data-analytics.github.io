@@ -13,7 +13,7 @@ var xAxis = d3.svg.axis()
     .orient("top");
 
 
-d3.select("#render").on("click", function() {
+function onRender() {
 
     d3.selectAll("svg")
        .remove(); 
@@ -50,7 +50,7 @@ d3.select("#render").on("click", function() {
       .attr("x2", x(0))
       .attr("y2", height);
 
-});
+};
 
 function type(d) {
   d.value = +d.value;

@@ -18,7 +18,7 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
     
-d3.select("#render").on("click", function() {
+function onRender() {
     
     d3.select("svg")
        .remove();
@@ -90,4 +90,4 @@ d3.select("#render").on("click", function() {
       .style("text-anchor", "end")
       .text(function(d) { return d; });   
   
-});
+};
