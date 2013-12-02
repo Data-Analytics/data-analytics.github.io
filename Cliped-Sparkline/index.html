@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<style>
+
+text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.line.above {
+  stroke: #f00;
+}
+
+</style>
+<title>Cliped Sparkline</title>
+<script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+</head>
+<body onLoad="onRender();">
+
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner container">
+              <h1 id="project_title">Cliped Sparkline</h1> 
+           </header>
+           <div id="banner">
+            <div class="banner-inner">
+              <span id="logo"></span>
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Cliped-Sparkline/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                <ul>
+                  <li><a href="https://github.com/Sushanthece/D3-Cliped-Sparkline/archive/gh-pages.zip" class="button">ZIP</a></li>
+                  <li><a href="https://github.com/Sushanthece/D3-Cliped-Sparkline" class="button">view on github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+	
+	 <!-- MAIN CONTENT -->
+           <div class="container">
+          <section id="main_content" class="inner" >   
+  <div>
+  <div style="width:26%;float:left;display:inline-block" >
+  <textarea id="input_data" name="input_data" rows="20" cols="18">
+date,temperature
+20111101,57.9
+20111102,64.6
+20111103,56.2
+20111104,50.5
+20111105,51.3
+20111106,52.6
+20111107,51.4
+20111108,50.6
+20111109,54.6
+20111110,55.6
+20111111,53.9
+20111112,54.0
+20111113,63.8
+20111114,53.5
+20111115,53.4
+20111116,52.2
+20111117,62.7
+20111118,63.1
+</textarea></br>
+<button id="render" class="name" onClick='onRender();'>render</button>
+</div>
+  
+  <div class="cliped_sparkline" style="width:72%;float:right;display:inline-block"></div>
+    <script type="text/javascript" src="cliped_sparkline.js"></script>
+    </div>
+        </section>
+        </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45813188-1', 'data-analytics.github.io');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
