@@ -89,8 +89,8 @@ $(document).ready(function () {
             drawBarGraph: function () {
                 
                 // Introducing and defining all variables here
-                var svgWidth = ($("body").width() - 1)*.45,
-                    svgHeight = 400,
+                var svgWidth = $(".character").width() - 1,
+                    svgHeight = 460,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -105,7 +105,6 @@ $(document).ready(function () {
                                        .attr("id", "labels")
                                        .attr("width", svgWidth)
                                        .attr("height", 30)
-                                       .style("height", "30px"),
                     scale = d3.scale.linear()
                               .domain([minFrequency, maxFrequency])
                               .range([3, svgHeight]);
@@ -135,19 +134,20 @@ $(document).ready(function () {
                   .attr("y", function (d) {
                         return svgHeight - scale(maxFrequency);
                   })
+
                   .each("end", function () {
                         d3.select(this)
                           .transition()
                           .duration(50)
-                          .attr("height", function (d) {
-                                return scale(maxFrequency);
-                          })
                           .each("end", function () {
                                 d3.select(this)
                                   .transition()
-                                  .delay(200)
+                                  .delay(250)
                                   .attr("y", function (d) {
                                     return svgHeight - scale(d.frequency);
+                                  })
+                                  .attr("height", function (d) {
+                                    return svgHeight;
                                   })
                           })
                   });
@@ -161,7 +161,7 @@ $(document).ready(function () {
                               .text(function (d) {
                                     return d.letter;
                               })
-                              .style("height",30  + "px")
+
                               .style("width", function () {
                                     return svgWidth / data.length - barPadding + "px";
                               });
@@ -173,8 +173,8 @@ $(document).ready(function () {
             updateBarGraph: function (sortorder) {
                 
                 // Definitions
-                var svgWidth = ($("body").width() - 1)*.45,
-                    svgHeight = 400,
+                var svgWidth = $(".character").width() - 1,
+                    svgHeight = 500,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -217,7 +217,7 @@ $(document).ready(function () {
                         return "rgb(75, 180, "+ (Math.floor(255 - (255 * normalizedFrequency))) +")";
                    })
                    .transition()
-                   .delay(200)
+                   .delay(500)
                    .attr("y", function (d) {
                         return svgHeight - scale(d.frequency);
                    });
@@ -315,7 +315,7 @@ $(document).ready(function () {
         GraphicsHandler.updateBarGraph(session_updatemode);        
     });
     
-    /*
+  /*
     Graph bars
     */
     
