@@ -61,6 +61,7 @@ function onRender() {
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.Group); })
+      .attr("rx",  x.rangeBand()/4)
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.Param); })
       .attr("height", function(d) { return height - y(d.Param); })
