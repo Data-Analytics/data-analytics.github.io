@@ -12,7 +12,6 @@ var xAxis = d3.svg.axis()
     .scale(x)
     .orient("top");
 
-
 function onRender() {
 
     d3.selectAll("svg")
@@ -27,7 +26,7 @@ function onRender() {
     txt_value = document.getElementById('input_data').value;
     data = d3.csv.parse(txt_value);
 
-  x.domain(d3.extent(data, function(d) { return d.value; })).nice();
+  x.domain(d3.extent(data, function(d) { return d.value-.5; })).nice();
   y.domain(data.map(function(d) { return d.name; }));
 
   svg.selectAll(".bar")
@@ -36,6 +35,7 @@ function onRender() {
       .attr("class", function(d) { return d.value < 0 ? "bar negative" : "bar positive"; })
       .attr("x", function(d) { return x(Math.min(0, d.value)); })
       .attr("y", function(d) { return y(d.name); })
+      .attr("rx", y.rangeBand()/4)
       .attr("width", function(d) { return Math.abs(x(d.value) - x(0)); })
       .attr("height", y.rangeBand());
 
