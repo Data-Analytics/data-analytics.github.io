@@ -10,14 +10,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
     margin: 0 auto;
 }
 
-
 @media print {
   .page-break {
       page-break-after: always;
       margin-bottom: 0;
   }
 }
-
   
   @media (min-width:  768px) {
       .cols { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; }
@@ -38,7 +36,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
   }
   .thumbnail h3 {
       padding: 0 10px;
-      color: #555;
+      color: #666;
       margin-top: 2em;
       font-size: 16px;
       line-height: 1;
@@ -46,22 +44,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
   }
   .thumbnail p {
       padding: 0 10px;
+      margin-top: 1em;
       font-family: sans-serif;
-      line-height: 1.5;
+      line-height: 1.3;
       color: #222;
   }
 
-  .demo { width:200px; height:270px; margin:0 14px 14px 0; position: relative; }
-  .demo-big { width: 416px; }
-  .demo-private { background-color: #eee; }
-  .demo .icons { position: absolute; right: 14px; bottom: 14px; text-align: right; }
-  .demo .icons .icon { margin-right: 0.75em; }
-  .demo .online { color: #4f81bd; }
-  .demo .video { color: #c0504d; }
-  .demo .icons .icon:hover {
-            transform: scale(2);
-         -o-transform: scale(2);
-        -ms-transform: scale(2);
-       -moz-transform: scale(2);
-    -webkit-transform: scale(2);
-  }
+  .demo { width:200px; height:300px; margin:0 14px 14px 0; position: relative; }
+  
