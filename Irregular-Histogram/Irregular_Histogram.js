@@ -52,6 +52,7 @@ function onRender() {
     .enter().append("rect")
       .attr("class", "bin")
       .attr("x", function(d) { return x(d.offset); })
+      .attr("rx", 5)
       .attr("width", function(d) { return x(d.width) - 1; })
       .attr("y", function(d) { return y(d.height); })
       .attr("height", function(d) { return height - y(d.height); });
