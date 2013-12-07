@@ -1,17 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="my blog page" />
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/pin.css">
-    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <title>Data Visualisation</title>
-  </head>
-  <body>
-             <!-- HEADER -->
+<head>
+   <title>Data Visualisation</title>
+   <script type="text/javascript" src="javascripts/d3.v3.min.js"></script>
+   <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+   <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/pin.css">
+</head>
+<body>
+ <!-- HEADER -->
             <div id="header_wrap" class="outer">
                 <header class="inner container">
                     <img src="images/self.jpg" height ="100px" width="100px" align="left">
@@ -30,214 +28,180 @@
               </div><!-- end banner -->
             </div>
             <br/><br/>
-            <a href="Character-Analysis" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/character-viusliser.png"/>
-                <h3 align="left">Letter-Counter</h3>
-                <p>This parameter allows you to control the outer padding 
-                 separately from the inner padding between bars.</p>
-            </a>
-            <a href="Sankey" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/sankey.png"/>
-                <h3 align="left">Sankey-Diagram</h3>
-                <p>Sankey diagrams visualize the magnitude of flow between nodes in a network. </p>
-            </a>
-            <a href="Crimea-Bar" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/crimea-bar.png"/>
-                <h3 align="left">Crimea-Bar-Chart</h3>
-                <p>Bar chart comparing there variables in parallel,to show the distribution</p>
-            </a>
-            <a href="Crimea-Area" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/crimea-area.png"/>
-                <h3 align="left">Crimea-Area-Chart</h3>
-                <p>Area Map comparing three variables in parallel, to show the distribution </p>
-            </a>
-            <a href="Treemap" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/treemap.png"/>
-                <h3 align="left">Treemap</h3>
-                <p>Treemaps display hierarchical (tree-structured) data as a set of nested rectangles. 
-                Each branch of the tree is given a rectangle.</p>
-            </a>
-            <a href="Word-Cloud" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/word-cloud.png"/>
-                <h3 align="left">Word-cloud</h3>
-                <p>A word cloud, or tag cloud is a visual representation for text data,
-                typically used to depict keyword on websites </p>
-            </a>
-            <a href="Cartogram" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/cartogram.png"/>
-                <h3 align="left">Cartogram</h3>
-                <p>A cartogram is a map with some thematic variable such as travel time, 
-                population ssis substituted for land area or distance.</p>
-            </a>
-            <a href="World-Cartogram" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/world-tour.png"/>
-                <h3 align="left">World-Tour</h3>
-                <p>Showing you a flythrough of where you'll be going as they pull up trip prices</p>
-            </a>
-            <a href="Trust-Business" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/trust-business.png"/>
-                <h3 align="left">Scatter-Analysis</h3>
-                <p>A scatterplot using d3js. It maps social trust against ease of 
-                doing business in various countries. For tooltips</p>
-            </a> 
-            <a href="Clock" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/clock.png"/>
-                <h3 align="left">Polar-Clock</h3>
-                <p>In a polar clock, each ring encodes each time field. The outermost ring 
-                represents second, followed by minutes etc </p>
-            </a>
-            <a href="Rainbow-worm" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/worm.png"/>
-                <h3 align="left">Rainbow-Worm</h3>
-                <p>This psychedelic example, reminiscent of an earthworm, demonstrates the 
-                difference between a segmented and unsegmented line. </p>
-            </a>
-            <a href="Stack-Multiples" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/stack-multiples.png"/>
-                <h3 align="left">Stack_To_Multiples-Chart</h3>
-                 <p>Barchart gives you 2 dimesions to view one stacked together one above the other 
-                 and another showing you the view of individuals with transistion</p>
-            </a>
-            <a href="Heatmap" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/heatmap.png"/>
-                <h3 align="left">Heat-Map</h3>
-                <p>A heat map is a graphical representation of data where the individual values 
-                 in a matrix are represented as colors. </p>
-            </a>
-            <a href="Zoomable-Sun_Burst" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/zoomable-sunburst.png"/>
-                <h3 align="left">Zoomable-SunBurst</h3>
-                <p>A design commonly used in design patterns. 
-                It consists of rays radiating out from a central disk .</p>
-            </a>
-            <a href="Sortable-Bar-Analysis" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/sorted-bar.png"/>
-                <h3 align="left">Sortable_Bar-Chart</h3>
-                <p>This variation of a simple bar chart adds sorting with staggered delay and 
-                translucency to improve readability during the transition</p>
-            </a>
-            <a href="Grouped-Stacked" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/grouped-stack.png"/>
-                <h3 align="left">Grouped_To_Stack-Bar</h3>
-                <p>Barchart gives you 2 dimesions to view one grouped together parallel 
-                or stacked together one above the other with transistion</p>
-            </a>
-            <a href="Bullet" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/bullet.png"/>
-                <h3 align="left">Bullet</h3>
-                <p> bullet charts compare a given quantitative measure 
-               (such as profit or revenue) against qualitative ranges (e.g., poor, satisfactory, good)</p>
-            </a>
-            <a href="Tree-Layout" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/tree.png"/>
-                <h3 align="left">Tree-Layout</h3>
-                <p>The tree layout produces tidy node-link diagrams of 
-                trees using the Reingold–Tilford “tidy” algorithm</p>
-            </a>
-            <a href="Scatter_plot" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/Scatter-plot.png"/>
-                <h3 align="left">Scatter-Plot</h3>
-                <p>A scatter plot is a type of mathematical diagram using Cartesian 
-                coordinates to display values for two variables .</p>
-            </a>
-            <a href="Force-Layout" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/force.png"/>
-                <h3 align="left">Force-Layout</h3>
-                <p>A flexible force-directed graph layout implementation using 
-                position Verlet integration to allow simple constraints</p>
-            </a>
-            <a href="Irregular-Histogram" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/histogram.png"/>
-                <h3 align="left">Histogram</h3>
-                <p>histogram of an Irwin–Hall distribution.
-                The values are then binned at regular intervals using D3’s histogram layout. </p>
-            </a>
-            <a href="Difference-Analysis" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/difference-chart.png"/>
-                <h3 align="left">Difference-Chart</h3>
-                <p>This variation of a bivariate area chart uses clipping to alternate colors.
-                the difference between the two is filled in green and red. </p>
-            </a>
-            <a href="Negative-Bar" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/negative-bar.png"/>
-                <h3 align="left">Negative_Bar-Chart</h3>
-                <p>dataset is an array of numbers with both positive 
-                and negative values. Use two scales to construct the bar chart</p>
-            </a>
-            <a href="Build-Graph" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/build-graph.png"/>
-                <h3 align="left">build-graph</h3>
-                <p>The nodes you can create by clicking on the free place , and 
-                create the link by placing 2 or more nodes on the circle ring </p>
-            </a>
-            <a href="Bivariate-Area" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/area-series.png"/>
-                <h3 align="left">Bivariate_Area-Chart</h3>
-                <p>This two-value area chart storing the daily high and low 
-                temperature in San Francisco </p>
-            </a>
-            <a href="Chord-Diagram" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/chord-diagram.png"/>
-                <h3 align="left">Chord-Diagram</h3>
-                <p>directed relationships among a group of entities, 
-                simple interactivity by using mouseover filtering. </p>
-            </a>
-            <a href="Mareys-Trains" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/marey-trains.png"/>
-                <h3 align="left">Mareys-Trains</h3>
-                <p> graphical train schedule. Stations are separated vertically in proportion to geography; 
-                ,the slope of the line reflects the speed of the train</p>
-            </a>
-            <a href="Multi-Line-Analysis" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/multi-line-chart.png"/>
-                <h3 align="left">Multiline-Chart</h3>
-                <p>This line chart is constructed storing the daily average 
-                temperatures of Chennai, Delhi and Mumbai </p>
-            </a>
-            <a href="Zoomable-icicle" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/zoomable_icicle.png"/>
-                <h3 align="left">Zoomable-icicle</h3>
-                <p> This “icicle” diagram uses d3.layout.partition to divide space with 
-                area proportional to the value of nodes in a tree. </p>
-            </a>
-            <a href="Marimekko-Chart" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/marimekko.png"/>
-                <h3 align="left">Marimekko_Bar-Chart</h3>
-                <p>A Marimekko Chart, inspired by Freakalytics. Thanks to Noah Iliinsky for the suggestion. </p>
-            </a>
-            <a href="Zoomable-treemap" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/zoomable_treemap.png"/>
-                <h3 align="left">Zoomable-Treemap</h3>
-                <p>Chicago Data Portal, with the datasets grouped by categories 
-                and dimensions drawn based on the size of the individual datasets.</p>
-            </a>
-            <a href="Un-Employment" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/un-employment.png"/>
-                <h3 align="left">Un-Employment</h3>
-                <p>The distribution of unemployment for 380 U.S. metropolitan areas from 
-                January 2000 to December 2012. weighted each area equally</p>
-            </a>
-            <a href="Cliped-Sparkline" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/cliped_sparkline.png"/>
-                <h3 align="left">Cliped-Sparkline</h3>
-                <p>This variation of a threshold encoding demonstrates how to use clipping to 
-                change the color of a line based on a y-threshold.</p>
-            </a>
-            <a href="Zipdecode" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/zipdecode.png"/>
-                <h3 align="left">ZipDecode_Analysis</h3>
-                <p>Ben Fry’s zipdecode, inspired by Nelson Minar’s reimplementation. 
-                uses cross-fading canvas elements to render transitions efficiently.</p>
-            </a>
-            <a href="Normalized-Stacked_Bar" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/normalized-stacked_bar.png"/>
-                <h3 align="left">Normalized-Stacked_Bar</h3>
-                <p>This variation of a stacked bar chart shows percentages rather than absolute numbers.</p>
-            </a>
-            <a href="Correlation" class="demo thumbnail pull-left">
-                <img width="180" height="120" src="images/correlation.png"/>
-                <h3 align="left">Cluster-Plot</h3>
-                <p>A cluster plot in general is a group or bunch of several discrete items that are close to each other</p>
-            </a>
-  </body>  
+<div>            
+<div id="nav" style="width:15%;float:left;display:inline-block">
+    <div class="menu1-container"></div>
+    <div class="menu2-container">
+        <input type="text" class="menu2-search" />
+    </div>
+</div>
+<div id="list" style="width:80%;float:right;display:inline-block">
+    <div class="menu3-container"></div>
+</div>
+</div>
+<script type="text/javascript">
+
+    var vizTypeScale = d3.scale.category20c();
+    var splitChar = '; ';
+    var json;
+
+    var data1 = {
+        class_name :"displayName",
+        href: function(d, i){return '#'+ d.dimension+'=all';},
+        html: function(d, i){ return d.displayName;}
+    };
+
+    var data2 = {
+        class_name :"displayName",
+        href: function(d, i){ return '#'+ d.dimension+'='+d.key; },
+        html: function(d, i){ return d.key+' <span class="value">'+ d.value+'</span>';}
+    };
+
+    var data3 = {
+        class_name :"demo thumbnail pull-left",
+        href: function(d, i){return d.url;},
+        html: function(d, i){
+            var content ='';
+            if(d.thumbnail) content += "<img width='180' height='120'  src='"+d.thumbnail+"' class='thumbnail'/>";
+            content += "<h3 align='left'>"+d.title+"</h3>";
+            if(d.description)content += "<p>"+d.description+"<p/>";
+            return content;}
+    };
+
+    function getDocHeight() {
+        var doc = document;
+        return Math.max(
+            doc.body.scrollHeight, doc.documentElement.scrollHeight,
+            doc.body.offsetHeight, doc.documentElement.offsetHeight,
+            doc.body.clientHeight, doc.documentElement.clientHeight
+        );
+    }
+
+    var thumbSize = 150;
+    var menu3Width = parseInt(d3.select('#list').style('width'));
+    var numInOneScreen = Math.ceil(menu3Width / thumbSize) * Math.ceil(getDocHeight() / thumbSize);
+    var numInView = numInOneScreen;
+
+    d3.csv('visualisation_list.csv', function(error, _json){
+        json = _json;
+        buildList(dataTransformMenu1(), '.menu1-container', data1);
+        buildList(dataTransformMenu2('visualizationType'), '.menu2-container', data2);
+        processLocationHash();
+    });
+
+    function dataTransformMenu1(){
+        //TODO: change in spreadsheet
+        var dimensionsMap = {author: 'Author', visualizationType: 'Chart type', title: 'Title'};
+        return d3.keys(dimensionsMap).map(function(d, i){return {dimension: d, displayName: dimensionsMap[d]};});
+    }
+
+    function dataTransformMenu2(dimension, filter){
+        var splitted = d3.merge(json.map(function(d, i){
+            return splitter(d[dimension]);
+        }));
+        var filtered = (filter) ? splitted.filter(function(d, i){ return d.toLowerCase().indexOf(filter.toLowerCase()) != -1; }) : splitted;
+        var unemptied = filtered.map(function(d, i){return (d == '') ? 'untagged' : d;});
+        var grouped = groupCount(unemptied);
+        var prepared = d3.entries(grouped).map(function(d, i){
+                d.dimension = dimension;
+                return d;
+            });
+        var sorted = prepared.sort(function(a, b){return b.value - a.value});
+        return sorted;
+    }
+
+    function splitter(data){
+        return (data.indexOf(splitChar) !== -1) ? data.split(splitChar) : data;
+    }
+
+    function groupCount(arr) {
+        var uniques = {}, val;
+        var dups = {};
+        for (var i = 0, len = arr.length; i < len; i++) {
+            val = arr[i];
+            if (val in uniques) {
+                uniques[val]++;
+                dups[val] = uniques[val];
+            } else uniques[val] = 1;
+        }
+        return(uniques);
+    }
+
+    var cachedData;
+    function dataTransformMenu3(dimension, value){
+        var filtered = json.filter(function(d, i){
+            var splitted = splitter(d[dimension]);
+            if (value == 'all') return true;
+            else if(value == 'untagged') return (splitted == '');
+            //TODO: use the grouped data instead
+            else if(splitted.indexOf(value) >= 0) return true;
+            else return false;
+        });
+        var sorted = filtered.sort(function(a, b){
+                return (a.thumbnail == '') - (b.thumbnail == '');
+            });
+        cachedData = sorted;
+        return sorted;
+    }
+
+    function dataView(data, num){
+        return data.slice(0, num);
+    }
+
+    function buildList(data, containerSelector, content){
+        d3.select(containerSelector).selectAll("li.entry").remove();
+        updateList(data, containerSelector, content);
+    }
+
+    function updateList(data, containerSelector, content){
+        var entries = d3.select(containerSelector)
+            .selectAll("li.entry")
+            .data(data)
+            .enter().append("li")
+            .attr('class', 'entry')
+            .append('a')
+            .attr('href', content.href)
+            .attr('class',content.class_name)
+            .html(content.html);
+    }
+
+    d3.select('.menu2-search')
+        .on('change', function(d, i){ filterList(this.value); })
+        .on('keyup', function(d, i){ filterList(this.value); });
+    d3.select('body').on('mouseover', function(){
+            if (d3.event.target.nodeName == 'A') d3.select('.menu2-search').node().blur();
+        });
+
+    function filterList(value){
+        var dimension = window.location.hash.substring(1).split('=')[0] || 'visualizationType';
+        buildList(dataTransformMenu2(dimension, value), '.menu2-container', data2);
+    }
+
+    function processLocationHash(){
+        d3.select('#list').node().scrollTop = 0;
+        numInView = numInOneScreen;
+        if(window.location.hash) {
+            var hash = window.location.hash.substring(1);
+            var hashSplit = hash.split('=');
+            if(hashSplit[1] == 'all') buildList(dataTransformMenu2(hashSplit[0]), '.menu2-container', data2);
+            buildList(dataView(dataTransformMenu3(hashSplit[0], hashSplit[1]), numInView), '.menu3-container', data3);
+        }else{
+            buildList(dataView(dataTransformMenu3('title', 'all'), numInView), '.menu3-container', data3);
+        }
+    }
+
+    d3.select(window).on('hashchange', function () {
+        processLocationHash();
+    });
+
+    d3.select('#list').on('scroll', function(d, i){
+        if(this.scrollHeight - this.scrollTop <= getDocHeight()){
+            numInView += numInOneScreen;
+            updateList(dataView(cachedData, numInView), '.menu3-container', data3);
+        }
+    });
+
+</script>
+
+</body>
 </html>
