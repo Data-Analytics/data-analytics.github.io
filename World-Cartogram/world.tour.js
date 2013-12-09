@@ -1,5 +1,5 @@
 var width = 920,
-    height = 500;
+    height = 480;
 
 var projection = d3.geo.orthographic()
     .scale(228)

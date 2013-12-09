@@ -11,8 +11,8 @@ var chord = d3.layout.chord()
     .sortSubgroups(d3.descending)
     .matrix(matrix);
 
-var width = 460,
-    height = 460,
+var width = 400,
+    height = 400,
     innerRadius = Math.min(width, height) * .41,
     outerRadius = innerRadius * 1.1;
 
@@ -21,10 +21,10 @@ var fill = d3.scale.ordinal()
     .range(["#777777", "#FFDD89", "#957244", "#F26223"]);
 
 var svg = d3.select(".chord-diagram").append("svg")
-    .attr("width", width)
-    .attr("height", height)
+    .attr("width", width+20)
+    .attr("height", height+20)
   .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    .attr("transform", "translate(" + (width+20) / 2 + "," + (height+20) / 2 + ")");
 
 svg.append("g").selectAll("path")
     .data(chord.groups)

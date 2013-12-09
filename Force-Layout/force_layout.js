@@ -1,7 +1,6 @@
 var width = 680,
     height = 420;
 	
-
 var force = d3.layout.force()
     .size([width, height]);
 

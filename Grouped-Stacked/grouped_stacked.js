@@ -1,5 +1,5 @@
-var n = 4, // number of layers
-    m = 10, // number of samples per layer
+var n = 3, // number of layers
+    m = 12, // number of samples per layer
     stack = d3.layout.stack(),
     layers = stack(d3.range(n).map(function() { return bumpLayer(m, .1); })),
     yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); }),
@@ -9,7 +9,7 @@ var n = 4, // number of layers
     
 var margin = {top: 20, right: 10, bottom: 20, left: 100},
     width = 960 - margin.left - margin.right,
-    height = 420 - margin.top - margin.bottom;
+    height = 340 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
     .domain(d3.range(m))

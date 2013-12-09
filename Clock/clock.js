@@ -1,8 +1,8 @@
 // Based on http://vis.stanford.edu/protovis/ex/clock.html
 // Based on http://blog.pixelbreaker.com/polarclock
 
-var width = 720,
-    height = 500,
+var width = 420,
+    height = 420,
     radius = Math.min(width, height) / 1.8,
     sectorWidth = .09,
     fsec = d3.time.format("%S s"),

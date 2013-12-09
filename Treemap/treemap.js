@@ -1,5 +1,5 @@
-var width = 710,
-    height = 420,
+var width = 680,
+    height = 400,
     color = d3.scale.category20();
 
 function onRender() {

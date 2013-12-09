@@ -1,5 +1,5 @@
 var width = 960,
-    height = 400;
+    height = 420;
 
 var projection = d3.geo.albersUsa()
     .scale(800)

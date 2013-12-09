@@ -1,7 +1,7 @@
     // set the stage
     var margin = {t:30, r:20, b:20, l:40 },
-        w = 900 - margin.l - margin.r,
-        h = 500 - margin.t - margin.b,
+        w = 960 - margin.l - margin.r,
+        h = 420 - margin.t - margin.b,
         x = d3.scale.linear().range([0, w]),
         y = d3.scale.linear().range([h - 60, 0]),
         //colors that will reflect geographical regions

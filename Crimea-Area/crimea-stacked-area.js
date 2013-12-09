@@ -1,6 +1,6 @@
-var margin = {top: 20, right: 50, bottom: 30, left: 20},
-    width = 680 - margin.right - margin.left,
-    height = 450 - margin.top - margin.bottom;
+var margin = {top: 20, right: 60, bottom: 30, left: 20},
+    width = 680 - margin.left - margin.right,
+    height = 420 - margin.top - margin.bottom;    
 
 var x = d3.time.scale()
     .range([0, width]);

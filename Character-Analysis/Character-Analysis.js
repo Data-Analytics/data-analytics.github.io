@@ -90,7 +90,7 @@ $(document).ready(function () {
                 
                 // Introducing and defining all variables here
                 var svgWidth = $(".character").width() - 1,
-                    svgHeight = 460,
+                    svgHeight = 420,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
@@ -174,7 +174,7 @@ $(document).ready(function () {
                 
                 // Definitions
                 var svgWidth = $(".character").width() - 1,
-                    svgHeight = 500,
+                    svgHeight = 420,
                     barPadding = 1,
                     data = this.data,
                     minFrequency = this.minFrequency,
