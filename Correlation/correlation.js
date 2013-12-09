@@ -34,7 +34,7 @@ var main = function(corr, label_col, label_row){
 
   var svg = body.append('svg')
     .attr('width', 960)
-    .attr('height', 420);
+    .attr('height', 400);
 
   var sort_process = d3.select("select#sort_func")[0][0].value;
   d3.select("select#sort_func").on("change", function() {
@@ -69,7 +69,7 @@ var main = function(corr, label_col, label_row){
 
   var scale = d3.scale.linear()
       .domain([0, d3.min([50, d3.max([label_col.length, label_row.length, 4])])])
-      .range([0,  600]);
+      .range([0,  540]);
 
   
   var left_label_space = 170;
@@ -86,8 +86,8 @@ var main = function(corr, label_col, label_row){
   pixel.enter()
       .append('rect')
           .attr('class', 'pixel')
-          .attr('width', scale(0.9))
-          .attr('height', scale(0.9))
+          .attr('width', scale(0.8))
+          .attr('height', scale(0.8))
           .style('fill',function(d){ return color(d.val);})
           .on('mouseover', function(d){pixel_mouseover(d);})
           .on('mouseout', function(d){mouseout(d);});
