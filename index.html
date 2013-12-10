@@ -92,7 +92,7 @@
 
     function dataTransformMenu1(){
         //TODO: change in spreadsheet
-        var dimensionsMap = {author: 'Author', visualizationType: 'Chart type', title: 'Title'};
+        var dimensionsMap = {visualizationType: 'Chart type', title: 'Title'};
         return d3.keys(dimensionsMap).map(function(d, i){return {dimension: d, displayName: dimensionsMap[d]};});
     }
 
