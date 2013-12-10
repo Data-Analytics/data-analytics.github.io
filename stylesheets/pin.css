@@ -91,12 +91,3 @@ a:link, a:hover, a:visited {
 .menu3-container li a:visited {
     color: #888;
 }
-
-.author {
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: 200;
-    font-size: 0.75em;
-    line-height: 1.2em;
-    padding: 0 .2em;
-}
