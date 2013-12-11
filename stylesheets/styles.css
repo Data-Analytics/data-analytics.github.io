@@ -58,7 +58,6 @@ Theme Styles
 
 body {
   box-sizing: border-box;
-  background: url(../images/body-background.png);
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -309,7 +308,7 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background: #4572DE url('../images/headers.jpg') ;
+    background: #f1a340 url('../images/headers.jpg') ;
 }
 
 
