@@ -55,6 +55,7 @@ function onRender() {
       .attr("class", "tile")
       .attr("x", function(d) { return x(d.date); })
       .attr("y", function(d) { return y(d.bucket + yStep); })
+      .attr("rx", (x(xStep) - x(0))/8)
       .attr("width", x(xStep) - x(0))
       .attr("height",  y(0) - y(yStep))
       .style("fill", function(d) { return z(d.count); });
