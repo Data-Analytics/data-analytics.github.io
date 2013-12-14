@@ -58,8 +58,10 @@ function onRender() {
       .attr("rx", (x(xStep) - x(0))/8)
       .attr("width", x(xStep) - x(0))
       .attr("height",  y(0) - y(yStep))
+      .style("stroke-width", 1.5)
+      .style("stroke", "#555")
       .style("fill", function(d) { return z(d.count); });
-
+    
   // Add a legend for the color values.
   var legend = svg.selectAll(".legend")
       .data(z.ticks(6).slice(1).reverse())
@@ -70,7 +72,9 @@ function onRender() {
   legend.append("rect")
       .attr("width", 20)
       .attr("height", 20)
-      .style("fill", z);
+      .style("fill", z)
+      .style("stroke", "#555")
+      .style("stroke-width", 0.5);
 
   legend.append("text")
       .attr("x", 26)
