@@ -39,3 +39,5 @@ Circular-Heatmap,images/circular-heatmap.png,Circular-Heatmap,self,heat map,"A c
 Coffee-wheel,images/coffee-wheel.png,coffee-wheel,self,sun burst,The original coffee flavour wheel was created by the Specialty Coffee Association of America in poster form but it appears in various places on the Web.
 Calender-map,images/calender-map.png,Calender-map,self,Calender map,"The values are visualized as colored cells per day. Days are arranged into columns by week, then grouped by month and years."
 Sun-Burst,images/sun-burst.png,Sun-Burst,self,sun burst,"The SunBurst technique is an alternative, space-filling visualization that uses a radial rather than a rectangular layout, in a hierarchy are laid out radially"
+Dual_Scale_Bar_Chart,images/dual_scale_bar-chart.png,Dual_Scale_Bar_Chart,self,bar chart,Bar chart comparing  two variables in parallel  simultaneously  simpler version of grouped chart 
+Horizontal_Bar-Chart,images/horizontal-bar.png,Horizontal_Bar-Chart,self,bar chart,"Bar chart comparing  in horizontal style , which is in different when compared to the common one "
