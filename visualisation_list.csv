@@ -35,3 +35,7 @@ Cliped-Sparkline,images/cliped_sparkline.png,Cliped-Sparkline,self,sparkline,Thi
 ZipDecode_Analysis,images/zipdecode.png,Zipdecode,self,cartogram,"Ben Fry’s zipdecode, inspired by Nelson Minar’s reimplementation.uses cross-fading canvas elements to render transitions efficiently."
 Normalized-Stacked_Bar,images/normalized-stacked_bar.png,Normalized-Stacked_Bar,self,bar chart,This variation of a stacked bar chart shows percentages rather than absolute numbers.
 Cluster-Plot,images/correlation.png,Correlation,self,cluster plot ,A cluster plot in general is a group or bunch of several discrete items that are close to each other
+Circular-Heatmap,images/circular-heatmap.png,Circular-Heatmap,self,heat map,"A circular heat chart displays quantitative data as an array of circular segments, coloured according to value."
+Coffee-wheel,images/coffee-wheel.png,Coffee-wheel,self,sun burst,The original coffee flavour wheel was created by the Specialty Coffee Association of America in poster form but it appears in various places on the Web.
+Calender-map,images/calender-map.png,Calender-map,self,Calender map,"The values are visualized as colored cells per day. Days are arranged into columns by week, then grouped by month and years."
+Sun-Burst,images/sun-burst.png,Sun-Burst,self,sun burst,"The SunBurst technique is an alternative, space-filling visualization that uses a radial rather than a rectangular layout, in a hierarchy are laid out radially"
