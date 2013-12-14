@@ -7,8 +7,8 @@ Treemap,images/treemap.png,Treemap,self,tree map,Treemaps display hierarchical (
 Word-cloud,images/word-cloud.png,Word-Cloud,self,word cloud,"A word cloud, or tag cloud is a visual representation for text data,typically used to depict keyword on websites "
 Cartogram,images/cartogram.png,Cartogram,self,cartogram,"A cartogram is a map with some thematic variable such as travel time,population ssis substituted for land area or distance."
 World-Tour,images/world-tour.png,World-Cartogram,self,cartogram,Showing you a flythrough of where you'll be going as they pull up trip prices
-Scatter-Analysis,images/trust-business.png,Trust-Business,self,sparkline,A scatterplot using d3js. It maps social trust against ease ofdoing business in various countries. For tooltips
-Polar-Clock,images/clock.png,Clock,self,experiment,"In a polar clock, each ring encodes each time field. The outermost ringrepresents second, followed by minutes etc "
+Scatter-Analysis,images/trust-business.png,Trust-Business,self,scatter plot,A scatterplot using d3js. It maps social trust against ease ofdoing business in various countries. For tooltips
+Polar-Clock,images/clock.png,Clock,self,clock,"In a polar clock, each ring encodes each time field. The outermost ringrepresents second, followed by minutes etc "
 Rainbow-Worm,images/worm.png,Rainbow-worm,self,experiment,"This psychedelic example, reminiscent of an earthworm, demonstrates thedifference between a segmented and unsegmented line. "
 Stack_To_Multiples-Chart,images/stack-multiples.png,Stack-Multiples,self,bar chart,Barchart gives you 2 dimesions to view one stacked together one above the otherand another showing you the view of individuals with transistion
 Heat-Map,images/heatmap.png,Heatmap,self,heat map,A heat map is a graphical representation of data where the individual valuesin a matrix are represented as colors. 
@@ -17,7 +17,7 @@ Sortable_Bar-Chart,images/sorted-bar.png,Sortable-Bar-Analysis,self,bar chart,Th
 Grouped_To_Stack-Bar,images/grouped-stack.png,Grouped-Stacked,self,bar chart,Barchart gives you 2 dimesions to view one grouped together parallelor stacked together one above the other with transistion
 Bullet,images/bullet.png,Bullet,self,bullet chart," bullet charts compare a given quantitative measure(such as profit or revenue) against qualitative ranges (e.g., poor, satisfactory, good)"
 Tree-Layout,images/tree.png,Tree-Layout,self,tree layout,The tree layout produces tidy node-link diagrams oftrees using the Reingold–Tilford “tidy” algorithm
-Scatter-Plot,images/Scatter-plot.png,Scatter_plot,self,sparkline,A scatter plot is a type of mathematical diagram using Cartesiancoordinates to display values for two variables .
+Scatter-Plot,images/Scatter-plot.png,Scatter_plot,self,scatter plot,A scatter plot is a type of mathematical diagram using Cartesiancoordinates to display values for two variables .
 Force-Layout,images/force.png,Force-Layout,self,force layout ,A flexible force-directed graph layout implementation usingposition Verlet integration to allow simple constraints
 Histogram,images/histogram.png,Irregular-Histogram,self,bar chart,histogram of an Irwin–Hall distribution.The values are then binned at regular intervals using D3’s histogram layout. 
 Difference-Chart,images/difference-chart.png,Difference-Analysis,self,sparkline,This variation of a bivariate area chart uses clipping to alternate colors.the difference between the two is filled in green and red. 
@@ -25,13 +25,13 @@ Negative_Bar-Chart,images/negative-bar.png,Negative-Bar,self,bar chart,dataset i
 build-graph,images/build-graph.png,Build-Graph,self,force layout ,"The nodes you can create by clicking on the free place , andcreate the link by placing 2 or more nodes on the circle ring "
 Bivariate_Area-Chart,images/area-series.png,Bivariate-Area,self,area chart,This two-value area chart storing the daily high and lowtemperature in San Francisco 
 Chord-Diagram,images/chord-diagram.png,Chord-Diagram,self,flow chart,"directed relationships among a group of entities,simple interactivity by using mouseover filtering. "
-Mareys-Trains,images/marey-trains.png,Mareys-Trains,self,experiment," graphical train schedule. Stations are separated vertically in proportion to geography;,the slope of the line reflects the speed of the train"
+Mareys-Trains,images/marey-trains.png,Mareys-Trains,self,train flow," graphical train schedule. Stations are separated vertically in proportion to geography;,the slope of the line reflects the speed of the train"
 Multiline-Chart,images/multi-line-chart.png,Multi-Line-Analysis,self,sparkline,"This line chart is constructed storing the daily averagetemperatures of Chennai, Delhi and Mumbai "
 Zoomable-icicle,images/zoomable_icicle.png,Zoomable-icicle,self,icicle, This “icicle” diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
 Marimekko_Bar-Chart,images/marimekko.png,Marimekko-Chart,self,bar chart,"A Marimekko Chart, inspired by Freakalytics. Thanks to Noah Iliinsky for the suggestion. "
 Zoomable-Treemap,images/zoomable_treemap.png,Zoomable-treemap,self,tree map,"Chicago Data Portal, with the datasets grouped by categoriesand dimensions drawn based on the size of the individual datasets."
 Un-Employment,images/un-employment.png,Un-Employment,self,sparkline,The distribution of unemployment for 380 U.S. metropolitan areas fromJanuary 2000 to December 2012. weighted each area equally
 Cliped-Sparkline,images/cliped_sparkline.png,Cliped-Sparkline,self,sparkline,This variation of a threshold encoding demonstrates how to use clipping tochange the color of a line based on a y-threshold.
-ZipDecode_Analysis,images/zipdecode.png,Zipdecode,self,experiment,"Ben Fry’s zipdecode, inspired by Nelson Minar’s reimplementation.uses cross-fading canvas elements to render transitions efficiently."
+ZipDecode_Analysis,images/zipdecode.png,Zipdecode,self,cartogram,"Ben Fry’s zipdecode, inspired by Nelson Minar’s reimplementation.uses cross-fading canvas elements to render transitions efficiently."
 Normalized-Stacked_Bar,images/normalized-stacked_bar.png,Normalized-Stacked_Bar,self,bar chart,This variation of a stacked bar chart shows percentages rather than absolute numbers.
 Cluster-Plot,images/correlation.png,Correlation,self,cluster plot ,A cluster plot in general is a group or bunch of several discrete items that are close to each other

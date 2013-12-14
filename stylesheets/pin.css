@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
   .thumbnail h3 {
       padding: 0 10px;
       color: #666;
-      margin-top: 2em;
+      margin-top: 1em;
       font-size: 16px;
       line-height: 1;
       white-space: nowrap;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
       color: #222;
   }
 
-  .demo { width:200px; height:300px; margin:0 14px 14px 0; position: relative; }
+  .demo { width:200px; height:260px; margin:0 12px 12px 0; position: relative; }
   
   
 a:link, a:hover, a:visited {
@@ -64,11 +64,7 @@ a:link, a:hover, a:visited {
 }
 .menu1-container, .menu2-container{
     padding: 4px 12px;
-    background-color: rgba(250,250,250,0.92);
     text-transform: capitalize;
-    -webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);
-    -moz-box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);
-    box-shadow:0 3px 3px 0 rgba(0,0,0,0.1);
 }
 .menu1-container{
     border-bottom: silver 1px solid;

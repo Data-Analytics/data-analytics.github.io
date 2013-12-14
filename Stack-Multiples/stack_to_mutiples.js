@@ -46,7 +46,7 @@ function onRender() {
     data = d3.csv.parse(txt_value);
 	data.forEach(function(d) {
     d.date = parseDate(d.date);
-    d.value = +d.value;
+    d.value = parseInt(d[d3.keys(data[0])[2]]);
   });
 
   var dataByGroup = nest.entries(data);

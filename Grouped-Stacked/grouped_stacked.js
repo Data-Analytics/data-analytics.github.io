@@ -20,8 +20,6 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
     .tickFormat(d3.format(".2s"));
-
-document.getelementbyid('#group').click();
     
 function onRender() {
    	txt_value = document.getElementById('input_data').value;

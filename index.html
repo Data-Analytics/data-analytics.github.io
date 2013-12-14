@@ -34,7 +34,7 @@
 <div id="nav" style="width:12%;float:left;display:inline-block">
     <div class="menu1-container"></div>
     <div class="menu2-container">
-        <input type="text" class="menu2-search" />
+        <input type="text" class="menu2-search" placeholder="Search" />
         <li class="all"><a href="" class="displayName">all</a></li>
     </div>
 </div>
@@ -65,7 +65,7 @@
         href: function(d, i){return d.url;},
         html: function(d, i){
             var content ='';
-            if(d.thumbnail) content += "<img width='180' height='120'  src='"+d.thumbnail+"' class='thumbnail'/>";
+            if(d.thumbnail) content += "<img width='192' height='128'  src='"+d.thumbnail+"' class='thumbnail'/>";
             content += "<h3 align='left'>"+d.title+"</h3>";
             if(d.description)content += "<p>"+d.description+"<p/>";
             return content;}
