@@ -41,7 +41,6 @@ $(document).ready(function () {
             getMinFrequency: function () { return minFrequency },
             getMaxFrequency: function () { return maxFrequency },
 
-            // Returns an array collection of frequencies of a given letter in input
             setFrequency: function () {
                 
                 // Go through this.input array
@@ -109,20 +108,11 @@ $(document).ready(function () {
                               .domain([minFrequency, maxFrequency])
                               .range([3, svgHeight]);
                 
-                // Below: creating graph bars
-                // Thanks to
-                // http://alignedleft.com/tutorials/d3/making-a-bar-chart/
                 svg.selectAll("rect")
                    .data(this.data)
                    .enter()
                    .append("rect")
                    .attr("class", "bar")
-                   .attr("data-frequency", function (d) {
-                        return d.frequency;
-                   })
-                   .attr("data-letter", function (d) {
-                        return d.letter;
-                   })
                    .style("transition-property", "border")
                    .style("transition-duration", "1s")
                    .style("transition-delay", "1s")
@@ -130,11 +120,17 @@ $(document).ready(function () {
                    .attr("x", function (d, i) {
                         return i * (svgWidth / data.length);
                    })
+                   .attr("fill", function (d) {
+                        z = d3.scale.linear().range(["white", "blue"])
+                        z.domain([0, maxFrequency]);
+                        return z(d.frequency);
+                   })
                   .attr("width", svgWidth / data.length - barPadding)
                   .attr("y", function (d) {
                         return svgHeight - scale(maxFrequency);
+                                                  
                   })
-
+             
                   .each("end", function () {
                         d3.select(this)
                           .transition()
@@ -152,7 +148,6 @@ $(document).ready(function () {
                           })
                   });
                 
-                // Labels with key letters
                 labelcontainer.selectAll("text")
                               .data(this.data)
                               .enter()
@@ -163,7 +158,6 @@ $(document).ready(function () {
                    })
                   .attr("width", svgWidth / data.length - barPadding)
                   .attr("y", 10)
-                  
                   .text(function (d) { return d.letter;})
                 
                 this.svg = svg;
@@ -192,7 +186,6 @@ $(document).ready(function () {
                     data.sort(function (a, b) { return b.frequency - a.frequency });
                 } else if (sortorder == "alphabet") {
                     data.sort(function (a, b) {
-                        // Thanks to http://www.sitepoint.com/sophisticated-sorting-in-javascript/
                         var x = a.letter.toLowerCase(),
                             y = b.letter.toLowerCase();
                         
@@ -202,32 +195,24 @@ $(document).ready(function () {
                 
                 svg.selectAll("rect")
                    .data(data)
-                   .attr("data-frequency", function (d) {
-                        return d.frequency;
-                   })
-                   .attr("data-letter", function (d) {
-                        return d.letter;
-                   })
-                   .attr("fill", function (d) {
-                        // Normalize to a number between 1 and 0
-                        var normalizedFrequency = d.frequency / maxFrequency;
-                        if (d.frequency == 0) normalizedFrequency = 0.1;
-                        
-                        // Assign amount for blue, limit 0 - 255
-                        return "rgb(75, 180, "+ (Math.floor(255 - (255 * normalizedFrequency))) +")";
-                   })
                    .transition()
                    .delay(500)
                    .attr("y", function (d) {
                         return svgHeight - scale(d.frequency);
-                   });
-                   
+                   })
+                    .attr("fill", function (d) {
+                        z = d3.scale.linear().range(["white", "blue"])
+                        z.domain([0, maxFrequency]);
+                        return z(d.frequency);
+                   })
                    
                 labelcontainer.selectAll("text")
                               .data(data)
                               .text(function (d) {
                                     return d.letter;
                               })
+                              .append("title").text(function(d){ return d.letter+' : ' +d.frequency });
+                svg.selectAll("rect").append("title").text(function(d){ return d.letter+' : ' +d.frequency });
             }
         });
         
@@ -314,32 +299,6 @@ $(document).ready(function () {
         // Using the current session_updatemode as a parameter
         GraphicsHandler.updateBarGraph(session_updatemode);        
     });
-    
-  /*
-    Graph bars
-    */
-    
-    $("rect").live("mouseover", function (event) {
-        
-            var top = "420 px",
-                left = (event.pageX-220) + "px";
-        
-        $("#data-box").text( $(this).attr("data-letter") + " = " + $(this).attr("data-frequency") )
-                      .css( "visibility", "visible" )
-                      .css("top", top)
-                      .css("left", left);
-                      
-        $(this).css("border", "1px solid #333");
-        
-    }).live("mousemove", function () {
-            var top = "420px",
-                left = (event.pageX-220) + "px";
-        
-        $("#data-box").css("top", top)
-                      .css("left", left);
-        
-    }).live("mouseout", function () {
-        $("#data-box").css("visibility", "hidden");
-    })
+
 
 }); // End of document ready
