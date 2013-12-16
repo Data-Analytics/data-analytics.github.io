@@ -14,7 +14,7 @@ var y = d3.scale.linear()
     .range([0, height]);
 
 var z = d3.scale.linear()
-    .domain([.0001, .0003])
+    .domain([0.00001, 0.00003])
     .range(["purple", "orange"])
     .interpolate(d3.interpolateLab);
 
