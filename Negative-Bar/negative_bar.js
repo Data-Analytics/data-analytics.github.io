@@ -37,7 +37,8 @@ function onRender() {
       .attr("y", function(d) { return y(d.name); })
       .attr("rx", y.rangeBand()/4)
       .attr("width", function(d) { return Math.abs(x(d.value) - x(0)); })
-      .attr("height", y.rangeBand());
+      .attr("height", y.rangeBand())
+      .append("title").text(function(d) { return 'Value :'+d.value });
 
   svg.append("g")
       .attr("class", "x axis")
