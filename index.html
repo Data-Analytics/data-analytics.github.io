@@ -31,15 +31,15 @@
             </div>
             <br/><br/>
 <div>            
-<div id="nav" style="width:12%;float:left;display:inline-block">
+<div id="nav" style="width:20%;float:left;display:inline-block">
     <div class="menu1-container"></div>
     <div class="menu2-container">
         <input type="text" class="menu2-search" placeholder="Search" />
         <li class="all"><a href="" class="displayName">all</a></li>
     </div>
 </div>
-<div id="list" style="width:85%;float:right;display:inline-block">
-    <div class="menu3-container"></div>
+<div id="list" style="width:76%;float:right;display:inline-block">
+    <div class="menu3-container container"></div>
 </div>
 </div>
 <script type="text/javascript">
@@ -80,7 +80,7 @@
         );
     }
 
-    var thumbSize = 150;
+    var thumbSize = 250;
     var menu3Width = parseInt(d3.select('#list').style('width'));
     var numInOneScreen = Math.ceil(menu3Width / thumbSize) * Math.ceil(getDocHeight() / thumbSize);
     var numInView = numInOneScreen;

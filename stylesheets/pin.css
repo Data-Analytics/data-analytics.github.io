@@ -6,11 +6,6 @@ body {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet MS", sans-serif; }
 
-.container {
-    width: 940px;
-    margin: 0 auto;
-}
-
 @media print {
   .page-break {
       page-break-after: always;
@@ -51,17 +46,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
       color: #222;
   }
 
-  .demo { width:200px; height:260px; margin:0 12px 12px 0; position: relative; }
+  .demo { width:200px; height:300px; margin:0 12px 12px 0; position: relative; }
   
   
 a:link, a:hover, a:visited {
     color: #252f4d;
+    list-style-type: square;
 }
 
 #nav {
     top: 40px;
     bottom:0;
-    width: 200px;
+    width: 180px;
 }
 .menu1-container, .menu2-container{
     padding: 4px 12px;
@@ -73,16 +69,15 @@ a:link, a:hover, a:visited {
 .menu2-search{
     background-size: 15px 15px;
     padding: 6px;
+    width:150px;
     padding-left:20px;
-    border: 2px solid #CCC;
+    border: 1px solid #CCC;
     border-radius: 6px;
-    width: 80%;
 }
 
 #list li {
     float: left;
     display: inline-block;
-    
 }
 
 .menu3-container li a:visited {
