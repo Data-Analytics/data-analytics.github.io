@@ -101,7 +101,7 @@ $(document).ready(function () {
                             .attr("width", svgWidth)
                             .attr("height", svgHeight),
                     labelcontainer = d3.select(".character")
-                                       .append("div")
+                                       .append("svg")
                                        .attr("id", "labels")
                                        .attr("width", svgWidth)
                                        .attr("height", 30)
@@ -153,18 +153,18 @@ $(document).ready(function () {
                   });
                 
                 // Labels with key letters
-                labelcontainer.selectAll("div")
+                labelcontainer.selectAll("text")
                               .data(this.data)
                               .enter()
-                              .append("div")
+                              .append("text")
                               .attr("class", "label")
-                              .text(function (d) {
-                                    return d.letter;
-                              })
-
-                              .style("width", function () {
-                                    return svgWidth / data.length - barPadding + "px";
-                              });
+                              .attr("x", function (d, i) {
+                        return i * (svgWidth / data.length)+ (svgWidth / data.length - barPadding)/2 ;
+                   })
+                  .attr("width", svgWidth / data.length - barPadding)
+                  .attr("y", 10)
+                  
+                  .text(function (d) { return d.letter;})
                 
                 this.svg = svg;
                 this.labelcontainer = labelcontainer;
@@ -223,7 +223,7 @@ $(document).ready(function () {
                    });
                    
                    
-                labelcontainer.selectAll("div")
+                labelcontainer.selectAll("text")
                               .data(data)
                               .text(function (d) {
                                     return d.letter;
