@@ -67,7 +67,12 @@ function onRender() {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.y1); })
       .attr("height", function(d) { return y(d.y0) - y(d.y1); })
-      .style("fill", function(d) { return color(d.name); });
+      .style("fill", function(d) { return color(d.name); })
+      .attr("stroke","#444");
+      
+  state.selectAll("rect")    
+      .append('title')
+      .text(function(d) { return d.ages; });
 
   var legend = svg.select(".state:last-child").selectAll(".legend")
       .data(function(d) { return d.ages; })
@@ -75,11 +80,9 @@ function onRender() {
       .attr("class", "legend")
       .attr("transform", function(d) { return "translate(" + x.rangeBand() / 2 + "," + y((d.y0 + d.y1) / 2) + ")"; });
 
-  legend.append("line")
-      .attr("x2", 10);
 
   legend.append("text")
-      .attr("x", 13)
+      .attr("x", 32)
       .attr("dy", ".35em")
       .text(function(d) { return d.name; });
 

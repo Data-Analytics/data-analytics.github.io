@@ -8,7 +8,7 @@ var x = d3.scale.linear()
 var y = d3.scale.linear()
     .range([0, height - 2 * margin]);
 
-var z = d3.scale.category20();
+var z = d3.scale.category10();
 
 var n = d3.format(",d"),
     p = d3.format("%");
@@ -93,12 +93,12 @@ function onRender() {
   // Add a rect for each group.
   var markets = segments.selectAll(".group")
       .data(function(d) { return d.values; })
-    .enter().append("a")
-      .attr("class", "group")
-      .attr("xlink:title", function(d) { return d.group + " " + d.parent.key + ": " + n(d.value); })
+    .enter()
     .append("rect")
       .attr("y", function(d) { return y(d.offset / d.parent.sum); })
       .attr("height", function(d) { return y(d.value / d.parent.sum); })
       .attr("width", function(d) { return x(d.parent.sum / sum); })
-      .style("fill", function(d) { return z(d.group); });
+      .style("fill", function(d) { return z(d.group); })
+      .append("title")
+      .text(function(d) { return d.group + " - " + d.parent.key + ": " + n(d.value); });
 };

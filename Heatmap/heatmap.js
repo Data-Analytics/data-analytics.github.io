@@ -60,7 +60,8 @@ function onRender() {
       .attr("height",  y(0) - y(yStep))
       .style("stroke-width", 1.5)
       .style("stroke", "#555")
-      .style("fill", function(d) { return z(d.count); });
+      .style("fill", function(d) { return z(d.count); })
+      .append('title').text(function(d) {return 'Bucket : '+d.bucket+' ,Count: '+d.count });
     
   // Add a legend for the color values.
   var legend = svg.selectAll(".legend")

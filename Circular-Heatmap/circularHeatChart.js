@@ -29,7 +29,8 @@ function circularHeatChart() {
             g.selectAll("path").data(data)
                 .enter().append("path")
                 .attr("d", d3.svg.arc().innerRadius(ir).outerRadius(or).startAngle(sa).endAngle(ea))
-                .attr("fill", function(d) {return color(accessor(d));});
+                .attr("fill", function(d) {return color(accessor(d));})
+                .append('title').text(function(d) {return 'energy : '+d.toFixed(3) });
 
 
             // Unique id so that the text path defs are unique - is there a better way to do this?

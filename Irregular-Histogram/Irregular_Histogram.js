@@ -54,7 +54,8 @@ function onRender() {
       .attr("rx", 5)
       .attr("width", function(d) { return x(d.width) - 1; })
       .attr("y", function(d) { return y(d.height); })
-      .attr("height", function(d) { return height - y(d.height); });
+      .attr("height", function(d) { return height - y(d.height); })
+      .append('title').text(function(d) {return 'Income : '+d.Income+' ,People: '+d.People });
 
   svg.append("g")
       .attr("class", "x axis")

@@ -195,8 +195,6 @@ pre, code {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
 
-
-
 }
 
 pre {
@@ -444,7 +442,8 @@ Small Device Styles
   left: 0;
   right: 50%;
   height: 50px;
-  margin-right: -382px;
+  width:75%;
+  min-width:780px;
   position: absolute;
   margin-top:-25px;
   background: #ffcc00 url(../images/background.jpg);
@@ -459,8 +458,7 @@ Small Device Styles
   border-radius: 0px 2px 2px 0px;
 }
 #banner .banner-inner {
-  max-width: 650px;
-  width: 100%;
+  width: 75%;
   overflow: hidden;
   float: right;
   margin-right: 55px;

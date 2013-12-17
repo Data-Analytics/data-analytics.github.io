@@ -69,7 +69,8 @@ function onRender() {
       .attr("r", 3.5)
       .attr("cx", function(d) { return x(d.sepalWidth); })
       .attr("cy", function(d) { return y(d.sepalLength); })
-      .style("fill", function(d) { return color(d.species); });
+      .style("fill", function(d) { return color(d.species); })
+      .append('title').text(function(d) {return 'sepalLength : '+d.sepalWidth+' ,sepalWidth: '+d.sepalLength });
 
   var legend = svg.selectAll(".legend")
       .data(color.domain())

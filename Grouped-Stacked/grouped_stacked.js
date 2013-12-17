@@ -115,6 +115,7 @@ d3.select("#stacked").on("click", function() {
   data.forEach(function(d) {
     var y0 = 0;
     d.ages = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+    console.log(JSON.stringify(d.ages));
     d.total = d.ages[d.ages.length - 1].y1;
   });
 
@@ -150,7 +151,9 @@ d3.select("#stacked").on("click", function() {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.y1); })
       .attr("height", function(d) { return y(d.y0) - y(d.y1); })
-      .style("fill", function(d) { return color(d.name); });
+      .style("fill", function(d) { return color(d.name); })
+      .append("title")
+      .text(function(d) { return d.State; });
 
   var legend = svg.selectAll(".legend")
       .data(color.domain().slice().reverse())
