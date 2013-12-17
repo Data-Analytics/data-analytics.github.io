@@ -1,3 +1,15 @@
+function addThousandsSeparator(input) {
+    var output = input
+    if (parseFloat(input)) {
+        input = new String(input); // so you can perform string operations
+        var parts = input.split("."); // remove the decimal part
+        parts[0] = parts[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g, "$1,").split("").reverse().join("");
+        output = parts.join(".");
+    }
+
+    return output;
+}
+
 cloud = {
     make: function(options) {
         
@@ -31,9 +43,11 @@ cloud = {
             .attr("transform", function(d) {
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
             })
-            .text(function(d) { return d.text; });
+            .text(function(d) { return d.text; })
+            .append('title').text(function(d) { return 'Population : '+addThousandsSeparator((d.size*300)*(d.size*300)); });
         })
         .start();
     }
+    
 }
 
