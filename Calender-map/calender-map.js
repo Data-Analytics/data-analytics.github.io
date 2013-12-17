@@ -8,10 +8,9 @@ var day = d3.time.format("%w"),
     percent = d3.format(".1%"),
     format = d3.time.format("%Y-%m-%d");
 
-var color = d3.scale.quantize()
-    .domain([-.05, .05])
-    .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
-
+var color = d3.scale.linear().range(["white", "steelblue"])
+    .domain([-.02, .04])
+    
 var svg = d3.select(".calender-map").selectAll("svg")
     .data(d3.range(2010, 2014))
   .enter().append("svg")
@@ -34,6 +33,7 @@ var rect = svg.selectAll(".day")
     .attr("height", cellSize)
     .attr("x", function(d) { return week(d) * cellSize; })
     .attr("y", function(d) { return day(d) * cellSize; })
+    .attr("fill",'#fff')
     .datum(format);
 
 rect.append("title")
@@ -52,7 +52,7 @@ d3.csv("data.csv", function(error, csv) {
     .map(csv);
 
   rect.filter(function(d) { return d in data; })
-      .attr("class", function(d) { return "day " + color(data[d]); })
+      .attr("fill", function(d) { return color(data[d]); })
     .select("title")
       .text(function(d) { return d + ": " + percent(data[d]); });
 });
