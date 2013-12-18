@@ -1,10 +1,10 @@
-var stations = []; // lazily loaded
-
-var formatTime = d3.time.format("%I:%M%p");
-
 var margin = {top: 20, right: 30, bottom: 20, left: 200},
     width = 960 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
+
+var stations = []; // lazily loaded
+
+var formatTime = d3.time.format("%I:%M%p");
 
 var x = d3.time.scale()
     .domain([parseTime("5:30AM"), parseTime("10:45PM")])

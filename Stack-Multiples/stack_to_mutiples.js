@@ -1,37 +1,36 @@
-var parseDate = d3.time.format("%Y-%m").parse,
-    formatYear = d3.format("02d"),
-    formatDate = function(d) { return "Q" + ((d.getMonth() / 3 | 0) + 1) + formatYear(d.getFullYear() % 100); };
-
 var margin = {top: 10, right: 20, bottom: 20, left: 100},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
 
-var y0 = d3.scale.ordinal()
-    .rangeRoundBands([height, 0], .2);
-
-var y1 = d3.scale.linear();
-
-var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1, 0);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom")
-    .tickFormat(formatDate);
-
-var nest = d3.nest()
-    .key(function(d) { return d.group; });
-
-var stack = d3.layout.stack()
-    .values(function(d) { return d.values; })
-    .x(function(d) { return d.date; })
-    .y(function(d) { return d.value; })
-    .out(function(d, y0) { d.valueOffset = y0; });
-
-var color = d3.scale.category10();
-
+var parseDate = d3.time.format("%Y-%m").parse,
+    formatYear = d3.format("02d"),
+    formatDate = function(d) { return "Q" + ((d.getMonth() / 3 | 0) + 1) + formatYear(d.getFullYear() % 100); };
 
 function onRender() {
+    
+    var y0 = d3.scale.ordinal()
+    .rangeRoundBands([height, 0], .2);
+
+    var y1 = d3.scale.linear();
+
+    var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], .1, 0);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")
+        .tickFormat(formatDate);
+
+    var nest = d3.nest()
+        .key(function(d) { return d.group; });
+
+    var stack = d3.layout.stack()
+        .values(function(d) { return d.values; })
+        .x(function(d) { return d.date; })
+        .y(function(d) { return d.value; })
+        .out(function(d, y0) { d.valueOffset = y0; });
+
+    var color = d3.scale.category10();
 
     d3.selectAll("svg")
        .remove(); 

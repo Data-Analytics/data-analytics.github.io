@@ -2,18 +2,18 @@ var margin = {top: 30, right: 10, bottom: 10, left: 10},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
 
-var x = d3.scale.linear()
-    .range([0, width])
-
-var y = d3.scale.ordinal()
-    .rangeRoundBands([0, height], .2);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("top");
-
 function onRender() {
+    
+    var x = d3.scale.linear()
+        .range([0, width])
 
+    var y = d3.scale.ordinal()
+        .rangeRoundBands([0, height], .2);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("top");
+    
     d3.selectAll("svg")
        .remove(); 
     

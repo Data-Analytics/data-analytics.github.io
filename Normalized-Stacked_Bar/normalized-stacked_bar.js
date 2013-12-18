@@ -2,26 +2,26 @@ var margin = {top: 20, right: 60, bottom: 30, left: 50},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
 
-var x = d3.scale.ordinal()
+function onRender() {   
+
+    var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
 
-var y = d3.scale.linear()
-    .rangeRound([height, 0]);
+    var y = d3.scale.linear()
+        .rangeRound([height, 0]);
 
-var color = d3.scale.ordinal()
-    .range(["#98abc5", "#6b486b", "#ff8c00"]);
+    var color = d3.scale.ordinal()
+        .range(["#98abc5", "#6b486b", "#ff8c00"]);
 
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom");
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
 
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .tickFormat(d3.format(".0%"));
-
-
-function onRender() {   
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .tickFormat(d3.format(".0%"));
+    
     d3.select("svg")
        .remove();
 

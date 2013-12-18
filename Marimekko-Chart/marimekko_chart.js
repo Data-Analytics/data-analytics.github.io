@@ -1,20 +1,20 @@
-var width = 680,
-    height = 420,
-    margin = 24;
-
-var x = d3.scale.linear()
-    .range([0, width - 3 * margin]);
-
-var y = d3.scale.linear()
-    .range([0, height - 2 * margin]);
-
-var z = d3.scale.category10();
-
-var n = d3.format(",d"),
-    p = d3.format("%");
-
-
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+    width = 680 - margin.left - margin.right,
+    height = 420 - margin.top - margin.bottom;
+    
 function onRender() {
+
+    var x = d3.scale.linear()
+    .range([0, width]);
+
+    var y = d3.scale.linear()
+        .range([0, height]);
+
+    var z = d3.scale.category10();
+
+    var n = d3.format(",d"),
+        p = d3.format("%");
+
     
     d3.select("svg")
        .remove();
@@ -23,7 +23,7 @@ function onRender() {
     .attr("width", width)
     .attr("height", height)
    .append("g")
-    .attr("transform", "translate(" + 2 * margin + "," + margin + ")");
+    .attr("transform", "translate(" + 2 * margin.left + "," + margin.top + ")");
 
   txt_value = document.getElementById('input_data').value;
   data = d3.csv.parse(txt_value);

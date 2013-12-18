@@ -4,32 +4,32 @@ var margin = {top: 20, right: 50, bottom: 30, left: 60},
 
 var parseDate = d3.time.format("%Y%m%d").parse;
 
-var x = d3.time.scale()
-    .range([0, width]);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
-
-var line = d3.svg.area()
-    .interpolate("basis")
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d["New York"]); });
-
-var area = d3.svg.area()
-    .interpolate("basis")
-    .x(function(d) { return x(d.date); })
-    .y1(function(d) { return y(d["New York"]); });
-
 function onRender() {
 
+    var x = d3.time.scale()
+    .range([0, width]);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
+
+    var line = d3.svg.area()
+        .interpolate("basis")
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d["New York"]); });
+
+    var area = d3.svg.area()
+        .interpolate("basis")
+        .x(function(d) { return x(d.date); })
+        .y1(function(d) { return y(d["New York"]); });
+    
     d3.selectAll("svg")
        .remove(); 
     

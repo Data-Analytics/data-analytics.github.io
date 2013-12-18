@@ -2,16 +2,16 @@ var margin = {top: 20, right: 50, bottom: 30, left: 20},
     width = 680 - margin.right - margin.left,
     height = 420 - margin.top - margin.bottom;
 
-var x = d3.scale.ordinal()
+function onRender() {
+
+    var x = d3.scale.ordinal()
     .rangeRoundBands([0, width]);
 
-var y = d3.scale.linear()
-    .range([0, height]);
+    var y = d3.scale.linear()
+        .range([0, height]);
 
-var z = d3.scale.ordinal()
-    .range(["#E7E1EF", "#C994C7", "#DD1C77"]);
-
-function onRender() {
+    var z = d3.scale.ordinal()
+        .range(["#E7E1EF", "#C994C7", "#DD1C77"]);
     
     d3.select("svg")
        .remove();

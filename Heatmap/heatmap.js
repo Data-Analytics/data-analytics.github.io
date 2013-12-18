@@ -4,7 +4,10 @@ var margin = {top: 20, right: 80, bottom: 30, left: 60},
 
 var parseDate = d3.time.format("%Y-%m-%d").parse,
     formatDate = d3.time.format("%b %d");
+    
+function onRender() {
 
+    
 var x = d3.time.scale().range([0, width]),
     y = d3.scale.linear().range([height, 0]),
     z = d3.scale.linear().range(["white", "steelblue"]);
@@ -13,9 +16,6 @@ var x = d3.time.scale().range([0, width]),
 // This could be inferred from the data if it weren't sparse.
 var xStep = 864e5,
     yStep = 100;
-
-    
-function onRender() {
     
     d3.select("svg")
 		.remove();

@@ -4,6 +4,10 @@ var margin = {top: 20, right: 60, bottom: 30, left: 50},
 
 var parseDate = d3.time.format("%Y%m%d").parse;
 
+
+
+function onRender() {
+
 var x = d3.time.scale()
     .range([0, width]);
 
@@ -23,8 +27,6 @@ var area = d3.svg.area()
     .y0(function(d) { return y(d.low); })
     .y1(function(d) { return y(d.high); });
 
-
-function onRender() {
     
     d3.select("svg")
 		.remove();

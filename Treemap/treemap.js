@@ -10,6 +10,7 @@ function onRender() {
     txt_value = document.getElementById('input_data').value;
     csv_txt = d3.csv.parse(txt_value);    
     data_root = {"key":"treemap"};
+    
     csv_txt.forEach(function(o) {
       o.param1 = parseInt(o.param1); 
       o.param2 = parseInt(o.param2);});
@@ -29,8 +30,7 @@ function onRender() {
     var nest = d3.nest()
         .key(function(d) { return d.Group; })
         .entries(csv_txt);
-        
-        
+                
     data_root["values"] = nest
 
     div.data([data_root]).selectAll("div")

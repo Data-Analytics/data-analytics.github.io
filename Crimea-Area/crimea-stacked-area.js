@@ -2,17 +2,17 @@ var margin = {top: 20, right: 60, bottom: 30, left: 20},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;    
 
-var x = d3.time.scale()
-    .range([0, width]);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var z = d3.scale.ordinal()
-    .range(["#E7E1EF", "#C994C7", "#DD1C77"]);
-
 function onRender() {
 
+    var x = d3.time.scale()
+    .range([0, width]);
+
+    var y = d3.scale.linear()
+        .range([height, 0]);
+
+    var z = d3.scale.ordinal()
+        .range(["#E7E1EF", "#C994C7", "#DD1C77"]);
+    
     d3.selectAll("svg")
        .remove(); 
     

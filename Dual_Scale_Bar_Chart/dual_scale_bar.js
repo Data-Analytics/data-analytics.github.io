@@ -2,22 +2,14 @@ var margin = {top: 60, right: 60, bottom: 60, left: 60},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
 
+function onRender() {
+
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
-
-var y0 = d3.scale.linear().domain([300, 1100]).range([height, 0]),
-y1 = d3.scale.linear().domain([20, 80]).range([height, 0]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom");
-
-// create left yAxis
-var yAxisLeft = d3.svg.axis().scale(y0).ticks(4).orient("left");
-// create right yAxis
-var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient("right");
-
-function onRender() {
 
     d3.selectAll("svg")
        .remove();     
@@ -31,7 +23,15 @@ var svg = d3.select(".dual_scale_bar").append("svg")
     
     txt_value = document.getElementById('input_data').value;
     data = d3.csv.parse(txt_value);
-    
+
+    var y0 = d3.scale.linear().domain([0, d3.max(data, function(d) { return d.money; })]).range([height, 0]),
+        y1 = d3.scale.linear().domain([0, d3.max(data, function(d) { return d.number; })]).range([height, 0]);
+
+    // create left yAxis
+    var yAxisLeft = d3.svg.axis().scale(y0).ticks(5).orient("left");
+    // create right yAxis
+    var yAxisRight = d3.svg.axis().scale(y1).ticks(6).orient("right");
+
   x.domain(data.map(function(d) { return d.year; }));
   y0.domain([0, d3.max(data, function(d) { return d.money; })]);
   

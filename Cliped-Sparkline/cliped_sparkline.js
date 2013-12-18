@@ -4,27 +4,27 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 
 var parseDate = d3.time.format("%Y%m%d").parse;
 
-var x = d3.time.scale()
+function onRender() {   
+    
+    var x = d3.time.scale()
     .range([0, width]);
 
-var y = d3.scale.linear()
-    .range([height, 0]);
+    var y = d3.scale.linear()
+        .range([height, 0]);
 
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom");
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
 
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left");
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left");
 
-var line = d3.svg.line()
-    .interpolate("basis")
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.temperature); });
-
-
-function onRender() {   
+    var line = d3.svg.line()
+        .interpolate("basis")
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return y(d.temperature); });
+    
     d3.select("svg")
        .remove();
 
