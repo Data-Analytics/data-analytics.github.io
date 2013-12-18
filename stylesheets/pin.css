@@ -1,7 +1,7 @@
 body {
     font-size: 1em;
     line-height: 1.4;
-    height:2500px;
+    max-height:5000px;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet MS", sans-serif; }
@@ -57,19 +57,18 @@ a:link, a:hover, a:visited {
 #nav {
     top: 40px;
     bottom:0;
-    width: 180px;
+    width: 16%;
 }
 .menu1-container, .menu2-container{
     padding: 4px 12px;
     text-transform: capitalize;
 }
-.menu1-container{
-    border-bottom: silver 1px solid;
-}
+
 .menu2-search{
     background-size: 15px 15px;
     padding: 6px;
-    width:150px;
+    width:90%;
+    max-width:150px;
     padding-left:20px;
     border: 1px solid #CCC;
     border-radius: 6px;

@@ -42,3 +42,4 @@ Sun-Burst,images/sun-burst.png,Sun-Burst,self,sun burst,"The SunBurst technique 
 Dual_Scale_Bar_Chart,images/dual_scale_bar-chart.png,Dual_Scale_Bar_Chart,self,bar chart,Bar chart comparing  two variables in parallel  simultaneously  simpler version of grouped chart 
 Horizontal_Bar-Chart,images/horizontal-bar.png,Horizontal_Bar-Chart,self,bar chart,"Bar chart comparing  in horizontal style , which is in different when compared to the common one "
 Dual_Hour-Heat_Map,images/day_hour_heat_map.png,D_H-Heat-Map,self,heat map,"Displays how many users acces a database in a certain amount time in a week , it shows which part  of the week is heavily used "
+Voronoi,images/voronoi.png,Voronoi-map,self,voronoi," Voronoi diagram is a way of dividing space into a number of regions, here we have shown the example"
