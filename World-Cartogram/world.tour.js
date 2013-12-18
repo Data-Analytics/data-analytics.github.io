@@ -1,8 +1,15 @@
-var width = 920,
+var width = 960,
     height = 480;
 
-var projection = d3.geo.orthographic()
-    .scale(228)
+queue()
+    .defer(d3.json, "data/world-110m.json")
+    .defer(d3.tsv, "data/world-country-names.tsv")
+    .await(ready);
+
+function ready(error, world, names) {
+    
+  var projection = d3.geo.orthographic()
+    .scale(200)
     .clipAngle(90);
 
 var canvas = d3.select(".tour").append("canvas")
@@ -15,14 +22,8 @@ var path = d3.geo.path()
     .projection(projection)
     .context(c);
 
-var title = d3.select("h1");
-
-queue()
-    .defer(d3.json, "data/world-110m.json")
-    .defer(d3.tsv, "data/world-country-names.tsv")
-    .await(ready);
-
-function ready(error, world, names) {
+var title = d3.select(".country_title");
+  
   var globe = {type: "Sphere"},
       land = topojson.object(world, world.objects.land),
       countries = topojson.object(world, world.objects.countries).geometries,
@@ -40,7 +41,7 @@ function ready(error, world, names) {
 
   (function transition() {
     d3.transition()
-        .duration(300)
+        .duration(400)
         .each("start", function() {
           title.text(countries[i = (i + 1) % n].name);
         })
@@ -52,8 +53,8 @@ function ready(error, world, names) {
             c.clearRect(0, 0, width, height);
             c.fillStyle = "#bbb", c.beginPath(), path(land), c.fill();
             c.fillStyle = "#f00", c.beginPath(), path(countries[i]), c.fill();
-            c.strokeStyle = "#fff", c.lineWidth = .5, c.beginPath(), path(borders), c.stroke();
-            c.strokeStyle = "#000", c.lineWidth = 2, c.beginPath(), path(globe), c.stroke();
+            c.strokeStyle = "#fff", c.lineWidth =  .4, c.beginPath(), path(borders), c.stroke();
+            c.strokeStyle = "#000", c.lineWidth = 1, c.beginPath(), path(globe), c.stroke();
           };
         })
       .transition()
