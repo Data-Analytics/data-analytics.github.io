@@ -63,7 +63,7 @@ var margin = { top: 40, right: 20, bottom: 50, left: 20 },
           heatMap.transition().duration(1000)
               .style("fill", function(d) { return colorScale(d.value); });
 
-          heatMap.append("title").text(function(d) { return d.value; });
+          heatMap.append("title").text(function(d) { return 'Users : '+d.value; });
               
           var legend = svg.selectAll(".legend")
               .data([0].concat(colorScale.quantiles()), function(d) { return d; })
