@@ -121,7 +121,7 @@ $(document).ready(function () {
                         return i * (svgWidth / data.length);
                    })
                    .attr("fill", function (d) {
-                        z = d3.scale.linear().range(["white", "blue"])
+                        z = d3.scale.linear().range(["lightgreen", "darkgreen"])
                         z.domain([0, maxFrequency]);
                         return z(d.frequency);
                    })
@@ -147,7 +147,6 @@ $(document).ready(function () {
                                   })
                           })
                   });
-                
                 labelcontainer.selectAll("text")
                               .data(this.data)
                               .enter()
@@ -181,16 +180,16 @@ $(document).ready(function () {
                 
                 // Below: sort the data that we assigned from the object's property this.data
                 if (sortorder == "ascend") {
-                    data.sort(function (a, b) { return a.frequency - b.frequency });
+                    data.sort(function (a, b) { return a.frequency - b.frequency })
                 } else if (sortorder == "descend") {
-                    data.sort(function (a, b) { return b.frequency - a.frequency });
+                    data.sort(function (a, b) { return b.frequency - a.frequency })
                 } else if (sortorder == "alphabet") {
                     data.sort(function (a, b) {
                         var x = a.letter.toLowerCase(),
                             y = b.letter.toLowerCase();
                         
                         return (x < y) ? -1 : (x > y) ? 1 : 0;
-                    });
+                    })
                 }
                 
                 svg.selectAll("rect")
@@ -201,7 +200,7 @@ $(document).ready(function () {
                         return svgHeight - scale(d.frequency);
                    })
                     .attr("fill", function (d) {
-                        z = d3.scale.linear().range(["white", "blue"])
+                        z = d3.scale.linear().range(["lightgreen", "darkgreen"])
                         z.domain([0, maxFrequency]);
                         return z(d.frequency);
                    })
@@ -212,7 +211,6 @@ $(document).ready(function () {
                                     return d.letter;
                               })
                               .append("title").text(function(d){ return d.letter+' : ' +d.frequency });
-                svg.selectAll("rect").append("title").text(function(d){ return d.letter+' : ' +d.frequency });
             }
         });
         
