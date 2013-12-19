@@ -1,7 +1,7 @@
 body {
     font-size: 1em;
     line-height: 1.4;
-    max-height:5000px;
+    height:5000px;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet MS", sans-serif; }
@@ -55,9 +55,9 @@ a:link, a:hover, a:visited {
 }
 
 #nav {
-    top: 40px;
     bottom:0;
     width: 16%;
+    overflow-y: auto;
 }
 .menu1-container, .menu2-container{
     padding: 4px 12px;
@@ -65,6 +65,7 @@ a:link, a:hover, a:visited {
 }
 
 .menu2-search{
+    background: url('/./images/Search-icon.png') no-repeat scroll 4px;
     background-size: 15px 15px;
     padding: 6px;
     width:90%;
