@@ -1,21 +1,14 @@
 
-
-      // hide the form if the browser doesn't do SVG,
-      // (then just let everything else fail)
       if (!document.createElementNS) {
         document.getElementsByTagName("form")[0].style.display = "none";
       }
 
-      // field definitions from:
-      // <http://www.census.gov/popest/data/national/totals/2011/files/NST-EST2011-alldata.pdf>
+
       var percent = (function() {
             var fmt = d3.format(".2f");
             return function(n) { return fmt(n) + "%"; };
           })(),
           fields = [
-            {name: "(no scale)", id: "none"},
-            // {name: "Census Population", id: "censuspop", key: "CENSUS%dPOP", years: [2010]},
-            // {name: "Estimate Base", id: "censuspop", key: "ESTIMATESBASE%d", years: [2010]},
             {name: "Population Estimate", id: "popest", key: "POPESTIMATE%d"},
             {name: "Population Change", id: "popchange", key: "NPOPCHG_%d", format: "+,"},
             {name: "Births", id: "births", key: "BIRTHS%d"},
@@ -84,7 +77,6 @@
             .attr("id", "states")
             .selectAll("path");
 
-      // map.call(zoom);
       updateZoom();
 
       function updateZoom() {
@@ -113,13 +105,11 @@
       };
 
       var segmentized = location.search === "?segmentized",
-          url = ["data",
-            segmentized ? "us-states-segmentized.topojson" : "us-states.topojson"
-          ].join("/");
+      url = segmentized ? "us-states-segmentized.topojson" : "us-states.topojson";
       d3.json(url, function(topo) {
         topology = topo;
         geometries = topology.objects.states.geometries;
-        d3.csv("data/nst_2011.csv", function(data) {
+        d3.csv("data.csv", function(data) {
           rawData = data;
           dataById = d3.nest()
             .key(function(d) { return d.NAME; })
