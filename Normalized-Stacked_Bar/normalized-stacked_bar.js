@@ -11,7 +11,7 @@ function onRender() {
         .rangeRound([height, 0]);
 
     var color = d3.scale.ordinal()
-        .range(["#98abc5", "#6b486b", "#ff8c00"]);
+        .range(["#fc8d59", "#ffffbf", "#91cf60"]);
 
     var xAxis = d3.svg.axis()
         .scale(x)
