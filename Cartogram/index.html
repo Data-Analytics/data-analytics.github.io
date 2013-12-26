@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cartograms with d3 &amp; TopoJSON</title>
-    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/colorbrewer.js"></script>
-    <script type="text/javascript" src="/./javascripts/topojson.js"></script>
-    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>	
-    <script type="text/javascript" src="cartogram.js"></script>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/colorbrewer.js"></script>
+    <script type="text/javascript" src="/./javascripts/topojson.js"></script>
+    <title>Cartograms with d3 &amp; TopoJSON</title>
     <style>
       #map-container {
         width: 960px;
@@ -30,6 +30,7 @@
         stroke: #666;
         stroke-width: .8;
     </style>
+  <script type="text/javascript" src="cartogram.js"></script>  
   </head>
   <body>
         <!-- HEADER -->
@@ -56,23 +57,21 @@
 
      <!-- MAIN CONTENT -->
    <div class="container cartogram">
-      <section id="main_content" class="inner" >   
-  
-    <div id="container" align="center">
-      <form>
-        <p class="form-inline">
-          <label>Scale by <select id="field"></select></label>
-          <label>in <select id="year"></select></label>
-          <span id="status"></span>
-        </p>
-      </form>
-      <div id="map-container">
-            <svg id="map" xmlns="http://www.w3.org/2000/svg" width="960" height="420" version="1.1"></svg>
-      </div>
-      
-    </div>
-    <script src="census.js"></script>
-    
+      <section id="main_content" class="inner" >     
+        <div id="container" align="center">
+          <form>
+            <p class="form-inline">
+              <label>Scale by <select id="field"></select></label>
+              <label>in <select id="year"></select></label>
+              <span id="status"></span>
+            </p>
+          </form>
+          <div id="map-container">
+                <svg id="map" xmlns="http://www.w3.org/2000/svg" width="960" height="420" version="1.1"></svg>
+          </div>
+          
+        </div>
+        <script src="census.js"></script>    
         </section>
         </div>        
   </body>

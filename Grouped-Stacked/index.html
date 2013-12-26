@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
- <title>Stack to Grouped Bar</title>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
-  <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
-  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-  <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
-<style>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <title>Stack to Grouped Bar</title>
+    <style>
 
-.group-stack {
-  font: 10px sans-serif;
-}
+    .group-stack {
+      font: 10px sans-serif;
+    }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
 
-.bar {
-  fill: steelblue;
-}
+    .bar {
+      fill: steelblue;
+    }
 
-.x.axis path {
-  display: none;
-}
+    .x.axis path {
+      display: none;
+    }
 
-</style>
-
+    </style>
 <body onLoad="onRender()" >
 
  <!-- HEADER -->

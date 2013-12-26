@@ -1,42 +1,39 @@
-<html>
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Zoomable Treemap </title>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     <script type="text/javascript" src="/./javascripts/d3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/d3.layout.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <style type="text/css">
+    <title>Zoomable Treemap </title>
+    <style>
+    .chart {
+      display: block;
+      margin: auto;
+      margin-top: 40px;
+    }
 
-.chart {
-  display: block;
-  margin: auto;
-  margin-top: 40px;
-}
+    text {
+      font-size: 11px;
+    }
 
-text {
-  font-size: 11px;
-}
+    rect {
+      fill: none;
+    }
 
-rect {
-  fill: none;
-}
-
- #footer {
-  position: absolute;
-  top: 0;
-  top: 980px;
-  right: 140px;
-  z-index: 1;
-  display: block;
-  font-size: 36px;
-  font-weight: 300;
-  text-shadow: 0 1px 0 #fff;
-}
-
+     #footer {
+      position: absolute;
+      top: 0;
+      top: 980px;
+      right: 140px;
+      z-index: 1;
+      display: block;
+      font-size: 36px;
+      font-weight: 300;
+      text-shadow: 0 1px 0 #fff;
+    }
     </style>
   </head>
   <body>

@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
 <html>
   <head>
-    <title>Difference Chart</title>
-	<style>
-
-body {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.area.above {
-  fill: rgb(0,255,0);
-}
-
-.area.below {
-  fill: rgb(255,0,0);
-}
-
-.line {
-  fill: none;
-  stroke: #000;
-  stroke-width: 1.5px;
-}
-	</style>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>	
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <title>Difference Chart</title>
+	<style>
+
+    body {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+      display: none;
+    }
+
+    .area.above {
+      fill: rgb(0,255,0);
+    }
+
+    .area.below {
+      fill: rgb(255,0,0);
+    }
+
+    .line {
+      fill: none;
+      stroke: #000;
+      stroke-width: 1.5px;
+    }
+	</style>	
   </head>
   <body onLoad="onRender();">
 

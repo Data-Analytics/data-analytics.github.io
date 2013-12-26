@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html>  
-<head>
-    <script type="text/javascript" src="d3.v3.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>	
+<html>
+  <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
     <title>Marey's Train</title>
-</head>
-<style>
+    <style>
 
-svg {
-  font: 10px sans-serif;
-}
+    svg {
+      font: 10px sans-serif;
+    }
 
-.axis path {
-  display: none;
-}
+    .axis path {
+      display: none;
+    }
 
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
 
-.station line {
-  stroke: #ddd;
-  stroke-dasharray: 1,1;
-  shape-rendering: crispEdges;
-}
+    .station line {
+      stroke: #ddd;
+      stroke-dasharray: 1,1;
+      shape-rendering: crispEdges;
+    }
 
-.station text {
-  text-anchor: end;
-}
+    .station text {
+      text-anchor: end;
+    }
 
-.train line {
-  stroke-width: 1.5px;
-}
+    .train line {
+      stroke-width: 1.5px;
+    }
 
-.train circle {
-  fill: #777;
-  stroke: #fff;
-  stroke-width: 1.5px;
-}
+    .train circle {
+      fill: #777;
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
 
-</style> 
-
-<body>
+    </style> 
+  </head>
+  <body>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner container">

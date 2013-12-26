@@ -1,40 +1,39 @@
 <!DOCTYPE html>
-<html>  
-<head>
+<html>
+  <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/styles.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./stylesheets/bootstrap.min.css">
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <script type="text/javascript" src="correlation.js"></script>
     <title>Correlation</title>
-</head>
-<style>
-  .pixel:hover
-{ 
-  stroke: #000;
-  stroke-width: 1px;
-}
-.tick:hover
-{ 
-  fill: #aaa;
-/* stroke: #000;  
-stroke-width: 1px;*/
-}
-div.tooltip
-{
-	position: absolute;
-	text-align: left;
-	padding: 8px;
-	font: 12px sans-serif;
-	background: #000;
-  color: #ddd;
-	border: solid 1px #aaa;
-	border-radius: 4px;
-	pointer-events: none;
-}
-</style> 
-
-<body>
+    <style>
+    .pixel:hover
+    { 
+    stroke: #000;
+    stroke-width: 1px;
+    }
+    .tick:hover
+    { 
+    fill: #aaa;
+    /* stroke: #000;  
+    stroke-width: 1px;*/
+    }
+    div.tooltip
+    {
+    position: absolute;
+    text-align: left;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: #000;
+    color: #ddd;
+    border: solid 1px #aaa;
+    border-radius: 4px;
+    pointer-events: none;
+    }
+    </style> 
+  </head>
+  <body>
   <!-- HEADER -->
   <div id="header_wrap" class="outer">
     <header class="inner container">
@@ -73,6 +72,7 @@ div.tooltip
       <div class="tooltip" style="opacity: 0.01"></div> 
       
       </div>
+    <script type="text/javascript" src="correlation.js"></script>  
     <div id="chart" ></div>
     </section>
     </div>    
