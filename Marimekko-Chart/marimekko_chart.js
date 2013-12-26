@@ -1,4 +1,4 @@
-var margin = {top: 20, right: 20, bottom: 20, left: 20},
+var margin = {top: 20, right: 40, bottom: 20, left: 20},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
     
@@ -20,8 +20,8 @@ function onRender() {
        .remove();
   
   var svg = d3.select("#marimekkomap").append("svg")
-    .attr("width", width)
-    .attr("height", height)
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
    .append("g")
     .attr("transform", "translate(" + 2 * margin.left + "," + margin.top + ")");
 
@@ -53,14 +53,14 @@ function onRender() {
       .data(x.ticks(10))
     .enter().append("g")
       .attr("class", "x")
-      .attr("transform", function(d) { return "translate(" + x(d) + "," + y(1) + ")"; });
+      .attr("transform", function(d) { return "translate(" + x(d) + "," + y(0) + ")"; });
 
   xtick.append("line")
       .attr("y2", 6)
       .style("stroke", "#000");
 
   xtick.append("text")
-      .attr("y", 8)
+      .attr("y", -10)
       .attr("text-anchor", "middle")
       .attr("dy", ".71em")
       .text(p);
