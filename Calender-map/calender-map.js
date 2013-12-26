@@ -1,8 +1,7 @@
-
 var width = 960,
     height = 105,
     cellSize = 12; // cell size
-
+    week_days = ['sun','mon','tue','wed','thu','fri','sat']
 var day = d3.time.format("%w"),
     week = d3.time.format("%U"),
     percent = d3.format(".1%"),
@@ -21,10 +20,20 @@ var svg = d3.select(".calender-map").selectAll("svg")
     .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
 
 svg.append("text")
-    .attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+    .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
     .style("text-anchor", "middle")
     .text(function(d) { return d; });
 
+for (var i=0; i<week_days.length; i++)
+{    
+svg.append("text")
+    .attr("transform", "translate(-5," + cellSize*(i+1) + ")")
+    .style("text-anchor", "end")
+    .attr("dy", "-.25em")
+    .text(function(d) { return week_days[i]; });
+    
+ }
+ 
 var rect = svg.selectAll(".day")
     .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
   .enter().append("rect")

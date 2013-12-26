@@ -34,7 +34,8 @@ var svg = d3.select(".chart").append("svg")
   bar.append("rect")
       .attr("width", function(d) { return x(d.value); })
       .attr("height", barHeight - 1)
-      .append("svg:title").text(function(d) { return d.name; });
+      .attr("rx", barHeight/4)
+      .append("svg:title").text(function(d) { return d.name+' : '+d.value; });
 
   bar.append("text")
       .attr("x", function(d) { return x(d.value) - 3; })
@@ -45,7 +46,7 @@ var svg = d3.select(".chart").append("svg")
       .text(function(d) { return d.value; });
    
  bar.append("text")
-      .attr("x", 0)
+      .attr("x", 3)
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
       .style("fill","#000")

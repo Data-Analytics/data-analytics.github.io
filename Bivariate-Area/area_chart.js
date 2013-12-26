@@ -52,8 +52,7 @@ var svg = d3.select("#Bivariate-Area").append("svg")
   svg.append("path")
       .datum(data)
       .attr("class", "area")
-      .style("fill", "lightgreen")
-      .style("stroke", "grey")
+      .style("stroke", "#555")
       .attr("d", area);
 
   svg.append("g")
