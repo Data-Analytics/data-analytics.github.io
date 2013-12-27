@@ -17,8 +17,8 @@ function onRender() {
        .remove(); 
     
     var svg = d3.select(".area-criema").append("svg")
-        .attr("width", width)
-        .attr("height", height)
+        .attr("width", width+ margin.right + margin.left)
+        .attr("height", height+ margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + (height + margin.top) + ")");
 
