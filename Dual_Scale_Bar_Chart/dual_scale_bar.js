@@ -23,7 +23,6 @@ var svg = d3.select(".dual_scale_bar").append("svg")
     
     txt_value = document.getElementById('input_data').value;
     data = d3.csv.parse(txt_value);
-
     var y0 = d3.scale.linear().domain([0, d3.max(data, function(d) { return d.money; })]).range([height, 0]),
         y1 = d3.scale.linear().domain([0, d3.max(data, function(d) { return d.number; })]).range([height, 0]);
 
@@ -78,7 +77,7 @@ var svg = d3.select(".dual_scale_bar").append("svg")
       .attr("width", x.rangeBand() / 2)
       .attr("y", function(d) { return y1(d.number); })
           .attr("height", function(d,i,j) { return height - y1(d.number); })
-       .append('title').text(function(d) { return 'number : '+d.number });    ; 
+       .append('title').text(function(d) { return 'number : '+d.number });
 
 }
 

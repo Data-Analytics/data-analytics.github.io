@@ -6,14 +6,13 @@ var randomX = d3.random.normal(width / 2, 80),
     randomY = d3.random.normal(height / 2, 80),
     points = d3.range(800).map(function() { return [randomX(), randomY()]; });
 
-var color = d3.scale.linear()
-    .domain([0, 16])
-    .range(["white", "steelblue"])
-    .interpolate(d3.interpolateLab);
+var radius = d3.scale.sqrt()
+    .domain([0, 50])
+    .range([0, 20]);
 
 var hexbin = d3.hexbin()
     .size([width, height])
-    .radius(16);
+    .radius(20);
 
 var x = d3.scale.identity()
     .domain([0, width]);
@@ -51,9 +50,8 @@ svg.append("g")
     .data(hexbin(points))
   .enter().append("path")
     .attr("class", "hexagon")
-    .attr("d", hexbin.hexagon())
+    .attr("d", function(d) { return hexbin.hexagon(radius(d.length)); })
     .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-    .style("fill", function(d) { return color(d.length); })
     .append('title').text(function(d) { return 'value : '+d.length });
 
 svg.append("g")
