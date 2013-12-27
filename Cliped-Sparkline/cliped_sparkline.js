@@ -64,7 +64,7 @@ function onRender() {
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
-
+      
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis)

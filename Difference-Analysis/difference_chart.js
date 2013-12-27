@@ -71,11 +71,13 @@ function onRender() {
   svg.append("path")
       .attr("class", "area above")
       .attr("clip-path", "url(#clip-above)")
+      .style("fill",'red')
       .attr("d", area.y0(function(d) { return y(d["Paris"]); }));
-
+      
   svg.append("path")
       .attr("class", "area below")
       .attr("clip-path", "url(#clip-below)")
+      .style("fill",'steelblue')
       .attr("d", area);
 
   svg.append("path")

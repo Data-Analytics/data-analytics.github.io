@@ -33,12 +33,12 @@ function onRender() {
     data = d3.csv.parse(txt_value);	
 	
  data.forEach(function(d) {
-    d.sepalLength = +d.sepalLength;
-    d.sepalWidth = +d.sepalWidth;
+    d.Length = +d.Length;
+    d.Width = +d.Width;
   });
 
-  x.domain(d3.extent(data, function(d) { return d.sepalWidth; })).nice();
-  y.domain(d3.extent(data, function(d) { return d.sepalLength; })).nice();
+  x.domain(d3.extent(data, function(d) { return d.Width; })).nice();
+  y.domain(d3.extent(data, function(d) { return d.Length; })).nice();
 
   svg.append("g")
       .attr("class", "x axis")
@@ -49,7 +49,7 @@ function onRender() {
       .attr("x", width)
       .attr("y", -6)
       .style("text-anchor", "end")
-      .text("Sepal Width (cm)");
+      .text("Width (cm)");
 
   svg.append("g")
       .attr("class", "y axis")
@@ -60,17 +60,17 @@ function onRender() {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Sepal Length (cm)")
+      .text("Length (cm)")
 
   svg.selectAll(".dot")
       .data(data)
     .enter().append("circle")
       .attr("class", "dot")
       .attr("r", 3.5)
-      .attr("cx", function(d) { return x(d.sepalWidth); })
-      .attr("cy", function(d) { return y(d.sepalLength); })
+      .attr("cx", function(d) { return x(d.Width); })
+      .attr("cy", function(d) { return y(d.Length); })
       .style("fill", function(d) { return color(d.species); })
-      .append('title').text(function(d) {return 'sepalLength : '+d.sepalWidth+' ,sepalWidth: '+d.sepalLength });
+      .append('title').text(function(d) {return 'Length : '+d.Width+' ,Width: '+d.Length });
 
   var legend = svg.selectAll(".legend")
       .data(color.domain())

@@ -30,8 +30,6 @@ var main = function(corr, label_col, label_row){
 
   var body = d3.select('#chart');
 
-  var tooltip = body.select('div.tooltip');
-
   var svg = body.append('svg')
     .attr('width', 960)
     .attr('height', 400);
@@ -46,9 +44,6 @@ var main = function(corr, label_col, label_row){
   var row = corr;
   var col = d3.transpose(corr);
 
-
-  // converts a matrix into a sparse-like entries
-  // maybe 'expensive' for large matrices, but helps keeping code clean
   var indexify = function(mat){
       var res = [];
       for(var i = 0; i < mat.length; i++){
@@ -74,7 +69,7 @@ var main = function(corr, label_col, label_row){
   
   var left_label_space = 170;
   var up_label_space = 80;
-  // I will make it also a function of scale and max label length
+
 
   var matrix = svg.append('g')
       .attr('class','matrix')
@@ -88,11 +83,8 @@ var main = function(corr, label_col, label_row){
           .attr('class', 'pixel')
           .attr('width', scale(0.8))
           .attr('height', scale(0.8))
-          .style('fill',function(d){ return color(d.val);})
-          .on('mouseover', function(d){pixel_mouseover(d);})
-          .on('mouseout', function(d){mouseout(d);});
-          // .on('click', function(d){reorder_matrix(d.i, 'col'); reorder_matrix(d.j, 'row');});
-          //the last thing works only for symmetric matrices, but with asymmetric sorting
+          .style('fill',function(d){ return color(d.val);});
+
 
   tick_col = svg.append('g')
       .attr('class','ticks')
@@ -107,8 +99,6 @@ var main = function(corr, label_col, label_row){
           .attr('transform', function(d, i){return 'rotate(270 ' + scale(order_col[i] + 0.7) + ',0)';})
           .attr('font-size', scale(0.8))
           .text(function(d){ return d; })
-          .on('mouseover', function(d, i){tick_mouseover(d, i, col[i], label_row);})
-          .on('mouseout', function(d){mouseout(d);})
           .on('click', function(d, i){reorder_matrix(i, 'col');});
 
   tick_row = svg.append('g')
@@ -123,35 +113,7 @@ var main = function(corr, label_col, label_row){
           .style('text-anchor', 'end')
           .attr('font-size', scale(0.8))
           .text(function(d){ return d; })
-          .on('mouseover', function(d, i){tick_mouseover(d, i, row[i], label_col);})
-          .on('mouseout', function(d){mouseout(d);})
           .on('click', function(d, i){reorder_matrix(i, 'row');});
-
-  var pixel_mouseover = function(d){
-    tooltip.style("opacity", 0.8)
-      .style("left", (d3.event.pageX + 15) + "px")
-      .style("top", (d3.event.pageY + 8) + "px")
-      .html(d.i + ": " + label_row[d.i] + "<br>" + d.j + ": " + label_col[d.j] + "<br>" + "Value: " + (d.val > 0 ? "+" : "&nbsp;") + d.val.toFixed(3));
-  };
-
-  var mouseout = function(d){
-    tooltip.style("opacity", 1e-6);
-  };
-
-  var tick_mouseover = function(d, i, vec, label){
-    // below can be optimezed a lot
-    var indices = d3.range(vec.length);
-    // also value/abs val?
-    indices.sort(function(a, b){ return Math.abs(vec[b]) - Math.abs(vec[a]); });
-    res_list = [];
-    for(var j = 0; j < Math.min(vec.length, 10); j++) {
-      res_list.push((vec[indices[j]] > 0 ? "+" : "&nbsp;") + vec[indices[j]].toFixed(3) + "&nbsp;&nbsp;&nbsp;" + label[indices[j]]);
-    }
-    tooltip.style("opacity", 0.8)
-      .style("left", (d3.event.pageX + 15) + "px")
-      .style("top", (d3.event.pageY + 8) + "px")
-      .html("" + i + ": " + d + "<br><br>" + res_list.join("<br>"));
-  };
 
 
   var refresh_order = function(){
