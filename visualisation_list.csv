@@ -43,3 +43,5 @@ ZipDecode,zipdecode.png,Zipdecode,self,cartogram,"Ben Fry’s zipdecode, inspire
 Zm Icicle,zoomable_icicle.png,Zoomable-icicle,self,icicle, This “icicle” diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
 Zm SunBurst,zoomable-sunburst.png,Zoomable-Sun_Burst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable-treemap,self,tree map,"Chicago Data Portal, with the datasets grouped by categoriesand dimensions drawn based on the size of the individual datasets."
+Hex Binning,hex_binning.png,Hex-Binning,self,hexagonal map,eight hundred random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. 
+Hex Binning Area,hex_binning_area.png,Hex-Binning_Area,self,hexagonal map,eight hundred random points with a normal distribution are binned into hexagons; area encodes the number of points that fall into each bin. 
