@@ -44,7 +44,7 @@ cloud = {
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
             })
             .text(function(d) { return d.text; })
-            .append('title').text(function(d) { return 'Population : '+addThousandsSeparator((d.size*300)*(d.size*300)); });
+            .append('title').text(function(d) { return d.text+' : '+addThousandsSeparator((d.size*300)*(d.size*300)); });
         })
         .start();
     }
