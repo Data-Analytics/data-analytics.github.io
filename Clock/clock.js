@@ -34,14 +34,15 @@ var g = vis.selectAll("g")
 
 g.append("path")
     .style("fill", function(d) { return fill(d.value); })
-    .attr("d", arc);
+    .attr("d", arc)
+    .attr('data-title',function(d) { return d.text; });
 
 g.append("text")
     .attr("text-anchor", "middle")
     .attr("dy", "1em")
     .text(function(d) { return d.text; });
 
-
+     
 // Update arcs.
 d3.timer(function() {
   var g = vis.selectAll("g")
@@ -49,7 +50,8 @@ d3.timer(function() {
 
   g.select("path")
       .style("fill", function(d) { return fill(d.value); })
-      .attr("d", arc);
+      .attr("d", arc)
+      .attr('data-title',function(d) { return d.text; });
 
   g.select("text")
       .attr("dy", function(d) { return d.value < .5 ? "-.5em" : "1em"; })
@@ -59,6 +61,7 @@ d3.timer(function() {
             + "rotate(" + (d.value < .5 ? -90 : 90) + ")"
       })
       .text(function(d) { return d.text; });
+    $("path").tooltip({container: 'body', html: true, placement:'right'}); 
 });
 
 // Generate the fields for the current date/time.

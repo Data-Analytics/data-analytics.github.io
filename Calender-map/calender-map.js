@@ -45,9 +45,6 @@ var rect = svg.selectAll(".day")
     .attr("fill",'#fff')
     .datum(format);
 
-rect.append("title")
-    .text(function(d) { return d; });
-
 svg.selectAll(".month")
     .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
   .enter().append("path")
@@ -62,8 +59,9 @@ d3.csv("data.csv", function(error, csv) {
 
   rect.filter(function(d) { return d in data; })
       .attr("fill", function(d) { return color(data[d]); })
-    .select("title")
-      .text(function(d) { return d + ": " + percent(data[d]); });
+      .attr("data-title", function(d) { return d + ": " + percent(data[d]); });
+     
+  $("rect").tooltip({container: 'body', html: true, placement:'right'});  
 });
 
 function monthPath(t0) {
@@ -76,3 +74,4 @@ function monthPath(t0) {
       + "H" + (w1 + 1) * cellSize + "V" + 0
       + "H" + (w0 + 1) * cellSize + "Z";
 }
+

@@ -3,7 +3,7 @@ var margin = {top: 20, right: 50, bottom: 30, left: 20},
     height = 420 - margin.top - margin.bottom;
 
 function onRender() {
-
+    
     var x = d3.scale.ordinal()
     .rangeRoundBands([0, width]);
 
@@ -58,8 +58,7 @@ function onRender() {
       .attr("y", function(d) { return -y(d.y0) - y(d.y); })
       .attr("height", function(d) { return y(d.y); })
       .attr("width", x.rangeBand()) 
-  rect.append("title")
-        .text(function(d) { return "Group:"+d.x+", value:" +(d.y) ; });
+      .attr("data-title", function(d) { return "<p class='left'>Group:"+d.x+", value:" +(d.y)+"</p>" ; })
      
   // Add y-axis rules.
   var rule = svg.selectAll("g.rule")
@@ -77,5 +76,8 @@ function onRender() {
       .attr("x", width + 10)
       .attr("dy", ".35em")
       .text(d3.format(",d"))
+   
+   $("rect").tooltip({container: 'body', html: true, placement:'right'});
+
     
 };

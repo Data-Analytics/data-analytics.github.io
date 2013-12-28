@@ -39,6 +39,7 @@ function onRender() {
     .enter().append("circle")
       .attr("class", "node")
       .attr("r", 4)
+      .attr("data-title",function(d) { return d.name; })
 	  .call(force.drag);
 
   // Start the force layout.
@@ -48,6 +49,8 @@ function onRender() {
       .on("tick", tick)
       .start();
 
+   $("circle").tooltip({container: 'body', html: true, placement:'right'}); 
+        
   function tick() {
     link.attr("x1", function(d) { return d.source.x; })
         .attr("y1", function(d) { return d.source.y; })

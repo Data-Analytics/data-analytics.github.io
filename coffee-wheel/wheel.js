@@ -34,7 +34,7 @@ d3.json("wheel.json", function(error, json) {
       .attr("fill-rule", "evenodd")
       .style("fill", colour)
       .on("click", click)
-      .append("svg:title").text(function(d) { return d.depth ? d.name.split(" ")[0] : ""; });
+      .attr('data-title',function(d) { return d.depth ? d.name.split(" ")[0] : ""; });
 
   var text = vis.selectAll("text").data(nodes);
   var textEnter = text.enter().append("text")
@@ -90,6 +90,8 @@ d3.json("wheel.json", function(error, json) {
           d3.select(this).style("visibility", isParentOf(d, e) ? null : "hidden");
         });
   }
+  
+      $("path").tooltip({container: 'body', html: true, placement:'right'}); 
 });
 
 function isParentOf(p, c) {

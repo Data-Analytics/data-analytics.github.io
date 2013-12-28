@@ -30,8 +30,7 @@ function circularHeatChart() {
                 .enter().append("path")
                 .attr("d", d3.svg.arc().innerRadius(ir).outerRadius(or).startAngle(sa).endAngle(ea))
                 .attr("fill", function(d) {return color(accessor(d));})
-                .append('title').text(function(d) {return 'energy : '+d.toFixed(3) });
-
+                .attr("data-title", function(d) {return 'energy : '+d.toFixed(3) });
 
             // Unique id so that the text path defs are unique - is there a better way to do this?
             var id = d3.selectAll(".circular-heat")[0].length;
@@ -82,6 +81,8 @@ function circularHeatChart() {
                 .attr("xlink:href", "#segment-label-path-"+id)
                 .attr("startOffset", function(d, i) {return i * 100 / numSegments + "%";})
                 .text(function(d) {return d;});
+                
+              $("path").tooltip({container: 'body', html: true, placement:'right'});      
         });
 
     }

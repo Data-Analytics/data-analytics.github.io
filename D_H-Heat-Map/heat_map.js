@@ -58,12 +58,8 @@ var margin = { top: 40, right: 20, bottom: 50, left: 20 },
               .attr("class", "hour bordered")
               .attr("width", gridSize)
               .attr("height", gridSize)
-              .style("fill", colors[0]);
-
-          heatMap.transition().duration(1000)
-              .style("fill", function(d) { return colorScale(d.value); });
-
-          heatMap.append("title").text(function(d) { return 'Users : '+d.value; });
+              .style("fill", function(d) { return colorScale(d.value); })
+              .attr('data-title',function(d) { return 'Users : '+d.value; });
               
           var legend = svg.selectAll(".legend")
               .data([0].concat(colorScale.quantiles()), function(d) { return d; })
@@ -82,4 +78,6 @@ var margin = { top: 40, right: 20, bottom: 50, left: 20 },
             .text(function(d) { return "≥ " + Math.round(d); })
             .attr("x", function(d, i) { return legendElementWidth * i; })
             .attr("y", height + gridSize);
+        
+        $("rect").tooltip({container: 'body', html: true, placement:'right'});        
       });
