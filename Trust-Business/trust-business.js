@@ -55,9 +55,9 @@ d3.csv("trust-business.csv", function(data) {
         r: 8,
         id: function(d) { return d.country; }
       })
-        .style("fill", function(d) { return color(d.region); })
-        .append("title")
-            .text(function(d) { return d.country; });
+       .attr("data-title", function(d) { return d.country; })
+        .style("fill", function(d) { return color(d.region); });
+        
                   
     // the legend color guide
     var legend = svg.selectAll("rect")
@@ -82,6 +82,7 @@ d3.csv("trust-business.csv", function(data) {
         })
         .text(function(d) { return d; });
     
+      $("circle").tooltip({container: 'body', html: true, placement:'top'});  
     // draw axes and axis labels
     svg.append("g")
         .attr("class", "x axis")
