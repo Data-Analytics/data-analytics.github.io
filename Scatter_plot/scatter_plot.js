@@ -69,8 +69,8 @@ function onRender() {
       .attr("r", 3.5)
       .attr("cx", function(d) { return x(d.Width); })
       .attr("cy", function(d) { return y(d.Length); })
-      .style("fill", function(d) { return color(d.species); })
-      .append('title').text(function(d) {return 'Length : '+d.Width+' ,Width: '+d.Length });
+      .attr('data-title',function(d) {return 'Length : '+d.Width+' ,Width: '+d.Length })
+      .style("fill", function(d) { return color(d.species); });
 
   var legend = svg.selectAll(".legend")
       .data(color.domain())
@@ -90,5 +90,7 @@ function onRender() {
       .attr("dy", ".35em")
       .style("text-anchor", "end")
       .text(function(d) { return d; });   
+            
+    $("circle").tooltip({container: 'body', html: true, placement:'top'});  
   
 };
