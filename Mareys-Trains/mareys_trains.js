@@ -98,7 +98,7 @@ d3.csv("data.csv", type, function(error, trains) {
     dd = "PM";
     }
     
-        return  d.station.name+' - '+hours+' : '+d.time.getMinutes()+' .'+dd ; });
+        return  d.station.name+' -'+hours+':'+d.time.getMinutes()+' '+dd ; });
         
      $("circle").tooltip({container: 'body', html: true, placement:'top'});
          
