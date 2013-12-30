@@ -87,15 +87,21 @@ d3.csv("data.csv", type, function(error, trains) {
     .enter().append("circle")
       .attr("transform", function(d) { return "translate(" + x(d.time) + "," + y(d.station.distance) + ")"; })
       .attr("r", 3)
-  circle.append("title")
-        .text(function(d) { 
+      .attr("data-title",function(d) { 
         var dd = "AM";
         var hours = d.time.getHours();
-    if (hours >= 12) {
+    if (hours > 12) {
         hours = d.time.getHours()-12;
-        dd = "PM";
+        dd = "PM";    
     }
-        return  hours+' : '+d.time.getMinutes()+' .'+dd ; });
+    if (hours == 12){
+    dd = "PM";
+    }
+    
+        return  d.station.name+' - '+hours+' : '+d.time.getMinutes()+' .'+dd ; });
+        
+     $("circle").tooltip({container: 'body', html: true, placement:'top'});
+         
       });
 
 function type(d, i) {
