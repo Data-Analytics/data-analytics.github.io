@@ -35,7 +35,7 @@ var svg = d3.select(".chart").append("svg")
       .attr("width", function(d) { return x(d.value); })
       .attr("height", barHeight - 1)
       .attr("rx", barHeight/4)
-      .append("svg:title").text(function(d) { return d.name+' : '+d.value; });
+      .attr("data-title",function(d) { return d.name+' : '+d.value; });
 
   bar.append("text")
       .attr("x", function(d) { return x(d.value) - 3; })
@@ -53,7 +53,7 @@ var svg = d3.select(".chart").append("svg")
       .style("text-anchor","start")
       .text(function(d) { return d.name; });
 
-      
+   $("rect").tooltip({container: 'body', html: true, placement:'top'});          
 }
 
 function type(d) {
