@@ -67,18 +67,21 @@ var svg = d3.select(".dual_scale_bar").append("svg")
       .attr("class", "bar1")
       .attr("x", function(d) { return x(d.year); })
       .attr("width", x.rangeBand()/2)
+      .attr("rx", x.rangeBand()/8)
       .attr("y", function(d) { return y0(d.money); })
-          .attr("height", function(d,i,j) { return height - y0(d.money); })
-      .append('title').text(function(d) { return 'money : '+d.money });
-
+      .attr("height", function(d,i,j) { return height - y0(d.money); })
+      .attr("data-title", function(d) { return 'money : '+d.money });
+      
   bars.append("rect")
       .attr("class", "bar2")
       .attr("x", function(d) { return x(d.year) + x.rangeBand()/2; })
-      .attr("width", x.rangeBand() / 2)
+      .attr("width", x.rangeBand()/ 2)
+      .attr("rx", x.rangeBand()/8)
       .attr("y", function(d) { return y1(d.number); })
-          .attr("height", function(d,i,j) { return height - y1(d.number); })
-       .append('title').text(function(d) { return 'number : '+d.number });
-
+      .attr("height", function(d,i,j) { return height - y1(d.number); })
+      .attr("data-title", function(d) { return 'number : '+d.number });
+      
+    $("rect").tooltip({container: 'body', html: true, placement:'right'});     
 }
 
 function type(d) {
