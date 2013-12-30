@@ -76,14 +76,15 @@ function onRender() {
       .attr("y", function(d) { return y1(d.value); })
       .attr("width", x.rangeBand())
       .attr("height", function(d) { return y0.rangeBand() - y1(d.value); })
-      .append("title")
-      .text(function(d) { return d.date.getMonth()+1+'-'+(d.date.getYear()+1900)+' : '+d.value; });
+      .attr("title", function(d) { return d.date.getMonth()+1+'-'+(d.date.getYear()+1900)+' : '+d.value; });
 
   group.filter(function(d, i) { return !i; }).append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + y0.rangeBand() + ")")
       .call(xAxis);
   
+      $("rect").tooltip({container: 'body', html: true, placement:'top'}); 
+      
 d3.select("#multiples").on("click", function() {
 
 
