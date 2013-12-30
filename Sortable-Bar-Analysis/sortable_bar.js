@@ -2,8 +2,6 @@ var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
 
-var formatPercent = d3.format(".0%");
-
 function onRender() {
     
     var x = d3.scale.ordinal()
@@ -19,7 +17,7 @@ function onRender() {
     var yAxis = d3.svg.axis()
         .scale(y)
         .orient("left")
-        .tickFormat(formatPercent);
+        
     
     d3.selectAll("svg")
        .remove(); 
@@ -64,10 +62,14 @@ function onRender() {
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.Param); })
       .attr("height", function(d) { return height - y(d.Param); })
-      .attr("stroke",'grey');
+      .attr("stroke",'grey')
+      .attr("data-title",function(d) { return d.Group+': '+d.Param; });
+      
 
   d3.select("input").on("change", change);
 
+   $("rect").tooltip({container: 'body', html: true, placement:'top'});  
+        
   var sortTimeout = setTimeout(function() {
     d3.select("input").property("checked", true).each(change);
   }, 2000);
