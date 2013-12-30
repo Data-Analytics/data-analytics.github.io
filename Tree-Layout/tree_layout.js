@@ -50,8 +50,10 @@ function onRender() {
       .attr("r", 4.5)
       .attr("cx", function(d) { return d.y; })
       .attr("cy", function(d) { return d.x; })
-      .append("title").text(function(d,i) { return d.name;  });
+      .attr("data-title",function(d,i) { return d.name;  });
 
+  $("circle").tooltip({container: 'body', html: true, placement:'top'});  
+      
   function nodeByName(name) {
     return nodesByName[name] || (nodesByName[name] = {name: name});
   }
