@@ -4,7 +4,7 @@
         x = d3.scale.linear().range([0, width]),
         y = d3.scale.linear().range([height - 60, 0]),
         //colors that will reflect geographical regions
-        color = d3.scale.category20b();
+        color = d3.scale.category10();
         
     var svg = d3.select("#chart").append("svg")
         .attr("width", width + margin.left + margin.right)
