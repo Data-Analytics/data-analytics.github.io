@@ -54,7 +54,7 @@ function onRender() {
       .attr("width", function(d) { return x(d.width) - 1; })
       .attr("y", function(d) { return y(d.height); })
       .attr("height", function(d) { return height - y(d.height); })
-      .append('title').text(function(d) {return 'Income : '+d.Income+' ,People: '+d.People });
+      .attr('data-title',function(d) {return 'Income : '+d.Income+' ,People: '+d.People });
 
   svg.append("g")
       .attr("class", "x axis")
@@ -68,5 +68,7 @@ function onRender() {
       .call(d3.svg.axis()
       .scale(y)
       .orient("left"));
-
+      
+   $("rect").tooltip({container: 'body', html: true, placement:'right'});    
+   
 };
