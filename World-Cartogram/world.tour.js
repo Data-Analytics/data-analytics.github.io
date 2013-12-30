@@ -2,8 +2,8 @@ var width = 960,
     height = 480;
 
 queue()
-    .defer(d3.json, "data/world-110m.json")
-    .defer(d3.tsv, "data/world-country-names.tsv")
+    .defer(d3.json, "world-110m.json")
+    .defer(d3.tsv, "world-country-names.tsv")
     .await(ready);
 
 function ready(error, world, names) {
