@@ -46,3 +46,4 @@ Zm Treemap,zoomable_treemap.png,Zoomable-treemap,self,tree map,"Chicago Data Por
 Hex Binning,hex_binning.png,Hex-Binning,self,hexagonal map,eight hundred random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. 
 Hex Binning Area,hex_binning_area.png,Hex-Binning_Area,self,hexagonal map,eight hundred random points with a normal distribution are binned into hexagons; area encodes the number of points that fall into each bin. 
 Contour Plot,contour-plot.png,Contour-Plot,self,heat map,It is a type of heat map were unique color close by is combined together to make a curved link a simililar kind of representation 
+Spermatozoa,spermatozoa.png,Spermatozoa,self,Spermatozoa,the mordern kind of visualisation another kind to visualise the data 
