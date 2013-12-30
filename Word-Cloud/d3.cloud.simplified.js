@@ -43,8 +43,10 @@ cloud = {
             .attr("transform", function(d) {
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
             })
-            .text(function(d) { return d.text; })
-            .append('title').text(function(d) { return d.text+' : '+addThousandsSeparator((d.size*300)*(d.size*300)); });
+            .attr("data-title",function(d) { return d.text+' : '+addThousandsSeparator((d.size*300)*(d.size*300)); })
+            .text(function(d) { return d.text; });
+            
+              $("text").tooltip({container: 'body', html: true, placement:'top'});  
         })
         .start();
     }
