@@ -87,7 +87,6 @@ function onRender() {
       .data(segments)
     .enter().append("g")
       .attr("class", "names")
-      .attr("xlink:title", function(d) { return d.key; })
       .attr("transform", function(d) { return "translate(" + x(d.offset / sum) + ")"; });
 
   // Add a rect for each group.
@@ -98,7 +97,8 @@ function onRender() {
       .attr("y", function(d) { return y(d.offset / d.parent.sum); })
       .attr("height", function(d) { return y(d.value / d.parent.sum); })
       .attr("width", function(d) { return x(d.parent.sum / sum); })
-      .style("fill", function(d) { return z(d.group); })
-      .append("title")
-      .text(function(d) { return d.group + " - " + d.parent.key + ": " + n(d.value); });
+      .attr("data-title", function(d) { return d.group + " - " + d.parent.key + ": " + n(d.value); })
+      .style("fill", function(d) { return z(d.group); });
+      
+      $("rect").tooltip({container: 'body', html: true, placement:'top'});  
 };

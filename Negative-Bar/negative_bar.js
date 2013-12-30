@@ -38,7 +38,7 @@ function onRender() {
       .attr("rx", y.rangeBand()/4)
       .attr("width", function(d) { return Math.abs(x(d.value) - x(0)); })
       .attr("height", y.rangeBand())
-      .append("title").text(function(d) { return d.name+' :'+d.value });
+      .attr("data-title", function(d) { return d.name+' :'+d.value });
 
   svg.append("g")
       .attr("class", "x axis")
@@ -51,6 +51,7 @@ function onRender() {
       .attr("x2", x(0))
       .attr("y2", height);
 
+    $("rect").tooltip({container: 'body', html: true, placement:'top'});   
 };
 
 function type(d) {
