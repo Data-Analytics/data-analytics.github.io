@@ -53,9 +53,9 @@ svg.append("g")
     .attr("class", "hexagon")
     .attr("d", hexbin.hexagon())
     .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-    .style("fill", function(d) { return color(d.length); })
-    .append('title').text(function(d) { return 'value : '+d.length });
-
+    .attr('data-title',function(d) { return 'value : '+d.length })
+    .style("fill", function(d) { return color(d.length); });
+    
 svg.append("g")
     .attr("class", "y axis")
     .call(yAxis);
@@ -64,3 +64,6 @@ svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
     .call(xAxis);
+    
+$("path").tooltip({container: 'body', html: true, placement:'right'});      
+    

@@ -52,7 +52,7 @@ svg.append("g")
     .attr("class", "hexagon")
     .attr("d", function(d) { return hexbin.hexagon(radius(d.length)); })
     .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-    .append('title').text(function(d) { return 'value : '+d.length });
+    .attr('data-title',function(d) { return 'value : '+d.length });
 
 svg.append("g")
     .attr("class", "y axis")
@@ -62,3 +62,5 @@ svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
     .call(xAxis);
+
+$("path").tooltip({container: 'body', html: true, placement:'right'});   
