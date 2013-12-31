@@ -83,9 +83,10 @@ var main = function(corr, label_col, label_row){
           .attr('class', 'pixel')
           .attr('width', scale(0.8))
           .attr('height', scale(0.8))
+          .attr('data-title',function(d){ return "<p class='left'>"+label_row[d.i]+'<br/>'+label_col[d.j]+'<br/>rate :'+d.val+'</p>'; })
           .style('fill',function(d){ return color(d.val);});
-
-
+    
+    $("rect").tooltip({container: 'body', html: true, placement:'top'});  
   tick_col = svg.append('g')
       .attr('class','ticks')
       .attr('transform', 'translate(' + (left_label_space + 10) + ',' + (up_label_space) + ')')
