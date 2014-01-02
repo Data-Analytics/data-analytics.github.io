@@ -438,15 +438,9 @@ Small Device Styles
 }
 
 #banner {
-  z-index: 100;
-  left: 0;
-  right: 50%;
   height: 50px;
-  width:75%;
-  min-width:780px;
-  position: absolute;
-  margin-top:-25px;
-  background: #ffcc00 url(../images/background.jpg);
+  position: relative;
+  background: #ffcc00 url(../images/background.png);
   border: 1px solid #f0b500;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -458,11 +452,10 @@ Small Device Styles
   border-radius: 0px 2px 2px 0px;
 }
 #banner .banner-inner {
-  width: 75%;
   overflow: hidden;
-  float: right;
-  margin-right: 55px;
-}
+  margin-left: 10px;
+  margin-right: 10px;
+  }
 #banner .button {
   border: 1px solid #dba500;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffe788), color-stop(100%, #ffce38));
@@ -512,17 +505,15 @@ Small Device Styles
 #banner .downloads span {
   float: left;
   line-height: 52px;
+  font-weight: bold;
   font-size: 90%;
-  color: #9d7f0d;
   text-transform: uppercase;
-  text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
 }
 #banner .contacts span {
   float: left;
+  font-weight: bold;
   line-height: 52px;
   font-size: 90%;
-  color: #9d7f0d;
-  text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
 }
 #banner ul {
   list-style: none;
