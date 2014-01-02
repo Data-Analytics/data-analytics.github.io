@@ -8,7 +8,6 @@ stylesheets/pin.css
 stylesheets/pygment_trac.css     
 javascripts/d3.v3.min_b.js
 javascripts/google-analyitcs.js
-http://www.google-analytics.com/analytics.js
 visualisation_list.csv
 images/headers.jpg
 images/background.jpg
@@ -62,3 +61,5 @@ images/hex_binning_area.png
 images/contour-plot.png
 images/spermatozoa.png
 
+NETWORK:
+*
