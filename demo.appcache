@@ -7,6 +7,10 @@ stylesheets/style.css
 stylesheets/pin.css 
 stylesheets/pygment_trac.css     
 javascripts/d3.v3.min_b.js
+javascripts/d3.v3.min.js
+javascripts/d3.v2.min.js
+javascripts/jquery.min.js
+javascripts/bootstrap.min.js
 javascripts/google-analyitcs.js
 visualisation_list.csv
 images/headers.jpg

@@ -2,6 +2,7 @@ var width = 960,
     height = 105,
     cellSize = 12; // cell size
     week_days = ['sun','mon','tue','wed','thu','fri','sat']
+    month = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
 var day = d3.time.format("%w"),
     week = d3.time.format("%U"),
     percent = d3.format(".1%"),
@@ -33,7 +34,7 @@ svg.append("text")
     .text(function(d) { return week_days[i]; });
     
  }
- 
+  
 var rect = svg.selectAll(".day")
     .data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
   .enter().append("rect")
