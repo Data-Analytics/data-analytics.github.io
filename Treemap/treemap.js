@@ -42,7 +42,8 @@ function onRender() {
           .call(cell)
           .text(function(d) { return d.values ? null : d.name; });
           
-      
+    $("div.cell").tooltip({container: 'body', html: true, placement:'top'});
+        
       d3.select("#param1").on("click", function() {
         div.selectAll("div")
             .data(treemap.value(function(d) { return d.param1; }))
@@ -66,6 +67,7 @@ function onRender() {
 };
 function cell() {
   this
+      .attr("data-title", function(d) { return d.Group+' :'+d.name+', Param1 :'+d.param1+', Param2 :'+d.param2; })
       .style("left", function(d) { return d.x + "px"; })
       .style("top", function(d) { return d.y + "px"; })
       .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })

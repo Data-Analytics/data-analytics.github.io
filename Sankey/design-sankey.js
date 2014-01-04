@@ -37,11 +37,11 @@
                 .enter().append("path")
                 .attr("class", "link")
                 .attr("d", path)
+                .attr("data-title", function(d) {return d.source.name + " -> " + d.target.name; })
                 .style("stroke-width", function(d) { return Math.max(1, d.dy); })
                 .style("stroke", "#099990")
                 .sort(function(a, b) { return a.dy - b.dy; });
 
-            link.append("title").text(function(d) {return d.source.name + " -> " + d.target.name; });
 
             var node = svg.append("g").selectAll(".node")
                 .data(nodes)
@@ -59,8 +59,7 @@
                 .style("fill", "444444") 
                 .style("stroke", "#000000")
                 .style("stroke-width", "2.5")
-                .append("title")
-                .text(function(d) { return nodeText(d); });
+                .attr("data-title", function(d) { return nodeText(d); });
 
             // Percentage complete
             node.append("rect")
@@ -69,8 +68,7 @@
                 .attr("y", function(d){ return d.dy - completedHeight(d)+1.25;})
                 .attr("x", 1.25)
                 .attr("fill", function(d){ return nodeGradient(d); })
-                .append("title")
-                .text(function(d) { return nodeText(d); });
+                .attr("data-title", function(d) { return nodeText(d); });
             
             node.append("text")
                     .text(function(d){ return d.complete ?  d.complete + "%" : "";})
@@ -92,7 +90,9 @@
                 .filter(function(d) { return d.x < width / 2; })
                 .attr("x", 6 + sankey.nodeWidth())
                 .attr("text-anchor", "start");
-
+             
+             $("rect,path").tooltip({container: 'body', html: true, placement:'top'});
+                          
             function dragmove(d) {
                 d3.select(this).attr("transform", "translate(" + d.x + "," + (d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))) + ")");
                 sankey.relayout();
