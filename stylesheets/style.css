@@ -309,7 +309,7 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background: #24c7ec url('../images/headers.jpg') ;
+    background: #4C4C4C;
 }
 
 
@@ -322,6 +322,11 @@ Full-Width Styles
   color: #fff;
   font-size: 42px;
   font-weight: 700;
+  text-shadow: #111 0px 0px 10px;
+}
+#project_title_p {
+  margin: 0;
+  color: #aaa;
   text-shadow: #111 0px 0px 10px;
 }
 
@@ -443,11 +448,11 @@ Small Device Styles
 #banner {
   height: 50px;
   position: relative;
-  background: #ecec24 url(../images/background.png);
-  border: 1px solid #f0b500;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  background: #4C4C4C url(../images/background.png);
+  border: 1px solid #33000;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
+  box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
   -webkit-border-radius: 0px 2px 2px 0px;
   -moz-border-radius: 0px 2px 2px 0px;
   -ms-border-radius: 0px 2px 2px 0px;
@@ -460,12 +465,12 @@ Small Device Styles
   margin-right: 10px;
   }
 #banner .button {
-  border: 1px solid #dba500;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffe788), color-stop(100%, #ffce38));
-  background: -webkit-linear-gradient(#ffe788, #ffce38);
-  background: -moz-linear-gradient(#ffe788, #ffce38);
-  background: -o-linear-gradient(#ffe788, #ffce38);
-  background: linear-gradient(#ffe788, #ffce38);
+  border: 1px solid #ccc;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33000), color-stop(100%, #ff0000));
+  background: -webkit-linear-gradient(#33000, #ff0000);
+  background: -moz-linear-gradient(#33000, #ff0000);
+  background: -o-linear-gradient(#33000, #ff0000);
+  background: linear-gradient(#33000, #ff0000);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -474,7 +479,7 @@ Small Device Styles
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.1);
-  background-color: #FFE788;
+  background-color: #33000;
   margin-left: 5px;
   padding: 10px 12px;
   margin-top: 6px;
@@ -486,23 +491,27 @@ Small Device Styles
   text-align: center;
 }
 #banner .button:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffe788), color-stop(100%, #ffe788));
-  background: -webkit-linear-gradient(#ffe788, #ffe788);
-  background: -moz-linear-gradient(#ffe788, #ffe788);
-  background: -o-linear-gradient(#ffe788, #ffe788);
-  background: linear-gradient(#ffe788, #ffe788);
-  background-color: #ffeca0;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33000), color-stop(100%, #33000));
+  background: -webkit-linear-gradient(#33000, #33000);
+  background: -moz-linear-gradient(#33000, #33000);
+  background: -o-linear-gradient(#33000, #33000);
+  background: linear-gradient(#33000, #33000);
+  background-color: #B0C4DE;
 }
 #banner .fork {
   padding: 10px 12px;
   margin-top: 6px;
   line-height: 14px;
   font-size: 14px;
-  background-color: #FFE788;
+  background-color: #33000;
   margin-left: 0;
 }
 #banner .contacts,.downloads  {
   float: right;
+  margin: 0;
+}
+#banner .time  {
+  float: left;
   margin: 0;
 }
 #banner .downloads span {
@@ -513,6 +522,12 @@ Small Device Styles
   text-transform: uppercase;
 }
 #banner .contacts span {
+  float: left;
+  font-weight: bold;
+  line-height: 52px;
+  font-size: 90%;
+}
+#banner .time span {
   float: left;
   font-weight: bold;
   line-height: 52px;
@@ -529,7 +544,7 @@ Small Device Styles
   display: inline;
 }
 #banner ul li a.button {
-  background-color: #FFE788;
+  background-color: #33000;
 }
 #banner #logo {
   position: absolute;

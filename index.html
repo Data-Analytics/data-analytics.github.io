@@ -16,6 +16,7 @@
    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/pin.css">      
    <script type="text/javascript" src="javascripts/d3.v3.min_b.js"></script>
    <script type="text/javascript" src="javascripts/google-analyitcs.js"></script>
+   <script type="text/javascript" src="javascripts/date-time.js"></script>
    <title>Data Analytics and Visualisation</title>
  </head>
  <body>
@@ -23,7 +24,7 @@
     <div id="header_wrap" class="outer info">
         <header class="inner">
             <h1 id="project_title">Data Analytics and Visualisation</h1>
-            <p>Visualization is the graphical presentation of information, with the goal 
+            <p id="project_title_p">Visualization is the graphical presentation of information, with the goal 
             of providing the viewer with a qualitative understanding of the information contents.
             which would result in to retrive hidden insights of the data
             D3.js is a JavaScript library for manipulating documents based on data.</p>
@@ -31,6 +32,9 @@
         
       <div id="banner">
         <div class="container">
+            <div class="time">
+                <span><script type="text/javascript">document.write(new Date());</script></span>
+            </div>    
             <div class="contacts">
                 <span>More examples on : <a href="http://d3js.org/" class="link">d3 - data driven documents </a></span>
                 <a href="https://github.com/Sushanthece" class="button">view on github</a>
