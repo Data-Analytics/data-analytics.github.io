@@ -2,14 +2,14 @@ CACHE MANIFEST
 
 CACHE:
 index.html
-stylesheets\bootstrap-responsive.css
-stylesheets\bootstrap-responsive.min.css
-stylesheets\bootstrap.css
-stylesheets\bootstrap.min.css
-stylesheets\main.css
-stylesheets\pin.css
-stylesheets\pygment_trac.css
-stylesheets\style.css    
+css\bootstrap-responsive.css
+css\bootstrap-responsive.min.css
+css\bootstrap.css
+css\bootstrap.min.css
+css\main.css
+css\pin.css
+css\pygment_trac.css
+css\style.css    
 Bivariate-Area\area_chart.js
 Build-Graph\build_graph.js
 Bullet\bullet.js
