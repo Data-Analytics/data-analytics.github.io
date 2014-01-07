@@ -5,7 +5,7 @@ Author: sushanth
 
 created : 10/nov/2012
 
-modified : 02/jan/2014
+modified : 07/jan/2014
 
 *******************************************************************************/
 /*******************************************************************************
@@ -309,7 +309,7 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background: #4C4C4C;
+    background: #4C4C4C url('../images/headers.jpg');
 }
 
 
@@ -405,7 +405,7 @@ Small Device Styles
   }
 
   .inner {
-    min-width: 320px;
+    min-width: 240px;
     max-width: 480px;
   }
 
@@ -446,6 +446,7 @@ Small Device Styles
 }
 
 #banner {
+  color: #ccc;
   height: 50px;
   position: relative;
   background: #4C4C4C url(../images/background.png);
@@ -465,7 +466,8 @@ Small Device Styles
   margin-right: 10px;
   }
 #banner .button {
-  border: 1px solid #ccc;
+  border: 1px solid steelblue;
+  color: #aaa;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33000), color-stop(100%, #ff0000));
   background: -webkit-linear-gradient(#33000, #ff0000);
   background: -moz-linear-gradient(#33000, #ff0000);
@@ -485,7 +487,6 @@ Small Device Styles
   margin-top: 6px;
   line-height: 14px;
   font-size: 14px;
-  color: #333;
   font-weight: bold;
   display: inline-block;
   text-align: center;
@@ -496,7 +497,7 @@ Small Device Styles
   background: -moz-linear-gradient(#33000, #33000);
   background: -o-linear-gradient(#33000, #33000);
   background: linear-gradient(#33000, #33000);
-  background-color: #B0C4DE;
+  background-color: steelblue;
 }
 #banner .fork {
   padding: 10px 12px;
