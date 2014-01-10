@@ -83,6 +83,8 @@ Zipdecode\zipdecode.js
 Zoomable-icicle\zoomable-icicle.js
 Zoomable-Sun_Burst\sun_burst.js
 Zoomable-treemap\zoomable_treemap.js
+Sequences-Sunburst\sequences.js
+Sequences-Sunburst\sequences.css
 visualisation_list.csv
 images/headers.png
 images/background.png
@@ -135,6 +137,9 @@ images/hex_binning.png
 images/hex_binning_area.png
 images/contour-plot.png
 images/spermatozoa.png
+images/sequence-sunburst.png
+
+
 
 NETWORK:
 *
