@@ -99,7 +99,7 @@
     var numInOneScreen = Math.ceil(menu3Width / thumbSize) * Math.ceil(getDocHeight() / thumbSize);
     var numInView = numInOneScreen;
 
-    d3.csv('visualisation_list.csv', function(error, _json){
+    d3.csv('data.csv', function(error, _json){
         json = _json;
         buildList(dataTransformMenu1(), '.menu1-container', data1);
         buildList(dataTransformMenu2('visualizationType'), '.menu2-container', data2);

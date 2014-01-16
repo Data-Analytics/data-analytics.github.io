@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples  
+ Author:      sushanth 
+ Licence:     open-source 
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="data visualisation ,bar chart,grouped bar chart, stacked bar chart,grouped to stack bar chart ">
+    <meta name="author" content="Sushanth">
+    <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <title>Stack to Grouped Bar</title>
+    <style>
+
+    .group-stack {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    .bar {
+      fill: steelblue;
+    }
+
+    </style>
+<body onLoad="onRender()" >
+
+ <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner container">
+              <h1 id="project_title">Stack to Grouped</h1> 
+           </header>
+            <div id="banner">
+            <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-grouped-stacked/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-grouped-stacked/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-grouped-stacked" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+
+        </div>
+        
+<!-- MAIN CONTENT -->
+	<div class="container">
+	  <section id="main_content" class="inner" >   
+<div>
+  <div style="width:25%;float:left;display:inline-block" >
+<textarea id="input_data" name="input_data" rows="20" cols="19">
+State,<17,18-44,>45
+AL,3009,6158,4563
+AR,11274,23660,16307
+CT,1130,2680,1801
+FL,6838,15453,11197
+ID,5177,10989,7748
+IA,2421,5295,3798
+LA,2723,6091,4142
+MA,5072,11676,7898
+MS,2409,5133,3723
+NE,1408,3066,2116
+NJ,6958,16209,10977
+NC,5117,11381,7921
+OK,4536,10528,7441
+RI,1493,3346,2353
+TN,9054,17351,12592
+VT,3493,8195,5304
+WV,1829,4279,2930
+</textarea></br>
+	<button id="group" class="name">group</button>
+	<button id="stacked" class="name">stack</button>
+	<button id="render" class="name" onClick='onRender();'>render</button><br/>
+</div>
+	<div class="group-stack" style="width:72%;float:right;display:inline-block">
+            <script type="text/javascript" src="grouped_stacked.js"></script>
+	</div>
+</div>
+

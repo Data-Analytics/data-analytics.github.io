@@ -8,7 +8,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="data visualisation , heat map chart">
+    <meta name="description" content="data visualisation ,bar chart,negative bar chart">
     <meta name="author" content="Sushanth">
     <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
@@ -17,24 +17,27 @@
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <title>Heat Map</title>
+    <title>Negative Bar</title>
 	<style>
 
-	.label {
-	  font-weight: bold;
-	}
+    .bar.positive {
+      fill: steelblue;
+    }
 
-	.tile {
-	  shape-rendering: crispEdges;
-	}
+    .bar.negative {
+      fill: brown;
+    }
 
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
+    .axis text {
+      font: 10px sans-serif;
+    }
 
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
 	</style>
   </head>
   <body onLoad="onRender();">
@@ -42,16 +45,16 @@
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
             <header class="inner container">
-              <h1 id="project_title">Heat Map</h1> 
+              <h1 id="project_title">Negative Bar</h1> 
            </header>
-            <div id="banner">
-              <div class="container">
+           <div id="banner">
+             <div class="container">
               <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-heatmap/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Negative-Bar/fork" class="button fork"><strong>Fork On GitHub</strong></a>
               <div class="downloads">
                 <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-heatmap/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-heatmap" class="button">view on github</a>
+                  <a href="https://github.com/Sushanthece/D3-Negative-Bar/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Negative-Bar" class="button">view on github</a>
               </div>
             </div>
           </div><!-- end banner -->
@@ -59,36 +62,35 @@
     
   <!-- MAIN CONTENT -->
         <div class="container">
-          <section id="main_content" class="inner">   
+          <section id="main_content" class="inner" >   
 			<div>
 			  <div style="width:25%;float:left;display:inline-block" >
-<textarea id="input_data" name="input_data" rows="20" cols="20">
-date,bucket,count
-2013-05-20,1200,161
-2013-05-20,900,288
-2013-05-20,1100,150
-2013-05-21,800,275
-2013-05-21,900,157
-2013-05-21,1000,158
-2013-05-22,900,162
-2013-05-22,1000,222
-2013-05-22,1200,151
-2013-05-23,800,253
-2013-05-23,900,170
-2013-05-23,1000,296
-2013-05-24,800,280
-2013-05-24,1100,229
-2013-05-24,1000,157
-2013-05-25,1300,161
-2013-05-25,900,258
-2013-05-25,1000,283
+<textarea id="input_data" name="input_data" rows="20" cols="24">
+name,value
+A,52.0
+B,-15.0
+C,-24.0
+D,-7.0
+E,-20.0
+F,72.0
+G,90.0
+I,32.0
+J,79.0
+K,-7.0
+L,32.0
+M,-22.0
+N,43.0
+O,12.0
+P,28.0
+Q,49.0
+R,10.0
 </textarea></br>
 			<button id="render" class="name" onClick='onRender();'>render</button>
-			</div> <div>
-			<div class="heatmap" style="width:72%;float:right;display:inline-block"></div>
-			<script type="text/javascript" src="heatmap.js"></script></div>
+			</div>
+			<div class="negative_bar" style="width:72%;float:right;display:inline-block"></div>
+			<script type="text/javascript" src="negative_bar.js"></script>
 		  </div>
 		</section>
-      </div>
+      </div>      
 </body>
 </html>

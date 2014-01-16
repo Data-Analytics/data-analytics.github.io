@@ -8,41 +8,45 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="data visualisation ,Chord Diagram">
+    <meta name="description" content="data visualisation ,sunburst,coffee wheel">
     <meta name="author" content="Sushanth">
     <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <title>Chord Diagram</title>
+    <title>Coffee Flavour Wheel</title>
     <style>
 
-    .chord-diagram {
-    font: 10px sans-serif;
+    path {
+      stroke: #555;
+      stroke-width: 0.5;
+      cursor: pointer;
     }
 
-    path.chord {
-    fill-opacity: .67;
+    text {
+      font: 8px sans-serif;
+      cursor: pointer;
     }
-
     </style>
   </head>
-<body>
-   <!-- HEADER -->
+  <body>
+
+ <!-- HEADER -->
         <div id="header_wrap" class="outer">
             <header class="inner container">
-              <h1 id="project_title">Chord Diagram</h1> 
+              <h1 id="project_title">Coffee Flavour Wheel</h1> 
            </header>  
             <div id="banner">
              <div class="container">
-              <span id="logo"></span>
               <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-Chord-Diagram/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Coffee-Wheel/fork" class="button fork"><strong>Fork On GitHub</strong></a>
               <div class="downloads">
                 <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-Chord-Diagram/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-Chord-Diagram" class="button">view on github</a>
+                  <a href="https://github.com/Sushanthece/D3-Coffee-Wheel/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Coffee-Wheel" class="button">view on github</a>
               </div>
             </div>
           </div><!-- end banner -->
@@ -51,9 +55,8 @@
 <!-- MAIN CONTENT -->
     <div class="container">
       <section id="main_content" class="inner">
-      
-        <div class="chord-diagram" align="center" >
-		<script type="text/javascript" src="chord.js"></script>
+        <div class="coffee-wheel" align="center">
+		<script type="text/javascript" src="wheel.js"></script>
         </div>
       </section>
     </div>

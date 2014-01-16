@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples  
+ Author:      sushanth 
+ Licence:     open-source 
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="data visualisation , sun burst, sequence sunburst">
+    <meta name="author" content="Sushanth">
+    <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
+    <link rel="stylesheet" type="text/css" href="sequences.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <title>Sequences sunburst</title>  
+  </head>
+  <body>
+
+<!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner container">
+          <h1 id="project_title">Sequences sunburst</h1>
+        </header>
+        <div id="banner">
+            <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Sequences-sunburst/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Sequences-sunburst/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Sequences-sunburst" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>    
+
+  <!-- MAIN CONTENT -->
+    <div class="container">
+      <section id="main_content" class="inner" >   
+        <div>
+          <div id="main">
+            <div id="sequence"></div>
+            <div id="chart">
+              <div id="explanation" style="visibility: hidden;">
+                <span id="percentage"></span><br/>
+                  of visits begin with this sequence of pages
+              </div>
+            </div>
+          </div>
+          <script type="text/javascript" src="sequences.js"></script>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+
+
+

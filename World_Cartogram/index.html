@@ -8,41 +8,40 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="data visualisation ,rainbow worm">
+    <meta name="description" content="data visualisation , cartogram, world cartogram">
     <meta name="author" content="Sushanth">
     <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <title>Rainbow Worm</title>
+    <script type="text/javascript" src="/./javascripts/topojson.js"></script>
+    <script type="text/javascript" src="/./javascripts/queue.v1.min.js"></script>
+    <title>World Tour</title>
   </head>
   <body>
-	<!-- HEADER -->
+    <!-- HEADER -->
         <div id="header_wrap" class="outer">
             <header class="inner container">
-              <h1 id="project_title">Rainbow Worm</h1> 
-           </header>
-           <div id="banner">
-           <div class="container">
+                <h1 id="project_title">World Tour</h1>
+            </header>
+            <div id="banner">
+             <div class="container">
               <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-worm/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <a href="https://github.com/Sushanthece/D3-world-tour/fork" class="button fork"><strong>Fork On GitHub</strong></a>
               <div class="downloads">
                 <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-worm/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-worm" class="button">view on github</a>
+                  <a href="https://github.com/Sushanthece/D3-world-tour/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-world-tour" class="button">view on github</a>
               </div>
             </div>
           </div><!-- end banner -->
+
         </div>
-		
-	<!-- MAIN CONTENT -->
-	   <div class="container">
-          <section id="main_content" class="inner" >   
-            <div class="rainbow" align="center"> 
-			<script type="text/javascript" src="rainbow-worm.js"></script>
-			</div>
-            </section>
-		</div>      
-  </body>
-</html>
+
+<div class="container tour">
+ <br/><br/>
+ <h1 class="country_title" align="center">World Tour</h1>
+<script type="text/javascript" src="world.tour.js"></script>
+</div> 
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples  
+ Author:      sushanth 
+ Licence:     open-source 
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="data visualisation ,sparkline,multi sparkline, multi line chart">
+    <meta name="author" content="Sushanth">
+    <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <title>Multi-Series Line Chart</title>
+	<style>
+
+       . multi-line {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+
+	</style>
+  </head>
+  <body onLoad="onRender();">
+
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner container">
+              <h1 id="project_title">Multi-Series Line Chart</h1> 
+             </header>
+           <div id="banner">
+             <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Multi-Line-Chart/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Multi-Line-Chart/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Multi-Line-Chart" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+        </div>
+    
+  <!-- MAIN CONTENT -->
+        <div class="container">
+          <section id="main_content" class="inner" >   
+			<div>
+			  <div style="width:25%;float:left;display:inline-block" >
+<textarea id="input_data" name="input_data" rows="20" cols="26">
+date,Delhi,Mumbai,Chennai
+20130601,63.4,62.7,72.2
+20130602,58.0,59.9,67.7
+20130603,53.3,59.1,69.4
+20130604,55.7,58.8,68.0
+20130605,64.2,58.7,72.4
+20130606,58.8,57.0,77.0
+20130607,57.9,56.7,82.3
+20130608,61.8,56.8,78.9
+20130609,69.3,56.7,68.8
+20130610,71.2,60.1,68.7
+20130611,68.7,61.1,70.3
+20130612,61.8,61.5,75.3
+20130613,63.0,64.3,76.6
+20130614,66.9,67.1,66.6
+20130615,61.7,64.6,68.0
+20130616,61.8,61.6,70.6
+20130617,62.8,61.1,71.1
+20130618,60.8,59.2,70.0
+</textarea></br>
+			<button id="render" class="name" onClick='onRender();'>render</button>
+			</div>
+			<div class="multi-line" style="width:72%;float:right;display:inline-block"></div>
+			<script type="text/javascript" src="line_series.js"></script>
+		  </div>
+		</section>
+      </div>    
+</body>
+</html>

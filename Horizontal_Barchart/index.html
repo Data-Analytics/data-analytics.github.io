@@ -8,8 +8,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="data visualisation , heat map chart">
     <meta name="author" content="Sushanth">
+    <meta name="description" content="data visualisation ,bar chart,horizontal bar chart">
     <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
@@ -17,41 +17,32 @@
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <title>Heat Map</title>
+    <title>Horizontal Bar</title>
 	<style>
+    .chart rect {
+      fill: steelblue;
+    }
 
-	.label {
-	  font-weight: bold;
-	}
-
-	.tile {
-	  shape-rendering: crispEdges;
-	}
-
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
-
+    .chart text {
+      font: 10px sans-serif;
+    }
 	</style>
-  </head>
+    </head>
   <body onLoad="onRender();">
 
   <!-- HEADER -->
         <div id="header_wrap" class="outer">
             <header class="inner container">
-              <h1 id="project_title">Heat Map</h1> 
+              <h1 id="project_title">Horizontal Bar</h1> 
            </header>
-            <div id="banner">
-              <div class="container">
+           <div id="banner">
+            <div class="container">
               <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-heatmap/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Horizontal-Bar/fork" class="button fork"><strong>Fork On GitHub</strong></a>
               <div class="downloads">
                 <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-heatmap/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-heatmap" class="button">view on github</a>
+                  <a href="https://github.com/Sushanthece/D3-Horizontal-Bar/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Horizontal-Bar" class="button">view on github</a>
               </div>
             </div>
           </div><!-- end banner -->
@@ -59,36 +50,36 @@
     
   <!-- MAIN CONTENT -->
         <div class="container">
-          <section id="main_content" class="inner">   
+          <section id="main_content" class="inner" >   
 			<div>
 			  <div style="width:25%;float:left;display:inline-block" >
-<textarea id="input_data" name="input_data" rows="20" cols="20">
-date,bucket,count
-2013-05-20,1200,161
-2013-05-20,900,288
-2013-05-20,1100,150
-2013-05-21,800,275
-2013-05-21,900,157
-2013-05-21,1000,158
-2013-05-22,900,162
-2013-05-22,1000,222
-2013-05-22,1200,151
-2013-05-23,800,253
-2013-05-23,900,170
-2013-05-23,1000,296
-2013-05-24,800,280
-2013-05-24,1100,229
-2013-05-24,1000,157
-2013-05-25,1300,161
-2013-05-25,900,258
-2013-05-25,1000,283
+<textarea id="input_data" name="input_data" rows="20" cols="24">
+name,value
+Jamie,44
+Claudia,31
+Vanessa,39
+Judy,22
+Kimberly,47
+Wong,44
+Cherilyn,32
+Alicia,33
+lee,46
+Nur,48
+Min,50
+Marcus,20
+Eric,30
+Kenny,46
+Felix,33
+john,25
+Karthik,21
+matthew,45
 </textarea></br>
 			<button id="render" class="name" onClick='onRender();'>render</button>
-			</div> <div>
-			<div class="heatmap" style="width:72%;float:right;display:inline-block"></div>
-			<script type="text/javascript" src="heatmap.js"></script></div>
+			</div>
+			<div class="chart" style="width:72%;float:right;display:inline-block"></div>
+			<script type="text/javascript" src="horizontal_bar.js"></script>
 		  </div>
 		</section>
-      </div>
+      </div>      
 </body>
 </html>
