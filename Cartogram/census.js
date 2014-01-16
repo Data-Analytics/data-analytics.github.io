@@ -1,4 +1,6 @@
-
+var width = 960,
+    height = 420;    
+    
       if (!document.createElementNS) {
         document.getElementsByTagName("form")[0].style.display = "none";
       }
@@ -65,6 +67,11 @@
           .attr("value", function(y) { return y; })
           .text(function(y) { return y; })
 
+    var svg = d3.select("#map-container").append("svg")
+        .attr("width", width)
+        .attr("height", height )
+        .attr("id", 'map')
+        
       var map = d3.select("#map"),
           zoom = d3.behavior.zoom()
             .translate([-50, -22])

@@ -21,7 +21,7 @@ function onRender() {
 
     txt_value = document.getElementById('input_data').value;
     bins = d3.csv.parse(txt_value);
-	
+    
   // Coerce types.
   bins.forEach(function(bin) {
     bin.Income = +bin.Income;
