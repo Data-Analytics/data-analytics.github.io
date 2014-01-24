@@ -1,4 +1,4 @@
-title,thumbnail,url,author,visualizationType,description,
+title,thumbnail,url,author,visualizationType,description
 Bivariate Area,area-series.png,Bivariate-Area,self,area chart,This two-value area chart storing the daily high and low temperature in San Francisco 
 Build Graph,build-graph.png,Build-Graph,self,force layout ,"The nodes you can create by clicking on the free place , andcreate the link by placing 2 or more nodes on the circle ring "
 Bullet,bullet.png,Bullet,self,bullet chart,"This compare a given quantitative measure(such as profit or revenue) against qualitative ranges (e.g., poor, satisfactory, good)"
@@ -29,7 +29,7 @@ Marimekko Bar,marimekko.png,Marimekko-Chart,self,bar chart,"A Marimekko Chart, i
 Multiline,multi-line-chart.png,Multi-Line_Analysis,self,sparkline,"This line chart is constructed storing the daily average temperatures of Chennai, Delhi and Mumbai "
 Negative Bar,negative-bar.png,Negative-Barchart,self,bar chart,The dataset is an array of numbers with both positive and negative values. Use two scales to construct the bar chart
 Nm Stacked Bar,normalized-stacked_bar.png,Normalized-Stacked-Barchart,self,bar chart,This variation of a stacked bar chart shows percentages rather than absolute numbers.
-Rainbow Worm,worm.png,Rainbow-worm,self,experiment,"This psychedelic example, reminiscent of an earthworm, demonstrates the difference between a segmented and unsegmented line. "
+Rainbow Worm,worm.png,Rainbow-worm,self,experiment,"This psychedelic example, reminiscent of an earthworm, demonstrates thedifference between a segmented and unsegmented line. "
 Sankey Diagram,sankey.png,Sankey,self,flow chart,Sankey diagrams visualize the magnitude of flow between nodes in a network. 
 Scatter Plot,Scatter-plot.png,Scatterplot,self,scatter plot,A scatter plot is a type of mathematical diagram using Cartesian coordinates to display values for two variables .
 Seq Sunburst,sequence-sunburst.png,Sequences_Sunburst,self,sun burst,This example shows how it is possible to use a D3 sunburst visualization (partition layout) with data that describes sequences of events.
