@@ -19,6 +19,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/pin.css">      
     <script type="text/javascript" src="javascripts/d3.v3.min_b.js"></script>
     <script type="text/javascript" src="javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="javascripts/twitter-share.js"></script>
     <link rel="shortcut icon" href="images/flower.png">
     <title>Data Analytics and Visualisation</title>
   </head>
@@ -37,7 +40,7 @@
         <div class="container">
             <div class="time">
                 <span><script type="text/javascript">document.write(new Date());</script></span>
-            </div>    
+            </div>
             <div class="contacts">
                 <span>More examples on : <a href="http://d3js.org/" class="link">d3 - data driven documents </a></span>
                 <a href="https://github.com/Sushanthece" class="button">view on github</a>
@@ -55,6 +58,17 @@
         </div>
     </div>
     <div id="list" style="width:75%;float:right;display:inline-block">
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>              
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            <div class="g-plusone" data-size="medium"></div>
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+            <a href="/login?return_to=%2FData-Analytics%2Fdata-analytics.github.io" class="minibutton with-count js-toggler-target star-button tooltipped upwards" rel="nofollow" original-title="You must be signed in to use this feature"></a>
+        </div>
         <div class="menu3-container"></div>
     </div>
     </div>
@@ -80,7 +94,7 @@
         href: function(d, i){return d.url;},
         html: function(d, i){
             var content ='';
-            if(d.thumbnail) content += "<img width='192' height='128'  src='images/"+d.thumbnail+"' class='thumbnail'/>";
+            if(d.thumbnail) content += "<img width='192' height='128'  src='images/"+d.thumbnail+"' class='visual-img  thumbnail'/>";
             content += "<h3 align='left'>"+d.title+"</h3>";
             if(d.description)content += "<p>"+d.description+"<p/>";
             return content;}

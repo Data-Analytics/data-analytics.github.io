@@ -171,7 +171,7 @@ strong {
   font-weight: bold;
 }
 
-img {
+.visual-img {
   position: relative;
   margin: 0 auto;
   max-width: 739px;
