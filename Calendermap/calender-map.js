@@ -50,7 +50,15 @@ svg.selectAll(".month")
     .data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
   .enter().append("path")
     .attr("class", "month")
+    .attr("id", function(d,i){ return month[i] })
     .attr("d", monthPath);
+
+svg.selectAll(".month")
+   .append("text")
+   .attr("class", function(d,i){ return month[i] })
+   .style("text-anchor", "end")
+   .attr("dy", "-.25em")
+   .text(function(d,i){ return month[i] });
 
 d3.csv("data.csv", function(error, csv) {
   var data = d3.nest()

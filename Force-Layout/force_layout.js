@@ -1,6 +1,7 @@
 var width = 680,
-    height = 420;
-	
+    height = 420,
+    fill = d3.scale.category10();
+    
 var force = d3.layout.force()
     .size([width, height]);
 
@@ -9,13 +10,13 @@ function onRender() {
     d3.select("svg")
        .remove();
            
-	var svg = d3.select(".force-layout").append("svg")
-		.attr("width", width)
-		.attr("height", height);
+    var svg = d3.select(".force-layout").append("svg")
+        .attr("width", width)
+        .attr("height", height);
 
     txt_value = document.getElementById('input_data').value;
     links = d3.csv.parse(txt_value);
-	
+    
   var nodesByName = {};
 
   // Create nodes for each unique source and target.
@@ -31,7 +32,8 @@ function onRender() {
   var link = svg.selectAll(".link")
       .data(links)
     .enter().append("line")
-      .attr("class", "link");
+      .attr("class", "link")
+      .attr('stroke', function(d) { return fill(d.value); });
 
   // Create the node circles.
   var node = svg.selectAll(".node")
@@ -40,7 +42,7 @@ function onRender() {
       .attr("class", "node")
       .attr("r", 4)
       .attr("data-title",function(d) { return d.name; })
-	  .call(force.drag);
+      .call(force.drag);
 
   // Start the force layout.
   force

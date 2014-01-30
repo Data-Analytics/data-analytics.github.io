@@ -48,3 +48,4 @@ ZipDecode,zipdecode.png,Zipdecode,self,cartogram,"Ben Fry’s zipdecode, inspire
 Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
 Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
+World Cartogram,world-cartogram.png,World-Cartogram,self,cartogram,The cartogram of the world's languages the size of each country is scaled by the number of languages that are spoken in its territory
