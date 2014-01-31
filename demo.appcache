@@ -55,6 +55,7 @@ images/un-employment.png
 images/voronoi.png
 images/word-cloud.png
 images/world-tour.png
+images/world-cartogram.png
 images/zipdecode.png
 images/zoomable_icicle.png
 images/zoomable-sunburst.png
@@ -86,6 +87,8 @@ javascripts/klass.min.js
 javascripts/queue.v1.min.js
 javascripts/reveal.js
 javascripts/topojson.js
+javascripts/cartogram.js
+javascripts/fisheye.js
 
 
 NETWORK:
