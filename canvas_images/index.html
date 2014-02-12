@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples  
+ Author:      sushanth 
+ Licence:     open-source 
+--------------------------------------------------------------->
+<html>
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="robots" content="noarchive">
+<meta name="viewport" content="width=1100">
+<meta name="hdl" content="Front Row to Fashion Week - Interactive Feature - NYTimes.com">
+<meta name="lp" content="Front Row to Fashion Week - Interactive Feature - NYTimes.com">
+<meta name="dat" content="September 13, 2013">
+<meta name="DISPLAYDATE" content="September 13, 2013">
+<meta name="pdate" content="20130913">
+<meta name="col" content="">
+<meta name="dsk" content="Fashion">
+<meta name="cre" content="By Mike Bostock, Shan Carter and Erik Hinton">
+<meta name="tom" content="interactive_feature">
+<meta name="display-text" content="Interactive Feature">
+<meta name="display-name" content="interactive">
+<meta name="url_thumb" content="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/fashion-75x75.png">
+<meta name="url_thumb_wide" content="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/fashion-190x126.png">
+<meta name="ttl" content="">
+<meta name="des" content="Fashion">
+<meta name="per" content="">
+<meta name="misspelling" content="">
+<meta name="keywords" content="Fashion,FashionWeek,Dresses">
+<meta name="description" content="Of the more than 300 collections shown during New York Fashion Week, here were the ones that created the most buzz.">
+<meta name="MEDIA_TEMPLATE_VERSION" content="200">
+<meta name="asset_id" content="">
+<meta name="CG" content="fashion">
+<meta name="SCG" content="">
+<meta name="PT" content="Multimedia">
+<meta name="PST" content="Interactive">
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Front Row to Fashion Week"/>
+<meta property="og:description" content="Of the more than 300 collections shown during New York Fashion Week, here were the ones that created the most buzz.">
+<meta property="og:url" content="http://www.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/"/>
+<meta property="og:image" content="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/fashion-twittercard.png"/>
+<link rel="image_src" href="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/fashion-twittercard.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="TimesPeople" content="disallow">
+<meta name="twitter:card" value="summary_large_image">
+<meta name="twitter:site" value="@nytimes">
+<meta name="twitter:creator" content="@nytgraphics">
+<meta name="twitter:title" content="Front Row to Fashion Week">
+<meta name="twitter:description" content="Of the more than 300 collections shown during New York Fashion Week, here were the ones that created the most buzz.">
+<meta name="twitter:url" content="http://www.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/">
+<meta name="twitter:image" content="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/fashion-twittercard.png">
+<meta name="twitter:image:width" content="560">
+<meta name="twitter:image:height" content="295">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="data visualisation ,heat map,dual hour heat map">
+<meta name="author" content="Sushanth">
+<meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
+<link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+<script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+<script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+<script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+<script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+<script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+<link rel="shortcut icon" href="/./images/flower.png">
+<title>Front Row to Fashion Week </title>
+<style type="text/css">
+
+h2 {
+  font: 100 42px "nyt-cheltenham", Georgia;
+  color: #fff;
+  padding: 0 0 20px 0;
+  margin: 40px 0;
+  border-bottom: solid 1px #666;
+}
+
+.collection {
+  position: relative;
+  text-align: left;
+  height: 320px;
+  font-family: "nyt-franklin", Arial;
+  position: relative;
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0 0 20px 0;
+}
+
+.collection:last-child {
+  border-bottom: none;
+}
+
+.collection canvas,
+.collection img {
+  border: solid 1px #444;
+  border-top-color: #000;
+  border-bottom-color: #555;
+  background: #000;
+  position: absolute;
+  left: 260px;
+  top: 0;
+}
+
+.collection .description {
+  font-size: 15px;
+  line-height: 1.4em;
+  margin: 0 20px 0 0;
+  width: 220px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.collection .description h3 {
+  display: inline;
+  font-size: 22px;
+  font-weight: 200;
+  margin: 0 0 0 0;
+}
+
+.collection .collection-button {
+  background: #2c2c2c;
+  color: #666;
+  border-radius: 2px;
+  margin: 6px 0;
+  padding: 1px 6px 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-family: Arial;
+}
+
+.annotations {
+  font-family: Arial;
+  position: absolute;
+  left: 255px;
+  top: 225px;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
+.annotations li {
+  position: absolute;
+  top: 10px;
+  margin: 0;
+  list-style-type: none;
+  padding: 10px 0 0 10px;
+}
+
+.annotation {
+  position: relative;
+  font-size: 11px;
+  line-height: 12px;
+  width: 90px;
+  height: 50px;
+}
+
+.annotation-bar {
+  position: absolute;
+  min-width: 1px;
+  left: 11px;
+  right: -1px;
+  top: 0;
+  border-bottom: solid 1px;
+  border-right: solid 1px;
+  border-left: solid 1px;
+  border-color: #666;
+  height: 3px;
+}
+    </style>
+  </head>
+  <body>
+   <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner container">
+              <h1 id="project_title">Front Row to Fashion Week </h1> 
+              <p id="project_title_p">Displays canvas images </p>
+           </header>  
+             <div id="banner">
+             <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Day_Hour-Heat_Map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Day_Hour-Heat_Map/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Day_Hour-Heat_Map" class="button">view on github</a>
+              </div>
+            </div>
+          </div>
+        </div> 
+    <div class="container">
+      <section id="main_content" class="inner">
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>              
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>            
+<div class="graphic">
+  <div class="editor-picks">
+    <div class="collection" data-slug="calvin-klein" data-size="35">
+      <div class="description">
+        <h3>Calvin Klein</h3>
+        <p>A beautiful, innovative collection in which Francisco Costa layered references to urban tribes, ’80s art, handcraft and even, seemingly, radical chicks of the 1920s. It added up to a modern expression of fashion.
+        <p class="related">Read more: <a href="http://runway.blogs.nytimes.com/2013/09/12/calvin-klein-in-full-color/">Calvin Klein in Full Color</a>
+      </div>
+      <ul class="annotations">
+        <li data-range="[0,1]" style="left:0px;width:41px;">
+          <div class="annotation">Sand-colored, orange-accented canvas wrapped into a dress and suit</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[7,7]" style="left:143px;width:20px;">
+          <div class="annotation">A large emerald tweed coat with frayed, pronounced seams</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[15,15]" style="left:307px;width:20px;">
+          <div class="annotation">A boxy black jacket fringed with multicolored confetti strings</div>
+          <div class="annotation-bar"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="collection" data-slug="proenza-schouler" data-size="33">
+      <div class="description">
+        <h3>Proenza Schouler </h3>
+        <p>A challenging collection, inspired by the notion of home and interiors, it nonetheless showed the designers in a simpler vein.
+        <p class="related">Read more: <a href="http://runway.blogs.nytimes.com/2013/09/11/proenza-schouler-pleats-and-prints/">Pleats and Prints</a>
+      </div>
+      <ul class="annotations">
+        <li data-range="[10,13]" style="left:217px;width:87px;">
+          <div class="annotation">Dresses vined with a flossy fiber print</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[14,19]" style="left:304px;width:130px;">
+          <div class="annotation">Loose pants outlined in cream hand-painted strokes</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[20,24]" style="left:435px;width:108px;">
+          <div class="annotation">Long skirts accordioned into fine metallic pleats</div>
+          <div class="annotation-bar"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="collection" data-slug="michael-kors" data-size="54">
+      <div class="description">
+        <h3>Michael Kors</h3>
+        <p>Sometimes fashion is all about timing. His conservative-chic clothes, including navy blazers, cuffed denim shorts and belted full-skirted dresses, sounded an optimistic note.
+        <p class="related">Read more: <a href="http://runway.blogs.nytimes.com/2013/09/11/michael-kors-doesnt-break-a-sweat/">Michael Kors Doesn’t Break a Sweat</a>
+      </div>
+      <ul class="annotations">
+        <li data-range="[0,0]" style="left:0px;width:13px;">
+          <div class="annotation">A woven bag resembling a rolled-up doormat</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[10,10]" style="left:132px;width:13px;">
+          <div class="annotation">A sky blue dress shirt ringed with cloudlike fluffy white fox</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[26,26]" style="left:345px;width:13px;">
+          <div class="annotation">Superwide lounge pants</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[42,42]" style="left:558px;width:13px;">
+          <div class="annotation">A grass-colored bikini was embroidered with white daisies</div>
+          <div class="annotation-bar"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="collection" data-slug="narciso-rodriguez" data-size="34">
+      <div class="description">
+        <h3>Narciso Rodriguez</h3>
+        <p>With new proportions, shorter hemlines and a simplified look, he refreshed his minimalist style. His proposal for layering was also modern — a trim wrap skirt over matching shorts.
+        <p class="related">Read more: <a href="http://runway.blogs.nytimes.com/2013/09/10/narciso-rodriguez-fragments-of-beauty/">Fragments of Beauty</a>
+      </div>
+      <ul class="annotations">
+        <li data-range="[6,8]" style="left:126px;width:63px;">
+          <div class="annotation">Ultra-feminine Jacquards resembling brocades</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[20,21]" style="left:422px;width:42px;">
+          <div class="annotation">The mollusk pink of a seashell's interior</div>
+          <div class="annotation-bar"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="collection" data-slug="oscar-de-la-renta" data-size="51">
+      <div class="description">
+        <h3>Oscar de la Renta</h3>
+        <p>He presented a variety of styles and attitudes in one collection — snooty tweed suits, pretty lace separates, Spanish evening fantasies — but there was no feeling of role-playing. He made glamour seem natural.
+        <p class="related">Read more: <a href="http://www.nytimes.com/2013/09/12/fashion/fashion-review-michael-kors-narciso-rodriguez-oscar-de-la-renta-proenza-schouler.html">Four Collections, Four Successes</a>
+      </div>
+      <ul class="annotations">
+        <li data-range="[0,0]" style="left:0px;width:14px;">
+          <div class="annotation">A lanky, white-lapel coat over a checked wool skirt</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[21,24]" style="left:295px;width:56px;">
+          <div class="annotation">Faille cocktail dresses in birthday-cake pastels</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[34,34]" style="left:478px;width:14px;">
+          <div class="annotation">A ridiculous froth of sorbet pink tulle</div>
+          <div class="annotation-bar"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="collection" data-slug="thom-browne" data-size="40">
+      <div class="description">
+        <h3>Thom Browne</h3>
+        <p>Thom Browne continues to provoke. Ignore the Elizabethan silhouettes and focus on the incredible fabrics and the beautiful effect.
+        <p class="related">Read more: <a href="http://runway.blogs.nytimes.com/2013/09/09/a-contemplation-of-insanity-at-thom-browne/?_r=1">A Contemplation of Insanity at Thom Browne</a>
+      </div>
+      <ul class="annotations">
+        <li data-range="[0,9]" style="left:0px;width:179px;">
+          <div class="annotation">Steampunk nurses in stiff white lace</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[28,28]" style="left:502px;width:17px;">
+          <div class="annotation">White stuffed kittens on a leash of pearls</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[39,39]" style="left:700px;width:17px;">
+          <div class="annotation">Frank Gehry-esque pleated silk constructions</div>
+          <div class="annotation-bar"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="collection" data-slug="altuzarra" data-size="30">
+      <div class="description">
+        <h3>Altuzarra</h3>
+        <p>It was just a skirt and a shirt, but done with sophistication. And he refreshed the idea of the practical, inspiring high fashion.
+        <p class="related">Read more: <a href="http://runway.blogs.nytimes.com/2013/09/07/altuzarras-imaginative-take-on-humble-threads/">Altuzarra’s Imaginative Take on Humble Threads</a>
+      </div>
+      <ul class="annotations">
+        <li data-range="[4,4]" style="left:95px;width:23px;">
+          <div class="annotation">Exceptional one-piece tops creating the illusion of layers</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[8,12]" style="left:191px;width:119px;">
+          <div class="annotation">Enlarged prints of French ticking stripes</div>
+          <div class="annotation-bar"></div>
+        </li>
+        <li data-range="[25,25]" style="left:598px;width:23px;">
+          <div class="annotation">A tuxedo jacket closed by a single strap over a naked bust</div>
+          <div class="annotation-bar"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </section>
+    </div>
+
+<script src="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/lib.js"></script>
+<script>(function() {
+
+var width,
+    height = 225;
+
+var graphic = d3.select(".graphic");
+
+var collection = graphic.selectAll(".collection")
+    .datum(function(d) {
+      return {
+        slug: this.getAttribute("data-slug"),
+        size: this.getAttribute("data-size")
+      };
+    });
+
+var canvas = collection.insert("a", ".description")
+    .attr("href", function(d) { return "http://www.nytimes.com/fashion/runway/" + d.slug + "/spring-2014-rtw/1?fingerprint=true"; })
+  .append("canvas");
+
+var pixelRatio = 1,
+    storeRatio = 1;
+
+if (window.devicePixelRatio >= 2
+    && screen.availWidth >= 1280 // iPad can’t even handle it
+    && canvas.node().getContext("2d").webkitBackingStorePixelRatio !== 2) { // Safari can’t even
+  pixelRatio = 2;
+  storeRatio = 2;
+}
+
+canvas
+    .attr("height", height * storeRatio)
+    .style("height", height + "px");
+
+var description = collection.select(".description"),
+    annotations = collection.select(".annotations");
+
+annotations.selectAll("li")
+    .datum(function() {
+      return {
+        range: JSON.parse(this.getAttribute("data-range"))
+      };
+    });
+
+d3.select(window)
+    .on("scroll", scroll)
+    .on("resize", resize);
+
+d3.select("#fullscreen")
+    .style("display", null)
+    .on("click", function requestFullScreen() {
+      d3.event.preventDefault();
+
+      var element = document.documentElement;
+      if (element.requestFullscreen) element.requestFullscreen();
+      else if (element.mozRequestFullScreen) element.mozRequestFullScreen();
+      else if (element.webkitRequestFullscreen) element.webkitRequestFullscreen();
+
+      function cancelFullScreen() {
+        d3.event.preventDefault();
+        if (document.cancelFullScreen) document.cancelFullScreen();
+        else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+        else if (document.webkitCancelFullScreen) document.webkitCancelFullScreen();
+
+        d3.select(this)
+            .text("View Full Screen")
+            .on("click", requestFullScreen);
+      }
+
+      d3.select(this)
+          .text("Exit Full Screen")
+          .on("click", cancelFullScreen);
+    });
+
+resize();
+
+// Recompute bounding boxes due to reflow.
+function resize() {
+  width = parseInt(graphic.style("width")) - 260;
+
+  annotations
+      .style("width", width + "px");
+
+  collection.select("canvas")
+      .attr("width", width * storeRatio)
+      .style("width", width + "px")
+      .each(function(d) {
+        var context = d.context = this.getContext("2d");
+        context.scale(storeRatio, storeRatio);
+        context.strokeStyle = "rgba(0,0,0,0.8)";
+        if (d.enabled) d.resize();
+      });
+
+  scroll();
+}
+
+// Recompute which canvases are visible in the viewport.
+function scroll() {
+  var dy = innerHeight;
+  if (!canvas
+      .filter(function() {
+        var box = this.getBoundingClientRect();
+        return box.bottom > 0 && box.top < dy;
+      })
+      .each(enableFisheye)
+      .empty()) {
+    canvas = canvas.filter(function(d) { return !d.enabled; });
+  }
+}
+
+function enableFisheye(d) {
+  d.enabled = true;
+
+  var that = this,
+      link = that.parentNode,
+      div = link.parentNode,
+      touchtime;
+
+  var normalWidth = width / d.size,
+      image = new Image,
+      imageWidth = 105,
+      imageHeight = 225,
+      desiredDistortion = 0,
+      desiredFocus,
+      progress = 0,
+      idle = true;
+
+  var x = fisheye()
+      .distortion(0)
+      .extent([0, width]);
+
+  var annotation = d3.select(div).selectAll("li");
+
+  image.src = "http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/assets/thumbs-" + pixelRatio + "/" + d.slug + ".jpg";
+  image.onload = initialize;
+
+  d3.timer(function() {
+    if (progress < 0) return true;
+    var context = d.context;
+    context.clearRect(0, 0, width, 2);
+    context.fillStyle = "#777";
+    context.fillRect(0, 0, ++progress, 2);
+  });
+
+  d.resize = function() {
+    var f = x.focus() / x.extent()[1],
+        d1 = imageWidth / normalWidth - 1,
+        d0 = x.distortion() / d1;
+    normalWidth = width / d.size;
+    x.distortion(d0 * d1).extent([0, width]).focus(f * width);
+    render();
+  };
+
+  function initialize() {
+    progress = -1;
+
+    d3.select(that)
+        .on("mousedown", mousedown)
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseout", mouseout)
+        .on("touchstart", touchstart)
+        .on("touchmove", mousemove)
+        .on("touchend", mouseout);
+
+    render();
+  }
+
+  function render() {
+    annotation
+        .style("left", function(d) { return Math.round(x(d.range[0] * normalWidth)) - 4 + "px"; })
+        .style("width", function(d) { return Math.round(x((d.range[d.range.length - 1] + 1) * normalWidth)) - Math.round(x(d.range[0] * normalWidth)) - 1 + "px"; })
+      .select(".annotation")
+        .style("left", function(d) { return Math.min(0, (width - 90) - (x(d.range[0] * normalWidth) - 4)) + "px"; });
+
+    var context = d.context;
+    context.clearRect(0, 0, width, height);
+
+    for (var i = 0, n = d.size; i < n; ++i) {
+      var x0 = x(i * normalWidth),
+          x1 = x((i + 1) * normalWidth),
+          dx = Math.min(imageWidth, x1 - x0);
+      context.drawImage(image, Math.round((i * imageWidth + (imageWidth - dx) / 2) * pixelRatio), 0, dx * pixelRatio, imageHeight * pixelRatio, x0, 0, dx, height);
+      context.beginPath();
+      context.moveTo(x0, 0);
+      context.lineTo(x0, height);
+      context.stroke();
+    }
+
+    context.strokeRect(0, 0, width, height);
+  }
+
+  function move() {
+    if (idle) d3.timer(function() {
+      var currentDistortion = x.distortion(),
+          currentFocus = currentDistortion ? x.focus() : desiredFocus;
+      idle = Math.abs(desiredDistortion - currentDistortion) < .01 && Math.abs(desiredFocus - currentFocus) < .5;
+      x.distortion(idle ? desiredDistortion : currentDistortion + (desiredDistortion - currentDistortion) * .14);
+      x.focus(idle ? desiredFocus : currentFocus + (desiredFocus - currentFocus) * .14);
+      render();
+      return idle;
+    });
+  }
+
+  function mouseover() {
+    desiredDistortion = imageWidth / normalWidth - 1;
+    mousemove();
+  }
+
+  function mouseout() {
+    desiredDistortion = 0;
+    mousemove();
+  }
+
+  function mousemove() {
+    desiredFocus = Math.max(0, Math.min(width - 1e-6, d3.mouse(that)[0]));
+    move();
+  }
+
+  function mousedown() {
+    var m = Math.max(0, Math.min(width - 1e-6, d3.mouse(that)[0]));
+    for (var i = 0, n = d.size; i < n && x(i * normalWidth) < m; ++i);
+    link.href = "http://www.nytimes.com/fashion/runway/" + d.slug + "/spring-2014-rtw/" + i + "?fingerprint=true";
+  }
+
+  function touchstart() {
+    d3.event.preventDefault();
+    mouseover();
+    if (d3.event.touches.length === 1) {
+      var now = Date.now();
+      if (now - touchtime < 500) mousedown(), link.click();
+      touchtime = now;
+    }
+  }
+}
+
+function fisheye() {
+  var min = 0,
+      max = 1,
+      distortion = 3,
+      focus = 0;
+
+  function G(x) {
+    return (distortion + 1) * x / (distortion * x + 1);
+  }
+
+  function fisheye(x) {
+    var Dmax_x = (x < focus ? min : max) - focus,
+        Dnorm_x = x - focus;
+    return G(Dnorm_x / Dmax_x) * Dmax_x + focus;
+  }
+
+  fisheye.extent = function(_) {
+    if (!arguments.length) return [min, max];
+    min = +_[0], max = +_[1];
+    return fisheye;
+  };
+
+  fisheye.distortion = function(_) {
+    if (!arguments.length) return distortion;
+    distortion = +_;
+    return fisheye;
+  };
+
+  fisheye.focus = function(_) {
+    if (!arguments.length) return focus;
+    focus = +_;
+    return fisheye;
+  };
+
+  return fisheye;
+}
+
+})();</script>
+
+
+  </body>
+</html>
+
