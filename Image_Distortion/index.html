@@ -1,7 +1,14 @@
 <!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples  
+ Author:      sushanth 
+ Licence:     open-source 
+--------------------------------------------------------------->
+<html>
+  <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<title>Front Row to Fashion Week - Interactive Feature - NYTimes.com</title>
 <meta name="robots" content="noarchive">
 <meta name="viewport" content="width=1100">
 <meta name="hdl" content="Front Row to Fashion Week - Interactive Feature - NYTimes.com">
@@ -46,6 +53,21 @@
 <meta name="twitter:image" content="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/fashion-twittercard.png">
 <meta name="twitter:image:width" content="560">
 <meta name="twitter:image:height" content="295">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="data visualisation ,heat map,dual hour heat map">
+<meta name="author" content="Sushanth">
+<meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
+<link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+<script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+<script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+<script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+<script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+<script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+<link rel="shortcut icon" href="/./images/flower.png">
+<title>Front Row to Fashion Week </title>
 <style type="text/css">
 
 h2 {
@@ -149,10 +171,45 @@ h2 {
   border-color: #666;
   height: 3px;
 }
-
-
-</style>
-
+    </style>
+  </head>
+  <body>
+   <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner container">
+              <h1 id="project_title">Front Row to Fashion Week </h1> 
+              <p id="project_title_p">Here were the ones that created the most buzz and left the biggest impressions on 
+              fashion editors of fashion shows in London</p>
+           </header>  
+             <div id="banner">
+             <div class="container">
+             
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Image_distortion/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Image_distortion/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Image_distortion" class="button">view on github</a>
+              </div>
+            </div>
+          </div>
+        </div> 
+    <div class="container">
+      <section id="main_content" class="inner">
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>              
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>            
 <div class="graphic">
   <div class="editor-picks">
     <div class="collection" data-slug="calvin-klein" data-size="35">
@@ -304,8 +361,8 @@ h2 {
     </div>
   </div>
 </div>
-
-
+      </section>
+    </div>
 
 <script src="http://graphics8.nytimes.com/newsgraphics/2013/09/13/fashion-week-editors-picks/e2e355157a66c53141657c4af5431fed6add83f7/lib.js"></script>
 <script>(function() {
@@ -583,5 +640,6 @@ function fisheye() {
 })();</script>
 
 
-
+  </body>
+</html>
 
