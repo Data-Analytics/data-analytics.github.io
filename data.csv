@@ -50,3 +50,4 @@ Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design comm
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
 World Cartogram,world-cartogram.png,World_Cartogram,self,cartogram,The cartogram of the world's languages the size of each country is scaled by the number of languages that are spoken in its territory
 Image Distortion,image_distortion.png,Image_Distortion,self,distortion,Here were the ones that created the most buzz and left the biggest impressions on fashion editors of fashion shows in London
+Force Directed Layout,force-directed.png,Force_Directed-Layout,self,force layout ,A flexible force-directed graph layout denoting flight connectivity between places in india 
