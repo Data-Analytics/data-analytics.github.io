@@ -1,44 +1,44 @@
-name,group
-Agartala (IXA),0
-Ahmedabad (AMD),1
-Amritsar (ATQ),2
-Aurangabad (IXU),3
-Bagdogra (IXB),4
-Belgaum (IXG),5
-Bengaluru (BLR),5
-Bhopal (BHO),6
-Chandigarh (IXC),7
-Chennai (MAA),8
-Coimbatore (CJB),8
-Dehradun (DED),9
-Delhi (DEL),10
-Dharamshala (DHM),11
-Goa (GOI),12
-Guwahati (GAU),13
-Hubli (HBX),5
-Hyderabad (HYD),14
-Indore (IDR),6
-Jabalpur (JLR),6
-Jaipur (JAI),15
-Jammu (IXJ),16
-Khajuraho (HJR),6
-Kochi (COK),17
-Kolkata (CCU),4
-Kozhikode (CCJ),17
-Lucknow (LKO),18
-Madurai (IXM),8
-Mangalore (IXE),5
-Mumbai (BOM),3
-Mysore (MYQ),5
-Port Blair (IXZ),19
-Pune (PNQ),3
-Rajahmundry (RJA),14
-Srinagar (SXR),16
-Surat (STV),1
-Thiruvananthapuram (TRV),17
-Tirupati (TIR),14
-Tuticorin (TCR),8
-Udaipur (UDR),15
-Varanasi (VNS),18
-Vijayawada (VGA),14
-Vishakhapatnam (VTZ),14
+name,group,url
+Agartala (IXA),0,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Agartala (IXA)
+Ahmedabad (AMD),1,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Ahmedabad (AMD)
+Amritsar (ATQ),2,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Amritsar (ATQ)
+Aurangabad (IXU),3,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Aurangabad (IXU)
+Bagdogra (IXB),4,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Bagdogra (IXB)
+Belgaum (IXG),5,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Belgaum (IXG)
+Bengaluru (BLR),5,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Bengaluru (BLR)
+Bhopal (BHO),6,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Bhopal (BHO)
+Chandigarh (IXC),7,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Chandigarh (IXC)
+Chennai (MAA),8,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Chennai (MAA)
+Coimbatore (CJB),8,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Coimbatore (CJB)
+Dehradun (DED),9,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Dehradun (DED)
+Delhi (DEL),10,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Delhi (DEL)
+Dharamshala (DHM),11,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Dharamshala (DHM)
+Goa (GOI),12,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Goa (GOI)
+Guwahati (GAU),13,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Guwahati (GAU)
+Hubli (HBX),5,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Hubli (HBX)
+Hyderabad (HYD),14,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Hyderabad (HYD)
+Indore (IDR),6,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Indore (IDR)
+Jabalpur (JLR),6,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Jabalpur (JLR)
+Jaipur (JAI),15,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Jaipur (JAI)
+Jammu (IXJ),16,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Jammu (IXJ)
+Khajuraho (HJR),6,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Khajuraho (HJR)
+Kochi (COK),17,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Kochi (COK)
+Kolkata (CCU),4,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Kolkata (CCU)
+Kozhikode (CCJ),17,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Kozhikode (CCJ)
+Lucknow (LKO),18,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Lucknow (LKO)
+Madurai (IXM),8,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Madurai (IXM)
+Mangalore (IXE),5,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Mangalore (IXE)
+Mumbai (BOM),3,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Mumbai (BOM)
+Mysore (MYQ),5,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Mysore (MYQ)
+Port Blair (IXZ),19,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Port Blair (IXZ)
+Pune (PNQ),3,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Pune (PNQ)
+Rajahmundry (RJA),14,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Rajahmundry (RJA)
+Srinagar (SXR),16,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Srinagar (SXR)
+Surat (STV),1,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Surat (STV)
+Thiruvananthapuram (TRV),17,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Thiruvananthapuram (TRV)
+Tirupati (TIR),14,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Tirupati (TIR)
+Tuticorin (TCR),8,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Tuticorin (TCR)
+Udaipur (UDR),15,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Udaipur (UDR)
+Varanasi (VNS),18,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Varanasi (VNS)
+Vijayawada (VGA),14,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Vijayawada (VGA)
+Vishakhapatnam (VTZ),14,https://www.google.co.in/?gfe_rd=ctrl&ei=hNQFU4WcGK7O8gfw7IGQBw&gws_rd=cr#q=Vishakhapatnam (VTZ)

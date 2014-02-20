@@ -13,8 +13,10 @@ var force = d3.layout.force()
 
 var svg = d3.select(".force-layout").append("svg")
     .attr("width", width)
-    .attr("height", height);
-
+    .attr("height", height)
+    .attr("xmlns", 'http://www.w3.org/2000/svg')
+    .attr("xlink", 'http://www.w3.org/1999/xlink')
+    .attr("version", '1.1');
     
 d3.csv("node.csv", function(error, nodes) {
     d3.csv("link.csv", function(error, links) {    
@@ -37,7 +39,10 @@ d3.csv("node.csv", function(error, nodes) {
 
   var node = svg.selectAll("circle")
           .data(nodes)
-        .enter().append("circle")
+        .enter().append("a")
+        .attr("xlink:href",function(d) { return d.url } )
+        .attr("target","_blank")
+        .append("circle")
           .attr("r", radius*1.5)
           .style("fill", function(d) { return fill(d.group) } )
           .style("stroke", function(d) { return d3.rgb(fill(d.group)).darker(); })
