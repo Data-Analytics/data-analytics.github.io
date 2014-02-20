@@ -37,15 +37,7 @@
     }
 
      #footer {
-      position: absolute;
-      top: 0;
-      top: 980px;
-      right: 140px;
-      z-index: 1;
-      display: block;
-      font-size: 36px;
-      font-weight: 300;
-      text-shadow: 0 1px 0 #fff;
+      display: hidden;
     }
     </style>
   </head>
@@ -71,16 +63,6 @@
           </div><!-- end banner -->
     </div>    
 
-    <div id="body">
-      <div id="footer">
-        d3.layout.treemap
-        <div class="hint">click or option-click to descend or ascend</div>
-        <div><select>
-          <option value="size">Size</option>
-          <option value="count">Count</option>
-        </select></div>
-      </div>
-    </div>
       <!-- MAIN CONTENT -->
       <div class="container"> 
         <section id="main_content" class="inner">
@@ -99,9 +81,17 @@
                 <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
                 <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
             </div>
-            <p id="chart">
+              <div class="form-inline">
+                Based on  
+                <select>
+                  <option value="size">Size</option>
+                  <option value="count">Count</option>
+                </select>
+              </div>
+    
+            <div class="chart">
             <script type="text/javascript" src="zoomable_treemap.js"></script>
-            </p>
+            </div>
           </div>
         </section>
       </div>

@@ -12,14 +12,11 @@ var treemap = d3.layout.treemap()
     .sticky(true)
     .value(function(d) { return d.size; });
 
-var svg = d3.select("#chart").append("div")
-    .attr("class", "chart")
-    .style("width", width + "px")
-    .style("height", height + "px")
-  .append("svg:svg")
+var svg = d3.select(".chart")
+    .append("svg:svg")
     .attr("width", width)
     .attr("height", height)
-  .append("svg:g")
+    .append("svg:g")
     .attr("transform", "translate(.5,.5)");
 
 d3.json("flare.json", function(data) {
