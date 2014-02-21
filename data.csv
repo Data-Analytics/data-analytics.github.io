@@ -51,3 +51,4 @@ Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped 
 World Cartogram,world-cartogram.png,World_Cartogram,self,cartogram,The cartogram of the world's languages the size of each country is scaled by the number of languages that are spoken in its territory
 Image Distortion,image_distortion.png,Image_Distortion,self,distortion,Here were the ones that created the most buzz and left the biggest impressions on fashion editors of fashion shows in London
 Force Directed Layout,force-directed.png,Force_Directed-Layout,self,force layout ,A flexible force-directed graph layout denoting flight connectivity between places in india 
+Bubble Chart,bubble_chart.png,Bubble_Chart,self,bubble chart ,"Bubble charts encode data in the area of circles. Although less perceptually-accurate than bar charts, they can pack hundreds of values into a small space."
