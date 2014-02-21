@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples  
+ Author:      sushanth 
+ Licence:     open-source 
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="data visualisation , highcharts">
+    <meta name="author" content="Sushanth">
+    <meta name="keywords" content="data-visualisation,data-analytics,javascript,highcharts.js">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/pin.css">      
+    <script type="text/javascript" src="/./js/jquery.min.js"></script>
+    <script type="text/javascript" src="/./js/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./js/facebook_link.js"></script>
+    <script type="text/javascript" src="/./js/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./js/twitter-share.js"></script>     
+    <link rel="shortcut icon" href="/./graphics/favicon.ico">    
+    <title>Highstock Example</title>
+
+        <script type="text/javascript">
+$(function() {
+    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+
+        // Create the chart
+        $('#container').highcharts('StockChart', {
+            
+
+            rangeSelector : {
+                selected : 1
+            },
+
+            title : {
+                text : 'AAPL Stock Price'
+            },
+
+            series : [{
+                name : 'AAPL Stock Price',
+                data : data,
+                type : 'area',
+                threshold : null,
+                tooltip : {
+                    valueDecimals : 2
+                },
+                fillColor : {
+                    linearGradient : {
+                        x1: 0, 
+                        y1: 0, 
+                        x2: 0, 
+                        y2: 1
+                    },
+                    stops : [[0, Highcharts.getOptions().colors[0]], [1, 'rgba(0,0,0,0)']]
+                }
+            }]
+        });
+    });
+});
+
+        </script>
+    </head>
+    <body>
+<script src="../..//./js/highstock.js"></script>
+<script src="../..//./js/modules/exporting.js"></script>
+   <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner container">
+           <h1 id="project_title">Highstock Examples</h1>
+           <p id="project_title_p">The different kind of charts are visualised</p> 
+        </header>  
+      <div id="banner">
+        <div class="container">
+           <div class="time">
+              <span><script type="text/javascript">document.write(new Date());</script></span>
+           </div>
+           <div class="contacts">
+              <span>More examples on : <a href="http://shop.highsoft.com/" class="link">High Charts and high Stocks</a></span>
+              <a href="https://github.com/Sushanthece" class="button">view on github</a>
+           </div>
+        </div>
+      </div><!-- end banner -->
+    </div>
+     <br/><br/>
+
+<div id="container" style="height: 500px; min-width: 310px"></div>
+    </body>
+</html>
