@@ -171,6 +171,11 @@ strong {
   font-weight: bold;
 }
 
+.img-circle{
+    border-radius: 50%;
+    display: block;
+}
+
 .visual-img {
   position: relative;
   margin: 0 auto;
