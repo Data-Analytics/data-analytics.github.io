@@ -1,30 +1,30 @@
 title,thumbnail,url,author,visualizationType
-Single line series,basic-line.png,examples/basic-line/index.htm,self,General
-Two panes & candlestick,candlestick-and-volume.png,examples/candlestick-and-volume/index.htm,self,General
-Compare multiple series,compare.png,examples/compare/index.htm,self,General
-Data grouping,data-grouping.png,examples/data-grouping/index.htm,self,General
-async loading with points,lazy-loading.png,examples/lazy-loading/index.htm,self,General
-Intraday area,intraday-area.png,examples/intraday-area/index.htm,self,General
-Intraday candlestick,intraday-candlestick.png,examples/intraday-candlestick/index.htm,self,General
-Flags marking events,flags-general.png,examples/flags-general/index.htm,self,General
-Dynamically updated data,dynamic-update.png,examples/dynamic-update/index.htm,self,General
-Line with markers &shadow,line-markers.png,examples/line-markers/index.htm,self,Chart types
-Spline,spline.png,examples/spline/index.htm,self,Chart types
-Step line,step-line.png,examples/step-line/index.htm,self,Chart types
-Area,area.png,examples/area/index.htm,self,Chart types
-Area spline,areaspline.png,examples/areaspline/index.htm,self,Chart types
-Area range,arearange.png,examples/arearange/index.htm,self,Chart types
-Area spline range,areasplinerange.png,examples/areasplinerange/index.htm,self,Chart types
-Candlestick,candlestick.png,examples/candlestick/index.htm,self,Chart types
-OHLC,ohlc.png,examples/ohlc/index.htm,self,Chart types
-Column,column.png,examples/column/index.htm,self,Chart types
-Column range,columnrange.png,examples/columnrange/index.htm,self,Chart types
-Point markers only,markers-only.png,examples/markers-only/index.htm,self,Chart types
-Plot lines on Y axis,yaxis-plotlines.png,examples/yaxis-plotlines/index.htm,self,Various features
-Plot bands on Y axis,yaxis-plotbands.png,examples/yaxis-plotbands/index.htm,self,Various features
-Reversed Y axis,yaxis-reversed.png,examples/yaxis-reversed/index.htm,self,Various features
-Styled scrollbar,styled-scrollbar.png,examples/styled-scrollbar/index.htm,self,Various features
-Disabled scrollbar,scrollbar-disabled.png,examples/scrollbar-disabled/index.htm,self,Various features
-Disabled navigator,navigator-disabled.png,examples/navigator-disabled/index.htm,self,Various features
-Flags placement,flags-placement.png,examples/flags-placement/index.htm,self,Flags
-Flags shapes and colors,flags-shapes.png,examples/flags-shapes/index.htm,self,Flags
+Single line series,basic-line.png,examples/basic-line/,self,General
+Two panes & candlestick,candlestick-and-volume.png,examples/candlestick-and-volume/,self,General
+Compare multiple series,compare.png,examples/compare/,self,General
+Data grouping,data-grouping.png,examples/data-grouping/,self,General
+async loading with points,lazy-loading.png,examples/lazy-loading/,self,General
+Intraday area,intraday-area.png,examples/intraday-area/,self,General
+Intraday candlestick,intraday-candlestick.png,examples/intraday-candlestick/,self,General
+Flags marking events,flags-general.png,examples/flags-general/,self,General
+Dynamically updated data,dynamic-update.png,examples/dynamic-update/,self,General
+Line with markers &shadow,line-markers.png,examples/line-markers/,self,Chart types
+Spline,spline.png,examples/spline/,self,Chart types
+Step line,step-line.png,examples/step-line/,self,Chart types
+Area,area.png,examples/area/,self,Chart types
+Area spline,areaspline.png,examples/areaspline/,self,Chart types
+Area range,arearange.png,examples/arearange/,self,Chart types
+Area spline range,areasplinerange.png,examples/areasplinerange/,self,Chart types
+Candlestick,candlestick.png,examples/candlestick/,self,Chart types
+OHLC,ohlc.png,examples/ohlc/,self,Chart types
+Column,column.png,examples/column/,self,Chart types
+Column range,columnrange.png,examples/columnrange/,self,Chart types
+Point markers only,markers-only.png,examples/markers-only/,self,Chart types
+Plot lines on Y axis,yaxis-plotlines.png,examples/yaxis-plotlines/,self,Various features
+Plot bands on Y axis,yaxis-plotbands.png,examples/yaxis-plotbands/,self,Various features
+Reversed Y axis,yaxis-reversed.png,examples/yaxis-reversed/,self,Various features
+Styled scrollbar,styled-scrollbar.png,examples/styled-scrollbar/,self,Various features
+Disabled scrollbar,scrollbar-disabled.png,examples/scrollbar-disabled/,self,Various features
+Disabled navigator,navigator-disabled.png,examples/navigator-disabled/,self,Various features
+Flags placement,flags-placement.png,examples/flags-placement/,self,Flags
+Flags shapes and colors,flags-shapes.png,examples/flags-shapes/,self,Flags
