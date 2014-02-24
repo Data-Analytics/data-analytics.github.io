@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples  
+ Author:      sushanth 
+ Licence:     open-source 
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="data visualisation , highcharts">
+    <meta name="author" content="Sushanth">
+    <meta name="keywords" content="data-visualisation,data-analytics,javascript,highcharts.js">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/pin.css">      
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>     
+    <link rel="shortcut icon" href="/./graphics/favicon.ico">    
+    <title>Highstock Example</title>
+
+        <script type="text/javascript">
+$(function() {
+    $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=usdeur.json&callback=?', function(data) {
+
+        // Create the chart
+        $('#container').highcharts('StockChart', {
+            
+
+            rangeSelector : {
+                selected : 1
+            },
+
+            title : {
+                text : 'USD to EUR exchange rate'
+            },
+            
+            tooltip: {
+                style: {
+                    width: '200px'
+                },
+                valueDecimals: 4
+            },
+            
+            yAxis : {
+                title : {
+                    text : 'Exchange rate'
+                }
+            },
+
+            series : [{
+                name : 'USD to EUR',
+                data : data,
+                id : 'dataseries'
+            },
+            // the event marker flags
+            {
+                type : 'flags',
+                data : [{
+                    x : Date.UTC(2011, 3, 25),
+                    title : 'H',
+                    text : 'Euro Contained by Channel Resistance'
+                }, {
+                    x : Date.UTC(2011, 3, 28),
+                    title : 'G',
+                    text : 'EURUSD: Bulls Clear Path to 1.50 Figure'
+                }, {
+                    x : Date.UTC(2011, 4, 4),
+                    title : 'F',
+                    text : 'EURUSD: Rate Decision to End Standstill'
+                }, {
+                    x : Date.UTC(2011, 4, 5),
+                    title : 'E',
+                    text : 'EURUSD: Enter Short on Channel Break'
+                }, {
+                    x : Date.UTC(2011, 4, 6),
+                    title : 'D',
+                    text : 'Forex: U.S. Non-Farm Payrolls Expand 244K, U.S. Dollar Rally Cut Short By Risk Appetite'
+                }, {
+                    x : Date.UTC(2011, 4, 6),
+                    title : 'C',
+                    text : 'US Dollar: Is This the Long-Awaited Recovery or a Temporary Bounce?'
+                }, {
+                    x : Date.UTC(2011, 4, 9),
+                    title : 'B',
+                    text : 'EURUSD: Bearish Trend Change on Tap?'
+                }],
+                onSeries : 'dataseries',
+                shape : 'circlepin',
+                width : 16
+            }]
+        });
+    });
+});
+
+        </script>
+    </head>
+    <body>
+<script src="../..//./javascripts/highstock.js"></script>
+<script src="../..//./javascripts/modules/exporting.js"></script>
+   <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner container">
+           <h1 id="project_title">Highstock Examples</h1>
+           <p id="project_title_p">The different kind of charts are visualised</p> 
+        </header>  
+      <div id="banner">
+        <div class="container">
+           <a href="../..//./home.html" class="button">home</a>           
+           <div class="time">
+              <span><script type="text/javascript">document.write(new Date());</script></span>
+           </div>
+           <div class="contacts">
+              <span>More examples on : <a href="http://shop.highsoft.com/" class="link">High Charts</a></span>
+              <a href="https://github.com/Sushanthece" class="button">view on github</a>
+           </div>
+        </div>
+      </div><!-- end banner -->
+    </div>
+     <br/><br/>
+    <div class="inner head">            
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>              
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com//./javascripts/pinit.js"></script>
+        </div>
+
+    </div>
+    </div>
+
+<div id="container" style="height: 500px; min-width: 500px"></div>
+    </body>
+</html>
