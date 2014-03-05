@@ -40,7 +40,8 @@ cloud = {
             .data(words)
             .enter().append("a")
             .attr("xlink:href",function(d) { return 'http://en.wikipedia.org/wiki/'+d.text } )
-            .attr("target","_blank")
+           .attr("class","word_cloud") 
+           .attr("target","_blank")
             .append("text")
             .style("font-size", function(d) { return d.size + "px"; })
             .style("font-family", options.font)
@@ -56,6 +57,3 @@ cloud = {
         })
         .start();
     }
-    
-}
-

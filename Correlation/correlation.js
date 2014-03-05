@@ -81,9 +81,11 @@ var main = function(corr, label_col, label_row){
   pixel.enter()
       .append('rect')
           .attr('class', 'pixel')
-          .attr('width', scale(0.8))
-          .attr('height', scale(0.8))
+          .attr('width', scale(0.9))
+          .attr('height', scale(0.9))
+          .attr('rx', scale(0.2))
           .attr('data-title',function(d){ return "<p class='left'>"+label_row[d.i]+'<br/>'+label_col[d.j]+'<br/>rate :'+d.val+'</p>'; })
+          .style('stroke',function(d){ return d3.rgb(color(d.val)).darker();})
           .style('fill',function(d){ return color(d.val);});
     
     $("rect").tooltip({container: 'body', html: true, placement:'top'});  
