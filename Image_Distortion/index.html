@@ -381,6 +381,7 @@ var collection = graphic.selectAll(".collection")
     });
 
 var canvas = collection.insert("a", ".description")
+    .attr("target","_blank")
     .attr("href", function(d) { return "http://www.nytimes.com/fashion/runway/" + d.slug + "/spring-2014-rtw/1?fingerprint=true"; })
   .append("canvas");
 
