@@ -18,8 +18,8 @@ var xStep = 864e5,
     yStep = 100;
     
     d3.select("svg")
-		.remove();
-	   
+        .remove();
+       
     var svg = d3.select(".heatmap").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -29,7 +29,7 @@ var xStep = 864e5,
     txt_value = document.getElementById('input_data').value;
     buckets = d3.csv.parse(txt_value);
     
-	
+    
   // Coerce the CSV data to the appropriate types.
   buckets.forEach(function(d) {
     d.date = parseDate(d.date);
