@@ -4,11 +4,9 @@ var treemap = function(data, conf) {
        height = 420,
        root;  
 
-  //Color scale define
-  // var colorScale = d3.scale.category20c();
    var amount = d3.extent(_.pluck(data, conf['color']));
 
-  //Custom color scale
+
   var colorScale = d3.scale.linear()
   .clamp(true)
   .domain([amount[0],(amount[0] + amount[1]) / 2 ,amount[1]])
@@ -98,7 +96,7 @@ $(document).ready(function() {
 
   d3.csv('Parking_data.csv', function(data) {
     localStorage.setItem('data', JSON.stringify(data));
-    treemap(data, {head: 'location1', size: 'set_fine_amount'});
+    treemap(data, {head: 'location1', size: 'set_fine_amount', color: 'time_of_infraction'});
 
     var columns = d3.keys(data[0]);
     d3.select('.metric-dropdown').selectAll('li')
