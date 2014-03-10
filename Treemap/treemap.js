@@ -9,6 +9,7 @@ function onRender() {
     
     txt_value = document.getElementById('input_data').value;
     csv_txt = d3.csv.parse(txt_value);    
+    
     data_root = {"key":"treemap"};
     
     csv_txt.forEach(function(o) {
