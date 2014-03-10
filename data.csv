@@ -53,13 +53,3 @@ ZipDecode,zipdecode.png,Zipdecode,self,cartogram,"Ben Fry’s zipdecode, inspire
 Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
 Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
-Line,line.png,Line,self,sparkline,sparkline
-Scatter,scatter.png,Scatter,self,scatter plot,scatter plot
-Stacked Area,stackedarea.png,Stacked_Area,self,area chart,area chart
-Discrete Bar,discretebar.png,Discrete_Bar,self,bar chart,bar chart
-Multi Bar,stackedbar.png,Multi_Bar,self,bar chart,bar chart
-Multi Bar Horizontal,horizontalbar.png,Multi_Bar_Horizontal,self,bar chart,bar chart
-Line Plus Bar,lineplusbar.png,Line_Plus_Bar,self,bar chart,bar chart
-Cumulative Line,cumulativeline.png,Cumulative_Line,self,sparkline,sparkline
-Line With Focus,linewithfocus.png,Line_With_Focus,self,sparkline,sparkline
-Pie,pie.png,Pie,self,pie chart,pie chart
