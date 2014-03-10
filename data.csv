@@ -53,13 +53,14 @@ ZipDecode,zipdecode.png,Zipdecode,self,cartogram,"Ben Fry’s zipdecode, inspire
 Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
 Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
-Line,line.png,Line,self,sparkline,sparkline
+Line,line.png,Line,self,sparkline,"basic Line Chart analysing sine and cosine waves, were we could analyse other parameters as well "
 Scatter,scatter.png,Scatter,self,scatter plot,"This scatterplot is constructed from a random , denoting different groups in different colors and shapes respectively"
-Stacked Area,stackedarea.png,Stacked_Area,self,area chart,area chart
-Discrete Bar,discretebar.png,Discrete_Bar,self,bar chart,bar chart
-Multi Bar,stackedbar.png,Multi_Bar,self,bar chart,bar chart
-Multi Bar Horizontal,horizontalbar.png,Multi_Bar_Horizontal,self,bar chart,bar chart
-Line Plus Bar,lineplusbar.png,Line_Plus_Bar,self,bar chart,bar chart
-Cumulative Line,cumulativeline.png,Cumulative_Line,self,sparkline,sparkline
-Line With Focus,linewithfocus.png,Line_With_Focus,self,sparkline,sparkline
+Stacked Area,stackedarea.png,Stacked_Area,self,area chart,This stacked area chart is constructed from a json file storing the market  share of several continents across last decade
+Discrete Bar,discretebar.png,Discrete_Bar,self,bar chart,Discrete bar chart denotes bar chart with positive values and negative values. which gives an extra dimension
+Multi Bar,stackedbar.png,Multi_Bar,self,bar chart,Switch between stacked and grouped layouts using sequenced transitions allow the user to follow the data across views
+Multi Bar Horizontal,horizontalbar.png,Multi_Bar_Horizontal,self,bar chart,Switch between stacked and grouped layouts using sequenced transitions allow the user to follow the data across views in horizontal fashion
+Line Plus Bar,lineplusbar.png,Line_Plus_Bar,self,bar chart,It gives us the two parameters step by step bar and the cumulative sparkline in one view
+Cumulative Line,cumulativeline.png,Cumulative_Line,self,sparkline,The Cumulative line charts allows us to compare several single dimensional parameters at a single glance 
+Line With Focus,linewithfocus.png,Line_With_Focus,self,sparkline,It is a cummulative line chart which allows you to view a chart analysis one sparkline at a time as well 
 Pie,pie.png,Pie,self,pie chart,"Single dimensinal circular chart divided into sectors, illustrating numerical proportion. the arc length of each sector, is proportional to the quantity"
+Image Treemap,image_treemap.png,Image_Treemap,self,tree map,"The graphical image tree map showing the average life expectancy of each country denoting, with their corresponding flag based on the size of the flag below"
