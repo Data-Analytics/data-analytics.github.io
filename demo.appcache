@@ -4,6 +4,7 @@ CACHE:
 index.html
 home.html
 data.csv
+high_charts.csv
 css\bootstrap-responsive.css
 css\bootstrap-responsive.min.css
 css\bootstrap.css
@@ -11,6 +12,7 @@ css\bootstrap.min.css
 css\font-awesome.min.css
 css\jquery.dataTables.css
 css\main.css
+css\nv.d3.css
 css\pin.css
 css\pygment_trac.css
 css\style.css
@@ -46,9 +48,11 @@ images\contour-plot.png
 images\correlation.png
 images\crimea-area.png
 images\crimea-bar.png
+images\cumulativeline.png
 images\data-grouping.png
 images\day_hour_heat_map.png
 images\difference-chart.png
+images\discretebar.png
 images\dual_scale_bar-chart.png
 images\dynamic-update.png
 images\flags-general.png
@@ -67,12 +71,17 @@ images\hex_binning.png
 images\hex_binning_area.png
 images\histogram.png
 images\horizontal-bar.png
+images\horizontalbar.png
 images\icon_download.png
 images\image_distortion.png
+images\image_treemap.png
 images\intraday-area.png
 images\intraday-candlestick.png
 images\lazy-loading.png
 images\line-markers.png
+images\line.png
+images\lineplusbar.png
+images\linewithfocus.png
 images\marey-trains.png
 images\marimekko.png
 images\markers-only.png
@@ -85,6 +94,7 @@ images\ohlc.png
 images\pie.png
 images\sankey.png
 images\Scatter-plot.png
+images\scatter.png
 images\scrollbar-disabled.png
 images\Search-icon.png
 images\self.png
@@ -98,9 +108,12 @@ images\sort_desc_disabled.png
 images\spermatozoa.png
 images\spline.png
 images\stack-multiples.png
+images\stackedarea.png
+images\stackedbar.png
 images\step-line.png
 images\styled-scrollbar.png
 images\sun-burst.png
+images\toronto_street.png
 images\tree.png
 images\treemap.png
 images\trust-business.png
@@ -145,10 +158,14 @@ javascripts\jquery.dataTables.min.js
 javascripts\jquery.min.js
 javascripts\jquery.tipsy.js
 javascripts\klass.min.js
+javascripts\nv.d3.js
+javascripts\prettify.js
 javascripts\queue.v1.min.js
 javascripts\reveal.js
+javascripts\stream_layers.js
 javascripts\topojson.js
 javascripts\twitter-share.js
+javascripts\underscore-min.js
 
 
 NETWORK:
