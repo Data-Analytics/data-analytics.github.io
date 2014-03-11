@@ -7,8 +7,8 @@ var fisheye = d3.fisheye.circular()
       .radius(120);
       
 var force = d3.layout.force()
-    .charge(-180)
-    .linkDistance(100)
+    .charge(-100)
+    .linkDistance(220)
     .size([width, height]);
 
 var svg = d3.select(".force-layout").append("svg")
