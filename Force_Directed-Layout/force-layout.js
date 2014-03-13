@@ -91,6 +91,25 @@ d3.csv("node.csv", function(error, nodes) {
           .attr("y2", function(d) { return d.target.fisheye.y; });
     });
     
+        var lastsearch = '';
+    var $box = {};
+    function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function() {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp(search, "i");
+        $('circle', $chart).each(function(){
+              $(this).css('opacity', re.test($(this).attr("data-title")) ? '1.0': '0.3');
+          });
+        }
+      });
+    }
+
+
+    add_search('.search', '.force-layout');
+    
     });
 });
         
