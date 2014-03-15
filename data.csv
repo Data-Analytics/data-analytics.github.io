@@ -64,3 +64,4 @@ Cumulative Line,cumulativeline.png,Cumulative_Line,self,sparkline,The Cumulative
 Line With Focus,linewithfocus.png,Line_With_Focus,self,sparkline,It is a cummulative line chart which allows you to view a chart analysis one sparkline at a time as well 
 Pie,pie.png,Pie,self,pie chart,"Single dimensinal circular chart divided into sectors, illustrating numerical proportion. the arc length of each sector, is proportional to the quantity"
 Image Treemap,image_treemap.png,Image_Treemap,self,tree map,"The graphical image tree map showing the average life expectancy of each country denoting, with their corresponding flag based on the size of the flag below"
+Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections 2009
