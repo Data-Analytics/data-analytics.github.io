@@ -1,37 +1,57 @@
 var width = 960,
     height = 500;
 
-var treemap = d3.layout.treemap()
-    .padding(0.5)
-    .size([width, height])
-    .sticky(true)
-    .value(function(d) {return d.votes;})
-    .children(function(d) {return d.values;});
+
 
 var svg = d3.select(".par_treemap").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("xmlns", 'http://www.w3.org/2000/svg')
-    .attr("xlink", 'http://www.w3.org/1999/xlink')
-    .attr("version", '1.1');
-
-d3.csv("parliament_data.csv", function(csv) {
+        .attr("width", width)
+        .attr("height", height)
+        .attr("xmlns", 'http://www.w3.org/2000/svg')
+        .attr("xlink", 'http://www.w3.org/1999/xlink')
+        .attr("version", '1.1');
+        
+d3.select("select#year").on("change", function() {
      
+     var year = Number(this.value)
+             console.log(year);
+             
+     d3.select('.par_treemap').select("svg")
+       .remove();
+
+    var svg = d3.select(".par_treemap").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("xmlns", 'http://www.w3.org/2000/svg')
+        .attr("xlink", 'http://www.w3.org/1999/xlink')
+        .attr("version", '1.1');
+        
+    var treemap = d3.layout.treemap()
+        .padding(0.5)
+        .size([width, height])
+        .sticky(true)
+        .value(function(d) {return d.votes;})
+        .children(function(d) {return d.values;});
     
-    data_root = {"key":"treemap"};
     
-     csv.forEach(function(o) {
-      o.votes = parseInt(o.votes);
-      o.electors = parseInt(o.electors);
-      o.rank = parseInt(o.rank);
-      });
-      
-      var nest = d3.nest()
+    d3.csv("parliament_list.csv", function(data_csv) {
+     
+        data_root = {"key":"treemap"};
+        
+         data_csv.forEach(function(o) {
+          o.votes = parseInt(o.votes);
+          o.electors = parseInt(o.electors);
+          o.rank = parseInt(o.rank);
+          o.year = parseInt(o.year);
+          });
+          
+
+        var nest = d3.nest()
         .key(function(d) { return d.party; })
-        .entries(csv);
-                
-                
+        .entries(data_csv.filter(function(d){return d.year===year}));
+        
     data_root["values"] = nest
+    
+    
     
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
@@ -46,9 +66,14 @@ d3.csv("parliament_data.csv", function(csv) {
       .style("fill", function(d) { return (d.color); })
       .style("opacity", function(d) { return 1 - parseFloat(0.2+(d.votes/d.electors)).toFixed(1); })
       .style("stroke", '#fff')
-      .style("stroke-width", 0.5);              
-      
-      
+      .style("stroke-width", 0.5);        
+
       $("rect").tooltip({container: '.par_treemap', html: true, placement:'top'});
+              
+        });
+
+      
+
+
       
       });
