@@ -1,3 +1,4 @@
+title,thumbnail,url,author,visualizationType,description
 Bivariate Area,area-series.png,Bivariate-Area,self,area chart,This two-value area chart storing the daily high and low temperature in San Francisco 
 Bubble Chart,bubble_chart.png,Bubble_Chart,self,bubble chart ,"Bubble charts encode data in the area of circles. Although less perceptually-accurate than bar charts, they can pack hundreds of values into a small space."
 Build Graph,build-graph.png,Build-Graph,self,force layout ,"The nodes you can create by clicking on the free place , andcreate the link by placing 2 or more nodes on the circle ring "
@@ -52,7 +53,6 @@ Spermatozoa,spermatozoa.png,Spermatozoa,self,Spermatozoa,"The mordern kind of vi
 Stack/Multiple,stack-multiples.png,Stack-Multiples_Barchart,self,bar chart,Barchart gives you 2 dimesions to view one stacked together one above the otherand another showing you the view of individuals with transistion
 Stacked Area,stackedarea.png,Stacked_Area,self,area chart,This stacked area chart is constructed from a json file storing the market  share of several continents across last decade
 Sun Burst,sun-burst.png,Sunburst,self,sun burst,"The SunBurst technique is an alternative, space-filling visualization that uses a radial rather than a rectangular layout, in a hierarchy are laid out radially"
-title,thumbnail,url,author,visualizationType,description
 Toronto Streets Charts,toronto_street.png,Toronto-Streets_Charts,self,tree map,To display a chart of how much revenue each street in Toronto collected via parking ticket violations.
 Tree Layout,tree.png,Tree-Layout,self,tree layout,The tree layout produces tidy node-link diagrams of trees using the Reingold–Tilford “tidy” algorithm
 Treemap,treemap.png,Treemap,self,tree map,Treemaps display hierarchical (tree-structured) data as a set of nested rectangles.Each branch of the tree is given a rectangle.
