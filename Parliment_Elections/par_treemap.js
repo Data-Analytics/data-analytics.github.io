@@ -1,8 +1,6 @@
 var width = 960,
     height = 500;
 
-
-
 var svg = d3.select(".par_treemap").append("svg")
         .attr("width", width)
         .attr("height", height)
@@ -44,15 +42,12 @@ d3.select("select#year").on("change", function() {
           o.year = parseInt(o.year);
           });
           
-
         var nest = d3.nest()
         .key(function(d) { return d.party; })
         .entries(data_csv.filter(function(d){return d.year===year}));
         
     data_root["values"] = nest
-    
-    
-    
+
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
     .enter().append("a")
@@ -72,8 +67,4 @@ d3.select("select#year").on("change", function() {
               
         });
 
-      
-
-
-      
       });
