@@ -105,30 +105,38 @@
       <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#9DBC2A"></rect>
       <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">ADMK</text>
     </svg>
+    <p class="form-inline">
+    <label value="year">Year : </label>
     <select id="year">
-    <option value="1951" class="name">1951</option>
-    <option value="1957" class="name">1957</option>
-    <option value="1962" class="name">1962</option>
-    <option value="1967" class="name">1967</option>
-    <option value="1971" class="name">1971</option>
-    <option value="1977" class="name">1977</option>
-    <option value="1980" class="name">1980</option>
-    <option value="1984" class="name">1984</option>
-    <option value="1985" class="name">1985</option>
-    <option value="1989" class="name">1989</option>
-    <option value="1991" class="name">1991</option>
-    <option value="1992" class="name">1992</option>
-    <option value="1996" class="name">1996</option>
-    <option value="1998" class="name">1998</option>
-    <option value="1999" class="name">1999</option>
-    <option value="2004" class="name">2004</option>
-    <option value="2009" class="name">2009</option>
+        <option value="1951" class="name">1951</option>
+        <option value="1957" class="name">1957</option>
+        <option value="1962" class="name">1962</option>
+        <option value="1967" class="name">1967</option>
+        <option value="1971" class="name">1971</option>
+        <option value="1977" class="name">1977</option>
+        <option value="1980" class="name">1980</option>
+        <option value="1984" class="name">1984</option>
+        <option value="1985" class="name">1985</option>
+        <option value="1989" class="name">1989</option>
+        <option value="1991" class="name">1991</option>
+        <option value="1992" class="name">1992</option>
+        <option value="1996" class="name">1996</option>
+        <option value="1998" class="name">1998</option>
+        <option value="1999" class="name">1999</option>
+        <option value="2004" class="name">2004</option>
+        <option value="2009" class="name">2009</option>
     </select>
-        <div class="par_treemap" align="center">
+    <label value="group">Group By : </label>
+    <select id="options_view">   
+        <option value="party" class="name">party</option>
+        <option value="state" class="name">State</option>
+    </select>
+   <button id ="submit" value="submit">submit</button>
+   </p>
+    <div class="par_treemap" align="center">
         <script type="text/javascript" src="par_treemap.js"></script>
-        </div>
-        
-      </section>
-    </div>    
+    </div>
+  </section>
+  </div>    
 </body>
 </html>

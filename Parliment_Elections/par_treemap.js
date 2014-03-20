@@ -8,11 +8,11 @@ var svg = d3.select(".par_treemap").append("svg")
         .attr("xlink", 'http://www.w3.org/1999/xlink')
         .attr("version", '1.1');
         
-d3.select("select#year").on("change", function() {
-     
-     var year = Number(this.value)
-             console.log(year);
-             
+  d3.select("button#submit").on("click", function() {
+
+     var group_by = document.getElementById("options_view").value,
+         year = document.getElementById("year").value;
+          
      d3.select('.par_treemap').select("svg")
        .remove();
 
@@ -43,9 +43,10 @@ d3.select("select#year").on("change", function() {
           });
           
         var nest = d3.nest()
-        .key(function(d) { return d.party; })
-        .entries(data_csv.filter(function(d){return d.year===year}));
+        .key(function(d) { if (group_by=='party') { return  d.party } else {return d.state };})
+        .entries(data_csv.filter(function(d){return d.year===parseInt(year)}));
         
+        console.log(nest);
     data_root["values"] = nest
 
   var cell = svg.data([data_root]).selectAll("g")
@@ -64,7 +65,7 @@ d3.select("select#year").on("change", function() {
       .style("stroke-width", 0.5);        
 
       $("rect").tooltip({container: '.par_treemap', html: true, placement:'top'});
-              
+        
         });
 
       });
