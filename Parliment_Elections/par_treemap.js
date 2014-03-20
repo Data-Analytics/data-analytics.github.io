@@ -7,8 +7,10 @@ var svg = d3.select(".par_treemap").append("svg")
         .attr("xmlns", 'http://www.w3.org/2000/svg')
         .attr("xlink", 'http://www.w3.org/1999/xlink')
         .attr("version", '1.1');
-        
-  d3.select("button#submit").on("click", function() {
+ 
+function onRender() {   
+ 
+//  d3.select("button#submit").on("click", function() {
 
      var group_by = document.getElementById("options_view").value,
          year = document.getElementById("year").value;
@@ -68,4 +70,5 @@ var svg = d3.select(".par_treemap").append("svg")
         
         });
 
-      });
+      }
+      //);

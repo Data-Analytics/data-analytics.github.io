@@ -23,7 +23,7 @@
     <link rel="shortcut icon" href="/./images/flower.png">
     <title>Parliment Elections</title>
   </head>
-  <body>
+  <body onLoad="onRender();">
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner container">
@@ -131,7 +131,7 @@
         <option value="party" class="name">party</option>
         <option value="state" class="name">State</option>
     </select>
-   <button id ="submit" value="submit">submit</button>
+   <button id ="submit" value="submit" onClick='onRender();' >submit</button>
    </p>
     <div class="par_treemap" align="center">
         <script type="text/javascript" src="par_treemap.js"></script>
