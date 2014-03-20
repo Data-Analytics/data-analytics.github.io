@@ -61,12 +61,33 @@ function onRender() {
       .attr("width", function(d) { return d.dx; })
       .attr("height", function(d) { return d.dy; })
       .attr("data-title",function(d) { return '<p>Constituency : '+d.pc+'</p> <br/> <p>Candidate : '+d.name+'</p> <br/> <p>State : '+d.state+'</p> <br/> <p>party : '+d.party+'</p> <br/><p> percentage-votes : '+((d.votes/d.electors)*100).toFixed(2);+'</p>' ;})
+      .attr("sub_link",function(d) { return d.pc+d.state+d.party ;})
       .style("fill", function(d) { return (d.color); })
       .style("opacity", function(d) { return 1 - parseFloat(0.2+(d.votes/d.electors)).toFixed(1); })
       .style("stroke", '#fff')
       .style("stroke-width", 0.5);        
 
       $("rect").tooltip({container: '.par_treemap', html: true, placement:'top'});
+      
+    var lastsearch = '';
+    var $box = {};
+    
+    function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function() {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp(search, "i");
+          $('rect', $chart).each(function(){
+              $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+      });
+    }
+
+    add_search('.search', '.par_treemap');
+    
         
         });
 

@@ -12,11 +12,11 @@
     <meta name="author" content="Sushanth">
     <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/jquery-ui.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
-    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/jquery-ui.js"></script>    
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/jquery-ui.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>  
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/jquery-ui.js"></script>  
     <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
     <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
@@ -69,12 +69,10 @@
             <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
             <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
         </div>
-        <form>
-        <p class="in-line">
+        <p class="form-inline">
             <label align="left" >Search:</label>
-            <input id="search" type="text" name="search" class="search" placeholder="eg: chennai">
-        </p>         
-        </form>    
+            <input type="text" class="search" placeholder="eg: chennai">
+        </p>       
     <div class="force-layout">
       <script type="text/javascript" src="/./javascripts/fisheye.js"></script>
       <script type="text/javascript" src="force-layout.js"></script>
@@ -83,19 +81,17 @@
         </div>
         <script>
         
-    var cityNames = ['Agartala (IXA)', 'Ahmedabad (AMD)', 'Amritsar (ATQ)', 'Aurangabad (IXU)', 'Bagdogra (IXB)', 'Belgaum (IXG)', 'Bengaluru (BLR)', 'Bhopal (BHO)', 'Chandigarh (IXC)', 'Chennai (MAA)', 'Coimbatore (CJB)', 'Dehradun (DED)', 'Delhi (DEL)', 'Dharamshala (DHM)', 'Goa (GOI)', 'Guwahati (GAU)', 'Hubli (HBX)', 'Hyderabad (HYD)', 'Indore (IDR)', 'Jabalpur (JLR)', 'Jaipur (JAI)', 'Jammu (IXJ)', 'Khajuraho (HJR)', 'Kochi (COK)', 'Kolkata (CCU)', 'Kozhikode (CCJ)', 'Lucknow (LKO)', 'Madurai (IXM)', 'Mangalore (IXE)', 'Mumbai (BOM)', 'Mysore (MYQ)', 'Port Blair (IXZ)', 'Pune (PNQ)', 'Rajahmundry (RJA)', 'Srinagar (SXR)', 'Surat (STV)', 'Thiruvananthapuram (TRV)', 'Tirupati (TIR)', 'Tuticorin (TCR)', 'Udaipur (UDR)', 'Varanasi (VNS)', 'Vijayawada (VGA)', 'Vishakhapatnam (VTZ)']
-
-
-    $( "#search" ).autocomplete({
-      source: function( request, response ) {
-        var matches = $.map( cityNames, function(tag) {
-          if ( tag.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
-            return tag;
-          }
-        });
-        response(matches);
-        }
-        });
-    
+    var searchTags = ["Agartala (IXA)","Ahmedabad (AMD)","Amritsar (ATQ)","Aurangabad (IXU)","Bagdogra (IXB)","Belgaum (IXG)","Bengaluru (BLR)","Bhopal (BHO)","Chandigarh (IXC)","Chennai (MAA)","Coimbatore (CJB)","Dehradun (DED)","Delhi (DEL)","Dharamshala (DHM)","Goa (GOI)","Guwahati (GAU)","Hubli (HBX)","Hyderabad (HYD)","Indore (IDR)","Jabalpur (JLR)","Jaipur (JAI)","Jammu (IXJ)","Khajuraho (HJR)","Kochi (COK)","Kolkata (CCU)","Kozhikode (CCJ)","Lucknow (LKO)","Madurai (IXM)","Mangalore (IXE)","Mumbai (BOM)","Mysore (MYQ)","Port Blair (IXZ)","Pune (PNQ)","Rajahmundry (RJA)","Srinagar (SXR)","Surat (STV)","Thiruvananthapuram (TRV)","Tirupati (TIR)","Tuticorin (TCR)","Udaipur (UDR)","Varanasi (VNS)","Vijayawada (VGA)","Vishakhapatnam (VTZ)"]
+   
+   $( ".search" ).autocomplete({
+  source: function( request, response ) {
+    var matches = $.map( searchTags, function(tag) {
+      if ( tag.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
+        return tag;
+      }
+    });
+    response(matches);
+    }
+    });
 </body>
 </html>
