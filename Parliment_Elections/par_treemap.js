@@ -10,8 +10,6 @@ var svg = d3.select(".par_treemap").append("svg")
  
 function onRender() {   
  
-//  d3.select("button#submit").on("click", function() {
-
      var group_by = document.getElementById("options_view").value,
          year = document.getElementById("year").value;
           
