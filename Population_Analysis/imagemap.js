@@ -51,7 +51,7 @@ d3.csv("city_population_data.csv", function(csv) {
                 
     data_root["values"] = nest
     
-  var cell = svg.data([data_root]).selectAll("g")
+  var cell = svg.data([data_root]).selectAll("svg")
       .data(treemap.nodes)
     .enter().append("a")
       .attr("xlink:href",function(d) { return  'https://www.google.co.in/search?q='+d.City} )
@@ -69,7 +69,7 @@ d3.csv("city_population_data.csv", function(csv) {
       
       $("image").tooltip({container: '.imagemap', html: true, placement:'top'});
 
-          var lastsearch = '';
+    var lastsearch = '';
     var $box = {};
     
     function add_search(search, chart) {
@@ -85,9 +85,26 @@ d3.csv("city_population_data.csv", function(csv) {
         }
       });
     }
-
     add_search('.search', '.imagemap');
-    
       });
-      
       }
+      
+(function hoverzoom() {
+var svg = d3.select('svg');
+d3.selectAll('image').on('mouseenter', function() {
+var node = d3.select(this);
+node.attr({
+'data-w': node.attr('width'),
+'data-h': node.attr('height')
+});
+node.attr({ width:200, height: 300 });
+svg.append(function() { return node.remove().node(); });
+}).on('mouseleave', function() {
+var node = d3.select(this);
+node.attr({
+width: node.attr('data-w'),
+height: node.attr('data-h')
+})
+});
+})();
+    
