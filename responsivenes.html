@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Charts with D3 | Visible Data</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/visible-data/css/utilities.css">
+    
+    <link rel="stylesheet" type="text/css" href="/visible-data/components/highlightjs/styles/default.css">
+    
+    
+    
+
+    <link rel="alternate" type="application/rss+xml" title="" href="http://eyeseast.github.com/visible-data/feed.xml">
+    
+    
+    <script type="text/javascript" src="javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="javascripts/underscore-min.js"></script>
+    
+    <script src="javascripts/highlight.min.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <div class="container">
+    
+    <header class="page-header">
+        
+        
+            
+            <h3><a href="/visible-data/">Visible Data</a></h3>
+            
+            <div class="row">
+                <h1 class="col-md-8">Responsive Charts with D3</h1>
+                <h2 class="quiet col-md-4 right">Aug 28, 2013</h2>
+            </div>
+        
+        
+
+    </header>
+
+    <div class="content row">
+    <article class="post col-md-8">
+    <style type="text/css">
+.bar rect {
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.bar rect.background {
+    fill: #eee;
+}
+
+.bar rect.percent {
+    fill: #74c476;
+}
+
+.bar:hover rect.percent {
+    fill: #a1d99b;
+}
+
+.bar text {
+    font-size: 12px;
+    fill: #333;
+}
+
+.axis line {
+    stroke: #ccc;
+    stroke-width: 1;
+}
+
+line.median {
+    stroke: #777;
+    stroke-width: 1;
+}
+
+</style>
+
+<p>A confession: I&#39;m starting to hate choropleth maps.</p>
+
+<p>When it comes to comes to comparing U.S. states, especially where there&#39;s no obvious geographic pattern, a map is <a href="http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/">often the wrong choice</a>.</p>
+
+<p>So, following my posts on <a href="/visible-data/2013/08/26/responsive-d3/">responsive maps</a> and <a href="/2013/08/27/responsive-legends-with-d3/">legends</a>, let&#39;s make a bar chart, and let&#39;s make it responsive:</p>
+
+<div id="chart">
+    <h4>Percent of adults over 25 with at least a bachelor's degree:</h4>
+    <p><strong>Median:</strong> <span class="median"></span></p>
+    <small>Source: <cite><a href="http://census.gov">U.S. Census Bureau</a></cite>, via <cite><a href="http://beta.censusreporter.org/compare/01000US/040/table/?release=acs2011_1yr&table=B15003">Census Reporter</a></cite></small>
+</div>
+
+<p>Bar charts aren&#39;t especially sexy.</p>
+
+<p>Our brains, however, are wired to parse differences in length faster than differences in color. That means you&#39;ll figure out a bar chart more quickly than a choropleth map, and you won&#39;t be confused by other other signals (area, position or shape, for example).</p>
+
+<p>Charts (bar and otherwise) end up being slightly more complicated to resize than maps, if only because there are more moving parts. In the chart above, I have a top and bottom axis, labels, bars representing data (with another set as background) and ticks representing the median data point. Each of those needs to be adjusted when the screen size changes.</p>
+
+<p>Ultimately, the process is roughly the same as making a <a href="/visible-data/2013/08/26/responsive-d3/">responsive map</a>, there&#39;s just more stuff to keep track of.</p>
+
+<h2>How to make a responsive bar chart:</h2>
+
+<ol>
+<li>Size and scale SVG elements based on thier containers.</li>
+<li>Reset scales when the window resizes.</li>
+<li>Resize all the things.</li>
+</ol>
+
+<h3>1. Size and scale SVG elements based on thier containers.</h3>
+
+<p>Just as before, start with a responsive framework and set initial sizes based on containers. This lets you (mostly) control your layout with CSS and class names, instead of having to keep CSS and JavaScript in sync.</p>
+
+<p>Do this, and your charts will load with the correct size. Here&#39;s a code snippet:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">margin</span> <span class="o">=</span> <span class="p">{</span><span class="nx">top</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">bottom</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nx">left</span><span class="o">:</span> <span class="mi">10</span><span class="p">}</span>
+  <span class="p">,</span> <span class="nx">width</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#chart&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+  <span class="p">,</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">-</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">left</span> <span class="o">-</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">right</span>
+  <span class="p">,</span> <span class="nx">barHeight</span> <span class="o">=</span> <span class="mi">20</span>
+  <span class="p">,</span> <span class="nx">percent</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">);</span>
+
+<span class="c1">// scales and axes</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">linear</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">])</span>
+    <span class="p">.</span><span class="nx">domain</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="p">.</span><span class="mi">4</span><span class="p">]);</span> <span class="c1">// hard-coding this because I know the data</span>
+
+<span class="c1">// ordinal scales are easier for uniform bar heights</span>
+<span class="c1">// I&#39;ll set domain and rangeBands after data loads</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">ordinal</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">xAxis</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">svg</span><span class="p">.</span><span class="nx">axis</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">scale</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">tickFormat</span><span class="p">(</span><span class="nx">percent</span><span class="p">);</span>
+</code></pre></div>
+<p>I&#39;m using <a href="http://bl.ocks.org/mbostock/3019563">Mike Bostock&#39;s margin conventions</a>; throughout my code, I can use <code>width</code> without further adjustment. I&#39;ll set a <code>height</code> variable later, since it&#39;s data-dependent and will be a multiple of <code>barHeight</code>.</p>
+
+<h3>Reset scales when the window resizes</h3>
+
+<p>Spend enough time with D3, and you start to realize that scales are everything. Get your scales right and everything is easier. Misplace a number or get a calculation wrong and your charts fall apart.</p>
+
+<p>Fortunately, this is pretty simple. Again, I&#39;m catching the <code>resize</code> event on <code>window</code> and running a function:</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;resize&#39;</span><span class="p">,</span> <span class="nx">resize</span><span class="p">);</span> 
+
+<span class="kd">function</span> <span class="nx">resize</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// update width</span>
+    <span class="nx">width</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#chart&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">),</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">-</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">left</span> <span class="o">-</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">right</span><span class="p">;</span>
+
+    <span class="c1">// reset x range</span>
+    <span class="nx">x</span><span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">]);</span>
+
+    <span class="c1">// do the actual resize...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3>Resize all the things</h3>
+
+<p>Here&#39;s the list again:</p>
+
+<ul>
+<li>top axis</li>
+<li>bottom axis</li>
+<li>background bars</li>
+<li>foreground (data) bars</li>
+<li>labels (maybe)</li>
+<li>median ticks</li>
+</ul>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript"><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;resize&#39;</span><span class="p">,</span> <span class="nx">resize</span><span class="p">);</span> 
+
+<span class="kd">function</span> <span class="nx">resize</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// update width</span>
+    <span class="nx">width</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#chart&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">),</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">-</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">left</span> <span class="o">-</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">right</span><span class="p">;</span>
+
+    <span class="c1">// resize the chart</span>
+    <span class="nx">x</span><span class="p">.</span><span class="nx">range</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">]);</span>
+    <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="nx">chart</span><span class="p">.</span><span class="nx">node</span><span class="p">().</span><span class="nx">parentNode</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">y</span><span class="p">.</span><span class="nx">rangeExtent</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">top</span> <span class="o">+</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">bottom</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">width</span> <span class="o">+</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">left</span> <span class="o">+</span> <span class="nx">margin</span><span class="p">.</span><span class="nx">right</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">);</span>
+
+    <span class="nx">chart</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;rect.background&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="p">);</span>
+
+    <span class="nx">chart</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;rect.percent&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">percent</span><span class="p">);</span> <span class="p">});</span>
+
+    <span class="c1">// update median ticks</span>
+    <span class="kd">var</span> <span class="nx">median</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">median</span><span class="p">(</span><span class="nx">chart</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;.bar&#39;</span><span class="p">).</span><span class="nx">data</span><span class="p">(),</span> 
+        <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">d</span><span class="p">.</span><span class="nx">percent</span><span class="p">;</span> <span class="p">});</span>
+
+    <span class="nx">chart</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;line.median&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="nx">x</span><span class="p">(</span><span class="nx">median</span><span class="p">))</span>
+        <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;x2&#39;</span><span class="p">,</span> <span class="nx">x</span><span class="p">(</span><span class="nx">median</span><span class="p">));</span>
+
+
+    <span class="c1">// update axes</span>
+    <span class="nx">chart</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;.x.axis.top&#39;</span><span class="p">).</span><span class="nx">call</span><span class="p">(</span><span class="nx">xAxis</span><span class="p">.</span><span class="nx">orient</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">));</span>
+    <span class="nx">chart</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;.x.axis.bottom&#39;</span><span class="p">).</span><span class="nx">call</span><span class="p">(</span><span class="nx">xAxis</span><span class="p">.</span><span class="nx">orient</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">));</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>I&#39;m calculating width based on the container element and margins, as I did before, and updating my x-scale&#39;s range. After that, I just go down my list above and resize.</p>
+
+<p>First, I&#39;m resizing my <code>svg</code> element. That&#39;s a little ugly, because <code>chart</code> is actually a <code>g</code> element translated by <code>margin.left</code> and <code>margin.top</code>, so I need to re-select the parent node. (It would be nice if D3 had a <code>parent</code> accessor, like jQuery.)</p>
+
+<p>Next, I resize the two <code>rect</code> elements. Background is easy; it&#39;s a full-width bar (and can be skipped if you don&#39;t like having a background offset). For the foreground bar, I&#39;m recalculating width based on the updated x-scale. Simple enough. Rememeber, data is already bound, which helps with next step.</p>
+
+<p>I need to calculate the median again. I could have set this as a global when I loaded data, but I have enough globals in my <del>life</del><ins>code</ins>. Fortunately, as above, I can grab my dataset out of the chart with <code>chart.selectAll(&#39;.bar&#39;).data()</code> and calculate a median from that. My median ticks are line elements, so I set the <code>x1</code> and <code>x2</code> attibutes again.</p>
+
+<p>Last up: axes. This is even easier. Just select the container elements (in my case, <code>.x.axis.top</code> and <code>.x.axis.bottom</code>) and call the axis object again. Here, I have two version--top and bottom--so I set the orientation each time.</p>
+
+<p>That&#39;s it. There are a lot of little steps, but nothing here should be too much trouble, even for more complicated charts.</p>
+
+<p>Go make your visualizations work everywhere.</p>
+
+<script type="text/javascript">
+var url = "bachelors-degrees.csv"
+  , margin = {top: 30, right: 10, bottom: 30, left: 10}
+  , width = parseInt(d3.select('#chart').style('width'), 10)
+  , width = width - margin.left - margin.right
+  , height = 200 // placeholder
+  , barHeight = 20
+  , spacing = 3
+  , percent = d3.format('%');
+
+// scales and axes
+var x = d3.scale.linear()
+    .range([0, width])
+    .domain([0, .4]); // hard-coding this because I know the data
+
+var y = d3.scale.ordinal();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .tickFormat(percent);
+
+// create the chart
+var chart = d3.select('#chart').append('svg')
+    .style('width', (width + margin.left + margin.right) + 'px')
+  .append('g')
+    .attr('transform', 'translate(' + [margin.left, margin.top] + ')');
+
+d3.csv(url).row(function(d) {
+    d.Total = +d.Total;
+    d["Bachelor's degree"] = +d["Bachelor's degree"];
+    d.percent = d["Bachelor's degree"] / d.Total;
+
+    return d;
+}).get(function(err, data) {
+    // sort
+    data = _.sortBy(data, 'percent').reverse();
+
+    // set y domain
+    y.domain(d3.range(data.length))
+        .rangeBands([0, data.length * barHeight]);
+
+    // set height based on data
+    height = y.rangeExtent()[1];
+    d3.select(chart.node().parentNode)
+        .style('height', (height + margin.top + margin.bottom) + 'px')
+
+    // render the chart
+
+    // add top and bottom axes
+    chart.append('g')
+        .attr('class', 'x axis top')
+        .call(xAxis.orient('top'));
+
+    chart.append('g')
+        .attr('class', 'x axis bottom')
+        .attr('transform', 'translate(0,' + height + ')')
+        .call(xAxis.orient('bottom'));
+
+    var bars = chart.selectAll('.bar')
+        .data(data)
+      .enter().append('g')
+        .attr('class', 'bar')
+        .attr('transform', function(d, i) { return 'translate(0,'  + y(i) + ')'; });
+
+    bars.append('rect')
+        .attr('class', 'background')
+        .attr('height', y.rangeBand())
+        .attr('width', width);
+
+    bars.append('rect')
+        .attr('class', 'percent')
+        .attr('height', y.rangeBand())
+        .attr('width', function(d) { return x(d.percent); })
+
+    bars.append('text')
+        .text(function(d) { return d.Name; })
+        .attr('class', 'name')
+        .attr('y', y.rangeBand() - 5)
+        .attr('x', spacing);
+
+    // add median ticks
+    var median = d3.median(data, function(d) { return d.percent; });
+
+    d3.select('span.median').text(percent(median));
+
+    bars.append('line')
+        .attr('class', 'median')
+        .attr('x1', x(median))
+        .attr('x2', x(median))
+        .attr('y1', 1)
+        .attr('y2', y.rangeBand() - 1);
+});
+
+// resize
+d3.select(window).on('resize', resize); 
+
+function resize() {
+    // update width
+    width = parseInt(d3.select('#chart').style('width'), 10);
+    width = width - margin.left - margin.right;
+
+    // resize the chart
+    x.range([0, width]);
+    d3.select(chart.node().parentNode)
+        .style('height', (y.rangeExtent()[1] + margin.top + margin.bottom) + 'px')
+        .style('width', (width + margin.left + margin.right) + 'px');
+
+    chart.selectAll('rect.background')
+        .attr('width', width);
+
+    chart.selectAll('rect.percent')
+        .attr('width', function(d) { return x(d.percent); });
+
+    // update median ticks
+    var median = d3.median(chart.selectAll('.bar').data(), 
+        function(d) { return d.percent; });
+    
+    chart.selectAll('line.median')
+        .attr('x1', x(median))
+        .attr('x2', x(median));
+
+
+    // update axes
+    chart.select('.x.axis.top').call(xAxis.orient('top'));
+    chart.select('.x.axis.bottom').call(xAxis.orient('bottom'));
+
+}
+
+// highlight code blocks
+hljs.initHighlighting();
+
+</script>
+
+</article>
+
+<div id="comments" class="col-md-8">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "visibledata", // required: replace example with your forum shortname
+            disqus_developer = location.hostname === "localhost",
+            disqus_title = "Responsive Charts with D3",
+            disqus_identifier = "/2013/08/28/responsive-charts-with-d3";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+    </div>
+
+    
+
+    <footer>
+        <p>Built by <a href="http://chrisamico.com">Chris Amico</a> using <a href="http://jekyllrb.com/">Jekyll</a>.</p>
+    </footer>
+    </div>
+</html>
