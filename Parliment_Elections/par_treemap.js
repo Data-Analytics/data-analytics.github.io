@@ -43,7 +43,7 @@ function onRender() {
           });
           
         var nest = d3.nest()
-        .key(function(d) { if (group_by=='party') { return  d.party } else {return d.state };})
+        .key(function(d) { return  d[group_by]; })
         .entries(data_csv.filter(function(d){return d.year===parseInt(year)}));
         
         console.log(nest);
