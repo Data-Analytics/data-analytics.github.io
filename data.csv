@@ -5,15 +5,18 @@ Build Graph,build-graph.png,Build-Graph,self,force layout ,"The nodes you can cr
 Bullet,bullet.png,Bullet,self,bullet chart,"This compare a given quantitative measure(such as profit or revenue) against qualitative ranges (e.g., poor, satisfactory, good)"
 Calendermap,calender-map.png,Calendermap,self,Calender map,"The values are visualized as colored cells per day. Days are arranged into columns by week, then grouped by month and years."
 Cartogram,cartogram.png,Cartogram,self,cartogram,"A cartogram is a map with some thematic variable such as travel time,population is substituted for land area or distance."
+Letter Counter,character-viusliser.png,Character_Analysis,self,bar chart,This parameter shows you the number of occurances of individual letters in bars with a certain padding.
 Chord Diagram,chord-diagram.png,Chord-Diagram,self,flow chart,"The directed relationships among a group of entities,simple interactivity by using mouseover filtering. "
 Circular Heat,circular-heatmap.png,Circular_Heatmap,self,heat map,"A circular heat chart displays quantitative data as an array of circular segments, coloured according to value."
 Cliped Sparkline,cliped_sparkline.png,Cliped_Sparkline,self,sparkline,"Chicago Data Portal, with the datasets grouped by categories and dimensions drawn based on the size of the individual datasets."
-Cluster Plot,correlation.png,Correlation,self,cluster plot ,A cluster plot in general is a group or bunch of several discrete items that are close to each other
+Polar Clock,clock.png,Clock,self,clock,"In a polar clock, each ring encodes each time field. The outermost ringrepresents second, followed by minutes etc "
 Coffee Wheel,coffee-wheel.png,Coffee_Sunburst,self,sun burst,The original coffee flavour wheel was created by the Specialty Coffee Association of America in poster form but it appears in various places on the Web.
 Contour Plot,contour-plot.png,Contour-Plot,self,heat map,It is a type of heat map were unique color close by is combined together to make a curved link a simililar kind of representation 
+Cluster Plot,correlation.png,Correlation,self,cluster plot ,A cluster plot in general is a group or bunch of several discrete items that are close to each other
 Crimea Area,crimea-area.png,Crimea-Area,self,area chart,"Area Map comparing three variables in parallel, to show the distribution "
 Crimea Bar,crimea-bar.png,Crimea-Bar,self,bar chart,"Bar chart comparing there variables in parallel,to show the distribution"
 Cumulative Line,cumulativeline.png,Cumulative_Line,self,sparkline,The Cumulative line charts allows us to compare several single dimensional parameters at a single glance 
+Hour Heat map,day_hour_heat_map.png,DH_Heatmap,self,heat map,"Displays how many users acces a database in a certain amount time in a week , it shows which part  of the week is heavily used "
 Difference Bar,difference-chart.png,Difference_Analysis,self,sparkline,This variation of a bivariate area chart uses clipping to alternate colors.the difference between the two is filled in green and red. 
 Discrete Bar,discretebar.png,Discrete_Bar,self,bar chart,Discrete bar chart denotes bar chart with positive values and negative values. which gives an extra dimension
 Dual Scale Bar,dual_scale_bar-chart.png,DualScale_Barchart,self,bar chart,Bar chart comparing two variables in parallel simultaneously simpler version of grouped chart
@@ -21,14 +24,12 @@ Force Directed Layout,force-directed.png,Force_Directed-Layout,self,force layout
 Force Layout,force.png,Force-Layout,self,force layout ,A flexible force-directed graph layout implementation using position Verlet integration to allow simple constraints
 Grouped/Stack,grouped-stack.png,Grouped-Stacked_Barchart,self,bar chart,Barchart gives you 2 dimesions to view one grouped together parallelor stacked together one above the other with transistion
 Heat Map,heatmap.png,Heatmap,self,heat map,A heat map is a graphical representation of data where the individual valuesin a matrix are represented as colors. 
-Hex Binning,hex_binning.png,Hex-Binning_Color,self,hexagonal map,With eight hundred random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. 
 Hex Binning Area,hex_binning_area.png,Hex-Binning_Area,self,hexagonal map,With eight hundred random points with a normal distribution are binned into hexagons; area encodes the number of points that fall into each bin. 
-Histogram,histogram.png,Irregular-Histogram,self,bar chart,Histogram of an Irwin–Hall distribution.The values are then binned at regular intervals using D3’s histogram layout. 
+Hex Binning,hex_binning.png,Hex-Binning_Color,self,hexagonal map,With eight hundred random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. 
 Horizontal Bar,horizontal-bar.png,Horizontal_Barchart,self,bar chart,"Bar chart comparing in horizontal style, which is in different  when compared to the common vertical bar chart"
-Hour Heat map,day_hour_heat_map.png,DH_Heatmap,self,heat map,"Displays how many users acces a database in a certain amount time in a week , it shows which part  of the week is heavily used "
 Image Distortion,image_distortion.png,Image_Distortion,self,distortion,Here were the ones that created the most buzz and left the biggest impressions on fashion editors of fashion shows in London
 Image Treemap,image_treemap.png,Image_Treemap,self,tree map,"The graphical image tree map showing the average life expectancy of each country denoting, with their corresponding flag based on the size of the flag below"
-Letter Counter,character-viusliser.png,Character_Analysis,self,bar chart,This parameter shows you the number of occurances of individual letters in bars with a certain padding.
+Histogram,histogram.png,Irregular-Histogram,self,bar chart,Histogram of an Irwin–Hall distribution.The values are then binned at regular intervals using D3’s histogram layout. 
 Line,line.png,Line,self,sparkline,"basic Line Chart analysing sine and cosine waves, were we could analyse other parameters as well "
 Line Plus Bar,lineplusbar.png,Line_Plus_Bar,self,bar chart,It gives us the two parameters step by step bar and the cumulative sparkline in one view
 Line With Focus,linewithfocus.png,Line_With_Focus,self,sparkline,It is a cummulative line chart which allows you to view a chart analysis one sparkline at a time as well 
@@ -41,21 +42,22 @@ Negative Bar,negative-bar.png,Negative-Barchart,self,bar chart,The dataset is an
 Nm Stacked Bar,normalized-stacked_bar.png,Normalized-Stacked-Barchart,self,bar chart,This variation of a stacked bar chart shows percentages rather than absolute numbers.
 Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections 2009
 Pie,pie.png,Pie,self,pie chart,"Single dimensinal circular chart divided into sectors, illustrating numerical proportion. the arc length of each sector, is proportional to the quantity"
-Polar Clock,clock.png,Clock,self,clock,"In a polar clock, each ring encodes each time field. The outermost ringrepresents second, followed by minutes etc "
+Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
+Pyramid  chart,pyramid.png,Pyramid_chart,self,pyramid chart,"The graphical pyramid charts denoting no of districts in each state in india, sorted in descening order"
 Rainbow Worm,worm.png,Rainbow-worm,self,experiment,"This psychedelic example, reminiscent of an earthworm, demonstrates thedifference between a segmented and unsegmented line. "
 Sankey Diagram,sankey.png,Sankey,self,flow chart,Sankey diagrams visualize the magnitude of flow between nodes in a network. 
 Scatter,scatter.png,Scatter,self,scatter plot,"This scatterplot is constructed from a random , denoting different groups in different colors and shapes respectively"
-Scatter Analysis,trust-business.png,Trust-Business_Scatterplot,self,scatter plot,A scatterplot using d3js. It maps social trust against ease of doing business in various countries 
 Scatter Plot,Scatter-plot.png,Scatterplot,self,scatter plot,A scatter plot is a type of mathematical diagram using Cartesian coordinates to display values for two variables .
 Seq Sunburst,sequence-sunburst.png,Sequences_Sunburst,self,sun burst,This example shows how it is possible to use a D3 sunburst visualization (partition layout) with data that describes sequences of events.
 Sortable Bar,sorted-bar.png,Sortable_BarChart,self,bar chart,This variation of a simple bar chart adds sorting with staggered delay andtranslucency to improve readability during the transition
 Spermatozoa,spermatozoa.png,Spermatozoa,self,Spermatozoa,"The mordern kind of visualisation another kind to visualise the data , for particular set of data "
-Stack/Multiple,stack-multiples.png,Stack-Multiples_Barchart,self,bar chart,Barchart gives you 2 dimesions to view one stacked together one above the otherand another showing you the view of individuals with transistion
 Stacked Area,stackedarea.png,Stacked_Area,self,area chart,This stacked area chart is constructed from a json file storing the market  share of several continents across last decade
+Stack/Multiple,stack-multiples.png,Stack-Multiples_Barchart,self,bar chart,Barchart gives you 2 dimesions to view one stacked together one above the otherand another showing you the view of individuals with transistion
 Sun Burst,sun-burst.png,Sunburst,self,sun burst,"The SunBurst technique is an alternative, space-filling visualization that uses a radial rather than a rectangular layout, in a hierarchy are laid out radially"
 Toronto Streets Charts,toronto_street.png,Toronto-Streets_Charts,self,tree map,To display a chart of how much revenue each street in Toronto collected via parking ticket violations.
 Tree Layout,tree.png,Tree-Layout,self,tree layout,The tree layout produces tidy node-link diagrams of trees using the Reingold–Tilford “tidy” algorithm
 Treemap,treemap.png,Treemap,self,tree map,Treemaps display hierarchical (tree-structured) data as a set of nested rectangles.Each branch of the tree is given a rectangle.
+Scatter Analysis,trust-business.png,Trust-Business_Scatterplot,self,scatter plot,A scatterplot using d3js. It maps social trust against ease of doing business in various countries 
 Un Employment,un-employment.png,Un-Employment_Sparkline,self,sparkline,The distribution of unemployment for 380 U.S. metropolitan areas fromJanuary 2000 to December 2012. weighted each area equally
 Voronoi,voronoi.png,Voronoimap,self,voronoi,"Voronoi diagram is a way of dividing space into a number of regions, here we have shown the example"
 Word cloud,word-cloud.png,Word-Cloud,self,word cloud,"A word cloud, or tag cloud is a visual representation for text data,typically used to depict keyword on websites "
@@ -65,4 +67,3 @@ ZipDecode,zipdecode.png,Zipdecode,self,cartogram,"Ben Fry’s zipdecode, inspire
 Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
 Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
-Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
