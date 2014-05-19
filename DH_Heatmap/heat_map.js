@@ -8,6 +8,7 @@ var margin = { top: 40, right: 20, bottom: 50, left: 20 },
     days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
     times = ["1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12a", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p", "12p"];
 
+    
 
       d3.csv("data.csv",
         function(d) {
@@ -61,23 +62,5 @@ var margin = { top: 40, right: 20, bottom: 50, left: 20 },
               .style("fill", function(d) { return colorScale(d.value); })
               .attr('data-title',function(d) { return 'Users : '+d.value; });
               
-          var legend = svg.selectAll(".legend")
-              .data([0].concat(colorScale.quantiles()), function(d) { return d; })
-              .enter().append("g")
-              .attr("class", "legend");
-
-          legend.append("rect")
-            .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height)
-            .attr("width", legendElementWidth)
-            .attr("height", gridSize / 2)
-            .style("fill", function(d, i) { return colors[i]; });
-
-          legend.append("text")
-            .attr("class", "mono")
-            .text(function(d) { return "≥ " + Math.round(d); })
-            .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height + gridSize);
-        
         $("rect").tooltip({container: 'body', html: true, placement:'right'});        
       });

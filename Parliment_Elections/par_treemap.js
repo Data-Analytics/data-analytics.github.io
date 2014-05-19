@@ -31,7 +31,7 @@ function onRender() {
         .children(function(d) {return d.values;});
     
     
-    d3.csv("parliament_list.csv", function(data_csv) {
+    d3.csv("parliament_2014.csv", function(data_csv) {
      
         data_root = {"key":"treemap"};
         
