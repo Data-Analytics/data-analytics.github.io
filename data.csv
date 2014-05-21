@@ -1,4 +1,10 @@
 title,thumbnail,url,author,visualizationType,description
+Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections  sice independence
+Vote Analysis,vote_analysis.png,Vote_Analysis,self,tree map,The graphical image tree map showing the vote share by each party in the elections Since Independence
+Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
+Pyramid  chart,pyramid.png,Pyramid_chart,self,pyramid chart,"The graphical pyramid charts denoting no of districts in each state in india, sorted in descening order"
+Image Distortion,image_distortion.png,Image_Distortion,self,distortion,Here were the ones that created the most buzz and left the biggest impressions on fashion editors of fashion shows in London
+Mareys Trains,marey-trains.png,Mareys-Trains,self,train flow,"The  graphical train schedule. Stations are separated vertically in proportion to geography;,the slope of the line reflects the speed of the train"
 Bivariate Area,area-series.png,Bivariate-Area,self,area chart,This two-value area chart storing the daily high and low temperature in San Francisco 
 Bubble Chart,bubble_chart.png,Bubble_Chart,self,bubble chart ,"Bubble charts encode data in the area of circles. Although less perceptually-accurate than bar charts, they can pack hundreds of values into a small space."
 Build Graph,build-graph.png,Build-Graph,self,force layout ,"The nodes you can create by clicking on the free place , andcreate the link by placing 2 or more nodes on the circle ring "
@@ -27,23 +33,18 @@ Heat Map,heatmap.png,Heatmap,self,heat map,A heat map is a graphical representat
 Hex Binning Area,hex_binning_area.png,Hex-Binning_Area,self,hexagonal map,With eight hundred random points with a normal distribution are binned into hexagons; area encodes the number of points that fall into each bin. 
 Hex Binning,hex_binning.png,Hex-Binning_Color,self,hexagonal map,With eight hundred random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. 
 Horizontal Bar,horizontal-bar.png,Horizontal_Barchart,self,bar chart,"Bar chart comparing in horizontal style, which is in different  when compared to the common vertical bar chart"
-Image Distortion,image_distortion.png,Image_Distortion,self,distortion,Here were the ones that created the most buzz and left the biggest impressions on fashion editors of fashion shows in London
 Image Treemap,image_treemap.png,Image_Treemap,self,tree map,"The graphical image tree map showing the average life expectancy of each country denoting, with their corresponding flag based on the size of the flag below"
 Histogram,histogram.png,Irregular-Histogram,self,bar chart,Histogram of an Irwin–Hall distribution.The values are then binned at regular intervals using D3’s histogram layout. 
 Line,line.png,Line,self,sparkline,"basic Line Chart analysing sine and cosine waves, were we could analyse other parameters as well "
 Line Plus Bar,lineplusbar.png,Line_Plus_Bar,self,bar chart,It gives us the two parameters step by step bar and the cumulative sparkline in one view
 Line With Focus,linewithfocus.png,Line_With_Focus,self,sparkline,It is a cummulative line chart which allows you to view a chart analysis one sparkline at a time as well 
-Mareys Trains,marey-trains.png,Mareys-Trains,self,train flow,"The  graphical train schedule. Stations are separated vertically in proportion to geography;,the slope of the line reflects the speed of the train"
 Marimekko Bar,marimekko.png,Marimekko-Chart,self,bar chart,"A Marimekko Chart, inspired by Freakalytics. Thanks to Noah Iliinsky for the suggestion. "
 Multi Bar,stackedbar.png,Multi_Bar,self,bar chart,Switch between stacked and grouped layouts using sequenced transitions allow the user to follow the data across views
 Multi Bar Horizontal,horizontalbar.png,Multi_Bar_Horizontal,self,bar chart,Switch between stacked and grouped layouts using sequenced transitions allow the user to follow the data across views in horizontal fashion
 Multiline,multi-line-chart.png,Multi-Line_Analysis,self,sparkline,"This line chart is constructed storing the daily average temperatures of Chennai, Delhi and Mumbai "
 Negative Bar,negative-bar.png,Negative-Barchart,self,bar chart,The dataset is an array of numbers with both positive and negative values. Use two scales to construct the bar chart
 Nm Stacked Bar,normalized-stacked_bar.png,Normalized-Stacked-Barchart,self,bar chart,This variation of a stacked bar chart shows percentages rather than absolute numbers.
-Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections 2009
 Pie,pie.png,Pie,self,pie chart,"Single dimensinal circular chart divided into sectors, illustrating numerical proportion. the arc length of each sector, is proportional to the quantity"
-Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
-Pyramid  chart,pyramid.png,Pyramid_chart,self,pyramid chart,"The graphical pyramid charts denoting no of districts in each state in india, sorted in descening order"
 Rainbow Worm,worm.png,Rainbow-worm,self,experiment,"This psychedelic example, reminiscent of an earthworm, demonstrates thedifference between a segmented and unsegmented line. "
 Sankey Diagram,sankey.png,Sankey,self,flow chart,Sankey diagrams visualize the magnitude of flow between nodes in a network. 
 Scatter,scatter.png,Scatter,self,scatter plot,"This scatterplot is constructed from a random , denoting different groups in different colors and shapes respectively"
@@ -68,4 +69,3 @@ Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diag
 Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
 Volume &User Analysis,volume_user_analysis.png,Volume_User_Analysis,self,tree map,A Zoomable treemap comparing the accessed and the number of users has accessed the site volume the site has been 
-,,,,,               
