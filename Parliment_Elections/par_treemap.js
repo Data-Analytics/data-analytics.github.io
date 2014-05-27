@@ -9,14 +9,7 @@ var svg = d3.select(".par_treemap").append("svg")
         .attr("version", '1.1');
  
 function onRender() {   
-   // arrOfStrings = openSomehowPythonInterpreter("data.py");
-    jQuery.ajax({
-       type: "POST",
-       url: "172.21.1.224/data.py",
-       success: function (msg) {
-           alert("Data Saved: " + msg);
-       }
-    });
+
      var group_by = document.getElementById("options_view").value,
          year = document.getElementById("year").value;
           
