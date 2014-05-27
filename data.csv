@@ -70,4 +70,3 @@ Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diag
 Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
 Volume &User Analysis,volume_user_analysis.png,Volume_User_Analysis,self,tree map,A Zoomable treemap comparing the accessed and the number of users has accessed the site volume the site has been 
-Election Analysis ,asset_analysis.png,Asset_Analysis,self,tree map,"The graphical image tree map showing the trend of the each party mp's assets , criminal cases etc in 2014"
