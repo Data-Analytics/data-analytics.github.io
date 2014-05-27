@@ -1,5 +1,6 @@
 title,thumbnail,url,author,visualizationType,description
 Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections  sice independence
+Election Analysis ,asset_analysis.png,Asset_Analysis,self,tree map,"The graphical image tree map showing the trend of the each party mp's assets , criminal cases etc in 2014"
 Vote Analysis,vote_analysis.png,Vote_Analysis,self,tree map,The graphical image tree map showing the vote share by each party in the elections Since Independence
 Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
 Pyramid  chart,pyramid.png,Pyramid_chart,self,pyramid chart,"The graphical pyramid charts denoting no of districts in each state in india, sorted in descening order"
@@ -69,3 +70,4 @@ Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diag
 Zm SunBurst,zoomable-sunburst.png,Zoomable_Sunburst,self,sun burst,A design commonly used in design patterns.It consists of rays radiating out from a central disk .
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
 Volume &User Analysis,volume_user_analysis.png,Volume_User_Analysis,self,tree map,A Zoomable treemap comparing the accessed and the number of users has accessed the site volume the site has been 
+Election Analysis ,asset_analysis.png,Asset_Analysis,self,tree map,"The graphical image tree map showing the trend of the each party mp's assets , criminal cases etc in 2014"
