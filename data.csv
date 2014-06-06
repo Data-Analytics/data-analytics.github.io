@@ -72,3 +72,4 @@ Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped 
 Volume &User Analysis,volume_user_analysis.png,Volume_User_Analysis,self,tree map,A Zoomable treemap comparing the accessed and the number of users has accessed the site volume the site has been 
 Most Powerful People,fobers_analysis.png,Fobers_Analysis,self,tree map,The World's Most Powerful People in the years 2014 from Forbes shows top 72 people of 7.2 billion people all around the world
 Funnel Chart,funnel_chart.png,Funnel_Chart,self,funnel chart,"The funnel shows the various steps of the sales process i.e. advertisements scanned, shares on social media, number of users who saw the product"
+Jobs /College Sankey,jobs_college.png,Jobs_College,self,flow chart,to actually see what's going on with a particular field or job
