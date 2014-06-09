@@ -9,7 +9,9 @@ css\bootstrap-responsive.css
 css\bootstrap-responsive.min.css
 css\bootstrap.css
 css\bootstrap.min.css
+css\docs.css
 css\font-awesome.min.css
+css\jquery-ui.css
 css\jquery.dataTables.css
 css\main.css
 css\nv.d3.css
@@ -21,6 +23,7 @@ images\area.png
 images\arearange.png
 images\areaspline.png
 images\areasplinerange.png
+images\asset_analysis.png
 images\background.png
 images\back_disabled.png
 images\back_enabled.png
@@ -58,12 +61,13 @@ images\dynamic-update.png
 images\flags-general.png
 images\flags-placement.png
 images\flags-shapes.png
-images\flower.png
+images\fobers_analysis.png
 images\force-directed.png
 images\force.png
 images\forward_disabled.png
 images\forward_enabled.png
 images\forward_enabled_hover.png
+images\funnel_chart.png
 images\grouped-stack.png
 images\headers.png
 images\heatmap.png
@@ -77,11 +81,13 @@ images\image_distortion.png
 images\image_treemap.png
 images\intraday-area.png
 images\intraday-candlestick.png
+images\jobs_college.png
 images\lazy-loading.png
 images\line-markers.png
 images\line.png
 images\lineplusbar.png
 images\linewithfocus.png
+images\logo.png
 images\marey-trains.png
 images\marimekko.png
 images\markers-only.png
@@ -93,6 +99,8 @@ images\normalized-stacked_bar.png
 images\ohlc.png
 images\parliment_elections.png
 images\pie.png
+images\population_analysis.png
+images\pyramid.png
 images\sankey.png
 images\Scatter-plot.png
 images\scatter.png
@@ -119,7 +127,9 @@ images\tree.png
 images\treemap.png
 images\trust-business.png
 images\un-employment.png
+images\volume_user_analysis.png
 images\voronoi.png
+images\vote_analysis.png
 images\word-cloud.png
 images\world-cartogram.png
 images\world-tour.png
@@ -143,6 +153,7 @@ javascripts\d3.min.js
 javascripts\d3.tip.min.js
 javascripts\d3.v2.min.js
 javascripts\d3.v3.min.js
+javascripts\d3.v3.min_a.js
 javascripts\d3.v3.min_b.js
 javascripts\facebook_link.js
 javascripts\fisheye.js
@@ -153,8 +164,10 @@ javascripts\head.min.js
 javascripts\highcharts-more.js
 javascripts\highcharts-more.src.js
 javascripts\highlight.min.js
+javascripts\highlight.pack.js
 javascripts\highstock.js
 javascripts\highstock.src.js
+javascripts\jquery-ui.js
 javascripts\jquery.dataTables.min.js
 javascripts\jquery.min.js
 javascripts\jquery.tipsy.js
