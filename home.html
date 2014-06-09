@@ -19,7 +19,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">    
     <link rel="stylesheet" type="text/css" media="screen" href="css/docs.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/pin.css">    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/pin.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/d3.v3.min_b.js"></script>
     <script type="text/javascript" src="javascripts/google-analyitcs.js"></script>
     <script type="text/javascript" src="javascripts/facebook_link.js"></script>
@@ -99,9 +102,22 @@
         <div class="menu3-container"></div>
     </div>
     </div>
-
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 <script type="text/javascript">
 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {        
+            $('#return-to-top').fadeIn(200);    
+        } else {
+            $('#return-to-top').fadeOut(200);   
+        }
+    });
+    $('#return-to-top').click(function() {     
+        $('body,html').animate({
+            scrollTop : 0             
+        }, 500);
+    });
+    
     var splitChar = '; ';
     var json;
 
@@ -262,17 +278,22 @@
     });
 
 </script> 
-</body>
-<div id="disqus_thread" class="container"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'dataanalyticsgithubio'; // required: replace example with your forum shortname
+  <div class="inner">
+    <div style="width:18%;float:left;display:inline-block"></div>
+    <div style="width:75%;float:right;display:inline-block">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'dataanalyticsgithubio'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script> 
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+   </div>
+  </div>  
+</body>
 </html>
