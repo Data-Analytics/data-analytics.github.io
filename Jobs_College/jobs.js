@@ -76,11 +76,10 @@ relayout = function(maindata,filter) {
                 return e.field==d.source.name || e.occupation==d.source.name || e.field==d.target.name || e.occupation==d.target.name
             })
         })
-        .append("title")
-        .text(function(d) {
+        .attr('data-title',function(d) {
             return d.source.name + " majors going into " +
                 d.target.name + "\n" + format(d.value) + " (" +  .01*Math.round(d.diff*100) + " times as many as expected based on counts)"; });
-
+       
     link
         .transition()
     .duration(duration)
@@ -108,14 +107,8 @@ relayout = function(maindata,filter) {
             }
             return "translate(" + d.x + "," + d.relative.y + ")";
     })
-    .attr("class", "node")
-
-entering
-    .append("title")
-    .append("text")
-    .text(function(d) {
-        return d.name + "\n" + format(d.value); })
-
+    .attr("class", "node");
+    
 entering
     .append("rect")
     .on("click",function(d) {
@@ -134,6 +127,11 @@ entering
         return d3.rgb(d.color).darker(2); })
     .attr("height", function(d) { return d.relative.dy; })
     .style("opacity",0)
+    .attr('data-title',function(d) {
+        return d.name + "\n" + format(d.value); });
+
+$("path").tooltip({container: '#chart', html: true, placement:'top'});  
+$("rect").tooltip({container: '#chart', html: true, placement:'top'});   
 
 entering.append("text")
     .attr("class","label")
@@ -173,7 +171,7 @@ node.exit().remove()
 d3.tsv("data.tsv", function(error, data) {
     var dat = data
     industries = d3.set(dat.map(function(d) {return d.occupation.split("-")[0]})).values()
-    industryColors = d3.scale.category20().domain(industries)
+    industryColors = d3.scale.category10().domain(industries)
     relayout(data,filter=function(d) {return true})
 });
 
