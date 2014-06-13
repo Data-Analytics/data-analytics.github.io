@@ -30,7 +30,7 @@ function onRender() {
         .children(function(d) {return d.values;});
     
     
-    d3.csv("data_2014.csv", function(data_csv) {
+    d3.csv("election_data.csv", function(data_csv) {
      
         data_root = {"key":"treemap"};
         
@@ -52,7 +52,7 @@ function onRender() {
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
     .enter().append("a")
-      .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d.pc} )
+      .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d.constituency} )
       .attr("target","_blank").append("rect")
       .attr("x", function(d) { return d.x; })
       .attr("y", function(d) { return d.y; })
