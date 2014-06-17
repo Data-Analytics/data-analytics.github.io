@@ -1,0 +1,33 @@
+Group,Group_id,key,Team_id,Team_flag,GP,W,D,L,GF,GA,GD,PTS
+GROUP A,255933,Brazil,43924,http://img.fifa.com/images/flags/4/bra.png,1,1,0,0,3,1,2,3
+GROUP A,255933,Mexico,43911,http://img.fifa.com/images/flags/4/mex.png,1,1,0,0,1,0,1,3
+GROUP A,255933,Cameroon,43849,http://img.fifa.com/images/flags/4/cmr.png,1,0,0,1,0,1,-1,0
+GROUP A,255933,Croatia,43938,http://img.fifa.com/images/flags/4/cro.png,1,0,0,1,1,3,-2,0
+GROUP B,255935,Netherlands,43960,http://img.fifa.com/images/flags/4/ned.png,1,1,0,0,5,1,4,3
+GROUP B,255935,Chile,43925,http://img.fifa.com/images/flags/4/chi.png,1,1,0,0,3,1,2,3
+GROUP B,255935,Australia,43976,http://img.fifa.com/images/flags/4/aus.png,1,0,0,1,1,3,-2,0
+GROUP B,255935,Spain,43969,http://img.fifa.com/images/flags/4/esp.png,1,0,0,1,1,5,-4,0
+GROUP C,255937,Colombia,43926,http://img.fifa.com/images/flags/4/col.png,1,1,0,0,3,0,3,3
+GROUP C,255937,Ivory Coast ,43854,http://img.fifa.com/images/flags/4/civ.png,1,1,0,0,2,1,1,3
+GROUP C,255937,Japan,43819,http://img.fifa.com/images/flags/4/jpn.png,1,0,0,1,1,2,-1,0
+GROUP C,255937,Greece,43949,http://img.fifa.com/images/flags/4/gre.png,1,0,0,1,0,3,-3,0
+GROUP D,255939,Costa Rica,43901,http://img.fifa.com/images/flags/4/crc.png,1,1,0,0,3,1,2,3
+GROUP D,255939,Italy,43954,http://img.fifa.com/images/flags/4/ita.png,1,1,0,0,2,1,1,3
+GROUP D,255939,England,43942,http://img.fifa.com/images/flags/4/eng.png,1,0,0,1,1,2,-1,0
+GROUP D,255939,Uruguay,43930,http://img.fifa.com/images/flags/4/uru.png,1,0,0,1,1,3,-2,0
+GROUP E,255941,France,43946,http://img.fifa.com/images/flags/4/fra.png,1,1,0,0,3,0,3,3
+GROUP E,255941,Switzerland,43971,http://img.fifa.com/images/flags/4/sui.png,1,1,0,0,2,1,1,3
+GROUP E,255941,Ecuador,43927,http://img.fifa.com/images/flags/4/ecu.png,1,0,0,1,1,2,-1,0
+GROUP E,255941,Honduras,43909,http://img.fifa.com/images/flags/4/hon.png,1,0,0,1,0,3,-3,0
+GROUP F,255943,Argentina,43922,http://img.fifa.com/images/flags/4/arg.png,1,1,0,0,2,1,1,3
+GROUP F,255943,Iran,43817,http://img.fifa.com/images/flags/4/irn.png,1,0,1,0,0,0,0,1
+GROUP F,255943,Nigeria,43876,http://img.fifa.com/images/flags/4/nga.png,1,0,1,0,0,0,0,1
+GROUP F,255943,Bosnia and Herzegovina,44037,http://img.fifa.com/images/flags/4/bih.png,1,0,0,1,1,2,-1,0
+GROUP G,255945,Germany,43948,http://img.fifa.com/images/flags/4/ger.png,1,1,0,0,4,0,4,3
+GROUP G,255945,Portugal,43963,http://img.fifa.com/images/flags/4/por.png,1,0,0,1,0,4,-4,0
+GROUP G,255945,Ghana,43860,http://img.fifa.com/images/flags/4/gha.png,1,0,0,1,1,2,-1,0
+GROUP G,255945,USA,43921,http://img.fifa.com/images/flags/4/usa.png,1,1,0,0,2,1,1,3
+GROUP H,255947,Belgium,43935,http://img.fifa.com/images/flags/4/bel.png,0,0,0,0,0,0,0,0
+GROUP H,255947,Algeria,43843,http://img.fifa.com/images/flags/4/alg.png,0,0,0,0,0,0,0,0
+GROUP H,255947,Russia,43965,http://img.fifa.com/images/flags/4/rus.png,0,0,0,0,0,0,0,0
+GROUP H,255947,Korea Republic,43822,http://img.fifa.com/images/flags/4/kor.png,0,0,0,0,0,0,0,0
