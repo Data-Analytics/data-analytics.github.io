@@ -2,7 +2,7 @@ var Funnel_Charts = {};
 Funnel_Charts.River = function (t) {
     return this.execute = function () {
         if (!this.validate_options()) return !1;
-        $(this.options.selection).html("<img src='http://data-analytics.github.io/images/self.png'> Loading... Please wait");
+        $(this.options.selection).html("<img src='http://data-analytics.github.io/images/spinner.gif'> Loading... Please wait");
         var t = this;
         t.source_name = this.options.sourceName, t.source_link = this.options.sourceLink;
         var e = this.options;
