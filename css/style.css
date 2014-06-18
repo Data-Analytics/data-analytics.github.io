@@ -63,6 +63,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.jumbotron-icon .fa-2 {
+  font-size: 4em;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
@@ -301,7 +305,12 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background: #4C4C4C url('../images/headers.png');
+    background: #34495e;
+    }
+
+#header_wrap:after {
+    background: url(../images/bs-docs-masthead-pattern.png) repeat center center;
+    opacity: .4;
 }
 
 
@@ -314,12 +323,12 @@ Full-Width Styles
   color: #fff;
   font-size: 42px;
   font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
+  text-shadow: 1px 1px 2px #000;
 }
 #project_title_p {
   margin: 0;
-  color: #aaa;
-  text-shadow: #111 0px 0px 10px;
+  color: #89bdff;
+  text-shadow: 1px 1px 2px #000;
 }
 
 #project_tagline {
@@ -438,11 +447,12 @@ Small Device Styles
 }
 
 #banner {
+  display :None;
   color: #ccc;
   height: 50px;
   position: relative;
-  background: #0000ff url(../images/background.png);
-  border: 1px solid #33000;
+  background: #f7f9fa;
+  border: 1px solid #000;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
   box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
@@ -458,13 +468,13 @@ Small Device Styles
   margin-right: 10px;
   }
 #banner .button {
-  border: 1px solid steelblue;
+  border: #e9ecef;
   color: #aaa;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33000), color-stop(100%, #ff0000));
-  background: -webkit-linear-gradient(#33000, #ff0000);
-  background: -moz-linear-gradient(#33000, #ff0000);
-  background: -o-linear-gradient(#33000, #ff0000);
-  background: linear-gradient(#33000, #ff0000);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33000), color-stop(100%, #e9ecef));
+  background: -webkit-linear-gradient(#33000, #e9ecef);
+  background: -moz-linear-gradient(#33000, #e9ecef);
+  background: -o-linear-gradient(#33000, #e9ecef);
+  background: linear-gradient(#33000, #e9ecef);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -489,7 +499,7 @@ Small Device Styles
   background: -moz-linear-gradient(#33000, #33000);
   background: -o-linear-gradient(#33000, #33000);
   background: linear-gradient(#33000, #33000);
-  background-color: steelblue;
+  background-color: #e9ecef;
 }
 #banner .fork {
   padding: 10px 12px;
