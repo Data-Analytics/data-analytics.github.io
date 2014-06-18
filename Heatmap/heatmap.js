@@ -6,14 +6,11 @@ var parseDate = d3.time.format("%Y-%m-%d").parse,
     formatDate = d3.time.format("%b %d");
     
 function onRender() {
-
     
 var x = d3.time.scale().range([0, width]),
     y = d3.scale.linear().range([height, 0]),
     z = d3.scale.linear().range(["white", "steelblue"]);
 
-// The size of the buckets in the CSV data file.
-// This could be inferred from the data if it weren't sparse.
 var xStep = 864e5,
     yStep = 100;
     
@@ -29,26 +26,19 @@ var xStep = 864e5,
     txt_value = document.getElementById('input_data').value;
     buckets = d3.csv.parse(txt_value);
     
-    
-  // Coerce the CSV data to the appropriate types.
   buckets.forEach(function(d) {
     d.date = parseDate(d.date);
     d.bucket = +d.bucket;
     d.count = +d.count;
   });
 
-  // Compute the scale domains.
   x.domain(d3.extent(buckets, function(d) { return d.date; }));
   y.domain(d3.extent(buckets, function(d) { return d.bucket; }));
   z.domain([0, d3.max(buckets, function(d) { return d.count; })]);
 
-  // Extend the x- and y-domain to fit the last bucket.
-  // For example, the y-bucket 3200 corresponds to values [3200, 3300].
   x.domain([x.domain()[0], +x.domain()[1] + xStep]);
   y.domain([y.domain()[0], y.domain()[1] + yStep]);
 
-  // Display the tiles for each non-zero bucket.
-  // See http://bl.ocks.org/3074470 for an alternative implementation.
   svg.selectAll(".tile")
       .data(buckets)
     .enter().append("rect")

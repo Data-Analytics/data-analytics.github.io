@@ -116,7 +116,7 @@ var width = sub_width,
 var partition = d3.layout.partition()
     .size([2 * Math.PI, radius])
     .value(function(d) { return d[based_on]; });
- 
+           
 var arc = d3.svg.arc()
     .startAngle(function(d) { return d.x; })
     .endAngle(function(d) { return d.x + d.dx; })
