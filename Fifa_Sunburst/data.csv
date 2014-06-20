@@ -7,14 +7,14 @@ GROUP B,255935,Netherlands,43960,http://img.fifa.com/images/flags/4/ned.png,2,2,
 GROUP B,255935,Chile,43925,http://img.fifa.com/images/flags/4/chi.png,2,2,0,0,5,1,4,6
 GROUP B,255935,Australia,43976,http://img.fifa.com/images/flags/4/aus.png,2,0,0,2,3,6,-3,0
 GROUP B,255935,Spain,43969,http://img.fifa.com/images/flags/4/esp.png,2,0,0,2,1,7,-6,0
-GROUP C,255937,Colombia,43926,http://img.fifa.com/images/flags/4/col.png,1,1,0,0,3,0,3,3
-GROUP C,255937,Ivory Coast ,43854,http://img.fifa.com/images/flags/4/civ.png,1,1,0,0,2,1,1,3
-GROUP C,255937,Japan,43819,http://img.fifa.com/images/flags/4/jpn.png,1,0,0,1,1,2,-1,0
-GROUP C,255937,Greece,43949,http://img.fifa.com/images/flags/4/gre.png,1,0,0,1,0,3,-3,0
+GROUP C,255937,Colombia,43926,http://img.fifa.com/images/flags/4/col.png,2,2,0,0,5,1,4,6
+GROUP C,255937,Ivory Coast ,43854,http://img.fifa.com/images/flags/4/civ.png,2,1,0,1,3,3,0,3
+GROUP C,255937,Japan,43819,http://img.fifa.com/images/flags/4/jpn.png,2,0,1,1,1,2,-1,1
+GROUP C,255937,Greece,43949,http://img.fifa.com/images/flags/4/gre.png,2,0,1,1,0,3,-3,1
 GROUP D,255939,Costa Rica,43901,http://img.fifa.com/images/flags/4/crc.png,1,1,0,0,3,1,2,3
 GROUP D,255939,Italy,43954,http://img.fifa.com/images/flags/4/ita.png,1,1,0,0,2,1,1,3
-GROUP D,255939,England,43942,http://img.fifa.com/images/flags/4/eng.png,1,0,0,1,1,2,-1,0
-GROUP D,255939,Uruguay,43930,http://img.fifa.com/images/flags/4/uru.png,1,0,0,1,1,3,-2,0
+GROUP D,255939,England,43942,http://img.fifa.com/images/flags/4/eng.png,2,0,0,2,2,4,-2,0
+GROUP D,255939,Uruguay,43930,http://img.fifa.com/images/flags/4/uru.png,2,1,0,1,3,4,-1,3
 GROUP E,255941,France,43946,http://img.fifa.com/images/flags/4/fra.png,1,1,0,0,3,0,3,3
 GROUP E,255941,Switzerland,43971,http://img.fifa.com/images/flags/4/sui.png,1,1,0,0,2,1,1,3
 GROUP E,255941,Ecuador,43927,http://img.fifa.com/images/flags/4/ecu.png,1,0,0,1,1,2,-1,0
