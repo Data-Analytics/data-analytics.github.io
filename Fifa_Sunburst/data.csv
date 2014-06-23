@@ -1,4 +1,4 @@
-Country,Group,Group_id,Team_id,Team_flag,GP,W,D,L,GF,GA,GD,PTS
+key,Group,Group_id,Team_id,Team_flag,GP,W,D,L,GF,GA,GD,PTS
 Brazil,GROUP A,255933,43924,http://img.fifa.com/images/flags/4/bra.png,2,1,1,0,3,1,2,4
 Mexico,GROUP A,255933,43911,http://img.fifa.com/images/flags/4/mex.png,2,1,1,0,1,0,1,4
 Cameroon,GROUP A,255933,43849,http://img.fifa.com/images/flags/4/cmr.png,2,0,0,2,0,5,-5,0
