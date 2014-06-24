@@ -29,7 +29,7 @@
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
     <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
     <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
-    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>    
     <link rel="shortcut icon" href="/./images/logo.png">
     <title>Cartogram of the world's languages</title>
     <style>
@@ -134,7 +134,7 @@
      <!-- MAIN CONTENT -->
     <div class="container cartogram">
       <section id="main_content" class="inner">
-        <div class="alert alert-info">
+         <div class="alert alert-info">
             <div id="fb-root"></div>
             <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
@@ -155,8 +155,8 @@
           </p>
         </form>
         <div id="map-container">
-            <img id="placeholder" alt="placeholder image for old browsers" src="placeholder.png">
-            <svg id="map"></svg>
+            <img id="placeholder" alt="placeholder image for old browsers" >
+            <svg width="1600" heght="800 "id="map"></svg>
         </div>
   
       </section>
@@ -229,8 +229,8 @@
 
       var map = d3.select("#map"),
           zoom = d3.behavior.zoom()
-            .translate([-260,-25])
-            .scale(1.29)
+            .translate([-20,150])
+            .scale(0.8)
 
             .on("zoom", updateZoom),
           layer = map.append("g")
@@ -353,7 +353,7 @@
 
         worldcountries.data(features)
           .transition()
-            .duration(750)
+            .duration(500)
             .ease("linear")
             .attr("fill", "#fafafa")
             .attr("d", path);
@@ -416,7 +416,7 @@
             });
 
         worldcountries.transition()
-          .duration(2750)
+          .duration(750)
           .ease("linear")
           .attr("fill", function(d) {
             return color(value(d));
