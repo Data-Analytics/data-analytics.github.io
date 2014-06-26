@@ -59,7 +59,7 @@
       }
 
       #map-container {
-        height: 500px;
+        height: 800px;
         text-align: center;
         position: relative;
         margin: 20px 0;
@@ -229,8 +229,8 @@
 
       var map = d3.select("#map"),
           zoom = d3.behavior.zoom()
-            .translate([-20,150])
-            .scale(0.8)
+            .translate([-20,200])
+            .scale(1.0)
 
             .on("zoom", updateZoom),
           layer = map.append("g")
@@ -317,9 +317,6 @@
 
         worldcountries.append("title");
         
-        
-        
-        
         languages = languages.data(languagedata)
             .enter()
             .append("circle")
@@ -336,8 +333,7 @@
             })
             .attr("r", 0.5)
             .attr("pointer-events","none");
-        
-
+       
         parseHash();
       }
 
@@ -356,13 +352,7 @@
             .duration(500)
             .ease("linear")
             .attr("fill", "#fafafa")
-            .attr("d", path);
-
-        worldcountries.select("title")
-          .text(function(d) {
-            return d.properties.FULLNAME;
-          });
-          
+            .attr("d", path);  
       }
 
       function update() {
@@ -422,12 +412,12 @@
             return color(value(d));
           })
           .attr("d", carto.path);
+          
 
         var delta = (Date.now() - start) / 1000;
         stat.text(["calculated in", delta.toFixed(1), "seconds"].join(" "));
         body.classed("updating", false);
       }
-      
       
 
       var deferredUpdate = (function() {
