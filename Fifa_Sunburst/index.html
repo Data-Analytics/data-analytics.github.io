@@ -4,7 +4,7 @@
  Purpose:     Data visualisation and analytics examples
  Author:      sushanth
  Created:     18-08-2013
- Modified:    19-06-2014
+ Modified:    27-06-2014
  Copyright:  (c) sushanth
  Licence:     open-source
 --------------------------------------------------------------->
@@ -100,8 +100,9 @@ path {
             
           <label align="left" >Search:</label>
           <input type="text" class="search" placeholder="eg: Web">
+          <a id="save">save file </a>
       </p>
-           
+          <div id="svgdataurl"></div>
 <p id="chart" class="center"></p>
   </section>
 </div>
@@ -277,6 +278,21 @@ function arcTween(a) {
     }
     });
 }
+
+d3.select("#save").on("click", function(){
+  var html = d3.select("svg")
+        .attr("version", 1.1)
+        .attr("xmlns", "http://www.w3.org/2000/svg")
+        .node().parentNode.innerHTML;
+ 
+ 
+  console.log(html);
+  var imgsrc = 'data:image/svg+xml;base64,'+ btoa(html);
+  var img = '<img src="'+imgsrc+'">'; 
+  d3.select("#svgdataurl").html(img);
+ 
+});
+
     </script>
   </body>
 </html>
