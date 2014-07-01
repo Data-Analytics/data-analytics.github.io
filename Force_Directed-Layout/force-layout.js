@@ -18,9 +18,16 @@ var svg = d3.select(".force-layout").append("svg")
     .attr("xlink", 'http://www.w3.org/1999/xlink')
     .attr("version", '1.1');
     
+    
+    
 d3.csv("node.csv", function(error, nodes) {
     d3.csv("link.csv", function(error, links) {    
-
+    name_list =[];
+   
+      nodes.forEach(function(o) {
+      name_list.push(o.name.split(" ")[0]);
+      });
+      
     nodes.forEach(function(o) {
       o.group = parseInt(o.group);});
       
@@ -107,8 +114,19 @@ d3.csv("node.csv", function(error, nodes) {
       });
     }
 
-
     add_search('.search', '.force-layout');
+    
+   $( ".search" ).autocomplete({
+  source: function( request, response ) {
+    var matches = $.map( name_list, function(tag) {
+      if ( tag.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
+        return tag;
+      }
+    });
+    response(matches);
+    }
+    });
+    
     
     });
 });

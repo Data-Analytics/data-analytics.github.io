@@ -87,21 +87,6 @@
     </div>
         </section>
         </div>
-        <script>
-        
-    var searchTags = ["Agartala (IXA)","Ahmedabad (AMD)","Amritsar (ATQ)","Aurangabad (IXU)","Bagdogra (IXB)","Belgaum (IXG)","Bengaluru (BLR)","Bhopal (BHO)","Chandigarh (IXC)","Chennai (MAA)","Coimbatore (CJB)","Dehradun (DED)","Delhi (DEL)","Dharamshala (DHM)","Goa (GOI)","Guwahati (GAU)","Hubli (HBX)","Hyderabad (HYD)","Indore (IDR)","Jabalpur (JLR)","Jaipur (JAI)","Jammu (IXJ)","Khajuraho (HJR)","Kochi (COK)","Kolkata (CCU)","Kozhikode (CCJ)","Lucknow (LKO)","Madurai (IXM)","Mangalore (IXE)","Mumbai (BOM)","Mysore (MYQ)","Port Blair (IXZ)","Pune (PNQ)","Rajahmundry (RJA)","Srinagar (SXR)","Surat (STV)","Thiruvananthapuram (TRV)","Tirupati (TIR)","Tuticorin (TCR)","Udaipur (UDR)","Varanasi (VNS)","Vijayawada (VGA)","Vishakhapatnam (VTZ)"]
-   
 
-   $( ".search" ).autocomplete({
-  source: function( request, response ) {
-    var matches = $.map( searchTags, function(tag) {
-      if ( tag.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
-        return tag;
-      }
-    });
-    response(matches);
-    }
-    });
-    </script>
 </body>
 </html>
