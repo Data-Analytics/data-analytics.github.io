@@ -1,4 +1,5 @@
 title,thumbnail,url,author,visualizationType,description
+Housing_Market,housing_market.png,Housing_Market,self,cartogram,"London's housing market analysis of the year 2011 and 2012, the population analysis, percentage of renting, percentage of houses being built etc"
 FIFA World Cup,fifa_sunburst.png,Fifa_Sunburst,self,sun burst,"Table compares national teams that have participated in the FIFA World Cup by a number of criteria including matches, wins, losses, goals, total points, points per played matches, etc."
 Volume &User Analysis,volume_user_analysis.png,Volume_User_Analysis,self,tree map,A Zoomable treemap comparing the accessed and the number of users has accessed the site volume the site has been 
 Jobs /College Sankey,jobs_college.png,Jobs_College,self,flow chart,to actually see what's going on with a particular field or job

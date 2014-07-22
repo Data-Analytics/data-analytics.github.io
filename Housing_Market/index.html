@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="To display a chart of how much revenue each street in Toronto collected via parking ticket violations.">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="business dashboards,data journalism, data-visualisation, data-analytics, javascript, d3.js, data visualisation, clikable treemap, hierarchy treemap, treemap, tree map, Toronto Street Chart, Sub treemap">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/colorbrewer.js"></script>
+    <script type="text/javascript" src="/./javascripts/topojson.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title>London Housing Market</title>
+</head>
+<style>
+	path:hover{
+		fill-opacity: 0.5;
+	}
+</style>
+
+<body>
+      <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container">
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">London Housing Market</h1>
+          <p id="project_title_p">London's housing market analysis of the year 2011 and 2012, the population analysis, percentage of renting,
+          percentage of houses being built etc
+          </p>
+        </header>
+        <div id="banner">
+          <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Toronto-Streets-Charts/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Toronto-Streets-Charts/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Toronto-Streets-Charts" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+<div class="container">
+          <section id="main_content" class="inner">
+       <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+<div class="viz">
+	<script>
+
+		var width = 1000;
+		var height = 600;
+
+		var svg = d3.select(".viz")
+                    .append("svg:svg")
+                    .attr("width", width)
+                    .attr("height", height);
+ 		
+		var update = function(num){
+			d3.selectAll("g").remove();
+
+			switch(num){
+				case 0:
+					var color = d3.scale.linear()
+					.domain([150000, 350000])
+			    	.range(["white", "#00ff00"])
+			    	break;
+
+			    case 1:
+				    var color = d3.scale.linear()
+					.domain([0, 400000])
+			    	.range(["white", "#104E8B"]);
+			    	break;
+
+			    case 2:
+				    var color = d3.scale.linear()
+					.domain([0, 1000])
+			    	.range(["white", "#104E8B"]);
+			    	break;
+			    }
+
+			d3.json("statgeo.json", function(uk){
+
+						//Gets the coordinate data from our dataset.
+			            var subunits = topojson.feature(uk, uk.objects.thenewestdict1);
+
+			            var random = function(d){
+			            		if (num == 0){
+			            			return color(d.properties.avghouseprice);	
+			            		};
+			            		if (num == 1){
+			            			return color(d.properties.population);
+			            		};
+			            		if (num == 2){
+			            			return color(d.properties.peoplepernewhome);
+			            		}};
+
+			            //Creates a projection which we can apply to the path.
+			            var projection = d3.geo.mercator()
+			                .center([-0.10,51.5171])
+			                .rotate([0,0])
+			                .scale(34000)
+			                .translate([width / 2, height/3 ]);
+
+			            var path = d3.geo.path()
+			                .projection(projection);
+
+			            svg.selectAll("path")
+			            	.data(topojson.feature(uk, uk.objects.thenewestdict1).features)
+			            	.enter().append("path")
+			            	.attr("d", path)
+			            	.attr("fill", "white")
+			            	.attr("stroke", "#fff")
+                            .attr("data-title", function(d){ return "<p><b>" + d.properties.Name  + "</b><br/>" 
+						 			+ "Population: " + d.properties.population + "<br/>" +
+						 			"Average house price: £" + d.properties.avghouseprice + "<br/>"
+						 			+ "Percent renting from landlord: " + d.properties.percentrent + "<br/>"
+						 			+ "New homes built 2011/2012: " + d.properties.numnewhomes + "<br/>" + 
+						 			"People per new home built: " + d3.round(d.properties.peoplepernewhome)+"</p>"})
+			            	.attr("id", function(d){return d.properties.Name})
+			            	.transition()
+				            	.duration(500)
+				            	.attr("fill", random)
+				            	.attr("stroke", "#222")
+				            	.attr("stroke-width", "0.35");
+                                    
+                                    
+       $("path").tooltip({container: '.viz', html: true, placement:'top'});                         
+    })
+	};
+
+	update(0);
+	</script>
+</div>
+</div>
+</section>
+</div>
