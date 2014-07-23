@@ -12,7 +12,7 @@ function onRender() {
 
      var group_by = document.getElementById("options_view").value,
          year = document.getElementById("year").value;
-          
+     console.log(group_by,year)     
      d3.select('.par_treemap').select("svg")
        .remove();
 

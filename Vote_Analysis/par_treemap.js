@@ -59,7 +59,6 @@ function onRender() {
       .attr("data-title",function(d) { return ' <p>party : '+d.party+'</p> <br/><p> votes : '+d.votes+'</p>' ;})
       .attr("sub_link",function(d) { return d.party ;})
       .style("fill",function(d) { return d.color ;})
-      //.style("opacity", function(d) { return 1 - parseFloat(d.votes).toFixed(1); })
       .style("stroke", '#fff')
       .style("stroke-width", 0.5);        
 
