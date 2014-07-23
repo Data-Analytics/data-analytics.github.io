@@ -31,7 +31,7 @@
     <link rel="shortcut icon" href="/./images/logo.png">
     <title>World Population Comparison - Word Cloud</title>
   </head>
-<body onload="onRender();">
+<body>
      <!-- HEADER -->
         <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
             <header class="inner container">
@@ -72,29 +72,19 @@
             <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
             <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
         </div>
-        <label value="group">Based on: </label>
-        <select id="options_view" onchange="onRender();">
-            <option value="Population" class="name">Population</option>
-            <option value="Density" class="name">Density</option>
-            <option value="Area" class="name">Area</option>
-        </select>
         <div id="wordcloud"></div>
      
    <div align="center"> 
   The color is to attract the user the size denotes the number of population ,bigger the size shows the higher population and vice versa </div>
 <script>
-function onRender() {   
- alert('hai');
- d3.csv("world_data.csv", function(data) {
+ d3.csv("data.csv", function(data) {
   cloud.make({
    width: 960,
    height: 420,
    font: "Impact",
    container: "#wordcloud",
-   words: data,
-   options_view : document.getElementById("options_view").value   }); 
+   words: data }); 
    });
-   }
 </script>
  </section>
     </div>

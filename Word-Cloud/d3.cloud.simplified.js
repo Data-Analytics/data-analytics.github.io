@@ -10,17 +10,15 @@ function addThousandsSeparator(input) {
     return output;
 }
 
-
 cloud = {
     make: function(options) {
-
+        
         if(options == undefined) options = {}
         if(options.width == undefined) options.width = 300
         if(options.height == undefined) options.height = 300
         if(options.font == undefined) options.font = "Arial"
         if(options.container == undefined) options.container = "body"
-        if(options.options_view == undefined) options.options_view = "Population"
-        if(options.words == undefined) options.words = [{Country: "This", Population: 40}, {Country: "is", Population: 40}, {Country: "an", Population: 40}, {Country: "Example", Population: 40}]
+        if(options.words == undefined) options.words = [{text: "This", size: 40}, {text: "is", size: 40}, {text: "an", size: 40}, {text: "Example", size: 40}]
     
         var fill = d3.scale.category20();
   
@@ -28,7 +26,7 @@ cloud = {
         .words(options.words)
         .rotate(function(d) { return ~~(Math.random() *  2) * 90; })
         .font(options.font)
-        .fontSize(function(d) { return d[options_view]; })
+        .fontSize(function(d) { return d.size; })
         .on("end", function(words) {
             d3.select(options.container).append("svg")
             .attr("width", options.width)
@@ -41,19 +39,19 @@ cloud = {
             .selectAll("text")
             .data(words)
             .enter().append("a")
-            .attr("xlink:href",function(d) { return 'http://en.wikipedia.org/wiki/'+d.Country } )
+            .attr("xlink:href",function(d) { return 'http://en.wikipedia.org/wiki/'+d.text } )
            .attr("class","word_cloud") 
            .attr("target","_blank")
             .append("text")
-            .style("font-size", function(d) { return d[options_view] + "px"; })
+            .style("font-size", function(d) { return d.size + "px"; })
             .style("font-family", options.font)
             .style("fill", function(d, i) { return fill(i); })
             .attr("text-anchor", "middle")
             .attr("transform", function(d) {
                 return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
             })
-            .attr("data-title",function(d) { return d.Country+' : '+addThousandsSeparator((d[options_view])); })
-            .text(function(d) { return d.Country; });
+            .attr("data-title",function(d) { return d.text+' : '+addThousandsSeparator((d.size*300)*(d.size*300)); })
+            .text(function(d) { return d.text; });
             
               $("text").tooltip({container: 'body', html: true, placement:'top'});  
         })
