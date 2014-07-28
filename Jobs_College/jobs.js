@@ -46,7 +46,7 @@ relayout = function(maindata,filter) {
 
     path = sankey.link();
 
-    linkColor = d3.scale.log().domain([.1,1,10]).range(["red","grey","blue"])
+    linkColor = d3.scale.log().domain([.1,1,10]).range(["brown","grey","purple"])
 
     var link = linkset.selectAll(".link")
         .data(graph.links,function(d) {return d.source.name + "-" + d.target.name})
@@ -124,7 +124,7 @@ entering
         return d.color = industryColors(d.name.split("-")[0])
         return d.color = color(d.name.replace(/ .*/, "")); })
     .style("stroke", function(d) {
-        return d3.rgb(d.color).darker(2); })
+        return d3.rgb(d.color).darker(); })
     .attr("height", function(d) { return d.relative.dy; })
     .style("opacity",0)
     .attr('data-title',function(d) {
