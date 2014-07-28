@@ -1,0 +1,115 @@
+
+#content {
+    width: 925px;
+    margin: 0 auto;
+}
+#filters {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+#filters a {
+    color: #000;
+    font-size: 12px;
+    padding: 5px;
+    background: #e2e2e2;
+    cursor: pointer;
+    margin-right: 3px;
+}
+#filters a:last-child {
+    margin-right: 0;
+}
+#filters a.SAS {
+    background: #895881;
+    color: #fff;
+}
+#filters a.ECS {
+    background: #ED7C31;
+    color: #fff;
+}
+#filters a.MEA {
+    background: #82A5C0;
+    color: #fff;
+}
+#filters a.SSF {
+    background: #6E9E75;
+    color: #fff;
+}
+#filters a.LCN {
+    background: #00BBD6;
+    color: #fff;
+}
+#filters a.EAS {
+    background: #e25f82;
+    color: #fff;
+}
+#filters a.NAC {
+    background: #be1932;
+    color: #fff;
+}
+#vis {
+    min-height: 550px;
+}
+#blurb {
+    height: 60px;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 20px;
+}
+path {
+    stroke: #e2e2e2;
+    stroke-width: 0.9;
+    fill: none;
+}
+path.current, path.highlight.current {
+    stroke: #000;
+    stroke-width: 1.7;
+}
+.SAS.highlight {
+    stroke: #895881;
+}
+.ECS.highlight {
+    stroke: #ED7C31;
+}
+.MEA.highlight {
+    stroke: #82A5C0;
+}
+.SSF.highlight {
+    stroke: #6E9E75;
+}
+.LCN.highlight {
+    stroke: #00BBD6;
+}
+.EAS.highlight {
+    stroke: #e25f82;
+}
+.NAC.highlight {
+    stroke: #be1932;
+}
+.highlight {
+    stroke-width: 1px;
+}
+line {
+    stroke: black;
+}
+text {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+}
+.axis {
+    stroke-width: 0.8;
+    stroke: #000;
+}
+.xTicks, .yTicks {
+    stroke-width: 0.6;
+    stroke: #000;
+}
+#cite {
+    font-size: 0.8em;
+    text-align: right;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+#cite a {
+    background: #e2e2e2;
+    text-decoration: none;
+    color: #821122;
+}

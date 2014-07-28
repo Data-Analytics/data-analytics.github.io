@@ -1,14 +1,15 @@
 title,thumbnail,url,author,visualizationType,description
-Housing_Market,housing_market.png,Housing_Market,self,cartogram,"London's housing market analysis of the year 2011 and 2012, the population analysis, percentage of renting, percentage of houses being built etc"
-FIFA World Cup,fifa_sunburst.png,Fifa_Sunburst,self,sun burst,"Table compares national teams that have participated in the FIFA World Cup by a number of criteria including matches, wins, losses, goals, total points, points per played matches, etc."
-Volume &User Analysis,volume_user_analysis.png,Volume_User_Analysis,self,tree map,A Zoomable treemap comparing the accessed and the number of users has accessed the site volume the site has been 
 Jobs /College Sankey,jobs_college.png,Jobs_College,self,flow chart,to actually see what's going on with a particular field or job
+Housing_Market,housing_market.png,Housing_Market,self,cartogram,"London's housing market analysis of the year 2011 and 2012, the population analysis, percentage of renting, percentage of houses being built etc"
 Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections  sice independence
 Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
-Most Powerful People,fobers_analysis.png,Fobers_Analysis,self,tree map,The World's Most Powerful People in the years 2014 from Forbes shows top 72 people of 7.2 billion people all around the world
-Funnel Chart,funnel_chart.png,Funnel_Chart,self,funnel chart,"The funnel shows the various steps of the sales process i.e. advertisements scanned, shares on social media, number of users who saw the product"
 Election Analysis ,asset_analysis.png,Asset_Analysis,self,tree map,"The graphical image tree map showing the trend of the each party mp's assets , criminal cases etc in 2014"
+Life Expectency Sparkline,life_expectency.png,Life_Expectency,self,sparkline,"People are living longer around the world, some more so than others. Select a region below to compare, or roll over to the graph to highlight countries."
 Vote Analysis,vote_analysis.png,Vote_Analysis,self,tree map,The graphical image tree map showing the vote share by each party in the elections Since Independence
+Funnel Chart,funnel_chart.png,Funnel_Chart,self,funnel chart,"The funnel shows the various steps of the sales process i.e. advertisements scanned, shares on social media, number of users who saw the product"
+FIFA World Cup,fifa_sunburst.png,Fifa_Sunburst,self,sun burst,"Table compares national teams that have participated in the FIFA World Cup by a number of criteria including matches, wins, losses, goals, total points, points per played matches, etc."
+Volume &User Analysis,volume_user_analysis.png,Volume_User_Analysis,self,tree map,A Zoomable treemap comparing the accessed and the number of users has accessed the site volume the site has been 
+Most Powerful People,fobers_analysis.png,Fobers_Analysis,self,tree map,The World's Most Powerful People in the years 2014 from Forbes shows top 72 people of 7.2 billion people all around the world
 Pyramid  chart,pyramid.png,Pyramid_chart,self,pyramid chart,"The graphical pyramid charts denoting no of districts in each state in india, sorted in descening order"
 Word cloud,word-cloud.png,Word-Cloud,self,word cloud,"A word cloud, or tag cloud is a visual representation for text data,typically used to depict keyword on websites "
 Mareys Trains,marey-trains.png,Mareys-Trains,self,train flow,"The  graphical train schedule. Stations are separated vertically in proportion to geography;,the slope of the line reflects the speed of the train"
