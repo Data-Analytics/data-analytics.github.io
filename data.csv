@@ -4,7 +4,7 @@ Housing_Market,housing_market.png,Housing_Market,self,cartogram,"London's housin
 Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections  sice independence
 Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
 Election Analysis ,asset_analysis.png,Asset_Analysis,self,tree map,"The graphical image tree map showing the trend of the each party mp's assets , criminal cases etc in 2014"
-Life Expectency Sparkline,life_expectency.png,Life_Expectency,self,sparkline,"People are living longer around the world, some more so than others. Select a region below to compare, or roll over to the graph to highlight countries."
+Life Expectency ,life_expectency.png,Life_Expectency,self,sparkline,"People are living longer around the world, some more so than others. Select a region below to compare, or roll over to the graph to highlight countries."
 Vote Analysis,vote_analysis.png,Vote_Analysis,self,tree map,The graphical image tree map showing the vote share by each party in the elections Since Independence
 Funnel Chart,funnel_chart.png,Funnel_Chart,self,funnel chart,"The funnel shows the various steps of the sales process i.e. advertisements scanned, shares on social media, number of users who saw the product"
 FIFA World Cup,fifa_sunburst.png,Fifa_Sunburst,self,sun burst,"Table compares national teams that have participated in the FIFA World Cup by a number of criteria including matches, wins, losses, goals, total points, points per played matches, etc."
