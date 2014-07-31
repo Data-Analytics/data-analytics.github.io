@@ -72,13 +72,12 @@ d3.csv("data.csv", function(data) {
         d3.selectAll("svg").remove();
 
         var svg = d3.select("#chart").append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .attr("viewBox", "0 0 "+width+" "+height)
+            .attr("width", width+200)
+            .attr("height", height+200)
             .attr("preserveAspectRatio", "none")
           .append("g")
             .attr("id", "circle")
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+            .attr("transform", "translate(" + (width+200) / 2 + "," + (height+200) / 2 + ")");
 
         svg.append("circle")
             .attr("r", outerRadius);
@@ -120,18 +119,22 @@ d3.csv("data.csv", function(data) {
                 .attr("id", function(d, i) { return "group" + i; })
                 .attr("d", arc)
                 .style("fill", function(d, i) { return cities[i].color; });
-
-              var groupText = group.append("text")
+                
+              var groupText = group.append("foreignObject")
                 .each(function(d) { d.angle = (d.startAngle + d.endAngle) / 2; })
                 .attr("dy", ".35em")
+                .attr("width", 80)
+                .attr("height", 80)
                 .attr("text-anchor", function(d) {
-                  return d.angle > Math.PI ? "end" : null;
+                  return d.angle > Math.PI ? "start" : null;
                 })
                 .attr("transform", function(d) {
                   return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")"
-                      + "translate(" + (innerRadius + 32) + ")"
-                      + (d.angle > Math.PI ? "rotate(180)" : "");
+                      + "translate(" + (innerRadius + 32) + ")";
                 })
+                .append("xhtml:body")
+                .append("p")
+
                 .text(function(d,i) { return cities[i].name; });
 
           // Add the chords.
