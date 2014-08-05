@@ -249,6 +249,7 @@
             .selectAll("li.entry")
             .data(data)
             .enter().append("li")
+            .attr('id', 'grey_scale')
             .attr('class', 'entry')
             .append('a')
             .attr('href', content.href)

@@ -127,3 +127,23 @@ a:link, a:hover, a:visited {
     top: 6px;
     color: #fff;
 }
+#grey_scale{
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%); 
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%); 
+-o-filter: grayscale(100%);
+filter: url(#greyscale);
+filter: gray;
+-webkit-filter: grayscale(1);
+}
+
+
+#grey_scale:hover,.rightad img,.leftad img,#top_ad img, .color-chunk, .htl-logo img, .logoit-holi img,#busleft img,#busright img, #modi-banner a img, a#newad  img, .fifa-logo img, .fifa-map img, .leftside-ad img, .rightside-ad img, #budget-banner img	 {filter: grayscale(0);
+-webkit-filter: grayscale(0); 
+-moz-filter: grayscale(0);
+-ms-filter: grayscale(0); 
+-o-filter: grayscale(0);
+filter: none;
+}
+
