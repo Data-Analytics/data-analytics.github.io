@@ -1,8 +1,8 @@
 // Based on http://vis.stanford.edu/protovis/ex/clock.html
 // Based on http://blog.pixelbreaker.com/polarclock
 
-var width = 420,
-    height = 420,
+var width = 480,
+    height = 480,
     radius = Math.min(width, height) / 1.8,
     sectorWidth = .09,
     fsec = d3.time.format("%S s"),
@@ -50,6 +50,7 @@ d3.timer(function() {
 
   g.select("path")
       .style("fill", function(d) { return fill(d.value); })
+	  .style("stroke", function(d) { return d3.rgb(fill(d.value)).darker(); })
       .attr("d", arc)
       .attr('data-title',function(d) { return d.text; });
 

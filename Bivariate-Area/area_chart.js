@@ -29,8 +29,8 @@ var area = d3.svg.area()
 
     
     d3.select("svg")
-		.remove();
-	   
+        .remove();
+       
 var svg = d3.select("#Bivariate-Area").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)

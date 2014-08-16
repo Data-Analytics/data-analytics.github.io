@@ -1,0 +1,541 @@
+state,constituency,party,name,age,category,gender,votes,polled_votes,year,poll_date,education,assets,criminal_cases,color
+Uttar Pradesh,Maharajganj,Bharatiya Janata Party,PANKAJ,44,GEN,Male,471542,1902732,2014,12-05-2014,12th,191819151,0,#FB7B0D
+Uttar Pradesh,Hamirpur,Bharatiya Janata Party,KUNWAR PUSHPENDRA SINGH CHANDEL,40,GEN,Male,453884,1810445,2014,30-04-2014,Post Graduate,71265181,1,#FB7B0D
+Maharashtra,Aurangabad,Shivsena,CHANDRAKANT BHAURAO KHAIRE,62,GEN,Male,520902,1769207,2014,24-04-2014,12th,90614560,8,#F05A00
+Andhra Pradesh,Malkajgiri,Telugu Desam,CH.MALLA REDDY,56,GEN,Male,523336,1620397,2014,30-04-2014,12th,488525332,0,#4bacc6
+Assam,Gauhati,Bharatiya Janata Party,BIJOYA CHAKRAVARTY,75,GEN,Female,764985,1511729,2014,24-04-2014,Post Graduate,12574493,0,#FB7B0D
+Karnataka,Bangalore Rural,Indian National Congress,D K SURESH,47,GEN,Male,652723,1455244,2014,17-04-2014,12th,858713138,7,#019733
+Assam,Dhubri,All India United Democratic Front,BADRUDDIN AJMAL,50,GEN,Male,592569,1369624,2014,24-04-2014,Others,432748134,1,#999
+West Bengal,Ghatal,All India Trinamool Congress,ADHIKARI DEEPAK (DEV),32,GEN,Male,685696,1366709,2014,12-05-2014,10th,152447159,0,#0C6965
+West Bengal,Arambagh,All India Trinamool Congress,APARUPA PODDAR (AFRIN ALI),28,GEN,Female,748764,1361934,2014,30-04-2014,Post Graduate,3271869,0,#0C6965
+Karnataka,Bangalore North,Bharatiya Janata Party,D.V SADANANDA GOWDA,61,GEN,Male,718326,1356718,2014,17-04-2014,Graduate Professional,98888874,0,#FB7B0D
+Nct Of Delhi,North West Delhi,Bharatiya Janata Party,UDIT RAJ,56,GEN,Male,629860,1356036,2014,10-04-2014,Doctorate,44902363,1,#FB7B0D
+West Bengal,Ranaghat,All India Trinamool Congress,TAPAS MANDAL,42,GEN,Male,590451,1353196,2014,12-05-2014,Doctorate,8169115,0,#0C6965
+West Bengal,Hooghly,All India Trinamool Congress,DR. RATNA DE (NAG),62,GEN,Female,614312,1348870,2014,30-04-2014,Post Graduate,18617758,0,#0C6965
+Nct Of Delhi,West Delhi,Bharatiya Janata Party,PARVESH SAHIB SINGH VERMA,36,GEN,Male,651395,1347971,2014,10-04-2014,Post Graduate,107235461,1,#FB7B0D
+Uttar Pradesh,Ghaziabad,Bharatiya Janata Party,VIJAY KUMAR SINGH,62,GEN,Male,758482,1342320,2014,10-04-2014,Doctorate,41137044,2,#FB7B0D
+West Bengal,Tamluk,All India Trinamool Congress,ADHIKARI SUVENDU,44,GEN,Male,716928,1337684,2014,12-05-2014,Post Graduate,6480767,2,#0C6965
+West Bengal,Cooch Behar,All India Trinamool Congress,RENUKA SINHA,65,GEN,Female,526499,1332409,2014,17-04-2014,Graduate Professional,13017282,0,#0C6965
+West Bengal,Burdwan - Durgapur,All India Trinamool Congress,DR. MAMTAZ SANGHAMITA,68,GEN,Female,554521,1331242,2014,30-04-2014,Post Graduate,107680000,0,#0C6965
+West Bengal,Bardhaman Purba,All India Trinamool Congress,SUNIL KUMAR MONDAL,55,GEN,Male,574660,1320922,2014,30-04-2014,Graduate Professional,11841000,0,#0C6965
+Uttar Pradesh,Jhansi,Bharatiya Janata Party,UMA BHARATI,55,GEN,Female,575889,1320804,2014,30-04-2014,5th,14376218,13,#FB7B0D
+Haryana,Gurgaon,Bharatiya Janata Party,INDERJIT SINGH RAO,64,GEN,Male,644780,1320619,2014,10-04-2014,Graduate Professional,250698763,0,#FB7B0D
+Nct Of Delhi,North East Delhi,Bharatiya Janata Party,MANOJ TIWARI,43,GEN,Male,596125,1317338,2014,10-04-2014,Post Graduate,199483924,0,#FB7B0D
+Madhya Pradesh,Indore,Bharatiya Janata Party,SUMITRA MAHAJAN (TAI),70,GEN,Female,854972,1316817,2014,24-04-2014,Post Graduate,18732234,0,#FB7B0D
+Andhra Pradesh,Chelvella,Telangana Rashtra Samithi,KONDA VISHWESHWAR REDDY,54,GEN,Male,435077,1315862,2014,30-04-2014,Post Graduate,5286230210,0,#999
+West Bengal,Bolpur,All India Trinamool Congress,ANUPAM HAZRA,32,GEN,Male,630693,1304756,2014,30-04-2014,Doctorate,4866883,0,#0C6965
+West Bengal,Jalpaiguri,All India Trinamool Congress,BIJOY CHANDRA BARMAN,57,GEN,Male,494773,1302117,2014,17-04-2014,Post Graduate,9396430,0,#0C6965
+Rajasthan,Jaipur,Bharatiya Janata Party,RAMCHARAN BOHARA,56,GEN,Male,863358,1296806,2014,17-04-2014,12th,135809546,0,#FB7B0D
+West Bengal,Kanthi,All India Trinamool Congress,ADHIKARI SISIR KUMAR,74,GEN,Male,676749,1290811,2014,12-05-2014,12th,19498381,1,#0C6965
+West Bengal,Srerampur,All India Trinamool Congress,KALYAN BANERJEE,57,GEN,Male,514933,1290433,2014,30-04-2014,Graduate Professional,88512676,1,#0C6965
+West Bengal,Murshidabad,Communist Party of India  (Marxist),BADARUDDOZA KHAN,59,GEN,Male,426947,1287763,2014,24-04-2014,Graduate,2758610,0,#DE0000
+Tamil Nadu,Sriperumbudur,All India Anna Dravida Munnetra Kazhagam,"RAMACHANDRAN, K.N. THIRU",59,GEN,Male,545820,1286647,2014,24-04-2014,Post Graduate,936721057,0,#9DBC2A
+West Bengal,Bangaon,All India Trinamool Congress,KAPIL KRISHNA THAKUR,73,GEN,Male,551213,1283688,2014,12-05-2014,Graduate,9667890,0,#0C6965
+Andhra Pradesh,Narasaraopet,Telugu Desam,SAMBASIVA RAO RAYAPATI,70,GEN,Male,632464,1282058,2014,07-05-2014,Graduate,595838093,2,#4bacc6
+Haryana,Sirsa,Indian National Lok Dal,CHARANJEET SINGH RORI,43,GEN,Male,506370,1279105,2014,10-04-2014,10th,8146887,0,#999
+West Bengal,Birbhum,All India Trinamool Congress,SATABDI ROY,45,GEN,Female,460568,1275819,2014,30-04-2014,Graduate,54972174,0,#0C6965
+West Bengal,Basirhat,All India Trinamool Congress,IDRIS ALI,64,GEN,Male,492326,1273771,2014,12-05-2014,Graduate Professional,9800277,9,#0C6965
+West Bengal,Jadavpur,All India Trinamool Congress,SUGATA BOSE,57,GEN,Male,584244,1272362,2014,12-05-2014,Doctorate,46315770,0,#0C6965
+West Bengal,Bishnupur,All India Trinamool Congress,KHAN SAUMITRA,34,GEN,Male,578870,1272070,2014,07-05-2014,12th,1197255,1,#0C6965
+West Bengal,Barasat,All India Trinamool Congress,DR. KAKALI GHOSHDOSTIDAR,55,GEN,Female,525387,1269331,2014,12-05-2014,Graduate Professional,31254311,0,#0C6965
+West Bengal,Mathurapur,All India Trinamool Congress,CHOUDHURY MOHAN JATUA,75,GEN,Male,627761,1265531,2014,12-05-2014,Post Graduate,4857752,0,#0C6965
+Karnataka,Chikkballapur,Indian National Congress,M VEERAPPA MOILY,74,GEN,Male,424800,1263274,2014,17-04-2014,Graduate Professional,137366682,0,#019733
+West Bengal,Diamond Harbour,All India Trinamool Congress,ABHISHEK BANERJEE,26,GEN,Male,508481,1261296,2014,12-05-2014,Post Graduate,15199272,0,#0C6965
+Maharashtra,Kolhapur,Nationalist Congress Party,DHANANJAY BHIMRAO MAHADIK,42,GEN,Male,607665,1260289,2014,17-04-2014,Graduate,448882000,1,#999
+West Bengal,Medinipur,All India Trinamool Congress,SANDHYA ROY,73,GEN,Female,579860,1260032,2014,07-05-2014,Literate,31031095,0,#0C6965
+Chhattisgarh,Durg,Indian National Congress,TAMRADHWAJ SAHU,65,GEN,Male,570687,1258342,2014,24-04-2014,12th,21002226,0,#019733
+West Bengal,Jhargram,All India Trinamool Congress,UMA SAREN,30,GEN,Female,674504,1257613,2014,07-05-2014,Graduate Professional,499646,0,#0C6965
+Madhya Pradesh,Khandwa,Bharatiya Janata Party,NANDKUMAR SINGH CHOUHAN (NANDU BHAIYA),61,GEN,Male,717357,1257327,2014,24-04-2014,Post Graduate,40188989,0,#FB7B0D
+Rajasthan,Ganganagar,Bharatiya Janata Party,NIHALCHAND,43,GEN,Male,658130,1256806,2014,17-04-2014,Graduate,10861172,0,#FB7B0D
+Tamil Nadu,Thiruvallur,All India Anna Dravida Munnetra Kazhagam,VENUGOPAL.P.(DR),61,GEN,Male,628499,1254440,2014,24-04-2014,Graduate Professional,28643502,0,#9DBC2A
+Jammu & Kashmir,Jammu,Bharatiya Janata Party,JUGAL KISHORE,51,GEN,Male,619995,1253593,2014,10-04-2014,10th,26824308,0,#FB7B0D
+Chhattisgarh,Raipur,Bharatiya Janata Party,RAMESH BAIS,66,GEN,Male,654922,1250845,2014,24-04-2014,12th,73190135,0,#FB7B0D
+West Bengal,Krishnanagar,All India Trinamool Congress,TAPAS PAUL,57,GEN,Male,438789,1247914,2014,12-05-2014,Graduate,27829669,4,#0C6965
+Chhattisgarh,Raigarh,Bharatiya Janata Party,VISHNU DEO SAI,50,GEN,Male,662478,1246186,2014,24-04-2014,10th,21576220,0,#FB7B0D
+Andhra Pradesh,Guntur,Telugu Desam,JAYADEV GALLA,48,GEN,Male,618417,1244926,2014,07-05-2014,Graduate,6830581361,0,#4bacc6
+West Bengal,Bankura,All India Trinamool Congress,SREEMATI  DEV VARMA (MOON MOON SEN),60,GEN,Female,483455,1236319,2014,07-05-2014,Post Graduate,15314000,0,#0C6965
+Assam,Mangaldoi,Bharatiya Janata Party,RAMEN DEKA,59,GEN,Male,486357,1233237,2014,24-04-2014,Graduate,14782357,0,#FB7B0D
+Maharashtra,Beed,Bharatiya Janata Party,MUNDE GOPINATHRAO PANDURANG,66,GEN,Male,635995,1232202,2014,17-04-2014,Graduate Professional,380072890,3,#FB7B0D
+Assam,Nowgong,Bharatiya Janata Party,RAJEN GOHAIN,63,GEN,Male,494146,1230074,2014,24-04-2014,Graduate Professional,24736544,1,#FB7B0D
+Assam,Kokrajhar,Independent,NABA KUMAR SARANIA (HIRA),53,GEN,Male,634428,1223869,2014,24-04-2014,Graduate,21117979,0,#95b3d7
+West Bengal,Alipurduars,All India Trinamool Congress,DASRATH TIRKEY,47,GEN,Male,362453,1223566,2014,17-04-2014,Graduate,3550353,0,#0C6965
+Rajasthan,Barmer,Bharatiya Janata Party,COL. SONA RAM,73,GEN,Male,488747,1219119,2014,17-04-2014,Graduate Professional,174678454,1,#FB7B0D
+Haryana,Ambala,Bharatiya Janata Party,RATTAN LAL KATARIA,62,GEN,Male,612121,1218995,2014,10-04-2014,Post Graduate,42150634,0,#FB7B0D
+Madhya Pradesh,Mandla,Bharatiya Janata Party,FAGGAN SINGH KULASTE,54,GEN,Male,585720,1218518,2014,10-04-2014,Post Graduate,25738420,2,#FB7B0D
+Andhra Pradesh,Tirupati,Yuvajana Sramika Rythu Congress Party,VARAPRASAD RAO VELAGAPALLI,61,GEN,Male,580376,1213064,2014,07-05-2014,Doctorate,129128388,0,#999
+Andhra Pradesh,Bhongir,Telangana Rashtra Samithi,DR. BOORA NARSAIAH GOUD,55,GEN,Male,448245,1211943,2014,30-04-2014,Post Graduate,202983225,0,#999
+Andhra Pradesh,Ongole,Yuvajana Sramika Rythu Congress Party,Y.V.SUBBA REDDY,53,GEN,Male,589960,1208225,2014,07-05-2014,Post Graduate,735451548,0,#999
+Karnataka,Dakshina Kannada,Bharatiya Janata Party,NALIN KUMAR KATEEL,48,GEN,Male,642739,1207474,2014,17-04-2014,10th,8789001,1,#FB7B0D
+Gujarat,Bardoli,Bharatiya Janata Party,VASAVA PARBHUBHAI NAGARBHAI,44,GEN,Male,622769,1206179,2014,30-04-2014,Others,15909957,1,#FB7B0D
+Assam,Barpeta,All India United Democratic Front,SIRAJ UDDIN AJMAL,57,GEN,Male,394702,1205863,2014,24-04-2014,Graduate,670806607,0,#999
+Andhra Pradesh,Anantapur,Telugu Desam,J.C. DIVAKAR REDDI,70,GEN,Male,606509,1205054,2014,07-05-2014,12th,226481020,0,#4bacc6
+Andhra Pradesh,Nandyal,Yuvajana Sramika Rythu Congress Party,S.P.Y REDDY,64,GEN,Male,622411,1204956,2014,07-05-2014,Graduate,219578079,2,#999
+West Bengal,Purulia,All India Trinamool Congress,DR. MRIGANKA MAHATO,51,GEN,Male,468277,1204675,2014,07-05-2014,Graduate Professional,8895210,0,#0C6965
+Andhra Pradesh,Eluru,Telugu Desam,MAGANTI VENKATESWARA RAO (BABU),54,GEN,Male,623471,1201696,2014,07-05-2014,10th,129394729,2,#4bacc6
+Uttar Pradesh,Unnao,Bharatiya Janata Party,SWAMI SACHCHIDANAND HARI SAKSHI,58,GEN,Male,518834,1201603,2014,30-04-2014,Doctorate,32137597,8,#FB7B0D
+Andhra Pradesh,Kadapa,Yuvajana Sramika Rythu Congress Party,Y.S. AVINASH REDDY,29,GEN,Male,671983,1200662,2014,07-05-2014,Post Graduate,70480623,1,#999
+Uttar Pradesh,Gautam Buddha Nagar,Bharatiya Janata Party,DR.MAHESH  SHARMA,54,GEN,Male,599702,1199238,2014,10-04-2014,Graduate Professional,473797545,0,#FB7B0D
+Andhra Pradesh,Chittoor,Telugu Desam,NARAMALLI SIVAPRASAD,62,GEN,Male,594862,1198915,2014,07-05-2014,Graduate Professional,14878003,0,#4bacc6
+Maharashtra,Bhandara - Gondiya,Bharatiya Janata Party,NANABHAU FALGUNRAO PATOLE,51,GEN,Male,606129,1197196,2014,10-04-2014,12th,12738190,5,#FB7B0D
+Nct Of Delhi,East Delhi,Bharatiya Janata Party,MAHEISH GIRRI,39,GEN,Male,572202,1196336,2014,10-04-2014,10th,5216375,1,#FB7B0D
+Andhra Pradesh,Vijayawada,Telugu Desam,KESINENI SRINIVAS,48,GEN,Male,592696,1195075,2014,07-05-2014,10th,1284122669,3,#4bacc6
+Uttar Pradesh,Saharanpur,Bharatiya Janata Party,RAGHAV LAKHANPAL,39,GEN,Male,472999,1194308,2014,10-04-2014,Post Graduate,35406431,0,#FB7B0D
+Haryana,Karnal,Bharatiya Janata Party,ASHWINI KUMAR,57,GEN,Male,594817,1193500,2014,10-04-2014,Graduate,698638135,6,#FB7B0D
+Rajasthan,Udaipur,Bharatiya Janata Party,ARJUNLAL MEENA,49,GEN,Male,660373,1193202,2014,17-04-2014,Post Graduate,17049951,0,#FB7B0D
+Karnataka,Mandya,Janata Dal  (Secular),C.S.PUTTARAJU,50,GEN,Male,524370,1192638,2014,17-04-2014,12th,45209196,0,#8064a2
+Andhra Pradesh,Medak,Telangana Rashtra Samithi,KALVAKUNTLA CHANDRASEKHAR RAO,60,GEN,Male,657492,1191096,2014,30-04-2014,Graduate,151582464,2,#999
+Andhra Pradesh,Nalgonda,Indian National Congress,GUTHA SUKHENDER REDDY,60,GEN,Male,472093,1189399,2014,30-04-2014,12th,85907866,1,#019733
+Maharashtra,Hatkanangle,Swabhimani Paksha,RAJU SHETTY,46,GEN,Male,640428,1188871,2014,17-04-2014,10th,16152914,12,#999
+Andhra Pradesh,Nellore,Yuvajana Sramika Rythu Congress Party,MEKAPATI RAJAMOHAN REDDY,69,GEN,Male,576396,1187648,2014,07-05-2014,Graduate Professional,361746068,2,#999
+Chhattisgarh,Sarguja,Bharatiya Janata Party,KAMALBHAN SINGH MARABI,51,GEN,Male,585336,1187321,2014,24-04-2014,Post Graduate,24773173,0,#FB7B0D
+West Bengal,Joynagar,All India Trinamool Congress,PRATIMA MONDAL,48,GEN,Female,494746,1186052,2014,12-05-2014,Post Graduate,10614252,0,#0C6965
+West Bengal,Uluberia,All India Trinamool Congress,SULTAN AHMED,58,GEN,Male,570785,1186027,2014,30-04-2014,Graduate,22792936,0,#0C6965
+Andhra Pradesh,Bapatla,Telugu Desam,MALYADRI SRIRAM,60,GEN,Male,578145,1184634,2014,07-05-2014,Post Graduate,45359744,0,#4bacc6
+Andhra Pradesh,Khammam,Yuvajana Sramika Rythu Congress Party,PONGULETI  SRINIVASA REDDY,48,GEN,Male,421957,1182897,2014,30-04-2014,12th,346150516,0,#999
+Chhattisgarh,Rajnandgaon,Bharatiya Janata Party,ABHISHEK SINGH,33,GEN,Male,643473,1178296,2014,17-04-2014,Graduate Professional,44093207,0,#FB7B0D
+Andhra Pradesh,Hindupur,Telugu Desam,KRISTAPPA NIMMALA,57,GEN,Male,604291,1177257,2014,07-05-2014,Graduate,35793637,2,#4bacc6
+Punjab,Bathinda,Shiromani Akali Dal,HARSIMRAT KAUR BADAL,47,GEN,Female,514727,1176767,2014,30-04-2014,10th,1081664910,0,#999
+Tamil Nadu,Coimbatore,All India Anna Dravida Munnetra Kazhagam,"NAGARAJAN, P.",52,GEN,Male,431717,1176620,2014,24-04-2014,Graduate Professional,34306545,0,#9DBC2A
+Uttarakhand,Hardwar,Bharatiya Janata Party,RAMESH POKHRIYAL NISHANK,54,GEN,Male,592320,1175692,2014,07-05-2014,Doctorate,17917274,1,#FB7B0D
+Andhra Pradesh,Warangal,Telangana Rashtra Samithi,KADIYAM SRIHARI,63,GEN,Male,661639,1174631,2014,30-04-2014,Post Graduate,13495000,6,#999
+Maharashtra,Maval,Shivsena,APPA ALIAS SHRIRANG CHANDU BARNE,50,GEN,Male,512226,1174335,2014,17-04-2014,8th,665047926,2,#F05A00
+Rajasthan,Chittorgarh,Bharatiya Janata Party,CHANDRA PRAKASH JOSHI,38,GEN,Male,703236,1172629,2014,17-04-2014,Graduate,14134693,0,#FB7B0D
+Rajasthan,Banswara,Bharatiya Janata Party,MANSHANKAR NINAMA,58,GEN,Male,577433,1171188,2014,17-04-2014,8th,4040285,0,#FB7B0D
+Odisha,Bolangir,Biju Janata Dal,KALIKESH NARAYAN SINGH DEO,39,GEN,Male,453519,1170405,2014,10-04-2014,Graduate,87955818,3,#000000
+West Bengal,Kolkata Dakshin,All India Trinamool Congress,SUBRATA BAKSHI,64,GEN,Male,431715,1167979,2014,12-05-2014,Graduate Professional,10265428,0,#0C6965
+Assam,Kaliabor,Indian National Congress,GOURAV GOGOI,31,GEN,Male,443315,1166490,2014,07-04-2014,Post Graduate,5473199,0,#019733
+Andhra Pradesh,Visakhapatnam,Bharatiya Janata Party,KAMBHAMPATI HARI BABU,60,GEN,Male,566832,1163558,2014,07-05-2014,Doctorate,90103580,0,#FB7B0D
+West Bengal,Maldaha Uttar,Indian National Congress,MAUSAM NOOR,34,GEN,Female,388609,1162985,2014,24-04-2014,Graduate Professional,9778222,0,#019733
+Maharashtra,Parbhani,Shivsena,JADHAV SANJAY (BANDU) HARIBHAU,47,GEN,Male,578455,1162233,2014,17-04-2014,10th,31016711,7,#F05A00
+Gujarat,Vadodara,Bharatiya Janata Party,NARENDRA MODI,63,GEN,Male,845464,1161577,2014,30-04-2014,Post Graduate,15157582,0,#FB7B0D
+Madhya Pradesh,Mandsour,Bharatiya Janata Party,SUDHIR GUPTA,54,GEN,Male,698335,1161349,2014,24-04-2014,Post Graduate,57429237,0,#FB7B0D
+Gujarat,Navsari,Bharatiya Janata Party,C. R. PATIL,59,GEN,Male,820831,1160747,2014,30-04-2014,10th,744761133,7,#FB7B0D
+Karnataka,Mysore,Bharatiya Janata Party,PRATHAP SIMHA,37,GEN,Male,503908,1159594,2014,17-04-2014,Post Graduate,6321591,0,#FB7B0D
+Andhra Pradesh,Rajampet,Yuvajana Sramika Rythu Congress Party,P.V.MIDHUN REDDY,36,GEN,Male,601752,1158317,2014,07-05-2014,Post Graduate,225984036,1,#999
+Rajasthan,Ajmer,Bharatiya Janata Party,SANWAR LAL JAT,59,GEN,Male,637874,1156314,2014,17-04-2014,Doctorate,18064656,0,#FB7B0D
+Haryana,Hisar,Indian National Lok Dal,DUSHYANT CHAUTALA,26,GEN,Male,494478,1155914,2014,10-04-2014,Graduate,361326990,0,#999
+Rajasthan,Kota,Bharatiya Janata Party,OM BIRLA,51,GEN,Male,644822,1154960,2014,17-04-2014,Post Graduate,25870497,2,#FB7B0D
+West Bengal,Baharampur,Indian National Congress,ADHIR RANJAN CHOWDHURY,58,GEN,Male,583549,1154587,2014,12-05-2014,10th,81465854,16,#019733
+Andhra Pradesh,Rajahmundry,Telugu Desam,MURALI MOHAN MAGANTI,73,GEN,Male,630573,1154381,2014,07-05-2014,12th,180822216,1,#4bacc6
+Madhya Pradesh,Khargone,Bharatiya Janata Party,SUBHASH PATEL,36,GEN,Male,649354,1152525,2014,24-04-2014,Post Graduate,36138699,0,#FB7B0D
+Tamil Nadu,Salem,All India Anna Dravida Munnetra Kazhagam,PANNERSELVAM.V,55,GEN,Male,556546,1150296,2014,24-04-2014,Graduate Professional,32268097,0,#9DBC2A
+Andhra Pradesh,Anakapalli,Telugu Desam,MUTTAMSETTI SRINIVASA RAO (AVANTHI),47,GEN,Male,568463,1148072,2014,07-05-2014,Illiterate,213294327,1,#4bacc6
+Karnataka,Hassan,Janata Dal  (Secular),H.D. DEVEGOWDA,81,GEN,Male,509841,1147172,2014,17-04-2014,Graduate Professional,42721242,0,#8064a2
+Rajasthan,Jhalawar-Baran,Bharatiya Janata Party,DUSHYANT SINGH,43,GEN,Male,676102,1146364,2014,17-04-2014,Post Graduate,239006838,0,#FB7B0D
+Madhya Pradesh,Dewas,Bharatiya Janata Party,MANOHAR UNTWAL,47,GEN,Male,665646,1143968,2014,24-04-2014,12th,6336490,0,#FB7B0D
+Jharkhand,Dhanbad,Bharatiya Janata Party,PASHUPATI NATH SINGH,65,GEN,Male,543491,1143902,2014,24-04-2014,Graduate,24248150,1,#FB7B0D
+West Bengal,Asansol,Bharatiya Janata Party,BABUL SUPRIYA BARAL (BABUL SUPRIYO),44,GEN,Male,419983,1142395,2014,07-05-2014,Graduate,75289537,0,#FB7B0D
+West Bengal,Darjeeling,Bharatiya Janata Party,S.S.AHLUWALIA,63,GEN,Male,488257,1142009,2014,17-04-2014,Graduate Professional,23377223,0,#FB7B0D
+Andhra Pradesh,Machilipatnam,Telugu Desam,KONAKALLA NARAYANA RAO,64,GEN,Male,587280,1141065,2014,07-05-2014,12th,34850000,0,#4bacc6
+Odisha,Kendrapara,Biju Janata Dal,BAIJAYANT PANDA,50,GEN,Male,601574,1140999,2014,17-04-2014,Graduate Professional,312432726,0,#000000
+Haryana,Kurukshetra,Bharatiya Janata Party,RAJ KUMAR SAINI,60,GEN,Male,418112,1135892,2014,10-04-2014,Graduate,132880476,0,#FB7B0D
+Gujarat,Gandhinagar,Bharatiya Janata Party,L.K.ADVANI,86,GEN,Male,773539,1135495,2014,30-04-2014,Graduate Professional,75915276,1,#FB7B0D
+Karnataka,Chamarajanagar,Indian National Congress,R. DHRUVANARAYANA,53,GEN,Male,567782,1133029,2014,17-04-2014,Graduate,31519950,0,#019733
+West Bengal,Dum Dum,All India Trinamool Congress,SAUGATA ROY,66,GEN,Male,483244,1132644,2014,12-05-2014,Post Graduate,19452011,0,#0C6965
+Odisha,Jagatsinghpur,Biju Janata Dal,KULAMANI SAMAL,65,GEN,Male,624492,1131932,2014,17-04-2014,Graduate Professional,25158570,0,#000000
+Chhattisgarh,Mahasamund,Bharatiya Janata Party,CHANDU LAL SAHU (CHANDU BHAIYA),54,GEN,Male,503514,1131209,2014,17-04-2014,Graduate Professional,20879652,0,#FB7B0D
+Rajasthan,Churu,Bharatiya Janata Party,RAHUL KASWAN,37,GEN,Male,595756,1131104,2014,17-04-2014,Graduate,25721266,0,#FB7B0D
+Haryana,Faridabad,Bharatiya Janata Party,KRISHAN PAL,57,GEN,Male,652516,1130726,2014,10-04-2014,Graduate Professional,296440144,0,#FB7B0D
+Madhya Pradesh,Bhopal,Bharatiya Janata Party,ALOK SANJAR,50,GEN,Male,714178,1130182,2014,17-04-2014,Graduate Professional,14594066,0,#FB7B0D
+Uttar Pradesh,Shahjahanpur,Bharatiya Janata Party,KRISHNA RAJ,47,GEN,Female,525132,1129841,2014,17-04-2014,Post Graduate,16506411,0,#FB7B0D
+Karnataka,Shimoga,Bharatiya Janata Party,B. S. YEDDYURAPPA,71,GEN,Male,606216,1129008,2014,17-04-2014,12th,69746267,9,#FB7B0D
+Tamil Nadu,Kancheepuram,All India Anna Dravida Munnetra Kazhagam,MARAGATHAM  K,32,GEN,Female,499395,1128399,2014,24-04-2014,12th,18949050,0,#9DBC2A
+Uttar Pradesh,Moradabad,Bharatiya Janata Party,KUNWER SARVESH KUMAR,62,GEN,Male,485224,1127965,2014,17-04-2014,10th,72866898,4,#FB7B0D
+Karnataka,Kolar,Indian National Congress,K.H.MUNIYAPPA,67,GEN,Male,418926,1127323,2014,17-04-2014,Graduate Professional,184663000,0,#019733
+Andhra Pradesh,Karimnagar,Telangana Rashtra Samithi,VINOD KUMAR BOINAPALLY,54,GEN,Male,505783,1125691,2014,30-04-2014,Graduate Professional,97275990,0,#999
+West Bengal,Howrah,All India Trinamool Congress,PRASUN BANERJEE,59,GEN,Male,488461,1125399,2014,30-04-2014,Graduate,10041098,0,#0C6965
+Andhra Pradesh,Mahabubabad,Telangana Rashtra Samithi,PROF. AZMEERA SEETARAM NAIK,56,GEN,Male,320569,1124370,2014,30-04-2014,Doctorate,8008000,0,#999
+Odisha,Bargarh,Biju Janata Dal,PRABHAS KUMAR SINGH,50,GEN,Male,383230,1123301,2014,10-04-2014,Doctorate,5786971,0,#000000
+Gujarat,Valsad,Bharatiya Janata Party,DR. K.C.PATEL,65,GEN,Male,617772,1122203,2014,30-04-2014,Graduate Professional,131141867,0,#FB7B0D
+Punjab,Patiala,Aam Aadmi Party,DR. DHARAM VIRA GANDHI,63,GEN,Male,365671,1120933,2014,30-04-2014,Graduate Professional,45115421,0,#999
+Andhra Pradesh,Amalapuram,Telugu Desam,DR PANDULA RAVINDRA BABU,58,GEN,Male,594547,1120927,2014,07-05-2014,Graduate Professional,27131000,0,#4bacc6
+Andhra Pradesh,Vizianagaram,Telugu Desam,ASHOK GAJAPATHI RAJU PUSAPATI,62,GEN,Male,536549,1120316,2014,07-05-2014,10th,39054905,0,#4bacc6
+Uttar Pradesh,Kairana,Bharatiya Janata Party,HUKUM SINGH,75,GEN,Male,565909,1119324,2014,10-04-2014,Graduate Professional,29078847,2,#FB7B0D
+West Bengal,Jangipur,Indian National Congress,ABHIJIT MUKHERJEE,54,GEN,Male,378201,1119084,2014,24-04-2014,Graduate Professional,63014502,0,#019733
+Maharashtra,Osmanabad,Shivsena,GAIKWAD RAVINDRA VISHWANATH,54,GEN,Male,607699,1118151,2014,17-04-2014,Post Graduate,32852793,8,#F05A00
+Odisha,Kalahandi,Biju Janata Dal,ARKA KESHARI DEO,35,GEN,Male,370871,1117536,2014,10-04-2014,Graduate,69822063,0,#000000
+Maharashtra,Nandurbar,Bharatiya Janata Party,DR.GAVIT HEENA VAIJAYKUMAR,26,GEN,Female,579486,1116676,2014,24-04-2014,Graduate Professional,131103963,0,#FB7B0D
+Uttar Pradesh,Mohanlalganj,Bharatiya Janata Party,KAUSHAL KISHORE,53,GEN,Male,455274,1116588,2014,30-04-2014,Graduate,21128221,2,#FB7B0D
+Karnataka,Haveri,Bharatiya Janata Party,UDASI SHIVAKUMAR CHANNABASAPPA,47,GEN,Male,566790,1115968,2014,17-04-2014,Graduate Professional,576693538,0,#FB7B0D
+Karnataka,Davanagere,Bharatiya Janata Party,G M SIDDESHWARA,61,GEN,Male,518894,1114868,2014,17-04-2014,10th,232375703,0,#FB7B0D
+Uttar Pradesh,Kannauj,Samajwadi Party,DIMPLE YADAV,36,GEN,Female,489164,1114460,2014,24-04-2014,Graduate,280516418,0,#B15928
+Karnataka,Bangalore South,Bharatiya Janata Party,ANANTH KUMAR,54,GEN,Male,633816,1113726,2014,17-04-2014,Graduate Professional,45224706,0,#FB7B0D
+Uttar Pradesh,Meerut,Bharatiya Janata Party,RAJENDRA AGARWAL,64,GEN,Male,532981,1113384,2014,10-04-2014,Post Graduate,8803517,2,#FB7B0D
+Madhya Pradesh,Balaghat,Bharatiya Janata Party,BODHSINGH BHAGAT,57,GEN,Male,480594,1113364,2014,10-04-2014,Graduate,24959436,0,#FB7B0D
+Assam,Lakhimpur,Bharatiya Janata Party,SARBANANDA SONOWAL,52,GEN,Male,612543,1111975,2014,07-04-2014,Graduate Professional,14497515,0,#FB7B0D
+Maharashtra,Chandrapur,Bharatiya Janata Party,AHIR HANSRAJ GANGARAM,59,GEN,Male,508049,1109743,2014,10-04-2014,10th,15548000,11,#FB7B0D
+Uttar Pradesh,Jalaun,Bharatiya Janata Party,BHANU PRATAP SINGH VERMA,55,GEN,Male,548631,1109166,2014,30-04-2014,Post Graduate,5774068,0,#FB7B0D
+Andhra Pradesh,Nagarkurnool,Indian National Congress,YELLAIAH NANDI,71,GEN,Male,420075,1108968,2014,30-04-2014,Graduate,7048969,0,#019733
+West Bengal,Raiganj,Communist Party of India  (Marxist),MD. SALIM,56,GEN,Male,317515,1108193,2014,24-04-2014,Post Graduate,7868013,0,#DE0000
+Madhya Pradesh,Chhindwara,Indian National Congress,KAMAL NATH,67,GEN,Male,559755,1107498,2014,10-04-2014,Graduate,2069080434,0,#019733
+Uttar Pradesh,Muzaffarnagar,Bharatiya Janata Party,(DR.) SANJEEV KUMAR BALYAN,41,GEN,Male,653391,1107434,2014,10-04-2014,Doctorate,10794222,1,#FB7B0D
+Tamil Nadu,Kallakurichi,All India Anna Dravida Munnetra Kazhagam,KAMARAJ. K,48,GEN,Male,533383,1107241,2014,24-04-2014,Post Graduate,35459256,0,#9DBC2A
+Punjab,Firozpur,Shiromani Akali Dal,SHER SINGH GHUBAYA,51,GEN,Male,487932,1105412,2014,30-04-2014,10th,96121057,0,#999
+Uttar Pradesh,Firozabad,Samajwadi Party,AKSHAY YADAV,27,GEN,Male,534583,1104606,2014,24-04-2014,Graduate,100883304,0,#B15928
+Rajasthan,Bhilwara,Bharatiya Janata Party,SUBHASH BAHERIA,57,GEN,Male,630317,1104090,2014,17-04-2014,Graduate,142870042,0,#FB7B0D
+Nct Of Delhi,South Delhi,Bharatiya Janata Party,RAMESH BIDHURI,52,GEN,Male,497980,1102410,2014,10-04-2014,Graduate Professional,147493056,4,#FB7B0D
+Karnataka,Tumkur,Indian National Congress,MUDDAHANUMEGOWDA.S.P.,59,GEN,Male,429868,1101484,2014,17-04-2014,Graduate Professional,30273812,0,#019733
+Uttarakhand,Nainital-Udhamsingh Nagar,Bharatiya Janata Party,BHAGAT SINGH KOSHYARI,72,GEN,Male,636769,1101435,2014,07-05-2014,Post Graduate,5562704,0,#FB7B0D
+Tamil Nadu,Dharmapuri,Pattali Makkal Katchi,ANBUMANI RAMADOSS,45,GEN,Male,468194,1101345,2014,24-04-2014,Graduate Professional,314378451,8,#999
+Gujarat,Chhota Udaipur,Bharatiya Janata Party,RAMSINH RATHWA,62,GEN,Male,607916,1100542,2014,30-04-2014,Post Graduate,39769675,0,#FB7B0D
+Punjab,Ludhiana,Indian National Congress,RAVNEET SINGH BITTU,38,GEN,Male,300459,1100457,2014,30-04-2014,12th,31509170,0,#019733
+Andhra Pradesh,Kakinada,Telugu Desam,THOTA NARASIMHAM,53,GEN,Male,514402,1099999,2014,07-05-2014,Graduate,17495976,0,#4bacc6
+Punjab,Sangrur,Aam Aadmi Party,BHAGWANT MANN,41,GEN,Male,533237,1099467,2014,30-04-2014,12th,43057512,0,#999
+Karnataka,Chitradurga,Indian National Congress,B.N.CHANDRAPPA,58,GEN,Male,467511,1096499,2014,17-04-2014,Post Graduate,48303759,0,#019733
+Tamil Nadu,Arani,All India Anna Dravida Munnetra Kazhagam,V.ELUMALAI,58,GEN,Male,502721,1096046,2014,24-04-2014,Graduate Professional,70492462,0,#9DBC2A
+Uttar Pradesh,Amroha,Bharatiya Janata Party,KANWAR SINGH TANWAR,52,GEN,Male,528880,1095860,2014,17-04-2014,5th,1788430770,0,#FB7B0D
+Rajasthan,Pali,Bharatiya Janata Party,P P CHOUDHARY,60,GEN,Male,711772,1095587,2014,17-04-2014,Graduate Professional,353503467,0,#FB7B0D
+Andhra Pradesh,Zahirabad,Telangana Rashtra Samithi,B.B. PATIL,58,GEN,Male,508661,1094806,2014,30-04-2014,Graduate,1023173039,0,#999
+Gujarat,Sabarkantha,Bharatiya Janata Party,RATHOD DIPSINH SHANKARSINH,62,GEN,Male,552205,1094002,2014,30-04-2014,8th,20700176,0,#FB7B0D
+West Bengal,Maldaha Dakshin,Indian National Congress,ABU HASEM KHAN CHOWDHURY,70,GEN,Male,380291,1092407,2014,24-04-2014,Doctorate,11560825,0,#019733
+Chhattisgarh,Bilaspur,Bharatiya Janata Party,LAKHAN LAL SAHU,43,GEN,Male,561387,1090457,2014,24-04-2014,Post Graduate,8661133,0,#FB7B0D
+Maharashtra,Shirur,Shivsena,ADHALRAO SHIVAJI DATTATREY,59,GEN,Male,643415,1089506,2014,17-04-2014,Post Graduate,253598315,10,#F05A00
+Tamil Nadu,Arakkonam,All India Anna Dravida Munnetra Kazhagam,"HARI, G.",53,GEN,Male,493534,1089052,2014,24-04-2014,Post Graduate,32966706,4,#9DBC2A
+Andhra Pradesh,Narsapuram,Bharatiya Janata Party,GOKARAJU GANGA RAJU,69,GEN,Male,540306,1088951,2014,07-05-2014,Graduate,2883567122,1,#FB7B0D
+Tamil Nadu,Chidambaram,All India Anna Dravida Munnetra Kazhagam,"CHANDRAKASI, M",45,GEN,Male,429536,1088423,2014,24-04-2014,Graduate,7243646,0,#9DBC2A
+Rajasthan,Jalore,Bharatiya Janata Party,DEVJI PATEL,37,GEN,Male,580508,1087272,2014,17-04-2014,10th,51846777,0,#FB7B0D
+Punjab,Anandpur Sahib,Shiromani Akali Dal,PREM SINGH CHANDUMAJRA,64,GEN,Male,347394,1086563,2014,30-04-2014,Post Graduate,141599902,0,#999
+Maharashtra,Nagpur,Bharatiya Janata Party,GADKARI NITIN JAIRAM,56,GEN,Male,587767,1085058,2014,10-04-2014,Graduate Professional,153704475,4,#FB7B0D
+Odisha,Keonjhar,Biju Janata Dal,SAKUNTALA LAGURI,34,GEN,Female,434471,1083869,2014,17-04-2014,10th,101531625,0,#000000
+Tamil Nadu,Dindigul,All India Anna Dravida Munnetra Kazhagam,UDHAYA KUMAR .M,45,GEN,Male,510462,1083364,2014,24-04-2014,Post Graduate,27810000,0,#9DBC2A
+Madhya Pradesh,Ratlam,Bharatiya Janata Party,DILEEPSINGH BHURIA,68,GEN,Male,545970,1082681,2014,24-04-2014,10th,12259882,0,#FB7B0D
+Odisha,Bhadrak,Biju Janata Dal,ARJUN CHARAN SETHI,73,GEN,Male,502338,1081339,2014,17-04-2014,Post Graduate,6730000,0,#000000
+Tamil Nadu,Chennai South,All India Anna Dravida Munnetra Kazhagam,DR. J. JAYAVARDHAN,26,GEN,Male,438404,1081163,2014,24-04-2014,Graduate Professional,33959072,0,#9DBC2A
+Maharashtra,Madha,Nationalist Congress Party,MOHITE PATIL VIJAYSINH SHANKARRAO,69,GEN,Male,489989,1079619,2014,17-04-2014,10th,170253390,1,#999
+Karnataka,Bagalkot,Bharatiya Janata Party,GADDIGOUDAR PARVTAGOUDA CHANDANAGOUDA,61,GEN,Male,571548,1079310,2014,17-04-2014,Graduate Professional,36362500,0,#FB7B0D
+Rajasthan,Jodhpur,Bharatiya Janata Party,GAJENDRASINGH SHEKHAWAT,46,GEN,Male,713515,1078598,2014,17-04-2014,Post Graduate,143491494,0,#FB7B0D
+Karnataka,Belgaum,Bharatiya Janata Party,ANGADI SURESH CHANNABASAPPA,58,GEN,Male,554417,1078547,2014,17-04-2014,Graduate Professional,417003065,1,#FB7B0D
+Uttar Pradesh,Kheri,Bharatiya Janata Party,AJAY KUMAR,55,GEN,Male,398578,1077868,2014,17-04-2014,Graduate Professional,26505977,2,#FB7B0D
+Bihar,Begusarai,Bharatiya Janata Party,BHOLA SINGH,75,GEN,Male,428227,1077855,2014,30-04-2014,Doctorate,25248102,0,#FB7B0D
+Uttar Pradesh,Mathura,Bharatiya Janata Party,HEMA MALINI,65,GEN,Female,574633,1076868,2014,24-04-2014,Doctorate,1782015620,0,#FB7B0D
+Madhya Pradesh,Dhar,Bharatiya Janata Party,SAVITRI THAKUR,35,GEN,Female,558387,1076816,2014,24-04-2014,10th,9606464,0,#FB7B0D
+Tamil Nadu,Theni,All India Anna Dravida Munnetra Kazhagam,"PARTHIPAN, R.",50,GEN,Male,571254,1075583,2014,24-04-2014,Graduate,22047681,0,#9DBC2A
+Karnataka,Bangalore Central,Bharatiya Janata Party,P.C. MOHAN,50,GEN,Male,557130,1074589,2014,17-04-2014,12th,475796999,2,#FB7B0D
+Madhya Pradesh,Vidisha,Bharatiya Janata Party,SUSHMA SWARAJ,62,GEN,Female,714348,1073473,2014,24-04-2014,Graduate Professional,175516422,0,#FB7B0D
+Chhattisgarh,Janjgir-Champa,Bharatiya Janata Party,KAMLA PATLE,48,GEN,Male,518909,1073347,2014,24-04-2014,12th,18224350,0,#FB7B0D
+Tripura,Tripura West,Communist Party of India  (Marxist),SANKAR PRASAD DATTA,56,GEN,Male,671665,1072749,2014,07-04-2014,Post Graduate,1320900,1,#DE0000
+Karnataka,Chikkodi,Indian National Congress,PRAKASH BABANNA HUKKERI,67,GEN,Male,474373,1071103,2014,17-04-2014,12th,75717628,0,#019733
+Uttar Pradesh,Agra,Bharatiya Janata Party,DR. RAM SHANKAR KATHERIA,49,GEN,Male,583716,1070400,2014,24-04-2014,Doctorate,14634885,21,#FB7B0D
+Tamil Nadu,Krishnagiri,All India Anna Dravida Munnetra Kazhagam,ASHOK KUMAR.K,60,GEN,Male,480491,1068391,2014,24-04-2014,10th,1176436,3,#9DBC2A
+Uttar Pradesh,Barabanki,Bharatiya Janata Party,PRIYANKA SINGH RAWAT,28,GEN,Female,454214,1068168,2014,30-04-2014,Post Graduate,13175500,0,#FB7B0D
+Tamil Nadu,Viluppuram,All India Anna Dravida Munnetra Kazhagam,RAJENDRAN S,57,GEN,Male,482704,1067641,2014,24-04-2014,Graduate,6200000,0,#9DBC2A
+Tamil Nadu,Tiruvannamalai,All India Anna Dravida Munnetra Kazhagam,VANAROJA R,55,GEN,Female,500751,1067447,2014,24-04-2014,Post Graduate,3700000,0,#9DBC2A
+Maharashtra,Baramati,Nationalist Congress Party,SUPRIYA SULE,44,GEN,Female,521562,1066556,2014,17-04-2014,Graduate,1139090851,0,#999
+Maharashtra,Jalna,Bharatiya Janata Party,DANVE RAOSAHEB DADARAO,60,GEN,Male,591428,1066259,2014,24-04-2014,Graduate,184411862,4,#FB7B0D
+Rajasthan,Sikar,Bharatiya Janata Party,SUMEDHANAND SARASWATI,62,GEN,Male,499428,1065750,2014,17-04-2014,Others,34311,0,#FB7B0D
+Andhra Pradesh,Kurnool,Yuvajana Sramika Rythu Congress Party,BUTTA RENUKA,42,GEN,Female,472782,1065732,2014,07-05-2014,10th,2426240513,1,#999
+Uttar Pradesh,Aligarh,Bharatiya Janata Party,SATISH KUMAR,42,GEN,Male,514622,1064357,2014,10-04-2014,10th,52180006,1,#FB7B0D
+West Bengal,Balurghat,All India Trinamool Congress,ARPITA GHOSH,47,GEN,Female,409641,1063053,2014,24-04-2014,Graduate,544790,0,#0C6965
+Maharashtra,Ahmadnagar,Bharatiya Janata Party,GANDHI DILIPKUMAR MANSUKHLAL,64,GEN,Male,605185,1062318,2014,17-04-2014,10th,65316725,10,#FB7B0D
+Rajasthan,Alwar,Bharatiya Janata Party,CHAND NATH,58,GEN,Male,642278,1062305,2014,24-04-2014,Graduate,199653,0,#FB7B0D
+Uttar Pradesh,Bijnor,Bharatiya Janata Party,KUNWAR BHARTENDRA,50,GEN,Male,486913,1060346,2014,10-04-2014,Post Graduate,24840646,2,#FB7B0D
+Uttar Pradesh,Dhaurahra,Bharatiya Janata Party,REKHA,32,GEN,Female,360357,1060271,2014,30-04-2014,10th,10435468,0,#FB7B0D
+Gujarat,Bharuch,Bharatiya Janata Party,VASAVA MANSUKHBHAI DHANJIBHAI,56,GEN,Male,548902,1060211,2014,30-04-2014,Post Graduate,6571062,0,#FB7B0D
+Tamil Nadu,Namakkal,All India Anna Dravida Munnetra Kazhagam,SUNDARAM P.R,62,GEN,Male,563272,1058755,2014,24-04-2014,Graduate,126539914,0,#9DBC2A
+Maharashtra,Latur,Bharatiya Janata Party,DR. SUNIL BALIRAM GAIKWAD,43,GEN,Male,616509,1057156,2014,17-04-2014,Doctorate,17463251,0,#FB7B0D
+Gujarat,Rajkot,Bharatiya Janata Party,KUNDARIYA MOHANBHAI KALYANJIBHAI,62,GEN,Male,621524,1057069,2014,30-04-2014,8th,39512950,0,#FB7B0D
+Uttar Pradesh,Sambhal,Bharatiya Janata Party,SATYAPAL SINGH,40,GEN,Male,360242,1057002,2014,17-04-2014,Post Graduate,19904379,0,#FB7B0D
+Uttar Pradesh,Fatehpur,Bharatiya Janata Party,NIRANJAN JYOTI,47,GEN,Female,485994,1056688,2014,30-04-2014,12th,4123779,1,#FB7B0D
+Maharashtra,Thane,Shivsena,VICHARE RAJAN BABURAO,52,GEN,Male,595364,1054189,2014,24-04-2014,10th,102091612,13,#F05A00
+Odisha,Mayurbhanj,Biju Janata Dal,RAMA CHANDRA HANSDAH,39,GEN,Male,393779,1053399,2014,17-04-2014,Graduate,3630888,0,#000000
+Chhattisgarh,Korba,Bharatiya Janata Party,DR. BANSHILAL MAHTO,73,GEN,Male,439002,1052720,2014,24-04-2014,Graduate Professional,72303762,0,#FB7B0D
+Andhra Pradesh,Srikakulam,Telugu Desam,RAMMOHAN NAIDU KINJARAPU,27,GEN,Male,556163,1051446,2014,07-05-2014,Post Graduate,84173423,0,#4bacc6
+Maharashtra,Hingoli,Indian National Congress,RAJEEV SHANKARRAO SATAV,39,GEN,Male,467397,1051164,2014,17-04-2014,Graduate Professional,49681499,0,#019733
+West Bengal,Barrackpore,All India Trinamool Congress,DINESH TRIVEDI,63,GEN,Male,479206,1051130,2014,12-05-2014,Post Graduate,53582340,0,#0C6965
+Uttar Pradesh,Pilibhit,Bharatiya Janata Party,MANEKA SANJAY GANDHI,57,GEN,Female,546934,1050547,2014,17-04-2014,12th,374132826,1,#FB7B0D
+Maharashtra,Ramtek,Shivsena,KRUPAL BALAJI TUMANE,48,GEN,Male,519892,1050316,2014,10-04-2014,Graduate,46564362,1,#F05A00
+Tamil Nadu,Tiruppur,All India Anna Dravida Munnetra Kazhagam,V.SATHYABAMA,43,GEN,Female,442778,1050190,2014,24-04-2014,Post Graduate,28108573,2,#9DBC2A
+Jharkhand,Ranchi,Bharatiya Janata Party,RAM TAHAL CHOUDHARY,72,GEN,Male,448729,1049783,2014,17-04-2014,10th,10743950,0,#FB7B0D
+Odisha,Balasore,Biju Janata Dal,RABINDRA KUMAR JENA,46,GEN,Male,433768,1049450,2014,17-04-2014,Post Graduate,570139716,0,#000000
+Jharkhand,Godda,Bharatiya Janata Party,NISHIKANT DUBEY,42,GEN,Male,380500,1049442,2014,24-04-2014,Post Graduate,155633719,5,#FB7B0D
+Uttar Pradesh,Hathras,Bharatiya Janata Party,RAJESH KUMAR DIWAKER,43,GEN,Male,544277,1049273,2014,24-04-2014,Graduate Professional,5651457,0,#FB7B0D
+Jharkhand,Jamshedpur,Bharatiya Janata Party,BIDYUT BARAN MAHATO,46,GEN,Male,464153,1049140,2014,17-04-2014,12th,14135054,2,#FB7B0D
+Uttar Pradesh,Basti,Bharatiya Janata Party,HARISH CHANDRA  ALIAS  HARISH DWIVEDI,40,GEN,Male,357680,1048534,2014,07-05-2014,Post Graduate,5350882,2,#FB7B0D
+Madhya Pradesh,Betul,Bharatiya Janata Party,JYOTI DHURVE,47,GEN,Female,643651,1047719,2014,24-04-2014,Post Graduate,26232000,2,#FB7B0D
+Maharashtra,Sangli,Bharatiya Janata Party,SANJAYKAKA PATIL,49,GEN,Male,611563,1046659,2014,17-04-2014,10th,108791027,0,#FB7B0D
+Tamil Nadu,Karur,All India Anna Dravida Munnetra Kazhagam,"THAMBIDURAI,M.",67,GEN,Male,540722,1046534,2014,24-04-2014,Doctorate,132457262,2,#9DBC2A
+Andhra Pradesh,Adilabad,Telangana Rashtra Samithi,GODAM NAGESH,49,GEN,Male,430847,1045839,2014,30-04-2014,Post Graduate,10378857,0,#999
+Karnataka,Bellary,Bharatiya Janata Party,B. SREERAMULU,43,GEN,Male,534406,1045772,2014,17-04-2014,Graduate,151392844,8,#FB7B0D
+Haryana,Rohtak,Indian National Congress,DEEPENDER SINGH HOODA,36,GEN,Male,490063,1044331,2014,10-04-2014,Post Graduate,358749354,0,#019733
+Rajasthan,Tonk-Sawai Madhopur,Bharatiya Janata Party,SUKHBIR SINGH JAUNAPURIA,56,GEN,Male,548179,1043040,2014,24-04-2014,12th,714124612,0,#FB7B0D
+Punjab,Gurdaspur,Bharatiya Janata Party,VINOD KHANNA,68,GEN,Male,482255,1042699,2014,30-04-2014,Graduate,669343376,0,#FB7B0D
+Odisha,Dhenkanal,Biju Janata Dal,TATHAGATA SATPATHY,57,GEN,Male,453277,1042101,2014,17-04-2014,Others,35434099,7,#000000
+Jammu & Kashmir,Udhampur,Bharatiya Janata Party,DR. JITENDRA SINGH,57,GEN,Male,487369,1041758,2014,17-04-2014,Graduate Professional,38464932,0,#FB7B0D
+Karnataka,Dharwad,Bharatiya Janata Party,PRALHAD JOSHI,51,GEN,Male,545395,1041226,2014,17-04-2014,Graduate,41979658,1,#FB7B0D
+Punjab,Jalandhar,Indian National Congress,SANTOKH SINGH CHAUDHARY,67,GEN,Male,380479,1040762,2014,30-04-2014,Graduate Professional,104040531,0,#019733
+Punjab,Khadoor Sahib,Shiromani Akali Dal,RANJIT SINGH BRAHMPURA,76,GEN,Male,467332,1040518,2014,30-04-2014,8th,177814755,0,#999
+Uttar Pradesh,Gorakhpur,Bharatiya Janata Party,ADITYANATH,41,GEN,Male,539127,1040199,2014,12-05-2014,Graduate,7217674,3,#FB7B0D
+Uttar Pradesh,Ghosi,Bharatiya Janata Party,HARINARAYAN RAJBHAR,73,GEN,Male,379797,1039656,2014,12-05-2014,Literate,23403964,0,#FB7B0D
+Odisha,Puri,Biju Janata Dal,PINAKI MISRA,54,GEN,Male,523161,1039389,2014,17-04-2014,Graduate Professional,1370991203,0,#000000
+Nagaland,Nagaland,Naga Peoples Front,NEIPHIU RIO,63,GEN,Male,713372,1038910,2014,09-04-2014,Graduate,315834264,0,#999
+Bihar,Madhepura,Rashtriya Janata Dal,RAJESH RANJAN @ PAPPU YADAV,46,GEN,Male,368937,1034799,2014,30-04-2014,Graduate,81242966,24,#999
+Uttar Pradesh,Ambedkar Nagar,Bharatiya Janata Party,HARI OM PANDEY,58,GEN,Male,432104,1034404,2014,07-05-2014,Post Graduate,15318114,0,#FB7B0D
+Karnataka,Udupi Chikmagalur,Bharatiya Janata Party,SHOBHA KARANDLAJE,47,GEN,Female,581168,1034108,2014,17-04-2014,Post Graduate,72089452,0,#FB7B0D
+Andhra Pradesh,Nizamabad,Telangana Rashtra Samithi,KALVAKUNTLA KAVITHA,36,GEN,Female,439307,1033924,2014,30-04-2014,Graduate Professional,61955750,8,#999
+Uttar Pradesh,Lucknow,Bharatiya Janata Party,RAJ NATH SINGH,62,GEN,Male,561106,1033783,2014,30-04-2014,Post Graduate,29240729,0,#FB7B0D
+Maharashtra,Yavatmal-Washim,Shivsena,GAWALI BHAVANA PUNDLIKRAO,41,GEN,Female,477905,1032949,2014,10-04-2014,Graduate,60886040,4,#F05A00
+Punjab,Faridkot,Aam Aadmi Party,PROF. SADHU SINGH,73,GEN,Male,450751,1032107,2014,30-04-2014,Post Graduate,5879516,0,#999
+Madhya Pradesh,Hoshangabad,Bharatiya Janata Party,UDAY PRATAP SINGH,49,GEN,Male,669128,1031175,2014,10-04-2014,Graduate,133375092,1,#FB7B0D
+Punjab,Fatehgarh Sahib,Aam Aadmi Party,HARINDER SINGH KHALSA,67,GEN,Male,367293,1030954,2014,30-04-2014,Post Graduate,35588128,0,#999
+Tamil Nadu,Perambalur,All India Anna Dravida Munnetra Kazhagam,"MARUTHARAJAA, R.P.",51,GEN,Male,462693,1030826,2014,24-04-2014,Post Graduate,24570213,0,#9DBC2A
+Uttar Pradesh,Varanasi,Bharatiya Janata Party,NARENDRA MODI,63,GEN,Male,581022,1030685,2014,12-05-2014,Post Graduate,16591582,0,#FB7B0D
+Haryana,Bhiwani-Mahendragarh,Bharatiya Janata Party,DHARAMBIR S/O BHALE RAM,59,GEN,Male,404542,1030431,2014,10-04-2014,Graduate,50057200,0,#FB7B0D
+Uttar Pradesh,Badaun,Samajwadi Party,DHARMENDRA YADAV,37,GEN,Male,498378,1027594,2014,17-04-2014,Post Graduate,24987715,0,#B15928
+Maharashtra,Gadchiroli-Chimur,Bharatiya Janata Party,ASHOK MAHADEORAO NETE,50,GEN,Male,535982,1027129,2014,10-04-2014,12th,12125676,0,#FB7B0D
+Tamil Nadu,Sivaganga,All India Anna Dravida Munnetra Kazhagam,SENTHILNATHAN PR,46,GEN,Male,475993,1027036,2014,24-04-2014,Graduate Professional,49050835,0,#9DBC2A
+Uttar Pradesh,Sitapur,Bharatiya Janata Party,RAJESH VERMA,54,GEN,Male,417546,1026972,2014,30-04-2014,Post Graduate,41418622,0,#FB7B0D
+Tamil Nadu,Mayiladuthurai,All India Anna Dravida Munnetra Kazhagam,BHARATHI MOHAN R.K,47,GEN,Male,513729,1025538,2014,24-04-2014,12th,7378589,1,#9DBC2A
+Jharkhand,Kodarma,Bharatiya Janata Party,RAVINDRA KR. RAY,50,GEN,Male,365410,1024906,2014,10-04-2014,Doctorate,10564046,0,#FB7B0D
+Uttar Pradesh,Faizabad,Bharatiya Janata Party,LALLU SINGH,59,GEN,Male,491761,1022716,2014,07-05-2014,Post Graduate,15127861,1,#FB7B0D
+Andhra Pradesh,Peddapalle,Telangana Rashtra Samithi,BALKA SUMAN,31,GEN,Male,565496,1022184,2014,30-04-2014,Post Graduate,7351329,1,#999
+Odisha,Nabarangpur,Biju Janata Dal,BALABHADRA MAJHI,53,GEN,Male,373887,1022172,2014,10-04-2014,Graduate,52977088,0,#000000
+Tamil Nadu,Tenkasi,All India Anna Dravida Munnetra Kazhagam,VASANTHI.M,52,GEN,Female,424586,1017938,2014,24-04-2014,Post Graduate,24014922,0,#9DBC2A
+Uttar Pradesh,Bareilly,Bharatiya Janata Party,SANTOSH KUMAR GANGWAR,64,GEN,Male,518258,1017891,2014,17-04-2014,Graduate Professional,38602862,0,#FB7B0D
+Bihar,Purnia,Janata Dal  (United),SANTOSH KUMAR,35,GEN,Male,418826,1017732,2014,24-04-2014,12th,22316594,3,#8064a2
+Chhattisgarh,Kanker,Bharatiya Janata Party,VIKRAM DEV USENDI,48,GEN,Male,465215,1016943,2014,17-04-2014,10th,23376000,0,#FB7B0D
+Madhya Pradesh,Ujjain,Bharatiya Janata Party,PROF. CHINTAMANI MALVIYA,44,GEN,Male,641101,1016405,2014,24-04-2014,Doctorate,18888754,0,#FB7B0D
+Andhra Pradesh,Mahbubnagar,Telangana Rashtra Samithi,AP JITHENDER REDDY,60,GEN,Male,334228,1014800,2014,30-04-2014,Graduate,140831576,4,#999
+Rajasthan,Jaipur Rural,Bharatiya Janata Party,RAJYAVARDHAN SINGH RATHORE,44,GEN,Male,632930,1013691,2014,17-04-2014,Graduate,83734044,0,#FB7B0D
+Maharashtra,Wardha,Bharatiya Janata Party,RAMDAS CHANDRABHANJI TADAS,60,GEN,Male,537518,1013445,2014,10-04-2014,10th,33628998,5,#FB7B0D
+Maharashtra,Nanded,Indian National Congress,ASHOK SHANKARRAO CHAVAN,55,GEN,Male,493075,1013350,2014,17-04-2014,Post Graduate,388758910,0,#019733
+Tamil Nadu,Pollachi,All India Anna Dravida Munnetra Kazhagam,MAHENDRAN.C,42,GEN,Male,417092,1012667,2014,24-04-2014,Post Graduate,231430367,0,#9DBC2A
+Tamil Nadu,Thanjavur,All India Anna Dravida Munnetra Kazhagam,PARASURAMAN.K,53,GEN,Male,510307,1012258,2014,24-04-2014,12th,146049347,0,#9DBC2A
+Uttar Pradesh,Sant Kabir Nagar,Bharatiya Janata Party,SHARAD TRIPATHI,42,GEN,Male,348892,1011649,2014,07-05-2014,Post Graduate,3697671,0,#FB7B0D
+Tamil Nadu,Virudhunagar,All India Anna Dravida Munnetra Kazhagam,RADHAKRISHNAN T,59,GEN,Male,406694,1010930,2014,24-04-2014,10th,43736485,0,#9DBC2A
+Madhya Pradesh,Rajgarh,Bharatiya Janata Party,RODMAL NAGAR,53,GEN,Male,596727,1010724,2014,17-04-2014,Graduate,28569974,0,#FB7B0D
+Odisha,Sundargarh,Bharatiya Janata Party,JUAL @ JUEL ORAM,53,GEN,Male,340508,1010711,2014,10-04-2014,Others,24202170,1,#FB7B0D
+Uttar Pradesh,Bulandshahr,Bharatiya Janata Party,BHOLA SINGH,38,GEN,Male,604449,1009710,2014,10-04-2014,Graduate,12577537,0,#FB7B0D
+Maharashtra,Raver,Bharatiya Janata Party,KHADASE RAKSHA NIKHIL,26,GEN,Female,605452,1009213,2014,24-04-2014,Graduate,144222841,0,#FB7B0D
+Tamil Nadu,Erode,All India Anna Dravida Munnetra Kazhagam,SELVAKUMARA CHINNAYAN S,55,GEN,Male,466995,1008582,2014,24-04-2014,Post Graduate,47459708,0,#9DBC2A
+Uttar Pradesh,Mirzapur,Apna Dal,ANUPRIYA SINGH PATEL,33,GEN,Female,436536,1007627,2014,12-05-2014,Post Graduate,26858156,2,#999
+Punjab,Amritsar,Indian National Congress,CAPTAIN AMARINDER SINGH,72,GEN,Male,482876,1007196,2014,30-04-2014,Graduate,863564071,3,#019733
+Uttar Pradesh,Jaunpur,Bharatiya Janata Party,KRISHNA PRATAP 'K.P.',37,GEN,Male,367149,1007143,2014,12-05-2014,Doctorate,40656909,0,#FB7B0D
+Karnataka,Koppal,Bharatiya Janata Party,KARADI SANGANNA AMARAPPA,59,GEN,Male,486383,1006508,2014,17-04-2014,10th,12127000,1,#FB7B0D
+Rajasthan,Jhunjhunu,Bharatiya Janata Party,SANTOSH AHLAWAT,57,GEN,Female,488182,1006465,2014,17-04-2014,Post Graduate,35897048,0,#FB7B0D
+Uttar Pradesh,Baghpat,Bharatiya Janata Party,DR. SATYA PAL SINGH,58,GEN,Male,423475,1004263,2014,10-04-2014,Doctorate,67402076,0,#FB7B0D
+Gujarat,Mahesana,Bharatiya Janata Party,PATEL JAYSHREEBEN KANUBHAI,55,GEN,Female,580250,1004258,2014,30-04-2014,10th,13278493,0,#FB7B0D
+Maharashtra,Amravati,Shivsena,ADSUL ANANDRAO VITHOBA,66,GEN,Male,467212,1004061,2014,10-04-2014,Graduate,32596257,1,#F05A00
+Rajasthan,Nagaur,Bharatiya Janata Party,C R CHOUDHARY,66,GEN,Male,414791,1004019,2014,17-04-2014,Post Graduate,17921949,0,#FB7B0D
+Andhra Pradesh,Secundrabad,Bharatiya Janata Party,BANDARU DATTATREYA,66,GEN,Male,438271,1003769,2014,30-04-2014,Graduate,98255148,3,#FB7B0D
+Madhya Pradesh,Jabalpur,Bharatiya Janata Party,RAKESH SINGH,53,GEN,Male,564609,1002184,2014,10-04-2014,Graduate,27823610,1,#FB7B0D
+Tamil Nadu,Ramanathapuram,All India Anna Dravida Munnetra Kazhagam,ANWHAR RAAJHAA.A,65,GEN,Male,405945,1001048,2014,24-04-2014,Graduate,33582876,0,#9DBC2A
+Karnataka,Uttara Kannada,Bharatiya Janata Party,ANANTKUMAR HEGDE,46,GEN,Male,546939,1001038,2014,17-04-2014,12th,32367360,0,#FB7B0D
+Uttar Pradesh,Mainpuri,Samajwadi Party,MULAYAM SINGH YADAV,74,GEN,Male,595918,999265,2014,24-04-2014,Post Graduate,159671544,0,#B15928
+Uttar Pradesh,Misrikh,Bharatiya Janata Party,ANJU BALA,34,GEN,Female,412575,998314,2014,30-04-2014,Graduate,37618214,0,#FB7B0D
+Uttar Pradesh,Machhlishahr,Bharatiya Janata Party,RAM CHARITRA NISHAD,46,GEN,Male,438210,997902,2014,12-05-2014,12th,8641278,0,#FB7B0D
+Karnataka,Gulbarga,Indian National Congress,MALLIKARJUN KHARGE,72,GEN,Male,507193,997638,2014,17-04-2014,Graduate Professional,102220880,0,#019733
+Kerala,Alappuzha,Indian National Congress,K C VENUGOPAL,51,GEN,Male,462525,997464,2014,10-04-2014,Post Graduate,12856075,0,#019733
+Uttar Pradesh,Aonla,Bharatiya Janata Party,DHARMENDRA KUMAR,49,GEN,Male,409907,995641,2014,17-04-2014,10th,5364652,0,#FB7B0D
+Maharashtra,Pune,Bharatiya Janata Party,ANIL SHIROLE,63,GEN,Male,569825,993274,2014,17-04-2014,Graduate,227615279,2,#FB7B0D
+Maharashtra,Palghar,Bharatiya Janata Party,ADV. CHINTAMAN NAVASHA WANGA,63,GEN,Male,533201,992618,2014,24-04-2014,Graduate Professional,5809644,0,#FB7B0D
+Madhya Pradesh,Gwalior,Bharatiya Janata Party,NARENDRA SINGH TOMAR,56,GEN,Male,442796,990912,2014,17-04-2014,Graduate,11412622,1,#FB7B0D
+Tamil Nadu,Kanniyakumari,Bharatiya Janata Party,RADHAKRISHNAN P.,62,GEN,Male,372906,990742,2014,24-04-2014,Graduate Professional,40963269,0,#FB7B0D
+Maharashtra,Jalgaon,Bharatiya Janata Party,A.T. NANA PATIL,52,GEN,Male,647773,990332,2014,24-04-2014,Graduate,226180395,0,#FB7B0D
+Odisha,Koraput,Biju Janata Dal,JHINA HIKAKA,39,GEN,Male,395109,989444,2014,10-04-2014,Graduate,8800000,0,#000000
+Madhya Pradesh,Sidhi,Bharatiya Janata Party,RITI PATHAK,36,GEN,Female,475678,989396,2014,10-04-2014,Post Graduate,33416561,0,#FB7B0D
+Tamil Nadu,Tiruchirappalli,All India Anna Dravida Munnetra Kazhagam,KUMAR.P,42,GEN,Male,458478,988250,2014,24-04-2014,Graduate Professional,18522597,0,#9DBC2A
+Maharashtra,Raigad,Shivsena,ANANT GEETE,63,GEN,Male,396178,987766,2014,24-04-2014,10th,44466487,0,#F05A00
+Uttar Pradesh,Ghazipur,Bharatiya Janata Party,MANOJ SINHA,55,GEN,Male,306929,986673,2014,12-05-2014,Graduate,23376901,0,#FB7B0D
+Haryana,Sonipat,Bharatiya Janata Party,RAMESH CHANDER,54,GEN,Male,347203,985637,2014,10-04-2014,Graduate Professional,142840716,0,#FB7B0D
+Gujarat,Ahmedabad East,Bharatiya Janata Party,PARESH RAWAL,59,GEN,Male,633582,985525,2014,30-04-2014,12th,795211576,0,#FB7B0D
+Tamil Nadu,Cuddalore,All India Anna Dravida Munnetra Kazhagam,ARUNMOZHITHEVAN.A,45,GEN,Male,481429,984538,2014,24-04-2014,Graduate Professional,15765250,9,#9DBC2A
+Odisha,Sambalpur,Biju Janata Dal,NAGENDRA KUMAR PRADHAN,61,GEN,Male,358618,984309,2014,10-04-2014,Post Graduate,12796623,0,#000000
+Maharashtra,Dhule,Bharatiya Janata Party,DR. BHAMRE SUBHASH RAMRAO,61,GEN,Male,529450,983083,2014,24-04-2014,Graduate Professional,125833320,0,#FB7B0D
+Rajasthan,Rajsamand,Bharatiya Janata Party,HARIOM SINGH RATHORE,56,GEN,Male,644794,982119,2014,17-04-2014,Graduate,188310824,0,#FB7B0D
+Nct Of Delhi,Chandni Chowk,Bharatiya Janata Party,DR. HARSH VARDHAN,59,GEN,Male,437938,981863,2014,10-04-2014,Post Graduate,28229308,2,#FB7B0D
+Uttar Pradesh,Bhadohi,Bharatiya Janata Party,VIRENDRA SINGH,57,GEN,Male,403544,981552,2014,07-05-2014,Graduate,11531458,0,#FB7B0D
+Assam,Tezpur,Bharatiya Janata Party,RAM PRASAD SARMAH,58,GEN,Male,446511,980688,2014,07-04-2014,Graduate Professional,6655300,0,#FB7B0D
+Uttar Pradesh,Chandauli,Bharatiya Janata Party,DR MAHENDRA NATH PANDEY,57,GEN,Male,414135,980572,2014,12-05-2014,Doctorate,26489505,0,#FB7B0D
+Odisha,Jajpur,Biju Janata Dal,RITA TARAI,37,GEN,Female,541349,980435,2014,17-04-2014,12th,1622003,0,#000000
+Uttar Pradesh,Shrawasti,Bharatiya Janata Party,DADDAN MISHRA,47,GEN,Male,345964,979638,2014,07-05-2014,Post Graduate,20065527,0,#FB7B0D
+Bihar,Pataliputra,Bharatiya Janata Party,RAM KRIPAL YADAV,53,GEN,Male,383262,978649,2014,17-04-2014,Graduate,13989431,1,#FB7B0D
+Maharashtra,Buldhana,Shivsena,JADHAV PRATAPRAO GANPATRAO,53,GEN,Male,509145,978626,2014,10-04-2014,12th,36033147,2,#F05A00
+Odisha,Cuttack,Biju Janata Dal,BHARTRUHARI MAHATAB,57,GEN,Male,526085,978604,2014,17-04-2014,Post Graduate,88834098,0,#000000
+Maharashtra,Akola,Bharatiya Janata Party,DHOTRE SANJAY SHAMRAO,55,GEN,Male,456472,978491,2014,10-04-2014,Graduate Professional,48501735,3,#FB7B0D
+Tamil Nadu,Madurai,All India Anna Dravida Munnetra Kazhagam,R.GOPALAKRISHNAN,45,GEN,Male,454167,978346,2014,24-04-2014,Graduate,72503060,0,#9DBC2A
+Bihar,Katihar,Nationalist Congress Party,TARIQ ANWAR,63,GEN,Male,431292,977830,2014,24-04-2014,Graduate,104600951,1,#999
+Jharkhand,Palamau,Bharatiya Janata Party,VISHNU DAYAL RAM,62,GEN,Male,476513,977323,2014,10-04-2014,Graduate,24753886,0,#FB7B0D
+Maharashtra,Satara,Nationalist Congress Party,SHRIMANT CHH.  UDAYANRAJE PRATAPSINHA BHONSALE,48,GEN,Male,522531,976681,2014,17-04-2014,12th,606089208,0,#999
+Madhya Pradesh,Guna,Indian National Congress,JYOTIRADITYA M SCINDIA,43,GEN,Male,517036,976629,2014,17-04-2014,Post Graduate,330888751,0,#019733
+Bihar,Araria,Rashtriya Janata Dal,TASLEEM UDDIN,72,GEN,Male,407978,975811,2014,24-04-2014,Literate,42368468,4,#999
+Tamil Nadu,Vellore,All India Anna Dravida Munnetra Kazhagam,"SENGUTTUVAN, B.",57,GEN,Male,383719,974770,2014,24-04-2014,Post Graduate,9197355,0,#9DBC2A
+Kerala,Kasaragod,Communist Party of India  (Marxist),P KARUNAKARAN,69,GEN,Male,384964,974215,2014,10-04-2014,Post Graduate,5900345,6,#DE0000
+Bihar,Bhagalpur,Rashtriya Janata Dal,SHAILESH KUMAR URPH BULO MANDAL,38,GEN,Male,367623,974016,2014,24-04-2014,12th,20216734,1,#999
+Uttar Pradesh,Hardoi,Bharatiya Janata Party,ANSHUL VERMA,39,GEN,Male,360501,972894,2014,24-04-2014,Post Graduate,30385000,0,#FB7B0D
+Uttar Pradesh,Deoria,Bharatiya Janata Party,KALRAJ MISHRA,73,GEN,Male,496500,971557,2014,12-05-2014,Post Graduate,55048193,0,#FB7B0D
+Andhra Pradesh,Hyderabad,All India Majlis-E-Ittehadul Muslimeen,ASADUDDIN OWAISI,43,GEN,Male,513868,971421,2014,30-04-2014,Graduate Professional,40611099,4,#999
+Uttar Pradesh,Akbarpur,Bharatiya Janata Party,DEVENDRA SINGH @ BHOLE SINGH,60,GEN,Male,481584,971375,2014,24-04-2014,10th,28546617,0,#FB7B0D
+Gujarat,Anand,Bharatiya Janata Party,DILIP PATEL,59,GEN,Male,490829,970894,2014,30-04-2014,10th,75998610,4,#FB7B0D
+Uttar Pradesh,Farrukhabad,Bharatiya Janata Party,MUKESH RAJPUT,45,GEN,Male,406195,970677,2014,24-04-2014,Graduate Professional,26178100,0,#FB7B0D
+Bihar,Supaul,Indian National Congress,RANJEET RANJAN,41,GEN,Female,332927,970528,2014,24-04-2014,12th,81242965,5,#019733
+Maharashtra,Dindori,Bharatiya Janata Party,CHAVAN HARISHCHANDRA DEORAM,62,GEN,Male,542784,970182,2014,24-04-2014,Graduate,37240147,1,#FB7B0D
+Jharkhand,Giridih,Bharatiya Janata Party,RAVINDRA KUMAR PANDEY,55,GEN,Male,391913,969997,2014,17-04-2014,Graduate,73376970,0,#FB7B0D
+Nct Of Delhi,New Delhi,Bharatiya Janata Party,MEENAKASHI LEKHI,46,GEN,Female,453350,969812,2014,10-04-2014,Graduate Professional,349916470,0,#FB7B0D
+Karnataka,Raichur,Indian National Congress,B.V.NAYAK,48,GEN,Male,443659,968889,2014,17-04-2014,Graduate Professional,73502466,0,#019733
+Madhya Pradesh,Shahdol,Bharatiya Janata Party,DALPAT SINGH PARASTE,61,GEN,Male,525419,968518,2014,10-04-2014,Graduate Professional,5524870,0,#FB7B0D
+Uttar Pradesh,Fatehpur Sikri,Bharatiya Janata Party,BABULAL,66,GEN,Male,426589,967968,2014,24-04-2014,12th,73028848,3,#FB7B0D
+Jharkhand,Hazaribagh,Bharatiya Janata Party,JAYANT SINHA,50,GEN,Male,406931,967152,2014,17-04-2014,Post Graduate,556754579,0,#FB7B0D
+Karnataka,Bijapur,Bharatiya Janata Party,RAMESH JIGAJINAGI,64,GEN,Male,471757,966757,2014,17-04-2014,Graduate,89429828,2,#FB7B0D
+Uttar Pradesh,Sultanpur,Bharatiya Janata Party,FEROZE VARUN GANDHI,34,GEN,Male,410348,964981,2014,07-05-2014,Post Graduate,357318699,0,#FB7B0D
+Gujarat,Ahmedabad West,Bharatiya Janata Party,DR. KIRIT P SOLANKI,64,GEN,Male,617104,964609,2014,30-04-2014,Post Graduate,34085266,0,#FB7B0D
+Rajasthan,Bharatpur,Bharatiya Janata Party,BAHADUR SINGH,56,GEN,Male,579825,962432,2014,24-04-2014,Literate,19142363,0,#FB7B0D
+Tamil Nadu,Tirunelveli,All India Anna Dravida Munnetra Kazhagam,PRABAKARAN.K.R.P,34,GEN,Male,398139,962330,2014,24-04-2014,Graduate Professional,2764500,0,#9DBC2A
+Punjab,Hoshiarpur,Bharatiya Janata Party,VIJAY SAMPLA,52,GEN,Male,346643,961297,2014,30-04-2014,10th,15164322,0,#FB7B0D
+Uttar Pradesh,Phulpur,Bharatiya Janata Party,KESHAV PRASAD MAURYA,47,GEN,Male,503564,960341,2014,07-05-2014,Graduate,93244143,11,#FB7B0D
+Uttar Pradesh,Azamgarh,Samajwadi Party,MULAYAM SINGH YADAV,74,GEN,Male,340306,960218,2014,12-05-2014,Post Graduate,159671544,0,#B15928
+Karnataka,Bidar,Bharatiya Janata Party,BHAGWANTH KHUBA,46,GEN,Male,459290,959384,2014,17-04-2014,Graduate Professional,56559290,0,#FB7B0D
+Kerala,Vadakara,Indian National Congress,MULLAPPALLY RAMACHANDRAN,67,GEN,Male,416479,959342,2014,10-04-2014,Post Graduate,9225000,0,#019733
+Uttar Pradesh,Rampur,Bharatiya Janata Party,DR. NEPAL SINGH,74,GEN,Male,358616,956389,2014,17-04-2014,Doctorate,27136042,0,#FB7B0D
+Gujarat,Kheda,Bharatiya Janata Party,CHAUHAN DEVUSINH JESINGBHAI (CHAUHAN DEVUSINH),49,GEN,Male,568235,955906,2014,30-04-2014,12th,9426376,0,#FB7B0D
+Gujarat,Patan,Bharatiya Janata Party,LILADHARBHAI KHODAJI VAGHELA,80,GEN,Male,518538,955799,2014,30-04-2014,Graduate Professional,15384027,0,#FB7B0D
+West Bengal,Kolkata Uttar,All India Trinamool Congress,SUDIP BANDYOPADHYAY,62,GEN,Male,343687,955778,2014,12-05-2014,Graduate,22086278,1,#0C6965
+Jharkhand,Rajmahal,Jharkhand Mukti Morcha,VIJAY KUMAR HANSDAK,31,GEN,Male,379507,951563,2014,24-04-2014,5th,6863306,1,#999
+Maharashtra,Solapur,Bharatiya Janata Party,SHARAD BANSODE,46,GEN,Male,517879,951201,2014,17-04-2014,Graduate Professional,60152887,1,#FB7B0D
+Tripura,Tripura East,Communist Party of India  (Marxist),JITENDRA CHOUDHURY,57,GEN,Male,623771,951110,2014,12-04-2014,12th,11322979,0,#DE0000
+Uttar Pradesh,Kushi Nagar,Bharatiya Janata Party,RAJESH PANDEY URF GUDDU,55,GEN,Male,370051,950445,2014,12-05-2014,Post Graduate,110407014,0,#FB7B0D
+Bihar,Muzaffarpur,Bharatiya Janata Party,AJAY NISHAD,45,GEN,Male,469295,948887,2014,07-05-2014,Graduate,145712654,0,#FB7B0D
+Gujarat,Surat,Bharatiya Janata Party,DARSHANA VIKRAM JARDOSH,53,GEN,Female,718412,947922,2014,30-04-2014,Graduate,18038444,0,#FB7B0D
+Kerala,Kannur,Communist Party Of India  (Marxist),P K SREEMATHI TEACHER,64,GEN,Female,427622,947117,2014,10-04-2014,Others,16939970,8,#DE0000
+Maharashtra,Mumbai North,Bharatiya Janata Party,GOPAL CHINAYYA SHETTY,60,GEN,Male,664004,946562,2014,24-04-2014,5th,95617889,10,#FB7B0D
+Gujarat,Kachchh,Bharatiya Janata Party,CHAVDA VINOD LAKHAMASHI,35,GEN,Male,562855,946240,2014,30-04-2014,Graduate Professional,5618643,0,#FB7B0D
+Gujarat,Surendranagar,Bharatiya Janata Party,FATEPARA DEVAJIBHAI GOVINDBHAI,55,GEN,Male,529003,944677,2014,30-04-2014,Literate,11685000,1,#FB7B0D
+Uttar Pradesh,Kaiserganj,Bharatiya Janata Party,BRIJ BHUSAN SHARAN SINGH,57,GEN,Male,381500,943357,2014,07-05-2014,Graduate Professional,61696767,2,#FB7B0D
+Kerala,Kozhikode,Indian National Congress,M .K RAGHAVAN,61,GEN,Male,397615,943009,2014,10-04-2014,Graduate,6164901,0,#019733
+Uttar Pradesh,Ballia,Bharatiya Janata Party,BHARAT SINGH,62,GEN,Male,359758,942211,2014,12-05-2014,Graduate,21130089,3,#FB7B0D
+Tamil Nadu,Nagapattinam,All India Anna Dravida Munnetra Kazhagam,GOPAL. DR. K,54,GEN,Male,434174,942202,2014,24-04-2014,Graduate Professional,19074709,0,#9DBC2A
+Uttar Pradesh,Nagina,Bharatiya Janata Party,YASHWANT SINGH,52,GEN,Male,367825,942196,2014,17-04-2014,Post Graduate,34806740,0,#FB7B0D
+Gujarat,Junagadh,Bharatiya Janata Party,CHUDASAMA RAJESHBHAI NARANBHAI,31,GEN,Male,513179,941378,2014,30-04-2014,12th,7446059,1,#FB7B0D
+Bihar,Jhanjharpur,Bharatiya Janata Party,BIRENDRA KUMAR CHAUDHARY,60,GEN,Male,335481,941249,2014,30-04-2014,Post Graduate,5158792,0,#FB7B0D
+Uttar Pradesh,Etawah,Bharatiya Janata Party,ASHOK KUMAR DOHAREY,43,GEN,Male,439646,939604,2014,24-04-2014,Graduate,12252688,0,#FB7B0D
+Maharashtra,Nashik,Shivsena,GODSE HEMANT TUKARAM,43,GEN,Male,494735,937405,2014,24-04-2014,12th,83611067,1,#F05A00
+Uttar Pradesh,Domariyaganj,Bharatiya Janata Party,JAGDAMBIKA PAL,64,GEN,Male,298845,935027,2014,12-05-2014,Post Graduate,17822082,0,#FB7B0D
+Uttar Pradesh,Bahraich,Bharatiya Janata Party,SADHVI SAVITRI BAI FOOLE,33,GEN,Female,432392,934263,2014,07-05-2014,Graduate,1121491,8,#FB7B0D
+Gujarat,Panchmahal,Bharatiya Janata Party,CHAUHAN PRABHATSINH PRATAPSINH,72,GEN,Male,508274,933461,2014,30-04-2014,10th,10464000,3,#FB7B0D
+Tamil Nadu,Nilgiris,All India Anna Dravida Munnetra Kazhagam,"GOPALAKRISHNAN, C.",52,GEN,Male,463700,933076,2014,24-04-2014,Post Graduate,10941189,0,#9DBC2A
+Maharashtra,Shirdi,Shivsena,LOKHANDE SADASHIV KISAN,51,GEN,Male,532936,932645,2014,17-04-2014,10th,38294539,1,#F05A00
+Assam,Jorhat,Bharatiya Janata Party,KAMAKHYA PRASAD TASA,38,GEN,Male,456420,931336,2014,07-04-2014,Post Graduate,1694785,0,#FB7B0D
+Rajasthan,Dausa,Bharatiya Janata Party,HARISH CHANDRA MEENA,59,GEN,Male,315059,930492,2014,24-04-2014,Graduate,60394789,0,#FB7B0D
+Rajasthan,Bikaner,Bharatiya Janata Party,ARJUN RAM MEGHWAL,60,GEN,Male,584932,929751,2014,17-04-2014,Post Graduate,18142863,0,#FB7B0D
+Bihar,Kishanganj,Indian National Congress,MOHAMMAD ASRARUL HAQUE,67,GEN,Male,493461,928490,2014,24-04-2014,Post Graduate,4616629,2,#019733
+Kerala,Alathur,Communist Party of India  (Marxist),P.K.BIJU,39,GEN,Male,411808,927228,2014,10-04-2014,Post Graduate,3231047,0,#DE0000
+Uttar Pradesh,Etah,Bharatiya Janata Party,RAJVEER SINGH (RAJU BHAIYA),53,GEN,Male,474978,926281,2014,24-04-2014,Graduate Professional,251921157,0,#FB7B0D
+Bihar,Vaishali,Lok Jan Shakti Party,RAMA KISHORE SINGH,51,GEN,Male,305450,925937,2014,12-05-2014,Graduate,21610218,4,#999
+Bihar,Nalanda,Janata Dal  (United),KAUSHLENDRA KUMAR,49,GEN,Male,321982,921761,2014,17-04-2014,12th,11815717,0,#8064a2
+Kerala,Thrissur,Communist Party of India,C. N. JAYADEVAN,63,GEN,Male,389209,920505,2014,10-04-2014,Post Graduate,20041642,3,#DE0000
+Gujarat,Bhavnagar,Bharatiya Janata Party,DR. BHARATIBEN DHIRUBHAI SHIYAL,50,GEN,Female,549529,917402,2014,30-04-2014,Graduate Professional,7748925,0,#FB7B0D
+Tamil Nadu,Thoothukkudi,All India Anna Dravida Munnetra Kazhagam,JEYASINGH THIYAGARAJ NATTERJEE.J,60,GEN,Male,366052,916778,2014,24-04-2014,Post Graduate,9822294,0,#9DBC2A
+Kerala,Wayanad,Indian National Congress,M I SHANAVAS,62,GEN,Male,377035,915006,2014,10-04-2014,Post Graduate,27122055,0,#019733
+Bihar,Munger,Lok Jan Shakti Party,VEENA DEVI,41,GEN,Female,352911,914350,2014,17-04-2014,8th,31162836,0,#999
+Madhya Pradesh,Satna,Bharatiya Janata Party,GANESH SINGH,51,GEN,Male,375288,913444,2014,10-04-2014,Post Graduate,37800000,2,#FB7B0D
+Madhya Pradesh,Damoh,Bharatiya Janata Party,PRAHALAD SINGH PATEL,54,GEN,Male,513079,912080,2014,17-04-2014,Graduate Professional,39586235,0,#FB7B0D
+Kerala,Palakkad,Communist Party of India  (Marxist),M B RAJESH,43,GEN,Male,412897,910322,2014,10-04-2014,Graduate Professional,4676316,11,#DE0000
+Tamil Nadu,Chennai North,All India Anna Dravida Munnetra Kazhagam,VENKATESH BABU .T.G,53,GEN,Male,406704,910114,2014,24-04-2014,Post Graduate,37038275,0,#9DBC2A
+Uttar Pradesh,Kaushambi,Bharatiya Janata Party,VINOD KUMAR SONKAR,44,GEN,Male,331593,910038,2014,07-05-2014,Graduate,27091681,0,#FB7B0D
+Andhra Pradesh,Aruku,Yuvajana Sramika Rythu Congress Party,KOTHAPALLI GEETHA,43,GEN,Female,413191,909614,2014,07-05-2014,Post Graduate,65147467,0,#999
+Odisha,Berhampur,Biju Janata Dal,SIDHANT MOHAPATRA,47,GEN,Male,398107,905362,2014,10-04-2014,Post Graduate,16462430,0,#000000
+Bihar,Hajipur (Sc),Lok Jan Shakti Party,RAMVILAS PASWAN,67,GEN,Male,455652,904753,2014,07-05-2014,Post Graduate,9642023,2,#999
+Bihar,Gopalganj (Sc),Bharatiya Janata Party,JANAK RAM,42,GEN,Male,478773,903583,2014,12-05-2014,Post Graduate,10582664,2,#FB7B0D
+Jharkhand,Dumka,Jharkhand Mukti Morcha,SHIBU SOREN,68,GEN,Male,335815,903060,2014,24-04-2014,10th,46760684,0,#999
+Bihar,Sitamarhi,Rashtriya Lok Samta Party,RAM KUMAR SHARMA,50,GEN,Male,411265,900588,2014,07-05-2014,Post Graduate,9265000,0,#999
+Gujarat,Dahod,Bharatiya Janata Party,JASVANTSINH SUMANBHAI BHABHOR,47,GEN,Male,511111,900381,2014,30-04-2014,Graduate Professional,19661231,0,#FB7B0D
+Bihar,Valmiki Nagar,Bharatiya Janata Party,SATISH CHANDRA DUBEY,39,GEN,Male,364011,900114,2014,12-05-2014,10th,6061576,3,#FB7B0D
+Bihar,Banka,Rashtriya Janata Dal,JAI PRAKASH NARAYAN YADAV,60,GEN,Male,285150,899353,2014,24-04-2014,Post Graduate,27846274,2,#999
+Uttar Pradesh,Lalganj,Bharatiya Janata Party,NEELAM SONKAR,38,GEN,Female,324016,898655,2014,12-05-2014,Post Graduate,33863562,1,#FB7B0D
+Odisha,Aska,Biju Janata Dal,LADU KISHORE SWAIN,66,GEN,Male,541473,896281,2014,10-04-2014,Graduate,3488390,0,#000000
+Maharashtra,Ratnagiri - Sindhudurg,Shivsena,VINAYAK BHAURAO RAUT,60,GEN,Male,493088,896256,2014,17-04-2014,Post Graduate,44568629,5,#F05A00
+Bihar,Khagaria,Lok Jan Shakti Party,CHOUDHARY MAHBOOB ALI KAISER,47,GEN,Male,313806,896231,2014,30-04-2014,Graduate,66569502,1,#999
+Maharashtra,Mumbai North West,Shivsena,GAJANAN CHANDRAKANT KIRTIKAR,70,GEN,Male,464820,895517,2014,24-04-2014,Graduate,58352000,0,#F05A00
+Uttar Pradesh,Pratapgarh,Apna Dal,KUWAR HARIVANSH SINGH,64,GEN,Male,375789,894456,2014,07-05-2014,Graduate,383137665,5,#999
+Bihar,Arrah,Bharatiya Janata Party,RAJ KUMAR SINGH,61,GEN,Male,391074,893213,2014,17-04-2014,Graduate Professional,48403293,0,#FB7B0D
+Madhya Pradesh,Sagar,Bharatiya Janata Party,LAXMI NARAYAN YADAV,73,GEN,Male,482580,891929,2014,17-04-2014,Post Graduate,23962099,1,#FB7B0D
+Odisha,Bhubaneswar,Biju Janata Dal,PRASANNA KUMAR PATASANI,71,GEN,Male,439252,891822,2014,17-04-2014,Post Graduate,13557443,0,#000000
+Uttar Pradesh,Allahabad,Bharatiya Janata Party,SHYAMA CHARAN GUPTA,69,GEN,Male,313772,891582,2014,07-05-2014,Graduate Professional,472851707,0,#FB7B0D
+Assam,Dibrugarh,Bharatiya Janata Party,RAMESWAR TELI,43,GEN,Male,494364,890968,2014,07-04-2014,10th,977943,0,#FB7B0D
+Kerala,Mavelikkara,Indian National Congress,KODIKUNNIL SURESH,52,GEN,Male,402432,889060,2014,10-04-2014,Graduate Professional,13251330,1,#019733
+Bihar,Buxar,Bharatiya Janata Party,ASHWINI KUMAR CHOUBEY,61,GEN,Male,319012,888204,2014,17-04-2014,Graduate,22094499,0,#FB7B0D
+Assam,Karimganj,All India United Democratic Front,RADHESHYAM BISWAS,59,GEN,Male,362866,886920,2014,12-04-2014,12th,7068281,0,#999
+Gujarat,Banaskantha,Bharatiya Janata Party,CHAUDHARY HARIBHAI PARTHIBHAI,59,GEN,Male,507856,886634,2014,30-04-2014,Graduate,15773564,0,#FB7B0D
+Uttar Pradesh,Robertsganj,Bharatiya Janata Party,CHHOTELAL,41,GEN,Male,378211,885873,2014,12-05-2014,5th,3687361,0,#FB7B0D
+Bihar,Nawada,Bharatiya Janata Party,GIRIRAJ SINGH,61,GEN,Male,390248,884441,2014,10-04-2014,Graduate,50054771,1,#FB7B0D
+Kerala,Chalakudy,Independent,INNOCENT,66,GEN,Male,358440,884033,2014,10-04-2014,8th,54474761,0,#95b3d7
+Bihar,Siwan,Bharatiya Janata Party,OM PRAKASH YADAV,48,GEN,Male,372670,884021,2014,12-05-2014,Graduate,2213023,1,#FB7B0D
+Bihar,Patna Sahib,Bharatiya Janata Party,SHATRUGHANA SINHA,67,GEN,Male,485905,882262,2014,17-04-2014,Graduate,1317405961,1,#FB7B0D
+Kerala,Kollam,Revolutionary Socialist Party,N.K.PREMACHANDRAN,53,GEN,Male,408528,879056,2014,10-04-2014,Graduate Professional,16228989,1,#999
+Uttar Pradesh,Bansgaon,Bharatiya Janata Party,KAMLESH PASWAN,38,GEN,Male,417959,877877,2014,12-05-2014,Graduate,101640625,0,#FB7B0D
+Maharashtra,Bhiwandi,Bharatiya Janata Party,KAPIL MORESHWAR PATIL,53,GEN,Male,411070,875605,2014,24-04-2014,Graduate,363758831,0,#FB7B0D
+Uttar Pradesh,Amethi,Indian National Congress,RAHUL GANDHI,43,GEN,Male,408651,874625,2014,07-05-2014,Post Graduate,94006549,0,#019733
+Madhya Pradesh,Khajuraho,Bharatiya Janata Party,NAGENDRA SINGH,72,GEN,Male,474966,874477,2014,17-04-2014,Graduate,44538002,0,#FB7B0D
+Uttar Pradesh,Gonda,Bharatiya Janata Party,KIRTI VARDHAN SINGH,48,GEN,Male,359643,873732,2014,07-05-2014,Post Graduate,74738429,0,#FB7B0D
+Kerala,Thiruvananthapuram,Indian National Congress,DR. SHASHI THAROOR,58,GEN,Male,297806,873439,2014,10-04-2014,Doctorate,230275186,0,#019733
+Kerala,Ponnani,Indian Union Muslim League,E. T. MOHAMMED BASHEER,67,GEN,Male,378503,871592,2014,10-04-2014,12th,13216259,0,#999
+Kerala,Pathanamthitta,Indian National Congress,ANTO ANTONY,57,GEN,Male,358842,869452,2014,10-04-2014,Graduate,5410884,0,#019733
+Bihar,Saran,Bharatiya Janata Party,RAJIV PRATAP RUDY,53,GEN,Male,355120,863254,2014,07-05-2014,Post Graduate,62545997,1,#FB7B0D
+Bihar,Samastipur (Sc),Lok Jan Shakti Party,RAM CHANDRA PASWAN,53,GEN,Male,270401,863199,2014,30-04-2014,10th,13058612,3,#999
+Maharashtra,Mumbai North East,Bharatiya Janata Party,KIRIT  SOMAIYA,60,GEN,Male,525285,861761,2014,24-04-2014,Doctorate,72156258,10,#FB7B0D
+Bihar,Madhubani,Bharatiya Janata Party,HUKM DEO NARAYAN YADAV,77,GEN,Male,358040,860453,2014,30-04-2014,Graduate,115196945,0,#FB7B0D
+Kerala,Attingal,Communist Party Of India  (Marxist),DR.A .SAMPATH,51,GEN,Male,392478,859350,2014,10-04-2014,Doctorate,17791149,1,#DE0000
+Bihar,Ujiarpur,Bharatiya Janata Party,NITYANAND RAI,48,GEN,Male,317352,858920,2014,07-05-2014,Graduate,146743540,1,#FB7B0D
+Uttar Pradesh,Banda,Bharatiya Janata Party,BHAIRON PRASAD MISHRA,60,GEN,Male,342066,858326,2014,30-04-2014,12th,50034910,3,#FB7B0D
+Bihar,Paschim Champaran,Bharatiya Janata Party,DR. SANJAY JAISWAL,49,GEN,Male,371232,854800,2014,12-05-2014,Post Graduate,35941299,2,#FB7B0D
+Uttar Pradesh,Salempur,Bharatiya Janata Party,RAVINDRA KUSHAWAHA,50,GEN,Male,392213,854749,2014,12-05-2014,12th,7134477,0,#FB7B0D
+Madhya Pradesh,Morena,Bharatiya Janata Party,ANOOP MISHRA,57,GEN,Male,375567,854279,2014,17-04-2014,12th,110523112,0,#FB7B0D
+Kerala,Malappuram,Indian Union Muslim League,E. AHAMED,76,GEN,Male,437723,853467,2014,10-04-2014,Graduate Professional,11818952,1,#999
+Gujarat,Jamnagar,Bharatiya Janata Party,POONAMBEN HEMATBHAI MAADAM,39,GEN,Female,484412,852643,2014,30-04-2014,Graduate,174372249,0,#FB7B0D
+Kerala,Ernakulam,Indian National Congress,PROF. K.V. THOMAS,67,GEN,Male,353841,850834,2014,10-04-2014,Post Graduate,11848550,0,#019733
+Bihar,Sasaram (Sc),Bharatiya Janata Party,CHHEDI PASWAN,58,GEN,Male,366087,846788,2014,10-04-2014,Post Graduate,35776803,0,#FB7B0D
+Rajasthan,Karauli-Dholpur,Bharatiya Janata Party,MANOJ RAJORIA,43,GEN,Male,402407,845941,2014,24-04-2014,12th,28636113,0,#FB7B0D
+Maharashtra,Mumbai North Central,Bharatiya Janata Party,POONAM MAHAJAN ALIAS POONAM VAJENDLA RAO,33,GEN,Female,478535,845292,2014,24-04-2014,Others,1080867626,0,#FB7B0D
+Bihar,Sheohar,Bharatiya Janata Party,RAMA DEVI,65,GEN,Female,372506,842894,2014,07-05-2014,Post Graduate,308591850,5,#FB7B0D
+Odisha,Kandhamal,Biju Janata Dal,HEMENDRA CHANDRA SINGH,46,GEN,Male,421458,839415,2014,10-04-2014,Graduate,503907437,2,#000000
+Uttar Pradesh,Kanpur,Bharatiya Janata Party,DR.MURLI MANOHAR JOSHI,80,GEN,Male,474712,835079,2014,30-04-2014,Doctorate,78410008,1,#FB7B0D
+Kerala,Kottayam,Kerala Congress  (M),JOSE K. MANI,49,GEN,Male,424194,831636,2014,10-04-2014,Post Graduate,26236371,0,#999
+Madhya Pradesh,Rewa,Bharatiya Janata Party,JANARDAN MISHRA,58,GEN,Male,383320,830002,2014,10-04-2014,Graduate Professional,10156568,0,#FB7B0D
+Bihar,Darbhanga,Bharatiya Janata Party,KIRTI AZAD,55,GEN,Male,314949,828342,2014,30-04-2014,Graduate,28531267,4,#FB7B0D
+Uttar Pradesh,Rae Bareli,Indian National Congress,SONIA GANDHI,67,GEN,Female,526434,825136,2014,30-04-2014,Graduate,92895288,0,#019733
+Maharashtra,Kalyan,Shivsena,DR.SHRIKANT EKNATH SHINDE,27,GEN,Male,440892,824196,2014,24-04-2014,Graduate Professional,998000,0,#F05A00
+Bihar,Purvi Champaran,Bharatiya Janata Party,RADHA MOHAN SINGH,64,GEN,Male,400452,822671,2014,12-05-2014,Graduate,22558073,0,#FB7B0D
+Kerala,Idukki,Independent,ADV.JOICE GEORGE,44,GEN,Male,382019,819766,2014,10-04-2014,Graduate Professional,17396207,4,#95b3d7
+Tamil Nadu,Chennai Central,All India Anna Dravida Munnetra Kazhagam,S.R. VIJAYAKUMAR,40,GEN,Male,333296,814894,2014,24-04-2014,Graduate Professional,13401510,0,#9DBC2A
+Bihar,Jahanabad,Rashtriya Lok Samta Party,DR. ARUN KUMAR,55,GEN,Male,322647,811516,2014,17-04-2014,Doctorate,38846631,1,#999
+Gujarat,Porbandar,Bharatiya Janata Party,RADADIYA VITHALBHAI  HANSRAJBHAI,55,GEN,Male,508437,809433,2014,30-04-2014,Graduate,73003639,10,#FB7B0D
+Bihar,Gaya (Sc),Bharatiya Janata Party,HARI MANJHI,51,GEN,Male,326230,809378,2014,10-04-2014,8th,10184120,1,#FB7B0D
+Gujarat,Amreli,Bharatiya Janata Party,KACHHADIYA NARANBHAI BHIKHABHAI,58,GEN,Male,436715,808816,2014,30-04-2014,12th,34164801,2,#FB7B0D
+Assam,Silchar,Indian National Congress,SUSHMITA DEV,41,GEN,Female,336451,799830,2014,12-04-2014,Post Graduate,87495844,1,#019733
+Himachal Pradesh,Kangra,Bharatiya Janata Party,SHANTA KUMAR,79,GEN,Male,456163,799445,2014,07-05-2014,Graduate Professional,19852104,0,#FB7B0D
+Jharkhand,Singhbhum,Bharatiya Janata Party,LAXMAN GILUWA,52,GEN,Male,303131,795286,2014,17-04-2014,12th,8094301,4,#FB7B0D
+Bihar,Karakat,Rashtriya Lok Samta Party,UPENDRA KUSHWAHA,51,GEN,Male,338892,789927,2014,10-04-2014,Post Graduate,24829741,4,#999
+Maharashtra,Mumbai   South,Shivsena,ARVIND SAWANT,62,GEN,Male,374780,780715,2014,24-04-2014,Graduate,13067446,1,#F05A00
+Uttarakhand,Tehri Garhwal,Bharatiya Janata Party,MALA RAJYA LAXMI SHAH,64,GEN,Female,446733,776214,2014,07-05-2014,12th,1662109875,0,#FB7B0D
+Bihar,Jamui (Sc),Lok Jan Shakti Party,CHIRAG KUMAR PASWAN,32,GEN,Male,285354,775639,2014,10-04-2014,12th,10414470,0,#999
+Manipur,Outer Manipur,Indian National Congress,THANGSO BAITE,61,GEN,Male,296770,771766,2014,09-04-2014,Post Graduate,5947000,0,#019733
+Chhattisgarh,Bastar,Bharatiya Janata Party,DINESH KASHYAP,51,GEN,Male,385829,769913,2014,10-04-2014,Post Graduate,16108199,1,#FB7B0D
+Maharashtra,Mumbai South Central,Shivsena,RAHUL RAMESH SHEWALE,41,GEN,Male,381275,769060,2014,24-04-2014,Others,13304397,1,#F05A00
+Madhya Pradesh,Tikamgarh,Bharatiya Janata Party,DR. VIRENDRA KUMAR,60,GEN,Male,422979,766321,2014,17-04-2014,Doctorate,8764635,0,#FB7B0D
+Puducherry,Puducherry,All India N.R. Congress,R. RADHAKRISHNAN,42,GEN,Male,255826,740017,2014,24-04-2014,Post Graduate,77724418,0,#999
+Himachal Pradesh,Shimla,Bharatiya Janata Party,VIRENDER KASHYAP,63,GEN,Male,385973,737757,2014,07-05-2014,Post Graduate,5228095,0,#FB7B0D
+Jharkhand,Khunti,Bharatiya Janata Party,KARIA MUNDA,77,GEN,Male,269185,736955,2014,17-04-2014,Post Graduate,7474796,0,#FB7B0D
+Madhya Pradesh,Bhind,Bharatiya Janata Party,DR. BHAGIRATH PRASAD,66,GEN,Male,404474,729084,2014,17-04-2014,Doctorate,21240286,0,#FB7B0D
+Himachal Pradesh,Mandi,Bharatiya Janata Party,RAM SWAROOP SHARMA,55,GEN,Male,362824,726094,2014,07-05-2014,10th,10178871,0,#FB7B0D
+Jharkhand,Chatra,Bharatiya Janata Party,SUNIL KUMAR SINGH,52,GEN,Male,295862,712971,2014,10-04-2014,Post Graduate,174744806,0,#FB7B0D
+Uttarakhand,Garhwal,Bharatiya Janata Party,(MAJ GEN (RETD.) ) BHUWAN CHANDRA KHANDURI (AVSM),79,GEN,Male,405690,682024,2014,07-05-2014,Graduate Professional,44357368,0,#FB7B0D
+Uttarakhand,Almora,Bharatiya Janata Party,AJAY TAMTA,41,GEN,Male,348186,656525,2014,07-05-2014,12th,6366653,0,#FB7B0D
+Jharkhand,Lohardaga,Bharatiya Janata Party,SUDARSHAN BHAGAT,45,GEN,Male,226666,651460,2014,10-04-2014,Graduate,9031009,0,#FB7B0D
+Manipur,Inner Manipur,Indian National Congress,DR. THOKCHOM MEINYA,69,GEN,Male,292102,640871,2014,17-04-2014,Doctorate,3825200,0,#019733
+Meghalaya,Shillong,Indian National Congress,VINCENT H. PALA,46,GEN,Male,209340,619987,2014,09-04-2014,Graduate Professional,497108058,0,#019733
+Assam,Autonomous District,Indian National Congress,BIREN SINGH ENGTI,74,GEN,Male,213152,543280,2014,12-04-2014,Post Graduate,35367390,0,#019733
+Jammu & Kashmir,Baramulla,Jammu & Kashmir Peoples Democratic Party,MUZAFFAR HUSSAIN BAIG,67,GEN,Male,175277,465992,2014,07-05-2014,Post Graduate,200707183,0,#999
+Meghalaya,Tura,National Peoples Party,PURNO AGITOK SANGMA,66,GEN,Male,239301,458071,2014,09-04-2014,Post Graduate,215134618,0,#999
+Chandigarh,Chandigarh,Bharatiya Janata Party,KHER KIRRON ANUPAM,61,GEN,Female,191362,453455,2014,10-04-2014,Post Graduate,335343871,0,#FB7B0D
+Mizoram,Mizoram,Indian National Congress,C. L. RUALA,78,GEN,Male,210485,433201,2014,11-04-2014,Graduate,25733421,0,#019733
+Goa,South Goa,Bharatiya Janata Party,ADV. NARENDRA KESHAV SAWAIKAR,47,GEN,Male,198776,410369,2014,12-04-2014,Graduate Professional,6260382,0,#FB7B0D
+Goa,North Goa,Bharatiya Janata Party,SHRIPAD YESSO NAIK,61,GEN,Male,237903,406631,2014,12-04-2014,Graduate,37019154,0,#FB7B0D
+Jammu & Kashmir,Anantnag,Jammu & Kashmir Peoples Democratic Party,MEHBOOBA MUFTI,54,GEN,Female,200429,375279,2014,24-04-2014,Graduate Professional,5200000,1,#999
+Arunachal Pradesh,Arunachal West,Bharatiya Janata Party,KIREN RIJIJU,42,GEN,Male,169367,335665,2014,09-04-2014,Graduate,12539868,0,#FB7B0D
+Jammu & Kashmir,Srinagar,Jammu & Kashmir Peoples Democratic Party,TARIQ HAMEED KARRA,58,GEN,Male,157923,312212,2014,30-04-2014,Graduate Professional,984556436,0,#999
+Sikkim,Sikkim,Sikkim Democratic Front,PREM DAS RAI,59,GEN,Male,163698,308967,2014,12-04-2014,Post Graduate,32389223,0,#999
+Arunachal Pradesh,Arunachal East,Indian National Congress,NINONG ERING,55,GEN,Male,118455,261291,2014,09-04-2014,Graduate,88065000,0,#019733
+Andaman & Nicobar Islands,Andaman & Nicobar Islands,Bharatiya Janata Party,BISHNU PADA RAY,64,GEN,Male,90969,190328,2014,10-04-2014,Graduate,5658980,1,#FB7B0D
+Dadra & Nagar Haveli,Dadar & Nagar Haveli,Bharatiya Janata Party,PATEL NATUBHAI GOMANBHAI,41,GEN,Male,80790,165286,2014,30-04-2014,5th,154760217,5,#FB7B0D
+Jammu & Kashmir,Ladakh,Bharatiya Janata Party,THUPSTAN CHHEWANG,67,GEN,Male,31111,118029,2014,07-05-2014,Graduate Professional,19852701,0,#FB7B0D
+Daman & Diu,Daman & Diu,Bharatiya Janata Party,PATEL LALUBHAI BABUBHAI,58,GEN,Male,46960,87233,2014,30-04-2014,8th,144931238,1,#FB7B0D
+Lakshadweep,Lakshadweep,Nationalist Congress Party,MOHAMMED FAIZAL P.P.,38,GEN,Male,21665,43239,2014,10-04-2014,Post Graduate,538119,3,#999

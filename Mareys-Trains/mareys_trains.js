@@ -26,6 +26,9 @@ var xAxis = d3.svg.axis()
 var svg = d3.select(".trains").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    .attr("xmlns", 'http://www.w3.org/2000/svg')
+    .attr("xlink", 'http://www.w3.org/1999/xlink')
+    .attr("version", '1.1')
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -84,7 +87,9 @@ d3.csv("data.csv", type, function(error, trains) {
 
   var circle = train.selectAll("circle")
       .data(function(d) { return d.stops; })
-    .enter().append("circle")
+    .enter().append("a")
+        .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d.station.name } )
+        .attr("target","_blank").append("circle")
       .attr("transform", function(d) { return "translate(" + x(d.time) + "," + y(d.station.distance) + ")"; })
       .attr("r", 3)
       .attr("data-title",function(d) { 

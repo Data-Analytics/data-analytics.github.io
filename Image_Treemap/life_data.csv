@@ -1,0 +1,194 @@
+rank,image,Country,overall_life,male,female,url
+1, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/38px-Flag_of_Monaco.svg.png,Monaco,86.5,83,90,http://en.wikipedia.org/wiki/Monaco
+2, //upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/45px-Flag_of_Japan.svg.png,Japan,84.6,82,87.2,http://en.wikipedia.org/wiki/Japan
+3, //upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/43px-Flag_of_Andorra.svg.png,Andorra,84.2,80.8,87.6,http://en.wikipedia.org/wiki/Andorra
+4, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/45px-Flag_of_Singapore.svg.png,Singapore,84,82,87,http://en.wikipedia.org/wiki/Singapore
+5, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/45px-Flag_of_Hong_Kong.svg.png,Hong Kong,83.8,82,85.6,http://en.wikipedia.org/wiki/Hong_Kong
+6,//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/31px-Flag_of_San_Marino.svg.png,San Marino,83.5,82,85,http://en.wikipedia.org/wiki/San_Marino
+7, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/42px-Flag_of_Iceland.svg.png,Iceland,83.3,81.4,85.2,http://en.wikipedia.org/wiki/Iceland
+8, //upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png,Italy,82.1,75.4,85.8,http://en.wikipedia.org/wiki/Italy
+9, //upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/46px-Flag_of_Australia.svg.png,Australia,83,80.5,85.5,http://en.wikipedia.org/wiki/Australia
+10, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png,Sweden,83,81.4,84.6,http://en.wikipedia.org/wiki/Sweden
+11, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png,Switzerland,82.8,80.4,85.4,http://en.wikipedia.org/wiki/Switzerland
+12, //upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/46px-Flag_of_Canada.svg.png,Canada,82.5,80.4,84.6,http://en.wikipedia.org/wiki/Canada
+13, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png,France,82.3,79.4,85.2,http://en.wikipedia.org/wiki/France
+14, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png,Israel,82.1,80.2,84,http://en.wikipedia.org/wiki/Israel
+15, //upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/45px-Flag_of_Spain.svg.png,Spain,82,79,85,http://en.wikipedia.org/wiki/Spain
+16, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png,Luxembourg,82,79.5,84.5,http://en.wikipedia.org/wiki/Luxembourg
+17, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png,Norway,81.9,80.2,83.6,http://en.wikipedia.org/wiki/Norway
+18, //upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/46px-Flag_of_New_Zealand.svg.png,New Zealand,81.7,79.4,84,http://en.wikipedia.org/wiki/New_Zealand
+19, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/45px-Flag_of_Austria.svg.png,Austria,81.5,78.5,84.5,http://en.wikipedia.org/wiki/Austria
+20, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png,Netherlands,81.5,79.5,83.5,http://en.wikipedia.org/wiki/Netherlands
+21, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png,Ireland,81.4,79.2,83.6,http://en.wikipedia.org/wiki/Republic_of_Ireland
+22, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/45px-Flag_of_Cyprus.svg.png,Cyprus,81.2,79.1,84.3,http://en.wikipedia.org/wiki/Cyprus
+23, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/46px-Flag_of_Finland.svg.png,Finland,81,78,84,http://en.wikipedia.org/wiki/Finland
+24, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png,Germany,81,78.5,83.5,http://en.wikipedia.org/wiki/Germany
+25, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/45px-Flag_of_Greece.svg.png,Greece,81,78,84,http://en.wikipedia.org/wiki/Greece
+26, //upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/45px-Flag_of_South_Korea.svg.png,South Korea,81,77.5,84.5,http://en.wikipedia.org/wiki/South_Korea
+27, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/45px-Flag_of_Malta.svg.png,Malta,81,79.4,82.6,http://en.wikipedia.org/wiki/Malta
+28, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/45px-Flag_of_Belgium_%28civil%29.svg.png,Belgium,81,78.5,83.5,http://en.wikipedia.org/wiki/Belgium
+29, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png,United Kingdom,81,79.5,82.5,http://en.wikipedia.org/wiki/United_Kingdom
+30, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/46px-Flag_of_Liechtenstein.svg.png,Liechtenstein,80.7,77.8,83.6,http://en.wikipedia.org/wiki/Liechtenstein
+31, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/45px-Flag_of_the_Republic_of_China.svg.png,Taiwan,80.6,78,83.2,http://en.wikipedia.org/wiki/Taiwan
+32, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/45px-Flag_of_Portugal.svg.png,Portugal,80,77,83,http://en.wikipedia.org/wiki/Portugal
+33, //upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/46px-Flag_of_Slovenia.svg.png,Slovenia,80,77,83,http://en.wikipedia.org/wiki/Slovenia
+34, //upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/46px-Flag_of_Costa_Rica.svg.png,Costa Rica,79.8,78.3,81.3,http://en.wikipedia.org/wiki/Costa_Rica
+35, //upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/46px-Flag_of_the_United_States.svg.png,United States,79.8,77.4,82.2,http://en.wikipedia.org/wiki/United_States
+36, //upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/45px-Flag_of_Chile.svg.png,Chile,79.5,76.5,82.5,http://en.wikipedia.org/wiki/Chile
+37,//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png,Denmark,79.5,77,82,http://en.wikipedia.org/wiki/Denmark
+38, //upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/46px-Flag_of_Cuba.svg.png,Cuba,79.4,77.4,81.4,http://en.wikipedia.org/wiki/Cuba
+40, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/46px-Flag_of_the_United_Arab_Emirates.svg.png,United Arab Emirates,79.2,77.2,81.2,http://en.wikipedia.org/wiki/United_Arab_Emirates
+41, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/46px-Flag_of_Brunei.svg.png,Brunei,79,77.5,80.5,http://en.wikipedia.org/wiki/Brunei
+42, //upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/45px-Flag_of_Barbados.svg.png,Barbados,78.5,76.2,80.8,http://en.wikipedia.org/wiki/Barbados
+43, //upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/46px-Flag_of_Kuwait.svg.png,Kuwait,78.2,75.5,80.5,http://en.wikipedia.org/wiki/Kuwait
+44, //upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/45px-Flag_of_the_Czech_Republic.svg.png,Czech Republic,78,75,81,http://en.wikipedia.org/wiki/Czech_Republic
+45, //upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/45px-Flag_of_Panama.svg.png,Panama,77.8,74.6,81,http://en.wikipedia.org/wiki/Panama
+46, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png,Poland,77,72.5,81.5,http://en.wikipedia.org/wiki/Poland
+47, //upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/46px-Flag_of_Croatia.svg.png,Croatia,77.5,74.5,80.5,http://en.wikipedia.org/wiki/Croatia
+48, //upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Dominica.svg/46px-Flag_of_Dominica.svg.png,Dominica,77.5,75,80,http://en.wikipedia.org/wiki/Dominica
+49, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/45px-Flag_of_Uruguay.svg.png,Uruguay,77.3,74.2,80.4,http://en.wikipedia.org/wiki/Uruguay
+50, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/46px-Flag_of_Mexico.svg.png,Mexico,77.2,74.2,80.2,http://en.wikipedia.org/wiki/Mexico
+51, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Maldives.svg/45px-Flag_of_Maldives.svg.png,Maldives,77.2,76.2,78.2,http://en.wikipedia.org/wiki/Maldives
+52, //upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/46px-Flag_of_Bahrain.svg.png,Bahrain,77,75,79,http://en.wikipedia.org/wiki/Bahrain
+53, //upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/45px-Flag_of_Belize.svg.png,Belize,76.9,74.4,79.4,http://en.wikipedia.org/wiki/Belize
+54, //upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/45px-Flag_of_Slovakia.svg.png,Slovakia,76.8,73.4,80.2,http://en.wikipedia.org/wiki/Slovakia
+55, //upload.wikimedia.org/wikipedia/commons/thumb/9/93/Flag_of_the_Bahamas.svg/46px-Flag_of_the_Bahamas.svg.png,Bahamas,76.5,73.5,79.5,http://en.wikipedia.org/wiki/The_Bahamas
+56, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/46px-Flag_of_Grenada.svg.png,Grenada,76.5,73,80,http://en.wikipedia.org/wiki/Grenada
+57, //upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/43px-Flag_of_Brazil.svg.png,Brazil,76.2,72.6,79.8,http://en.wikipedia.org/wiki/Brazil
+58, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/46px-Flag_of_Estonia.svg.png,Estonia,76.1,71,81.2,http://en.wikipedia.org/wiki/Estonia
+59, //upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/45px-Flag_of_Ecuador.svg.png,Ecuador,76,73,79,http://en.wikipedia.org/wiki/Ecuador
+60, //upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/46px-Flag_of_Argentina.svg.png,Argentina,76,73,79,http://en.wikipedia.org/wiki/Argentina
+61, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/45px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png,Saint Vincent and the Grenadines,76,73,79,http://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines
+62, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/46px-Flag_of_Oman.svg.png,Oman,76,73,79,http://en.wikipedia.org/wiki/Oman
+63, //upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/46px-Flag_of_Bosnia_and_Herzegovina.svg.png,Bosnia and Herzegovina,76,74,78,http://en.wikipedia.org/wiki/Bosnia_and_Herzegovina
+64, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/46px-Flag_of_Lithuania.svg.png,Lithuania,75.9,70.8,81,http://en.wikipedia.org/wiki/Lithuania
+65, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Antigua_and_Barbuda.svg/45px-Flag_of_Antigua_and_Barbuda.svg.png,Antigua and Barbuda,75.8,74.4,77.2,http://en.wikipedia.org/wiki/Antigua_and_Barbuda
+66, //upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/46px-Flag_of_Malaysia.svg.png,Malaysia,75.7,72.2,79.2,http://en.wikipedia.org/wiki/Malaysia
+67, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/46px-Flag_of_Saint_Lucia.svg.png,Saint Lucia,75.5,71.5,79.5,http://en.wikipedia.org/wiki/Saint_Lucia
+68, //upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Qatar.svg/46px-Flag_of_Qatar.svg.png,Qatar,75.5,73,78,http://en.wikipedia.org/wiki/Qatar
+69, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/45px-Flag_of_Mauritius.svg.png,Mauritius,75.2,71,79.4,http://en.wikipedia.org/wiki/Mauritius
+70, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/45px-Flag_of_Saint_Kitts_and_Nevis.svg.png,Saint Kitts and Nevis,75.1,72.2,78,http://en.wikipedia.org/wiki/Saint_Kitts_and_Nevis
+71, //upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/45px-Flag_of_Vietnam.svg.png,Vietnam,75,73,77,http://en.wikipedia.org/wiki/Vietnam
+72, //upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/46px-Flag_of_Hungary.svg.png,Hungary,75,71,79,http://en.wikipedia.org/wiki/Hungary
+73, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/45px-Flag_of_Venezuela.svg.png,Venezuela,75,71.5,78.5,http://en.wikipedia.org/wiki/Venezuela
+74, //upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Flag_of_Macedonia.svg/46px-Flag_of_Macedonia.svg.png,Macedonia,75,73,77,http://en.wikipedia.org/wiki/Republic_of_Macedonia
+75, //upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flag_of_Syria.svg/45px-Flag_of_Syria.svg.png,Syria,75,72,78,http://en.wikipedia.org/wiki/Syria
+76, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/45px-Flag_of_Thailand.svg.png,Thailand,74.9,71.4,78.4,http://en.wikipedia.org/wiki/Thailand
+77, //upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Trinidad_and_Tobago.svg/46px-Flag_of_Trinidad_and_Tobago.svg.png,Trinidad and Tobago,70.8,66.5,75.8,http://en.wikipedia.org/wiki/Trinidad_and_Tobago
+78, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/46px-Flag_of_Seychelles.svg.png,Seychelles,74.7,71,78.4,http://en.wikipedia.org/wiki/Seychelles
+79, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/46px-Flag_of_Sri_Lanka.svg.png,Sri Lanka,74.7,71.4,78,http://en.wikipedia.org/wiki/Sri_Lanka
+80, //upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/46px-Flag_of_Paraguay.svg.png,Paraguay,74.7,71.6,77.8,http://en.wikipedia.org/wiki/Paraguay
+80, //upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/45px-Flag_of_Peru.svg.png,Peru,74.7,71.6,77.8,http://en.wikipedia.org/wiki/Peru
+81, //upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/46px-Flag_of_El_Salvador.svg.png,El Salvador,74.6,70.8,78.4,http://en.wikipedia.org/wiki/El_Salvador
+82, //upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/46px-Flag_of_Jordan.svg.png,Jordan,74.6,72.4,76.8,http://en.wikipedia.org/wiki/Jordan
+83, //upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/45px-Flag_of_Colombia.svg.png,Colombia,74.6,72.4,76.8,http://en.wikipedia.org/wiki/Colombia
+84, //upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Tonga.svg/46px-Flag_of_Tonga.svg.png,Tonga,74.5,73,76,http://en.wikipedia.org/wiki/Tonga
+85, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/46px-Flag_of_Cape_Verde.svg.png,Cape Verde,74.5,70.6,78.4,http://en.wikipedia.org/wiki/Cape_Verde
+86, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/46px-Flag_of_Latvia.svg.png,Latvia,74.5,69.5,78.5,http://en.wikipedia.org/wiki/Latvia
+87, //upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Nicaragua.svg/46px-Flag_of_Nicaragua.svg.png,Nicaragua,74.5,71.5,77.5,http://en.wikipedia.org/wiki/Nicaragua
+88, //upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/46px-Flag_of_Libya.svg.png,Libya,74.5,71,78,http://en.wikipedia.org/wiki/Libya
+89, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/45px-Flag_of_Georgia.svg.png,Georgia,74.5,70.2,78.8,http://en.wikipedia.org/wiki/Georgia_(country)
+90, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/45px-Flag_of_Tunisia.svg.png,Tunisia,74.5,72.5,76.5,http://en.wikipedia.org/wiki/Tunisia
+91, //upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/46px-Flag_of_Montenegro.svg.png,Montenegro,74.5,71.5,77.5,http://en.wikipedia.org/wiki/Montenegro
+92, //upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/46px-Flag_of_Bulgaria.svg.png,Bulgaria,74.5,71,78,http://en.wikipedia.org/wiki/Bulgaria
+93, //upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/45px-Flag_of_Suriname.svg.png,Suriname,74.5,72,77,http://en.wikipedia.org/wiki/Suriname
+94, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/45px-Flag_of_Turkey.svg.png,Turkey,74.4,72.4,76.4,http://en.wikipedia.org/wiki/Turkey
+95, //upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/46px-Flag_of_Armenia.svg.png,Armenia,74.4,70.6,78.2,http://en.wikipedia.org/wiki/Armenia
+96, //upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/45px-Flag_of_Saudi_Arabia.svg.png,Saudi Arabia,74.3,72.4,76.2,http://en.wikipedia.org/wiki/Saudi_Arabia
+97, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/45px-Flag_of_the_People%27s_Republic_of_China.svg.png,China,74.2,72,76.4,http://en.wikipedia.org/wiki/China
+98, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/46px-Flag_of_Samoa.svg.png,Samoa,74,71,77,http://en.wikipedia.org/wiki/Samoa
+99, //upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/45px-Flag_of_Lebanon.svg.png,Lebanon,74,72.5,76.5,http://en.wikipedia.org/wiki/Lebanon
+100, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Palau.svg/46px-Flag_of_Palau.svg.png,Palau,74,70,78,http://en.wikipedia.org/wiki/Palau
+101, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/45px-Flag_of_Romania.svg.png,Romania,74,70,78,http://en.wikipedia.org/wiki/Romania
+102, //upload.wikimedia.org/wikipedia/commons/thumb/8/82/Flag_of_Honduras.svg/46px-Flag_of_Honduras.svg.png,Honduras,74,72,76,http://en.wikipedia.org/wiki/Honduras
+103, //upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/42px-Flag_of_Albania.svg.png,Albania,74,72,76,http://en.wikipedia.org/wiki/Albania
+104, //upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/45px-Flag_of_Serbia.svg.png,Serbia,74,71,77,http://en.wikipedia.org/wiki/Serbia
+105, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/46px-Flag_of_Jamaica.svg.png,Jamaica,74.8,71.5,78.2,http://en.wikipedia.org/wiki/Jamaica
+106, //upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/46px-Flag_of_Iran.svg.png,Iran,73.5,72,75,http://en.wikipedia.org/wiki/Iran
+107, //upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flag_of_the_Marshall_Islands.svg/46px-Flag_of_the_Marshall_Islands.svg.png,Marshall Islands,73.5,69,75,http://en.wikipedia.org/wiki/Marshall_Islands
+108, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/45px-Flag_of_Algeria.svg.png,Algeria,73.3,71.8,74.8,http://en.wikipedia.org/wiki/Algeria
+109, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/45px-Flag_of_Egypt.svg.png,Egypt,73.2,71.2,75.2,http://en.wikipedia.org/wiki/Egypt
+110, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/46px-Flag_of_the_Dominican_Republic.svg.png,Dominican Republic,73.2,72,74.4,http://en.wikipedia.org/wiki/Dominican_Republic
+111, //upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/46px-Flag_of_Fiji.svg.png,Fiji,73,70,76,http://en.wikipedia.org/wiki/Fiji
+112, //upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/46px-Flag_of_the_Philippines.svg.png,Philippines,73,70,76,http://en.wikipedia.org/wiki/Philippines
+113, //upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/46px-Flag_of_the_Solomon_Islands.svg.png,Solomon Islands,73,71,75,http://en.wikipedia.org/wiki/Solomon_Islands
+114, //upload.wikimedia.org/wikipedia/commons/thumb/3/30/Flag_of_Nauru.svg/46px-Flag_of_Nauru.svg.png,Nauru,73,70,76,http://en.wikipedia.org/wiki/Nauru
+115, //upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/45px-Flag_of_Morocco.svg.png,Morocco,73,71,75,http://en.wikipedia.org/wiki/Morocco
+116, //upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/46px-Flag_of_Belarus.svg.png,Belarus,72.5,68.5,77.5,http://en.wikipedia.org/wiki/Belarus
+117, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/45px-Flag_of_Indonesia.svg.png,Indonesia,72,68,76,http://en.wikipedia.org/wiki/Indonesia
+118, //upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Sao_Tome_and_Principe.svg/46px-Flag_of_Sao_Tome_and_Principe.svg.png,Sao Tome and Principe,72,68,76,http://en.wikipedia.org/wiki/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe
+119, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/46px-Flag_of_Vanuatu.svg.png,Vanuatu,72,71,74,http://en.wikipedia.org/wiki/Vanuatu
+120, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/46px-Flag_of_Azerbaijan.svg.png,Azerbaijan,71.5,69.5,74.5,http://en.wikipedia.org/wiki/Azerbaijan
+121, //upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/46px-Flag_of_Guatemala.svg.png,Guatemala,71.5,68,75,http://en.wikipedia.org/wiki/Guatemala
+122, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/45px-Flag_of_Ukraine.svg.png,Ukraine,71,65.5,76.5,http://en.wikipedia.org/wiki/Ukraine
+123, //upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/46px-Flag_of_Moldova.svg.png,Moldova,71,67,75,http://en.wikipedia.org/wiki/Moldova
+124, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png,Russia,70,64,76,http://en.wikipedia.org/wiki/Russia
+125, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/45px-Flag_of_Bhutan.svg.png,Bhutan,70.8,69.2,72.4,http://en.wikipedia.org/wiki/Bhutan
+126, //upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/46px-Flag_of_Guyana.svg.png,Guyana,70.5,67.5,73.5,http://en.wikipedia.org/wiki/Guyana
+127, //upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg/46px-Flag_of_the_Federated_States_of_Micronesia.svg.png,Micronesia,70,68,72,http://en.wikipedia.org/wiki/Federated_States_of_Micronesia
+128, //upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/45px-Flag_of_India.svg.png,India,70,67,73,http://en.wikipedia.org/wiki/India
+129, //upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/46px-Flag_of_Bangladesh.svg.png,Bangladesh,70,69.5,70.5,http://en.wikipedia.org/wiki/Bangladesh
+130, //upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Flag_of_Kyrgyzstan.svg/46px-Flag_of_Kyrgyzstan.svg.png,Kyrgyzstan,69,65,72,http://en.wikipedia.org/wiki/Kyrgyzstan
+131, //upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/45px-Flag_of_Iraq.svg.png,Iraq,69,65,72,http://en.wikipedia.org/wiki/Iraq
+132, //upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_North_Korea.svg/46px-Flag_of_North_Korea.svg.png,North Korea,69,66,72,http://en.wikipedia.org/wiki/North_Korea
+133, //upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Nepal.svg/28px-Flag_of_Nepal.svg.png,Nepal,69,68,70,http://en.wikipedia.org/wiki/Nepal
+134, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Mongolia.svg/46px-Flag_of_Mongolia.svg.png,Mongolia,69,65,73,http://en.wikipedia.org/wiki/Mongolia
+135, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/44px-Flag_of_Bolivia.svg.png,Bolivia,69,67,71,http://en.wikipedia.org/wiki/Bolivia
+136, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/46px-Flag_of_Uzbekistan.svg.png,Uzbekistan,68.5,66,71,http://en.wikipedia.org/wiki/Uzbekistan
+137, //upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/45px-Flag_of_Laos.svg.png,Laos,68,66.5,69.5,http://en.wikipedia.org/wiki/Laos
+138, //upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/45px-Flag_of_Myanmar.svg.png,Myanmar,68,66,70,http://en.wikipedia.org/wiki/Myanmar
+139, //upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/46px-Flag_of_Kazakhstan.svg.png,Kazakhstan,68,63,73,http://en.wikipedia.org/wiki/Kazakhstan
+140, //upload.wikimedia.org/wikipedia/commons/thumb/9/94/Flag_of_the_Comoros.svg/46px-Flag_of_the_Comoros.svg.png,Comoros,68,65,71,http://en.wikipedia.org/wiki/Comoros
+141, //upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/46px-Flag_of_Kiribati.svg.png,Kiribati,68,65,71,http://en.wikipedia.org/wiki/Kiribati
+142, //upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/46px-Flag_of_Tajikistan.svg.png,Tajikistan,68,67,69,http://en.wikipedia.org/wiki/Tajikistan
+143,//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/31px-Flag_of_Papua_New_Guinea.svg.png,Papua New Guinea,67.5,65,69,http://en.wikipedia.org/wiki/Papua_New_Guinea
+144, //upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/45px-Flag_of_Namibia.svg.png,Namibia,67.2,66.2,68.2,http://en.wikipedia.org/wiki/Namibia
+145, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/45px-Flag_of_Pakistan.svg.png,Pakistan,67,66,68,http://en.wikipedia.org/wiki/Pakistan
+146, //upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/45px-Flag_of_Turkmenistan.svg.png,Turkmenistan,66.5,63,70,http://en.wikipedia.org/wiki/Turkmenistan
+147, //upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/46px-Flag_of_Cambodia.svg.png,Cambodia,66,64,68,http://en.wikipedia.org/wiki/Cambodia
+148, //upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/45px-Flag_of_Ghana.svg.png,Ghana,66,64,68,http://en.wikipedia.org/wiki/Ghana
+149, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/45px-Flag_of_Madagascar.svg.png,Madagascar,66,65,68,http://en.wikipedia.org/wiki/Madagascar
+150, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/45px-Flag_of_Botswana.svg.png,Botswana,66,64.5,67.5,http://en.wikipedia.org/wiki/Botswana
+151,//upload.wikimedia.org/wikipedia/commons/thumb/0/04/Flag_of_Gabon.svg/31px-Flag_of_Gabon.svg.png,Gabon,64,62,66,http://en.wikipedia.org/wiki/Gabon
+152, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/45px-Flag_of_Yemen.svg.png,Yemen,64,63,66,http://en.wikipedia.org/wiki/Yemen
+153, //upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/46px-Flag_of_East_Timor.svg.png,Timor-Leste,64,63,65,http://en.wikipedia.org/wiki/East_Timor
+154, //upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/45px-Flag_of_Senegal.svg.png,Senegal,64,62,66,http://en.wikipedia.org/wiki/Senegal
+155, //upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/46px-Flag_of_Haiti.svg.png,Haiti,63,62,64,http://en.wikipedia.org/wiki/Haiti
+156, //upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/46px-Flag_of_Sudan.svg.png,Sudan,62,60,64,http://en.wikipedia.org/wiki/Sudan
+157, //upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/46px-Flag_of_Eritrea.svg.png,Eritrea,61.5,59,64,http://en.wikipedia.org/wiki/Eritrea
+158, //upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/45px-Flag_of_Cameroon.svg.png,Cameroon,61.5,59,64,http://en.wikipedia.org/wiki/Cameroon
+159, //upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/45px-Flag_of_South_Africa.svg.png,South Africa,61,59,63,http://en.wikipedia.org/wiki/South_Africa
+160, //upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/45px-Flag_of_Djibouti.svg.png,Djibouti,61,59,64,http://en.wikipedia.org/wiki/Djibouti
+161, //upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/46px-Flag_of_Ethiopia.svg.png,Ethiopia,60.5,59,62,http://en.wikipedia.org/wiki/Ethiopia
+162, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/45px-Flag_of_Kenya.svg.png,Kenya,60,59,61,http://en.wikipedia.org/wiki/Kenya
+163, //upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/45px-Flag_of_Rwanda.svg.png,Rwanda,60,59,61,http://en.wikipedia.org/wiki/Rwanda
+164, //upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Afghanistan.svg/45px-Flag_of_Afghanistan.svg.png,Afghanistan,60,59,61,http://en.wikipedia.org/wiki/Afghanistan
+165, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/45px-Flag_of_Mauritania.svg.png,Mauritania,59.5,57,61,http://en.wikipedia.org/wiki/Mauritania
+166, //upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/46px-Flag_of_Liberia.svg.png,Liberia,59,58,60,http://en.wikipedia.org/wiki/Liberia
+167, //upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/45px-Flag_of_Tanzania.svg.png,Tanzania,59,58,61,http://en.wikipedia.org/wiki/Tanzania
+168, //upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/45px-Flag_of_Benin.svg.png,Benin,59,58,60,http://en.wikipedia.org/wiki/Benin
+169, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/45px-Flag_of_The_Gambia.svg.png,Gambia,59,57.5,60.5,http://en.wikipedia.org/wiki/The_Gambia
+170, //upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Flag_of_Malawi.svg/45px-Flag_of_Malawi.svg.png,Malawi,58,57.5,58.5,http://en.wikipedia.org/wiki/Malawi
+171, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/45px-Flag_of_the_Republic_of_the_Congo.svg.png,Republic of the Congo,58,57,59,http://en.wikipedia.org/wiki/Republic_of_the_Congo
+172, //upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flag_of_Togo.svg/46px-Flag_of_Togo.svg.png,Togo,57,55.5,58.5,http://en.wikipedia.org/wiki/Togo
+173, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/45px-Flag_of_Burkina_Faso.svg.png,Burkina Faso,56.5,54,57,http://en.wikipedia.org/wiki/Burkina_Faso
+174, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/45px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png,Côte d'Ivoire,56.5,55,58,http://en.wikipedia.org/wiki/Ivory_Coast
+175, //upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/45px-Flag_of_Uganda.svg.png,Uganda,56,54.5,57.5,http://en.wikipedia.org/wiki/Uganda
+176, //upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/35px-Flag_of_Niger.svg.png,Niger,56,55,57,http://en.wikipedia.org/wiki/Niger
+177, //upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/45px-Flag_of_Zambia.svg.png,Zambia,55.5,54,56,http://en.wikipedia.org/wiki/Zambia
+178, //upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/45px-Flag_of_Guinea.svg.png,Guinea,55,54,56,http://en.wikipedia.org/wiki/Guinea
+179, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Equatorial_Guinea.svg/45px-Flag_of_Equatorial_Guinea.svg.png,Equatorial Guinea,54,53,55,http://en.wikipedia.org/wiki/Equatorial_Guinea
+180, //upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Flag_of_Zimbabwe.svg/46px-Flag_of_Zimbabwe.svg.png,Zimbabwe,54,53,55,http://en.wikipedia.org/wiki/Zimbabwe
+181, //upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/46px-Flag_of_Burundi.svg.png,Burundi,53,52,54,http://en.wikipedia.org/wiki/Burundi
+182, //upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/46px-Flag_of_Nigeria.svg.png,Nigeria,53,52,54,http://en.wikipedia.org/wiki/Nigeria
+183, //upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/45px-Flag_of_Mozambique.svg.png,Mozambique,52.5,52,53,http://en.wikipedia.org/wiki/Mozambique
+184, //upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/45px-Flag_of_Angola.svg.png,Angola,52,51,53,http://en.wikipedia.org/wiki/Angola
+185, //upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/45px-Flag_of_Chad.svg.png,Chad,51,50.5,53.5,http://en.wikipedia.org/wiki/Chad
+186, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/45px-Flag_of_Mali.svg.png,Mali,51,50,53,http://en.wikipedia.org/wiki/Mali
+187, //upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/45px-Flag_of_Lesotho.svg.png,Lesotho,51,50,52,http://en.wikipedia.org/wiki/Lesotho
+188, //upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/46px-Flag_of_Guinea-Bissau.svg.png,Guinea Bissau,50,48,52,http://en.wikipedia.org/wiki/Guinea-Bissau
+189, //upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Flag_of_Swaziland.svg/45px-Flag_of_Swaziland.svg.png,Swaziland,50,49,51,http://en.wikipedia.org/wiki/Swaziland
+190, //upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/45px-Flag_of_Somalia.svg.png,Somalia,50,48,52,http://en.wikipedia.org/wiki/Somalia
+191,//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/31px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png,Democratic Republic of the Congo,49.5,48,51,http://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo
+192, //upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/45px-Flag_of_the_Central_African_Republic.svg.png,Central African Republic,48.5,47,50,http://en.wikipedia.org/wiki/Central_African_Republic
+193, //upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Sierra_Leone.svg/45px-Flag_of_Sierra_Leone.svg.png,Sierra Leone,47.5,47,48,http://en.wikipedia.org/wiki/Sierra_Leone

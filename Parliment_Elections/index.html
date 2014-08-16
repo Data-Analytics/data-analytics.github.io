@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content=" The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years ">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title>Parliment Elections</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container" >
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">Parliment Elections</h1>
+          <p id="project_title_p">The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years 
+          </p>
+        </header>
+        <div id="banner">
+          <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+         
+    <!-- MAIN CONTENT -->
+    <div class="container ">
+      <section id="main_content" class="inner">
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+       <svg width="960" height="80" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  
+      <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#019733"></rect>
+      <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+    
+      <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#FB7B0D"></rect>
+      <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BJP</text>
+    
+      <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#DE0000"></rect>
+      <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+    
+      <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#000000"></rect>
+      <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BJD</text>
+    
+      <rect class="party-legend" data-party="JD" data-highlight="[data-party=JD]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#8064a2"></rect>
+      <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD</text>
+    
+      <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#95b3d7"></rect>
+      <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">IND</text>
+    
+      <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#DE0000"></rect>
+      <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+    
+      <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#800000"></rect>
+      <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+    
+      <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#B15928"></rect>
+      <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
+    
+      <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#4bacc6"></rect>
+      <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">TDP</text>
+    
+      <rect class="party-legend" data-party="SWA" data-highlight="[data-party=SWA]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#0C6965"></rect>
+      <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
+    
+      <rect class="party-legend" data-party="BJS" data-highlight="[data-party=BJS]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#F05A00"></rect>
+      <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SHS</text>
+    
+      <rect class="party-legend" data-party="BSP" data-highlight="[data-party=BSP]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#77968E"></rect>
+      <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BSP</text>
+    
+      <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#9DBC2A"></rect>
+      <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">ADMK</text>
+    </svg>
+    <p class="form-inline">
+    <label value="year">Year : </label>
+    <select id="year">
+        <option value="2014" class="name">2014</option>
+        <option value="2009" class="name">2009</option>
+        <option value="2004" class="name">2004</option>
+        <option value="1999" class="name">1999</option>
+        <option value="1998" class="name">1998</option>
+        <option value="1996" class="name">1996</option>
+        <option value="1992" class="name">1992</option>
+        <option value="1991" class="name">1991</option>
+        <option value="1989" class="name">1989</option>
+        <option value="1985" class="name">1985</option>
+        <option value="1984" class="name">1984</option>
+        <option value="1980" class="name">1980</option>
+        <option value="1977" class="name">1977</option>
+        <option value="1971" class="name">1971</option>
+        <option value="1967" class="name">1967</option>
+        <option value="1962" class="name">1962</option>
+        <option value="1957" class="name">1957</option>
+        <option value="1951" class="name">1951</option>
+    </select>
+    <label value="group">Group By : </label>
+    <select id="options_view">   
+        <option value="party" class="name">party</option>
+        <option value="state" class="name">State</option>
+    </select>
+   <button id ="submit" value="submit" onClick='onRender();' >submit</button>
+            <label align="left" >Search:</label>
+            <input type="text" class="search" placeholder="eg: chennai">
+   </p>
+    <div class="par_treemap" align="center">
+        <script type="text/javascript" src="par_treemap.js"></script>
+    </div>
+  </section>
+  </div>
+  
+  <script>
+ onRender();
+  </script>
+</body>
+</html>

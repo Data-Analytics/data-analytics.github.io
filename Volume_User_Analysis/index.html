@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="A scatterplot using d3js. It maps social trust against ease of doing business in various countries.">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,scatter plot, trust bussiness">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min_a.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title> Volume and user Analysis</title>
+
+<style>
+
+
+header aside {
+  margin-top: 88px;
+}
+
+header aside,
+footer aside {
+  color: #636363;
+  text-align: right;
+}
+
+aside {
+  font-size: small;
+  right: 0;
+  position: absolute;
+  width: 180px;
+}
+
+.attribution {
+  font-size: small;
+  margin-bottom: 2em;
+}
+
+body > p, li > p {
+  line-height: 1.5em;
+}
+
+body > p {
+  width: 720px;
+}
+
+body > blockquote {
+  width: 640px;
+}
+
+blockquote q {
+  display: block;
+  font-style: oblique;
+}
+
+li {
+  width: 680px;
+}
+
+a {
+  color: steelblue;
+}
+
+a:not(:hover) {
+  text-decoration: none;
+}
+
+pre, code, textarea {
+  font-family: "Menlo", monospace;
+}
+
+code {
+  line-height: 1em;
+}
+
+textarea {
+  font-size: 100%;
+}
+
+body > pre {
+  border-left: solid 2px #ccc;
+  padding-left: 18px;
+  margin: 2em 0 2em -20px;
+}
+
+.html .value,
+.javascript .string,
+.javascript .regexp {
+  color: #756bb1;
+}
+
+.html .tag,
+.css .tag,
+.javascript .keyword {
+  color: #3182bd;
+}
+
+.html .doctype,
+.javascript .number {
+  color: #31a354;
+}
+
+.html .attribute,
+.css .attribute,
+.javascript .class,
+.javascript .special {
+  color: #e6550d;
+}
+
+svg {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+sup, sub {
+  line-height: 0;
+}
+
+q:before {
+  content: "â€œ";
+}
+
+q:after {
+  content: "â€�?";
+}
+
+blockquote:before {
+  position: absolute;
+  left: 2em;
+}
+
+blockquote:after {
+  position: absolute;
+}
+
+text {
+  pointer-events: none;
+}
+
+.grandparent text {
+  font-weight: bold;
+}
+
+rect {
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+.grandparent rect {
+  fill: tan;
+}
+
+/*
+.grandparent:hover rect {
+  fill: #ee9700;
+}
+*/
+
+.grandparent:hover rect {
+  fill-opacity: 0.5;
+}
+
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+rect.parent {
+  pointer-events: all;
+}
+
+/*
+.children:hover rect.child {
+  fill: #aaa;
+}
+*/
+
+.children:hover rect.parent {
+  fill-opacity: 0.5;
+}
+</style>
+</head>
+<body onLoad="onRender();">
+      <!-- HEADER -->
+        <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+            <header class="inner container">
+              <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">Volume And User Analysis</h1>
+              <p id="project_title_p">A Zoomable treemap comparing the volume the site has been 
+              accessed and the number of users has accessed the site 
+              </p>
+           </header>
+             <div id="banner">
+              <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/trust-business/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/trust-business/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/trust-business" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+
+        </div>
+ <!-- MAIN CONTENT -->
+        <div class="container">
+          <section id="main_content" class="inner">
+       <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+
+<h3>App Categories with visual size correlated to values (volume, users) </h3>
+<p class="form-inline">
+            <label value="based_on">Based on : </label>
+            <select id="options_view">
+                <option value="user_analysis" class="name">Users</option>
+                <option value="volume_analysis" class="name">Volume</option>
+            </select>
+           <button id ="submit" value="submit" onClick='onRender();' >submit</button>
+            <label align="left" >Search:</label>
+            <input type="text" class="search" placeholder="eg: Web">
+           </p>
+           
+<p id="chart">
+
+<p>Click any cell to zoom in, or the top label to zoom out.</p>
+<script>
+var user_analysis = '{"name": "User Analysis", "children": [ \
+{"name": "Web","children": [\
+{"name": "SSL", "value": 938951},\
+{"name": "HTTP", "value": 877272},\
+{"name": "TrackerSites", "value": 877031},\
+{"name": "HostingSites", "value": 742831},\
+{"name": "Google", "value": 709860},\
+{"name": "AdvertisingSites", "value": 689709},\
+{"name": "DoubleClick", "value": 652552},\
+{"name": "BlackBerry", "value": 421311},\
+{"name": "AmazonS3", "value": 265997},\
+{"name": "AmazonCloudfront", "value": 249490}\
+]},\
+{"name": "Productivity","children": [\
+{"name": "GoogleServices", "value": 887778},\
+{"name": "ITSites", "value": 846243},\
+{"name": "BlackBerryID", "value": 506841},\
+{"name": "GoogleAnalytics", "value": 347453},\
+{"name": "TelcoSites", "value": 347320},\
+{"name": "YahooServices", "value": 273000},\
+{"name": "BizSites", "value": 252585},\
+{"name": "SoftwareDownloadsSites", "value": 214876},\
+{"name": "GooglePlayStore", "value": 165776},\
+{"name": "HiStats", "value": 153303}\
+]},\
+{"name": "Chat","children": [\
+{"name": "GoogleTalk", "value": 668505},\
+{"name": "BBM-UCI", "value": 577955},\
+{"name": "WhatsApp", "value": 378305},\
+{"name": "BBM-SSL", "value": 276281},\
+{"name": "LINE", "value": 246178},\
+{"name": "VMSPlay", "value": 244230},\
+{"name": "WeChat", "value": 113602},\
+{"name": "KakaoTalk", "value": 87957},\
+{"name": "GoIM", "value": 77085},\
+{"name": "WindowsLiveMessenger", "value": 40913}\
+]},\
+{"name": "Networking","children": [\
+{"name": "L3-ICMP", "value": 546352},\
+{"name": "NTP", "value": 491779},\
+{"name": "STUN", "value": 409839},\
+{"name": "OCSP", "value": 297360},\
+{"name": "DNS", "value": 239539},\
+{"name": "MSNCSI", "value": 189368},\
+{"name": "Akamai", "value": 182391},\
+{"name": "GooglePortalDetection", "value": 143393},\
+{"name": "BlackBerrySSL", "value": 100855},\
+{"name": "YahooGeolocation", "value": 44590}\
+]},\
+{"name": "Social Networking","children": [\
+{"name": "Facebook", "value": 819451},\
+{"name": "Twitter", "value": 495255},\
+{"name": "Blogger", "value": 265466},\
+{"name": "Weibo", "value": 245344},\
+{"name": "AddThis", "value": 149832},\
+{"name": "WordPress", "value": 149581},\
+{"name": "Path", "value": 132683},\
+{"name": "GooglePlus", "value": 121431},\
+{"name": "Instagram", "value": 119814},\
+{"name": "SocialNetVariousSites", "value": 100274}\
+]},\
+{"name": "Media","children": [\
+{"name": "YouTube", "value": 452997},\
+{"name": "Picasa", "value": 373961},\
+{"name": "MediaVariousSites", "value": 205851},\
+{"name": "iTunes", "value": 93702},\
+{"name": "PornSites", "value": 91515},\
+{"name": "ImageHostingSites", "value": 89701},\
+{"name": "Photobucket", "value": 71937},\
+{"name": "Flixster", "value": 27488},\
+{"name": "SoundCloud", "value": 26607},\
+{"name": "StafaBand", "value": 25576}\
+]},\
+{"name": "Life","children": [\
+{"name": "Oomph", "value": 485593},\
+{"name": "NewsSites", "value": 177413},\
+{"name": "ShoppingSites", "value": 163064},\
+{"name": "EntertainmentSites", "value": 145239},\
+{"name": "Gravatar", "value": 116036},\
+{"name": "Detik", "value": 101324},\
+{"name": "Camera360", "value": 72206},\
+{"name": "ForumSites", "value": 65992},\
+{"name": "Kapanlagi", "value": 63893},\
+{"name": "Kaskus", "value": 54811}\
+]},\
+{"name": "Security","children": [\
+{"name": "KingsoftAntiVirus", "value": 187470},\
+{"name": "GoogleSafeBrowsing", "value": 173619},\
+{"name": "BlackBerryProtect", "value": 162483},\
+{"name": "GrisoftAVG", "value": 93356},\
+{"name": "MSCryptoAPI", "value": 85205},\
+{"name": "SecurityVariousSites", "value": 79464},\
+{"name": "Avast", "value": 74409},\
+{"name": "360Safe", "value": 58772},\
+{"name": "BaiduPCFaster", "value": 51760},\
+{"name": "Smadav", "value": 43473}\
+]},\
+{"name": "Games","children": [\
+{"name": "OnlineGamingSites", "value": 190982},\
+{"name": "Chartboost", "value": 154745},\
+{"name": "GamesVariousSites", "value": 143434},\
+{"name": "Supercell", "value": 59299},\
+{"name": "CandyCrush", "value": 42512},\
+{"name": "KilooGames", "value": 35211},\
+{"name": "TopEleven", "value": 27859},\
+{"name": "Nordeus", "value": 27297},\
+{"name": "Playhaven", "value": 20744},\
+{"name": "King.com", "value": 19815}\
+]},\
+{"name": "Update","children": [\
+{"name": "MSWindowsUpdate", "value": 186805},\
+{"name": "MozillaAddons", "value": 142453},\
+{"name": "GoogleUpdate", "value": 122399},\
+{"name": "AdobeUpdate", "value": 93091},\
+{"name": "FirefoxUpdate", "value": 55671},\
+{"name": "AppleUpdate", "value": 41371},\
+{"name": "InternetExplorerGallery", "value": 17842},\
+{"name": "Cnappbox", "value": 9230},\
+{"name": "nVidiaUpdate", "value": 7626},\
+{"name": "SamsungApps", "value": 5023}\
+]},\
+{"name": "Enterprise","children": [\
+{"name": "Crashlytics", "value": 322408},\
+{"name": "Crittercism", "value": 109983},\
+{"name": "Airpush", "value": 76258},\
+{"name": "Parse", "value": 35702},\
+{"name": "MSOffice", "value": 26774},\
+{"name": "GoogleSites", "value": 23580},\
+{"name": "SmithMicro", "value": 21801},\
+{"name": "UrbanAirship", "value": 16979},\
+{"name": "GoogleDocs", "value": 10991},\
+{"name": "MGID", "value": 3630}\
+]},\
+{"name": "Mail","children": [\
+{"name": "YahooMail", "value": 153857},\
+{"name": "Gmail", "value": 68115},\
+{"name": "OutlookLive", "value": 44332},\
+{"name": "SMTP", "value": 5178},\
+{"name": "POP3", "value": 4672},\
+{"name": "iCloudMail", "value": 4315},\
+{"name": "MailRu", "value": 3323},\
+{"name": "SinaMail", "value": 1731},\
+{"name": "MailVariousSites", "value": 1641},\
+{"name": "IMAP", "value": 1398}\
+]},\
+{"name": "File Sharing","children": [\
+{"name": "4shared", "value": 48639},\
+{"name": "FileSharingVariousSites", "value": 45258},\
+{"name": "Dropbox", "value": 44285},\
+{"name": "ImageShack", "value": 40514},\
+{"name": "Imgur", "value": 34204},\
+{"name": "TinyPic", "value": 24133},\
+{"name": "YourJavaScript", "value": 21712},\
+{"name": "Mediafire", "value": 9398},\
+{"name": "SlideShare", "value": 8538},\
+{"name": "TusFiles", "value": 5872}\
+]},\
+{"name": "Proxy","children": [\
+{"name": "OperaProxy", "value": 187884},\
+{"name": "UCWeb", "value": 31207},\
+{"name": "ProxyAvoidanceSites", "value": 12803},\
+{"name": "Marketscore", "value": 5509},\
+{"name": "Yontoo", "value": 3499},\
+{"name": "HTTPConnectMethod", "value": 2660},\
+{"name": "Anonymox", "value": 2519},\
+{"name": "WaybackMachine", "value": 1538},\
+{"name": "HideMyAss", "value": 848},\
+{"name": "GoogleCache", "value": 811}\
+]},\
+{"name": "Attack","children": [\
+{"name": "Serving-sys", "value": 94097},\
+{"name": "MalwareSites", "value": 41108},\
+{"name": "AppNexus", "value": 29130},\
+{"name": "SpywareSites", "value": 27625},\
+{"name": "Ramnit", "value": 7053},\
+{"name": "HackingSites", "value": 4494},\
+{"name": "Softosystem", "value": 2019},\
+{"name": "ALLBASE64", "value": 1885},\
+{"name": "StormWorm", "value": 1716},\
+{"name": "PalevoCnC", "value": 1007}\
+]},\
+{"name": "Content","children": [\
+{"name": "SuspiciousSites", "value": 100375},\
+{"name": "ShockwaveFlash", "value": 36044},\
+{"name": "ScamIllegalSites", "value": 28543},\
+{"name": "XML", "value": 6057},\
+{"name": "HTML", "value": 3693},\
+{"name": "NuditySites", "value": 2875},\
+{"name": "JFIF", "value": 2203},\
+{"name": "AndroidPackage", "value": 1672},\
+{"name": "OGG", "value": 1293},\
+{"name": "MP3", "value": 1205}\
+]},\
+{"name": "Misc","children": [\
+{"name": "InnityAdServer", "value": 79410},\
+{"name": "WindowsErrorReporting", "value": 22954},\
+{"name": "YahooToolbar", "value": 19616},\
+{"name": "Wapdam", "value": 15644},\
+{"name": "ConduitToolbar", "value": 13770},\
+{"name": "GoogleToolbar", "value": 10537},\
+{"name": "AskToolbar", "value": 9963},\
+{"name": "NSIS", "value": 5150},\
+{"name": "SmileysWeLoveToolbar", "value": 4677},\
+{"name": "MyBrowserBar", "value": 2059}\
+]},\
+{"name": "Finance","children": [\
+{"name": "FinanceVariousSites", "value": 44881},\
+{"name": "AuctionSites", "value": 28991},\
+{"name": "BankingSites", "value": 23782},\
+{"name": "TradingSites", "value": 20969},\
+{"name": "AppleStocks", "value": 13035},\
+{"name": "RealEstateSites", "value": 6564},\
+{"name": "YahooFinance", "value": 2221},\
+{"name": "KontanOnline", "value": 1664},\
+{"name": "BNI.co.id", "value": 1502},\
+{"name": "InstaForex", "value": 1286}\
+]},\
+{"name": "P2P","children": [\
+{"name": "BitTorrent", "value": 43977},\
+{"name": "uTorrent", "value": 7421},\
+{"name": "P2PVariousSites", "value": 5847},\
+{"name": "iMesh", "value": 5684},\
+{"name": "Kat.ph", "value": 2037},\
+{"name": "BearShare", "value": 1580},\
+{"name": "eMule", "value": 1378},\
+{"name": "Torrentz", "value": 665},\
+{"name": "OpenBitTorrent", "value": 609},\
+{"name": "WebThunder", "value": 485}\
+]},\
+{"name": "Remote","children": [\
+{"name": "TeamViewer", "value": 6268},\
+{"name": "OpenVPN", "value": 1577},\
+{"name": "IPsec", "value": 1256},\
+{"name": "HotspotShield", "value": 811},\
+{"name": "PPTP", "value": 754},\
+{"name": "Hamachi", "value": 740},\
+{"name": "Splashtop", "value": 715},\
+{"name": "SSH", "value": 464},\
+{"name": "LogMeIn", "value": 346},\
+{"name": "PIX", "value": 256}\
+]}\
+]}';
+
+var volume_analysis = '{"name": "Volume Analysis", "children": [ \
+{"name": "Media","children":[\
+{"name": "YouTube","value":10216579321659},\
+{"name": "PornSites","value":1767969191900},\
+{"name": "MediaVariousSites","value":264425779592},\
+{"name": "RTMP","value":206832184377},\
+{"name": "MpegVideo","value":147752465184},\
+{"name": "Picasa","value":139792402022},\
+{"name": "FlashVideo","value":124277105358},\
+{"name": "VUclip","value":121424504656},\
+{"name": "3GPP","value":111540214972},\
+{"name": "iTunes","value":82783272746}\
+]},\
+{"name": "Web","children":[\
+{"name": "HostingSites","value":3691984204452},\
+{"name": "SSL","value":1875542175121},\
+{"name": "HTTP","value":1624649961505},\
+{"name": "Google","value":897880517550},\
+{"name": "AdvertisingSites","value":467946130703},\
+{"name": "TrackerSites","value":397639073457},\
+{"name": "DoubleClick","value":180775544745},\
+{"name": "AmazonCloudfront","value":165107582977},\
+{"name": "AmazonS3","value":134554948097},\
+{"name": "BlackBerry","value":100693838486}\
+]},\
+{"name": "Social Networking","children":[\
+{"name": "Facebook","value":3768445932907},\
+{"name": "Twitter","value":1005663137962},\
+{"name": "Instagram","value":890783339559},\
+{"name": "Path","value":604268988502},\
+{"name": "Blogger","value":456732548803},\
+{"name": "WordPress","value":136844805818},\
+{"name": "Tumblr","value":123857705484},\
+{"name": "AskFm","value":122308034648},\
+{"name": "Vkontakte","value":68642854601},\
+{"name": "GooglePlus","value":59081045638}\
+]},\
+{"name": "Productivity","children":[\
+{"name": "GooglePlayStore","value":3458111688047},\
+{"name": "GoogleServices","value":1646242629021},\
+{"name": "ITSites","value":671414028197},\
+{"name": "TelcoSites","value":430829586275},\
+{"name": "SoftwareDownloadsSites","value":396131946055},\
+{"name": "YahooServices","value":268523428822},\
+{"name": "BizSites","value":94121493639},\
+{"name": "EducationSites","value":67360572020},\
+{"name": "BlackBerryID","value":59153024553},\
+{"name": "GoogleAnalytics","value":40186033337}\
+]},\
+{"name": "Update","children":[\
+{"name": "MSWindowsUpdate","value":1812918094356},\
+{"name": "AppleUpdate","value":584026695058},\
+{"name": "AdobeUpdate","value":229741007224},\
+{"name": "FirefoxUpdate","value":225377764320},\
+{"name": "WindowsStore","value":79398165886},\
+{"name": "GoogleUpdate","value":51595482116},\
+{"name": "nVidiaUpdate","value":19863547718},\
+{"name": "MozillaAddons","value":18143526717},\
+{"name": "HPUpdate","value":10665959648},\
+{"name": "LinuxAPT","value":7956437173}\
+]},\
+{"name": "Chat","children":[\
+{"name": "BBM-UCI","value":2027588929777},\
+{"name": "WhatsApp","value":217027244987},\
+{"name": "GoogleTalk","value":198782077076},\
+{"name": "Skype","value":181230481556},\
+{"name": "LINE","value":147319351866},\
+{"name": "Camfrog","value":106279011161},\
+{"name": "Tango","value":53025504161},\
+{"name": "WeChat","value":34901787655},\
+{"name": "KakaoTalk","value":30195426420},\
+{"name": "YahooChat","value":22217297738}\
+]},\
+{"name": "File Sharing","children":[\
+{"name": "FileSharingVariousSites","value":506042177615},\
+{"name": "4shared","value":358650750418},\
+{"name": "Indowebster","value":324619597526},\
+{"name": "Mediafire","value":188564562290},\
+{"name": "TusFiles","value":168426485314},\
+{"name": "Wuala","value":107881910112},\
+{"name": "ShareBeast","value":104901932200},\
+{"name": "Dropbox","value":103457080533},\
+{"name": "Solidfiles","value":98818900427},\
+{"name": "ZippyShare","value":61838451942}\
+]},\
+{"name": "Proxy","children":[\
+{"name": "OperaProxy","value":1050651509582},\
+{"name": "UCWeb","value":49470158715},\
+{"name": "ProxyAvoidanceSites","value":31721323307},\
+{"name": "HTTPConnectMethod","value":23288384115},\
+{"name": "HideMyAss","value":19767536936},\
+{"name": "WaybackMachine","value":15231898296},\
+{"name": "Tor","value":5583346871},\
+{"name": "Marketscore","value":3739004346},\
+{"name": "Glype","value":3693564426},\
+{"name": "NinjaCloak","value":3656643626}\
+]},\
+{"name": "P2P","children":[\
+{"name": "BitTorrent","value":1066214881264},\
+{"name": "P2PVariousSites","value":9152571152},\
+{"name": "ZbigZ","value":6192874805},\
+{"name": "uTorrent","value":3852921579},\
+{"name": "iMesh","value":3086428518},\
+{"name": "WebThunder","value":2083841445},\
+{"name": "eMule","value":1964963306},\
+{"name": "Thunder","value":1757691341},\
+{"name": "BearShare","value":949655363},\
+{"name": "Kat.ph","value":572994276}\
+]},\
+{"name": "Games","children":[\
+{"name": "Gemscool","value":275869570927},\
+{"name": "GamesVariousSites","value":219946703610},\
+{"name": "SteamEngine","value":122718109076},\
+{"name": "SocialPointGames","value":91446759513},\
+{"name": "OnlineGamingSites","value":76765452265},\
+{"name": "Zynga","value":71763608860},\
+{"name": "Gameloft","value":67124744581},\
+{"name": "SpilGames","value":65169156775},\
+{"name": "Nordeus","value":59915126029},\
+{"name": "Netmarble","value":44995783135}\
+]},\
+{"name": "Life","children":[\
+{"name": "EntertainmentSites","value":219994389919},\
+{"name": "ShoppingSites","value":133009082812},\
+{"name": "Kaskus","value":112356058330},\
+{"name": "Detik","value":106526306465},\
+{"name": "NewsSites","value":91475404266},\
+{"name": "GamblingSites","value":77490859339},\
+{"name": "Kapanlagi","value":60036584506},\
+{"name": "Tokobagus","value":56889782326},\
+{"name": "Oomph","value":41729933850},\
+{"name": "SportsSites","value":27345041239}\
+]},\
+{"name": "Security","children":[\
+{"name": "Avast","value":245387561714},\
+{"name": "BaiduPCFaster","value":187405120890},\
+{"name": "Avira","value":146832388810},\
+{"name": "GoogleSafeBrowsing","value":111242830381},\
+{"name": "GrisoftAVG","value":59983709343},\
+{"name": "Symantec","value":52416337456},\
+{"name": "McAfee","value":26830283462},\
+{"name": "SecurityVariousSites","value":25258121557},\
+{"name": "BlackBerryProtect","value":19817180318},\
+{"name": "Kaspersky","value":18909348605}\
+]},\
+{"name": "Networking","children":[\
+{"name": "Akamai","value":198929858718},\
+{"name": "WindowsAzure","value":53514051524},\
+{"name": "L3-GRE","value":51291483090},\
+{"name": "Teredo","value":31688995118},\
+{"name": "OCSP","value":27912537695},\
+{"name": "L3-ICMP","value":25541262453},\
+{"name": "BlackBerrySSL","value":18119782835},\
+{"name": "DNS","value":15735409562},\
+{"name": "STUN","value":10327994491},\
+{"name": "AppleLocationd","value":6463731923}\
+]},\
+{"name": "Misc","children":[\
+{"name": "Wapdam","value":299419142156},\
+{"name": "NSIS","value":20150045589},\
+{"name": "InnityAdServer","value":9848319832},\
+{"name": "Primeport","value":3736546720},\
+{"name": "YahooToolbar","value":3601874591},\
+{"name": "SmileysWeLoveToolbar","value":1019815995},\
+{"name": "ConduitToolbar","value":914629955},\
+{"name": "GoogleToolbar","value":872756433},\
+{"name": "WindowsErrorReporting","value":847816612},\
+{"name": "MyBrowserBar","value":492292227}\
+]},\
+{"name": "Mail","children":[\
+{"name": "Gmail","value":146882441653},\
+{"name": "YahooMail","value":139012012613},\
+{"name": "OutlookLive","value":22148999788},\
+{"name": "POP3","value":11234216804},\
+{"name": "SMTP","value":5256413954},\
+{"name": "IMAP","value":1584730957},\
+{"name": "MailVariousSites","value":1495927170},\
+{"name": "iCloudMail","value":731430715},\
+{"name": "MailRu","value":529935591},\
+{"name": "Incredimail","value":442510254}\
+]},\
+{"name": "Enterprise","children":[\
+{"name": "Crashlytics","value":54022058054},\
+{"name": "Crittercism","value":48338890834},\
+{"name": "GoogleDocs","value":44721156293},\
+{"name": "Parse","value":13202380500},\
+{"name": "Airpush","value":7423547206},\
+{"name": "MSOffice","value":6912005512},\
+{"name": "ViolaSystems","value":1684292296},\
+{"name": "GoogleSites","value":1594489791},\
+{"name": "WebEx","value":1557424053},\
+{"name": "SmithMicro","value":1304743844}\
+]},\
+{"name": "Remote","children":[\
+{"name": "OpenVPN","value":106850919891},\
+{"name": "IPsec","value":21055090209},\
+{"name": "TeamViewer","value":11906499940},\
+{"name": "SSH","value":7767456640},\
+{"name": "PIX","value":5515819585},\
+{"name": "MSRDP","value":1935030773},\
+{"name": "CiscoSSLVPN","value":1630260639},\
+{"name": "Radmin","value":804194239},\
+{"name": "Telnet","value":706887107},\
+{"name": "Hamachi","value":664622917}\
+]},\
+{"name": "Content","children":[\
+{"name": "SuspiciousSites","value":48143421255},\
+{"name": "ShockwaveFlash","value":17627113741},\
+{"name": "RAR","value":14781467975},\
+{"name": "AndroidPackage","value":7627603838},\
+{"name": "XML","value":7266722868},\
+{"name": "NuditySites","value":6069773946},\
+{"name": "EXE","value":4176779921},\
+{"name": "SuspectedChildPornSites","value":3282356925},\
+{"name": "ScamIllegalSites","value":2890832232},\
+{"name": "PKZIP","value":1908774889}\
+]},\
+{"name": "Finance","children":[\
+{"name": "FinanceVariousSites","value":12719487861},\
+{"name": "BankingSites","value":10186265931},\
+{"name": "TradingSites","value":7019315949},\
+{"name": "RealEstateSites","value":5855771114},\
+{"name": "BNI.co.id","value":1220860706},\
+{"name": "AuctionSites","value":952997117},\
+{"name": "Bitcoin","value":848401488},\
+{"name": "InsuranceSites","value":591171132},\
+{"name": "KontanOnline","value":557044776},\
+{"name": "YahooFinance","value":345035146}\
+]},\
+{"name": "Attack","children":[\
+{"name": "Serving-sys","value":6023324127},\
+{"name": "HackingSites","value":2952829354},\
+{"name": "MalwareSites","value":2395968085},\
+{"name": "ZeroAccess","value":1630167506},\
+{"name": "SpywareSites","value":1024839473},\
+{"name": "AppNexus","value":1020015936},\
+{"name": "PhishingSites","value":796069729},\
+{"name": "Malware","value":389991044},\
+{"name": "Ramnit","value":367035649},\
+{"name": "Jorik","value":274830292}\
+]}\
+]}';
+
+var color = d3.scale.category20();
+
+var margin = {top: 20, right: 0, bottom: 0, left: 0},
+    width = 960,
+    height = 500 - margin.top - margin.bottom,
+    formatNumber = d3.format(",d"),
+    transitioning;
+
+var x = d3.scale.linear()
+    .domain([0, width])
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .domain([0, height])
+    .range([0, height]);
+
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.bottom + margin.top)
+    .style("margin-left", -margin.left + "px")
+    .style("margin.right", -margin.right + "px")
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .style("shape-rendering", "crispEdges");
+
+ 
+function onRender() {   
+
+     d3.select('#chart').select("svg")
+       .remove();
+
+   var based_on = document.getElementById("options_view").value
+
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.bottom + margin.top)
+    .style("margin-left", -margin.left + "px")
+    .style("margin.right", -margin.right + "px")
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .style("shape-rendering", "crispEdges");
+        
+
+var treemap = d3.layout.treemap()
+    .children(function(d, depth) { return depth ? null : d.children; })
+    .sort(function(a, b) { return a.value - b.value; })
+    .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
+    .round(false);        
+
+var grandparent = svg.append("g")
+    .attr("class", "grandparent");
+
+grandparent.append("rect")
+    .attr("y", -margin.top)
+    .attr("width", width)
+    .attr("height", margin.top);
+
+grandparent.append("text")
+    .attr("x", 6)
+    .attr("y", 6 - margin.top)
+    .attr("dy", ".75em");
+  
+  if (based_on =='user_analysis')
+  {root = JSON.parse(user_analysis);}
+  else
+  {root = JSON.parse(volume_analysis);}
+  
+  initialize(root);
+  accumulate(root);
+  layout(root);
+  display(root);
+
+  function initialize(root) {
+    root.x = root.y = 0;
+    root.dx = width;
+    root.dy = height;
+    root.depth = 0;
+  }
+
+
+  function accumulate(d) {
+    return d.children
+        ? d.value = d.children.reduce(function(p, v) { return p + accumulate(v); }, 0)
+        : d.value;
+  }
+
+  function layout(d) {
+    if (d.children) {
+      treemap.nodes({children: d.children});
+      d.children.forEach(function(c) {
+        c.x = d.x + c.x * d.dx;
+        c.y = d.y + c.y * d.dy;
+        c.dx *= d.dx;
+        c.dy *= d.dy;
+        c.parent = d;
+        layout(c);
+      });
+    }
+  }
+
+  function display(d) {
+    grandparent
+        .datum(d.parent)
+        .on("click", transition)
+      .select("text")
+        .text(name(d));
+
+    var g1 = svg.insert("g", ".grandparent")
+        .datum(d)
+        .attr("class", "depth");
+
+    var g = g1.selectAll("g")
+        .data(d.children)
+      .enter().append("g");
+
+    g.filter(function(d) { return d.children; })
+        .classed("children", true)
+        .on("click", transition);
+
+    g.append("rect")
+        .attr("class", "parent")
+        .call(rect)
+        .attr("fill", function(d, i) { return color(i); })
+        .attr("data-title",function(d) { return '<p>'+d.name+' : '+formatNumber(d.value)+'</p>'})
+        .attr("sub_link",function(d) { return d.name;});
+
+    $("rect").tooltip({container: '#chart', html: true, placement:'top'});
+  
+    g.append("text")
+        .attr("dy", ".75em")
+        .text(function(d) { return d.name; })
+        .call(text);
+
+    g.selectAll(".child")
+        .data(function(d) { return d.children || [d]; })
+      .enter().append("rect")
+        .attr("class", "child")
+        .call(rect)
+        .attr("fill", "none");
+
+    function transition(d) {
+      if (transitioning || !d) return;
+      transitioning = true;
+
+      var g2 = display(d),
+          t1 = g1.transition().duration(750),
+          t2 = g2.transition().duration(750);
+
+      // Update the domain only after entering new elements.
+      x.domain([d.x, d.x + d.dx]);
+      y.domain([d.y, d.y + d.dy]);
+
+      // Enable anti-aliasing during the transition.
+      svg.style("shape-rendering", null);
+
+      // Draw child nodes on top of parent nodes.
+      svg.selectAll(".depth").sort(function(a, b) { return a.depth - b.depth; });
+
+      // Fade-in entering text.
+      g2.selectAll("text").style("fill-opacity", 0);
+
+      // Transition to the new view.
+      t1.selectAll("text").call(text).style("fill-opacity", 0);
+      t2.selectAll("text").call(text).style("fill-opacity", 1);
+      t1.selectAll("rect").call(rect);
+      t2.selectAll("rect").call(rect);
+
+      // Remove the old node when the transition is finished.
+      t1.remove().each("end", function() {
+        svg.style("shape-rendering", "crispEdges");
+        transitioning = false;
+      });
+    }
+
+    return g;
+  }
+
+  function text(text) {
+    text.attr("x", function(d) { return x(d.x) + 6; })
+        .attr("y", function(d) { return y(d.y) + 6; });
+  }
+
+  function rect(rect) {
+    rect.attr("x", function(d) { return x(d.x); })
+        .attr("y", function(d) { return y(d.y); })
+        .attr("width", function(d) { return x(d.x + d.dx) - x(d.x); })
+        .attr("height", function(d) { return y(d.y + d.dy) - y(d.y); });
+  }
+
+  function name(d) {
+    return d.parent
+        ? name(d.parent) + "." + d.name
+        : d.name;
+  }
+  
+
+    var lastsearch = '';
+    var $box = {};
+    
+      function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function() {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp(search, "i");
+          $('rect', $chart).each(function(){
+              $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+      });
+    }
+
+    add_search('.search', '#chart');
+    };
+</script>
+          </section>
+        </div>
+        
+</body>
+</html>

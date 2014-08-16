@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Table compares national teams that have participated in the FIFA World Cup by a number of criteria including matches, wins, losses, goals, total points, points per played matches, etc.">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,sunburst,sun burst,image sunburst,distortion sunburst">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title>Fifa world cup Analysis</title>
+    <style type="text/css">
+ 
+path {
+  stroke: #333;
+}
+ 
+    </style>
+  </head>
+  <body class="theme-beige" onload="sizeChange()">
+      <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container">
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">Fifa world cup Analysis</h1>
+          <p id="project_title_p">Table compares national teams that have participated in the FIFA World Cup by a number of criteria including matches, wins, losses, goals, total points, points per played matches, etc. 
+          </p>
+        </header>
+        <div id="banner">
+          <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Fifa_Sunburst/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Fifa_Sunburst/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Fifa_Sunburst" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+    <!-- MAIN CONTENT -->
+    <div class="container ">
+      <section id="main_content" class="inner">
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+      <h3>Fifa world cup matches outcome of league round</h3>
+      <p class="form-inline">
+        <label value="based_on">Based on : </label>
+          <select id="options_view" onchange="sizeChange();" >
+            <option value="GP" class="name">Games Played</option>
+            <option value="W" class="name">Games Won</option>
+            <option value="D" class="name">Games Drawn</option>
+            <option value="L" class="name">Games Lost</option>
+            <option value="GF" class="name">Goals For</option>
+            <option value="GA" class="name">Goals Against</option>
+            <option value="PTS" class="name">Points</option>
+          </select>
+          
+            <!-- <input id="options_view" name="options" type="radio" class="name" value="GP" onclick="sizeChange();" >Games Played</input>
+            <input id="options_view" name="options" type="radio" class="name" value="W" onclick="sizeChange();" >Games Won</input>
+            <input id="options_view" name="options" type="radio" class="name" value="D" onclick="sizeChange();" >Games Drawn</input>
+            <input id="options_view" name="options" type="radio" class="name" value="L" onclick="sizeChange();" >Games Lost</input>
+            <input id="options_view" name="options" type="radio" class="name" value="GF" onclick="sizeChange();" >Goals For</input>
+            <input id="options_view" name="options" type="radio" class="name" value="GA" onclick="sizeChange();" >Goals Against</input>
+            <input id="options_view" name="options" type="radio" class="name" value="PTS" onclick="sizeChange();" >Points</input>-->
+            
+          <label align="left" >Search:</label>
+          <input type="text" class="search" placeholder="eg: Web">
+      </p>
+          <div id="svgdataurl"></div>
+<p id="chart" class="center"></p>
+  </section>
+</div>
+    
+    <script type="text/javascript">
+ d3.select(window).on("resize", sizeChange);
+
+ function sizeChange() {
+ 
+     d3.select('#chart').select("svg")
+       .remove();
+
+   var based_on = document.getElementById("options_view").value
+  
+d3.select('.center').select("svg")
+       .remove();
+
+var sub_width =  parseInt(d3.select('.center').style('width'), 10);
+
+var width = sub_width,
+    height = sub_width*0.648,
+    radius = sub_width*0.25,
+    color = d3.scale.category10();
+ 
+var partition = d3.layout.partition()
+    .size([2 * Math.PI, radius])
+    .value(function(d) { return d[based_on]; });
+           
+var arc = d3.svg.arc()
+    .startAngle(function(d) { return d.x; })
+    .endAngle(function(d) { return d.x + d.dx; })
+    .innerRadius(function(d) { return d.y; })
+    .outerRadius(function(d) { return d.y + d.dy; });
+ 
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+ 
+ function unique(arr) {
+    var u = {}, a = [];
+    for(var i = 0, l = arr.length; i < l; ++i){
+        if(!u.hasOwnProperty(arr[i])) {
+            a.push(arr[i]);
+            u[arr[i]] = 1;
+        }
+    }
+    return a;
+}
+
+d3.csv("data.csv", function(csv_root) {
+    name_list =[];
+    
+    csv_root.forEach(function(o) {
+      name_list.push(o.Group);
+      name_list.push(o.key);
+      });
+ 
+     
+    var treeData= {"key": "World Cup", "values": 
+        d3.nest()
+        .key(function (d) { return d.Group; })
+        .entries(csv_root)
+      };
+      
+      var root = { "key": "World Cup", "children":
+        treeData.values.map( function(Group){
+            return { "key": Group.key,"children": Group.values }; 
+         }) 
+      };
+
+ defs = svg.selectAll("defs")
+        .data(csv_root)
+        .enter()
+        .append("defs")
+        .append("pattern")
+        .attr("id",function(d) { return d.Team_id })
+        .attr("patternUnits","userSpaceOnUse")
+        .attr("width","100")
+        .attr("height","100")
+        .append("image")
+        .attr("xlink:href",function(d) { return d.Team_flag })
+        .attr("preserveAspectRatio", "defer xMidYMid slice")
+        .attr("width","100")
+        .attr("height","100");
+        
+   
+  path = svg.data([root]).selectAll("path")
+      .data(partition.nodes)
+    .enter()
+      .append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return color((d.children ? d : d.parent).key); })
+      .style("fill", function(d) { if (d.children){return color((d.children ? d : d.parent).key) }else {return "url(#"+d.Team_id+")" }})
+      .attr("data-title", function(d) { if (d.children){return 'Group : ' +d.key}else {return 'Country :' +d.key +'<br/> '+based_on+' :'+d[based_on];}})
+      .attr("sub_link", function(d) { return d.key; })
+      .on("click", magnify)
+      .each(stash);
+      
+          $("path").tooltip({container: '#chart', html: true, placement:'top'});
+});
+
+function magnify(node) {
+  if (parent = node.parent) {
+    var parent,
+        x = parent.x,
+        k = .8;
+    parent.children.forEach(function(sibling) {
+      x += reposition(sibling, x, sibling === node
+          ? parent.dx * k / node.value
+          : parent.dx * (1 - k) / (parent.value - node.value));
+    });
+  } else {
+    reposition(node, 0, node.dx / node.value);
+  }
+ 
+  path.transition()
+      .duration(750)
+      .attrTween("d", arcTween);
+}
+ 
+function reposition(node, x, k) {
+  node.x = x;
+  if (node.children && (n = node.children.length)) {
+    var i = -1, n;
+    while (++i < n) x += reposition(node.children[i], x, k);
+  }
+  return node.dx = node.value * k;
+}
+ 
+function stash(d) {
+  d.x0 = d.x;
+  d.dx0 = d.dx;
+}
+ 
+function arcTween(a) {
+  var i = d3.interpolate({x: a.x0, dx: a.dx0}, a);
+  return function(t) {
+    var b = i(t);
+    a.x0 = b.x;
+    a.dx0 = b.dx;
+    return arc(b);
+  };
+}
+
+    var lastsearch = '';
+    var $box = {};
+    
+      function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function() {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp(search, "i");
+          $('path', $chart).each(function(){
+              $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+      });
+    }
+    add_search('.search', '#chart');
+    
+       $( ".search" ).autocomplete({
+  source: function( request, response ) {
+    var matches = $.map( unique(name_list), function(tag) {
+      if ( tag.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
+        return tag;
+      }
+    });
+    response(matches);
+    }
+    });
+}
+
+d3.select("#save").on("click", function(){
+  var html = d3.select("svg")
+        .attr("version", 1.1)
+        .attr("xmlns", "http://www.w3.org/2000/svg")
+        .node().parentNode.innerHTML;
+ 
+ 
+  console.log(html);
+  var imgsrc = 'data:image/svg+xml;base64,'+ btoa(html);
+  var img = '<img src="'+imgsrc+'">'; 
+  d3.select("#svgdataurl").html(img);
+ 
+});
+
+    </script>
+  </body>
+</html>

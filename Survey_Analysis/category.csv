@@ -1,0 +1,84 @@
+Category,Sector
+Metros,Delhi
+Metros,Mumbai
+Metros,Chennai
+Metros,Kolkata
+Towns,Bangalore
+Towns,Hyderabad
+Towns,Gurgaon
+Towns,Noida
+Towns,Chandigarh
+Towns,Lucknow
+Towns,Jaipur
+Towns,Pune
+Towns,Ahmedabad
+Towns,Indore
+Towns,Bhubaneshwar
+Towns,Guwahati
+Towns,Patna
+Towns,Ranchi
+Towns,Kochi
+Towns,Hissar
+Towns,Moradabad
+Towns,Kota
+Towns,Kohlapur
+Towns,Jamnagar
+Towns,Ratlam
+Towns,Salem
+Towns,Kottayam
+Towns,Guntur
+Towns,Asansol
+Towns,Baleshwar
+Towns,Aizawl
+Gender,Male
+Gender,Female
+Males,Metros-Male
+Males,Non-Metros-Male
+Females,Metros-Female
+Females,Non-Metros-Female
+Working,Yes
+Working,No
+Age,15-17 Years
+Age,18-25 Years
+Age,26-35 Years
+Age,36-40 Years
+Age,41-50 Years
+Marital status,Unmarried
+Marital status,Engaged
+Marital status,Married
+Marital status,Divorced/Separated/Widowed
+Type of marriage,Love marriage
+Type of marriage,Arranged marriage
+Virginity,Virgin
+Virginity,Non Virgin
+Relationship Status,"Married, living with spouse"
+Relationship Status,Married but living without spouse
+Relationship Status,In a live in relationship
+Relationship Status,Not in any committed relationship
+Living With,Only spouse
+Living With,Spouse and children
+Living With,"Spouse, children and more members"
+Living With,Alone
+Living With,Parents/Sibling/Other Relative
+Children,None
+Children,1-2 children
+Children,More than 2
+Children,NA
+Occupation,Housewife
+Occupation,Businessperson
+Occupation,Self-employed professional
+Occupation,Private Job
+Occupation,Govt Job
+Occupation,Unemployed
+Occupation,Others
+Education,HSC
+Education,Graduate- General
+Education,Graduate – Professional
+Education,PG General
+Education,PG Professional
+Education,Other Education
+Income Range,15000 to 30000
+Income Range,30001 to 50000
+Income Range,50001 to 75000
+Income Range,75001 to 100000
+Income Range,More than 100000

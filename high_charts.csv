@@ -1,0 +1,30 @@
+title,thumbnail,url,author,visualizationType
+Single line series,basic-line.png,basic-line,self,General
+Two panes & candlestick,candlestick-and-volume.png,candlestick-and-volume,self,General
+Compare multiple series,compare.png,compare,self,General
+Data grouping,data-grouping.png,data-grouping,self,General
+async loading with points,lazy-loading.png,lazy-loading,self,General
+Intraday area,intraday-area.png,intraday-area,self,General
+Intraday candlestick,intraday-candlestick.png,intraday-candlestick,self,General
+Flags marking events,flags-general.png,flags-general,self,General
+Dynamically updated data,dynamic-update.png,dynamic-update,self,General
+Line with markers &shadow,line-markers.png,line-markers,self,Chart types
+Spline,spline.png,spline,self,Chart types
+Step line,step-line.png,step-line,self,Chart types
+Area,area.png,area,self,Chart types
+Area spline,areaspline.png,areaspline,self,Chart types
+Area range,arearange.png,arearange,self,Chart types
+Area spline range,areasplinerange.png,areasplinerange,self,Chart types
+Candlestick,candlestick.png,candlestick,self,Chart types
+OHLC,ohlc.png,ohlc,self,Chart types
+Column,column.png,column,self,Chart types
+Column range,columnrange.png,columnrange,self,Chart types
+Point markers only,markers-only.png,markers-only,self,Chart types
+Plot lines on Y axis,yaxis-plotlines.png,yaxis-plotlines,self,Various features
+Plot bands on Y axis,yaxis-plotbands.png,yaxis-plotbands,self,Various features
+Reversed Y axis,yaxis-reversed.png,yaxis-reversed,self,Various features
+Styled scrollbar,styled-scrollbar.png,styled-scrollbar,self,Various features
+Disabled scrollbar,scrollbar-disabled.png,scrollbar-disabled,self,Various features
+Disabled navigator,navigator-disabled.png,navigator-disabled,self,Various features
+Flags placement,flags-placement.png,flags-placement,self,Flags
+Flags shapes and colors,flags-shapes.png,flags-shapes,self,Flags

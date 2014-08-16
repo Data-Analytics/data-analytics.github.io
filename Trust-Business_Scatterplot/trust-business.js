@@ -9,6 +9,9 @@
     var svg = d3.select("#chart").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
+        .attr("xmlns", 'http://www.w3.org/2000/svg')
+        .attr("xlink", 'http://www.w3.org/1999/xlink')
+        .attr("version", '1.1');
 
 // bring in the data, and do everything that is data-driven
 d3.csv("trust-business.csv", function(data) {
@@ -47,7 +50,10 @@ d3.csv("trust-business.csv", function(data) {
     var circles =
     groups.selectAll("circle")
         .data(data)
-      .enter().append("circle")
+      .enter().append("a")
+        .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d.country } )
+        .attr("target","_blank")
+      .append("circle")
       .attr("class", "circles")
       .attr({
         cx: function(d) { return x(+d.trust); },
@@ -56,20 +62,26 @@ d3.csv("trust-business.csv", function(data) {
         id: function(d) { return d.country; }
       })
        .attr("data-title", function(d) { return d.country; })
-        .style("fill", function(d) { return color(d.region); });
+        .style("fill", function(d) { return color(d.region); })
+        .style("stroke", function(d) { return d3.rgb(color(d.region)).darker(); });
         
                   
     // the legend color guide
     var legend = svg.selectAll("rect")
             .data(regions)
-        .enter().append("rect")
+        .enter().append("a")
+        .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d } )
+        .attr("target","_blank")
+        .append("rect")
         .attr({
-          x: function(d, i) { return (40 + i*80); },
+          x: function(d, i) { return (40 + i*125); },
           y: height,
-          width: 25,
-          height: 12
+          width: 20,
+          height: 10,
+          rx:2
         })
-        .style("fill", function(d) { return color(d); });
+        .style("fill", function(d) { return color(d); })
+        .style("stroke", function(d) { return d3.rgb(color(d)).darker(); });
     
     
     // legend labels    
@@ -77,8 +89,8 @@ d3.csv("trust-business.csv", function(data) {
             .data(regions)
         .enter().append("text")
         .attr({
-        x: function(d, i) { return (40 + i*80); },
-        y: height + 24,
+        x: function(d, i) { return (65 + i*125); },
+        y: height + 10,
         })
         .text(function(d) { return d; });
     
@@ -109,4 +121,28 @@ d3.csv("trust-business.csv", function(data) {
         .attr("dy", ".75em")
         .attr("transform", "rotate(-90)")
         .text("ease of doing business (rank)");
+        
+    var mouseOn = function() { 
+    var circle = d3.select(this);
+       circle.transition()
+        .duration(800).attr("r", 16).ease("elastic");
+
+        d3.selection.prototype.moveToFront = function() { 
+          return this.each(function() { 
+            this.parentNode.appendChild(this); }); 
+        };
+
+        if (!$.browser.msie) {circle.moveToFront();}
+    };
+    
+  var mouseOff = function() {
+   var circle = d3.select(this);
+    circle.transition()
+     .duration(800).attr("r", 8).ease("elastic");    
+    };
+
+    circles.on("mouseover", mouseOn);
+    circles.on("mouseout", mouseOff);
+
+    
     });

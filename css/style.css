@@ -5,7 +5,7 @@ Author: sushanth
 
 created : 10/nov/2012
 
-modified : 07/jan/2014
+modified : 09/jun/2014
 
 *******************************************************************************/
 /*******************************************************************************
@@ -18,7 +18,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -37,10 +37,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
   min-height: 90px;
-}
-
-ol, ul {
-  list-style: none;
 }
 
 blockquote, q {
@@ -65,6 +61,10 @@ body {
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+.jumbotron-icon .fa-2 {
+  font-size: 4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -137,7 +137,7 @@ button {
   color: #fff;
   text-rendering: optimizeLegibility;
   text-shadow: 0 -1px 1px #222;
-  padding: 6px 10px 6px 10px;
+  padding: 5px 10px 5px 10px;
   border: 0;
   border-radius: 0;
   border-bottom: 1px solid #222;
@@ -171,13 +171,16 @@ strong {
   font-weight: bold;
 }
 
+.img-circle{
+    border-radius: 50%;
+    display: block;
+}
+
 .visual-img {
   position: relative;
   margin: 0 auto;
   max-width: 739px;
-  padding: 5px;
-  margin: 4px 0 4px 0;
-  border: 1px solid #ebebeb;
+
 
   box-shadow: 0 0 5px #ebebeb;
   -webkit-box-shadow: 0 0 5px #ebebeb;
@@ -229,15 +232,6 @@ ul, ol, dl {
   margin-bottom: 15px
 }
 
-ul li {
-  list-style: inside;
-  padding-left: 20px;
-}
-
-ol li {
-  list-style: decimal inside;
-  padding-left: 20px;
-}
 
 dl dt {
   font-weight: bold;
@@ -309,7 +303,12 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background: #4C4C4C url('../images/headers.png');
+    background: #34495e;
+    }
+
+#header_wrap:after {
+    background: url(../images/bs-docs-masthead-pattern.png) repeat center center;
+    opacity: .4;
 }
 
 
@@ -322,12 +321,12 @@ Full-Width Styles
   color: #fff;
   font-size: 42px;
   font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
+  text-shadow: 1px 1px 2px #000;
 }
 #project_title_p {
   margin: 0;
-  color: #aaa;
-  text-shadow: #111 0px 0px 10px;
+  color: #89bdff;
+  text-shadow: 1px 1px 2px #000;
 }
 
 #project_tagline {
@@ -446,11 +445,12 @@ Small Device Styles
 }
 
 #banner {
+  display :None;
   color: #ccc;
   height: 50px;
   position: relative;
-  background: #0000ff url(../images/background.png);
-  border: 1px solid #33000;
+  background: #f7f9fa;
+  border: 1px solid #000;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
   box-shadow: 0px 1px 3px rgba(0, 0.25, 0, 0);
@@ -466,13 +466,13 @@ Small Device Styles
   margin-right: 10px;
   }
 #banner .button {
-  border: 1px solid steelblue;
+  border: #e9ecef;
   color: #aaa;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33000), color-stop(100%, #ff0000));
-  background: -webkit-linear-gradient(#33000, #ff0000);
-  background: -moz-linear-gradient(#33000, #ff0000);
-  background: -o-linear-gradient(#33000, #ff0000);
-  background: linear-gradient(#33000, #ff0000);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #33000), color-stop(100%, #e9ecef));
+  background: -webkit-linear-gradient(#33000, #e9ecef);
+  background: -moz-linear-gradient(#33000, #e9ecef);
+  background: -o-linear-gradient(#33000, #e9ecef);
+  background: linear-gradient(#33000, #e9ecef);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -497,7 +497,7 @@ Small Device Styles
   background: -moz-linear-gradient(#33000, #33000);
   background: -o-linear-gradient(#33000, #33000);
   background: linear-gradient(#33000, #33000);
-  background-color: steelblue;
+  background-color: #e9ecef;
 }
 #banner .fork {
   padding: 10px 12px;

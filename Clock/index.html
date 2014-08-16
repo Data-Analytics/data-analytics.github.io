@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <!-------------------------------------------------------------
  Name:        data-analytics.github.io
- Purpose:     Data visualisation and analytics examples  
- Author:      sushanth 
- Licence:     open-source 
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
 --------------------------------------------------------------->
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="data visualisation ,clock,javascript clock,d3 clock">
+    <meta name="description" content="In a polar clock, each ring encodes each time field. The outermost ringrepresents second, followed by minutes etc ">
     <meta name="author" content="Sushanth">
-    <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,clock,javascript clock,d3 clock">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
@@ -20,7 +27,7 @@
     <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
     <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
     <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
-    <link rel="shortcut icon" href="/./images/flower.png">
+    <link rel="shortcut icon" href="/./images/logo.png">
     <title>Polar Clock</title>
     <style>
     .clock {
@@ -30,9 +37,10 @@
   </head>
   <body>
   <!-- HEADER -->
-        <div id="header_wrap" class="outer">
+        <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
             <header class="inner container">
-              <h1 id="project_title">Polar Clock</h1>
+              <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">Polar Clock</h1>
               <p id="project_title_p">In a polar clock, each ring encodes each time field. 
               The outermost ringrepresents second, followed by minutes etc 
               </p>
@@ -55,7 +63,7 @@
           <section id="main_content" class="inner">
         <div class="alert alert-info">
             <div id="fb-root"></div>
-            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>              
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
             <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
             <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
@@ -64,9 +72,9 @@
             
             <div class="g-plusone" data-size="medium"></div>
             
-            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
             <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
-        </div>           
+        </div>
                 <div id="clock" align="center"></div>
            </section>
            </div>

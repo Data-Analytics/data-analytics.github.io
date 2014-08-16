@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <!-------------------------------------------------------------
  Name:        data-analytics.github.io
- Purpose:     Data visualisation and analytics examples   
- Author:      sushanth 
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
  Created:     18-08-2013
- Modified:    07-01-2014
- Copyright:  (c) sushanth  2014
- Licence:     open-source 
+ Modified:    02-04-2014
+ Copyright:  (c) sushanth 2014
+ Licence:     open-source
 --------------------------------------------------------------->
 <html manifest="demo.appcache">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="data visualisation examples">
+    <meta name="description" content="data visualisation examples data-analytics.github.io Selected Tools is a collection of tools that worls for the people on a daily basis and recommend warmly.">
     <meta name="author" content="Sushanth">
-    <meta name="keywords" content="data-visualisation,data-analytics,javascript,d3.js">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/docs.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/pin.css">      
+    <link rel="stylesheet" type="text/css" media="screen" href="css/pin.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/modal.css">     
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/d3.v3.min_b.js"></script>
     <script type="text/javascript" src="javascripts/google-analyitcs.js"></script>
     <script type="text/javascript" src="javascripts/facebook_link.js"></script>
     <script type="text/javascript" src="javascripts/googleplus_link.js"></script>
     <script type="text/javascript" src="javascripts/twitter-share.js"></script>
-    <link rel="shortcut icon" href="images/flower.png">
+    <link rel="shortcut icon" href="images/logo.png">
     <title>Data Analytics and Visualisation</title>
   </head>
- <body>
+ <body class="theme-beige" >
  <!-- HEADER -->
+    <a target="_blank" href="https://github.com/Data-Analytics/data-analytics.github.io"><img style="position:fixed;top:0;right:0;border:0;" width="149" height="149" src="images\forkme.png" alt="Fork me on GitHub"></a>
     <div id="header_wrap" class="outer info">
         <header class="inner">
-            <h1 id="project_title">Data Analytics and Visualisation</h1>
+            <h1 align="left" id="project_title">Data Analytics and Visualisation</h1>
             <p id="project_title_p">Visualization is the graphical presentation of information, with the goal 
             of providing the viewer with a qualitative understanding of the information contents.
             which would result in to retrive hidden insights of the data
             D3.js is a JavaScript library for manipulating documents based on data.</p>
+            <img src="images/images.png" style="display:none">
         </header>
-        
-      <div id="banner">
-        <div class="container">
-            <div class="time">
-                <span><script type="text/javascript">document.write(new Date());</script></span>
-            </div>
-            <div class="contacts">
-                <span>More examples on : <a href="http://d3js.org/" class="link">d3 - data driven documents </a></span>
-                <a href="https://github.com/Sushanthece" class="button">view on github</a>
-            </div>
-        </div>
-      </div><!-- end banner -->
     </div>
-    <br/><br/>
-    <div class="inner head">            
-    <div id="nav" style="width:18%;float:left;display:inline-block">
+    <div class="navbar">
+      <div class="navbar-inner">
+         <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="http://data-visualisation.github.io/" target="_blank">Data Visualisation</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="">
+                    <a><script type="text/javascript">document.write(new Date());</script></a>
+                </li>
+                <li class="active">
+                    <a href=".">data driven documents</a>
+                </li>
+                <li class=".">
+                    <a href="home.html">High Charts </a>
+                <li class="">
+                    <a>More examples on :</a>
+                </li>
+                <li class="">
+                    <a href="http://d3js.org/" target="_blank" >d3 - data driven documents </a>
+                </li>
+                <li class="">
+                    <a href="https://github.com/Sushanthece" target="_blank" class="button">view on github</a>
+                </li>
+              </ul>
+            </div>
+         </div>
+      </div>
+    </div>
+    <div class="inner">
+    <div class="alert alert-primary alert-dismissable" id="nav" style="width:18%;float:left;display:inline-block">
         <div class="menu1-container"></div>
         <div class="menu2-container">
             <input type="text" class="menu2-search" />
             <li class="all"><a href="" class="displayName">all</a></li>
         </div>
     </div>
-    <div id="list" style="width:75%;float:right;display:inline-block">
+    <div class="list" id="list" style="width:75%;float:right;display:inline-block">
         <div class="alert alert-info">
             <div id="fb-root"></div>
-            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>              
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             
             <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
             <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
@@ -69,14 +98,46 @@
             
             <div class="g-plusone" data-size="medium"></div>
             
-            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Fflower.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
             <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
         </div>
+        <div class="alert alert-primary">
+        <a href="#info" style="font-size:13px;">Please click<u> here </u> to check out tips on secrets of Data Visualisation</a>
+        </div>
         <div class="menu3-container"></div>
+        
     </div>
     </div>
+    <div id="info" class="modalWindow">
+    <div style="width:900px !important;">
+        <div class="modalHeader">
+            <h4 style="padding-left:6px;">Secrets of Data Visualisations</h4>
+        </div>
+        <div class="modalContent">
+            <img src="images/secrets.png" style="max-width:100%">
+        </div> 
+        <div class="modalFooter">
+            <a href="#ok" title="Ok" class="ok">Okay</a>
+            <div class="clear"></div>
+        </div>
+    </div>
+    </div>
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 <script type="text/javascript">
 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {        
+            $('#return-to-top').fadeIn(200);    
+        } else {
+            $('#return-to-top').fadeOut(200);   
+        }
+    });
+    $('#return-to-top').click(function() {     
+        $('body,html').animate({
+            scrollTop : 0             
+        }, 500);
+    });
+    
     var splitChar = '; ';
     var json;
 
@@ -97,7 +158,7 @@
         href: function(d, i){return d.url;},
         html: function(d, i){
             var content ='';
-            if(d.thumbnail) content += "<img width='192' height='128'  src='images/"+d.thumbnail+"' class='visual-img  thumbnail'/>";
+            if(d.thumbnail) content += "<img width='192' height='128'  src='images/"+d.thumbnail+"' class='visual-img '/>";
             content += "<h3 align='left'>"+d.title+"</h3>";
             if(d.description)content += "<p>"+d.description+"<p/>";
             return content;}
@@ -237,6 +298,22 @@
     });
 
 </script>
+  <div class="inner">
+    <div style="width:18%;float:left;display:inline-block"></div>
+    <div style="width:75%;float:right;display:inline-block">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'dataanalyticsgithubio'; // required: replace example with your forum shortname
 
-</body>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+   </div>
+  </div>   
+ </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="The  graphical image tree map showing the average life expectancy of each country denoting, with their corresponding flag based on the size of the flag below">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/jquery-ui.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>  
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/jquery-ui.js"></script>  
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title>Image Tree Map</title>
+  </head>
+  <body onLoad="onRender();">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container">
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">Image Tree Map</h1>
+          <p id="project_title_p">The  graphical image tree map showing the average life expectancy of each 
+          country denoting, with their corresponding flag based on the size of the flag below  
+          </p>
+        </header>
+        <div id="banner">
+          <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+         
+    <!-- MAIN CONTENT -->
+    <div class="container ">
+      <section id="main_content" class="inner">
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+            <p class="form-inline">
+            <label value="based_on">Based on : </label>
+            <select id="options_view">
+                <option value="male" class="name">Male</option>
+                <option value="female" class="name">Female</option>
+                <option value="overall_life" class="name">overall</option>
+            </select>
+           <button id ="submit" value="submit" onClick='onRender();' >submit</button>
+            <label align="left" >Search:</label>
+            <input type="text" class="search" placeholder="eg: india">
+           </p>
+        <div class="imagemap" align="center">
+        <script type="text/javascript" src="imagemap.js"></script>
+        </div>
+      </section>
+    </div>
+    <script>
+   searchTags =  ["Monaco","Japan","Andorra","Singapore","Hong Kong","San Marino","Iceland","Italy","Australia","Sweden","Switzerland","Canada","France","Israel","Spain","Luxembourg","Norway","New Zealand","Austria","Netherlands","Ireland","Cyprus","Finland","Germany","Greece","South Korea","Malta","Belgium","United Kingdom","Liechtenstein","Taiwan","Portugal","Slovenia","Costa Rica","United States","Chile","Denmark","Cuba","United Arab Emirates","Brunei","Barbados","Kuwait","Czech Republic","Panama","Poland","Croatia","Dominica","Uruguay","Mexico","Maldives","Bahrain","Belize","Slovakia","Bahamas","Grenada","Brazil","Estonia","Ecuador","Argentina","Saint Vincent and the Grenadines","Oman","Bosnia and Herzegovina","Lithuania","Antigua and Barbuda","Malaysia","Saint Lucia","Qatar","Mauritius","Saint Kitts and Nevis","Vietnam","Hungary","Venezuela","Macedonia","Syria","Thailand","Trinidad and Tobago","Seychelles","Sri Lanka","Paraguay","Peru","El Salvador","Jordan","Colombia","Tonga","Cape Verde","Latvia","Nicaragua","Libya","Georgia","Tunisia","Montenegro","Bulgaria","Suriname","Turkey","Armenia","Saudi Arabia","China","Samoa","Lebanon","Palau","Romania","Honduras","Albania","Serbia","Jamaica","Iran","Marshall Islands","Algeria","Egypt","Dominican Republic","Fiji","Philippines","Solomon Islands","Nauru","Morocco","Belarus","Indonesia","Sao Tome and Principe","Vanuatu","Azerbaijan","Guatemala","Ukraine","Moldova","Russia","Bhutan","Guyana","Micronesia","India","Bangladesh","Kyrgyzstan","Iraq","North Korea","Nepal","Mongolia","Bolivia","Uzbekistan","Laos","Myanmar","Kazakhstan","Comoros","Kiribati","Tajikistan","Papua New Guinea","Namibia","Pakistan","Turkmenistan","Cambodia","Ghana","Madagascar","Botswana","Gabon","Yemen","Timor-Leste","Senegal","Haiti","Sudan","Eritrea","Cameroon","South Africa","Djibouti","Ethiopia","Kenya","Rwanda","Afghanistan","Mauritania","Liberia","Tanzania","Benin","Gambia","Malawi","Republic of the Congo","Togo","Burkina Faso","CÃ´te d'Ivoire","Uganda","Niger","Zambia","Guinea","Equatorial Guinea","Zimbabwe","Burundi","Nigeria","Mozambique","Angola","Chad","Mali","Lesotho","Guinea Bissau","Swaziland","Somalia","Democratic Republic of the Congo","Central African Republic","Sierra Leone"]
+    
+    
+   $( ".search" ).autocomplete({
+  source: function( request, response ) {
+    var matches = $.map( searchTags, function(tag) {
+      if ( tag.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
+        return tag;
+      }
+    });
+    response(matches);
+    }
+    });
+    
+    </script>
+</body>
+</html>

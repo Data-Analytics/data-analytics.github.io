@@ -4,10 +4,9 @@ var margin = { top: 40, right: 20, bottom: 50, left: 20 },
     gridSize = Math.floor(width / 24),
     legendElementWidth = gridSize*2,
     buckets = 9,
-    colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
+    colors = ['#ccffcc','#99ff99','#66ff66','#33ff33','#00ff00','#00cc00','#009900','#006600','#003300'] 
     days = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
     times = ["1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12a", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p", "12p"];
-
 
       d3.csv("data.csv",
         function(d) {
@@ -53,31 +52,13 @@ var margin = { top: 40, right: 20, bottom: 50, left: 20 },
               .enter().append("rect")
               .attr("x", function(d) { return (d.hour - 1) * gridSize; })
               .attr("y", function(d) { return (d.day - 1) * gridSize; })
-              .attr("rx", 4)
-              .attr("ry", 4)
-              .attr("class", "hour bordered")
+              .attr("rx", 2)
+              .attr("ry", 2)
               .attr("width", gridSize)
               .attr("height", gridSize)
               .style("fill", function(d) { return colorScale(d.value); })
+              .style("stroke", "#ccc")
               .attr('data-title',function(d) { return 'Users : '+d.value; });
               
-          var legend = svg.selectAll(".legend")
-              .data([0].concat(colorScale.quantiles()), function(d) { return d; })
-              .enter().append("g")
-              .attr("class", "legend");
-
-          legend.append("rect")
-            .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height)
-            .attr("width", legendElementWidth)
-            .attr("height", gridSize / 2)
-            .style("fill", function(d, i) { return colors[i]; });
-
-          legend.append("text")
-            .attr("class", "mono")
-            .text(function(d) { return "≥ " + Math.round(d); })
-            .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height + gridSize);
-        
         $("rect").tooltip({container: 'body', html: true, placement:'right'});        
       });
