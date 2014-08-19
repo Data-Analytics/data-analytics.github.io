@@ -1,4 +1,5 @@
 title,thumbnail,url,author,visualizationType,description
+Project Alotment,parallel_axis.png,Parallel_Axis,self,Parallel_Axis,Each blue line in this visualization is an employee and black vertical is a software language. bottom of the visualization shows all the employees
 Jobs /College Sankey,jobs_college.png,Jobs_College,self,flow chart,to actually see what's going on with a particular field or job
 Housing_Market,housing_market.png,Housing_Market,self,cartogram,"London's housing market analysis of the year 2011 and 2012, the population analysis, percentage of renting, percentage of houses being built etc"
 Population Analysis,population_analysis.png,Population_Analysis,self,tree map,"The graphical image tree map showing the population,density and area of each city denoting by one of the images from the city"
@@ -77,4 +78,3 @@ Tree Layout,tree.png,Tree-Layout,self,tree layout,The tree layout produces tidy 
 Treemap,treemap.png,Treemap,self,tree map,Treemaps display hierarchical (tree-structured) data as a set of nested rectangles.Each branch of the tree is given a rectangle.
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
 Voronoi,voronoi.png,Voronoimap,self,voronoi,"Voronoi diagram is a way of dividing space into a number of regions, here we have shown the example"
-,,,,,       
