@@ -38,13 +38,13 @@ Sortable Bar,sorted-bar.png,Sortable_BarChart,self,bar chart,This variation of a
 Stack/Multiple,stack-multiples.png,Stack-Multiples_Barchart,self,bar chart,Barchart gives you 2 dimesions to view one stacked together one above the otherand another showing you the view of individuals with transistion
 Calendermap,calender-map.png,Calendermap,self,Calender map,"The values are visualized as colored cells per day. Days are arranged into columns by week, then grouped by month and years."
 Bullet,bullet.png,Bullet,self,bullet chart,"This compare a given quantitative measure(such as profit or revenue) against qualitative ranges (e.g., poor, satisfactory, good)"
+Polar Clock,clock.png,Clock,self,clock,"In a polar clock, each ring encodes each time field. The outermost ringrepresents second, followed by minutes etc "
 Survey Analysis,survey_analysis.png,Survey_Analysis,self,flow chart,How have people responded on life satisfaction specifically in Delhi What do men think about sex education and extra-marital affairs
 Parliment Elections,parliment_elections.png,Parliment_Elections,self,tree map,The graphical image tree map showing the trend of the each party performing in the elections  sice independence
 Bubble Chart,bubble_chart.png,Bubble_Chart,self,bubble chart ,"Bubble charts encode data in the area of circles. Although less perceptually-accurate than bar charts, they can pack hundreds of values into a small space."
 Cartogram,cartogram.png,Cartogram,self,cartogram,"A cartogram is a map with some thematic variable such as travel time,population is substituted for land area or distance."
 World Cartogram,world-cartogram.png,World_Cartogram,self,cartogram,The cartogram of the world's languages the size of each country is scaled by the number of languages that are spoken in its territory
 World Tour,world-tour.png,World_Tour,self,cartogram,Showing you a fly through of where you'll be going as they pull up trip prices
-Polar Clock,clock.png,Clock,self,clock,"In a polar clock, each ring encodes each time field. The outermost ringrepresents second, followed by minutes etc "
 Cluster Plot,correlation.png,Correlation,self,cluster plot ,A cluster plot in general is a group or bunch of several discrete items that are close to each other
 Rainbow Worm,worm.png,Rainbow-worm,self,experiment,"This psychedelic example, reminiscent of an earthworm, demonstrates thedifference between a segmented and unsegmented line. "
 Chord Diagram,chord-diagram.png,Chord-Diagram,self,flow chart,"The directed relationships among a group of entities,simple interactivity by using mouseover filtering. "
