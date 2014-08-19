@@ -1,5 +1,5 @@
-var PykCharts = {};
-PykCharts.linearRangeQuery = function (options) {
+var linear_charts = {};
+linear_charts.linearRangeQuery = function (options) {
 
     //----------------------------------------------------------------------------------------
     //1. This is the method that executes the various JS functions in the proper sequence to generate the chart
@@ -334,7 +334,7 @@ function shuffle(array) {
 };
 
 $(document).ready(function(e){
-  var k = new PykCharts.linearRangeQuery({
+  var k = new linear_charts.linearRangeQuery({
     data: "linear_range_query.csv",
     selection: "#wrap",
     width: 550,
