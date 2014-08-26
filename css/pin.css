@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
   @media (min-width: 1200px) {
       .cols { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; }
   }
-  .thumbnails {
-      margin-bottom: 20px;
+  .thumbnail {
+      margin-bottom: 5px;
   }
   .thumbnail {
       padding: 0;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet M
       line-height: 1.3;
   }
 
-  .demo { width:200px; height:300px; margin:0 14px 14px 0;}
+.demo { border-radius: 6px; width:200px; height:300px; margin:0 14px 14px 0; position: relative;} 
   
   
 a:link, a:hover, a:visited {
@@ -57,14 +57,8 @@ a:link, a:hover, a:visited {
     list-style-type: square;
 }
 
-#nav {
-    bottom:0;
-    width: 16%;
-    overflow-y: auto;
-}
-.menu1-container, .menu2-container{
-    padding: 4px 12px;
-    text-transform: capitalize;
+.alert {
+margin-left: 10px;
 }
 
 .menu2-search{
