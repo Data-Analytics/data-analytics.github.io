@@ -288,7 +288,8 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background: #34495e;
+    background: #3b5998;
+    border-bottom: 1px solid #133783;
     }
 
 #header_wrap:after {
