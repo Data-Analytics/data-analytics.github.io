@@ -3,8 +3,6 @@ CACHE MANIFEST
 CACHE:
 index.html
 home.html
-data.csv
-high_charts.csv
 css\bootstrap-responsive.css
 css\bootstrap-responsive.min.css
 css\bootstrap.css
