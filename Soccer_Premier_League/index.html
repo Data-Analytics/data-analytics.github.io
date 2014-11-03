@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Twenty years of English Premier League matches from 1993-2013, visualised by league position or by points scored">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,football,soccer,premier league,manchester united,arsenal,liverpool,chelsea,manchester city,football league,league tables,sport">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title>The Story of the Season</title>
+    <link rel="stylesheet" href="premier.css">
+    <link rel="stylesheet" href="colours.css">
+  </head>
+  <body>
+      <!-- HEADER -->
+        <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+            <header class="inner container">
+              <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">The Story of the Season</h1>
+              <p id="project_title_p">Twenty years of English Premier League matches from 1993-2013, visualised by league position or by points scored.
+              </p>
+           </header>
+             <div id="banner">
+              <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/trust-business/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/trust-business/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/trust-business" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+
+        </div>
+	  <div class="container">
+	
+  <hr class="crack" />
+
+	<noscript>Sorry, this application needs JavaScript to be enabled.</noscript>
+
+	<!-- controls -->
+<div class="control">
+ <span class="control_text_left">Show me the season of</span>
+	<ul class="pager" id="year">
+   <li class="previous">
+     <a href="#">
+       <img id="prev" src="/images/previous.png" />
+       <span id="yeartext">2012-13</span>
+     </a>
+   </li>
+   <li class="next">
+     <a href="#">
+       <img id="next" src="/images/next.png" />
+     </a>
+   </li>
+ </ul>
+</div>
+<div class="control">
+<span class="control_text_left">ranked by</span> 
+<div class="btn-toolbar" id="points_or_position">
+  <div class="btn-group" id="ranking-type">
+    <a data-ranking="position" class="btn btn-primary active ranking" href="#">Position</a>
+    <a data-ranking="points" class="btn btn-primary ranking" href="#">Points</a>
+  </div>
+</div>
+</div>
+
+<!-- /controls -->
+		
+    <div id="vis"></div>
+    </div>
+     <script src="main.js"></script>
+  </body>
+</html>
