@@ -1,4 +1,5 @@
 title,thumbnail,url,author,visualizationType,description
+Soccer Premier League,soccer_premier_league.png,Soccer_Premier_League,self,scatter plot,"Twenty years of English Premier League matches from 1993-2013, visualised by league position or by points scored."
 Articles andJournals,articles_by_years.png,Articles,self,matrix chart,No of articles on each topic been published in the correspondng years showed in matrix structure
 Project Alotment,parallel_axis.png,Parallel_Axis,self,Parallel_Axis,Each blue line in this visualization is an employee and black vertical is a software language. bottom of the visualization shows all the employees
 Jobs /College Sankey,jobs_college.png,Jobs_College,self,flow chart,to actually see what's going on with a particular field or job
@@ -80,4 +81,3 @@ Tree Layout,tree.png,Tree-Layout,self,tree layout,The tree layout produces tidy 
 Treemap,treemap.png,Treemap,self,tree map,Treemaps display hierarchical (tree-structured) data as a set of nested rectangles.Each branch of the tree is given a rectangle.
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
 Voronoi,voronoi.png,Voronoimap,self,voronoi,"Voronoi diagram is a way of dividing space into a number of regions, here we have shown the example"
-Soccer Premier League,soccer_premier_league.png,Soccer_Premier_League,self,scatter plot,"Twenty years of English Premier League matches from 1993-2013, visualised by league position or by points scored."
