@@ -1,4 +1,5 @@
 title,thumbnail,url,author,visualizationType,description
+Assembly Election,maharashtra.png,Assembly_Election,self,tree map,The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years
 Soccer Premier League,soccer_premier_league.png,Soccer_Premier_League,self,sparkline,"Twenty years of English Premier League matches from 1993-2013, visualised by league position or by points scored."
 Articles andJournals,articles_by_years.png,Articles,self,matrix chart,No of articles on each topic been published in the correspondng years showed in matrix structure
 Project Alotment,parallel_axis.png,Parallel_Axis,self,Parallel_Axis,Each blue line in this visualization is an employee and black vertical is a software language. bottom of the visualization shows all the employees
