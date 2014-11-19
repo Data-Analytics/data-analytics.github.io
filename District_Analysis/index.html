@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="The  graphical image tree map showing the trend of the each district in india describing corresponding states with respect to population, area in (sq km) and density in (per sq km) as per the latest available data as of  year 2014">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title>District Analysis</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container" >
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">District Analysis</h1>
+          <p id="project_title_p">The  graphical image tree map showing the trend of the each district in india describing corresponding states with respect to population, area in (sq km) and density in (per sq km) as per the latest available data as of  year 2014 
+          </p>
+        </header>
+        <div id="banner">
+          <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+         
+    <!-- MAIN CONTENT -->
+    <div class="container ">
+      <section id="main_content" class="inner">
+        <div class="alert alert-info">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="http://data-analytics.github.io/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share" data-url="http://data-analytics.github.io/" data-counter="right"></script>
+            
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://http://data-analytics.github.io/" data-text="data analytics" data-dnt="true">Tweet</a>
+            
+            <div class="g-plusone" data-size="medium"></div>
+            
+            <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fdata-analytics.github.io%2F&media=http%3A%2F%2Fdata-analytics.github.io%2Fimages%2Flogo.png&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+            <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+    
+       <svg width="960" height="80" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <rect class="state-legend" data-state="AN" data-highlight="[data-party=AN]" data-toggle="highlight"  fill="#a65628" x="0"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="AP" data-highlight="[data-party=AP]" data-toggle="highlight"  fill="#a6cee3" x="26.66666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="AR" data-highlight="[data-party=AR]" data-toggle="highlight"  fill="#1f78b4" x="53.33333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="AS" data-highlight="[data-party=AS]" data-toggle="highlight"  fill="#bc80bd" x="80"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="BR" data-highlight="[data-party=BR]" data-toggle="highlight"  fill="#e34a33" x="106.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="CH" data-highlight="[data-party=CH]" data-toggle="highlight"  fill="#66bd63" x="133.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="CG" data-highlight="[data-party=CG]" data-toggle="highlight"  fill="#878787" x="160"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="DN" data-highlight="[data-party=DN]" data-toggle="highlight"  fill="#b35806" x="186.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="DD" data-highlight="[data-party=DD]" data-toggle="highlight"  fill="#4d4d4d" x="213.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="DL" data-highlight="[data-party=DL]" data-toggle="highlight"  fill="#b2df8a" x="240"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="GA" data-highlight="[data-party=GA]" data-toggle="highlight"  fill="#d6604d" x="266.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="GJ" data-highlight="[data-party=GJ]" data-toggle="highlight"  fill="#80b1d3" x="293.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="HR" data-highlight="[data-party=HR]" data-toggle="highlight"  fill="#33a02c" x="320"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="HP" data-highlight="[data-party=HP]" data-toggle="highlight"  fill="#fb9a99" x="346.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="JK" data-highlight="[data-party=JK]" data-toggle="highlight"  fill="#e31a1c" x="373.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="JH" data-highlight="[data-party=JH]" data-toggle="highlight"  fill="#993404" x="400"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="KA" data-highlight="[data-party=KA]" data-toggle="highlight"  fill="#b3de69" x="426.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="KL" data-highlight="[data-party=KL]" data-toggle="highlight"  fill="#ff7f00" x="453.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="LD" data-highlight="[data-party=LD]" data-toggle="highlight"  fill="#01665e" x="480"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="MP" data-highlight="[data-party=MP]" data-toggle="highlight"  fill="#bebada" x="506.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="MH" data-highlight="[data-party=MH]" data-toggle="highlight"  fill="#fb8072" x="533.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="MN" data-highlight="[data-party=MN]" data-toggle="highlight"  fill="#41b6c4" x="560"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="ML" data-highlight="[data-party=ML]" data-toggle="highlight"  fill="#cb181d" x="586.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="MZ" data-highlight="[data-party=MZ]" data-toggle="highlight"  fill="#88419d" x="613.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="NL" data-highlight="[data-party=NL]" data-toggle="highlight"  fill="#b15928" x="640"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="OD" data-highlight="[data-party=OD]" data-toggle="highlight"  fill="#ef6548" x="666.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="PY" data-highlight="[data-party=PY]" data-toggle="highlight"  fill="#8c96c6" x="693.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="PB" data-highlight="[data-party=PB]" data-toggle="highlight"  fill="#54278f" x="720"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="RJ" data-highlight="[data-party=RJ]" data-toggle="highlight"  fill="#fdb462" x="746.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="SK" data-highlight="[data-party=SK]" data-toggle="highlight"  fill="#238b45" x="773.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="TN" data-highlight="[data-party=TN]" data-toggle="highlight"  fill="#fccde5" x="800"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="TS" data-highlight="[data-party=TS]" data-toggle="highlight"  fill="#fec44f" x="826.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="TR" data-highlight="[data-party=TR]" data-toggle="highlight"  fill="#dd3497" x="853.3333333"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="UP" data-highlight="[data-party=UP]" data-toggle="highlight"  fill="#8dd3c7" x="880"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="UK" data-highlight="[data-party=UK]" data-toggle="highlight"  fill="#9e9ac8" x="906.6666667"  height="20"  width="26.66666667" ></rect>
+<rect class="state-legend" data-state="WB" data-highlight="[data-party=WB]" data-toggle="highlight"  fill="#cab2d6" x="933.3333333"  height="20"  width="26.66666667" ></rect>
+
+<text x="13.33333334" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">AN</text>
+<text x="40.00000001" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">AP</text>
+<text x="66.66666667" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">AR</text>
+<text x="93.33333334" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">AS</text>
+<text x="120" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">BR</text>
+<text x="146.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">CH</text>
+<text x="173.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">CG</text>
+<text x="200" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">DN</text>
+<text x="226.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">DD</text>
+<text x="253.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">DL</text>
+<text x="280" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">GA</text>
+<text x="306.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">GJ</text>
+<text x="333.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">HR</text>
+<text x="360" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">HP</text>
+<text x="386.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">JK</text>
+<text x="413.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">JH</text>
+<text x="440" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">KA</text>
+<text x="466.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">KL</text>
+<text x="493.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">LD</text>
+<text x="520" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">MP</text>
+<text x="546.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">MH</text>
+<text x="573.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">MN</text>
+<text x="600" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">ML</text>
+<text x="626.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">MZ</text>
+<text x="653.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">NL</text>
+<text x="680" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">OD</text>
+<text x="706.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">PY</text>
+<text x="733.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">PB</text>
+<text x="760" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">RJ</text>
+<text x="786.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">SK</text>
+<text x="813.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">TN</text>
+<text x="840" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">TS</text>
+<text x="866.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">TR</text>
+<text x="893.3333333" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">UP</text>
+<text x="920" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">UK</text>
+<text x="946.6666666" y="12.0" text-anchor="middle" dy=".35em" fill="#fff">WB</text>
+
+    </svg>
+    <p class="form-inline">
+        <label value="group">Order by: </label>
+    <select id="options_view">   
+        <option value="Population" class="name">Population</option>
+        <option value="Area" class="name">Area</option>
+        <option value="Density" class="name">Density</option>
+     </select>  
+     <button id ="submit" value="submit" onClick
+     ='onRender();' >submit</button>
+   
+         <label align="left" >Search:</label>
+            <input type="text" class="search" placeholder="eg: chennai">
+   </p>
+    <div class="par_treemap" align="center">
+        <script type="text/javascript" src="district_treemap.js"></script>
+    </div>
+  </section>
+  </div>
+  
+  <script>
+ onRender();
+  </script>
+</body>
+</html>
