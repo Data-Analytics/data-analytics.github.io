@@ -1,14 +1,14 @@
 var width = 960,
     height = 420,
-    radius = 5,
+    radius = 10,
     fill = d3.scale.category20();
 
 var fisheye = d3.fisheye.circular()
-      .radius(120);
+      .radius(80);
       
 var force = d3.layout.force()
-    .charge(-100)
-    .linkDistance(220)
+    .charge(-80)
+    .linkDistance(250)
     .size([width, height]);
 
 var svg = d3.select(".force-layout").append("svg")
@@ -17,8 +17,6 @@ var svg = d3.select(".force-layout").append("svg")
     .attr("xmlns", 'http://www.w3.org/2000/svg')
     .attr("xlink", 'http://www.w3.org/1999/xlink')
     .attr("version", '1.1');
-    
-    
     
 d3.csv("node.csv", function(error, nodes) {
     d3.csv("link.csv", function(error, links) {    
@@ -44,20 +42,34 @@ d3.csv("node.csv", function(error, nodes) {
     .style("stroke","#999")
     .style("stroke-width", function(d) { return d.value });
 
-  var node = svg.selectAll("circle")
-          .data(nodes)
-        .enter().append("a")
-        .attr("xlink:href",function(d) { return d.url } )
+var node = svg.selectAll(".node")
+      .data(nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .on("dblclick", dblclick);
+      
+
+var circle =  node.append("a")
+        .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d.name } )
         .attr("target","_blank")
         .append("circle")
-          .attr("r", radius*1.5)
+          .attr("r", radius)
           .style("fill", function(d) { return fill(d.group) } )
           .style("stroke", function(d) { return d3.rgb(fill(d.group)).darker(); })
-          .style("stroke-width", '1px')
+          .style("stroke-width", 1.5)
           .attr('data-title',function(d) { return d.name; })
           .on("dblclick", dblclick)
+          .on("mouseover", function(d) { mouseover_node(d); })
+          .on("mouseout", function(d) { mouseout_node(d) })
           .call(drag);
-         
+          
+ var text =  node.append('text')
+        .attr("text-anchor", "start")
+        .attr('sub_link',function(d) { return d.name} )
+        .text(function(d){ return d.name})
+        .style("opacity", 0);  
+        
+        
        $("circle").tooltip({container: '.force-layout', html: true, placement:'top'});
 
       force
@@ -67,8 +79,7 @@ d3.csv("node.csv", function(error, nodes) {
           .start();
 
       function tick() {
-        node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
-            .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+        node.attr("transform", function(d) { return "translate(" + Math.max(Math.min(width - radius, d.x),10) + "," + Math.max(Math.min(height - radius, d.y),0) + ")"; });
 
         link.attr("x1", function(d) { return d.source.x; })
             .attr("y1", function(d) { return d.source.y; })
@@ -86,11 +97,9 @@ d3.csv("node.csv", function(error, nodes) {
         
       svg.on("mousemove", function() {
       fisheye.focus(d3.mouse(this));
-
-      node.each(function(d) { d.fisheye = fisheye(d); })
-          .attr("cx", function(d) { return d.fisheye.x; })
-          .attr("cy", function(d) { return d.fisheye.y; })
-          .attr("r", function(d) { return d.fisheye.z * (1.5*radius); });
+       node.each(function(d) { d.fisheye = fisheye(d); })
+     
+            .attr("transform", function(d) { return "translate(" + d.fisheye.x + "," + d.fisheye.y + ")"; }); 
 
       link.attr("x1", function(d) { return d.source.fisheye.x; })
           .attr("y1", function(d) { return d.source.fisheye.y; })
@@ -98,6 +107,39 @@ d3.csv("node.csv", function(error, nodes) {
           .attr("y2", function(d) { return d.target.fisheye.y; });
     });
     
+          var mouseover_node = function(z){ 
+
+        var neighbors = {};
+        neighbors[z.index] = true;
+
+        link.filter(function(d){
+            if (d.source == z) {
+              neighbors[d.target.index] = true
+              return true
+            } else if (d.target == z) {
+              neighbors[d.source.index] = true
+              return true
+            } else {
+              return false
+            }
+          })
+            .style("stroke-width", 3);
+
+        circle.filter(function(d){ return neighbors[d.index] })
+            .style("stroke-width", 3); 
+        text.filter(function(d){ return neighbors[d.index] })
+             .style("opacity", 1);   
+      };
+
+      var mouseout_node = function(z){ 
+        link
+          .style("stroke-width", 1.5)
+
+        node
+          circle.style("stroke-width", 1)
+           text.style("opacity", 0);  
+      };
+      
         var lastsearch = '';
     var $box = {};
     function add_search(search, chart) {
