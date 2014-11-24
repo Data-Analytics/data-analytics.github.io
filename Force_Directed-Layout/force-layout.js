@@ -98,7 +98,6 @@ var circle =  node.append("a")
       svg.on("mousemove", function() {
       fisheye.focus(d3.mouse(this));
        node.each(function(d) { d.fisheye = fisheye(d); })
-     
             .attr("transform", function(d) { return "translate(" + d.fisheye.x + "," + d.fisheye.y + ")"; }); 
 
       link.attr("x1", function(d) { return d.source.fisheye.x; })
