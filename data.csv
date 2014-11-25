@@ -3,6 +3,7 @@ District Analysis,district_analysis.png,District_Analysis,,tree map,"The graphic
 Assembly Election,maharashtra.png,Assembly_Election,self,tree map,The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years
 Soccer Premier League,soccer_premier_league.png,Soccer_Premier_League,self,sparkline,"Twenty years of English Premier League matches from 1993-2013, visualised by league position or by points scored."
 Articles andJournals,articles_by_years.png,Articles,self,matrix chart,No of articles on each topic been published in the correspondng years showed in matrix structure
+Waterfall Analysis,waterfall.png,Waterfall_Analysis,self,water fall,It is a simple-minded plot of runs scored each year. It is not the best way to visualise a cricketer's career. It doesn't take into account the no. of matches played.
 Project Alotment,parallel_axis.png,Parallel_Axis,self,Parallel_Axis,Each blue line in this visualization is an employee and black vertical is a software language. bottom of the visualization shows all the employees
 Jobs /College Sankey,jobs_college.png,Jobs_College,self,flow chart,to actually see what's going on with a particular field or job
 Housing_Market,housing_market.png,Housing_Market,self,cartogram,"London's housing market analysis of the year 2011 and 2012, the population analysis, percentage of renting, percentage of houses being built etc"
