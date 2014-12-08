@@ -3,7 +3,10 @@ body {
     line-height: 1.4;
     height:2500px;
 }
-
+.hide
+{
+    display:none;
+}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: "Trebuchet MS", sans-serif; }
 
 @media print {

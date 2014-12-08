@@ -1,5 +1,6 @@
 title,thumbnail,url,author,visualizationType,description
-District Analysis,district_analysis.png,District_Analysis,,tree map,"The graphical image tree map showing the trend of the each district in india describing corresponding states with respect to population, area  and density "
+District Analysis,district_analysis.png,District_Analysis,self,tree map,"The graphical image tree map showing the trend of the each district in india describing corresponding states with respect to population, area  and density "
+Taiwan Un Employment ,un_employment.png,Un-Employment_Taiwan,self,sparkline,The distribution of unemployment in Taiwan from 1970 to 2014. weighted each area equally according to ages represented below
 Assembly Election,maharashtra.png,Assembly_Election,self,tree map,The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years
 Soccer Premier League,soccer_premier_league.png,Soccer_Premier_League,self,sparkline,"Twenty years of English Premier League matches from 1993-2013, visualised by league position or by points scored."
 Articles andJournals,articles_by_years.png,Articles,self,matrix chart,No of articles on each topic been published in the correspondng years showed in matrix structure
