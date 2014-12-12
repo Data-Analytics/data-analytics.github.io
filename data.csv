@@ -1,4 +1,5 @@
 title,thumbnail,url,author,visualizationType,description
+Forbes Rank,forbes_money.png,Forbes_rank,self,tree map,The India's Most Fame People in the years 2014 from Forbes shows top 100 celebrities in India Ranked accordingly along with their Earnings
 District Analysis,district_analysis.png,District_Analysis,self,tree map,"The graphical image tree map showing the trend of the each district in india describing corresponding states with respect to population, area  and density "
 Taiwan Un Employment ,un_employment.png,Un-Employment_Taiwan,self,sparkline,The distribution of unemployment in Taiwan from 1970 to 2014. weighted each area equally according to ages represented below
 Assembly Election,maharashtra.png,Assembly_Election,self,tree map,The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years
