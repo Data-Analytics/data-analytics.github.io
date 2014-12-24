@@ -1,5 +1,5 @@
 party,constituency,name,margin,state,votes,color
-Haryana Janhit Congress (BL),Adampur,KULDEEP BISHNOI,17249,Haryana,56757,#000000
+Haryana Janhit Congress (BL),Adampur,KULDEEP BISHNOI,17249,Haryana,56757,#999
 Bharatiya Janata Party,Ambala Cantt.,ANIL VIJ,15462,Haryana,66605,#FB7B0D
 Bharatiya Janata Party,Ambala City,ASEEM GOEL,23252,Haryana,60216,#FB7B0D
 Bharatiya Janata Party,Assandh,BAKHSHISH  SINGH VIRK,4608,Haryana,30723,#FB7B0D
@@ -29,7 +29,7 @@ Bharatiya Janata Party,Gharaunda,HARVINDER KALYAN,17883,Haryana,55247,#FB7B0D
 Indian National Congress,Gohana,JAGBIR SINGH MALIK,3228,Haryana,41393,#019733
 Bharatiya Janata Party,Guhla (SC),KULWANT RAM BAZIGAR,2440,Haryana,36598,#FB7B0D
 Bharatiya Janata Party,Gurgaon,UMESH AGGARWAL,84095,Haryana,106106,#FB7B0D
-Haryana Janhit Congress (BL),Hansi,RENUKA BISHNOI,14652,Haryana,46335,#000000
+Haryana Janhit Congress (BL),Hansi,RENUKA BISHNOI,14652,Haryana,46335,#999
 Indian National Lok Dal,Hathin,KEHAR SINGH,6372,Haryana,44703,#0C6965
 Bharatiya Janata Party,Hisar,DR.KAMAL GUPTA S/O MANPHOOL SINGH,13646,Haryana,42285,#FB7B0D
 Indian National Congress,Hodal (SC),UDAI BHAN,11680,Haryana,50723,#019733
@@ -66,7 +66,7 @@ Bharatiya Janata Party,Panipat City,ROHITA REWRI,53721,Haryana,92757,#FB7B0D
 Bharatiya Janata Party,Panipat Rural,MAHIPAL DHANDA,36132,Haryana,62074,#FB7B0D
 Bharatiya Janata Party,Pataudi (SC),BIMLA CHAUDHARY,38963,Haryana,75198,#FB7B0D
 Indian National Lok Dal,Pehowa,JASWINDER SINGH SANDHU,9347,Haryana,49110,#0C6965
-Bahujan Samaj Party,Prithla,TEK CHAND SHARMA,1179,Haryana,37178,#77968E
+Bahujan Samaj Party,Prithla,TEK CHAND SHARMA,1179,Haryana,37178,#999
 Independent,Punahana,RAHISH KHAN,3141,Haryana,34281,#95b3d7
 Independent,Pundri,DINESH KAUSHIK,4832,Haryana,38312,#95b3d7
 Bharatiya Janata Party,Radaur,SHYAM SINGH,38707,Haryana,67076,#FB7B0D
@@ -114,7 +114,7 @@ Bharatiya Janata Party,Armori,KRUSHNA DAMAJI GAJBE,12733,Maharashtra,60413,#FB7B
 Bharatiya Janata Party,Arni,RAJU NARAYAN TODSAM,20721,Maharashtra,86991,#FB7B0D
 Indian National Congress,Arvi,AMAR SHARADRAO KALE,3143,Maharashtra,75886,#019733
 Bharatiya Janata Party,Ashti,DHONDE BHIMRAO ANANDRAO,5982,Maharashtra,120915,#FB7B0D
-All India Majlis-E-Ittehadul Muslimeen,Aurangabad central,SAYED IMTIAZ JALIL,19982,Maharashtra,61843,#9DBC2A
+All India Majlis-E-Ittehadul Muslimeen,Aurangabad central,SAYED IMTIAZ JALIL,19982,Maharashtra,61843,#999
 Bharatiya Janata Party,Aurangabad East,ATUL MORESHWAR SAVE,4260,Maharashtra,64528,#FB7B0D
 Shivsena,Aurangabad West,SANJAY SHIRSAT,6927,Maharashtra,61282,#F05A00
 Indian National Congress,Ausa,BASAVRAJ MADHAVRAO PATIL,8858,Maharashtra,64237,#019733
@@ -138,11 +138,11 @@ Bharatiya Janata Party,Bhokardan,DANAVE SANTOSH RAOSAHEB,6750,Maharashtra,69597,
 Indian National Congress,Bhor,SANGRAM ANANTRAO THOPATE,18951,Maharashtra,78602,#019733
 Independent,Bhosari,MAHESH (DADA) KISAN LANDGE,15316,Maharashtra,60173,#95b3d7
 Bharatiya Janata Party,Bhusawal,SAWAKARE SANJAY WAMAN,34637,Maharashtra,87818,#FB7B0D
-Bahujan Vikas Aaghadi,Boisar,TARE VILAS SUKUR,12873,Maharashtra,64550,#4bacc6
+Bahujan Vikas Aaghadi,Boisar,TARE VILAS SUKUR,12873,Maharashtra,64550,#999
 Bharatiya Janata Party,Borivali,VINOD TAWDE,79267,Maharashtra,108278,#FB7B0D
 Indian National Congress,Brahmapuri,WADETTIWAR VIJAY NAMDEVRAO,13610,Maharashtra,70373,#019733
 Indian National Congress,Buldhana,HARSHWARDHAN VASANTRAO SAPKAL,11661,Maharashtra,46985,#019733
-All India Majlis-E-Ittehadul Muslimeen,Byculla,ADVOCATE  WARIS YUSUF PATHAN,1357,Maharashtra,25314,#9DBC2A
+All India Majlis-E-Ittehadul Muslimeen,Byculla,ADVOCATE  WARIS YUSUF PATHAN,1357,Maharashtra,25314,#999
 Bharatiya Janata Party,Chalisgaon,UNMESH BHAIYYASAHEB PATIL,22380,Maharashtra,94754,#FB7B0D
 Nationalist Congress Party,Chandgad,DESAI-KUPAKAR SANDHYADEVI KRUSHNARAO,8199,Maharashtra,51599,#8064a2
 Indian National Congress,Chandivali,KHAN MOHD. ARIF (NASEEM),29469,Maharashtra,73141,#019733
@@ -251,7 +251,7 @@ Shivsena,Malegaon outer,BHUSE DADAJI DAGDU,37421,Maharashtra,82093,#F05A00
 Bharatiya Janata Party,Malkapur,CHAINSUKH MADANLAL SANCHETI,26946,Maharashtra,75965,#FB7B0D
 Nationalist Congress Party,Malshiras,DOLAS HANUMANT JAGANNATH,6245,Maharashtra,77179,#8064a2
 Indian National Congress,Man,JAYKUMAR BHAGWANRAO GORE,23351,Maharashtra,75708,#019733
-Samajwadi Party,Mankhurd shivaji Nagar,ABU ASIM AZMI,9937,Maharashtra,41719,#B15928
+Samajwadi Party,Mankhurd shivaji Nagar,ABU ASIM AZMI,9937,Maharashtra,41719,#999
 Bharatiya Janata Party,Maval,BHEGADE SANJAY (BALA) VISHWANATH,28001,Maharashtra,95319,#FB7B0D
 Shivsena,Mehkar,SANJAY BHASHKAR RAIMULKAR,35935,Maharashtra,80356,#F05A00
 Bharatiya Janata Party,Melghat,BHILAWEKAR PRABHDAS BABULAL,1979,Maharashtra,57002,#FB7B0D
@@ -273,7 +273,7 @@ Bharatiya Janata Party,Nagpur South,KOHALE SUDHAKAR VITTHALRAO,43214,Maharashtra
 Bharatiya Janata Party,Nagpur South West,DEVENDRA GANGADHAR FADNAVIS,58942,Maharashtra,113918,#FB7B0D
 Bharatiya Janata Party,Nagpur West,DESHMUKH SUDHAKAR SHAMRAO,26402,Maharashtra,86500,#FB7B0D
 Indian National Congress,Naigaon,CHAVAN VASANTRAO BALWANTRAO,10425,Maharashtra,71020,#019733
-Bahujan Vikas Aaghadi,Nalasopara,KSHITIJ HITENDRA THAKUR,54499,Maharashtra,113566,#4bacc6
+Bahujan Vikas Aaghadi,Nalasopara,KSHITIJ HITENDRA THAKUR,54499,Maharashtra,113566,#999
 Indian National Congress,Nanded North,D.P.SAWANT,7602,Maharashtra,40356,#019733
 Shivsena,Nanded South,HEMANT SRIRAM PATIL,3207,Maharashtra,45836,#F05A00
 Nationalist Congress Party,Nandgaon,PANKAJ CHHAGAN BHUJBAL,18436,Maharashtra,69263,#8064a2
@@ -363,7 +363,7 @@ Bharatiya Janata Party,VADGAON SHERI,JAGDISH TUKARAM MULUK,5325,Maharashtra,6690
 Nationalist Congress Party,Vaijapur,BHAUSAHEB PATIL CHIKATGAONKAR,4709,Maharashtra,53114,#8064a2
 Shivsena,Vandre East,PRAKASH (BALA) SAWANT,15597,Maharashtra,41388,#F05A00
 Bharatiya Janata Party,Vandre West,AV. ASHISH SHELAR,26911,Maharashtra,74779,#FB7B0D
-Bahujan Vikas Aaghadi,Vasai,HITENDRA VISHNU THAKUR,31896,Maharashtra,97291,#4bacc6
+Bahujan Vikas Aaghadi,Vasai,HITENDRA VISHNU THAKUR,31896,Maharashtra,97291,#999
 Bharatiya Janata Party,Versova,DR. BHARATI HEMANT LAVEKAR,26398,Maharashtra,49182,#FB7B0D
 Shivsena,Vikhroli,SUNIL RAJARAM RAUT,25339,Maharashtra,50302,#F05A00
 Bharatiya Janata Party,Vikramgad,SAVARA VISHNU RAMA,3845,Maharashtra,40201,#FB7B0D
@@ -377,3 +377,171 @@ Bharatiya Janata Party,Washim,MALIK LAKHAN SAHADEV,4393,Maharashtra,48196,#FB7B0
 Shivsena,Worli,SUNIL GOVIND SHINDE,23012,Maharashtra,60625,#F05A00
 Bharatiya Janata Party,Yavatmal,MADAN MADHUKARRAO YERAWAR,1227,Maharashtra,53671,#FB7B0D
 Nationalist Congress Party,Yevla,CHHAGAN BHUJBAL,46442,Maharashtra,112787,#8064a2
+Jammu & Kashmir Peoples Democratic Party,Karnah,RAJA MANZOOR AHMAD,5775,Jammu & Kashmir,12371,#9DBC2A
+Jammu & Kashmir People Conference,Kupwara,BASHIR AHMAD DAR,151,Jammu & Kashmir,24754,#999
+Jammu & Kashmir Peoples Democratic Party,Lolab,ABDUL HAQ KHAN,2870,Jammu & Kashmir,29408,#9DBC2A
+Jammu & Kashmir People Conference,Handwara,SAJAD GANI LONE,5423,Jammu & Kashmir,29355,#999
+Independent,Langate,ABDUL RASHID SHEIKH,2505,Jammu & Kashmir,18172,#95b3d7
+Jammu & Kashmir National Conference,Uri,MOHAMMAD SHAFI,5792,Jammu & Kashmir,24359,#B15928
+Jammu & Kashmir Peoples Democratic Party,Rafiabad,YAWAR AHMAD MIR,2334,Jammu & Kashmir,17918,#9DBC2A
+Indian National Congress,Sopore,ABDUL RASHID DAR,2755,Jammu & Kashmir,8429,#019733
+Jammu & Kashmir National Conference,Gurez,NAZIR AHMAD KHAN,141,Jammu & Kashmir,6664,#B15928
+Indian National Congress,Bandipora,USMAN ABDUL MAJID,3743,Jammu & Kashmir,25084,#019733
+Jammu & Kashmir National Conference,Sonawari,MOHAMMAD AKBAR LONE,406,Jammu & Kashmir,32567,#B15928
+Jammu & Kashmir Peoples Democratic Party,Sangrama,SYED BASHARAT AHMED BUKHARI,1754,Jammu & Kashmir,12146,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Baramulla,JAVID HASSAN BAIG,7017,Jammu & Kashmir,14418,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Gulmarg,MOHD. ABASS WANI,2811,Jammu & Kashmir,22957,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Pattan,IMRAN RAZA ANSARI,9334,Jammu & Kashmir,21218,#9DBC2A
+Jammu & Kashmir National Conference,Kangan,ALTAF AHMAD,1432,Jammu & Kashmir,25812,#B15928
+Jammu & Kashmir National Conference,Ganderbal,ISHFAQ AHMAD SHEIKH,597,Jammu & Kashmir,19478,#B15928
+Jammu & Kashmir Peoples Democratic Party,Hazratbal,ASIEA,3400,Jammu & Kashmir,13234,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Zadibal,ABID HUSSAIN ANSARI,3003,Jammu & Kashmir,7852,#9DBC2A
+Jammu & Kashmir National Conference,Eidgah,MUBARIK AHMAD GUL,608,Jammu & Kashmir,6766,#B15928
+Jammu & Kashmir National Conference,Khanyar,ALI MOHD SAGAR,1167,Jammu & Kashmir,6505,#B15928
+Jammu & Kashmir National Conference,Habba kadal,SHAMIM FIRDOUS,2359,Jammu & Kashmir,4955,#B15928
+Jammu & Kashmir Peoples Democratic Party,Amira kadal,SYED MOHAMMAD ALTAF BUKHARI,5341,Jammu & Kashmir,11726,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Sonawar,MOHAMMAD ASHRAF MIR,4783,Jammu & Kashmir,14283,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Batmaloo,NOOR MOHD SHEIKH,4327,Jammu & Kashmir,12542,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Chadoora,JAVAID MUSTAFA MIR,1693,Jammu & Kashmir,25770,#9DBC2A
+Jammu & Kashmir National Conference,Budgam,AGA SYED RUHULLAH MEHDI,2787,Jammu & Kashmir,30090,#B15928
+Jammu & Kashmir National Conference,Beerwah,OMAR ABDULLAH,910,Jammu & Kashmir,23717,#B15928
+Jammu And Kashmir People Democratic Front (Secular),Khan Sahib,HAKEEM MOHAMMAD YASEEN SHAH,1109,Jammu & Kashmir,26649,#999
+Jammu & Kashmir Peoples Democratic Party,Chrar-i-sharief,GHULAM NABI LONE,5167,Jammu & Kashmir,32849,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Tral,MUSHTAQ AHMAD SHAH,4110,Jammu & Kashmir,12415,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Pampore,ZAHOOR AHMAD MIR,3498,Jammu & Kashmir,16239,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Pulwama,MOHD. KHALIL BAND,1032,Jammu & Kashmir,11631,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Rajpora,HASEEB  A DRABU,4273,Jammu & Kashmir,18103,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Wachi,AIJAZ AHMAD MIR,1805,Jammu & Kashmir,15610,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Shopian,MOHD YOUSUF BHAT,2366,Jammu & Kashmir,14262,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Noorabad,ABDUL MAJID PADDER,3708,Jammu & Kashmir,28698,#9DBC2A
+Communist Party of India  (Marxist),Kulgam,MOHAMAD YOUSUF TARIGAMI,334,Jammu & Kashmir,20574,#DE0000
+Jammu & Kashmir National Conference,Hom Shali Bugh,AB. MAJEED,1269,Jammu & Kashmir,11406,#B15928
+Jammu & Kashmir Peoples Democratic Party,Anantnag,MUFTI MOHD SAYEED,6028,Jammu & Kashmir,16983,#9DBC2A
+Indian National Congress,Devsar,MOHAMMAD AMIN BHAT,1511,Jammu & Kashmir,20162,#019733
+Jammu & Kashmir Peoples Democratic Party,Dooru,SYED FAROOQ AHMAD ANDRABI,161,Jammu & Kashmir,18150,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Kokernag,ABDUL RAHIM RATHER,4571,Jammu & Kashmir,24284,#9DBC2A
+Indian National Congress,Shangus,GULZAR AHMAD WANI,2189,Jammu & Kashmir,21085,#019733
+Jammu & Kashmir Peoples Democratic Party,Bijbehara,ABDUL REHMAN BHAT,2868,Jammu & Kashmir,23581,#9DBC2A
+Jammu & Kashmir National Conference,Pahalgam,ALTAF AHMAD WANI,904,Jammu & Kashmir,25232,#B15928
+Indian National Congress,Nubra,DELDAN NAMGAIL,1618,Jammu & Kashmir,3936,#019733
+Indian National Congress,Leh,NAWANG RIGZIN,7676,Jammu & Kashmir,27585,#019733
+Indian National Congress,Kargil,ASGAR ALI KARBALAIE,10505,Jammu & Kashmir,22911,#019733
+Independent,Zanskar,SYED MOHAMMAD BAQIR RIZVI,566,Jammu & Kashmir,6763,#95b3d7
+Bharatiya Janata Party,Kishtwar,SUNIL KUMAR SHARMA,2852,Jammu & Kashmir,28054,#FB7B0D
+Indian National Congress,Inderwal,GHULAM MOHD SAROORI,12370,Jammu & Kashmir,29754,#019733
+Bharatiya Janata Party,Doda,SHAKTI RAJ,4040,Jammu & Kashmir,24572,#FB7B0D
+Bharatiya Janata Party,Bhaderwah,DALEEP SINGH,1496,Jammu & Kashmir,25953,#FB7B0D
+Bharatiya Janata Party,Ramban,NEELAM KUMAR LANGEH,5364,Jammu & Kashmir,25349,#FB7B0D
+Indian National Congress,Banihal,VIKAR RASOOL WANI,4349,Jammu & Kashmir,17671,#019733
+Indian National Congress,Gulab Garh,MUMTAZ AHMED,1816,Jammu & Kashmir,17964,#019733
+Bharatiya Janata Party,Reasi,AJAY NANDA,1887,Jammu & Kashmir,22017,#FB7B0D
+Indian National Congress,Gool Arnas,AJAZ AHMED KHAN,6878,Jammu & Kashmir,22966,#019733
+Independent,Udhampur,PAWAN KUMAR GUPTA,14650,Jammu & Kashmir,36226,#95b3d7
+Bharatiya Janata Party,Chenani,DINA NATH,20332,Jammu & Kashmir,33047,#FB7B0D
+Bharatiya Janata Party,Ram Nagar,RANBIR SINGH PATHANIA,17420,Jammu & Kashmir,45891,#FB7B0D
+Bharatiya Janata Party,Bani,JEWAN LAL,4412,Jammu & Kashmir,12841,#FB7B0D
+Bharatiya Janata Party,Basohli,LAL SINGH,17801,Jammu & Kashmir,29808,#FB7B0D
+Bharatiya Janata Party,Kathua,RAJIV JASROTIA,6806,Jammu & Kashmir,35670,#FB7B0D
+Bharatiya Janata Party,Billawar,DR. NIRMAL KUMAR SINGH,17975,Jammu & Kashmir,43447,#FB7B0D
+Bharatiya Janata Party,Hira Nagar,KULDEEP RAJ,39284,Jammu & Kashmir,55399,#FB7B0D
+Bharatiya Janata Party,Samba(SC),DEVINDER KUMAR MANYAL,22118,Jammu & Kashmir,34075,#FB7B0D
+Bharatiya Janata Party,Vijay pur,CHANDER PARKASH,12172,Jammu & Kashmir,38607,#FB7B0D
+Jammu & Kashmir National Conference,Nagrota,DEVENDER SINGH RANA,4048,Jammu & Kashmir,23678,#B15928
+Bharatiya Janata Party,Gandhi Nagar,KAVINDER GUPTA,16777,Jammu & Kashmir,56679,#FB7B0D
+Bharatiya Janata Party,Jammu East,RAJESH GUPTA,12694,Jammu & Kashmir,21776,#FB7B0D
+Bharatiya Janata Party,Jammu West,SAT PAUL SHARMA,50629,Jammu & Kashmir,69626,#FB7B0D
+Jammu & Kashmir National Conference,Bishnah,KAMAL VERMA,2986,Jammu & Kashmir,29380,#B15928
+Bharatiya Janata Party,Ranbir singh Pura,DR. GAGAN BHAGAT,13610,Jammu & Kashmir,25696,#FB7B0D
+Bharatiya Janata Party,Suchet Garh,SHAM LAL CHOUDHARY,9417,Jammu & Kashmir,19971,#FB7B0D
+Bharatiya Janata Party,Marh,SUKHNANDAN KUMAR,11612,Jammu & Kashmir,25396,#FB7B0D
+Bharatiya Janata Party,Raipur Domana,BALI BHAGAT,32143,Jammu & Kashmir,49134,#FB7B0D
+Bharatiya Janata Party,Akhnoor,RAJEEV SHARMA,9380,Jammu & Kashmir,41901,#FB7B0D
+Bharatiya Janata Party,Chhamb,DR. KIRSHAN LAL,14790,Jammu & Kashmir,36033,#FB7B0D
+Bharatiya Janata Party,Nowshera,RAVINDER RAINA,9503,Jammu & Kashmir,37374,#FB7B0D
+Jammu & Kashmir Peoples Democratic Party,Darhal,CHOWDHARY ZULFKAR ALI,5068,Jammu & Kashmir,24381,#9DBC2A
+Jammu & Kashmir Peoples Democratic Party,Rajouri,QAMAR HUSSAIN,2490,Jammu & Kashmir,26954,#9DBC2A
+Bharatiya Janata Party,Kala kote,ABDUL GHANI KOHLI,6178,Jammu & Kashmir,25225,#FB7B0D
+Indian National Congress,Surankote,CH MOHD AKRAM,8064,Jammu & Kashmir,30584,#019733
+Jammu & Kashmir National Conference,Mendhar,JAVED AHMED RANA,9025,Jammu & Kashmir,31186,#B15928
+Jammu & Kashmir Peoples Democratic Party,Poonch Haveli,SHAH MOHD TANTRAY,3512,Jammu & Kashmir,19488,#9DBC2A
+Bharatiya Janata Party,Rajmahal,ANANT KUMAR OJHA,702,Jharkhand,77481,#FB7B0D
+Bharatiya Janata Party,Borio,TALA MARANDI,712,Jharkhand,57565,#FB7B0D
+Jharkhand Mukti Morcha,Barhait,HEMANT SOREN,24087,Jharkhand,62515,#0C6965
+Jharkhand Mukti Morcha,Littipara,DR. ANIL MURMU,25083,Jharkhand,67194,#0C6965
+Indian National Congress,Pakur,ALAMGIR ALAM,18066,Jharkhand,83338,#019733
+Jharkhand Mukti Morcha,Maheshpur,STEPHEN MARANDI,6156,Jharkhand,51866,#0C6965
+Jharkhand Mukti Morcha,Shikaripara,NALIN SOREN,24501,Jharkhand,61901,#0C6965
+Jharkhand Mukti Morcha,Nala,RABINDRA NATH MAHATO,7015,Jharkhand,56131,#0C6965
+Indian National Congress,Jamtara,IRFAN ANSARI,9137,Jharkhand,67486,#019733
+Bharatiya Janata Party,Dumka,LOIS MARANDI,5262,Jharkhand,70367,#FB7B0D
+Jharkhand Mukti Morcha,Jama,SITA MURMU ALIAS SITA SOREN,2306,Jharkhand,53250,#0C6965
+Indian National Congress,Jarmundi,BADAL,2708,Jharkhand,43981,#019733
+Bharatiya Janata Party,Madhupur,RAJ PALIWAR,6884,Jharkhand,74325,#FB7B0D
+Jharkhand Vikas Morcha (Prajatantrik),Sarath,RANDHIR KUMAR SINGH,13901,Jharkhand,62717,#4bacc6
+Bharatiya Janata Party,Deoghar,NARAYAN DAS,45152,Jharkhand,92022,#FB7B0D
+Jharkhand Vikas Morcha (Prajatantrik),Poreyahat,PRADIP YADAV,11158,Jharkhand,64036,#4bacc6
+Bharatiya Janata Party,Godda,RAGHU NANDAN MANDAL,34486,Jharkhand,87158,#FB7B0D
+Bharatiya Janata Party,Mahagama,ASHOK KUMAR,31560,Jharkhand,70635,#FB7B0D
+Bharatiya Janata Party,Kodarma,DR. NEERA YADAV,13525,Jharkhand,84874,#FB7B0D
+Jharkhand Vikas Morcha (Prajatantrik),Barkatha,JANKI PRASAD YADAV,8207,Jharkhand,63336,#4bacc6
+Indian National Congress,Barhi,MANOJ KUMAR YADAV,7085,Jharkhand,57818,#019733
+Indian National Congress,Barkagaon,NIRMALA DEVI,411,Jharkhand,61817,#019733
+AJSU Party,Ramgarh,CHANDRA PRAKASH CHOUDHARY,53818,Jharkhand,98987,#000
+Jharkhand Mukti Morcha,Mandu,JAI PRAKASH BHAI PATEL,7012,Jharkhand,78499,#0C6965
+Bharatiya Janata Party,Hazaribagh,MANISH JAISWAL,27129,Jharkhand,89675,#FB7B0D
+Jharkhand Vikas Morcha (Prajatantrik),Simaria,GANESH GANJHU,15640,Jharkhand,67404,#4bacc6
+Bharatiya Janata Party,Chatra,JAY PRAKASH SINGH BHOGTA,20576,Jharkhand,69745,#FB7B0D
+Communist Party of India  (Marxist-Leninist)  (Liberation),Dhanwar,RAJ KUMAR YADAW,10712,Jharkhand,50634,#DE0000
+Bharatiya Janata Party,Bagodar,NAGENDRA MAHTO,4339,Jharkhand,74898,#FB7B0D
+Bharatiya Janata Party,Jamua,KEDAR HAZRA,23100,Jharkhand,56027,#FB7B0D
+Bharatiya Janata Party,Gandey,JAI PRAKASH VERMA,10279,Jharkhand,48838,#FB7B0D
+Bharatiya Janata Party,Giridih,NIRBHAY KUMAR SHAHABADI,9933,Jharkhand,57450,#FB7B0D
+Jharkhand Mukti Morcha,Dumri,JAGARNATH MAHTO,32481,Jharkhand,77984,#0C6965
+Jharkhand Mukti Morcha,Gomia,YOGENDRA PRASAD,37514,Jharkhand,97799,#0C6965
+Bharatiya Janata Party,Bermo,YOGESHWAR MAHTO,12613,Jharkhand,80489,#FB7B0D
+Bharatiya Janata Party,Bokaro,BIRANCHI NARAYAN,72643,Jharkhand,114321,#FB7B0D
+Jharkhand Vikas Morcha (Prajatantrik),Chandankyari,AMAR KUMAR BAURI,34164,Jharkhand,81925,#4bacc6
+Bharatiya Janata Party,Sindri,FULCHAND MANDAL,6548,Jharkhand,58623,#FB7B0D
+Marxist Co-Ordination,Nirsa,ARUP CHATTERJEE,1035,Jharkhand,51581,#999
+Bharatiya Janata Party,Dhanbad,RAJ SINHA,52997,Jharkhand,132091,#FB7B0D
+Bharatiya Janata Party,Jharia,SANJEEV SINGH,33692,Jharkhand,74062,#FB7B0D
+AJSU Party,Tundi,RAJ KISHORE MAHATO,1126,Jharkhand,55466,#000
+Bharatiya Janata Party,Baghmara,DULU MAHTO,29623,Jharkhand,86603,#FB7B0D
+Jharkhand Mukti Morcha,Baharagora,KUNAL SHARANGI,15355,Jharkhand,57973,#0C6965
+Bharatiya Janata Party,Ghatsila,LAKSHMAN TUDU,6403,Jharkhand,52506,#FB7B0D
+Bharatiya Janata Party,Potka,MENAKA SARDAR,6706,Jharkhand,68191,#FB7B0D
+AJSU Party,Jugsalai,RAM CHANDRA SAHIS,25045,Jharkhand,82302,#000
+Bharatiya Janata Party,Jamshedpur  East,RAGHUBAR DAS,70157,Jharkhand,103427,#FB7B0D
+Bharatiya Janata Party,Jamshedpur  West,SARYU ROY,10517,Jharkhand,95346,#FB7B0D
+Bharatiya Janata Party,Ichagarh,SADHU CHARAN MAHATO,42250,Jharkhand,75634,#FB7B0D
+Jharkhand Mukti Morcha,Saraikella,CHAMPAI SOREN,1115,Jharkhand,94746,#0C6965
+Jharkhand Mukti Morcha,Chaibasa,DEEPAK BIRUA,34715,Jharkhand,68801,#0C6965
+Jharkhand Mukti Morcha,Majhganon,NIRAL PURTY,11182,Jharkhand,45272,#0C6965
+Jai Bharat Samanta Party,Jaganathpur,GEETA KORA,24611,Jharkhand,48546,#999
+Jharkhand Mukti Morcha,Manoharpur,JOBA MAJHI,16569,Jharkhand,57558,#0C6965
+Jharkhand Mukti Morcha,Chakradharpur,SHASHIBHUSHAN SAMAD,26448,Jharkhand,64396,#0C6965
+Jharkhand Mukti Morcha,Kharasawan,DASHRATH GAGRAI,11966,Jharkhand,72002,#0C6965
+AJSU Party,Tamar,VIKASH KUMAR MUNDA,26006,Jharkhand,57428,#000
+Jharkhand Mukti Morcha,Torpa,PAULUS SURIN,43,Jharkhand,32003,#0C6965
+Bharatiya Janata Party,Khunti,NILKANTH SINGH MUNDA,21515,Jharkhand,47032,#FB7B0D
+Jharkhand Mukti Morcha,Silli,AMIT KUMAR,29740,Jharkhand,79747,#0C6965
+Bharatiya Janata Party,Khijri,RAMKUMAR PAHAN,64912,Jharkhand,94581,#FB7B0D
+Bharatiya Janata Party,Ranchi,CHANDRESHWAR PRASAD SINGH,58863,Jharkhand,95760,#FB7B0D
+Jharkhand Vikas Morcha (Prajatantrik),Hatia,NAVIN JAISWAL,8018,Jharkhand,88228,#4bacc6
+Bharatiya Janata Party,Kanke,DR. JITU CHARAN RAM,59804,Jharkhand,115702,#FB7B0D
+Bharatiya Janata Party,Mandar,GANGOTRI KUJUR,7605,Jharkhand,54200,#FB7B0D
+Bharatiya Janata Party,Sisai,DINESH ORAON,2593,Jharkhand,44472,#FB7B0D
+Bharatiya Janata Party,Gumla,SHIVSHANKAR ORAON,4032,Jharkhand,50473,#FB7B0D
+Jharkhand Mukti Morcha,Bishunpur,CHAMRA LINDA,10843,Jharkhand,55851,#0C6965
+Bharatiya Janata Party,Simdega,VIMLA PRADHAN,3194,Jharkhand,45343,#FB7B0D
+Jharkhand Party,Kolebira,ANOSH EKKA,17143,Jharkhand,48978,#999
+AJSU Party,Lohardaga,KAMAL KISHORE BHAGAT,592,Jharkhand,56920,#000
+Bharatiya Janata Party,Manika,HARIKRISHN SINGH,1083,Jharkhand,31583,#FB7B0D
+Jharkhand Vikas Morcha (Prajatantrik),Latehar,PRAKASH RAM,26787,Jharkhand,71189,#4bacc6
+Indian National Congress,Panki,BIDESH SINGH,1995,Jharkhand,41175,#019733
+Jharkhand Vikas Morcha (Prajatantrik),Daltonganj,ALOK KR. CHAURASIYA,4347,Jharkhand,59202,#4bacc6
+Bharatiya Janata Party,Bishrampur,RAMCHANDRA CHANDRAVANSHI,13910,Jharkhand,37974,#FB7B0D
+Bharatiya Janata Party,Chattarpur,RADHA KRISHNA KISHORE,5881,Jharkhand,43843,#FB7B0D
+Bahujan Samaj Party,Hussainabad,KUSHWAHA SHIVPUJAN MEHTA,27752,Jharkhand,57275,#999
+Bharatiya Janata Party,Garhwa,SATYENDRA NATH TIWARI,21510,Jharkhand,74638,#FB7B0D
+Navjawan Sangharsh Morcha,Bhawanathpur,BHANU PRATAP SHAHI,2661,Jharkhand,58908,#999
