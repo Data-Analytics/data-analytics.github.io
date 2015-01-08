@@ -62,8 +62,8 @@ function onRender() {
 +'</p> <br/> <p>Candidate : '+d.name+'</p><br/><p> '+parameter+' : '+addCommas(d[parameter])+'</p><br/> <p> '+group_by+' : '+d[group_by]+'</p>' ;})
       .attr("sub_link",function(d) { return d.constituency
 +d.state+d.party ;})
-      .style("fill", function(d) { return (d.color); })
-      .style("opacity", function(d) { return 1 - parseFloat((d.votes/d.polled_votes)).toFixed(1); })
+      .style("fill", function(d) { return d3.rgb(d.color).darker(parseFloat((d.votes/d.polled_votes)).toFixed(1)*2.5); })
+      //.style("opacity", function(d) { return 1 - parseFloat((d.votes/d.polled_votes)).toFixed(1); })
       .style("stroke", '#fff')
       .style("stroke-width", 0.5);        
 
