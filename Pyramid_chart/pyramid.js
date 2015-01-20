@@ -64,7 +64,7 @@ d3.csv("data.csv", function(data) {
       .attr("data-title",function(d) { return '<p>State : '+d.name+'</p> <br/> <p>No of Districts : '+d.value+'</p>' ;})
       .style("stroke",function(d) { return d3.rgb(color(d.sl_no)).darker(); });
       
-      $("path").tooltip({container: '.pyramid_chart', html: true, placement:'right'});
+      $("path").tooltip({container: '.pyramid_chart', html: true, placement:'bottom'});
          
 });
 }
