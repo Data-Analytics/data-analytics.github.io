@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="The graphical Assosiation representation of trains passing in India across zones and states with several variations">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,forcelayout,network, force layout,Analysis,Assosiation visualisation">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/underscore-min.js"></script>
+    <script type="text/javascript" src="/./javascripts/jquery-ui.js"></script>    
+    <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>    
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <title>Train Availability</title>
+
+    <style>
+      text { pointer-events: none;}
+     label{ text-align: left; } 
+    </style>
+ </head>
+ <body onLoad="onRender();">
+    
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container" >
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">Train Availability</h1>
+          <p id="project_title_p">The  graphical Assosiation representation of trains passing in India across zones and states with several variations 
+          </p>
+        </header>
+        <div id="banner">
+          <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+    <div align="center"> 
+    <p></p>
+    <p class="form-inline">
+      <label value="group">Kms  : </label>
+        0<input type="range" min="0" max="3500" value="1000" step="20" id="min_point" />3500
+        <input type="hidden" min="0" max="26000" value="26000" step="100" id="max_point" />
+        <input type="text" class="search" placeholder="Search">
+
+    <label value="group">Type : </label>
+     <select multiple="multiple" id="types" name="points" class="points">
+       <option  value="Pass">Passenger</option>
+       <option  value="MEMU">Local</option>
+       <option  value="Hyd">Hyderabad</option>
+       <option  value="Del">Delhi</option>
+       <option  selected value="Exp">Express</option>
+       <option  value="Klkt">Ladies Special</option>
+       <option  value="JShtb">Jan Shatabdi</option>
+       <option  value="SF">Super Fast</option>
+       <option  value="Drnt">Duronto</option>
+       <option  value="SKr">Sampark Kranti</option>
+       <option  value="Shtb">shatabdi</option>
+       <option  value="Mail">Mail</option>
+       <option  value="GR">Garib Rath</option>
+       <option  value="Raj">Rajdhani</option> 
+    </select>
+
+    <label value="group">Zone : </label>
+     <select multiple="multiple" id="zones" name="points" class="points" >
+       <option  value="NFR">NFR</option>
+       <option  selected value="SR">SR</option>
+       <option  value="CR">CR</option>
+       <option  value="ER">ER</option>
+       <option  value="SCR">SCR</option>
+       <option  value="NCR">NCR</option>
+       <option  value="WR">WR</option>
+       <option  value="SWR">SWR</option>
+       <option  value="SECR">SECR</option>
+       <option  value="NR">NR</option>
+       <option  value="SER">SER</option>
+       <option  value="ECR">ECR</option>
+       <option  value="NER">NER</option>
+       <option  value="WCR">WCR</option>
+       <option  value="NWR">NWR</option>
+       <option  value="ECoR">ECoR</option>
+       <option  value="KR">KR</option>      
+    </select>
+    
+    <label value="days">On : </label>
+     <select multiple="multiple" id="points" name="points" class="points">
+       <option selected value="sunday">Sunday</option>
+       <option  value="monday">Monday</option>
+       <option  value="tuesday">Tuesday</option>
+       <option  value="wednesday">Wednesday</option>
+       <option  value="thursday">Thursday</option>
+       <option  value="friday">Friday</option>
+       <option  value="saturday">Saturday</option>
+    </select>
+     <input type="button" value="submit" onclick="onRender();"></input>  
+    </p>
+    <p></p>
+<!--type	zone	from_station_name	to_station_name	departure	arrival	duration	number_of_halts	distance	speed	departure_days	sunday	monday	tuesday	wednesday	thursday	friday	saturday	classes	first_ac	second_ac	third_ac	first_class	sleeper	chair_car	second_sitting	name-->
+
+     </div>    
+    <div class="center" align="center">    
+     <script type="text/javascript" src="/./javascripts/fisheye.js"></script>
+     <div class="headers" id="headers"></div>  
+    </div>          
+    <script>
+        $(".points").multipleSelect({ placeholder: "Here is the placeholder" });
+        
+        var sub_width = parseInt(d3.select('.center').style('width'), 10),
+          color = d3.scale.category20();
+          
+        var width = sub_width-5,
+            height = 540,
+            radius  =sub_width/200,
+            fill = ['rgb(255, 127, 14)','rgb(244, 82, 83)','rgb(23, 190, 207)'];
+
+        var svg = d3.select(".center").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("xmlns", "http://www.w3.org/2000/svg")
+            .style("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+sub_width+" 540");
+        
+        var fisheye = d3.fisheye.circular()
+            .radius(80);
+
+        function onRender() {   
+            d3.select('.center').select("svg")
+                .remove();
+           
+            var svg = d3.select(".center").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .attr("xmlns", "http://www.w3.org/2000/svg")
+                .style("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+sub_width+" 540");
+        
+            var force = d3.layout.force()
+                .charge(-168)
+                .linkDistance(80)
+                .size([width, height]);
+        
+            var max_value = document.getElementById("max_point").value;
+            var min_value = document.getElementById("min_point").value;
+
+           var points = [];
+                $('#points :selected').each(function(i, selected){
+                    points[i] = $(selected).val();
+                });
+
+           var zones = [];
+                $('#zones :selected').each(function(i, selected){
+                    zones[i] = $(selected).val();
+                });
+            
+           var types = [];
+                $('#types :selected').each(function(i, selected){
+                    types[i] = $(selected).val();
+                });            
+            
+            console.log(types);
+           <!-- var filter_way = document.getElementById("way").value;    -->    
+            document.getElementById("headers").innerHTML = "<h4>  Train covering greater than "+min_value+" kms </h4>";
+        
+            d3.csv("data.csv", function(col_links) {
+      
+                var links = []
+                    _.each(col_links, function(d) { if(_.isString(d.distance)) { links.push(d);}}); 
+
+                
+                var col_links = []
+                    _.each(links, function(d) { if(_.contains(zones, d.zone)) { col_links.push(d);}});     
+
+                var links = []
+                    _.each(col_links, function(d) { if(_.contains(types, d.type)) { links.push(d);}});     
+                    
+                var nodesByName = {};
+                    name_list =[];
+                
+                points.forEach(function(o) {
+
+                   if (o=='Sunday'){
+                        links =   _.filter(links, function(item){ return item['sunday'] == 'T'; }) 
+                    }
+                   else if (o=='Monday'){
+                        links =   _.filter(links, function(item){ return item['monday'] == 'T'; }) 
+                    }
+                   else if (o=='Tuesday'){
+                        links =   _.filter(links, function(item){ return item['tuesday'] == 'T'; }) 
+                    }
+                   else if (o=='Wednesday'){
+                        links =   _.filter(links, function(item){ return item['wednesday'] == 'T'; }) 
+                    }
+                   else if (o=='Thursday'){
+                        links =   _.filter(links, function(item){ return item['thursday'] == 'T'; }) 
+                    }  
+                   else if (o=='Friday'){
+                        links =   _.filter(links, function(item){ return item['friday'] == 'T'; }) 
+                    }  
+                   else if (o=='Saturday'){
+                        links =   _.filter(links, function(item){ return item['saturday'] == 'T'; }) 
+                    }                      
+                 });                 
+                
+               //var result_link = []
+               //     _.each(links, function(d) { if(_.contains(points, d.Protein_class)) { result_link.push(d);}}); 
+             //
+             //   var links = []   
+             //       _.each(result_link, function(d) { if(_.contains(points, d.Compund_class)) { links.push(d);}}); 
+            // 
+            //    var links = _.uniq(links, function(item, key, combination_id){ return item.combination_id ;});
+//
+  //              if (filter_way =='without_class')
+                  //  { var links =   _.filter(links, function(item){ return item['data_set'] == 1; }) }
+    //            else if (filter_way =='protein_class')
+      //              { var links =   _.filter(links, function(item){ return item['data_set'] != 2; }) }
+          //      else if (filter_way =='compound_class')
+        //            { var links =   _.filter(links, function(item){ return item['data_set'] != 3; }) }
+
+                links.forEach(function(o) {
+                    o.distance = parseInt(o.distance);
+                });
+                
+                force.nodes(nodes).links(links);
+              
+                var drag = force.drag()
+                    .on("dragstart", dragstart); 
+
+                var links = d3.nest()
+                    .entries(links.filter(function(d){return min_value<=d.distance }));
+      
+                links.forEach(function(link) {
+                    link.source = nodeByName_source(link.from_station_name,link.data_set);
+                    link.target = nodeByName_target(link.to_station_name,link.data_set);
+                });
+                  
+                // Extract the array of nodes from the map by name.
+                var nodes = d3.values(nodesByName);
+      
+                nodes.forEach(function(o) {
+                    name_list.push(o.name);
+                });
+       
+                // Create the link lines.
+                var link = svg.selectAll(".link")
+                    .data(links)
+                   .enter().append("line")
+                    .attr("class", "link")
+                    .style('stroke-width', 1.5)
+                    .attr('data-title', function(d) { return  '<p> Train : '+d.train_name+'</p> '; })
+                    .attr('stroke','steelblue');
+                    
+                    //.attr('stroke', function (d){ if (d.Type=='reliable') { return  '#66a61e' } else if(d.Type=='possible'){ return '#fee08b'} else if(d.Type=='unreliable'){ return '#d73027'} else if(d.Type=='protein_class'){ return '#bebada'} else if(d.Type=='compound_class'){ return '#8dd3c7'} ;});
+       
+                // Create the link nodes.
+                var node = svg.selectAll(".node")
+                      .data(nodes)
+                     .enter().append("g")
+                      .attr("class", "node")
+                      .on("dblclick", dblclick);
+
+                node.append("a")
+                  .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d.name } )
+                  .attr("target","_blank")
+                  .append("rect")
+               //   .style('fill',function (d){ if (d.group==0 && d.data_set==1) { return  fill[2] } else if (d.data_set==1 && d.group==1) { return fill[1] } else if (d.group==0 && d.data_set==2) { return  fill[2] } else if (d.group==1 && d.data_set==2 ){ return  fill[0] } else if (d.group==0 && d.data_set==3 ){ return fill[1] } else if (d.group==1 && d.data_set==3 ){ return  fill[0] };})
+               //   .style('stroke',function (d){ if (d.group==0 && d.data_set==1) { return  d3.rgb(fill[2]).darker(); } else if (d.data_set==1 && d.group==1) { return d3.rgb(fill[1]).darker(); } else if (d.group==0 && d.data_set==2) { return  d3.rgb(fill[2]).darker(); } else if (d.group==1 && d.data_set==2 ){ return  d3.rgb(fill[0]).darker(); } else if (d.group==0 && d.data_set==3 ){ return d3.rgb(fill[1]).darker(); } else if (d.group==1 && d.data_set==3 ){ return  d3.rgb(fill[0]).darker(); };})
+               //   .attr("x", function (d){ if (d.group==0 && d.data_set==1) { return  -6/2 } else if (d.data_set==1 && d.group==1) { return -(6+(2.5))/2} else if (d.group==0 && d.data_set==2) { return  -6/2 } else if (d.group==1 && d.data_set==2 ){ return  -18/2 } else if (d.group==0 && d.data_set==3 ){ return  -(6+(2.5))/2 } else if (d.group==1 && d.data_set==3 ){ return  -18/2 };})
+               //   .attr("y", function (d){ if (d.group==0 && d.data_set==1) { return  -6/2 } else if (d.data_set==1 && d.group==1) { return -(6+(2.5))/2} else if (d.group==0 && d.data_set==2) { return  -6/2 } else if (d.group==1 && d.data_set==2 ){ return  -18/2 } else if (d.group==0 && d.data_set==3 ){ return  -(6+(2.5))/2 } else if (d.group==1 && d.data_set==3 ){ return  -18/2 };})
+               //   .attr("rx", function (d){ if (d.group==0 && d.data_set==1) { return  d.group*(6)/2 } else if (d.data_set==1 && d.group==1) { return d.group*(6+(2.5))/2 } else if (d.group==0 && d.data_set==2) { return  d.group*(6)/2  } else if (d.group==1 && d.data_set==2 ){ return  d.group*(6)/2 } else if (d.group==0 && d.data_set==3 ){ return  (d.group+1)*(6+(2.5))/2 } else if (d.group==1 && d.data_set==3 ){ return  d.group*(6)/2 };})
+               //   .attr("width", function (d){ if (d.group==0 && d.data_set==1) { return  6 } else if (d.data_set==1 && d.group==1) { return d.group*(6+(2.5))} else if (d.group==0 && d.data_set==2) { return  6 } else if (d.group==1 && d.data_set==2 ){ return  18 } else if (d.group==0 && d.data_set==3 ){ return  (d.group+1)*(6+(2.5)) } else if (d.group==1 && d.data_set==3 ){ return  18 };})
+               //   .attr('data-title', function(d){ if (d.group==0 && d.data_set==1 ) { return  '</p> Compound : '+d.name+'</p>' } else if (d.group==1 && d.data_set==1 ){ return '</p>  Protein : '+d.name+'</p>'  } else if (d.group==0 && d.data_set==2 ){ return '</p>  Compound : '+d.name+'</p>'  } else if (d.group==1 && d.data_set==2 ){ return '</p>  Class : '+d.name+'</p>'  }else if (d.group==0 && d.data_set==3 ){ return '</p>  Protein : '+d.name+'</p>'  } else if (d.group==1 && d.data_set==3 ){ return '</p>  Class : '+d.name+'</p>'  };})
+               //   .attr("height", function (d){ if (d.group==0 && d.data_set==1) { return  6 } else if (d.data_set==1 && d.group==1) { return d.group*(6+(2.5))} else if (d.group==0 && d.data_set==2) { return  6 } else if (d.group==1 && d.data_set==2 ){ return  18 } else if (d.group==0 && d.data_set==3 ){ return  (d.group+1)*(6+(2.5)) } else if (d.group==1 && d.data_set==3 ){ return  18 };})
+                  .style('fill',function (d,i){ return color(i)})
+                  .style('stroke',function (d,i){ return d3.rgb(color(i)).darker(2) })
+                  .style('stroke-width',1.5)
+                  .attr("x", -10)
+                  .attr("y", -10)
+                  .attr("width", 20)
+                  .attr("height",20)
+                  .attr("rx",10)                  
+                 .attr('data-title', function(d){ return d.name})
+                 .attr('sub_link',function(d) { return d.name} )
+                  .on("mouseover", function(d) { mouseover_node(d); })
+                  .on("mouseout", function(d) { mouseout_node(d) })
+                  .call(drag);
+         
+                 var text =  node.append('text')
+                    .attr("text-anchor", "start")
+                    .attr('sub_link',function(d) { return d.name} )
+                    .text(function(d){ return d.name})
+                    .style("opacity", 0); 
+        
+                $("rect").tooltip({container: '.center', html: true, placement:'top'});
+                $("line").tooltip({container: '.center', html: true, placement:'top'});
+          
+                force
+                  .nodes(nodes)
+                  .links(links)
+                  .on("tick", tick)
+                  .start();
+
+                function tick() {
+                
+                    //node.attr("x", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+                    //    .attr("y", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+                    
+                    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+                    //node.attr("transform", function(d) { return "translate(" + Math.max(0,Math.min(width,d.x)) + "," + d.y + ")"; });
+
+            
+                    link.attr("x1", function(d) { return d.source.x; })
+                        .attr("y1", function(d) { return d.source.y; })
+                        .attr("x2", function(d) { return d.target.x; })
+                        .attr("y2", function(d) { return d.target.y; });
+                }
+            
+                function dblclick(d) {
+                    d3.select(this).classed("fixed", d.fixed = false);
+                }
+
+                function dragstart(d) {
+                    d3.select(this).classed("fixed", d.fixed = true);
+                }
+            
+                svg.on("mousemove", function() {
+                    fisheye.focus(d3.mouse(this));
+
+                    node.each(function(d) { d.fisheye = fisheye(d); })
+                        .attr("transform", function(d) { return "translate(" + d.fisheye.x + "," + d.fisheye.y + ")"; }); 
+
+                    link.attr("x1", function(d) { return d.source.fisheye.x; })
+                      .attr("y1", function(d) { return d.source.fisheye.y; })
+                      .attr("x2", function(d) { return d.target.fisheye.x; })
+                      .attr("y2", function(d) { return d.target.fisheye.y; });
+                });
+
+                var mouseover_node = function(z){ 
+                    var neighbors = {};
+                    neighbors[z.index] = true;
+
+                    link.filter(function(d){
+                        if (d.source == z) {
+                            neighbors[d.target.index] = true
+                            return true
+                        } else if (d.target == z) {
+                            neighbors[d.source.index] = true
+                            return true
+                        } else {
+                            return false
+                        }
+                    }).style("stroke-width", 3);
+
+                    node.filter(function(d){ return neighbors[d.index] })
+                        .style("stroke-width", 2); 
+                
+                    text.filter(function(d){ return neighbors[d.index] })
+                        .style("opacity", 1);   
+                };
+
+                var mouseout_node = function(z){ 
+                    link.style("stroke-width", 1.5)
+
+                    node.style("stroke-width", 1.5)
+                    text.style("opacity", 0);  
+                };
+      
+            
+                function nodeByName_source(name,data_set) {
+                    return nodesByName[name] || (nodesByName[name] = {name:name ,group:0 ,data_set:data_set});
+                }
+                
+                function nodeByName_target(name,data_set) {
+                    return nodesByName[name] || (nodesByName[name] = {name:name ,group:1 ,data_set:data_set});
+                }
+        
+                var lastsearch = '';
+                var $box = {};
+        
+                function add_search(search, chart) {
+                    var $chart = $(chart);
+                    $(search).on('keypress, change, keyup', function() {
+                        var search = $(this).val();
+                        if (lastsearch != search) {
+                            lastsearch = search;
+                            var re = new RegExp(search, "i");
+                            $('rect', $chart).each(function(){
+                                $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+                            });
+                        }
+                    });
+                }
+                add_search('.search', '.center');
+            });
+            
+            $( ".search" ).autocomplete({
+                source: function( request, response ) {
+                    var matches = $.map( name_list, function(tag) {
+                        if ( tag.toUpperCase().indexOf(request.term.toUpperCase()) === 0 ) {
+                            return tag;
+                        }
+                    });
+                    response(matches);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

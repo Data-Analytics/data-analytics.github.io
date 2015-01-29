@@ -1,5 +1,6 @@
 title,thumbnail,url,author,visualizationType,description
 Forbes Rank,forbes_money.png,Forbes_rank,self,tree map,The India's Most Fame People in the years 2014 from Forbes shows top 100 celebrities in India Ranked accordingly along with their Earnings
+Train Analysis,train_analysis.png,Train_Analysis,self,force layout ,The graphical Assosiation representation of trains passing in India across zones and states with several variations
 District Analysis,district_analysis.png,District_Analysis,self,tree map,"The graphical image tree map showing the trend of the each district in india describing corresponding states with respect to population, area  and density "
 Taiwan Un Employment ,un_employment.png,Un-Employment_Taiwan,self,sparkline,The distribution of unemployment in Taiwan from 1970 to 2014. weighted each area equally according to ages represented below
 Assembly Election,maharashtra.png,Assembly_Election,self,tree map,The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years
@@ -67,7 +68,7 @@ Heat Map,heatmap.png,Heatmap,self,heat map,A heat map is a graphical representat
 Hour Heat map,day_hour_heat_map.png,DH_Heatmap,self,heat map,"Displays how many users acces a database in a certain amount time in a week , it shows which part  of the week is heavily used "
 Hex Binning,hex_binning.png,Hex-Binning_Color,self,hexagonal map,With eight hundred random points with a normal distribution are binned into hexagons; color encodes the number of points that fall into each bin. 
 Hex Binning Area,hex_binning_area.png,Hex-Binning_Area,self,hexagonal map,With eight hundred random points with a normal distribution are binned into hexagons; area encodes the number of points that fall into each bin. 
-Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This “icicle” diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
+Zm Icicle,zoomable_icicle.png,Zoomable_Icicle,self,icicle,This a icicle� diagram uses d3.layout.partition to divide space witharea proportional to the value of nodes in a tree. 
 Pie Chart ,pie.png,Pie,self,pie chart,"Single dimensinal circular chart divided into sectors, illustrating numerical proportion. the arc length of each sector, is proportional to the quantity"
 Scatter,scatter.png,Scatter,self,scatter plot,"This scatterplot is constructed from a random , denoting different groups in different colors and shapes respectively"
 Scatter Plot,Scatter-plot.png,Scatterplot,self,scatter plot,A scatter plot is a type of mathematical diagram using Cartesian coordinates to display values for two variables .
