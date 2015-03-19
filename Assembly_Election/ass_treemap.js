@@ -1,3 +1,5 @@
+var sub_width = parseInt(d3.select('.par_treemap').style('width'), 10);
+        
 var width = 960,
     height = 500;
 
@@ -6,7 +8,10 @@ var svg = d3.select(".par_treemap").append("svg")
         .attr("height", height)
         .attr("xmlns", 'http://www.w3.org/2000/svg')
         .attr("xlink", 'http://www.w3.org/1999/xlink')
-        .attr("version", '1.1');
+        .attr("version", '1.1')
+        .style("width", "100%")
+        .attr("data-height","0.54")
+        .attr("viewBox","0 0 "+sub_width+" 540");
  
 function onRender() {   
 
@@ -21,7 +26,10 @@ function onRender() {
         .attr("height", height)
         .attr("xmlns", 'http://www.w3.org/2000/svg')
         .attr("xlink", 'http://www.w3.org/1999/xlink')
-        .attr("version", '1.1');
+        .attr("version", '1.1')
+        .style("width", "100%")
+        .attr("data-height","0.54")
+        .attr("viewBox","0 0 "+sub_width+" 540");
         
     var treemap = d3.layout.treemap()
         .padding(0.5)
@@ -32,19 +40,15 @@ function onRender() {
     
     
     d3.csv("data.csv", function(data_csv) {
-     
         data_root = {"key":"treemap"};
-        
          data_csv.forEach(function(o) {
           o.votes = parseInt(o.votes);
-          
           });
-          console.log(data_csv);
+
         var nest = d3.nest()
         .key(function(d) { return  d.party; })
         .entries(data_csv.filter(function(d){return d.state==(group_by)}));
        
-        console.log(nest);
     data_root["values"] = nest
 
   var cell = svg.data([data_root]).selectAll("g")
