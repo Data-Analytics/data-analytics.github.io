@@ -1,6 +1,6 @@
 var sub_width = parseInt(d3.select('.par_treemap').style('width'), 10);
         
-var width = 960,
+var width = sub_width,
     height = 500;
 
 var svg = d3.select(".par_treemap").append("svg")
