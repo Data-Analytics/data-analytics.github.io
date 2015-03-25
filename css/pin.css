@@ -125,14 +125,9 @@ margin-left: 10px;
 }
 
 #grey_scale{
-  filter: grayscale(75%);
-    -webkit-filter: grayscale(75%);  /* For Webkit browsers */
+  filter: grayscale(10%);
+    -webkit-filter: grayscale(10%);  /* For Webkit browsers */
     -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
 }
 
 
-#grey_scale:hover {filter: grayscale(0);
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-    filter: none;
-}
