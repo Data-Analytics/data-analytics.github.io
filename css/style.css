@@ -287,8 +287,14 @@ Full-Width Styles
 }
 
 #header_wrap {
-    background: #3b5998;
-    border-bottom: 1px solid #133783;
+  margin: 2px 2px;
+  background: -webkit-linear-gradient(top, #186b24, #055811);
+  background: -moz-linear-gradient(top, #186b24, #055811);
+  background: -ms-linear-gradient(top, #186b24, #055811);
+  background: -o-linear-gradient(top, #186b24, #055811);
+  background: linear-gradient(top, #186b24, #055811);
+    border-radius: 8px;
+    border: 0.5px solid #bdcfc0;;
     }
 
 #header_wrap:after {
@@ -310,7 +316,7 @@ Full-Width Styles
 }
 #project_title_p {
   margin: 0;
-  color: #89bdff;
+  color: #f3ec2c;
   text-shadow: 1px 1px 2px #000;
 }
 
@@ -534,4 +540,18 @@ Small Device Styles
   right: 7px;
   top: 7px;
   display: block;
+}
+
+.disqus_thread
+{
+margin:5% 5%;
+}
+
+.lighterer_green
+{
+    margin:2% 2%;
+    padding: 5px 5px 5px 5px;
+    background: #bdcfc0;
+    border: 1px solid #055811;
+    border-radius: 4px;
 }
