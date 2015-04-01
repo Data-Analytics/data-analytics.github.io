@@ -8,14 +8,15 @@
  Copyright:  (c) sushanth 2014
  Licence:     open-source
 --------------------------------------------------------------->
-<html manifest="demo.appcache" ng-app="EmployeeApp">
+<html manifest="demo.appcache" ng-app="VisApp">
   <head>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="data visualization,business dashboards,d3.js,data journalism,conference dashboard,Big Data,Big Data Analytics,Data Analytics,Machine Learning,Advance Analytics,Analytics Apps,Analytic Apps,Internal and External Data,Disparate Data,Data Intelligence,Data wrangling,Data Munging,Data Cleaning,Built for Big Data,Prepackaged Analytical Apps, Extensive Auto Data Preparation">
     <meta name="description" content="Big Data Analytics Made Easy ,We visually represent large datasets for data journalists and businesses to make the data lucid and actionable,generates visual insights on large-scale data, it is easier for enterprises to consume and act on these insight">
     <meta name="author" content="Sushanth">
-    <meta http-equiv="refresh" content="600">
-    <meta name="keywords" content="Big Data,Big Data Analytics,Data Analytics,Machine Learning,Advance Analytics,Analytics Apps,Analytic Apps,Internal and External Data,Disparate Data,Data Intelligence,Data wrangling,Data Munging,Data Cleaning,Built for Big Data,Prepackaged Analytical Apps, Extensive Auto Data Preparation,data visualization,business dashboards,d3.js,data journalism,conference dashboard,data-visualisation, data-analytics, javascript, d3.js">
+    <meta http-equiv="refresh" content="6000">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">    
     <link rel="stylesheet" type="text/css" media="screen" href="css/docs.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
@@ -26,12 +27,21 @@
     <script type="text/javascript" src="javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/angular.min.js"></script>
     <script type="text/javascript" src="javascripts/google-analyitcs.js"></script>
-    <script type="text/javascript" src="javascripts/facebook_link.js"></script>
-    <script type="text/javascript" src="javascripts/googleplus_link.js"></script>
-    <script type="text/javascript" src="javascripts/twitter-share.js"></script>
     <link rel="shortcut icon" href="images/logo.png">
+    <meta property="og:title"  content="Data Analytics and Visualisation" /> 
+    <meta property="og:url"   content="http://data-analytics.github.io/" /> 
+    <meta property="og:description" content="Big Data Analytics Made Easy ,We visually represent large datasets for data journalists and businesses to make the data lucid and actionable,generates visual insights on large-scale data, it is easier for enterprises to consume and act on these insight." /> 
+    <meta property="og:image" content="http://data-analytics.github.io/images/header.jpg" /> 
+    <html itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="description" content="Big Data Analytics Made Easy ,We visually represent large datasets for data journalists and businesses to make the data lucid and actionable,generates visual insights on large-scale data, it is easier for enterprises to consume and act on these insight.">
+    <meta itemprop="name" content="Data Analytics and Visualisation">
+    <meta itemprop="image" content="http://data-analytics.github.io/images/header.jpg">
     <title>Data Analytics and Visualisation</title>
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
   </head>
+ 
       <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 <script type="text/javascript">
 
@@ -48,8 +58,8 @@
         }, 500);
     });
 
-        var employeeApp = angular.module("EmployeeApp",[]);
-        employeeApp.controller("empCtrl",function($scope){
+        var VisApp = angular.module("VisApp",[]);
+        VisApp.controller("visCtrl",function($scope){
             $scope.employees = [
   {
     "title":"Forbes Rank",
@@ -857,7 +867,7 @@
         });
    
 </script>
- <body class="theme-beige" ng-controller="empCtrl" >
+ <body class="theme-beige" ng-controller="visCtrl" >
  <!-- HEADER -->
     <a target="_blank" href="https://github.com/Data-Analytics/data-analytics.github.io"><img style="position:fixed;top:0;right:0;border:0;" width="149" height="149" src="images\forkme.png" alt="Fork me on GitHub"></a>
     <div id="header_wrap" class="outer info">
@@ -872,6 +882,11 @@
     </div>
     <br/>
   <div class="inner">   
+    <span class='st_facebook_hcount' displayText='Facebook'></span>
+    <span class='st_twitter_hcount' displayText='Tweet'></span>
+    <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+    <span class='st_googleplus_hcount' displayText='Google'></span>
+        <span class='st_email_hcount' displayText='Email'></span>
         <p class="form-inline" align="center">
     Search : <input type="text" class="search" placeholder="eg: Treemap" ng-model="query" />
     </p>
