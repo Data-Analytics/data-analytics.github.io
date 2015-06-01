@@ -5,5 +5,6 @@
   
   ga('require', 'displayfeatures');
   ga('create', 'UA-45813188-1', 'data-analytics.github.io');
+  ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
 
