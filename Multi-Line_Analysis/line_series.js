@@ -1,4 +1,4 @@
-var margin = {top: 20, right: 80, bottom: 30, left: 50},
+var margin = {top: 20, right: 80, bottom: 30, left: 100},
     width = 680 - margin.left - margin.right,
     height = 420 - margin.top - margin.bottom;
 
@@ -46,6 +46,8 @@ var svg = d3.select(".multi-line").append("svg")
   data.forEach(function(d) {
     d.date = parseDate(d.date);
   });
+  console.log(data);
+  
 
   var cities = color.domain().map(function(name) {
     return {

@@ -57,7 +57,71 @@ function exampleData() {
         { 
           "label" : "H Label" , 
           "value" : -5.1387322875705
+        },
+        { 
+          "label" : "I Label" ,
+          "value" : -29.765957771107
+        } , 
+        { 
+          "label" : "J Label" , 
+          "value" : 0
+        } , 
+        { 
+          "label" : "K Label" , 
+          "value" : 32.807804682612
+        } , 
+        { 
+          "label" : "L Label" , 
+          "value" : 196.45946739256
+        } , 
+        { 
+          "label" : "M Label" ,
+          "value" : 0.19434030906893
+        } , 
+        { 
+          "label" : "N Label" , 
+          "value" : -98.079782601442
+        } , 
+        { 
+          "label" : "O Label" , 
+          "value" : -13.925743130903
+        } , 
+        { 
+          "label" : "P Label" , 
+          "value" : -5.1387322875705
         }
+        { 
+          "label" : "A Label" ,
+          "value" : -29.765957771107
+        } , 
+        { 
+          "label" : "B Label" , 
+          "value" : 0
+        } , 
+        { 
+          "label" : "C Label" , 
+          "value" : 32.807804682612
+        } , 
+        { 
+          "label" : "D Label" , 
+          "value" : 196.45946739256
+        } , 
+        { 
+          "label" : "E Label" ,
+          "value" : 0.19434030906893
+        } , 
+        { 
+          "label" : "F Label" , 
+          "value" : -98.079782601442
+        } , 
+        { 
+          "label" : "G Label" , 
+          "value" : -13.925743130903
+        } , 
+        { 
+          "label" : "H Label" , 
+          "value" : -5.1387322875705
+        }		
       ]
     }
   ]

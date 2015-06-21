@@ -35,6 +35,7 @@ var main = function(corr, label_col, label_row){
     .attr('height', 400);
 
   var sort_process = d3.select("select#sort_func")[0][0].value;
+  console.log(sort_process);
   d3.select("select#sort_func").on("change", function() {
       sort_process = this.value;
       reorder_matrix(last_k, last_what);

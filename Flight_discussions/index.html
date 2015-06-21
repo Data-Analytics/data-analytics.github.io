@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     21-06-2015
+ Modified:    21-06-2015
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="The graphical image tree map showing the trend of the each party performing in the elections for the corresponding years ">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css">	
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/underscore-min.js"></script>	
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>   	
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
+    <meta property="og:title"  content="Flight Discussion" />
+    <meta property="og:url"   content="http://data-analytics.github.io/Flight_discussions" />
+    <meta property="og:description" content="The graphical flight discussion consists of Pre-Booking, Reservations, Check-in Services, In-flight and Post-Travel " /> 
+    <meta property="og:image" content="http://data-analytics.github.io/images/flight_discussions.png" /> 
+    <html itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="description" content="The graphical flight discussion consists of Pre-Booking, Reservations, Check-in Services, In-flight and Post-Travel .">
+    <meta itemprop="name" content="Flight Discussion">
+    <meta itemprop="image" content="http://data-analytics.github.io/images/Flight_discussions.png">      
+    <title>Flight Discussion</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container" >
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">Flight Discussion</h1>
+          <p id="project_title_p">The graphical flight discussion consists of Pre-Booking, Reservations, Check-in Services, In-flight and Post-Travel </p>
+        </header>
+        <div id="banner">
+          <div class="container">
+              <a class="button"  href="/./"><strong>Home</strong></a>
+              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
+              <div class="downloads">
+                <span>Downloads:</span>
+                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
+                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
+              </div>
+            </div>
+          </div><!-- end banner -->
+    </div>
+         
+    <!-- MAIN CONTENT -->
+    <div class="container ">
+      <section id="main_content" class="inner">
+        <br/><span class='st_facebook_hcount' displayText='Facebook'></span>
+        <span class='st_twitter_hcount' displayText='Tweet'></span>
+        <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+        <span class='st_googleplus_hcount' displayText='Google'></span>
+        <span class='st_email_hcount' displayText='Email'></span><br/><br/><br/>
+       <svg width="960" height="30" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  
+		<rect class="legend" data-party="Negative" data-toggle="highlight" x="0.0" width="200" height="20" fill="#FF0000"></rect>
+		<text x="100" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Negative Sentiment</text>
+    
+		<rect class="legend" data-party="Positive" data-toggle="highlight" x="200" width="200" height="20" fill="#70FF00"></rect>
+		<text x="300" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Positive Sentiment</text>
+    
+		</svg>
+		<p> bigger the box shows the greater sentiment score and the vice versa</p>
+    <p class="form-inline">
+    <label value="reply">Reply : </label>
+    <select id="reply">
+        <option value="0" class="name">Replied</option>
+        <option value="1" class="name">Not Replied</option>
+		<option value="all" class="name">All</option>
+    </select>
+    <label value="discussions">Discussions : </label>
+    <select  multiple="multiple" name="points" class="points" id="options_view">   	
+		<option selected value="Reservations_Upgrades" class="name">Reservations Upgrades</option>
+		<option selected value="Reservations_Frequent_Flyer" class="name">Reservations Frequent Flyer</option>
+		<option selected value="Reservations_seats" class="name">Reservations seats</option>	
+		<option value="Pre_Booking_price" class="name">Pre Booking price</option>
+		<option value="Pre_Booking_connectivity" class="name">Pre Booking connectivity</option>	
+		<option value="Check_in_security" class="name">Check in security</option>	
+		<option value="Check_in_checkin" class="name">Check in checkin</option>	
+		<option value="In_Flight_meal" class="name">In Flight meal</option>	
+		<option value="In_Flight_Entertainment" class="name">In Flight Entertainment</option>	
+		<option value="In_Flight_crew" class="name">In Flight crew</option>	
+		<option value="Post_Flight_baggage" class="name">Post Flight baggage</option>
+		<option value="Post_Flight_delay" class="name">Post Flight delay </option>
+    </select>
+   <button id ="submit" value="submit" onClick='onRender();' >submit</button>
+            <input type="text" class="search" placeholder="search userd id">
+   </p>
+    <div class="treemap" align="center">
+        <script type="text/javascript" src="treemap.js"></script>
+    </div>
+  </section>
+  </div>
+  
+  <script>
+  $(".points").multipleSelect({ placeholder: "Here is the placeholder" })
+		  
+ onRender();
+  </script>
+</body>
+</html>
