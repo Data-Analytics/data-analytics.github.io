@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     18-08-2013
+ Modified:    27-06-2014
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="The graphical image tree map showing the trend of the each party performance in the Maharastra,Haryana,Jammu & Kashmir and Jharkhand Assembly elections held in the year 2014 and Delhi Assembly elections held in the year 2015.">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />	
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
+    <meta property="og:title"  content="Assembly Elections" />
+    <meta property="og:url"   content="http://data-analytics.github.io/Assembly_Election"/>
+    <meta property="og:description" content="The graphical image tree map showing the trend of the each party performance in the Maharastra,Haryana,Jammu & Kashmir and Jharkhand Assembly elections held in the year 2014 and Delhi Assembly elections held in the year 2015." /> 
+    <meta property="og:image" content="http://data-analytics.github.io/images/maharashtra.png" /> 
+    <html itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="description" content="The graphical image tree map showing the trend of the each party performance in the Maharastra,Haryana,Jammu & Kashmir and Jharkhand Assembly elections held in the year 2014 and Delhi Assembly elections held in the year 2015.">
+    <meta itemprop="name" content="Assembly Elections">
+    <meta itemprop="image" content="http://data-analytics.github.io/images/maharashtra.png">     
+    <title>District wise information on Child Marriages in India</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
+        <header class="inner container" >
+          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
+          <h1 id="project_title">District wise information on Child Marriages in India</h1>
+        </header>
+    </div>
+	
+		<div class="container example_data">
+			<div id='locality-type' class="btn-group" role="group" data-toggle="buttons-radio">
+				<button class="btn btn-default active" value="t">Total</button>
+				<button class="btn btn-default" value="r">Rural</button>
+				<button class="btn btn-default" value="u">Urban</button>
+			</div>
+			<div id='gender-type' class="btn-group" role="group" data-toggle="buttons-radio">
+				<button class="btn btn-default active" value="a">All</button>
+				<button class="btn btn-default" value="m">Boys</button>
+				<button class="btn btn-default" value="f">Girls</button>
+			</div>
+		</div>    
+		<div class="container">
+			<div id='map'></div>
+		</div>
+		<script src='/./javascripts/leaflet-omnivore.min.js'></script>
+		<script src='/./javascripts/fuse.min.js'></script>
+		<script src='/./javascripts/districts_data.js'></script>
+
+		<script>
+			var map = L.mapbox.map('map').setView([23, 85], 5);
+			var districtFeatureLayer = L.geoJson(null, {style: getDistrictStyle, onEachFeature: onEachFeature});
+			var boundaryFeatureLayer = L.geoJson(null, {style: getBoundaryStyle});
+			var districtLayer = omnivore.topojson('json/district_boundaries.json', null, districtFeatureLayer)
+			districtLayer.addTo(map);
+			var boundaryLayer = omnivore.topojson('json/boundary.json', null, boundaryFeatureLayer).addTo(map);
+			var popup = new L.Popup({autoPan: false});
+			var districtName = document.getElementById("district-name");
+			var stateName = document.getElementById("state-name");
+			var databox = document.getElementById("databox");
+			var colorMap = {'a': ['#3f007d', '#54278f', '#6a51a3', '#807dba', '#9e9ac8', '#bcbddc', '#dadaeb', '#efedf5', '#fcfbfd'], 'm': ['#08306b', '#08519c', '#2171b5', '#4292c6', '#6baed6', '#9ecae1', '#c6dbef', '#deebf7', '#f7fbff'], 'f': ['#7f0000', '#b30000', '#d7301f', '#ef6548', '#fc8d59', '#fdbb84', '#fdd49e', '#fee8c8', '#fff7ec']};
+			$("button").click(function () {
+				$(this).siblings(".active").toggleClass("active"); 
+				$(this).toggleClass("active");
+				districtLayer.eachLayer(function(layer){
+					layer.setStyle(getDistrictStyle(layer.feature));
+				});
+				databox.innerHTML = ""
+			});
+			function getDistrictStyle(feature) {
+				return {
+					weight: 1,
+					opacity: 0.6,
+				       	color: '#767676',
+					fillOpacity: 1,
+					fillColor: getColor(feature.properties.id)
+					//data-title:'<div class="marker-title">District: ' + feature.properties.dn + '<div>State: ' + feature.properties.sn +'</div></div>' + popup_data +  ' in 1000 underwent Child Marriage';
+          			};
+  			}			      
+			function getBoundaryStyle(feature) {
+				return {
+					weight: 5,
+					opacity: 0.75,
+				       	color: 'white',
+          			};
+  			}	
+			function getDistrictScore(districtId)
+			{
+				localityType = $("#locality-type .active").attr("value")  
+				genderType = $("#gender-type .active").attr("value")  
+				if(!districtsData[districtId]){
+					score = 0;	
+				}
+				else{
+					if(genderType == "a"){
+						score = (districtsData[districtId][localityType]["rf"] + districtsData[districtId][localityType]["rm"])/2.0;
+					}
+					else{
+						score = districtsData[districtId][localityType]["r" + genderType];  
+					}	
+				}
+				return score;
+			}
+			function getColor(districtId) {
+				genderType = $("#gender-type .active").attr("value")  
+				ratio = getDistrictScore(districtId);
+				colorPalette = colorMap[genderType];
+				return ratio >= 0.07 ? colorPalette[0] :
+				ratio >= 0.06 ? colorPalette[1] :
+				ratio >= 0.05 ? colorPalette[2] :
+				ratio >= 0.04  ? colorPalette[3] :
+				ratio >= 0.03  ? colorPalette[4] :
+				ratio >= 0.02  ? colorPalette[5] :
+				ratio >= 0.01   ? colorPalette[6] :
+				ratio == 0 ? '#FFFFFF':
+				colorPalette[7];
+			}
+			function onEachFeature(feature, layer) {
+				layer.on({
+				mousemove: mousemove,
+				mouseout: mouseout,
+				click: zoomToFeature
+				});
+			}
+			var closeTooltip;
+			function mousemove(e) {
+				var layer = e.target;
+				popup.setLatLng(e.latlng);
+				districtId = layer.feature.properties.id; 
+				popup_data = Math.round(getDistrictScore(districtId) * 1000);
+				popup.setContent('<div class="marker-title">District: ' + layer.feature.properties.dn + '<div>State: ' + layer.feature.properties.sn +'</div></div>' + popup_data +  ' in 1000 underwent Child Marriage');
+				if (!popup._map) popup.openOn(map);
+				window.clearTimeout(closeTooltip);
+
+				// highlight feature
+				layer.setStyle({
+					weight: 3,
+					opacity: 0.8,
+				       	color: 'white',
+				});
+
+				if (!L.Browser.ie && !L.Browser.opera) {
+					layer.bringToFront();
+				}
+			}
+			function mouseout(e) {
+				districtLayer.resetStyle(e.target);
+				closeTooltip = window.setTimeout(function() {
+						map.closePopup();
+					}, 100);
+			}
+			function zoomToFeature(e) {
+				map.fitBounds(e.target.getBounds());
+			}
+		</script>
+	</body>
+</html>		

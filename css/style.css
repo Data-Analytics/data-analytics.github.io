@@ -555,3 +555,23 @@ margin:5% 5%;
     border: 1px solid #055811;
     border-radius: 4px;
 }
+
+#map { position:absolute; top:40%; height:840px; width:100%; max-width: 980px;}
+.leaflet-popup-close-button {
+	display: none;
+}
+.leaflet-popup-content-wrapper {
+	pointer-events: none;
+}
+.btn{width:6em}
+.btn-group-heading{font-size: 130%; text-transform: uppercase}
+.heading{font-weight: bold; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; color:white;}
+#datapanel{visibility:hidden; position:relative; float: right; z-index: 2; width:25%; height:70%; background-color: #ffffff; padding:2%; border-radius: 3%; margin:25% 0% 0% 0%; -webkit-box-shadow: -6px 7px 54px -18px rgba(0,0,0,1); -moz-box-shadow: -6px 7px 54px -18px rgba(0,0,0,1); box-shadow: -6px 7px 54px -18px rgba(0,0,0,1);}
+#panel-heading{text-align: center; margin:-10% -9.5% 0% -9.5%; border-radius: 0%; padding: 3%; background-color: #454545; font-size: 125%;}
+.data-row{font-size: 100%; padding-top:1%}
+.btn-group{margin-top:5%;}
+#databox {z-index: 3; float: left;}
+path {
+	-webkit-transition:fill 200ms;
+	transition:fill 200ms;
+}
