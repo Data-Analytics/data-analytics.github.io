@@ -38,6 +38,8 @@ function onRender() {
       .key(function(d) { return d.names; })
       .entries(data);
 
+	  console.log(segments);
+	  
   // Compute the total sum, the per-names sum, and the per-group offset.
   // You can use reduce rather than reduceRight to reverse the ordering.
   // We also record a reference to the parent names for each group.

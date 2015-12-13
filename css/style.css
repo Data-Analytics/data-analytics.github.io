@@ -288,11 +288,11 @@ Full-Width Styles
 
 #header_wrap {
   margin: 2px 2px;
-  background: -webkit-linear-gradient(top, #186b24, #055811);
-  background: -moz-linear-gradient(top, #186b24, #055811);
-  background: -ms-linear-gradient(top, #186b24, #055811);
-  background: -o-linear-gradient(top, #186b24, #055811);
-  background: linear-gradient(top, #186b24, #055811);
+  background: -webkit-linear-gradient(top, #4399ce, #4399ce);
+  background: -moz-linear-gradient(top, #4399ce, #4399ce);
+  background: -ms-linear-gradient(top, #4399ce, #4399ce);
+  background: -o-linear-gradient(top, #4399ce, #4399ce);
+  background: linear-gradient(top, #4399ce, #4399ce);
     border-radius: 8px;
     border: 0.5px solid #bdcfc0;;
     }
@@ -310,13 +310,13 @@ Full-Width Styles
 #project_title {
   margin: 0;
   color: #fff;
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 45px;
   text-shadow: 1px 1px 2px #000;
 }
 #project_title_p {
   margin: 0;
-  color: #f3ec2c;
+  font-family: inherit;
+  color: #fff;
   text-shadow: 1px 1px 2px #000;
 }
 
