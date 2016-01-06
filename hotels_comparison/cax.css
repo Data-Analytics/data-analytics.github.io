@@ -1,0 +1,32 @@
+body {
+  font: 20px 'Open Sans', sans-serif;
+  shape-rendering: crispEdges;
+}
+.day {
+  stroke: #666;
+}
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.axis path,
+.axis line {
+fill: none;
+stroke: #000;
+shape-rendering: crispEdges;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
