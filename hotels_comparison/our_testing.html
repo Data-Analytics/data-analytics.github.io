@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Administration of justice in India,Courts Data">
+    <meta name="author" content="Sushanth">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
+    <title>Example Data Sets </title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="cax.css" rel="stylesheet" /> 
+	<link href="bootstrap.css" rel="stylesheet" /> 
+	<link href="basic.css" rel="stylesheet" />   
+    <script type="text/javascript" src="bootstrap.min.js"></script> 
+	<script type="text/javascript" src="cax.js"></script>
+	<script type="text/javascript" src="mapper.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>	
+	<style>
+	text {
+    font-size: 50%;
+	}
+	.sub_header {
+		background-color: #31b0de;
+		padding: 8px 6px;
+		margin: 5px 0 20px 0; 
+		color: white;
+		font-weight: 100;
+		text-align: center;
+		font-size: 30px;
+	}
+	</style>
+	<h1 class="sub_header">Example Dataset</h1>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<div class="container">
+	<p class="form-inline">
+    <label value="Data_set">Comparison Against: </label>		
+    <select id="options_type">   
+        <option value="os_data" class="name">Intent against Operating System</option>
+        <option value="browser_data" class="name">Intent against Browsers</option>
+        <option value="refferer_data" class="name">Intent against Refferals</option>
+    </select>	
+    <label value="Select_Chart">Chart Type : </label>
+	<select id="options_view">   
+        <option value="horizontal_stacked_bar" class="name">horizontal stacked bar</option>
+        <option value="stacked_bar" class="name">stacked bar</option>
+        <option value="normalized_stacked_bar" class="name">normalized stacked bar</option>
+        <option value="marimekko" class="name">marimekko</option>
+        <option value="grouped_bar" class="name">grouped bar</option>
+    </select>
+   <button id ="submit" value="submit" class="btn btn-primary" onClick='onRender();' >submit</button>
+            <!--<label align="left" >Search:</label>
+            <input type="text" class="search" placeholder="eg: chennai">-->
+   </p>
+	<div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div align="center" class="panel-heading">
+                        Example Dataset
+                    </div>
+					<div class="panel-body">
+					<div id="marimekkomap"></div>
+				    </div>
+				</div>
+			</div>			
+		
+	</div>
+	</div>
+	</div>
+	</div>	
+    <script type="text/javascript">
+ onRender();	
+ 
+function onRender() {   
+	var elem = $('#options_view').val();
+	var type = $('#options_type').val();
+
+	 d3.select('#marimekkomap').select("svg")
+       .remove();
+
+		if ( type == 'os_data' ) {
+			col_values = ['Android','iOS','Mac','Others','Windows']
+		} else if ( type == 'browser_data' ) {
+			col_values = ['Chrome','Firefox','MSIE','Others','Safari']
+		} else if ( type == 'refferer_data' ) {
+			col_values = ['Bing','Google','Self','Others','Yahoo']
+		}	
+			
+	d3.csv(type+".csv", function(pivot) {
+		var options = {
+		width: 800,
+		height: 420,
+		container: "#marimekkomap",	
+		data: pivot,
+		groupby :'intent',
+		values : col_values,
+		color:d3.scale.category10()
+		};
+		
+		//normalized_stacked_bar.make(); 
+		if ( elem == 'normalized_stacked_bar' ) {
+			normalized_stacked_bar.make(options);
+		} else if ( elem == 'stacked_bar' ) {
+			stacked_bar.make(options);
+		} else if ( elem == 'horizontal_stacked_bar' ) {
+			horizontal_stacked_bar.make(options);
+		} else if ( elem == 'marimekko' ) {
+			marimekko.make(options);
+		} else if ( elem == 'grouped_bar' ) {
+			grouped_bar.make(options);	
+		}
+		
+	});
+}
+    </script>
+  </body>
+</html>
+
