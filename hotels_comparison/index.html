@@ -11,11 +11,12 @@
     <script src="jquery.min.js"></script>
 	<link href="bootstrap.css" rel="stylesheet" /> 
 	<link href="basic.css" rel="stylesheet" />   
+	<link href="cax.css" rel="stylesheet" />   	
     <script type="text/javascript" src="bootstrap.min.js"></script> 
 	<script type="text/javascript" src="output.min.js"></script>
 	<style>
 	text {
-    font-size: 50%;
+    font-size: 60%;
 	}
 	.sub_header {
 		background-color: #F4B903;
@@ -84,8 +85,8 @@ function onRender() {
 			
 	d3.csv(type+".csv", function(pivot) {
 		var options = {
-		width: 800,
-		height: 420,
+		width: 1200,
+		height: 500,
 		container: "#marimekkomap",	
 		data: pivot,
 		groupby :'intent',
