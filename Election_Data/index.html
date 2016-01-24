@@ -1,0 +1,190 @@
+<html><head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/basic.css" rel="stylesheet">
+  <link href="css/feature.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link href="css/custom-styles.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)" /> 
+  <meta property="og:url"   content="http://data-analytics.github.io/" /> 
+  <meta property="og:description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011'" /> 
+  <meta property="og:image" content="http://images.indianexpress.com/2016/01/tamil-nadu-polls-759.jpg" /> 
+  <html itemscope itemtype="http://schema.org/Blog">
+  <meta itemprop="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011'">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)">
+  <meta itemprop="image" content="http://images.indianexpress.com/2016/01/tamil-nadu-polls-759.jpg">
+  <title>Assembly Elections 1967 - 2011 (Tamil Nadu)</title>
+<style>
+.fa-2 {
+    font-size: 2em;
+}
+
+.header-logo {
+    padding: 10px 0px 5px 8px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+text {
+    font-family: sans-serif;
+    font-size: 18px;
+
+    fill: black;
+}
+
+.x.axis path {
+  display: none;
+}
+.heading-part {
+    color: #000;
+    font-family: 'Droid Serif', serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 2px 0;
+}
+.synopsis {
+    color: #6b6b6b;
+    font-family: 'Droid Serif', serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    padding: 0 0 3px 0;
+}
+</style>
+<body>
+  
+  	<div class="container-fluid header-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-logo">
+					
+					<p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>   Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections from 1967 until 2011</p>
+					<p class="synopsis">Who will get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+    <div class="container-fluid">
+	<div class="container">
+			<div class="row">
+			<div class="col-md-12 panel panel-default">
+			<div class="row">
+				<div class="col-md-12 panel-heading1">
+					<h2>Assembly Elections 1967 - 2011 (Tamil Nadu)</h2>
+				</div>	
+           </div>
+           <div class="row">		   
+				<div class=" col-md-12 panel-body">
+					<div class="stacked_bar"></div>
+				</div>
+			</div>
+			</div>
+			</div>
+	</div>
+	</div>
+ <script>
+
+d3.csv("sample.csv", function(data) { 
+	
+var margin = {top: 20, right: 80, bottom: 35, left: 60},
+    width = 1200 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .2);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = d3.scale.ordinal()
+			.range(["#800000","#9DBC2A","#019733","#DE0000","#000080","#DE0000","#F0CC52","#FCEB00","#1f77b4", "#9A9E56", "#835C91", "#888888", "#ff7f0e", "#222", "#e377c2", "#7f7f7f", "#F1DF19", "#17becf"]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+	 
+var svg = d3.select(".stacked_bar").append("svg")
+            .style("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width + margin.left + margin.right)+" "+(height + margin.top + margin.bottom))
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var mineral_names = ['DMK','ADMK','INC','CPM','TMC(M)','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','Others'];
+
+    data.forEach(function(d) {
+        var y0 = 0;
+        d.minerals = mineral_names.map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name],value: +d[name],YEAR:d['YEAR']}; });
+        d.minerals.forEach(function(d) { d.y0 /= y0; d.y1 /= y0; d.y0= d.y0*100,d.y1=d.y1*100 });
+        d.total = d.minerals[d.minerals.length - 1].y1;
+    });
+	
+    x.domain(data.map(function(d) { return d['YEAR']; }));
+    y.domain([0, d3.max(data, function(d) { return d.total; })]);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+  var minerals = svg.selectAll(".minerals")
+      .data(data)
+      .enter().append("g")
+      .attr("class", "minerals")
+      .attr("transform", function(d) { return "translate(" + x(d['YEAR']) + ",0)"; });
+
+  minerals.selectAll("rect")
+      .data(function(d) { return d.minerals; })
+      .enter().append("rect")
+      .attr("width", x.rangeBand())
+      .attr("y", function(d) { return y(d.y1); })
+      .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+      .style("fill", function(d) { return color(d.name) })
+	  .style("stroke", function(d) { return d3.rgb(color(d.name)).darker(); })
+	  .attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value; })
+	  .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
+	  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);})	 ;
+
+  var legend = svg.selectAll(".legend")
+    .data(mineral_names)
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+    legend.append("rect")
+    .attr("x", width+margin.left+8)
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", color);
+
+    legend.append("text")
+    .attr("x", width+margin.left)
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function(d) { return d; });
+	
+      $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
+	  
+	  });
+</script>
+</body>
+</html>
