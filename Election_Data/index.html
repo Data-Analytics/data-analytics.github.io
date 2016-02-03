@@ -10,6 +10,7 @@
   <link href="css/custom-styles.css" rel="stylesheet">
   <script type="text/javascript" src="js/jquery.min.js"></script>  
   <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>  
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <meta property="og:title"  content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)" /> 
@@ -62,9 +63,6 @@
 
 text {
     font-family: sans-serif;
-    font-size: 18px;
-
-    fill: black;
 }
 
 .x.axis path {
@@ -122,18 +120,227 @@ text {
            </div>
            <div class="row">		   
 				<div class=" col-md-12 panel-body">
-					<div class="stacked_bar"></div>
+					 <div class="stacked_bar">  
+					   <svg width="1200" height="25" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,0)">
+							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#800000"></rect>
+							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+							
+							  <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#9DBC2A"></rect>
+							  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">ADMK</text>
+							
+							  <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#019733"></rect>
+							  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+							
+							  <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+							
+							  <rect class="party-legend" data-party="TMC(M)" data-highlight="[data-party=TMC(M)]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#000080"></rect>
+							  <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">TMC(M)</text>
+
+							  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+							  <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+							
+							  <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+							
+							  <rect class="party-legend" data-party="PMK" data-highlight="[data-party=PMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#F0CC52"></rect>
+							  <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#000">PMK</text>
+							
+							  <rect class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FCEB00"></rect>
+							  <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
+							
+							  <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+							  <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
+							
+							  <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
+							  <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+							
+							  <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#835C91"></rect>
+							  <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
+							
+							  <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#888888"></rect>
+							  <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+							
+							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+							  
+							</svg>
+						  </g>	
+						  </div>
 				</div>
 			</div>
 			</div>
 			</div>
 	</div>
 	</div>
+	
+    <div class="container-fluid">
+	<div class="container">
+			<div class="row">
+			<div class="col-md-12 panel panel-default">
+			<div class="row">
+				<div class="col-md-12 panel-heading1">
+					<h2>Assembly Elections View By Individual Elections</h2>
+				</div>	
+           </div>
+           <div class="row">		   
+				<div class=" col-md-12 panel-body">
+				    <p class="form-inline" align="center">
+						<label value="year">Year : </label>
+						<select id="year">
+							<option value="2011" class="name" selected>2011</option>
+							<option value="2006" class="name">2006</option>
+							<option value="2001" class="name">2001</option>
+							<option value="1991" class="name">1991</option>
+							<option value="1989" class="name">1989</option>
+							<option value="1984" class="name">1984</option>
+							<option value="1980" class="name">1980</option>
+							<option value="1977" class="name">1977</option>
+							<option value="1971" class="name">1971</option>
+							<option value="1967" class="name">1967</option>							
+						</select>
+					   <button id ="submit" value="submit" class="btn btn-primary"onClick='onRender();' >submit</button>
+								<label align="left" >Search:</label>
+								<input type="text" class="search" placeholder="eg: chennai">
+					   </p>
+					 <div class="chart">  
+					     <svg width="1200" height="25" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,0)">
+							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#800000"></rect>
+							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+							
+							  <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#9DBC2A"></rect>
+							  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">ADMK</text>
+							
+							  <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#019733"></rect>
+							  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+							
+							  <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+							
+							  <rect class="party-legend" data-party="TMC(M)" data-highlight="[data-party=TMC(M)]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#000080"></rect>
+							  <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">TMC(M)</text>
+
+							  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+							  <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+							
+							  <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+							
+							  <rect class="party-legend" data-party="PMK" data-highlight="[data-party=PMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#F0CC52"></rect>
+							  <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#000">PMK</text>
+							
+							  <rect class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FCEB00"></rect>
+							  <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
+							
+							  <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+							  <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
+							
+							  <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
+							  <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+							
+							  <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#835C91"></rect>
+							  <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
+							
+							  <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#888888"></rect>
+							  <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+							
+							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+							  
+							</svg>
+						  </g>
+						<div class="tree_map"></div>
+					    </div>
+				     </div>
+				</div>
+			</div>
+			</div>
+			</div>
+	</div>
+	
+	<div class="container-fluid">
+	<div class="container">
+   
+		<div id="row"> 	
+	 	<div class="col-md-12 inner-page-style">
+			
+			<div class="row">
+			<div class="col-md-12 panel panel-default">   
+			<div class="row">
+				<div class="col-md-12 panel-heading">
+					<h2>Party Transitions Trend to the successive elections</h2>
+				</div>	
+           </div>
+           <div class="row">		   
+				<div class=" col-md-12 panel-body">
+					<div  class="sankey_chart">
+										     <svg width="1200" height="25" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,0)">
+							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#800000"></rect>
+							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+							
+							  <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#9DBC2A"></rect>
+							  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">ADMK</text>
+							
+							  <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#019733"></rect>
+							  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+							
+							  <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+							
+							  <rect class="party-legend" data-party="TMC(M)" data-highlight="[data-party=TMC(M)]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#000080"></rect>
+							  <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">TMC(M)</text>
+
+							  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+							  <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+							
+							  <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+							
+							  <rect class="party-legend" data-party="PMK" data-highlight="[data-party=PMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#F0CC52"></rect>
+							  <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#000">PMK</text>
+							
+							  <rect class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FCEB00"></rect>
+							  <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
+							
+							  <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+							  <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
+							
+							  <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
+							  <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+							
+							  <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#835C91"></rect>
+							  <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
+							
+							  <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#888888"></rect>
+							  <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+							
+							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+							  
+							</svg>
+						  </g>
+					</div>
+				</div>
+		  </div>
+			
+			</div>
+			</div>
+			
+			
+		</div>	
+	   </div>
+	
+	</div>
+	</div>
  <script>
+onRender();
 
 d3.csv("sample.csv", function(data) { 
 	
-var margin = {top: 20, right: 80, bottom: 35, left: 60},
+var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 1200 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -193,32 +400,246 @@ var svg = d3.select(".stacked_bar").append("svg")
       .attr("height", function(d) { return y(d.y0) - y(d.y1); })
       .style("fill", function(d) { return color(d.name) })
 	  .style("stroke", function(d) { return d3.rgb(color(d.name)).darker(); })
-	  .attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value; })
+	  .attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
 	  .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
 	  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);})	 ;
 
-  var legend = svg.selectAll(".legend")
-    .data(mineral_names)
-    .enter().append("g")
-    .attr("class", "legend")
-    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-    legend.append("rect")
-    .attr("x", width+margin.left+8)
-    .attr("width", 18)
-    .attr("height", 18)
-    .style("fill", color);
-
-    legend.append("text")
-    .attr("x", width+margin.left)
-    .attr("y", 9)
-    .attr("dy", ".35em")
-    .style("text-anchor", "end")
-    .text(function(d) { return d; });
-	
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
 	  
 	  });
+	  			
+function onRender() {   
+
+function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
+var margin = {top: 20, right: 20, bottom: 35, left: 20},
+    width = 1200 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+	
+         year = document.getElementById("year").value;
+		 
+     d3.select('.tree_map').select("svg")
+       .remove();
+
+    var svg = d3.select(".tree_map").append("svg")
+		    .attr("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width + margin.left + margin.right)+" "+(height + margin.top + margin.bottom))
+			.attr("xmlns", 'http://www.w3.org/2000/svg')
+			.attr("xlink", 'http://www.w3.org/1999/xlink')
+			.attr("version", '1.1')
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+    var treemap = d3.layout.treemap()
+        .padding(0.5)
+        .size([width, height])
+        .sticky(true)
+        .value(function(d) {return d.votes;})
+        .children(function(d) {return d.values;});
+    
+    
+    d3.csv("assembly_tn.csv", function(data_csv) {
+     
+        data_root = {"key":"treemap"};
+        
+         data_csv.forEach(function(o) {
+          o.votes = parseInt(o.votes);
+          o.rank = parseInt(o.rank);
+          o.year = parseInt(o.year);
+          });
+          
+        var nest = d3.nest()
+        .key(function(d) { return  d.party; })
+        .entries(data_csv.filter(function(d){return d.year===parseInt(year)}));
+        
+        console.log(nest);
+    data_root["values"] = nest
+
+  var cell = svg.data([data_root]).selectAll("g")
+      .data(treemap.nodes)
+    .enter().append("a")
+      .attr("xlink:href",function(d) { return 'https://www.google.co.in/search?q='+d.constituency} )
+      .attr("target","_blank").append("rect")
+      .attr("x", function(d) { return d.x; })
+      .attr("y", function(d) { return d.y; })
+      .attr("width", function(d) { return d.dx; })
+      .attr("height", function(d) { return d.dy; })
+      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> votes : '+addThousandsSeparator(d.votes)+'' ;})
+      .attr("sub_link",function(d) { return d.constituency+d.party ;})
+      .style("fill", function(d) { return d.color;})
+      //.style("opacity", function(d) { return 1 - parseFloat((d.votes/d.polled_votes)).toFixed(1); })
+      .style("stroke", '#fff')
+      .style("stroke-width", 0.5);        
+
+      $("rect").tooltip({container: '.tree_map', html: true, placement:'top'});
+      
+    var lastsearch = '';
+    var $box = {};
+    
+    function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function() {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp(search, "i");
+          $('rect', $chart).each(function(){
+              $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+      });
+    }
+
+    add_search('.search', '.tree_map');
+    
+        
+        });
+
+      }	  
+	  
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+    width = 1200 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+
+var formatNumber = d3.format(",.0f"), 
+    format = function(d) { return formatNumber(d); },
+    color = d3.scale.category20b();
+	
+// append the svg canvas to the page
+var svg = d3.select(".sankey_chart").append("svg")
+	.attr("width", '100%')
+    .attr("data-height", '0.5678')
+    .attr("viewBox",'0 0 1200 600')
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+
+ svg.selectAll(".head")
+      .data(['2001','2006'])
+    .enter().append("text")
+      .attr("y", -4)
+	  .attr("font-size",18)
+      .attr("x", function(d,p) { return p < 1 ?  50 : 1110 ; })
+      .attr("fill", function(d,p) { return p > 0 ? "#222" : "#222"; })
+	  .attr("text-anchor", function(d,p) { return p <  1 ? 'middle' : 'middle'; })
+	  .text(function(d) { return 'year : '+d; });
+	  
+	   
+// Set the sankey diagram properties
+var sankey = d3.sankey()
+    .nodeWidth(100)
+    .nodePadding(3)
+    .size([width, height]);
+
+var path = sankey.link();
+
+// load the data (using the timelyportfolio csv method)
+d3.csv("sankey_data.csv", function(error, data) {
+
+  graph = {"nodes" : [], "links" : []};
+    
+	name_list = []
+    data.forEach(function (d) {
+      name_list.push(d.source);
+	  
+	  graph.nodes.push({ "name": d.source, "color": d.source_color });
+      graph.nodes.push({ "name": d.target, "color": d.target_color });
+  
+      graph.links.push({ "source": d.source,
+                         "target": d.target,
+						 "source_color": d.source_color,
+                         "target_color": d.target_color,
+                         "value": +parseInt(d.value) });
+     });
+
+	 
+     // return only the distinct / unique nodes
+     graph.nodes = d3.keys(d3.nest()
+       .key(function (d) { return d.name; })
+       .map(graph.nodes));
+	 
+     // loop through each link replacing the text with its index from node
+     graph.links.forEach(function (d, i) {
+       graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+       graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+     });
+
+     //now loop through each nodes to make nodes an array of objects
+     // rather than an array of strings
+     graph.nodes.forEach(function (d, i) {	   
+       graph.nodes[i] = { "name": d };
+     });
+
+  sankey
+    .nodes(graph.nodes)
+    .links(graph.links)
+    .layout(32);
+
+	var party_colors = {'ADMK':'#9DBC2A','BJP':'#ff7f0e','CPI':'#DE0000','CPM':'#DE0000','DMK':'#800000','Others':'#222','INC':'#019733','IND':'#888888','MDMK':'#835C91','PMK':'#F0CC52','TMC(M)':'#000080','CPI(M)':'#DE0000','DMDK':'#FCEB00'}
+	
+// add in the links
+  var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-width", function(d) { return Math.max(1, d.dy); })
+      .style("fill", function(d) { return d.target_color; })
+      .style("stroke", function(d) { return d.target_color; })	  
+	  .sort(function(a, b) { return b.dy - a.dy; })
+	  .attr("data-title",function(d) { return "Seats moved from "+d.source.name + " to " + d.target.name.replace('_','') + "\n" + format(d.value); });
+
+// add in the nodes
+  var node = svg.append("g").selectAll(".node")
+      .data(graph.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { 
+		  return "translate(" + d.x + "," + d.y + ")"; })
+    .call(d3.behavior.drag()
+      .origin(function(d) { return d; })
+      .on("dragstart", function() { 
+		  this.parentNode.appendChild(this); })
+      .on("drag", dragmove));
+      
+// add the rectangles for the nodes
+  node.append("rect")
+      .attr("height", function(d) { return d.dy; })
+      .attr("width", sankey.nodeWidth())
+     .style("fill", function(d) { return party_colors[d.name.replace('_','')]; })
+      .style("stroke", function(d) { return d3.rgb(party_colors[d.name.replace('_','')]).darker(2); })
+	   .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats'; });
+    
+  $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});  
+  $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'}); 	 
+
+// add in the title for the nodes
+  node.append("text")
+      .attr("x", -6)
+      .attr("y", function(d) { return d.dy / 2; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end")
+      .attr("transform", null)
+      .text(function(d) { return d.name.replace('_',''); })
+    .filter(function(d) { return d.x < width / 2; })
+      .attr("x", 6 + sankey.nodeWidth())
+      .attr("text-anchor", "start");
+
+// the function for moving the nodes
+  function dragmove(d) {
+    d3.select(this).attr("transform", 
+        "translate(" + d.x + "," + (
+                d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+            ) + ")");
+    sankey.relayout();
+    link.attr("d", path);
+  }
+});	  
 </script>
 </body>
 </html>

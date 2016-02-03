@@ -40,7 +40,7 @@ input, textarea, select, .uneditable-input {
 }
 
 input[type="text"], textarea, select, .uneditable-input {
-  width: 50%;
+  width: 220px;
   display: block;
   margin : 0 auto;
 }
@@ -114,12 +114,12 @@ background-color:white;
     font-size: 26px;
 }
 .link {
-  fill: none;
-  stroke: #81CFE0;
   stroke-opacity: .2;
+  fill-opacity:.2;
 }
 .link:hover {
-  stroke-opacity: .5;
+  stroke-opacity: .8;
+  fill-opacity:.8;
 }
 .inner-page-style
 {
