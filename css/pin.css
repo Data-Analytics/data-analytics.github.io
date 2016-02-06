@@ -1,8 +1,16 @@
 body {
-    font-size: 1em;
+    font-size: 12px;
     line-height: 1.4;
     height:2500px;
 }
+.stMainServices {
+	padding-bottom: 18px !important;
+	}
+	
+.stButton_gradient {
+    padding-bottom: 18px !important;
+	}
+	
 .hide
 {
     display:none;
@@ -130,14 +138,3 @@ margin-left: 10px;
     -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
 }
 
-.stButton {
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    color: #000;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 3px;
-    margin-left: 3px;
-    margin-bottom: 20px;
-	}

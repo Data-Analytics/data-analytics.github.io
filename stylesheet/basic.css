@@ -1,0 +1,148 @@
+media="screen"
+.form-search label, .form-inline label, .form-search .btn-group, .form-inline .btn-group {
+  display: inline-block;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+media="screen"
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+media="screen"
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  line-height: 6px;
+  color: #333;
+  background-color: #fff;
+}
+
+media="screen"
+.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+
+input, textarea, select, .uneditable-input {
+  margin-left: 0;
+}
+
+input[type="text"], textarea, select, .uneditable-input {
+  width: 220px;
+  display: block;
+  margin : 0 auto;
+}
+input, button, select, textarea {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.right_class {
+    min-height: 494px;
+    line-height: 20px;
+}
+
+textarea, select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border linear .2s,box-shadow linear .2s;
+  -moz-transition: border linear .2s,box-shadow linear .2s;
+  -o-transition: border linear .2s,box-shadow linear .2s;
+  transition: border linear .2s,box-shadow linear .2s;
+   display: inline-block;
+  height: 30px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+}
+
+
+media="screen"
+.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.header-style
+{
+background-color:white;
+}
+.header-logo
+{
+    padding: 30px 0px 36px 8px;
+}
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+.panel-heading h2
+{
+    color: #FFF;
+    font-weight: 300;
+    font-size: 26px;
+}
+.link {
+  stroke-opacity: .2;
+  fill-opacity:.2;
+}
+.link:hover {
+  stroke-opacity: .8;
+  fill-opacity:.8;
+}
+.inner-page-style
+{
+margin-top:50px;
+}
+.panel-heading1
+{
+    text-transform: uppercase;
+    background-color: #ffbd00;
+    padding: 6px 0px 15px 0px;
+	text-align:center;
+}
+.panel-heading
+{
+    text-transform: uppercase;
+    background-color: #ffbd00;
+    padding: 3px 0px 12px 0px;
+	text-align:center;
+	margin-top:3px;
+	
+}
+.panel-heading1 h2
+{
+    color: white;
+    font-size: 20px;
+}

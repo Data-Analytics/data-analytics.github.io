@@ -576,14 +576,3 @@ path {
 	transition:fill 200ms;
 }
 
-.stButton {
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    color: #000;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 3px;
-    margin-left: 3px;
-    margin-bottom: 20px;
-	}
