@@ -3,12 +3,14 @@ body {
     line-height: 1.4;
     height:2500px;
 }
-.stMainServices {
-	padding-bottom: 18px !important;
-	}
+
 	
 .stButton_gradient {
     padding-bottom: 18px !important;
+	}
+
+.stMainServices {
+	padding-bottom: 18px !important;
 	}
 	
 .hide
