@@ -269,7 +269,7 @@ text {
 			<div class="row">
 			<div class="col-md-12 panel panel-default">   
 			<div class="row">
-				<div class="col-md-12 panel-heading">
+				<div class="col-md-12 panel-heading1">
 					<h2>Party Transitions Trend to the successive elections</h2>
 				</div>	
            </div>
@@ -439,7 +439,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .padding(0.5)
         .size([width, height])
         .sticky(true)
-        .value(function(d) {return d.votes;})
+        .value(function(d) {return d.polled_votes;})
         .children(function(d) {return d.values;});
     
     
@@ -470,7 +470,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       .attr("y", function(d) { return d.y; })
       .attr("width", function(d) { return d.dx; })
       .attr("height", function(d) { return d.dy; })
-      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'' ;})
+      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
       .attr("sub_link",function(d) { return d.constituency+d.party ;})
       .style("fill", function(d) { return d.color;})
       //.style("opacity", function(d) { return 1 - parseFloat((d.votes/d.polled_votes)).toFixed(1); })
@@ -593,7 +593,7 @@ d3.csv("sankey_data.csv", function(error, data) {
       .style("fill", function(d) { return d.target_color; })
       .style("stroke", function(d) { return d.target_color; })	  
 	  .sort(function(a, b) { return b.dy - a.dy; })
-	  .attr("data-title",function(d) { return "Seats moved from "+d.source.name + " to " + d.target.name.replace('_','') + "\n" + format(d.value); });
+	  .attr("data-title",function(d) { return d.source.name == d.target.name.replace('_','') ?  d.source.name+' has retained '+format(d.value)+' seats'  : d.target.name.replace('_','') + " has got "+ format(d.value)+" seats from "+ d.source.name; });
 
 // add in the nodes
   var node = svg.append("g").selectAll(".node")
