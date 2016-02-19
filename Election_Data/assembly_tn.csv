@@ -19,7 +19,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1967,Chengalpattu,Tamil Nadu,18,1,GEN,C. G. Viswanathan,M,0,,DMK,43428,#800000,69186
 1967,Maduranthakam,Tamil Nadu,19,1,GEN,Kothandam,M,0,,DMK,38382,#800000,64830
 1967,Acharapakkam,Tamil Nadu,20,1,SC,P. S. Ellappan,M,0,,SWA,38223,#222,61545
-1967,Uttiramerur,Tamil Nadu,21,1,GEN,K. M. Rajagopal,M,0,,DMK,47689,#800000,74503
+1967,Uthiramerur,Tamil Nadu,21,1,GEN,K. M. Rajagopal,M,0,,DMK,47689,#800000,74503
 1967,Kancheepuram,Tamil Nadu,22,1,GEN,N. Krishnan,M,0,,DMK,45266,#800000,79715
 1967,Kunnathur,Tamil Nadu,23,1,SC,M. Gopal,M,0,,DMK,47772,#800000,69359
 1967,Sriperumbudur,Tamil Nadu,24,1,GEN,D. Irajarathinam,M,0,,DMK,41655,#800000,76949
@@ -34,7 +34,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1967,Gudiyattam,Tamil Nadu,33,1,GEN,V. K. Kothandaraman,M,0,,CPM,38825,#DE0000,63434
 1967,Pernambattu,Tamil Nadu,34,1,SC,P. Jayaraman,M,0,,DMK,28868,#800000,52729
 1967,Natrampalli,Tamil Nadu,35,1,GEN,T. C. T. Gounder,M,0,,DMK,29215,#800000,55991
-1967,Tiruppattur,Tamil Nadu,36,1,GEN,C. Gounder,M,0,,DMK,32589,#800000,133846
+1967,Tiruppattur,Tamil Nadu,36,1,GEN,C. Gounder,M,0,,DMK,32589,#800000,65446
 1967,Vaniyambadi,Tamil Nadu,37,1,GEN,Rajamannar,M,0,,INC,26946,#019733,53073
 1967,Ambur,Tamil Nadu,38,1,SC,M. Panneerselvam,M,0,,DMK,31554,#800000,56000
 1967,Kamiyambadi,Tamil Nadu,39,1,GEN,L. Balaraman,M,0,,INC,29512,#019733,59479
@@ -42,7 +42,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1967,Arani,Tamil Nadu,41,1,GEN,A. C. Narasimhan,M,0,,DMK,38038,#800000,62621
 1967,Cheyyar,Tamil Nadu,42,1,GEN,K. Govindan,M,0,,DMK,37068,#800000,67570
 1967,Vandavasi,Tamil Nadu,43,1,SC,Muthulingam,M,0,,DMK,38626,#800000,63060
-1967,Perambalur,Tamil Nadu,44,1,GEN,V. D. A. Mudaly,M,0,,DMK,29413,#800000,129560
+1967,Peranamallur,Tamil Nadu,44,1,GEN,V. D. A. Mudaly,M,0,,DMK,29413,#800000,62832
 1967,Polur,Tamil Nadu,45,1,GEN,S. Kuppamal,F,0,,DMK,33292,#800000,58485
 1967,Chengam,Tamil Nadu,46,1,SC,P. S. Santhanam,M,0,,DMK,29828,#800000,52477
 1967,Thandarambattu,Tamil Nadu,47,1,GEN,K. S. Kandar,M,0,,INC,29524,#019733,58680
@@ -150,7 +150,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1967,Thottiyam,Tamil Nadu,149,1,GEN,Vadivel,M,0,,DMK,39701,#800000,73608
 1967,Musiri,Tamil Nadu,150,1,GEN,Muthuselvan,M,0,,DMK,32615,#800000,63353
 1967,Uppiliapuram,Tamil Nadu,151,1,GEN,T.P.Alagamuthu,M,0,,DMK,43453,#800000,77199
-1967,Perambalur,Tamil Nadu,152,1,SC,J.S.Rasu,M,0,,DMK,33657,#800000,129560
+1967,Perambalur,Tamil Nadu,152,1,SC,J.S.Rasu,M,0,,DMK,33657,#800000,66728
 1967,Varahur,Tamil Nadu,153,1,GEN,R.Narayanan,M,0,,DMK,32846,#800000,66169
 1967,Andimadam,Tamil Nadu,154,1,GEN,K.N.Ramchandran,M,0,,DMK,32253,#800000,66846
 1967,Jayankondam,Tamil Nadu,155,1,SC,K.A.A.K.Moorthy,M,0,,DMK,34751,#800000,66100
@@ -190,7 +190,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1967,Pattukkottai,Tamil Nadu,189,1,GEN,A.R.Marimuthu,M,0,,PSP,35198,#222,64471
 1967,Peravurani,Tamil Nadu,190,1,GEN,M.Krishnamurthy,M,0,,DMK,35505,#800000,78199
 1967,Aranthangi,Tamil Nadu,191,1,GEN,A.Thurairasan,M,0,,DMK,42943,#800000,80853
-1967,Tiruppattur,Tamil Nadu,192,1,GEN,S.Madhavan,M,0,,DMK,40170,#800000,133846
+1967,Tirupathur,Tamil Nadu,192,1,GEN,S.Madhavan,M,0,,DMK,40170,#800000,68400
 1967,Karaikudi,Tamil Nadu,193,1,GEN,S.Meiyappan,M,0,,SWA,38310,#222,65230
 1967,Tiruvadanai,Tamil Nadu,194,1,GEN,K.Ambalam,M,0,,SWA,37556,#222,71935
 1967,Ilayangudi,Tamil Nadu,195,1,GEN,V.Malaikannan,M,0,,DMK,40461,#800000,70439
@@ -242,8 +242,8 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Egmore,Tamil Nadu,7,1,GEN,Arangannal,M,0,,DMK,40596,#800000,76329
 1971,Thousand Lights,Tamil Nadu,8,1,GEN,K A Mathialagan,M,0,,DMK,38891,#800000,67767
 1971,Triplicane,Tamil Nadu,9,1,GEN,V R Nedunchezhiyan,M,0,,DMK,36237,#800000,71902
-1971,Mylapore,Tamil Nadu,10,1,GEN,T N Anandana Yaki,M,0,,NCO,42301,#222,76899
-1971,T-Nagar,Tamil Nadu,11,1,GEN,K M Subramaniam,M,0,,NCO,37100,#222,76775
+1971,Mylapore,Tamil Nadu,10,1,GEN,T N Anandana Yaki,M,0,,NCO,42301,#1F77B4,76899
+1971,T-Nagar,Tamil Nadu,11,1,GEN,K M Subramaniam,M,0,,NCO,37100,#1F77B4,76775
 1971,Saidapet,Tamil Nadu,12,1,GEN,M Karunanidhi,M,0,,DMK,63334,#800000,116290
 1971,Gummidipoondi,Tamil Nadu,13,1,GEN,K A Vezhavendan,M,0,,DMK,43355,#800000,74230
 1971,Ponneri,Tamil Nadu,14,1,SC,P Nagalingam,M,0,,DMK,39783,#800000,68136
@@ -253,7 +253,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Chengalpattu,Tamil Nadu,18,1,GEN,C G Vishwanathan,M,0,,DMK,41949,#800000,67558
 1971,Maduranthakam,Tamil Nadu,19,1,GEN,C Arumugam,M,0,,DMK,42295,#800000,65541
 1971,Acharapakkam,Tamil Nadu,20,1,SC,V Balasundaram,M,0,,DMK,39816,#800000,59636
-1971,Uttiramerur,Tamil Nadu,21,1,GEN,K M Erasagopal,M,0,,DMK,48462,#800000,70385
+1971,Uthiramerur,Tamil Nadu,21,1,GEN,K M Erasagopal,M,0,,DMK,48462,#800000,70385
 1971,Kancheepuram,Tamil Nadu,22,1,GEN,G. V. M. Annamalai,M,0,,DMK,44009,#800000,83800
 1971,Kunnathur,Tamil Nadu,23,1,SC,M. Gopal,M,0,,DMK,47126,#800000,73091
 1971,Sriperumbudur,Tamil Nadu,24,1,GEN,Di. Rajarathanam,M,0,,DMK,46617,#800000,78818
@@ -261,14 +261,14 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Thiruvallur,Tamil Nadu,26,1,SC,S. M. Dorairaj,M,0,,DMK,36496,#800000,58110
 1971,Tiruttani,Tamil Nadu,27,1,GEN,E. S. Thyagarajan,M,0,,DMK,43436,#800000,70374
 1971,Arakkonam,Tamil Nadu,28,1,GEN,Balaraman N. S.,M,0,,DMK,42256,#800000,70294
-1971,Sholinghur,Tamil Nadu,29,1,GEN,A. M. Ponnurangam,M,0,,NCO,36776,#222,66397
+1971,Sholinghur,Tamil Nadu,29,1,GEN,A. M. Ponnurangam,M,0,,NCO,36776,#1F77B4,66397
 1971,Ranipet,Tamil Nadu,30,1,GEN,K. A Wahab,M,0,,IND,36357,#888888,67379
 1971,Arcot,Tamil Nadu,31,1,GEN,N. Veerasami,M,0,,DMK,39126,#800000,67700
 1971,Katpadi,Tamil Nadu,32,1,GEN,Durai Murugan,M,0,,DMK,37487,#800000,64868
 1971,Gudiyattam,Tamil Nadu,33,1,GEN,Duraisami F. K.,M,0,,DMK,34954,#800000,62000
 1971,Pernambattu,Tamil Nadu,34,1,SC,N. Krishnan,M,0,,DMK,35804,#800000,60063
 1971,Natrampalli,Tamil Nadu,35,1,GEN,T. C. Thimmaraya Gounder,M,0,,DMK,33303,#800000,60185
-1971,Tiruppattur,Tamil Nadu,36,1,GEN,Ramasamy G.,M,0,,DMK,37120,#800000,144004
+1971,Tiruppattur,Tamil Nadu,36,1,GEN,Ramasamy G.,M,0,,DMK,37120,#800000,66840
 1971,Vaniyambadi,Tamil Nadu,37,1,GEN,M. A. Latheef,M,0,,IND,27899,#888888,49702
 1971,Ambur,Tamil Nadu,38,1,SC,M. Panneerselvam,M,0,,DMK,32937,#800000,59697
 1971,Kaniyambadi,Tamil Nadu,39,1,GEN,Thopputhiruvengadam,M,0,,DMK,34435,#800000,63640
@@ -276,7 +276,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Arani,Tamil Nadu,41,1,GEN,A. C. Narasimhan,M,0,,DMK,37682,#800000,62281
 1971,Cheyyar,Tamil Nadu,42,1,GEN,K. Govindan,M,0,,DMK,39978,#800000,71655
 1971,Vandavasi,Tamil Nadu,43,1,SC,V. Rajagopal,M,0,,DMK,41452,#800000,64917
-1971,Perambalur,Tamil Nadu,44,1,GEN,P. Ettiappan,M,0,,DMK,39160,#800000,131340
+1971,Peranamallur,Tamil Nadu,44,1,GEN,P. Ettiappan,M,0,,DMK,39160,#800000,60717
 1971,Polur,Tamil Nadu,45,1,GEN,T. P. Srinivasan,M,0,,DMK,34728,#800000,59960
 1971,Chengam,Tamil Nadu,46,1,SC,C. Pandurangam,M,0,,DMK,32260,#800000,52551
 1971,Thandarambattu,Tamil Nadu,47,1,GEN,M. S. Radhakrishnan,M,0,,DMK,37991,#800000,64591
@@ -361,7 +361,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Palani,Tamil Nadu,126,1,SC,Palanisamy C.,M,0,,DMK,38919,#800000,69764
 1971,Periyakulam,Tamil Nadu,127,1,GEN,Anbucheliyan,M,0,,DMK,37926,#800000,66718
 1971,Bodinayakkanur,Tamil Nadu,128,1,GEN,Surulivel M.,M,0,,DMK,35427,#800000,65091
-1971,Cumbum,Tamil Nadu,129,1,GEN,Gopal K. P.,M,0,,NCO,34483,#222,70562
+1971,Cumbum,Tamil Nadu,129,1,GEN,Gopal K. P.,M,0,,NCO,34483,#1F77B4,70562
 1971,Theni,Tamil Nadu,130,1,GEN,Palanivelrajan,M,0,,DMK,45785,#800000,71533
 1971,Andipatti,Tamil Nadu,131,1,GEN,Gurusamy Naidu N. V.,M,0,,SWA,20814,#222,57225
 1971,Sedapatti,Tamil Nadu,132,1,GEN,Thavamani Thevar V.,M,0,,FBL,20334,#222,55459
@@ -376,7 +376,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Melur South,Tamil Nadu,141,1,SC,O. P. Raman,M,0,,DMK,45090,#800000,76685
 1971,Melur North,Tamil Nadu,142,1,GEN,P. Malaichamy,M,0,,DMK,37337,#800000,74547
 1971,Vadamadurai,Tamil Nadu,143,1,GEN,Nagarajan K.,M,0,,DMK,35989,#800000,61259
-1971,Dindigul,Tamil Nadu,144,1,GEN,Sundaram Pillai O. N.,M,0,,NCO,27775,#222,69778
+1971,Dindigul,Tamil Nadu,144,1,GEN,Sundaram Pillai O. N.,M,0,,NCO,27775,#1F77B4,69778
 1971,Athoor,Tamil Nadu,145,1,GEN,Nachiappan A. M. T.,M,0,,DMK,42195,#800000,70675
 1971,Vedasandur,Tamil Nadu,146,1,GEN,Muthusamy P.,M,0,,DMK,36746,#800000,67821
 1971,Aravakurichi,Tamil Nadu,147,1,GEN,Abdul Jabbar,M,0,,MUL,34164,#222,56846
@@ -384,28 +384,28 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Thottiyam,Tamil Nadu,149,1,GEN,S. K. Vadivelu,M,0,,DMK,39821,#800000,77398
 1971,Musiri,Tamil Nadu,150,1,GEN,P. S. Muthuselvan,M,0,,DMK,35091,#800000,64641
 1971,Uppiliapuram,Tamil Nadu,151,1,GEN,T. P. Alagamuthu,M,0,,DMK,42861,#800000,83065
-1971,Perambalur,Tamil Nadu,152,1,SC,J. S. Raju,M,0,,DMK,39043,#800000,131340
+1971,Perambalur,Tamil Nadu,152,1,SC,J. S. Raju,M,0,,DMK,39043,#800000,70623
 1971,Varahur,Tamil Nadu,153,1,GEN,K. Palanivelan,M,0,,DMK,42733,#800000,72538
 1971,Andimadam,Tamil Nadu,154,1,GEN,S. Sadasiva Padayachi,M,0,,DMK,39313,#800000,74103
 1971,Jayankondam,Tamil Nadu,155,1,SC,A. Chinnasamy,M,0,,DMK,41627,#800000,72044
 1971,Ariyalur,Tamil Nadu,156,1,GEN,G. Sivaperumal,M,0,,DMK,48320,#800000,75287
 1971,Lalgudi,Tamil Nadu,157,1,GEN,Muthamil Selvan Vn.,M,0,,DMK,40213,#800000,73775
-1971,Srirangam,Tamil Nadu,158,1,SC,Jothi Venkatachalam,M,0,,NCO,36172,#222,70615
+1971,Srirangam,Tamil Nadu,158,1,SC,Jothi Venkatachalam,M,0,,NCO,36172,#1F77B4,70615
 1971,Tiruchirapalli-I,Tamil Nadu,159,1,GEN,Krishnamurthy V.,M,0,,DMK,38099,#800000,72358
 1971,Tiruchirapalli-Ii,Tamil Nadu,160,1,GEN,Dharmalingam A. Pi.,M,0,,DMK,40593,#800000,72829
 1971,Thiruverambur,Tamil Nadu,161,1,GEN,Kamaichi,M,0,,DMK,43233,#800000,81491
 1971,Kulithalai,Tamil Nadu,162,1,GEN,Kandaswamy M.,M,0,,DMK,44198,#800000,82343
 1971,Krishnarajapuram,Tamil Nadu,163,1,SC,P. Soundara Pandian,M,0,,DMK,36177,#800000,65737
-1971,Kadavur,Tamil Nadu,164,1,GEN,Karuraigiri Muthiah,M,0,,NCO,31752,#222,61515
+1971,Kadavur,Tamil Nadu,164,1,GEN,Karuraigiri Muthiah,M,0,,NCO,31752,#1F77B4,61515
 1971,Viralimalai,Tamil Nadu,165,1,GEN,Ilechezhiyan V. S.,M,0,,DMK,41813,#800000,72757
 1971,Thirumaiyam,Tamil Nadu,166,1,GEN,A. Thiagarajan,M,0,,DMK,38630,#800000,72615
 1971,Alangudi,Tamil Nadu,167,1,GEN,K. V. Subbiah,M,0,,DMK,43279,#800000,79826
-1971,Pudukkottai,Tamil Nadu,168,1,GEN,Sathiamoorthy M.,M,0,,NCO,34680,#222,74095
+1971,Pudukkottai,Tamil Nadu,168,1,GEN,Sathiamoorthy M.,M,0,,NCO,34680,#1F77B4,74095
 1971,Thiruvaiyaru,Tamil Nadu,169,1,GEN,Ilangovan G.,M,0,,DMK,37139,#800000,73186
 1971,Thanjavur,Tamil Nadu,170,1,GEN,Natarajan S.,M,0,,DMK,38288,#800000,68711
 1971,Papanasam,Tamil Nadu,171,1,GEN,N. Ganapathy,M,0,,DMK,43497,#800000,77381
 1971,Valangiman,Tamil Nadu,172,1,SC,N. Somasundaram,M,0,,DMK,38519,#800000,66291
-1971,Kumbakonam,Tamil Nadu,173,1,GEN,N. Kasiraman,M,0,,NCO,39755,#222,77265
+1971,Kumbakonam,Tamil Nadu,173,1,GEN,N. Kasiraman,M,0,,NCO,39755,#1F77B4,77265
 1971,Aduthurai,Tamil Nadu,174,1,GEN,K. Rajamanickam,M,0,,DMK,40023,#800000,78083
 1971,Sirkazhi,Tamil Nadu,175,1,SC,Vadivel S.,M,0,,CPI,31977,#DE0000,60053
 1971,Sembanarkoil,Tamil Nadu,176,1,GEN,Sampath T. V.,M,0,,DMK,33937,#800000,60298
@@ -424,7 +424,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Pattukkottai,Tamil Nadu,189,1,GEN,Marimuthu A. R.,M,0,,PSP,44565,#222,70794
 1971,Peravurani,Tamil Nadu,190,1,GEN,Chelliah,M,0,,IND,32025,#888888,87832
 1971,Aranthangi,Tamil Nadu,191,1,GEN,S. Ramanathan,M,0,,DMK,49322,#800000,88377
-1971,Tiruppattur,Tamil Nadu,192,1,GEN,S. Madhavan,M,0,,DMK,54117,#800000,144004
+1971,Tirupathur,Tamil Nadu,192,1,GEN,S. Madhavan,M,0,,DMK,54117,#800000,77164
 1971,Karaikudi,Tamil Nadu,193,1,GEN,C. T. Chidambaram,M,0,,DMK,39986,#800000,66844
 1971,Tiruvadanai,Tamil Nadu,194,1,GEN,Pr. Shanmugham,M,0,,DMK,40417,#800000,74401
 1971,Ilayangudi,Tamil Nadu,195,1,GEN,Malaikannan V.,M,0,,DMK,45551,#800000,73482
@@ -449,7 +449,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Kadayanallur,Tamil Nadu,214,1,GEN,Subbbiah Mudaliar A. R.,M,0,,DMK,37649,#800000,71728
 1971,Tenkasi,Tamil Nadu,215,1,GEN,Kathiravan Alias Samshudeen,M,0,,DMK,39110,#800000,70260
 1971,Alangulam,Tamil Nadu,216,1,GEN,Arunachalam V.,M,0,,DMK,36526,#800000,71214
-1971,Ambasamudram,Tamil Nadu,217,1,GEN,Sangumuthu Thevar S.,M,0,,NCO,31192,#222,67047
+1971,Ambasamudram,Tamil Nadu,217,1,GEN,Sangumuthu Thevar S.,M,0,,NCO,31192,#1F77B4,67047
 1971,Cheranmahadevi,Tamil Nadu,218,1,GEN,Sivaprakasam D. S. A.,M,0,,SWA,34739,#222,69285
 1971,Gangaikondan,Tamil Nadu,219,1,SC,Karuppiah A.,M,0,,DMK,32963,#800000,56032
 1971,Tirunelveli,Tamil Nadu,220,1,GEN,P. Padmanabhan,M,0,,DMK,43325,#800000,69698
@@ -462,11 +462,11 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1971,Radhapuram,Tamil Nadu,227,1,GEN,Karthesan V.,M,0,,DMK,33678,#800000,65167
 1971,Kanniyakumari,Tamil Nadu,228,1,GEN,Rajah Pillai K.,M,0,,DMK,35884,#800000,70220
 1971,Nagercoil,Tamil Nadu,229,1,GEN,Moses M.,M,0,,SWA,34726,#222,72215
-1971,Kollachal,Tamil Nadu,230,1,GEN,Pauliah A.,M,0,,NCO,37401,#222,68026
-1971,Padmanabhapuram,Tamil Nadu,231,1,GEN,Swamdihas Nadar A.,M,0,,NCO,32416,#222,57833
-1971,Thiruvattar,Tamil Nadu,232,1,GEN,James J.,M,0,,NCO,36097,#222,60500
-1971,Vilavancode,Tamil Nadu,233,1,GEN,Ronnappan Nadar R.,M,0,,NCO,32139,#222,52010
-1971,Killiyoor,Tamil Nadu,234,1,GEN,Dennis N.,M,0,,NCO,34573,#222,55536
+1971,Kollachal,Tamil Nadu,230,1,GEN,Pauliah A.,M,0,,NCO,37401,#1F77B4,68026
+1971,Padmanabhapuram,Tamil Nadu,231,1,GEN,Swamdihas Nadar A.,M,0,,NCO,32416,#1F77B4,57833
+1971,Thiruvattar,Tamil Nadu,232,1,GEN,James J.,M,0,,NCO,36097,#1F77B4,60500
+1971,Vilavancode,Tamil Nadu,233,1,GEN,Ronnappan Nadar R.,M,0,,NCO,32139,#1F77B4,52010
+1971,Killiyoor,Tamil Nadu,234,1,GEN,Dennis N.,M,0,,NCO,34573,#1F77B4,55536
 1977,Royapuram,Tamil Nadu,1,1,GEN,P. Ponnurangam,M,0,,DMK,24217,#800000,72194
 1977,Harbour,Tamil Nadu,2,1,GEN,A. Selvarajan,M,0,,DMK,23845,#800000,64959
 1977,Dr. Radhakrishnan Nagar,Tamil Nadu,3,1,GEN,Isari Velan,M,0,,ADMK,28416,#9DBC2A,79881
@@ -507,7 +507,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1977,Pernambattu,Tamil Nadu,38,1,SC,I. Tamilarsan,M,0,,ADMK,24536,#9DBC2A,65939
 1977,Vaniyambadi,Tamil Nadu,39,1,GEN,M. Abdul Latheef,M,0,,IND,26620,#888888,62108
 1977,Natrampalli,Tamil Nadu,40,1,GEN,T. Ambazhagan,M,0,,ADMK,31015,#9DBC2A,69800
-1977,Tiruppattur,Tamil Nadu,41,1,GEN,B.Sundaram,M,0,,DMK,19855,#800000,151359
+1977,Tiruppattur,Tamil Nadu,41,1,GEN,B.Sundaram,M,0,,DMK,19855,#800000,72761
 1977,Chengam,Tamil Nadu,42,1,SC,T. Swamikannu,M,0,,ADMK,22789,#9DBC2A,49158
 1977,Thandarambattu,Tamil Nadu,43,1,GEN,D. Venugopal,M,0,,DMK,28605,#800000,75263
 1977,Tiruvannamalai,Tamil Nadu,44,1,GEN,P.U. Shanmugam,M,0,,DMK,27148,#800000,84248
@@ -660,7 +660,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1977,Pudukkottai,Tamil Nadu,191,1,GEN,R. Rajkumar Vijaya Raghunatha Tondaman,M,0,,INC,36406,#019733,85190
 1977,Alangudi,Tamil Nadu,192,1,GEN,T. Pushparaju,M,0,,INC,37634,#019733,96652
 1977,Aranthangi,Tamil Nadu,193,1,GEN,S. Thirunavukkarasu,M,0,,ADMK,35468,#9DBC2A,94706
-1977,Tiruppattur,Tamil Nadu,194,1,GEN,S. Shanmugam Koothagudi,M,0,,CPI,21579,#DE0000,151359
+1977,Tirupathur,Tamil Nadu,194,1,GEN,S. Shanmugam Koothagudi,M,0,,CPI,21579,#DE0000,78598
 1977,Karaikudi,Tamil Nadu,195,1,GEN,P. Kaliyappan,M,0,,ADMK,27403,#9DBC2A,85557
 1977,Tiruvadanai,Tamil Nadu,196,1,GEN,Kr. Rm. Kariya Manickam Ambalam,M,0,,INC,32386,#019733,88126
 1977,Ilayangudi,Tamil Nadu,197,1,GEN,R. Sivasamy,M,0,,CPI,17677,#DE0000,72983
@@ -741,7 +741,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1980,Pernambattu,Tamil Nadu,38,1,SC,"Moorthy, G",M,0,,ADMK,30048,#9DBC2A,66323
 1980,Vaniyambadi,Tamil Nadu,39,1,GEN,"Kulasekara Pandiyan, N",M,0,,ADMK,38049,#9DBC2A,72424
 1980,Natrampalli,Tamil Nadu,40,1,GEN,"Anbazhagan, T",M,0,,ADMK,42786,#9DBC2A,85881
-1980,Tiruppattur,Tamil Nadu,41,1,GEN,"Sundaram, B",M,0,,DMK,42786,#800000,159934
+1980,Tiruppattur,Tamil Nadu,41,1,GEN,"Sundaram, B",M,0,,DMK,42786,#800000,78158
 1980,Chengam,Tamil Nadu,42,1,SC,"Swamikannu, T",M,0,,ADMK,26823,#9DBC2A,55816
 1980,Thandarambattu,Tamil Nadu,43,1,GEN,"Venugopal, D",M,0,,DMK,46326,#800000,72540
 1980,Tiruvannamalai,Tamil Nadu,44,1,GEN,"Narayanasamy, K",M,0,,INC,54437,#019733,92609
@@ -894,7 +894,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1980,Pudukkottai,Tamil Nadu,191,1,GEN,Rajkumar Vijaya Regunatha Thondaiman,M,0,,INC,47660,#019733,95877
 1980,Alangudi,Tamil Nadu,192,1,GEN,"Thirumaran, P.",M,0,,ADMK,59206,#9DBC2A,107011
 1980,Aranthangi,Tamil Nadu,193,1,GEN,"Thirunavukkarasu, S.",M,0,,ADMK,50792,#9DBC2A,102604
-1980,Tiruppattur,Tamil Nadu,194,1,GEN,"Valmigi, V.",M,0,,INC,34342,#019733,159934
+1980,Tirupathur,Tamil Nadu,194,1,GEN,"Valmigi, V.",M,0,,INC,34342,#019733,81776
 1980,Karaikudi,Tamil Nadu,195,1,GEN,"Chidambaram, C. T.",M,0,,DMK,46541,#800000,89886
 1980,Tiruvadanai,Tamil Nadu,196,1,GEN,"Anguchamy, S.",M,0,,ADMK,34392,#9DBC2A,90601
 1980,Ilayangudi,Tamil Nadu,197,1,GEN,"Sivasamy, S.",M,0,,CPI,34437,#DE0000,74048
@@ -975,7 +975,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1984,Pernambattu,Tamil Nadu,38,1,SC,K. Thamizharasan,M,0,,ADMK,47813,#9DBC2A,85128
 1984,Vaniyambadi,Tamil Nadu,39,1,GEN,H. Abdul Majeed,M,0,,INC,39141,#019733,86283
 1984,Natrampalli,Tamil Nadu,40,1,GEN,T. Ambazhagan,M,0,,ADMK,56503,#9DBC2A,96512
-1984,Tiruppattur,Tamil Nadu,41,1,GEN,Shanmugam Y.,M,0,,INC,46884,#019733,181629
+1984,Tiruppattur,Tamil Nadu,41,1,GEN,Shanmugam Y.,M,0,,INC,46884,#019733,95649
 1984,Chengam,Tamil Nadu,42,1,SC,T. Swamikannu,M,0,,ADMK,45770,#9DBC2A,74520
 1984,Thandarambattu,Tamil Nadu,43,1,GEN,E. Vachiravelu,M,0,,ADMK,53422,#9DBC2A,90613
 1984,Tiruvannamalai,Tamil Nadu,44,1,GEN,A. S. Ravindran,M,0,,INC,49782,#019733,97027
@@ -1128,7 +1128,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1984,Pudukkottai,Tamil Nadu,191,1,GEN,J.Mohamed Gani,M,0,,INC,63877,#019733,102418
 1984,Alangudi,Tamil Nadu,192,1,GEN,Venkatachalam,M,0,,ADMK,74202,#9DBC2A,112667
 1984,Aranthangi,Tamil Nadu,193,1,GEN,"Thirunvukkarasu, S.",M,0,,ADMK,70101,#9DBC2A,111844
-1984,Tiruppattur,Tamil Nadu,194,1,GEN,"Madhavan, S.",M,0,,ADMK,51581,#9DBC2A,181629
+1984,Tirupathur,Tamil Nadu,194,1,GEN,"Madhavan, S.",M,0,,ADMK,51581,#9DBC2A,85980
 1984,Karaikudi,Tamil Nadu,195,1,GEN,S.P. Durairasu,M,0,,ADMK,47760,#9DBC2A,97504
 1984,Tiruvadanai,Tamil Nadu,196,1,GEN,"Sornalingam, K.",M,0,,INC,47618,#019733,99615
 1984,Ilayangudi,Tamil Nadu,197,1,GEN,"Anbalangan, P.",M,0,,ADMK,40974,#9DBC2A,84234
@@ -1209,7 +1209,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1989,Pernambattu,Tamil Nadu,38,1,SC,"Govindan, V.",M,0,,DMK,42264,#800000,98431
 1989,Vaniyambadi,Tamil Nadu,39,1,GEN,"Abdul Samad, P.",M,0,,DMK,39723,#800000,96421
 1989,Natrampalli,Tamil Nadu,40,1,GEN,"Mahendran, R.",M,0,,DMK,36774,#800000,114931
-1989,Tiruppattur,Tamil Nadu,41,1,GEN,"Sundaram, B.",M,0,,DMK,40998,#800000,211903
+1989,Tiruppattur,Tamil Nadu,41,1,GEN,"Sundaram, B.",M,0,,DMK,40998,#800000,114148
 1989,Chengam,Tamil Nadu,42,1,SC,"Settu, M.",M,0,,JNP,26256,#9A9E56,75584
 1989,Thandarambattu,Tamil Nadu,43,1,GEN,"Ponnumudi, D.",M,0,,DMK,48048,#800000,105328
 1989,Tiruvannamalai,Tamil Nadu,44,1,GEN,"Pitchandi, K.",M,0,,DMK,57556,#800000,105394
@@ -1362,7 +1362,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1989,Pudukkottai,Tamil Nadu,191,1,GEN,Periyannan A.,M,0,,DMK,45534,#800000,125661
 1989,Alangudi,Tamil Nadu,192,1,GEN,Chandrasekaran K.B. V.Sc.,M,0,,DMK,37361,#800000,128050
 1989,Aranthangi,Tamil Nadu,193,1,GEN,"Thirunavukkarasu, S.",M,0,,ADK(JL),61730,#222,129746
-1989,Tiruppattur,Tamil Nadu,194,1,GEN,Thennarasu S.S.,M,0,,DMK,33639,#800000,211903
+1989,Tirupathur,Tamil Nadu,194,1,GEN,Thennarasu S.S.,M,0,,DMK,33639,#800000,97755
 1989,Karaikudi,Tamil Nadu,195,1,GEN,Narayanan Rm.,M,0,,DMK,45790,#800000,111029
 1989,Tiruvadanai,Tamil Nadu,196,1,GEN,Eramasamy Ambalam Kr.,M,0,,INC,38161,#019733,107314
 1989,Ilayangudi,Tamil Nadu,197,1,GEN,Sathiah M.,M,0,,DMK,41914,#800000,91199
@@ -1443,7 +1443,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1991,Pernambattu,Tamil Nadu,38,1,SC,Parandaman J.,M,0,,ADMK,67398,#9DBC2A,99784
 1991,Vaniyambadi,Tamil Nadu,39,1,GEN,Sampath E.,M,0,,INC,53354,#019733,97046
 1991,Natrampalli,Tamil Nadu,40,1,GEN,Indrakumari R.,F,0,,ADMK,81446,#9DBC2A,119682
-1991,Tiruppattur,Tamil Nadu,41,1,GEN,Sundarvel A.K.C.,M,0,,ADMK,69402,#9DBC2A,207314
+1991,Tiruppattur,Tamil Nadu,41,1,GEN,Sundarvel A.K.C.,M,0,,ADMK,69402,#9DBC2A,111503
 1991,Chengam,Tamil Nadu,42,1,SC,P. Veera Pandiyan,M,0,,ADMK,54611,#9DBC2A,92081
 1991,Thandarambattu,Tamil Nadu,43,1,GEN,Sundaram M.K.,M,0,,ADMK,69433,#9DBC2A,108047
 1991,Tiruvannamalai,Tamil Nadu,44,1,GEN,Kannan V.,M,0,,INC,67034,#019733,113737
@@ -1596,7 +1596,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1991,Pudukkottai,Tamil Nadu,191,1,GEN,Swaminathan C.,M,0,,INC,82205,#019733,123728
 1991,Alangudi,Tamil Nadu,192,1,GEN,Shanmuganathan S.,M,0,,ADMK,88684,#9DBC2A,128837
 1991,Aranthangi,Tamil Nadu,193,1,GEN,S. Thirunavukkarasu,M,0,,TMK,73571,#222,130301
-1991,Tiruppattur,Tamil Nadu,194,1,GEN,S. Kannappan,M,0,,ADMK,63297,#9DBC2A,207314
+1991,Tirupathur,Tamil Nadu,194,1,GEN,S. Kannappan,M,0,,ADMK,63297,#9DBC2A,95811
 1991,Karaikudi,Tamil Nadu,195,1,GEN,Karpagam M.,F,0,,ADMK,71912,#9DBC2A,109483
 1991,Tiruvadanai,Tamil Nadu,196,1,GEN,Ramasamy Ambalam,M,0,,INC,65723,#019733,104461
 1991,Ilayangudi,Tamil Nadu,197,1,GEN,Ma.Sa.Ma. Ramachandran,M,0,,ADMK,52994,#9DBC2A,85582
@@ -1677,7 +1677,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1996,Pernambattu,Tamil Nadu,38,1,SC,V. Govindan,M,0,,DMK,63655,#800000,109071
 1996,Vaniyambadi,Tamil Nadu,39,1,GEN,"Abdul Latheef, M.",M,0,,DMK,74223,#800000,110189
 1996,Natrampalli,Tamil Nadu,40,1,GEN,R. Mahendran,M,0,,DMK,50118,#800000,126395
-1996,Tiruppattur,Tamil Nadu,41,1,GEN,"Shanmugam, G.",M,0,,DMK,66207,#800000,227716
+1996,Tiruppattur,Tamil Nadu,41,1,GEN,"Shanmugam, G.",M,0,,DMK,66207,#800000,123897
 1996,Chengam,Tamil Nadu,42,1,SC,"Nannan, K.V.",M,0,,DMK,58958,#800000,99747
 1996,Thandarambattu,Tamil Nadu,43,1,GEN,"Manivarma, K.",M,0,,TMC(M),72636,#000080,115376
 1996,Tiruvannamalai,Tamil Nadu,44,1,GEN,"Pitchandi, K.",M,0,,DMK,83731,#800000,125822
@@ -1830,7 +1830,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 1996,Pudukkottai,Tamil Nadu,191,1,GEN,Periannan A.,M,0,,DMK,79205,#800000,139794
 1996,Alangudi,Tamil Nadu,192,1,GEN,Venkatachalam A.,M,0,,IND,35345,#888888,138176
 1996,Aranthangi,Tamil Nadu,193,1,GEN,"Thirunavukkarasu, S.",M,0,,ADMK,70260,#9DBC2A,140242
-1996,Tiruppattur,Tamil Nadu,194,1,GEN,R. Sivaraman,M,0,,DMK,58925,#800000,227716
+1996,Tirupathur,Tamil Nadu,194,1,GEN,R. Sivaraman,M,0,,DMK,58925,#800000,103819
 1996,Karaikudi,Tamil Nadu,195,1,GEN,"Sundaram, N.",M,0,,TMC(M),76888,#000080,122076
 1996,Tiruvadanai,Tamil Nadu,196,1,GEN,"Ramasamy, Kr.",M,0,,TMC(M),68837,#000080,111436
 1996,Ilayangudi,Tamil Nadu,197,1,GEN,"Tamilkudimagan, M.",M,0,,DMK,43080,#800000,87260
@@ -1911,7 +1911,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 2001,Pernambattu,Tamil Nadu,38,1,SC,Kanagathara (Selvi). C,F,0,,ADMK,65366,#9DBC2A,110658
 2001,Vaniyambadi,Tamil Nadu,39,1,GEN,Abdul Latheef. M.,M,0,,IND,54218,#888888,112346
 2001,Natrampalli,Tamil Nadu,40,1,GEN,Natarajan S,M,0,,PMK,67046,#F0CC52,136938
-2001,Tiruppattur,Tamil Nadu,41,1,GEN,Raja. T.K.,M,0,,PMK,59840,#F0CC52,228291
+2001,Tiruppattur,Tamil Nadu,41,1,GEN,Raja. T.K.,M,0,,PMK,59840,#F0CC52,129674
 2001,Chengam,Tamil Nadu,42,1,SC,Polur Varadhan,M,0,,INC,54145,#019733,111797
 2001,Thandarambattu,Tamil Nadu,43,1,GEN,Velu,M,0,,DMK,63599,#800000,130179
 2001,Tiruvannamalai,Tamil Nadu,44,1,GEN,Pitchandi.K.,M,0,,DMK,64115,#800000,134281
@@ -2064,7 +2064,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 2001,Pudukkottai,Tamil Nadu,191,1,GEN,Dr. Vijayabasker.C,M,0,,ADMK,77627,#9DBC2A,143864
 2001,Alangudi,Tamil Nadu,192,1,GEN,Venkadachalam.A.,M,0,,ADMK,59631,#9DBC2A,139735
 2001,Aranthangi,Tamil Nadu,193,1,GEN,Arasan P.,M,0,,MDMK,58499,#835C91,127204
-2001,Tiruppattur,Tamil Nadu,194,1,GEN,Umadhevan. Kk,M,0,,ADMK,50165,#9DBC2A,228291
+2001,Tirupathur,Tamil Nadu,194,1,GEN,Umadhevan. Kk,M,0,,ADMK,50165,#9DBC2A,98617
 2001,Karaikudi,Tamil Nadu,195,1,GEN,Raja. H,M,0,,BJP,54093,#ff7f0e,111753
 2001,Tiruvadanai,Tamil Nadu,196,1,GEN,Ramasamy K.R.,M,0,,TMC(M),43536,#000080,111294
 2001,Ilayangudi,Tamil Nadu,197,1,GEN,Nadarajan. V.D.,M,0,,ADMK,45342,#9DBC2A,94743
@@ -2145,7 +2145,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 2006,Pernambattu,Tamil Nadu,38,1,SC,Chinnasamy.A,M,53,SC,DMK,65805,#800000,131491
 2006,Vaniyambadi,Tamil Nadu,39,1,GEN,Abdul Basith.H,M,40,GEN,DMK,69837,#800000,131360
 2006,Natrampalli,Tamil Nadu,40,1,GEN,Sooriyakumar.N.K.R,M,46,GEN,DMK,78689,#800000,154916
-2006,Tiruppattur,Tamil Nadu,41,1,GEN,Raja.T.K,M,41,GEN,PMK,71932,#F0CC52,255076
+2006,Tiruppattur,Tamil Nadu,41,1,GEN,Raja.T.K,M,41,GEN,PMK,71932,#F0CC52,147764
 2006,Chengam,Tamil Nadu,42,1,SC,Polur Varadhan M,M,54,SC,INC,53366,#019733,124842
 2006,Thandarambattu,Tamil Nadu,43,1,GEN,Velu E.V,M,61,GEN,DMK,81592,#800000,143976
 2006,Tiruvannamalai,Tamil Nadu,44,1,GEN,Pitchandi K,M,51,GEN,DMK,74773,#800000,149893
@@ -2298,7 +2298,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 2006,Pudukkottai,Tamil Nadu,191,1,GEN,"Nedunchezhian, R",M,35,GEN,ADMK,64319,#9DBC2A,152502
 2006,Alangudi,Tamil Nadu,192,1,GEN,"Rajasekaran, S",M,59,GEN,CPI,60122,#DE0000,152986
 2006,Aranthangi,Tamil Nadu,193,1,GEN,Udayam Shanmugam,M,51,GEN,DMK,63333,#800000,144402
-2006,Tiruppattur,Tamil Nadu,194,1,GEN,Periyakaruppan.K.R,M,46,GEN,DMK,48128,#800000,255076
+2006,Tirupathur,Tamil Nadu,194,1,GEN,Periyakaruppan.K.R,M,46,GEN,DMK,48128,#800000,107312
 2006,Karaikudi,Tamil Nadu,195,1,GEN,Sundaram.N,M,51,GEN,INC,64013,#019733,131432
 2006,Tiruvadanai,Tamil Nadu,196,1,GEN,Ramasamy.K.R,M,53,GEN,INC,55198,#019733,117605
 2006,Ilayangudi,Tamil Nadu,197,1,GEN,Rajakannappan R.S,M,57,GEN,DMK,50952,#800000,97465
@@ -2386,9 +2386,9 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 2011,Kilvaithinankuppam,Tamil Nadu,45,1,SC,Thamizharasan.C.K,M,58,SC,ADMK,72002,#9DBC2A,140848
 2011,Gudiyattam,Tamil Nadu,46,1,SC,K. Lingamuthu,M,57,SC,CPI,79416,#DE0000,161833
 2011,Vaniyambadi,Tamil Nadu,47,1,GEN,Sampath Kumar .Govi,M,50,GEN,ADMK,80563,#9DBC2A,147405
-2011,Ambur,Tamil Nadu,48,1,GEN,Aslam Basha.A,M,42,GEN,MDMK,60361,#835C91,137149
+2011,Ambur,Tamil Nadu,48,1,GEN,Aslam Basha.A,M,42,GEN,MNMK,60361,#222,137149
 2011,Jolarpet,Tamil Nadu,49,1,GEN,"Veeramani, K.C.",M,46,GEN,ADMK,86273,#9DBC2A,156501
-2011,Tiruppattur,Tamil Nadu,50,1,GEN,K.G.Ramesh,M,47,GEN,ADMK,82895,#9DBC2A,322889
+2011,Tiruppattur,Tamil Nadu,50,1,GEN,K.G.Ramesh,M,47,GEN,ADMK,82895,#9DBC2A,149869
 2011,Uthangarai,Tamil Nadu,51,1,SC,Manoranjitham,F,36,SC,ADMK,90381,#9DBC2A,153391
 2011,Bargur,Tamil Nadu,52,1,GEN,K.E.Krishnamurthi,M,57,GEN,ADMK,88711,#9DBC2A,158363
 2011,Krishnagiri,Tamil Nadu,53,1,GEN,K.P.Munusamy,M,58,GEN,ADMK,89776,#9DBC2A,160379
@@ -2523,7 +2523,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 2011,Alangudi,Tamil Nadu,182,1,GEN,Krishnan.Kupa,M,60,GEN,ADMK,57250,#9DBC2A,138203
 2011,Aranthangi,Tamil Nadu,183,1,GEN,Raja Nayagam M,M,46,GEN,ADMK,67559,#9DBC2A,128027
 2011,Karaikudi,Tamil Nadu,184,1,GEN,Palanichamy.Cholan.Ct,M,48,GEN,ADMK,86104,#9DBC2A,168797
-2011,Tiruppattur,Tamil Nadu,185,1,GEN,Periyakaruppan.Kr,M,52,GEN,DMK,83485,#800000,322889
+2011,Tirupathur,Tamil Nadu,185,1,GEN,Periyakaruppan.Kr,M,52,GEN,DMK,83485,#800000,173020
 2011,Sivaganga,Tamil Nadu,186,1,GEN,Gunasekaran.S,M,55,GEN,CPI,75176,#DE0000,157216
 2011,Manamadurai,Tamil Nadu,187,1,SC,Gunasekaran.M,M,48,SC,ADMK,83535,#9DBC2A,161626
 2011,Melur,Tamil Nadu,188,1,GEN,Samy R,M,45,GEN,ADMK,85869,#9DBC2A,154050
@@ -2549,7 +2549,7 @@ year,constituency,ST_NAME,AC_NO,rank,AC_TYPE,name,SEX,AGE,CATEGORY,party,votes,c
 2011,Tiruchuli,Tamil Nadu,208,1,GEN,Thangam Thenarasu,M,44,GEN,DMK,81613,#800000,150146
 2011,Paramakudi,Tamil Nadu,209,1,SC,Sundararaj.S (Dr),M,60,SC,ADMK,86150,#9DBC2A,148855
 2011,Tiruvadanai,Tamil Nadu,210,1,GEN,Thangavelan Suba,M,75,GEN,DMK,64165,#800000,156072
-2011,Ramanathapuram,Tamil Nadu,211,1,GEN,Jawahirulla,M,51,GEN,MDMK,65831,#835C91,160703
+2011,Ramanathapuram,Tamil Nadu,211,1,GEN,Jawahirulla,M,51,GEN,MNMK,65831,#222,160703
 2011,Mudhukulathur,Tamil Nadu,212,1,GEN,Murugan M,M,39,GEN,ADMK,83225,#9DBC2A,177555
 2011,Vilathikulam,Tamil Nadu,213,1,GEN,Markandayan. V,M,34,GEN,ADMK,72753,#9DBC2A,133292
 2011,Thoothukkudi,Tamil Nadu,214,1,GEN,Chellapandian S.T,M,54,GEN,ADMK,89010,#9DBC2A,156774
