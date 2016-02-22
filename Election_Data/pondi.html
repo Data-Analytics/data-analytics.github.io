@@ -65,9 +65,6 @@ text {
     font-family: sans-serif;
 }
 
-.x.axis path {
-  display: none;
-}
 .heading-part {
     color: #000;
     font-family: 'Droid Serif', serif;
@@ -552,13 +549,9 @@ var svg = d3.select(options.container).append("svg")
 	var constituency_name = '';
 	
     options.data.forEach(function(o) {
-      
-	  constituency_name = o.AC_NAME;
-		  
+		constituency_name = o.AC_NAME;
 	  });
           
-		  
-	
 	var layers = d3.layout.stack()([options.value].map(function(period) {
 	    return options.data.map(function(d) {
 		  return {x: d[options.groupby]+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : d.color, party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes };
@@ -609,12 +602,19 @@ var svg = d3.select(options.container).append("svg")
 		.style("stroke", function(d,i) { return d3.rgb(d.color).darker(); })
 		.attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
       
+	
+	var rect = layer.selectAll("text")
+        .data(function(d) { return  d; })
+        .enter().append("text")
+        .attr("y", function(d) { return yScale(d.x)+(yScale.rangeBand()*3/4); })
+        .attr("x", function(d) { return  x(d.y)+3; })
+        .style("text-anchor", "start")
+		.attr("fill", "#444")
+		.style("font-size","13px")
+		.text(function(d) { return addThousandsSeparator(d.votes)+' votes'; })
 		
 		$(".constituency_tag").append("("+year_detail+") & ("+constituency_name+")");
 
-		
-		//.attr("data-title",function(d) { return d.x+' : '+addThousandsSeparator(d.value)+'Party '+d.party+'Constituency '+d.constituency  })
-    
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + (options.height-margin.top) + ")")
@@ -623,8 +623,16 @@ var svg = d3.select(options.container).append("svg")
             .attr("dx", "-.18em")
             .attr("dy", ".15em")
 			.attr("fill", "#444")
-			.style("font-size","13px");
+			.style("font-size","13px")
 
+	svg.append("text")
+		.attr("x", options.width-(margin.left*3/2))
+		.attr("y", options.height-(margin.top/2)-35)
+		.attr("fill", "#444")
+		.style("font-size","13px")
+		.style("text-anchor", "end")
+		.text("Votes");
+			  
     svg.append("g")
         .attr("class", "y axis")
         .attr("transform", "translate(0,0)")
