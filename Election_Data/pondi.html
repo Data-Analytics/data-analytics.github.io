@@ -84,6 +84,18 @@ text {
     line-height: 26px;
     padding: 0 0 3px 0;
 }
+
+.header_year{
+margin-left:10px;
+margin-bottom :-45px;
+}
+input[type="text"]{
+	height: 34px;
+}	
+.header_form{
+margin-left:122px;
+
+}
 </style>
 
 </head>
@@ -183,29 +195,35 @@ text {
 			<div class="col-md-12 panel panel-default">
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h2>Assembly Elections View By Individual Elections</h2>
+					<h2>Assembly Elections View By Individual Elections for <i class="year_tag"></i></h2>
 				</div>	
            </div>
            <div class="row">		   
 				<div class=" col-md-12 panel-body">
-				    <p class="form-inline" align="center">
-						<label value="year">Year : </label>
-						<select id="year">
-							<option value="2011" class="name" selected>2011</option>
-							<option value="2006" class="name">2006</option>
-							<option value="2001" class="name">2001</option>
-							<option value="1996" class="name">1996</option>							
-							<option value="1991" class="name">1991</option>
-							<option value="1989" class="name">1989</option>
-							<option value="1984" class="name">1984</option>
-							<option value="1980" class="name">1980</option>
-							<option value="1977" class="name">1977</option>
-							<option value="1974" class="name">1974</option>
-							<option value="1969" class="name">1969</option>
-							<option value="1964" class="name">1964</option>							
-						</select>
-					   <button id ="submit" value="submit" class="btn btn-primary"onClick='onRender();' >submit</button>
-								<label align="left" >Search:</label>
+							<!--<label value="year">Year : </label>-->
+					  <div class="dropdown header_year">
+						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
+							<ul class="dropdown-menu" role="menu">
+								
+									<li data-year="2011" id="2011"><a href="?year=2011">2011 results</a></li>
+									<li data-year="2006" id="2006"><a href="?year=2006">2006 results</a></li>
+									<li data-year="2001" id="2001"><a href="?year=2001">2001 results</a></li>
+									<li data-year="1996" id="1996"><a href="?year=1996">1996 results</a></li>							
+									<li data-year="1991" id="1991"><a href="?year=1991">1991 results</a></li>
+									<li data-year="1990" id="1990"><a href="?year=1990">1990 results</a></li>
+									<li data-year="1985" id="1985"><a href="?year=1985">1985 results</a></li>
+									<li data-year="1980" id="1980"><a href="?year=1980">1980 results</a></li>
+									<li data-year="1977" id="1977"><a href="?year=1977">1977 results</a></li>
+									<li data-year="1974" id="1974"><a href="?year=1974">1974 results</a></li>
+									<li data-year="1969" id="1969"><a href="?year=1969">1969 results</a></li>
+									<li data-year="1964" id="1964"><a href="?year=1964">1964 results</a></li>		
+									
+							  </ul>
+					  </div>
+				    <p class="form-inline header_form" >
+			
+					   <!--<bu/tton id ="submit" value="submit" class="btn btn-primary"onClick='onRender();' >submit</button>
+							-->	<label align="left" >Search:</label>
 								<input type="text" class="search" placeholder="eg: chennai">
 					   </p>
 					 <div class="chart">  
@@ -258,6 +276,76 @@ text {
 							</svg>
 						  </g>
 						<div class="tree_map"></div>
+					    </div>
+				     </div>
+				</div>
+			</div>
+			</div>
+			</div>
+	</div>
+	
+	
+	<div class="container-fluid detail_display">
+	<div class="container">
+			<div class="row">
+			<div class="col-md-12 panel panel-default">
+			<div class="row">
+				<div class="col-md-12 panel-heading1">
+					<h2 class="headers_constituency">Assembly Elections View By Constituency<i class="constituency_tag"></i></h2>
+				</div>	
+           </div>
+           <div class="row">		   
+				<div class=" col-md-12 panel-body">
+					 <div class="chart">  
+					     <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,0)">
+							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#800000"></rect>
+							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+							
+							  <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#9DBC2A"></rect>
+							  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">ADMK</text>
+							
+							  <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#019733"></rect>
+							  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+							
+							  <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+							
+							  <rect class="party-legend" data-party="TMC(M)" data-highlight="[data-party=TMC(M)]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#000080"></rect>
+							  <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">TMC(M)</text>
+
+							  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+							  <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+							
+							  <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#DE0000"></rect>
+							  <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+							
+							  <rect class="party-legend" data-party="PMK" data-highlight="[data-party=PMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#F0CC52"></rect>
+							  <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#000">PMK</text>
+							
+							  <rect class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FCEB00"></rect>
+							  <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
+							
+							  <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+							  <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
+							
+							  <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
+							  <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+							
+							  <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#835C91"></rect>
+							  <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
+							
+							  <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#888888"></rect>
+							  <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+							
+							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+							  
+							  <rect class="party-legend" data-party="AINRC" data-highlight="[data-party=AINRC]" data-toggle="highlight" x="940" width="67.1428571429" height="20" fill="#B78332"></rect>
+							  <text x="973.571428572" y="10.0" text-anchor="middle" dy=".35em" fill="#000">AINRC</text>							  
+							</svg>
+						  </g>
+						<div class="horizontal_bar"></div>
 					    </div>
 				     </div>
 				</div>
@@ -337,7 +425,37 @@ text {
 	</div>
 	</div>
  <script>
-onRender();
+//onRender();
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+year_detail = getParameterByName('year');
+acct_no = getParameterByName('acct_no');
+
+
+  if (acct_no == undefined){
+    $(".detail_display").hide();//ObjNumber is undefined show loading screen and start loading stuff.
+    //post your data and do what ever you need to do for loading here
+  }else{
+    $(".detail_display").show();//ObjNumber is defined. hide loading screen. everything is loaded.
+  }
+
+  if (year_detail == undefined){
+		year_detail= 2011;
+  }
+  
+  
+  
+$('#'+year_detail+'').addClass('active');
+$(".year_tag").append("("+year_detail+")");
 
 d3.csv("sample_pondi.csv", function(data) { 
 	
@@ -408,24 +526,148 @@ var svg = d3.select(".stacked_bar").append("svg")
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
 	  
 	  });
-	  			
-function onRender() {   
+	  
+	  
+custom_horizontal_bar = {
+    make: function(options) {
 
+    if(options == undefined) options = {}
+    if(options.width == undefined) options.width = 960
+    if(options.height == undefined) options.height = 500
+	if(options.value == undefined) options.value = 'value'
+    if(options.container == undefined) options.container = "body"
+    if(options.color == undefined) options.color = d3.scale.category10();
+    if(options.groupby == undefined) options.groupby = 'groupby'  
+    if(options.data == undefined) options.data = {}
+    
+var margin = {top: options.height/5,left: options.width/3};		
+
+var svg = d3.select(options.container).append("svg")
+    .attr("width", '100%')
+    .attr("data-height", '0.5678')
+    .attr("viewBox",'0 0 '+options.width+' '+options.height)
+    .append("g")
+    .attr("transform", "translate(" + (margin.left*7/6) + "," + margin.top/2 + ")");
+
+	var constituency_name = '';
+	
+    options.data.forEach(function(o) {
+      
+	  constituency_name = o.AC_NAME;
+		  
+	  });
+          
+		  
+	
+	var layers = d3.layout.stack()([options.value].map(function(period) {
+	    return options.data.map(function(d) {
+		  return {x: d[options.groupby]+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : d.color, party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes };
+		});
+    }));
+
+   var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); });
+
+    var yScale = d3.scale.ordinal()
+        .domain(layers[0].map(function(d) { return d.x; }))
+        .rangeRoundBands([0, options.height-margin.top], .2);
+
+    var x = d3.scale.linear()
+        .domain([0, yGroupMax])
+        .range([0, options.width-(margin.left*3/2)]);
+
+	var color = d3.scale.ordinal()
+		.range(["#7aa1c2","#72d8f2","#f3daa4","#66ca9b","#f7f7f7","#f7f7f7"]);
+	
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")		
+        .tickPadding(12)
+		.ticks(4);
+		
+    var yAxis = d3.svg.axis()
+        .scale(yScale)
+        .tickSize(0)
+        .tickPadding(9)
+        .orient("left");
+
+    var layer = svg.selectAll(".layer")
+        .data(layers)
+        .enter().append("g")
+        .attr("class", "layer");
+		
+		d3.selectAll(".tick > text")
+			.style("font-size", "12px")	
+  
+    var rect = layer.selectAll("rect")
+        .data(function(d) { return  d; })
+        .enter().append("rect")
+        .attr("y", function(d) { return yScale(d.x); })
+        .attr("height", yScale.rangeBand())
+        .attr("x", function(d) { return  x(d.y0); })
+        .attr("width", function(d) { return x(d.y); })
+		.style("fill", function(d,i) { return d.color; })
+		.style("stroke", function(d,i) { return d3.rgb(d.color).darker(); })
+		.attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+      
+		
+		$(".constituency_tag").append("("+year_detail+") & ("+constituency_name+")");
+
+		
+		//.attr("data-title",function(d) { return d.x+' : '+addThousandsSeparator(d.value)+'Party '+d.party+'Constituency '+d.constituency  })
+    
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + (options.height-margin.top) + ")")
+        .call(xAxis)
+		.selectAll("text").style("text-anchor", "middle")
+            .attr("dx", "-.18em")
+            .attr("dy", ".15em")
+			.attr("fill", "#444")
+			.style("font-size","13px");
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(0,0)")
+        .call(yAxis)
+		.selectAll("text")
+			.attr("fill", "#444")
+			.style("font-size","13px");
+		
+	
+	$("rect").tooltip({container: 'body', html: true, placement:'top'});
+	
+	}
+	}	
+	
+    d3.csv("assembly_pondi_detail.csv", function(datas) {
+	
+    custom_horizontal_bar.make({
+	
+		width: 960,
+		height: 250,
+		container: ".horizontal_bar",
+		data: datas.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no) }),
+		groupby :'rank',
+		value : 'VOTES'
+	
+	});
+	
+	}); 	  
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+	  			  
+
 
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
-}
-
+}    
+    
+    d3.csv("assembly_pondi.csv", function(data_csv) {
+ 
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 1200 - margin.left - margin.right,
     height = 200 - margin.top - margin.bottom;
 	
-         year = document.getElementById("year").value;
-		 
-     d3.select('.tree_map').select("svg")
-       .remove();
-
+        
     var svg = d3.select(".tree_map").append("svg")
 		    .attr("width", "100%")
             .attr("data-height","0.54")
@@ -442,10 +684,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .sticky(true)
         .value(function(d) {return d.polled_votes;})
         .children(function(d) {return d.values;});
-    
-    
-    d3.csv("assembly_pondi.csv", function(data_csv) {
-     
+		
         data_root = {"key":"treemap"};
         
          data_csv.forEach(function(o) {
@@ -457,14 +696,14 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
           
         var nest = d3.nest()
         .key(function(d) { return  d.party; })
-        .entries(data_csv.filter(function(d){return d.year===parseInt(year)}));
+        .entries(data_csv.filter(function(d){return d.year==year_detail}));
         
-        console.log(nest);
     data_root["values"] = nest
 
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
-    .enter()
+    .enter().append("a")
+      .attr("xlink:href",function(d) { return '?year='+d.year+'&acct_no='+d.AC_NO })
 	  .append("rect")
       .attr("x", function(d) { return d.x; })
       .attr("y", function(d) { return d.y; })
@@ -499,8 +738,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     
         
         });
-
-      }	  
+  
 	  
 var margin = {top: 20, right: 20, bottom: 20, left: 20},
     width = 1200 - margin.left - margin.right,
