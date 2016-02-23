@@ -511,6 +511,31 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
 	  .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
 	  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);})	 ;
 
+  party.selectAll(".value")
+    .data(function(d) { return d.party; })
+    .enter().append("text")
+    .attr("class", "value")
+	.attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)-1; })
+    .attr("x", x.rangeBand()/2)
+	.attr("text-anchor", "middle")
+	.style("font-size", "15px")
+	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
+	.style("fill", function(d) { return (parseInt(color(d.name).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.value:' '; });
+
+  party.selectAll(".name")
+    .data(function(d) { return d.party; })
+    .enter().append("text")
+    .attr("class", "name")
+	.attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)+12; })
+    .attr("x", x.rangeBand()/2)
+	.attr("text-anchor", "middle")
+	.style("font-size", "12px")
+	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
+	.style("fill", function(d) { return (parseInt(color(d.name).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.name:' '; });
+
+      $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});	  
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
 	  
   });

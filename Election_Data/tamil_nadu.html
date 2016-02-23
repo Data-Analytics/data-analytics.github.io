@@ -496,9 +496,34 @@ var svg = d3.select(".stacked_bar").append("svg")
 	  .style("stroke", function(d) { return d3.rgb(color(d.name)).darker(); })
 	  .attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
 	  .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
-	  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);})	 ;
+	  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
+	  
+  party.selectAll(".value")
+    .data(function(d) { return d.party; })
+    .enter().append("text")
+    .attr("class", "value")
+	.attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)-1; })
+    .attr("x", x.rangeBand()/2)
+	.attr("text-anchor", "middle")
+	.style("font-size", "15px")
+	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
+	.style("fill", function(d) { return (parseInt(color(d.name).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.value:' '; });
+
+  party.selectAll(".name")
+    .data(function(d) { return d.party; })
+    .enter().append("text")
+    .attr("class", "name")
+	.attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)+12; })
+    .attr("x", x.rangeBand()/2)
+	.attr("text-anchor", "middle")
+	.style("font-size", "12px")
+	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
+	.style("fill", function(d) { return (parseInt(color(d.name).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.name:' '; });
 
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
+      $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});
 	  
   });
 	  
@@ -580,7 +605,6 @@ var svg = d3.select(options.container).append("svg")
 		.style("stroke", function(d,i) { return d3.rgb(d.color).darker(); })
 		.attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
       
-	
 	var rect = layer.selectAll("text")
         .data(function(d) { return  d; })
         .enter().append("text")
