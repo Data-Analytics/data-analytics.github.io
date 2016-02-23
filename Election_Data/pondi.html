@@ -633,6 +633,40 @@ var svg = d3.select(options.container).append("svg")
 		
 	
 	$("rect").tooltip({container: 'body', html: true, placement:'top'});
+
+	value_data = options.data.filter(function(d){return (d.rank=1) })
+		
+	var width = 200, height = 200, twoPi = 2 * Math.PI;
+
+	value = value_data[0]['VOTES']/parseFloat(value_data[0]['polled_votes']);
+
+	fontSize = 13;
+	innerRadiusValue = 60;
+	outerRadiusValue = 85;
+
+	var arc = d3.svg.arc().innerRadius(innerRadiusValue).outerRadius(outerRadiusValue).startAngle(0);
+
+	var meter = svg.append("g").attr("transform", "translate(-" + width + "," + (height*4/ 8) + ")").append("g").attr('title', value).attr("class", "season-progress");
+
+	var background = meter.append("path").datum({
+		endAngle : twoPi
+	}).style("fill", "#ddd").attr("d", arc);
+
+	var foreground = meter.append("path").datum({
+		endAngle : 0
+	}).style("fill", value_data[0]['color']).attr("class", "foreground").attr("d", arc);
+
+	foreground.transition().duration(1000).ease("linear").attrTween("d", function(d) {
+		var interpolate = d3.interpolate(d.endAngle, twoPi * value)
+		return function(t) {
+			d.endAngle = interpolate(t);
+			return arc(d);
+		}
+	});
+
+	var text = meter.append("text").attr("text-anchor", "middle").attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text((value*100).toFixed(0) + "%");
+	var text = meter.append("text").attr("text-anchor", "middle").attr("y", -100).attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text('Winning Party ('+value_data[0]['PARTY']+')');
+
 	
 	}
 	}	
@@ -644,7 +678,7 @@ var svg = d3.select(options.container).append("svg")
 		width: 960,
 		height: 250,
 		container: ".horizontal_bar",
-		data: datas.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no) }),
+		data: datas.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no)& (d.rank<9) }),
 		groupby :'rank',
 		value : 'VOTES'
 	

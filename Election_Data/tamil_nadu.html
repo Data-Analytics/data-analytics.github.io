@@ -528,7 +528,7 @@ var svg = d3.select(options.container).append("svg")
     options.data.forEach(function(o) {
 		constituency_name = o.AC_NAME;
 	  });
-          
+    	  
 	var layers = d3.layout.stack()([options.value].map(function(period) {
 	    return options.data.map(function(d) {
 		  return {x: d[options.groupby]+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : d.color, party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes };
@@ -566,7 +566,7 @@ var svg = d3.select(options.container).append("svg")
         .attr("class", "layer");
 		
 		d3.selectAll(".tick > text")
-			.style("font-size", "10px")	
+			.style("font-size", "13px")	
   
   
     var rect = layer.selectAll("rect")
@@ -588,7 +588,7 @@ var svg = d3.select(options.container).append("svg")
         .attr("x", function(d) { return  x(d.y)+3; })
         .style("text-anchor", "start")
 		.attr("fill", "#444")
-		.style("font-size","10px")
+		.style("font-size","13px")
 		.text(function(d) { return addThousandsSeparator(d.votes)+' votes'; })
 		
 		$(".constituency_tag").append("("+constituency_name+")");
@@ -600,13 +600,13 @@ var svg = d3.select(options.container).append("svg")
 		.selectAll("text").style("text-anchor", "middle")
             .attr("dx", "-.18em")
             .attr("dy", ".15em")
-			.attr("fill", "#444")
-			.style("font-size","10px")
+			.style("fill", "rgb(99, 99, 99)")
+			.style("font-size","13px")
 
 	svg.append("text")
 		.attr("x", options.width-(margin.left*3/2))
 		.attr("y", options.height-(margin.top/2)-35)
-		.attr("fill", "#444")
+		.style("fill", "rgb(99, 99, 99)")
 		.style("font-size","13px")
 		.style("text-anchor", "end")
 		.text("Votes");
@@ -616,11 +616,46 @@ var svg = d3.select(options.container).append("svg")
         .attr("transform", "translate(0,0)")
         .call(yAxis)
 		.selectAll("text")
-			.attr("fill", "#444")
-			.style("font-size","10px");
+			.style("fill", "rgb(99, 99, 99)")
+			.style("font-size","13px");
 		
 	
 	$("rect").tooltip({container: 'body', html: true, placement:'top'});
+	
+
+value_data = options.data.filter(function(d){return (d.rank=1) })
+	
+var width = 200, height = 200, twoPi = 2 * Math.PI;
+
+value = value_data[0]['VOTES']/parseFloat(value_data[0]['polled_votes']);
+
+fontSize = 13;
+innerRadiusValue = 60;
+outerRadiusValue = 85;
+
+var arc = d3.svg.arc().innerRadius(innerRadiusValue).outerRadius(outerRadiusValue).startAngle(0);
+
+var meter = svg.append("g").attr("transform", "translate(-" + width + "," + (height*5/ 8) + ")").append("g").attr('title', value).attr("class", "season-progress");
+
+var background = meter.append("path").datum({
+	endAngle : twoPi
+}).style("fill", "#ddd").attr("d", arc);
+
+var foreground = meter.append("path").datum({
+	endAngle : 0
+}).style("fill", value_data[0]['color']).attr("class", "foreground").attr("d", arc);
+
+foreground.transition().duration(1000).ease("linear").attrTween("d", function(d) {
+	var interpolate = d3.interpolate(d.endAngle, twoPi * value)
+	return function(t) {
+		d.endAngle = interpolate(t);
+		return arc(d);
+	}
+});
+
+var text = meter.append("text").attr("text-anchor", "middle").attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text((value*100).toFixed(0) + "%");
+var text = meter.append("text").attr("text-anchor", "middle").attr("y", -100).attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text('Winning Party ('+value_data[0]['PARTY']+')');
+
 	
 	}
 	}	
