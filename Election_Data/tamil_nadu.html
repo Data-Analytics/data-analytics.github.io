@@ -257,9 +257,7 @@ text {
 							
 							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
 							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-							  
-							  <rect class="party-legend" data-party="AINRC" data-highlight="[data-party=AINRC]" data-toggle="highlight" x="940" width="67.1428571429" height="20" fill="#B78332"></rect>
-							  <text x="973.571428572" y="10.0" text-anchor="middle" dy=".35em" fill="#000">AINRC</text>							  
+							  						  
 							</svg>
 						  </g>
 						<div class="tree_map"></div>
@@ -329,9 +327,7 @@ text {
 							
 							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
 							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-							  
-							  <rect class="party-legend" data-party="AINRC" data-highlight="[data-party=AINRC]" data-toggle="highlight" x="940" width="67.1428571429" height="20" fill="#B78332"></rect>
-							  <text x="973.571428572" y="10.0" text-anchor="middle" dy=".35em" fill="#000">AINRC</text>							  
+							  					  
 							</svg>
 						  </g>
 						<div class="horizontal_bar"></div>
@@ -448,8 +444,8 @@ var y = d3.scale.linear()
     .range([height, 0]);
 
 var color = d3.scale.ordinal()
-			.range(["#2ecc71","#c0392b","#b2d33c","#B78332","#9A9E56","#ff5757","#4747ff","#1F77B4","#d35400", "#ff5757", "#9b59b6", "#4F0000", "#888","#222"]);
-		
+				.range(["#c0392b","#b2d33c","#2ecc71","#ff5757","#4747ff","#ff5757","#d35400","#f1c40f","#1f77b4", "#9A9E56", "#9b59b6", "#bdc3c7", "#ff7f0e", "#222", "#e377c2", "#7f7f7f", "#F1DF19", "#17becf"]);
+
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom");
