@@ -632,7 +632,7 @@ var svg = d3.select(options.container).append("svg")
 		width: 960,
 		height: 320,
 		container: ".horizontal_bar",
-		data: datas.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no) }),
+		data: datas.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no)& (d.rank<12) }),
 		groupby :'rank',
 		value : 'VOTES'
 	
