@@ -412,15 +412,98 @@ line-height: 1.428571429;
    .navbar {
  border-radius: 0px; 
 }
-   
+
+
+.heading-part {
+    color: #000;
+    font-family: 'Droid Serif', serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 2px 0;
 }
+.synopsis {
+    color: #6b6b6b;
+    font-family: 'Droid Serif', serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    padding: 0 0 3px 0;
+}   
+.panel-heading1 h2
+{
+    color: white;
+    font-size: 20px;
+}
+
+}
+
+
+ @media(max-width:780px) {
+.page-header small {
+display: block;
+padding-top: 14px;
+font-size: 19px;
+}
+
+.heading-part {
+    color: #000;
+    font-family: 'Droid Serif', serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 1px 0;
+}
+.synopsis {
+    color: #6b6b6b;
+    font-family: 'Droid Serif', serif;
+    font-size: 15px;
+    font-weight: 150;
+    line-height: 15px;
+    padding: 0 0 3px 0;
+}
+
+.panel-heading1 h2
+{
+    color: white;
+    font-size: 16px;
+}
+
+}
+
  @media(max-width:480px) {
 .page-header small {
 display: block;
 padding-top: 14px;
 font-size: 19px;
 }
+
+.heading-part {
+    color: #000;
+    font-family: 'Droid Serif', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 1px 0;
 }
+.synopsis {
+    color: #6b6b6b;
+    font-family: 'Droid Serif', serif;
+    font-size: 12px;
+    font-weight: 150;
+    line-height: 15px;
+    padding: 0 0 3px 0;
+}
+
+.panel-heading1 h2
+{
+    color: white;
+    font-size: 12px;
+}
+
+}
+
+
 .navbar-side .sidebar-collapse ul li a .fa
 {
     font-size: 32px;
