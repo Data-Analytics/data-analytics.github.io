@@ -74,23 +74,6 @@ table.dataTable thead th,table.dataTable thead td {
 text {
     font-family: sans-serif;
 }
-
-.heading-part {
-    color: #000;
-    font-family: 'Droid Serif', serif;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 28px;
-    padding: 2px 0;
-}
-.synopsis {
-    color: #6b6b6b;
-    font-family: 'Droid Serif', serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 26px;
-    padding: 0 0 3px 0;
-}
 </style>
 
 </head>
@@ -494,11 +477,7 @@ text {
 	</div>
 	</div>
 
- <script>
-  $(document).ready(function(){
-    $('#myTable').DataTable();
-	});
-	
+ <script>	
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -1011,6 +990,16 @@ d3.csv("sankey_data.csv", function(error, data) {
 // load the data (using the timelyportfolio csv method)
 d3.text("tn_data.csv", function(error, data) {
 
+d3.csv("color_mapper.csv", function(error_color, color_data) {
+
+color_map = {}
+
+color_data.forEach(function (d) {
+	
+	color_map[d.party] = d.color;
+	
+});
+
    var parsedCSV = d3.csv.parseRows(data);
    
    var container = d3.select(".party_trend")
@@ -1029,7 +1018,6 @@ d3.text("tn_data.csv", function(error, data) {
 				 .attr("class","dynatable-head")
 				.text(function(d) { return d; })
 
-				
 			if (0 > -1) { parsedCSV.splice(0, 1);}
 					
 				container
@@ -1040,8 +1028,16 @@ d3.text("tn_data.csv", function(error, data) {
                     .selectAll("td")
                         .data(function(d) { return d; }).enter()
                         .append("td")
-						.text(function(d) { return d; })					
+						.attr("bgcolor",function(d) { return color_map[d] })
+						.append("font")
+						.attr("color",function(d) { return color_map[d] == undefined ? "#000" : ((parseInt(color(color_map[d]).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
+						.text(function(d) { return d; })		
+
+    $('#myTable').DataTable();
+
+	
 	});					
+});
 		  
 </script>
 </body>
