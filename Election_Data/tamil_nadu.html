@@ -1,19 +1,23 @@
 <html><head>
   <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="author" content="Sushanth">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011'">
   <link href="css/bootstrap.css" rel="stylesheet">    
   <link href="css/basic.css" rel="stylesheet">
   <link href="css/feature.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
   <link href="css/custom-styles.css" rel="stylesheet">
+  <link href="css/jquery-ui.css" rel="stylesheet">
   <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
   <script type="text/javascript" src="js/jquery.min.js"></script>  
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>  
   <script type="text/javascript" src="js/bootstrap.min.js"></script>    
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
   <meta property="og:title"  content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)" /> 
   <meta property="og:url"   content="http://data-analytics.github.io/Election_Data/tamil_nadu.html" /> 
@@ -27,58 +31,8 @@
   <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
   <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 	
   <title>Assembly Elections 1967 - 2011 (Tamil Nadu)</title>
-<style>
-table.dataTable thead th,table.dataTable thead td {
-    padding: 10px;
-    border-bottom: 1px solid #111;
-    font-size: 14px;
-    }
-    table.dataTable tbody tr:hover { 
-        background: #c7ddf0; 
-    }
-	
-.stButton .stMainServices  {
-    padding-bottom: 20px !important;
-	}
-	
-.stButton .stButton_gradient {
-    padding-bottom: 18px !important;
-		}
-.stButton {
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    color: #000;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 3px;
-    margin-left: 3px;
-	margin-bottom : 3px;
-}
-	
-.fa-2 {
-    font-size: 2em;
-}
-
-.header-logo {
-    padding: 10px 0px 5px 8px;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-text {
-    font-family: sans-serif;
-}
-</style>
-
 </head>
 <body>
-  
   	<div class="container-fluid header-style">
 		<div class="container">
 			<div class="row">
@@ -388,10 +342,9 @@ text {
 							  <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
 							
 							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-							  
-							</svg>
+							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>	  
 						  </g>
+						</svg> 
 					</div>
 				</div>
 		  </div>
@@ -499,6 +452,17 @@ acct_no = getParameterByName('acct_no');
 $('#'+year_detail+'').addClass('active');
 $(".year_tag").append("("+year_detail+")");
 
+
+d3.csv("color_mapper.csv", function(error_color, color_data) {
+
+color_map = {}
+
+color_data.forEach(function (d) {
+	
+	color_map[d.party] = d.color;
+	
+});
+
 d3.csv("sample.csv", function(data) { 
 	
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
@@ -510,9 +474,6 @@ var x = d3.scale.ordinal()
 
 var y = d3.scale.linear()
     .range([height, 0]);
-
-var color = d3.scale.ordinal()
-				.range(["#c0392b","#b2d33c","#2ecc71","#ff5757","#4747ff","#ff5757","#d35400","#f1c40f","#1f77b4", "#9A9E56", "#9b59b6", "#bdc3c7", "#ff7f0e", "#222", "#e377c2", "#7f7f7f", "#F1DF19", "#17becf"]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -530,8 +491,6 @@ var svg = d3.select(".stacked_bar").append("svg")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var party_names = ['DMK','ADMK','INC','CPM','TMC(M)','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','Others'];
-  
-
   
  data.forEach(function(d) {
         var y0 = 0;
@@ -560,8 +519,8 @@ var svg = d3.select(".stacked_bar").append("svg")
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.y1); })
       .attr("height", function(d) { return y(d.y0) - y(d.y1); })
-      .style("fill", function(d) { return color(d.name) })
-	  .style("stroke", function(d) { return d3.rgb(color(d.name)).darker(); })
+      .style("fill", function(d) { return color_map[d.name] })
+	  .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })
 	  .attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
 	  .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
 	  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
@@ -575,7 +534,7 @@ var svg = d3.select(".stacked_bar").append("svg")
 	.attr("text-anchor", "middle")
 	.style("font-size", "15px")
 	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
-	.style("fill", function(d) { return (parseInt(color(d.name).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+	.style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
 	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.value:' '; });
 
   party.selectAll(".name")
@@ -587,14 +546,17 @@ var svg = d3.select(".stacked_bar").append("svg")
 	.attr("text-anchor", "middle")
 	.style("font-size", "12px")
 	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
-	.style("fill", function(d) { return (parseInt(color(d.name).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+	.style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
 	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.name:' '; });
 
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
       $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});
 	  
   });
-	  
+
+});
+
+  
 custom_horizontal_bar = {
     make: function(options) {
 
@@ -794,21 +756,28 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		
         data_root = {"key":"treemap"};
         
-         data_csv.forEach(function(o) {
+		
+		 data_csv.forEach(function(o) {
           o.votes = parseInt(o.votes);
           o.rank = parseInt(o.rank);
           o.year = parseInt(o.year);
 		  o.polled_votes = parseInt(o.polled_votes);
+		
           });
-          
+         
+		filter_data_csv = data_csv.filter(function(d){return d.year==year_detail});
+		 
+		constituency_list = []
+        filter_data_csv.forEach(function (d) {
+			constituency_list.push(d.constituency);
+		});
+   
         var nest = d3.nest()
         .key(function(d) { return  d.party; })
         .entries(data_csv.filter(function(d){return d.year==year_detail}));
-        
+		
     data_root["values"] = nest
 
-	
-  var opp_names = ['DMK','INC','CPM','TMC(M)','CPI','PMK'];
 	
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
@@ -845,7 +814,22 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     }
 
     add_search('.search', '.tree_map');
-        
+    
+
+ var Industry = constituency_list;
+	
+    $( ".search" ).autocomplete({
+    source: function(req, responseFn) {
+        var re = $.ui.autocomplete.escapeRegex(req.term);
+        var matcher = new RegExp( "^" + re, "i" );
+        var a = $.grep( Industry, function(item,index){
+            return matcher.test(item);
+        });
+        responseFn( a );
+    }
+    
+	});
+  
         });
   
 var margin = {top: 20, right: 20, bottom: 20, left: 20},
@@ -999,7 +983,6 @@ color_data.forEach(function (d) {
 	color_map[d.party] = d.color;
 	
 });
-
    var parsedCSV = d3.csv.parseRows(data);
    
    var container = d3.select(".party_trend")
@@ -1034,11 +1017,8 @@ color_data.forEach(function (d) {
 						.text(function(d) { return d; })		
 
     $('#myTable').DataTable();
-
-	
 	});					
 });
-		  
 </script>
 </body>
 </html>

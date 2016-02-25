@@ -530,3 +530,52 @@ footer {
 .selected {
     background-color: #0000A0;
 }
+
+
+table.dataTable thead th,table.dataTable thead td {
+    padding: 10px;
+    border-bottom: 1px solid #111;
+    font-size: 14px;
+    }
+
+table.dataTable tbody tr:hover { 
+        background: #c7ddf0; 
+    }
+	
+.stButton .stMainServices  {
+    padding-bottom: 20px !important;
+	}
+	
+.stButton .stButton_gradient {
+    padding-bottom: 18px !important;
+		}
+.stButton {
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 3px;
+    margin-left: 3px;
+	margin-bottom : 3px;
+}
+	
+.fa-2 {
+    font-size: 2em;
+}
+
+.header-logo {
+    padding: 10px 0px 5px 8px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+text {
+    font-family: sans-serif;
+}
