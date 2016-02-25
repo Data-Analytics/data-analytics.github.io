@@ -730,13 +730,12 @@ var text = meter.append("text").attr("text-anchor", "middle").attr("y", -100).at
 	}); 	  
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
     
-d3.csv("assembly_tn.csv", function(data_csv) {
+d3.csv("assembly_tn_detail.csv", function(data_csv) {
  
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 1200 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 	
-        
     var svg = d3.select(".tree_map").append("svg")
 		    .attr("width", "100%")
             .attr("data-height","0.54")
@@ -756,25 +755,27 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		
         data_root = {"key":"treemap"};
         
-		
 		 data_csv.forEach(function(o) {
-          o.votes = parseInt(o.votes);
+          o.votes = parseInt(o.VOTES);
           o.rank = parseInt(o.rank);
-          o.year = parseInt(o.year);
+          o.year = parseInt(o.YEAR);
 		  o.polled_votes = parseInt(o.polled_votes);
-		
           });
          
-		filter_data_csv = data_csv.filter(function(d){return d.year==year_detail});
+		 
+		filter_data_csv = data_csv.filter(function(d){return (d.year==year_detail) & (d.rank==1) });
 		 
 		constituency_list = []
         filter_data_csv.forEach(function (d) {
+			d.constituency = d.AC_NAME
 			constituency_list.push(d.constituency);
 		});
    
+		console.log(filter_data_csv);
+		
         var nest = d3.nest()
-        .key(function(d) { return  d.party; })
-        .entries(data_csv.filter(function(d){return d.year==year_detail}));
+        .key(function(d) { return  d.PARTY; })
+        .entries(filter_data_csv);
 		
     data_root["values"] = nest
 
@@ -788,8 +789,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       .attr("y", function(d) { return d.y; })
       .attr("width", function(d) { return d.dx; })
       .attr("height", function(d) { return d.dy; })
-      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
-      .attr("sub_link",function(d) { return d.constituency+d.party ;})
+      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.NAME+' <br/> party : '+d.PARTY+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+      .attr("sub_link",function(d) { return d.constituency+' '+d.PARTY+' '+d.NAME ;})
       .style("fill", function(d) { return d.color;})
 	  .style("stroke", '#fff' )
       .style("stroke-width", 0.5);        
@@ -1013,7 +1014,7 @@ color_data.forEach(function (d) {
                         .append("td")
 						.attr("bgcolor",function(d) { return color_map[d] })
 						.append("font")
-						.attr("color",function(d) { return color_map[d] == undefined ? "#000" : ((parseInt(color(color_map[d]).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
+						.attr("color",function(d) { return color_map[d] == undefined ? "#000" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
 						.text(function(d) { return d; })		
 
     $('#myTable').DataTable();
