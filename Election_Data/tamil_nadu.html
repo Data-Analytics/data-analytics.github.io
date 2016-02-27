@@ -287,6 +287,8 @@
 	</div>
 	</div>
 	
+	
+	<div id="sankeyFlow">
 	<div class="container-fluid">
 	<div class="container">
   		
@@ -294,14 +296,30 @@
 			<div class="col-md-12 panel panel-default">   
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h2>Party Transitions Trend to the successive elections</h2>
+					<h2>Party Transitions Trend to the successive elections<i class="successive_year_tag"></i></h2>
 				</div>	
            </div>
            <div class="row">		   
 				<div class=" col-md-12 panel-body">
+					<div class="dropdown header_year">
+						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
+						<ul class="dropdown-menu" role="menu">
+							
+						<li data-year="2001_2006" id="2001_2006"><a href="?flowyear=2001_2006#sankeyFlow">2006 results</a></li>
+						<li data-year="1996_2001" id="1996_2001"><a href="?flowyear=1996_2001#sankeyFlow">2001 results</a></li>
+						<li data-year="1991_1996" id="1991_1996"><a href="?flowyear=1991_1996#sankeyFlow">1996 results</a></li>							
+						<li data-year="1989_1991" id="1989_1991"><a href="?flowyear=1989_1991#sankeyFlow">1991 results</a></li>
+						<li data-year="1984_1989" id="1984_1989"><a href="?flowyear=1984_1989#sankeyFlow">1989 results</a></li>
+						<li data-year="1980_1984" id="1980_1984"><a href="?flowyear=1980_1984#sankeyFlow">1984 results</a></li>
+						<li data-year="1977_1980" id="1977_1980"><a href="?flowyear=1977_1980#sankeyFlow">1980 results</a></li>
+						<li data-year="1967_1971" id="1967_1971"><a href="?flowyear=1967_1971#sankeyFlow">1971 results</a></li>
+							
+						</ul>
+					</div>
+					
 					<div  class="sankey_chart">
-						 <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
-						  <g class="headers" transform="translate(80,0)">
+						 <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,15)">
 							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#c0392b"></rect>
 							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
 							
@@ -344,7 +362,7 @@
 							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
 							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>	  
 						  </g>
-						</svg> 
+						</svg>
 					</div>
 				</div>
 		  </div>
@@ -353,6 +371,7 @@
 			</div>
 			
 	
+	</div>
 	</div>
 	</div>
 	
@@ -441,6 +460,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+flowyear_detail = getParameterByName('flowyear');
 year_detail = getParameterByName('year');
 acct_no = getParameterByName('acct_no');
 
@@ -448,9 +468,14 @@ acct_no = getParameterByName('acct_no');
   else{ $(".detail_display").show();}
 
   if (year_detail == undefined){ year_detail= 2011; }
+  if (flowyear_detail == undefined){ flowyear_detail= '2001_2006'; }
   
 $('#'+year_detail+'').addClass('active');
 $(".year_tag").append("("+year_detail+")");
+
+
+$('#'+flowyear_detail+'').addClass('active');
+$(".successive_year_tag").append("("+flowyear_detail.replace('_', ' to ')+")");
 
 
 d3.csv("color_mapper.csv", function(error_color, color_data) {
@@ -714,6 +739,8 @@ var text = meter.append("text").attr("text-anchor", "middle").attr("y", -100).at
 	}
 	}	
 	
+	if (acct_no != undefined){
+	
     d3.csv("assembly_tn_detail.csv", function(datas) {
 	
     custom_horizontal_bar.make({
@@ -727,7 +754,9 @@ var text = meter.append("text").attr("text-anchor", "middle").attr("y", -100).at
 	
 	});
 	
-	}); 	  
+	});
+	}
+	
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
     
 d3.csv("assembly_tn_detail.csv", function(data_csv) {
@@ -770,9 +799,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 			d.constituency = d.AC_NAME
 			constituency_list.push(d.constituency);
 		});
-   
-		console.log(filter_data_csv);
-		
+   	
         var nest = d3.nest()
         .key(function(d) { return  d.PARTY; })
         .entries(filter_data_csv);
@@ -833,7 +860,9 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
   
         });
   
-var margin = {top: 20, right: 20, bottom: 20, left: 20},
+
+
+ var margin = {top: 20, right: 20, bottom: 20, left: 20},
     width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -850,16 +879,7 @@ var svg = d3.select(".sankey_chart").append("svg")
     .attr("transform", 
           "translate(" + margin.left + "," + margin.top + ")");
 
- svg.selectAll(".head")
-      .data(['2001','2006'])
-    .enter().append("text")
-      .attr("y", -4)
-	  .attr("font-size",18)
-      .attr("x", function(d,p) { return p < 1 ?  50 : 1110 ; })
-      .attr("fill", function(d,p) { return p > 0 ? "#222" : "#222"; })
-	  .attr("text-anchor", function(d,p) { return p <  1 ? 'middle' : 'middle'; })
-	  .text(function(d) { return 'year : '+d; });
-	  
+
 	   
 // Set the sankey diagram properties
 var sankey = d3.sankey()
@@ -869,25 +889,49 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-// load the data (using the timelyportfolio csv method)
-d3.csv("sankey_data.csv", function(error, data) {
 
+d3.csv("color_mapper.csv", function(error_color, color_data) {
+
+color_map = {}
+
+color_data.forEach(function (d) {
+	
+	color_map[d.party] = d.color;
+	
+});
+
+
+// load the data (using the timelyportfolio csv method)
+d3.csv("tn_data.csv", function(error, data) {
+
+
+	data.forEach(function (d) {
+		d.source_year =d[flowyear_detail.substring(0, 4)]
+		d.target_year =d[flowyear_detail.substring(5, 9)] 
+		d.combined_year =d[flowyear_detail.substring(0, 4)]+'_'+d[flowyear_detail.substring(5, 9)] 
+		});
+
+		data = data.filter(function(d){return (d.source_year!='') & (d.target_year!='') })
+		
+		var data_Count = d3.nest()
+			  .key(function(d) { return d.combined_year; })
+			  .rollup(function(v) { return v.length; })
+			  .entries(data);
+  	
   graph = {"nodes" : [], "links" : []};
     
 	name_list = []
-    data.forEach(function (d) {
-      name_list.push(d.source);
-	  
-	  graph.nodes.push({ "name": d.source, "color": d.source_color });
-      graph.nodes.push({ "name": d.target, "color": d.target_color });
-  
-      graph.links.push({ "source": d.source,
-                         "target": d.target,
-						 "source_color": d.source_color,
-                         "target_color": d.target_color,
-                         "value": +parseInt(d.value) });
-     });
+	data_Count.forEach(function (d) {
 
+	  graph.nodes.push({ "name": d.key.split("_")[0], "color": color_map[d.key.split("_")[0]] });
+	  graph.nodes.push({ "name": '_'+d.key.split("_")[1], "color": color_map[d.key.split("_")[1]] });
+
+	  graph.links.push({ "source": d.key.split("_")[0],
+						 "target": '_'+d.key.split("_")[1],
+						 "source_color": color_map[d.key.split("_")[0]],
+						 "target_color": color_map[d.key.split("_")[1]],
+						 "value": d.values });
+	 });
 	 
      // return only the distinct / unique nodes
      graph.nodes = d3.keys(d3.nest()
@@ -911,8 +955,20 @@ d3.csv("sankey_data.csv", function(error, data) {
     .links(graph.links)
     .layout(32);
 
-	var party_colors = {'ADMK':'#b2d33c','BJP':'#ff7f0e','CPI':'#ff5757','CPM':'#ff5757','DMK':'#c0392b','Others':'#222','INC':'#2ecc71','IND':'#bdc3c7','MDMK':'#9b59b6','PMK':'#d35400','TMC(M)':'#4747ff','CPI(M)':'#ff5757','DMDK':'#f1c40f'}
-	
+	//var party_colors = {'ADMK':'#b2d33c','BJP':'#ff7f0e','CPI':'#ff5757','CPM':'#ff5757','DMK':'#c0392b','Others':'#222','INC':'#2ecc71','IND':'#bdc3c7','MDMK':'#9b59b6','PMK':'#d35400','TMC(M)':'#4747ff','CPI(M)':'#ff5757','DMDK':'#f1c40f'}
+
+ svg.selectAll(".head")
+      .data([flowyear_detail.substring(0, 4),flowyear_detail.substring(5, 9)])
+    .enter().append("text")
+      .attr("y", -4)
+	  .attr("font-size",18)
+      .attr("x", function(d,p) { return p < 1 ?  50 : 1110 ; })
+      .attr("fill", function(d,p) { return p > 0 ? "#222" : "#222"; })
+	  .attr("text-anchor", function(d,p) { return p <  1 ? 'middle' : 'middle'; })
+	  .text(function(d) { return 'year : '+d; });
+
+	  
+	  
 // add in the links
   var link = svg.append("g").selectAll(".link")
       .data(graph.links)
@@ -942,8 +998,8 @@ d3.csv("sankey_data.csv", function(error, data) {
   node.append("rect")
       .attr("height", function(d) { return d.dy; })
       .attr("width", sankey.nodeWidth())
-     .style("fill", function(d) { return party_colors[d.name.replace('_','')]; })
-      .style("stroke", function(d) { return d3.rgb(party_colors[d.name.replace('_','')]).darker(2); })
+     .style("fill", function(d) { return color_map[d.name.replace('_','')]; })
+      .style("stroke", function(d) { return d3.rgb(color_map[d.name.replace('_','')]).darker(2); })
 	   .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats'; });
     
   $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});  
@@ -972,6 +1028,9 @@ d3.csv("sankey_data.csv", function(error, data) {
   }
 });	
 
+});	
+
+ 
 // load the data (using the timelyportfolio csv method)
 d3.text("tn_data.csv", function(error, data) {
 
@@ -1018,6 +1077,7 @@ color_data.forEach(function (d) {
 						.text(function(d) { return d; })		
 
     $('#myTable').DataTable();
+	
 	});					
 });
 </script>
