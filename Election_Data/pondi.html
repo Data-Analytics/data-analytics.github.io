@@ -29,9 +29,6 @@
   <meta itemprop="description" content="Undecided voters hold key in 2016 Pondicherry Assembly elections 'A visual guide to the check out the history of Pondicherry Assembly elections, from 1964 until 2011'">
   <meta itemprop="name" content="ASSEMBLY ELECTIONS 1964 - 2011 (Pondicherry)">
   <meta itemprop="image" content="images/images.png">
-  <script type="text/javascript">var switchTo5x=true;</script>
-  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-  <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 	
   <title>Assembly Elections 1964 - 2011 (Pondicherry)</title>
 </head>
 <body>
@@ -303,7 +300,7 @@
 			<div class="col-md-12 panel panel-default">   
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h2>Party Transitions Trend to the successive elections</h2>
+					<h2>Party Transitions Trend to the successive elections<i class="successive_year_tag"></i></h2>
 				</div>	
            </div>
            <div class="row">		   
@@ -744,7 +741,6 @@ foreground.transition().duration(1000).ease("linear").attrTween("d", function(d)
 
 var text = meter.append("text").attr("text-anchor", "middle").attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text((value*100).toFixed(0) + "%");
 var text = meter.append("text").attr("text-anchor", "middle").attr("y", -100).attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text('Winning Party ('+value_data[0]['PARTY']+')');
-
 	
 	}
 	}	
@@ -960,8 +956,6 @@ data.forEach(function (d) {
     .links(graph.links)
     .layout(32);
 
-	//var party_colors = {'ADMK':'#b2d33c','BJP':'#ff7f0e','CPI':'#ff5757','CPM':'#ff5757','DMK':'#c0392b','Others':'#222','INC':'#2ecc71','IND':'#bdc3c7','MDMK':'#9b59b6','PMK':'#d35400','TMC(M)':'#4747ff','CPI(M)':'#ff5757','DMDK':'#f1c40f'}
-
  svg.selectAll(".head")
       .data([flowyear_detail.substring(0, 4),flowyear_detail.substring(5, 9)])
     .enter().append("text")
@@ -972,7 +966,6 @@ data.forEach(function (d) {
 	  .attr("text-anchor", function(d,p) { return p <  1 ? 'middle' : 'middle'; })
 	  .text(function(d) { return 'year : '+d; });
 
-	  
 	  
 // add in the links
   var link = svg.append("g").selectAll(".link")
