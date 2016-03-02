@@ -1095,7 +1095,12 @@ color_data.forEach(function (d) {
 						.attr("color",function(d) { return color_map[d] == undefined ? "#000" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
 						.text(function(d) { return d; })		
 
-    $('#myTable').DataTable();
+    $('#myTable').DataTable({
+        "sScrollX": "100%",
+        "sScrollXInner": "150%"
+  });
+  
+  
 	});					
 });
 </script>
