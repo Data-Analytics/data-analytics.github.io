@@ -381,7 +381,7 @@
 	
 		<div id="party_Trend">
 		<div class="container-fluid">
-	<div class="container">
+		<div class="container">
   		
 			<div class="row">
 			<div class="col-md-12 panel panel-default">   
@@ -488,8 +488,8 @@
            <div class="row">		   
 				<div class=" col-md-12 panel-body">
 
-						 <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
-						  <g class="headers" transform="translate(80,0)">
+						 <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,5)">
 							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#c0392b"></rect>
 							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
 							
@@ -884,7 +884,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 			.style("font-size","13px")
 
 	horizontal_bar_svg.append("text")
-		.attr("x", width-(margin.left*3/2))
+		.attr("x", width-margin.left-margin.left-margin.right)
 		.attr("y", height-(margin.top/2)-35)
 		.style("fill", "rgb(99, 99, 99)")
 		.style("font-size","13px")
@@ -924,7 +924,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		
 		value = value_data[0]['VOTES']/parseFloat(value_data[0]['polled_votes']);
 		
-		fontSize = 21;
+		fontSize = 16;
 
 		console.log(d3.min([width,height]));
 		
@@ -1181,12 +1181,14 @@ d3.csv("tn_data.csv", function(error, data) {
       .data([flowyear_detail.substring(0, 4),flowyear_detail.substring(5, 9)])
     .enter().append("text")
       .attr("y", -4)
-	  .attr("font-size",18)
+	  .attr("font-size",21)
       .attr("x", function(d,p) { return p < 1 ?  50 : 1110 ; })
-      .attr("fill", function(d,p) { return p > 0 ? "#222" : "#222"; })
+	  .attr("fill", function(d,p) { return p > 0 ? "rgb(99, 99, 99)" : "rgb(99, 99, 99)"; })
 	  .attr("text-anchor", function(d,p) { return p <  1 ? 'middle' : 'middle'; })
-	  .text(function(d) { return 'year : '+d; });
+	  .text(function(d) { return 'year('+d+')'; });
 
+
+	  			
 	  
 // add in the links
   var link = svg.append("g").selectAll(".link")
@@ -1300,6 +1302,8 @@ color_data.forEach(function (d) {
 				.data(function(d) { return d; }).enter()
 				.append("th")
 				 .attr("class","dynatable-head")
+				 .append("font")
+					.attr("color","#636363")
 				.text(function(d) { return d; })
 
 			if (0 > -1) { parsedCSV.splice(0, 1);}
@@ -1314,7 +1318,7 @@ color_data.forEach(function (d) {
                         .append("td")
 						.attr("bgcolor",function(d) { return color_map[d] })
 						.append("font")
-						.attr("color",function(d) { return color_map[d] == undefined ? "#000" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
+						.attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
 						.text(function(d) { return d; })		
 
 
