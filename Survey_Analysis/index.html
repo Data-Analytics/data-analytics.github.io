@@ -15,13 +15,15 @@
     <meta name="description" content="Sex survey comparison Who is more sexually liberated? Kota or Kottayam? 18-year-olds or 60-year-olds? Men or women? Those in arranged marriages or love marriages? How have people responded on life satisfaction specifically in Delhi What do men think about sex education and extra-marital affairs.">
     <meta http-equiv="refresh" content="600">
     <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation, chord diagram, chord diagram with text, survey Analysis">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+	<link href="css/bootstrap.css" rel="stylesheet">    
+	<link href="css/basic.css" rel="stylesheet">
+	<link href="css/feature.css" rel="stylesheet">
+	<link href="css/custom-styles.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/underscore-min.js"></script>    
+    <script type="text/javascript" src="/./javascripts/underscore-min.js"></script> 
     <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
     <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
@@ -34,11 +36,11 @@
     <meta property="og:title"  content="Survey Analysis" />
     <meta property="og:url"   content="http://data-analytics.github.io/Survey_Analysis" />
     <meta property="og:description" content="Sex survey comparison Who is more sexually liberated? Kota or Kottayam? 18-year-olds or 60-year-olds? Men or women? Those in arranged marriages or love marriages? How have people responded on life satisfaction specifically in Delhi What do men think about sex education and extra-marital affairs." /> 
-    <meta property="og:image" content="http://media2.intoday.in/indiatoday/specials/sex-survey/sex-lead-640x369.jpg" /> 
+    <meta property="og:image" content="images.jpg" /> 
     <html itemscope itemtype="http://schema.org/Blog">
     <meta itemprop="description" content="Sex survey comparison Who is more sexually liberated? Kota or Kottayam? 18-year-olds or 60-year-olds? Men or women? Those in arranged marriages or love marriages? How have people responded on life satisfaction specifically in Delhi What do men think about sex education and extra-marital affairs.">
     <meta itemprop="name" content="Survey Analysis">
-    <meta itemprop="image" content="http://media2.intoday.in/indiatoday/specials/sex-survey/sex-lead-640x369.jpg">  
+    <meta itemprop="image" content="images.jpg">  
     <title>Survey Analysis</title>
 	</head>
 	<style type="text/css">
@@ -62,35 +64,58 @@
 		  display: none;
 		}
 		
+		select {
+		    margin-left: 20px;
+		}
 	</style>
 	<body>
-        <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
-        <header class="inner container">
-          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
-          <h1 id="project_title">Survey Analysis</h1>
-          <p id="project_title_p">Sex survey comparison Who is more sexually liberated? Kota or Kottayam? 18-year-olds or 60-year-olds? Men or women? Those in arranged marriages or love marriages? How have people responded on life satisfaction specifically in Delhi What do men think about sex education and extra-marital affairs.
-          </p>
-        </header>
-		<!-- end banner -->
-    </div>
-    <div class="container">
-      <section id="main_content" class="inner">
-        <br/><span class='st_facebook_hcount' displayText='Facebook'></span>
-        <span class='st_twitter_hcount' displayText='Tweet'></span>
-        <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
-        <span class='st_googleplus_hcount' displayText='Google'></span>
-        <span class='st_email_hcount' displayText='Email'></span><br/>
-      <p class="form-inline">
+  	<div class="container-fluid header-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-logo">
+					
+					<p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Survey Analysis</p>
+					<p class="synopsis">Sex survey comparison Who is more sexually liberated? Kota or Kottayam? 18-year-olds or 60-year-olds? Men or women? Those in arranged marriages or love marriages? How have people responded on life satisfaction specifically in Delhi What do men think about sex education and extra-marital affairs.</p>
+				
+				<p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+				<span class='st_twitter_hcount' displayText='Tweet'></span>
+				<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+				<span class='st_googleplus_hcount' displayText='Google'></span>
+				<span class='st_email_hcount' displayText='Email'></span></p>
+				
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	    <div class="container-fluid">
+	<div class="container">
+			<div class="row">
+			<div class="col-md-12 panel panel-default">
+           <div class="row">		   
+				<div class=" col-md-12 panel-body">		
+					 <div class="stacked_bar">  	</div>
+				</div>
+			
+		<p class="form-inline" align="center">
         <form role="form">
 			<select id="year"></select>
 			<select id="questions"></select>
 			<select id="categories"></select>
         </form>
       </p>
-		<div><h3 id="questionHeading"></h3></div>
+		<div><p class="heading-part" id="questionHeading"></p></div>
 		<div id="chart"></div>
 		<script type="text/javascript" src="chord.js"></script>
-        </section>
+		
+			</div>
+			
+			</div>
+			</div>
 	</div>
+	</div>
+	
 	</body>
 </html>

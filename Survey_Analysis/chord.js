@@ -38,7 +38,7 @@ var insights = [ {'question': 'Are you happy with your sex life?',
                  },
                ];
 
-var width = 520,
+var width = 820,
     height = 520,
     outerRadius = Math.min(width, height) / 2 - 10,
     innerRadius = outerRadius - 24;
@@ -72,12 +72,13 @@ d3.csv("data.csv", function(data) {
         d3.selectAll("svg").remove();
 
         var svg = d3.select("#chart").append("svg")
-            .attr("width", width+200)
-            .attr("height", height+200)
-            .attr("preserveAspectRatio", "none")
-          .append("g")
-            .attr("id", "circle")
-            .attr("transform", "translate(" + (width+200) / 2 + "," + (height+200) / 2 + ")");
+				.style("width", "100%")
+				.attr("data-height","0.54")
+				.attr("viewBox","0 0 "+(width + 200)+" "+(height + 200))	
+				.attr("preserveAspectRatio", "none")
+			  .append("g")
+				.attr("id", "circle")
+				.attr("transform", "translate(" + (width+200) / 2 + "," + (height+200) / 2 + ")");
 
         svg.append("circle")
             .attr("r", outerRadius);
@@ -337,7 +338,7 @@ function getMatrix(data,category,answers,categories,questions,selectedCat,q,year
 		if (index < responses.length){
 			return {name:val,color:colorResponses[index]}
 		} else{
-			return {name:val,color:"#014636"}
+			return {name:val,color:"#009E1D"}
 		}
 	});
 
