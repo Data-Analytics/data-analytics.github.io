@@ -12,7 +12,7 @@ var color = d3.scale.linear().range(["white", "steelblue"])
     .domain([-.02, .04])
     
 var svg = d3.select(".calender-map").selectAll("svg")
-    .data(d3.range(2010, 2014))
+    .data(d3.range(2012, 2014))
   .enter().append("svg")
     .attr("width", width)
     .attr("height", height)
