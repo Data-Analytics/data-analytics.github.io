@@ -150,11 +150,11 @@ function is_in_array(s,your_array) {
     return false;
 }
 
-if is_in_array(type_detail,['Highest_margins','Most_voters','Most_candidates','Old_candidates'])
+if (is_in_array(type_detail,['Highest_margins','Most_voters','Most_candidates','Old_candidates']))
 {
   types=[[ 5, "desc" ]]
 }
-else if is_in_array(type_detail,['Lowest_margins','Fewest_voters','Fewest_candidate','Young_candidates'])
+else if (is_in_array(type_detail,['Lowest_margins','Fewest_voters','Fewest_candidate','Young_candidates']))
 {
   types=[[ 5, "asc" ]]
 }
