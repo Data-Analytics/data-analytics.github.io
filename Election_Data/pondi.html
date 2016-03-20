@@ -19,8 +19,9 @@
   <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>  
   <script type="text/javascript" src="js/bootstrap.min.js"></script>    
+  <script type="text/javascript" src="js/underscore-min.js" ></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
+  <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>  
   <meta property="og:title"  content="ASSEMBLY ELECTIONS 1964 - 2011 (Pondicherry)" /> 
   <meta property="og:url"   content="http://data-analytics.github.io/Election_Data/pondi.html" /> 
   <meta property="og:description" content="Undecided voters hold key in 2016 Pondicherry Assembly elections 'A visual guide to the check out the history of Pondicherry Assembly elections, from 1964 until 2011'" /> 
@@ -40,6 +41,7 @@
 				<p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Undecided voters hold key in 2016 Pondicherry Assembly elections 'A visual guide to the check out the history of Pondicherry Assembly elections from 1964 until 2011</p>
 					<p class="synopsis">Who will get the stronghold in Pondicherry? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.</p>
 				
+                    <p class="synopsis">Check out for the more possible insights and trend in <a href="pondi_def.html" class="btn btn-default">Detail View</a></p> 
 				<p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
 				<span class='st_twitter_hcount' displayText='Tweet'></span>
 				<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
@@ -559,8 +561,24 @@
 	
 	</div>
 	</div>
+	
 
- <script>	
+      <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<script type="text/javascript">
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {        
+            $('#return-to-top').fadeIn(200);    
+        } else {
+            $('#return-to-top').fadeOut(200);   
+        }
+    });
+    $('#return-to-top').click(function() {     
+        $('body,html').animate({
+            scrollTop : 0             
+        }, 500);
+    });
+	
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -574,6 +592,7 @@ function getParameterByName(name, url) {
 flowyear_detail = getParameterByName('flowyear');
 year_detail = getParameterByName('year');
 acct_no = getParameterByName('acct_no');
+acct_name = getParameterByName('acct_name');
 
   if (acct_no == undefined){ $(".detail_display").hide(); }
   else{ $(".detail_display").show();}
@@ -588,6 +607,7 @@ $(".year_tag").append("("+year_detail+")");
 $('#'+year_detail+'_flow').addClass('active');
 
 $('#'+flowyear_detail+'').addClass('active');
+
 $(".successive_year_tag").append("("+flowyear_detail.replace('_', ' to ')+")");
 
 d3.csv("color_mapper.csv", function(error_color, color_data) {
@@ -601,6 +621,7 @@ color_data.forEach(function (d) {
 });
 
 d3.csv("sample_pondi.csv", function(data) { 
+	
 	
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 1200 - margin.left - margin.right,
@@ -935,8 +956,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		value = value_data[0]['VOTES']/parseFloat(value_data[0]['polled_votes']);
 		
 		fontSize = 16;
-
-		console.log(d3.min([width,height]));
 		
 		var arc = d3.svg.arc()
 					.innerRadius(d3.min([width,height])*.27)
@@ -1037,8 +1056,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 			});
 			o.score  = (o.values*100/o.contest).toFixed(2);			
 		});
-		
-		console.log(winning_data_count);
+
 		
 		radius = Math.min(width, height) / 2,
 		innerRadius = 0.3 * radius;
@@ -1327,10 +1345,10 @@ color_data.forEach(function (d) {
         "sScrollX": "100%",
         "sScrollXInner": "150%"
   });
-  
-  
+    
 	});					
 });
+
 </script>
 </body>
 </html>
