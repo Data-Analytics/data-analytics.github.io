@@ -112,12 +112,17 @@
 				</div>
 				</div>
 			</div>
+			<div class="row">
+			    <div class="col-md-12">
+					<div class="legend"></div>
+				</div>
+			</div>
 			</div>
 			</div>
 		</div>
 	</div>
 	<script>
-	var margin = {top: 10, right: 40, bottom: 40, left: 190},
+	var margin = {top: 10, right: 10, bottom: 10, left: 190},
     width = 800 - margin.left - margin.right,
     height = 900 - margin.top - margin.bottom;
 	
@@ -289,16 +294,27 @@ d3.csv("summary.csv", function(error, data){
         .attr("data-title", function(d) { return 'UnMarried Females: '+addThousandsSeparator(d.never_married_males)+"<br/> Total Females: "+addThousandsSeparator(d.total_males)+"<br/> Ratio: "+((d.never_married_males/d.total_males)*100).toFixed(2);})		
         .style('opacity', function(d) { return (get_opacity_val(d.never_married_males/d.total_males))});
 		
-		
       $("rect").tooltip({container: 'body', html: true, placement:'top'});
+
+    var legend = d3.select(".legend").append("svg")
+				.attr("width", '100%')
+				.attr("viewBox", '0 0 1300 25')
+				.attr("data-height", '0.628')
+				.append("g")
+				.attr("transform", "translate(525,0)");
+
+	
+		legend.append("rect").attr("x", 0).attr("y", 0).attr("width", 40).attr("height", 20).style("fill", "#f48400");
+		legend.append("text").attr("x", 50).attr("y", 9).attr("dy", ".35em").text("Male").style("font-size", 16).style("color", "#000000").style("text-anchor", "start");
+		legend.append("rect").attr("x", 200).attr("y", 0).attr("width", 40).attr("height", 20).style("fill", "#470071");
+		legend.append("text").attr("x", 250).attr("y", 9).attr("dy", ".35em").text("Female").style("font-size", 16).style("color", "#000000").style("text-anchor", "start");
+
+//	.attr("width", 50).attr("height", 50);
     
-  /*  var male = d3.select("#male").append("svg").attr("width", 100).attr("height", 100);
-    male.append("rect").attr("x", 0).attr("y", 0).attr("width", 100).attr("height", 50).style("fill", "#f48400");
-    male.append("text").attr("x", 50).attr("y", 65).attr("dy", ".35em").text("Male").style("font-size", 20).style("color", "#000000").style("text-anchor", "middle");
-    
-    var female = d3.select("#female").append("svg").attr("width", 100).attr("height", 100);
-    female.append("rect").attr("x", 0).attr("y", 0).attr("width", 100).attr("height", 50).style("fill", "#470071"); 
-    female.append("text").attr("x", 50).attr("y", 65).attr("dy", ".35em").text("Female").style("font-size", 20).style("color", "#000000").style("text-anchor", "middle"); */
+//    var female = d3.select("#female").append("svg").attr("width", 50).attr("height", 50);
+  //  female.append("rect").attr("x", 0).attr("y", 0).attr("width", 50).attr("height", 50).style("fill", "#470071"); 
+    //female.append("text").attr("x", 50).attr("y", 65).attr("dy", ".35em").text("Female").style("font-size", 20).style("color", "#000000").style("text-anchor", "middle"); 
+	
 });
 
 	</script>
