@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     25-03-2016
+ Modified:    25-03-2016
+ Copyright:  (c)sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Undoubtedly marriages in India are one of the much celebrated events, dramatically evoking every possible social obligation, kinship bond, traditional value, impassioned sentiment, and economic resource. In the arranging and conducting of weddings, the complex permutations of Indian social systems best display themselves. Thus for many individuals, marriage becomes a great watershed in life, marking the transition to adulthood. But with changing times, do people still consider marriages a stepping tone of life? Do we still have a societally stringent age group of getting married? Do we still need a companion to support us in our dotage? In an attempt to answer such questions, here is a small data visualization to further understand India's Marital Status.">
+    <meta http-equiv="refresh" content="600">
+    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation, chord diagram, chord diagram with text, survey Analysis">
+	<link href="css/bootstrap.css" rel="stylesheet">    
+	<link href="css/basic.css" rel="stylesheet">
+	<link href="css/feature.css" rel="stylesheet">
+	<link href="css/custom-styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/underscore-min.js"></script> 
+    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
+    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
+    <link rel="shortcut icon" href="/./images/logo.png">
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
+    <meta property="og:title"  content="India's Marital Status" />
+    <meta property="og:url"   content="http://data-analytics.github.io/Martial_status" />
+    <meta property="og:description" content="Undoubtedly marriages in India are one of the much celebrated events, dramatically evoking every possible social obligation, kinship bond, traditional value, impassioned sentiment, and economic resource. In the arranging and conducting of weddings, the complex permutations of Indian social systems best display themselves. Thus for many individuals, marriage becomes a great watershed in life, marking the transition to adulthood. But with changing times, do people still consider marriages a stepping tone of life? Do we still have a societally stringent age group of getting married? Do we still need a companion to support us in our dotage? In an attempt to answer such questions, here is a small data visualization to further understand India's Marital Status." /> 
+    <meta property="og:image" content="http://2.bp.blogspot.com/-5PJKHAAFj38/T4uixpHbp0I/AAAAAAAAAFE/yVOxPX4MO4Y/s1600/thaali3.jpg" /> 
+    <html itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="description" content="Undoubtedly marriages in India are one of the much celebrated events, dramatically evoking every possible social obligation, kinship bond, traditional value, impassioned sentiment, and economic resource. In the arranging and conducting of weddings, the complex permutations of Indian social systems best display themselves. Thus for many individuals, marriage becomes a great watershed in life, marking the transition to adulthood. But with changing times, do people still consider marriages a stepping tone of life? Do we still have a societally stringent age group of getting married? Do we still need a companion to support us in our dotage? In an attempt to answer such questions, here is a small data visualization to further understand India's Marital Status.">
+    <meta itemprop="name" content="India's Marital Status">
+    <meta itemprop="image" content="http://2.bp.blogspot.com/-5PJKHAAFj38/T4uixpHbp0I/AAAAAAAAAFE/yVOxPX4MO4Y/s1600/thaali3.jpg">  
+    <title>India's Marital Status</title>
+	</head>
+	<style type="text/css">
+
+		.chord {
+		  fill-opacity: .67;
+		  stroke: #000;
+		  stroke-width: .5px;
+		}
+
+		#circle circle {
+		  fill: none;
+		  pointer-events: all;
+		}
+
+		.group path {
+		  fill-opacity: .8;
+		}
+
+		#circle:hover path.fade1 {
+		  display: none;
+		}
+		
+		select {
+		    margin-left: 20px;
+		}
+	</style>
+	<body>
+  	<div class="container-fluid header-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-logo">
+					
+					<p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>India's Marital Status</p>
+					<p class="synopsis">Undoubtedly marriages in India are one of the much celebrated events, dramatically evoking every possible social obligation, kinship bond, traditional value, impassioned sentiment, and economic resource. In the arranging and conducting of weddings, the complex permutations of Indian social systems best display themselves. Thus for many individuals, marriage becomes a great watershed in life, marking the transition to adulthood. But with changing times, do people still consider marriages a stepping tone of life? Do we still have a societally stringent age group of getting married? Do we still need a companion to support us in our dotage? In an attempt to answer such questions, here is a small data visualization to further understand India's Marital Status.</p>
+				
+					<p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+					<span class='st_twitter_hcount' displayText='Tweet'></span>
+					<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+					<span class='st_googleplus_hcount' displayText='Google'></span>
+					<span class='st_email_hcount' displayText='Email'></span></p>
+				
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-12 panel panel-default">
+			<div class="row">
+			    <div class="col-md-6">
+				<div class="panel-heading1">
+					<h2>Age Group for Married Persons</h2>
+				</div>	
+				<div class="panel-body">	
+					<div id="married"></div>
+				</div>
+				</div>
+				<div class="col-md-6">
+				<div class="panel-heading1">
+					<h2>Age Group for UnMarried Persons</h2>
+				</div>	
+				<div class="panel-body">	
+					<div id="single"></div>
+				</div>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	var margin = {top: 10, right: 40, bottom: 40, left: 190},
+    width = 800 - margin.left - margin.right,
+    height = 900 - margin.top - margin.bottom;
+	
+	function addThousandsSeparator(input) {
+    var output = input
+    if (parseFloat(input)) {
+    input = new String(input); 
+    var parts = input.split("."); 
+    parts[0] = parts[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g, "$1,").split("").reverse().join("");
+    output = parts.join(".");
+    }
+
+    return output;
+}
+
+
+var state_code_map = {};
+
+function get_opacity_val(data_val){
+    var opacity_val = 0;
+    if (data_val > 1.0){ 
+        opacity_val = 1.0;
+    }
+    else if (data_val < 0.09 && data_val > 0.01){
+        opacity_val = 5 * data_val;
+    }
+    else if (data_val < 0.01 && data_val > 0.005){
+        opacity_val = 10 * data_val;
+    }
+    else{
+        opacity_val = data_val;
+    }
+   return opacity_val; 
+}
+d3.csv("summary.csv", function(error, data){
+    if (error) throw error;
+    var reg = /^[0-9]+/;
+    data.forEach(function(d) {
+        d.state_code = +d.state_code;
+        state_code_map[d.state_code] = d.area_name.split("State - ")[1].split("(")[0];
+        d.age_group = +reg.exec(d.age_group)[0];
+        d.total_males = +d.total_males;
+        d.total_females = +d.total_females;
+        d.never_married_males = +d.never_married_males;
+        d.never_married_females = +d.never_married_females;
+        d.currently_married_males = +d.currently_married_males;
+        d.currently_married_females = +d.currently_married_females;
+        d.separated_males = +d.separated_males;
+        d.separated_females = +d.separated_females;
+    });
+    var x = d3.scale.linear().domain([10, 85]).range([0, width]);
+    var y = d3.scale.linear().range([height, 0]);
+
+    function get_x_tick(d){
+        if(d == 85){
+            return "";
+        }else if(d == 80){
+            return "80+"; 
+        }else{
+            return d;
+        }
+    }
+    var xAxis = d3.svg.axis().scale(x).orient("bottom").ticks(15).tickFormat(get_x_tick);;
+    var yAxis = d3.svg.axis().scale(y).orient("left").ticks(35).tickFormat(function (d) {return state_code_map[d];}).tickPadding(10);
+
+    var married_graph = d3.select("#married").append("svg")
+    .attr("width", '100%')
+    .attr("viewBox", '0 0 '+(width + margin.left + margin.right)+' '+(height + margin.top + margin.bottom))
+	.attr("data-height", '0.628')
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    y.domain(d3.extent(data, function(d) { return d.state_code-1; })).nice();
+    married_graph.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("x", width)
+        .attr("dy", "3em")
+        .attr("y", 0)
+        .style("text-anchor", "end")
+        .text("Age Group for Married Persons");
+    married_graph.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0)
+        .attr("dy", "2em")
+        .style("text-anchor", "end")
+        .style("font-weight", "bold");
+    married_graph.selectAll(".female_dot")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "female_dot")
+        .attr("x", function(d) { return x(d.age_group); })
+        .attr("y", function(d) { return y(d.state_code); })
+        .attr("width", 38)
+        .attr("height", 10)
+        .style("fill", "#470071")
+	    .attr("data-title", function(d) { return'Currently Married Females: '+addThousandsSeparator(d.currently_married_females)+"<br/> Total Females: "+addThousandsSeparator(d.total_females)+"<br/> Ratio: "+((d.currently_married_females/d.total_males)*100).toFixed(2);})
+        .style('opacity', function(d) { return (get_opacity_val(d.currently_married_females/d.total_females))});
+		
+    married_graph.selectAll(".male_dot")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "male_dot")
+        .attr("x", function(d) { return x(d.age_group); })
+        .attr("y", function(d) { return y(d.state_code + 0.4); })
+        .attr("width", 38)
+        .attr("height", 10)
+        .style("fill", "#f48400")
+        .attr("data-title", function(d) { return 'Currently Married Males: '+addThousandsSeparator(d.currently_married_males)+"<br/> Total Females: "+addThousandsSeparator(d.total_females)+"<br/> Ratio: "+((d.currently_married_males/d.total_males)*100).toFixed(2);})
+		.style('opacity', function(d) { return (get_opacity_val(d.currently_married_males/d.total_males))});
+
+    var yAxis2 = d3.svg.axis().scale(y).orient("left").ticks(35).tickFormat(function (d) {return state_code_map[d];}).tickPadding(10);
+	var single_graph = d3.select("#single").append("svg")
+    .attr("width", '100%')
+    .attr("viewBox", '0 0 '+(width + margin.left + margin.right)+' '+(height + margin.top + margin.bottom))
+	.attr("data-height", '0.628')
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    y.domain(d3.extent(data, function(d) { return d.state_code; })).nice();
+    single_graph.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("x", width)
+        .attr("dy", "2.75em")
+        .attr("y", 0)
+        .style("text-anchor", "end")
+        .text("Age Group for Never Married Persons");
+    single_graph.append("g")
+        .attr("class", "y axis")
+        .call(yAxis2)
+        .append("text")
+        .attr("class", "label")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0)
+        .attr("dy", "2em")
+        .style("text-anchor", "end")
+    single_graph.selectAll(".female_dot")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "female_dot")
+        .attr("x", function(d) { return x(d.age_group)<0 ? 0 : x(d.age_group); })
+        .attr("y", function(d) { return y(d.state_code); })
+        .attr("width", 38)
+        .attr("height", 10)
+        .style("fill", "#470071")
+        .attr("data-title",function(d) { return 'UnMarried Females: '+addThousandsSeparator(d.never_married_females)+"<br/> Total Females: "+addThousandsSeparator(d.total_females)+"<br/> Ratio: "+((d.never_married_males/d.total_males)*100).toFixed(2);})
+		.style('opacity', function(d) { return (get_opacity_val(d.never_married_females/d.total_females))});
+		
+    single_graph.selectAll(".male_dot")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "male_dot")
+        .attr("x", function(d) { return x(d.age_group)<0 ? 0 : x(d.age_group); })
+        .attr("y", function(d) { return y(d.state_code + 0.4); })
+        .attr("width", 38)
+        .attr("height", 10)
+        .style("fill", "#f48400")
+        .attr("data-title", function(d) { return 'UnMarried Females: '+addThousandsSeparator(d.never_married_males)+"<br/> Total Females: "+addThousandsSeparator(d.total_males)+"<br/> Ratio: "+((d.never_married_males/d.total_males)*100).toFixed(2);})		
+        .style('opacity', function(d) { return (get_opacity_val(d.never_married_males/d.total_males))});
+		
+		
+      $("rect").tooltip({container: 'body', html: true, placement:'top'});
+    
+  /*  var male = d3.select("#male").append("svg").attr("width", 100).attr("height", 100);
+    male.append("rect").attr("x", 0).attr("y", 0).attr("width", 100).attr("height", 50).style("fill", "#f48400");
+    male.append("text").attr("x", 50).attr("y", 65).attr("dy", ".35em").text("Male").style("font-size", 20).style("color", "#000000").style("text-anchor", "middle");
+    
+    var female = d3.select("#female").append("svg").attr("width", 100).attr("height", 100);
+    female.append("rect").attr("x", 0).attr("y", 0).attr("width", 100).attr("height", 50).style("fill", "#470071"); 
+    female.append("text").attr("x", 50).attr("y", 65).attr("dy", ".35em").text("Female").style("font-size", 20).style("color", "#000000").style("text-anchor", "middle"); */
+});
+
+	</script>
+	</body>
+</html>
