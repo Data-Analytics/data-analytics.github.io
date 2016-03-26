@@ -3,7 +3,7 @@ var units = "People";
 
 var margin = {top: 10, right: 30, bottom: 30, left: 20};
 
-var width = parseInt(d3.select('.chart').style('width'), 10);
+var width = 960;
 var height = 2500;
 
 var formatNumber = d3.format(",.0f"),   
@@ -11,11 +11,12 @@ var formatNumber = d3.format(",.0f"),
     color = d3.scale.category20();
 
 var svg = d3.select("#chart").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+			.style("width", "100%")
+			.attr("data-height","0.54")
+			.attr("viewBox","0 0 "+(width + margin.left + margin.right)+" "+(height + margin.top + margin.bottom))	
+			.append("g")
+			.attr("transform",
+				  "translate(" + margin.left + "," + margin.top + ")");
 
 var linkset = svg.append("g").attr("id","linkSet")
 
@@ -53,8 +54,10 @@ relayout = function(maindata,filter) {
 
     resetSizeDown = function() {
         height = window.innerHeight*.9
-    d3.select("svg").transition().duration(duration).attr("height",window.innerHeight)
-        svg.attr("height",window.innerHeight*.9)
+    d3.select("svg").transition().duration(duration)//.attr("height",window.innerHeight)
+		//svg.
+		//.attr("viewBox","0 0 "+(width + margin.left + margin.right)+" "+(window.innerHeight))	
+        //svg.attr("height",window.innerHeight*.9)
         sankey.size([width,height])
     }
 

@@ -16,12 +16,15 @@
     <meta name="author" content="Sushanth">
     <meta http-equiv="refresh" content="600">
     <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation , calender-map">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+	<link href="css/bootstrap.css" rel="stylesheet">    
+	<link href="css/basic.css" rel="stylesheet">
+	<link href="css/feature.css" rel="stylesheet">
+	<link href="css/custom-styles.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/./javascripts/underscore-min.js"></script> 
     <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
     <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
@@ -33,12 +36,12 @@
     <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
     <meta property="og:title"  content="Jobs by college Major" />
     <meta property="og:url"   content="http://data-analytics.github.io/Jobs_College" />
-    <meta property="og:description" content="You surely see that the lines are too small to understand in most cases: to actually see what's going on with a particular field or job, click on a box and the chart will filter down to just the people who either majored in the field" /> 
-    <meta property="og:image" content="http://data-analytics.github.io/images/jobs_college.png" /> 
+    <meta property="og:description" content="It's tempting to get a quick degree to start earning quick money. Ten years down the line, will that degree still be earning you good money?" /> 
+    <meta property="og:image" content="http://moneybasicsu.com/wp-content/uploads/2013/03/College-graduates-return-home-to-live.jpg" /> 
     <html itemscope itemtype="http://schema.org/Blog">
-    <meta itemprop="description" content="You surely see that the lines are too small to understand in most cases: to actually see what's going on with a particular field or job, click on a box and the chart will filter down to just the people who either majored in the field">
+    <meta itemprop="description" content="It's tempting to get a quick degree to start earning quick money. Ten years down the line, will that degree still be earning you good money?">
     <meta itemprop="name" content="Jobs by college Major">
-    <meta itemprop="image" content="http://data-analytics.github.io/images/jobs_college.png">        
+    <meta itemprop="image" content="http://moneybasicsu.com/wp-content/uploads/2013/03/College-graduates-return-home-to-live.jpg">        
     <title>Jobs by college Major</title>  
     <style>
       .node rect {
@@ -62,42 +65,41 @@
   </head>
   <body>
      <!-- HEADER -->
-        <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
-            <header class="inner container">
-              <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
-          <h1 id="project_title">Jobs by college Major</h1>
-              <p id="project_title_p">You surely see that the lines are too small to 
-              understand in most cases: to actually see what's going on with a 
-              particular field or job, click on a box and the chart will filter 
-              down to just the people who either majored in the field
-              </p> 
-           </header>  
-            <div id="banner">
-             <div class="container">
-              <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-calender-map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
-              <div class="downloads">
-                <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-calender-map/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-calender-map" class="button">view on github</a>
-              </div>
-            </div>
-          </div><!-- end banner -->
-        </div>
-        
-        <!-- MAIN CONTENT -->
-    <div class="container">
-      <section id="main_content" class="inner">
-        <br/><span class='st_facebook_hcount' displayText='Facebook'></span>
-        <span class='st_twitter_hcount' displayText='Tweet'></span>
-        <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
-        <span class='st_googleplus_hcount' displayText='Google'></span>
-        <span class='st_email_hcount' displayText='Email'></span><br/>     
-       <div id="chart" class="chart" align="center"></div>
-        <script type="text/javascript" src="sankey.js"></script>
-        <script type="text/javascript" src="jobs.js"></script>
-        </div>
-      </section>
-    </div>
-  </body>
+	<div class="container-fluid header-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-logo">
+					
+					<p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Jobs by college Major</p>
+					<p class="synopsis">A degree that fetches you a well-paying job, both today and tomorrow, is the one that's worth having in hand. More than temporary success, it's important to think about the long term effects and benefits of the degree you plan to undertake now. You surely see that the lines are too small to understand in most cases: to actually see what's going on with a particular field or job, click on a box and the chart will filter down to just the people who either majored in the field.</p>
+				<p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+				<span class='st_twitter_hcount' displayText='Tweet'></span>
+				<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+				<span class='st_googleplus_hcount' displayText='Google'></span>
+				<span class='st_email_hcount' displayText='Email'></span></p>
+				
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+	  <div class="container">
+		<div class="row">
+		<div class="col-md-12 panel panel-default">
+	    <div class="row">		   
+			<div class=" col-md-12 panel-body">		
+				<div id="chart" class="chart"></div>
+				<script type="text/javascript" src="sankey.js"></script>
+				<script type="text/javascript" src="jobs.js"></script>		
+			</div>
+		
+		</div>	
+		</div>
+		</div>
+	</div>
+	</div>
+	
+   </body>
 </html>
