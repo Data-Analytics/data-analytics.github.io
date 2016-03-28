@@ -1,4 +1,15 @@
-<html><head>
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     28-01-2016
+ Modified:    28-03-2016
+ Copyright:  (c) sushanth 2016
+ Licence:     protected
+--------------------------------------------------------------->
+<html ng-app="VisApp">
+ <head>
   <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="author" content="Sushanth">
@@ -17,7 +28,8 @@
   <script type="text/javascript" src="js/jquery.min.js"></script>  
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
-  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>  
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
+  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
   <script type="text/javascript" src="js/bootstrap.min.js"></script>    
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
@@ -31,7 +43,7 @@
   <meta itemprop="image" content="images/images.png">
   <title>Assembly Elections 1967 - 2011 (Tamil Nadu)</title>
 </head>
-<body>
+<body ng-controller="visCtrl" >
   	<div class="container-fluid header-style">
 		<div class="container">
 			<div class="row">
@@ -451,7 +463,7 @@
 					  <div class="dropdown header_year">
 						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
 							<ul class="dropdown-menu" role="menu">
-							
+
 									<li data-year="2011" id="2011"><a href="?year=2011#individual">2011 results</a></li>
 									<li data-year="2006" id="2006"><a href="?year=2006#individual">2006 results</a></li>
 									<li data-year="2001" id="2001"><a href="?year=2001#individual">2001 results</a></li>
@@ -805,7 +817,8 @@
 				<div class=" col-md-12 panel-body">
 
 						 <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
-						  <g class="headers" transform="translate(80,5)">
+						  
+						  <g class="headers" transform="translate(80,15)">
 							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#c0392b"></rect>
 							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
 							
@@ -847,7 +860,7 @@
 							
 							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
 							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-							  
+							 
 							</svg>
 						  </g>
 
@@ -865,7 +878,84 @@
 	</div>
 	</div>
 	
- <script>	
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<script type="text/javascript">
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {        
+            $('#return-to-top').fadeIn(200);    
+        } else {
+            $('#return-to-top').fadeOut(200);   
+        }
+    });
+    $('#return-to-top').click(function() {     
+        $('body,html').animate({
+            scrollTop : 0             
+        }, 500);
+    });	
+	
+var app = angular.module('VisApp', []);
+app.controller('visCtrl', function($scope, $http) {
+		$scope.parties = [
+  {
+    "party":"DMK",
+    "color":"#c0392b"
+  },
+  {
+    "party":"ADMK",
+    "color":"#b2d33c"
+  },
+  {
+    "party":"DMDK",
+    "color":"#f1c40f"
+  },
+  {
+    "party":"INC",
+    "color":"#2ecc71"
+  },
+  {
+    "party":"CPM",
+    "color":"#ff5757"
+  },
+  {
+    "party":"CPI",
+    "color":"#ff5757"
+  },
+  {
+    "party":"PMK",
+    "color":"#d35400"
+  },
+  {
+    "party":"TMC(M)",
+    "color":"#4747ff"
+  },
+  {
+    "party":"NCO",
+    "color":"#1f77b4"
+  },
+  {
+    "party":"JNP",
+    "color":"#9A9E56"
+  },
+  {
+    "party":"MDMK",
+    "color":"#9b59b6"
+  },
+  {
+    "party":"BJP",
+    "color":"#ff7f0e"
+  },
+  {
+    "party":"IND",
+    "color":"#bdc3c7"
+  },
+  {
+    "party":"Others",
+    "color":"#222"
+  }
+];
+});
+	
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -1242,8 +1332,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		value = value_data[0]['VOTES']/parseFloat(value_data[0]['polled_votes']);
 		
 		fontSize = 16;
-
-		console.log(d3.min([width,height]));
 		
 		var arc = d3.svg.arc()
 					.innerRadius(d3.min([width,height])*.27)
@@ -1345,7 +1433,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 			o.score  = (o.values*100/o.contest).toFixed(2);			
 		});
 		
-		console.log(winning_data_count);
 		
 		radius = Math.min(width, height) / 2,
 		innerRadius = 0.3 * radius;
@@ -1650,7 +1737,6 @@ d3.csv("assembly_tn_detail.csv", function(data_csv) {
 
 
 	data_set = data_csv.filter(function(d){return (d.YEAR==2011) & (d.rank==1) })
-	console.log(data_set);
 	
 d3.csv("color_mapper.csv", function(error_color, color_data) {
 
@@ -1687,7 +1773,6 @@ color_data.forEach(function (d) {
 	
 d3.selectAll("polygon").each( function(d, i){
 			
-	  
 	d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/> Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/> party : '+PARTY[d3.select(this).attr("id")]+' <br/> percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/> votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/> polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))
     d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+PARTY[d3.select(this).attr("id")]+' '+Candidate[d3.select(this).attr("id")] ;})
     d3.select(this).style("fill", constituency_color[d3.select(this).attr("id")] )
@@ -1714,7 +1799,6 @@ d3.selectAll("polygon").each( function(d, i){
     }
 
    add_search('.geo_search', '.geo_map');
-    
 
 	 var Industry = constituency_list;
 	
