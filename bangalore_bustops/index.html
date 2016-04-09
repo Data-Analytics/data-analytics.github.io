@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
+	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>	
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+		#info { z-index: 1; position: absolute; top: 10px; right: 10px; background-color: #fff;}
+    </style>
+</head>
+<body>
+<div id='map'></div>
+<div id='info'>
+    <ul id='stoplist'></ul>
+</div>
+<script src='data/stops.js'></script>
+<script src='data/destinations.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js'></script>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3VzaGFudGgiLCJhIjoiY2ltZzc0NWt5MDAxM2Voa2syYXh1ZGpjNSJ9.GT8WOly4ZZTdSkVkukTsZQ';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
+    center: [77.5912997, 12.9791198], // starting position
+    zoom: 11, // starting zoom
+	hash: true
+});
+
+map.addControl(new mapboxgl.Navigation({position: 'top-left'}));
+
+var stopsSource = {
+    "type": "geojson",
+    "data": stops
+};
+
+var stopsLayer = {
+    "id": "stops",
+    "source": "stops",
+    "type": "circle",
+    "paint": {
+        "circle-radius": {
+			"base": 1,
+			"stops": [[8, 1.5], [10, 2], [15, 4], [20, 6]]
+		},
+        "circle-color": "blue",
+    },
+    "interactive": true
+};
+
+var stopsWithinLayer = {
+    "id": "stopsWithin",
+    "source": "stops",
+    "type": "circle",
+    "paint": {
+        "circle-radius": 20,
+        "circle-color": "red",
+        "circle-opacity": 0.6,
+        "circle-blur": 0.8
+    },
+    "filter": ["==", "name", ""]
+};
+
+var destinationsSource = {
+    "type": "geojson",
+    "data": destinations
+};
+
+var destinationsLayer = {
+    "id": "destinations",
+    "type": "line",
+    "source": "destinations",
+    "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+    },
+    "paint": {
+        "line-color": "black",
+        "line-width": 1,
+        "line-opacity": 0.8,
+        "line-blur": 1
+    },
+    "filter": ["==", "name", ""]
+};
+
+map.on('style.load', function () {
+    
+	map.addSource("stops", stopsSource);
+    map.addLayer(stopsLayer);
+	
+	map.addSource("destinations", destinationsSource);
+	map.addLayer(destinationsLayer);
+	
+});
+
+map.on('click', function (e) {
+clear();
+var x1y1 = [e.point.x - 5, e.point.y - 5];
+var x2y2 = [e.point.x + 5, e.point.y + 5];
+var clickedFeatures = map.queryRenderedFeatures([x1y1, x2y2], { layers: ["stops"] });
+
+if (clickedFeatures.length) {
+    clear();
+    map.setFilter("stopsWithin", ["==", "name", clickedFeatures[0].properties.name]);
+    map.setFilter("destinations", ["==", "name", clickedFeatures[0].properties.name]);
+} else {
+    showStops(e);
+}
+showStops(e);
+})
+
+function showStops(e) {
+
+var point = turf.point([e.lngLat.lng, e.lngLat.lat]);
+var buffer = turf.buffer(point, .5, 'kilometers');
+
+var bufferSource = {
+    "type": "geojson",
+    "data": buffer
+};
+
+var bufferLayer = {
+    "id": "buffer",
+    "source": "buffer",
+    "type": "fill",
+    "paint": {
+        "fill-color": "black",
+        "fill-opacity": 0.1
+    }
+};
+
+map.addSource("buffer", bufferSource);
+map.addLayer(bufferLayer);
+findStops(buffer);
+
+}
+function findStops(buffer) {
+    var stopsWithin = turf.within(stops, buffer);
+    console.log('Number of stops within: ' + stopsWithin.features.length);
+	map.addLayer(stopsWithinLayer);
+	var filters = ["any"];
+	var stopList = $('#stoplist');
+	stopsWithin.features.forEach(function(stop) {
+		filters.push(["==", "name", stop.properties.name]);
+		var li = $('<li/>').appendTo(stopList);
+		var entry = $('<span/>').text(stop.properties.name.split(',')[0]).appendTo(li);
+
+	});
+	map.setFilter("stopsWithin", filters);
+
+}
+function clear() {
+    if (map.getLayer('buffer')) {
+        map.removeLayer('buffer');
+        map.removeSource('buffer');
+    }
+	$('li').remove();
+	//map.setFilter("stopsWithin", ["==", "name", ""]);
+}
+</script>
+</body>
+</html>
