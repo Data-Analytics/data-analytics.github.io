@@ -113,8 +113,8 @@ background-color:white;
     font-size: 26px;
 }
 .link {
-  stroke-opacity: .3;
-  fill-opacity:.3;
+  stroke-opacity: .1;
+  fill-opacity:.1;
 }
 .link:hover {
   stroke-opacity: .8;
