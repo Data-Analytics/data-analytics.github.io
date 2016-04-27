@@ -197,9 +197,9 @@ color_data.forEach(function (d) {
 						.append("td")
 						.attr("bgcolor",function(d) { return color_map[d] })
 						.append("font")
-						.attr("color",function(d) { console.log('hsi'); return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
+						.attr("color",function(d) {  return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
 						.attr("id",function(d,i) { return i==0? "rect_names"+i.toString():"rect_names"+d; })
-						.attr("class",function(d) { return (party_list.indexOf(d) >= 0)? "rect_names "+d :"rect_names Others "+d; })
+						.attr("class",function(d) { return return i!=0? ((party_list.indexOf(d) >= 0)? "rect_names "+d :"rect_names Others "+d):"rect_names head ";  })
 						.text(function(d) { return d; })
 						
 					  headers
@@ -229,7 +229,7 @@ color_data.forEach(function (d) {
 						document.getElementById('con_names0').innerHTML = "&#2980;&#3018;&#2965;&#3009;&#2980;&#3007;"; 
 						document.getElementById('headers0').innerHTML = "&#2997;&#3014;&#2993;&#3021;&#2993;&#3007;&#2965;&#2995;&#3021;"; 
 						document.getElementById('rect_names0').innerHTML = "&#2965;&#2975;&#3021;&#2970;&#3007; "; 
-	  
+						
 	});					
 });
 </script>
