@@ -1,0 +1,46 @@
+						 <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,0)">
+							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#c0392b"></rect>
+							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+							
+							  <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#b2d33c"></rect>
+							  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">ADMK</text>
+							
+							  <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#2ecc71"></rect>
+							  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+							
+							  <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+							  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+							
+							  <rect class="party-legend" data-party="TMC(M)" data-highlight="[data-party=TMC(M)]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4747ff"></rect>
+							  <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">TMC(M)</text>
+
+							  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+							  <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+							
+							  <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+							  <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+							
+							  <rect class="party-legend" data-party="PMK" data-highlight="[data-party=PMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#d35400"></rect>
+							  <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">PMK</text>
+							
+							  <rect class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#f1c40f"></rect>
+							  <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
+							
+							  <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+							  <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
+							
+							  <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
+							  <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+							
+							  <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
+							  <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
+							
+							  <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
+							  <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+							
+							  <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+							  
+						  </g>
+						</svg>
