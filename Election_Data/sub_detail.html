@@ -199,7 +199,7 @@ color_data.forEach(function (d) {
 						.append("font")
 						.attr("color",function(d) {  return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
 						.attr("id",function(d,i) { return i==0? "rect_names"+i.toString():"rect_names"+d; })
-						.attr("class",function(d) { return return i!=0? ((party_list.indexOf(d) >= 0)? "rect_names "+d :"rect_names Others "+d):"rect_names head ";  })
+						.attr("class",function(d) { return i!=0? ((party_list.indexOf(d) >= 0)? "rect_names "+d :"rect_names Others "+d):"rect_names head ";  })
 						.text(function(d) { return d; })
 						
 					  headers
