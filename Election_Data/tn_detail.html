@@ -66,7 +66,6 @@
            </div>
            <div class="row">		   
 				<div class=" col-md-12 panel-body">
-                       <a href="tn_def.html" class="btn btn-default">Back</a> 
 					   <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
 						  <g class="headers" transform="translate(80,5)">
 							  <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#c0392b"></rect>
@@ -165,7 +164,7 @@ else
 $(".type_tag").append(type_detail.replace('_', ' '));
 
 // load the data (using the timelyportfolio csv method)
-d3.text("ADMK_bastions_tn.csv", function(error, data) {
+d3.text(type_detail+".csv", function(error, data) {
 
 d3.csv("color_mapper.csv", function(error_color, color_data) {
 
