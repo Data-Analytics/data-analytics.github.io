@@ -110,14 +110,18 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
 d3.csv("nms.csv", function(error_color, name_data) {
+
+	console.log(name_data);
+
 
 name_map = {}
 
 name_data.forEach(function (d) {
 	name_map[d.name] = d.mapper;
 });
-});
+}); 
 
 // load the data (using the timelyportfolio csv method)
 d3.text("tn_data.csv", function(error, data) {
