@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+	body { font: 12px Arial;}
+
+	path { 
+		stroke: steelblue;
+		stroke-width: 2;
+		fill: none;
+	}
+
+	.axis path,
+	.axis line {
+		fill: none;
+		stroke: grey;
+		stroke-width: 1;
+		shape-rendering: crispEdges;
+	}
+
+	.legend {
+		font-size: 16px;         
+		font-weight: bold;         
+		text-anchor: start;
+		}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+var	margin = {top: 30, right: 40, bottom: 70, left: 50}, 
+	width = 600 - margin.left - margin.right,
+	height = 300 - margin.top - margin.bottom;
+
+var	parseDate = d3.time.format("%d-%b-%y").parse;
+
+var	x = d3.time.scale().range([0, width]);
+var	y0 = d3.scale.linear().range([height, 0]);
+var	y1 = d3.scale.linear().range([height, 0]);	
+
+var	xAxis = d3.svg.axis().scale(x)
+	.orient("bottom").ticks(5);
+
+var	yAxisLeft = d3.svg.axis().scale(y0)
+	.orient("left").ticks(5);
+
+var	yAxisRight = d3.svg.axis().scale(y1)
+	.orient("right").ticks(5);		
+
+var	valueline = d3.svg.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y0(d.close); });	
+    
+var	valueline2 = d3.svg.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y1(d.open); });
+  
+var	svg = d3.select("body")
+	.append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+		.attr("transform", 
+		      "translate(" + margin.left + "," + margin.top + ")");
+var data = [
+{"date":"9-Apr-12","close":436,"open":9.04},
+{"date":"7-Apr-12","close":221,"open":4.02},
+{"date":"5-Apr-12","close":113,"open":9.02},
+{"date":"4-Apr-12","close":64,"open":32.05},
+{"date":"3-Apr-12","close":29,"open":46.03},
+{"date":"2-Apr-12","close":18,"open":51.03}
+];
+
+// Get the data
+data.forEach(function(d) {
+	d.date = parseDate(d.date);
+	d.close = +d.close;
+	d.open = +d.open;
+});
+
+// Scale the range of the data
+x.domain(d3.extent(data, function(d) { return d.date; }));
+y0.domain([0, d3.max(data, function(d) { 
+	return Math.max(d.close); })]);
+y1.domain([0, d3.max(data, function(d) { 
+	return Math.max(d.open); })]);
+
+svg.append("path")
+	.attr("class", "line")
+	.attr("id", "blueLine")
+	.attr("d", valueline(data));
+
+svg.append("path")
+	.attr("class", "line")
+	.style("stroke", "red")
+	.attr("id", "redLine")
+	.attr("d", valueline2(data));
+
+svg.append("g")	
+	.attr("class", "x axis")
+	.attr("transform", "translate(0," + height + ")")
+	.call(xAxis);
+
+// edit the Y Axis Left
+svg.append("g")	
+	.attr("class", "y axis")
+	.style("fill", "steelblue")
+	.attr("id", "blueAxis")
+	.call(yAxisLeft);
+
+svg.append("g")
+	.attr("class", "y axis")
+	.attr("transform", "translate(" + width + " ,0)")
+	.style("fill", "red")
+	.attr("id", "redAxis")
+	.call(yAxisRight);
+
+// Add the blue line title
+svg.append("text")
+	.attr("x", 0)             
+	.attr("y", height + margin.top + 10)    
+	.attr("class", "legend")
+	.style("fill", "steelblue")         
+	.on("click", function(){
+		// Determine if current line is visible
+		var active   = blueLine.active ? false : true,
+		  newOpacity = active ? 0 : 1;
+		// Hide or show the elements
+		d3.select("#blueLine").style("opacity", newOpacity);
+		d3.select("#blueAxis").style("opacity", newOpacity);
+		// Update whether or not the elements are active
+		blueLine.active = active;
+	})
+	.text("Blue Line");
+
+// Add the red line title
+svg.append("text")
+	.attr("x", 0)             
+	.attr("y", height + margin.top + 30)    
+	.attr("class", "legend")
+	.style("fill", "red")         
+	.on("click", function(){
+		// Determine if current line is visible
+		var active   = redLine.active ? false : true ,
+		  newOpacity = active ? 0 : 1;
+		// Hide or show the elements
+		d3.select("#redLine").style("opacity", newOpacity);
+		d3.select("#redAxis").style("opacity", newOpacity);
+		// Update whether or not the elements are active
+		redLine.active = active;
+	})
+	.text("Red Line");
+
+</script>
+</body>

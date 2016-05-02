@@ -1,0 +1,175 @@
+  
+custom_horizontal_bar = {
+    make: function(options) {
+
+    if(options == undefined) options = {}
+    if(options.width == undefined) options.width = 960
+    if(options.height == undefined) options.height = 500
+	if(options.value == undefined) options.value = 'value'
+    if(options.container == undefined) options.container = "body"
+    if(options.color == undefined) options.color = d3.scale.category10();
+    if(options.groupby == undefined) options.groupby = 'groupby'  
+    if(options.data == undefined) options.data = {}
+    
+var margin = {top: options.height/5,left: options.width/3};		
+
+var svg = d3.select(options.container).append("svg")
+    .attr("width", '100%')
+    .attr("data-height", '0.5678')
+    .attr("viewBox",'0 0 '+options.width+' '+options.height)
+    .append("g")
+    .attr("transform", "translate(" + (margin.left*7/6) + "," + margin.top/2 + ")");
+
+	var constituency_name = '';
+	
+    options.data.forEach(function(o) {
+		constituency_name = o.AC_NAME;
+	  });
+    	  
+	var layers = d3.layout.stack()([options.value].map(function(period) {
+	    return options.data.map(function(d) {
+		  return {x: d[options.groupby]+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : d.color, party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes };
+		});
+    }));
+
+   var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); });
+
+    var yScale = d3.scale.ordinal()
+        .domain(layers[0].map(function(d) { return d.x; }))
+        .rangeRoundBands([0, options.height-margin.top], .2);
+
+    var x = d3.scale.linear()
+        .domain([0, yGroupMax])
+        .range([0, options.width-(margin.left*3/2)]);
+
+	var color = d3.scale.ordinal()
+		.range(["#7aa1c2","#72d8f2","#f3daa4","#66ca9b","#f7f7f7","#f7f7f7"]);
+	
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")		
+        .tickPadding(12)
+		.ticks(4);
+		
+    var yAxis = d3.svg.axis()
+        .scale(yScale)
+        .tickSize(0)
+        .tickPadding(9)
+        .orient("left");
+
+    var layer = svg.selectAll(".layer")
+        .data(layers)
+        .enter().append("g")
+        .attr("class", "layer");
+		
+		d3.selectAll(".tick > text")
+			.style("font-size", "13px")	
+  
+  
+    var rect = layer.selectAll("rect")
+        .data(function(d) { return  d; })
+        .enter().append("rect")
+        .attr("y", function(d) { return yScale(d.x); })
+        .attr("height", yScale.rangeBand())
+        .attr("x", function(d) { return  x(d.y0); })
+        .attr("width", function(d) { return x(d.y); })
+		.style("fill", function(d,i) { return d.color; })
+		.style("stroke", function(d,i) { return d3.rgb(d.color).darker(); })
+		.attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+      
+	var rect = layer.selectAll("text")
+        .data(function(d) { return  d; })
+        .enter().append("text")
+        .attr("y", function(d) { return yScale(d.x)+(yScale.rangeBand()*4/5); })
+        .attr("x", function(d) { return  x(d.y)+3; })
+        .style("text-anchor", "start")
+		.attr("fill", "#444")
+		.style("font-size","13px")
+		.text(function(d) { return addThousandsSeparator(d.votes)+' votes'; })
+		
+		$(".constituency_tag").append("("+constituency_name+")");
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + (options.height-margin.top) + ")")
+        .call(xAxis)
+		.selectAll("text").style("text-anchor", "middle")
+            .attr("dx", "-.18em")
+            .attr("dy", ".15em")
+			.style("fill", "rgb(99, 99, 99)")
+			.style("font-size","13px")
+
+	svg.append("text")
+		.attr("x", options.width-(margin.left*3/2))
+		.attr("y", options.height-(margin.top/2)-35)
+		.style("fill", "rgb(99, 99, 99)")
+		.style("font-size","13px")
+		.style("text-anchor", "end")
+		.text("Votes");
+			  
+    svg.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(0,0)")
+        .call(yAxis)
+		.selectAll("text")
+			.style("fill", "rgb(99, 99, 99)")
+			.style("font-size","13px");
+		
+	
+	$("rect").tooltip({container: 'body', html: true, placement:'top'});
+	
+
+value_data = options.data.filter(function(d){return (d.rank=1) })
+	
+var width = 200, height = 200, twoPi = 2 * Math.PI;
+
+value = value_data[0]['VOTES']/parseFloat(value_data[0]['polled_votes']);
+
+fontSize = 13;
+innerRadiusValue = 60;
+outerRadiusValue = 85;
+
+var arc = d3.svg.arc().innerRadius(innerRadiusValue).outerRadius(outerRadiusValue).startAngle(0);
+
+var meter = svg.append("g").attr("transform", "translate(-" + width + "," + (height*5/ 8) + ")").append("g").attr('title', value).attr("class", "season-progress");
+
+var background = meter.append("path").datum({
+	endAngle : twoPi
+}).style("fill", "#ddd").attr("d", arc);
+
+var foreground = meter.append("path").datum({
+	endAngle : 0
+}).style("fill", value_data[0]['color']).attr("class", "foreground").attr("d", arc);
+
+foreground.transition().duration(1000).ease("linear").attrTween("d", function(d) {
+	var interpolate = d3.interpolate(d.endAngle, twoPi * value)
+	return function(t) {
+		d.endAngle = interpolate(t);
+		return arc(d);
+	}
+});
+
+var text = meter.append("text").attr("text-anchor", "middle").attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text((value*100).toFixed(0) + "%");
+var text = meter.append("text").attr("text-anchor", "middle").attr("y", -100).attr("dy", ".35em").style("fill", "rgb(99, 99, 99)").attr("font-size", fontSize).text('Winning Party ('+value_data[0]['PARTY']+')');
+
+	
+	}
+	}	
+	
+	if (acct_no != undefined){
+	
+    d3.csv("assembly_tn_detail.csv", function(datas) {
+	
+    custom_horizontal_bar.make({
+	
+		width: 960,
+		height: 320,
+		container: ".horizontal_bar",
+		data: datas.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no)& (d.rank<12) }),
+		groupby :'rank',
+		value : 'VOTES'
+	
+	});
+	
+	});
+	}
