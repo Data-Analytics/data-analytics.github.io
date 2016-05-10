@@ -12,7 +12,7 @@ d3.csv("sample.csv", function(data) {
 	
 var margin = {top: 80, right: 20, bottom: 35, left: 20},
     width = 960 - margin.left - margin.right,
-    height = 460 - margin.top - margin.bottom;
+    height = 450 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .2);
@@ -35,7 +35,8 @@ var svg = d3.select(".stacked_bar").append("svg")
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','Others'];
+  //var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','Others'];
+  var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','MDMK','IND','Others'];
   
   svg.selectAll("rect")
       .data(party_names)
@@ -47,14 +48,15 @@ var svg = d3.select(".stacked_bar").append("svg")
 	  .attr("data-toggle","highlight") 
       .attr("sub_title",function(d) { return '.'+d })
 	  .attr("width", (width/party_names.length))
-      .attr("y", -50)
-      .attr("height",20)
+      .attr("y", -60)
+      .attr("height",40)
       .style("fill", function(d) { return color_map[d] })
 	  .attr("stroke-width",.5)
 	  .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })	
 	  .on("click", function(){
 			d3.selectAll('.rect_names').style("opacity", 0);
 			d3.selectAll($(this).attr("sub_title")).style("opacity", 1);
+			d3.selectAll($(this).attr("sub_title")+'s').style("opacity", 1);
 		});
 			
   svg.selectAll(".text")
@@ -66,10 +68,12 @@ var svg = d3.select(".stacked_bar").append("svg")
 	  .attr("class",function(d) { return d })
       .attr("sub_title",function(d) { return '.'+d })
 	  .style("text-anchor","middle")
+	  .style("font-size", "14px")
 	  .style("fill", function(d) { return (parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
 	  .on("click", function(){
 		d3.selectAll('.rect_names').style("opacity", 0);
 		d3.selectAll($(this).attr("sub_title")).style("opacity", 1);
+		d3.selectAll($(this).attr("sub_title")+'s').style("opacity", 1);
 		})
 		.text(function(d) { return d });
 
@@ -82,8 +86,8 @@ var svg = d3.select(".stacked_bar").append("svg")
 	  .attr("data-highlight",function(d) { return "[data-party="+d+"]" }) 
 	  .attr("data-toggle","highlight")
 	  .attr("width", 20)
-      .attr("y", -50)
-      .attr("height",20)
+      .attr("y", -60)
+      .attr("height",40)
       .style("fill", function(d) { return color_map[d] })
 	  .attr("stroke-width",.5)
 	  .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })	
@@ -117,7 +121,10 @@ var svg = d3.select(".stacked_bar").append("svg")
   svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+        .call(xAxis)
+		.selectAll("text")
+			.style("text-anchor", "middle")
+			.style("font-size", "19px");
 
   var party = svg.selectAll(".party")
       .data(data)
@@ -141,30 +148,30 @@ var svg = d3.select(".stacked_bar").append("svg")
   party.selectAll(".value")
     .data(function(d) { return d.party; })
     .enter().append("text")
-    .attr("class",function(d) { return "value rect_names" })
-	.attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)-1; })
+    .attr("class",function(d) { return (y(d.y0) - y(d.y1))>33 ?d.name+"s value rect_names":" value rect_names" })
+	.attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)-5; })
     .attr("x", x.rangeBand()/2)
 	.attr("text-anchor", "middle")
-	.style("font-size", "15px")
+	.style("font-size", "20px")
 	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
 	.style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
-	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.value:' '; });
+	.text(function(d) { return (y(d.y0) - y(d.y1))>34 ?d.value:' '; });
 
   party.selectAll(".name")
     .data(function(d) { return d.party; })
     .enter().append("text")
-    .attr("class",function(d) { return (y(d.y0) - y(d.y1))>29 ?d.name+" name rect_names":" name rect_names" })
+    .attr("class",function(d) { return (y(d.y0) - y(d.y1))>33 ?d.name+" name rect_names":" name rect_names" })
 	.attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)+13; })
     .attr("x", x.rangeBand()/2)
 	.attr("text-anchor", "middle")
-	.style("font-size", "10px")
+	.style("font-size", "14px")
 	.attr("data-title", function(d) { return d['YEAR']+', '+d.name+' : '+d.value+' seats'; })
 	.style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
-	.text(function(d) { return (y(d.y0) - y(d.y1))>29 ?d.name:' '; });
+	.text(function(d) { return (y(d.y0) - y(d.y1))>34 ?d.name:' '; });
 
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
       $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});
-
+	 
 		 $(".DMK").html("&#2980;&#3007;&#2990;&#3009;&#2965;");
 		 $(".ADMK").html("&#2949;&#2980;&#3007;&#2990;&#3009;&#2965;");
 		 $(".INC").html("&#2965;&#3006;&#2969;&#3021;")
@@ -179,9 +186,8 @@ var svg = d3.select(".stacked_bar").append("svg")
 		 $(".IND").html("&#2970;&#3009;&#2991;");
 		 $(".BJP").html("&#2986;&#3006;&#2972;&#2965;");
 		 $(".Others").html("&#2986;&#3007;&#2993;");
-	 
-
-	 
+		 
   });
 
 });	
+

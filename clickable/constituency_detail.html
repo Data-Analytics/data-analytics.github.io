@@ -17,7 +17,7 @@
   <meta name="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011', Which of the Dravidian duos might get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
   <meta name="news_keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
   <meta name="keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
-  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/bootstrap.min_mod.css" rel="stylesheet">    
   <link href="css/basic.css" rel="stylesheet">
   <link href="css/feature.css" rel="stylesheet">
   <link href="css/custom-styles.css" rel="stylesheet">
@@ -32,45 +32,59 @@
   <meta itemprop="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011'">
   <meta itemprop="name" content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)">
   <meta itemprop="image" content="images/images.png">
-  <link rel="shortcut icon" href="http://www.thanthitv.com/Images/favi.ico" type="image/vnd.microsoft.icon">
-<style>
-.panel {
-	margin: 2% 20px 20px 2%;
-    width: 96%;
-	}
-	.panel-heading1 h1 {
-    color: white;
-    font-size: 38px;
-}
-</style>  
 </head>
 <body>
+  	<div class="container-fluid header-style">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-logo">
+				</div>
+			</div>
+		</div>
+	</div>
     <div class="container-fluid">
+	<div class="container">
 			<div class="row">
 			<div class="col-md-12 panel panel-default">
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h1>&#2970;&#2975;&#3021;&#2975; &#2990;&#2985;&#3021;&#2993;&#2980;&#3021; &#2980;&#3015;&#2992;&#3021;&#2980;&#2994;&#3021; &#40;&#49;&#57;&#54;&#55; &#45;&#50;&#48;&#49;&#49;&#41;</h1>
+					<h2>&#50;&#48;&#49;&#54; &#2970;&#2975;&#3021;&#2975; &#2990;&#2985;&#3021;&#2993;&#2980;&#3021; &#2980;&#3015;&#2992;&#3021;&#2980;&#2994;&#3021; &#2990;&#3009;&#2975;&#3007;&#2997;&#3009;&#2965;&#2995;&#3021;</h2>
 				</div>	
            </div>
            <div class="row">		   
 				<div class=" col-md-12 panel-body">
 					<div class="col-md-6"></div>
 					<div class="col-md-2">
-						<a align="left" href="overall_flow.html" class="btn btn-default">Transfer View</a>    
+						<a align="left" href="index.html" class="btn btn-default">Overall View</a>    
 					</div>
 					<div class="col-md-2">
 						<a align="left" href="performance_flow.html" class="btn btn-default">Performace View</a>    
 					</div>					
 					<div class="col-md-2">
 						<a align="left" href="geo_map_real.html" class="btn btn-default">Detail View</a>    
+						<br/><br/>
 					</div>
-					 <script type="text/javascript" src="clickable_bar.js" ></script>
-					 <div class="stacked_bar"></div>
+					 <script type="text/javascript" src="detail_view.js" ></script>
+					 <div class="detail_bar">					 
+					  </div>
 				</div>
 			</div>
 			</div>
 			</div>
 	</div>
+	</div>
 </body>
+<script>
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+detail_view(getParameterByName('cons'));
+</script>
 </html>

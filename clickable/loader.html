@@ -1,3 +1,31 @@
+{% code %}
+import pandas as pd 
+
+mapper = pd.read_csv('file_mapper.csv')
+old = pd.read_csv('overall_detail.csv')
+old = old[(old['rank']==1) & (old['YEAR']==2011)]
+old = old.set_index('AC_NAME')
+
+sub_data = []
+for index,row in mapper.iterrows():
+	sub_data.append(pd.read_csv(row['url']))
+data = pd.concat(sub_data,ignore_index=True)
+data = data[(data['votes']>1)]
+
+ranked_data = []
+for k in data['constituency'].unique():
+	select_data = data[(data['constituency']==k)]
+	select_data['votes'] = [int(j) for j in select_data['votes']]
+	select_data.sort(['votes'], ascending=[False], inplace=True)
+	select_data['rank'] = [(j+1) for j in xrange(len(select_data))]
+	ranked_data.append(select_data)	
+all_data = pd.concat(ranked_data,ignore_index=True)	
+all_data['name'] = all_data['candidate']
+
+all_data = all_data.set_index('constituency')
+all_data['old_party'] = old['PARTY']
+all_data.reset_index().to_csv('real_time.csv',index=False)
+{% end %}
 <!DOCTYPE html>
 <!-------------------------------------------------------------
  Name:        data-analytics.github.io
@@ -32,45 +60,12 @@
   <meta itemprop="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011'">
   <meta itemprop="name" content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)">
   <meta itemprop="image" content="images/images.png">
-  <link rel="shortcut icon" href="http://www.thanthitv.com/Images/favi.ico" type="image/vnd.microsoft.icon">
-<style>
-.panel {
-	margin: 2% 20px 20px 2%;
-    width: 96%;
-	}
-	.panel-heading1 h1 {
-    color: white;
-    font-size: 38px;
-}
-</style>  
 </head>
 <body>
-    <div class="container-fluid">
-			<div class="row">
-			<div class="col-md-12 panel panel-default">
-			<div class="row">
-				<div class="col-md-12 panel-heading1">
-					<h1>&#2970;&#2975;&#3021;&#2975; &#2990;&#2985;&#3021;&#2993;&#2980;&#3021; &#2980;&#3015;&#2992;&#3021;&#2980;&#2994;&#3021; &#40;&#49;&#57;&#54;&#55; &#45;&#50;&#48;&#49;&#49;&#41;</h1>
-				</div>	
-           </div>
-           <div class="row">		   
-				<div class=" col-md-12 panel-body">
-					<div class="col-md-6"></div>
-					<div class="col-md-2">
-						<a align="left" href="overall_flow.html" class="btn btn-default">Transfer View</a>    
-					</div>
-					<div class="col-md-2">
-						<a align="left" href="performance_flow.html" class="btn btn-default">Performace View</a>    
-					</div>					
-					<div class="col-md-2">
-						<a align="left" href="geo_map_real.html" class="btn btn-default">Detail View</a>    
-					</div>
-					 <script type="text/javascript" src="clickable_bar.js" ></script>
-					 <div class="stacked_bar"></div>
-				</div>
-			</div>
-			</div>
-			</div>
-	</div>
+<script>
+setInterval(function() {
+               	window.location.reload();
+            }, 4000); 
+</script>
 </body>
 </html>
