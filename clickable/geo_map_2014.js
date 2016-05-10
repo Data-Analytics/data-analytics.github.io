@@ -40,10 +40,10 @@ color_data.forEach(function (d) {
 	  constituency_color[o.constituency] = color_map[o.party]
 	  Candidate[o.constituency] = o.candidate
 	  party[o.constituency] = o.party
-	  votes[o.votes] = o.votes
+	  votes[o.constituency] = o.votes
 	  
 	  });
-	  
+	
 	d3.selectAll("polygon").each( function(d, i){
 	
     d3.select(this).attr("class",function(d) { return 'rect_names '+party[d3.select(this).attr("id")]; })
