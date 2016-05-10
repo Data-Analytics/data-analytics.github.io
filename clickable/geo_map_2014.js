@@ -148,14 +148,6 @@ color_data.forEach(function (d) {
 	});
 	}
 	
-	
-	/*$("polygon").click( function(){
-		d3.select('.clear').remove();
-		
-		detail_view(d3.select(this).attr("id"));
-	}); */
-
-	
 $("polygon").tooltip({container: 'body', html: true, placement:'top'});
 	
 });
