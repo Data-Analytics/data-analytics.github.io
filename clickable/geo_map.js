@@ -184,7 +184,6 @@ color_data.forEach(function (d) {
     d3.select(this).style("fill", constituency_color[d3.select(this).attr("id")] )
 	d3.select(this).style("stroke","#333")
 	d3.select(this).style("stroke-width", 2)
-	//d3.select(this).attr("onclick",detail_view(d3.select(this).attr("id")))
 	d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/> Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/> party : '+PARTY[d3.select(this).attr("id")]+' <br/> percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/> votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/> polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))
 	
 	});

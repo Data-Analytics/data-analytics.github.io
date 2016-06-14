@@ -1110,7 +1110,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         var search = $(this).val();
         if (lastsearch != search) {
           lastsearch = search;
-          var re = new RegExp(search, "i");
+          var re = new RegExp( "^" + search, "i" );
           $('rect', $chart).each(function(){
               $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
           });
@@ -1734,7 +1734,7 @@ d3.selectAll("polygon").each( function(d, i){
         var search = $(this).val();
         if (lastsearch != search) {
           lastsearch = search;
-          var re = new RegExp(search, "i");
+          var re = new RegExp( "^" + search, "i" );
           $('polygon', $chart).each(function(){
               $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
           });
