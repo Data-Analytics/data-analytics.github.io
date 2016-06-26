@@ -14,7 +14,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="author" content="Sushanth">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011', Which of the Dravidian duos might get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
+  <meta name="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2016', Which of the Dravidian duos might get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
   <meta name="news_keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
   <meta name="keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
   <link href="css/bootstrap.css" rel="stylesheet">    
@@ -33,15 +33,15 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>    
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
-  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)" /> 
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1967 - 2016 (TAMIL NADU)" /> 
   <meta property="og:url"   content="http://data-analytics.github.io/Election_Data/tamil_nadu.html" /> 
-  <meta property="og:description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011'" /> 
+  <meta property="og:description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2016'" /> 
   <meta property="og:image" content="images/images.png" /> 
   <html itemscope itemtype="http://schema.org/Blog">
-  <meta itemprop="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2011'">
-  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1967 - 2011 (TAMIL NADU)">
+  <meta itemprop="description" content="Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2016'">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1967 - 2016 (TAMIL NADU)">
   <meta itemprop="image" content="images/images.png">
-  <title>Assembly Elections 1967 - 2011 (Tamil Nadu)</title>
+  <title>Assembly Elections 1967 - 2016 (Tamil Nadu)</title>
 </head>
 <body>
 <div class="se-pre-con"></div>
@@ -50,9 +50,9 @@
 			<div class="row">
 				<div class="col-md-12 header-logo">
 					
-					<p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Undecided voters hold key in 2016 Tamil Nadu Assembly elections 'A visual guide to the check out the history of Tamil Nadu Assembly elections from 1967 until 2011</p>
-					<p class="synopsis">Who will get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.</p>
-					<p class="synopsis">Check out for the more possible insights and trend in <a href="tn_def.html" class="btn btn-default">Detail View</a></p> 
+					<p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Tamil Nadu Assembly Election Results 2016, 'A visual guide to the check out the history of Tamil Nadu Assembly elections from 1967 until 2016</p>
+					<!--<p class="synopsis">Who will get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.</p>
+					<p class="synopsis">Check out for the more possible insights and trend in <a href="tn_def.html" class="btn btn-default">Detail View</a></p> -->
 									
 				<p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
 				<span class='st_twitter_hcount' displayText='Tweet'></span>
@@ -72,7 +72,7 @@
 			<div class="col-md-12 panel panel-default">
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h2>Assembly Elections 1967 - 2011 (Tamil Nadu)</h2>
+					<h2>Assembly Elections 1967 - 2016 (Tamil Nadu)</h2>
 				</div>	
            </div>
            <div class="row">		   
@@ -1719,13 +1719,21 @@ color_data.forEach(function (d) {
 	  });
 	
 d3.selectAll("polygon").each( function(d, i){
-			
+	
+	if (PARTY[d3.select(this).attr("id")] !=undefined)
+	{	
 	d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/> Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/> party : '+PARTY[d3.select(this).attr("id")]+' <br/> percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/> votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/> polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))
     d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+PARTY[d3.select(this).attr("id")]+' '+Candidate[d3.select(this).attr("id")] ;})
     d3.select(this).style("fill", constituency_color[d3.select(this).attr("id")] )
 	d3.select(this).style("stroke","#ddd")
 	d3.select(this).style("stroke-width", 2)
-	
+	}
+	else{
+	d3.select(this).style("fill", '#fff' )
+	d3.select(this).style("stroke","#ddd")
+	d3.select(this).style("stroke-width", 2)
+	d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+'<br/>  Election Canceled ')
+	}
 });
 	
 	var lastsearch = '';
