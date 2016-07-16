@@ -1,0 +1,243 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2876669, 2014-09-03T14:14:01-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Neue Haas Grotesk Std Text 56 Italic by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-text-56-italic/
+ * Copyright: Copyright &#x00A9; 2011 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of Linotype
+ *
+ * Webfont: Neue Haas Grotesk Std Text 55 Roman by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-text-55-roman/
+ * Copyright: Copyright &#x00A9; 2011 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of Linotype
+ *
+ * Webfont: Neue Haas Grotesk Std Display 75 Bold by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-display-75-bold/
+ * Copyright: Copyright &#x00A9; 2011 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of Linotype
+ *
+ * Webfont: Neue Haas Grotesk Std Text 75 Bold by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neue-haas-grotesk/std-text-75-bold/
+ * Copyright: Copyright &#x00A9; 2011 - 2012 Linotype Corp., www.linotype.com. All rights reserved. This font software may not be reproduced, modified, disclosed or transferred without the express written approval of Linotype Corp. Neue Haas Grotesk is a trademark of L
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2876669
+ * Licensed pageviews: 1,000,000
+ *
+ * © 2014 MyFonts Inc
+*/
+
+@font-face {
+  font-family: 'HaasTextItalic';
+  src: url('fonts/2BE4FD_0_0.eot');
+  src: url('fonts/2BE4FD_0_0.eot?#iefix') format('embedded-opentype'),
+  url('fonts/2BE4FD_0_0.woff') format('woff'),
+  url('fonts/2BE4FD_0_0.ttf') format('truetype'),
+  url('fonts/2BE4FD_0_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'HaasText';
+  src: url('fonts/2BE4FD_1_0.eot');
+  src: url('fonts/2BE4FD_1_0.eot?#iefix') format('embedded-opentype'),
+  url('fonts/2BE4FD_1_0.woff') format('woff'),
+  url('fonts/2BE4FD_1_0.ttf') format('truetype'),
+  url('fonts/2BE4FD_1_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'HaasDisplayBold';
+  src: url('fonts/2BE4FD_2_0.eot');
+  src: url('fonts/2BE4FD_2_0.eot?#iefix') format('embedded-opentype'),
+  url('fonts/2BE4FD_2_0.woff') format('woff'),
+  url('fonts/2BE4FD_2_0.ttf') format('truetype'),
+  url('fonts/2BE4FD_2_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'HaasTextBold';
+  src: url('fonts/2BE4FD_3_0.eot');
+  src: url('fonts/2BE4FD_3_0.eot?#iefix') format('embedded-opentype'),
+  url('fonts/2BE4FD_3_0.woff') format('woff'),
+  url('fonts/2BE4FD_3_0.ttf') format('truetype'),
+  url('fonts/2BE4FD_3_0.svg#wf') format('svg');
+}
+
+@font-face {
+  font-family: 'font-family: AvenirNext-Demi, 'Helvetica Neue', Helvetica, Arial, sans-serif;';
+  src: url('fonts/AvenirNext-Regular.eot');
+  src: url('fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/AvenirNext-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'AvenirNext-Demi';
+  src: url('fonts/AvenirNext-Demi.eot');
+  src: url('fonts/AvenirNext-Demi.eot?#iefix') format('embedded-opentype'),
+  url('fonts/AvenirNext-Demi.woff') format('woff');
+}
+@font-face {
+  font-family: 'TiemposHeadlineWeb-Bold';
+  src: url('fonts/TiemposHeadlineWeb-Bold.eot');
+  src: url('fonts/TiemposHeadlineWeb-Bold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/TiemposHeadlineWeb-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TiemposTextWeb-Regular';
+  src: url('fonts/TiemposTextWeb-Regular.eot');
+  src: url('fonts/TiemposTextWeb-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/TiemposTextWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TiemposTextWeb-RegularItalic';
+  src: url('fonts/TiemposTextWeb-RegularItalic.eot');
+  src: url('fonts/TiemposTextWeb-RegularItalic.eot?#iefix') format('embedded-opentype'),
+  url('fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TiemposTextWeb-Semibold';
+  src: url('fonts/TiemposTextWeb-Semibold.eot');
+  src: url('fonts/TiemposTextWeb-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/TiemposTextWeb-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'BWHaasText-55Roman';
+  src: url("fonts/BWHaasText-55Roman.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasHead-25XThin';
+  src: url("fonts/BWHaasHead-25XThin.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasText-56Italic';
+  src: url("fonts/BWHaasText-56Italic.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasText-65Medium';
+  src: url("fonts/BWHaasText-65Medium.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasText-66MediumItalic';
+  src: url("fonts/BWHaasText-66MediumItalic.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasText-75Bold';
+  src: url("fonts/BWHaasText-75Bold.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasText-76BoldItalic';
+  src: url("fonts/BWHaasText-76BoldItalic.otf") format('opentype');
+}
+
+
+
+
+@font-face {
+  font-family:'BWDruk-BoldPoster';
+  src: url("fonts/BWDruk-BoldPoster.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWDruk-Heavy';
+  src: url("fonts/BWDruk-Heavy.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWDruk-Regular';
+  src: url("fonts/BWDruk-Regular.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWDruk-Super';
+  src: url("fonts/BWDruk-Super.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWDrukXXCond-Super';
+  src: url("fonts/BWDrukXXCond-Super.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWDrukXXXCond-Super';
+  src: url("fonts/BWDrukXXXCond-Super.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWDrukXXXXCond-Super';
+  src: url("fonts/BWDrukXXXXCond-Super.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasDot-75BoldCoarse';
+  src: url("fonts/BWHaasDot-75BoldCoarse.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasDot-75BoldCoarseReverse';
+  src: url("fonts/BWHaasDot-75BoldCoarseReverse.otf") format('opentype');
+}
+
+@font-face {
+  font-family:'BWHaasDot-75BoldFine';
+  src: url("fonts/BWHaasDot-75BoldFine.otf") format('opentype');
+}
+
+
+
+/*illustrator fonts*/
+
+@font-face {
+  font-family: 'TiemposText-Regular';
+  src: url('fonts/TiemposTextWeb-Regular.eot');
+  src: url('fonts/TiemposTextWeb-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/TiemposTextWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'BWHaasHead-75Bold';
+  src: url("fonts/BWHaasText-75Bold.otf") format('opentype');
+}
+
+
+@font-face {
+  font-family: 'BWHaasHead-65Medium';
+  src: url("fonts/BWHaasText-75Bold.otf") format('opentype');
+}
+
+
+
+@font-face {
+  font-family:'BWHaasHead-95Black';
+  src: url("fonts/BWHaasText-75Bold.otf") format('opentype');
+}
+
+@font-face {font-family: 'BWHaasHead-55Roman';src: url('fonts/2BE4FD_1_0.eot');src: url('fonts/2BE4FD_1_0.eot?#iefix') format('embedded-opentype'),url('fonts/2BE4FD_1_0.woff') format('woff'),url('fonts/2BE4FD_1_0.ttf') format('truetype'),url('fonts/2BE4FD_1_0.svg#wf') format('svg');}
+
+
+@font-face {
+  font-family: "'TiemposHeadline-Black'";
+  src: url('fonts/TiemposHeadlineWeb-Bold.eot');
+  src: url('fonts/TiemposHeadlineWeb-Bold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/TiemposHeadlineWeb-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TiemposHeadline-Black';
+  src: url('fonts/TiemposHeadlineWeb-Bold.eot');
+  src: url('fonts/TiemposHeadlineWeb-Bold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/TiemposHeadlineWeb-Bold.woff') format('woff');
+}
+
+

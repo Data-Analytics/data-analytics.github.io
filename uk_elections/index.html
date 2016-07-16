@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples
+ Author:      sushanth
+ Created:     6-15-2015
+ Modified:    7-16-2016
+ Copyright:  (c) sushanth
+ Licence:     open-source
+--------------------------------------------------------------->
+  <html class="no-js">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" href="/./images/logo.png">
+		<script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
+		<meta property="og:title"  content="This Interactive Map Tells You Everything You Need to Know About the 2015 U.K. Election" />
+		<meta property="og:url"   content="http://data-analytics.github.io/uk_elections" />
+		<meta property="og:description" content="This could be one of the closest political contests in decades" /> 
+		<html itemscope itemtype="http://schema.org/Blog">
+		<meta itemprop="description" content="This could be one of the closest political contests in decades">
+		<meta itemprop="name" content="This Interactive Map Tells You Everything You Need to Know About the 2015 U.K. Election">
+		
+        <!-- meta tags for this project -->
+        <!-- Enter a title before the dash, probably your headline -->
+        <title>This Interactive Map Tells You Everything You Need to Know About the 2015 U.K. Election</title>
+
+        <meta name="description" content="This could be one of the closest political contests in decades.">
+        <!-- Some keywords if you want -->
+        <meta name="keywords" content=" Graphics U.K. Election 2015"/>
+        <!-- The full link to this graphic -->
+
+        
+        <meta property="og:type" content="article"/>
+        
+		<meta name="twitter:card" content="summary"/>
+        
+		<meta name="twitter:site" content="@bbgvisualdata"/>
+
+        <link rel="stylesheet" type="text/css" href="fonts.css"/>
+        <link rel="stylesheet" type="text/css" href="business.css"/>
+        <link rel="stylesheet" type="text/css" href="index.css">
+	
+        <script src='head.js'></script>
+
+    </head>
+    <body>
+    
+        <div class="clearboth"></div>
+
+        <div id="inner-content">
+          <div class="article-title">The U.K. Election 2015</div>
+          <div class="clearboth"></div>
+          <div class="dek">
+            This interactive map will bring you minute-by-minute results, from the national standings down to individual candidates and constituencies.
+          </div>
+		  
+          <div class="uk-election-graphics">
+            <div class="tabs home-tabs">
+              <div data-bundle="2015">2015 results</div>
+              <div data-bundle="2010">2010 results</div>
+            </div>
+            <div id="search" class="input search">
+              <input id="type-ahead" class="typeahead" type="text" placeholder="Search by candidate or constituency">
+              <div id="results"></div>
+            </div>
+
+            <div id="results-bar" class="uk-election-graphic"></div>
+            <div class="two-col">
+              <div id="map" class=""></div>
+            </div>
+            <div class="two-col">
+              <div id="parties" class="uk-election-graphic"></div>
+              <div id="stream" class="uk-election-graphic"></div>
+              <div id="constituency" class="uk-election-graphic"></div>
+            </div>
+            <div class="clearboth"></div>
+          </div>
+
+          <div class="two-col">
+          </div>
+
+          <div class="clearboth"></div>
+
+         
+
+        </div>
+        <!-- id="inner-content" -->
+
+
+
+
+        <!-- Required Scripts-->
+        <script src="http://www.bloomberg.com/graphics/assets/js/vendor/lodash.underscore.min.js?"></script>
+
+
+        <script src="app.js"></script>
+
+
+        
+        <script src='http://www.bloomberg.com/graphics/assets/js/lib/share.js?'></script>
+        <script src='http://www.bloomberg.com/graphics/assets/js/lib/tracker.js?'></script>
+        <script src='http://www.bloomberg.com/graphics/assets/js/lib/recirculator.js?'></script>
+
+        <script type="text/javascript">
+          initShare()
+
+          var stickyShare = d3.select('#header-sharing')
+          d3.select(window).on('scroll.sticky', function(){
+            stickyShare
+              .classed('stuck',pageYOffset < 205 ? false:true)
+              .style('display', pageYOffset < 205 ? '' : 'block');
+          });
+        </script>
+
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript">
+          //no-op on standalone
+          function broadcastResize(){}
+        </script>
+
+        <div class='tooltip'></div>
+
+    </body>
+</html>
