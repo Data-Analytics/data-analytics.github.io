@@ -140,6 +140,7 @@
 						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
 							<ul class="dropdown-menu" role="menu">
 								
+									<li data-year="2016" id="2016"><a href="?year=2016#individual">2016 results</a></li>
 									<li data-year="2011" id="2011"><a href="?year=2011#individual">2011 results</a></li>
 									<li data-year="2006" id="2006"><a href="?year=2006#individual">2006 results</a></li>
 									<li data-year="2001" id="2001"><a href="?year=2001#individual">2001 results</a></li>
@@ -315,7 +316,8 @@
 					<div class="dropdown header_year">
 						<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
 						<ul class="dropdown-menu" role="menu">
-							
+						
+						<li data-year="2011_2016" id="2011_2016"><a href="?flowyear=2011_2016#sankeyFlow">2016 results</a></li>						
 						<li data-year="2001_2006" id="2001_2006"><a href="?flowyear=2001_2006#sankeyFlow">2006 results</a></li>
 						<li data-year="1996_2001" id="1996_2001"><a href="?flowyear=1996_2001#sankeyFlow">2001 results</a></li>
 						<li data-year="1991_1996" id="1991_1996"><a href="?flowyear=1991_1996#sankeyFlow">1996 results</a></li>							
@@ -408,6 +410,7 @@
 							<ul class="dropdown-menu" role="menu">
 
 
+									<li data-year="2016" id="2016_flow"><a href="?year=2016#party_Trend">2016 results</a></li>
 									<li data-year="2011" id="2011_flow"><a href="?year=2011#party_Trend">2011 results</a></li>
 									<li data-year="2006" id="2006_flow"><a href="?year=2006#party_Trend">2006 results</a></li>
 									<li data-year="2001" id="2001_flow"><a href="?year=2001#party_Trend">2001 results</a></li>
@@ -597,8 +600,8 @@ acct_name = getParameterByName('acct_name');
   if (acct_no == undefined){ $(".detail_display").hide(); }
   else{ $(".detail_display").show();}
 
-  if (year_detail == undefined){ year_detail= 2011; }
-  if (flowyear_detail == undefined){ flowyear_detail= '2001_2006'; }
+  if (year_detail == undefined){ year_detail= 2016; }
+  if (flowyear_detail == undefined){ flowyear_detail= '2011_2016'; }
   
 $('#'+year_detail+'').addClass('active');
 $(".year_tag").append("("+year_detail+")");
