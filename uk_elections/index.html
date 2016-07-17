@@ -25,7 +25,8 @@
 		<html itemscope itemtype="http://schema.org/Blog">
 		<meta itemprop="description" content="This could be one of the closest political contests in decades">
 		<meta itemprop="name" content="This Interactive Map Tells You Everything You Need to Know About the 2015 U.K. Election">
-		
+		<script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+	
         <!-- meta tags for this project -->
         <!-- Enter a title before the dash, probably your headline -->
         <title>This Interactive Map Tells You Everything You Need to Know About the 2015 U.K. Election</title>
@@ -106,17 +107,6 @@
         <script src='http://www.bloomberg.com/graphics/assets/js/lib/share.js?'></script>
         <script src='http://www.bloomberg.com/graphics/assets/js/lib/tracker.js?'></script>
         <script src='http://www.bloomberg.com/graphics/assets/js/lib/recirculator.js?'></script>
-
-        <script type="text/javascript">
-          initShare()
-
-          var stickyShare = d3.select('#header-sharing')
-          d3.select(window).on('scroll.sticky', function(){
-            stickyShare
-              .classed('stuck',pageYOffset < 205 ? false:true)
-              .style('display', pageYOffset < 205 ? '' : 'block');
-          });
-        </script>
 
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript">
