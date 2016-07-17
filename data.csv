@@ -88,3 +88,7 @@ Tree Layout,tree.png,Tree-Layout,self,tree layout,The tree layout produces tidy 
 Treemap,treemap.png,Treemap,self,tree map,Treemaps display hierarchical (tree-structured) data as a set of nested rectangles.Each branch of the tree is given a rectangle.
 Zm Treemap,zoomable_treemap.png,Zoomable_Treemap,self,tree map,Datasets grouped by categories and dimensions drawn based on the size of individual datasets and grouped data set.
 Voronoi,voronoi.png,Voronoimap,self,voronoi,"Voronoi diagram is a way of dividing space into a number of regions, here we have shown the example"
+Election Analysis Tamil Nadu,tn.png,Election_Data\tamil_nadu.html,self,treemap,"Tamil Nadu Assembly Election Results 2016, 'A visual guide to the check out the history of Tamil Nadu Assembly elections from 1967 until 2016"
+Election Analysis Kerala,kl.png,Election_Data\kerala.html,self,treemap,Kerala Assembly Election Results 2016 'A visual guide to the check out the history of Kerala Assembly elections from 1957 until 2016
+Marital Status,marital_status.png,Martial_status,self,barchart,"Undoubtedly marriages in India are one of the much celebrated events, dramatically evoking every possible social obligation, kinship bond, traditional value, impassioned sentiment, and economic resource."
+Uk Election Analysis,uk_elections.png,uk_elections,self,cartogram,"This interactive map will bring you minute-by-minute results, from the national standings down to individual candidates and constituencies."
