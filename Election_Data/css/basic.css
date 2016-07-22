@@ -2,6 +2,43 @@ media="screen"
 .form-search label, .form-inline label, .form-search .btn-group, .form-inline .btn-group {
   display: inline-block;
 }
+
+.axis path,
+			.axis line {
+				fill: none;
+				stroke: black;
+				shape-rendering: crispEdges;
+			}
+			
+			.axis text {
+				font-family: sans-serif;
+				font-size: 11px;
+			}
+
+			.y1 {
+				fill: white;
+				stroke: orange;
+				stroke-width: 1.5px;
+			}
+
+			.y2 {
+				fill: white;
+				stroke: red;
+				stroke-width: 1.5px;
+			}
+
+			.y3 {
+				fill: white;
+				stroke: steelblue;
+				stroke-width: 1.5px;
+			}
+
+			.line {
+			  fill: none;
+			  stroke-width: 1.5px;
+			}
+
+			
 label {
   display: block;
   margin-bottom: 5px;
