@@ -1172,7 +1172,7 @@ d3.csv("assembly_tn_detail.csv", function(data_csv) {
 	dataset.push(year_sub_mapper)	
 	});
 	
-	console.log(dataset);
+	
     //Width and height
     var width_data = 1050;
     var height_data = 400;
@@ -1243,7 +1243,8 @@ d3.csv("assembly_tn_detail.csv", function(data_csv) {
 	var xAxis = d3.svg.axis()
 	        .scale(xScale)
 	        .orient("bottom")
-	        .ticks(5);
+	        .tickFormat(d3.format("d"))
+			.ticks(5);
 
 	//Define Y axis
 	var yAxis = d3.svg.axis()
