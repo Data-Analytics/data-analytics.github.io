@@ -1143,7 +1143,7 @@ d3.csv("assembly_tn_detail.csv", function(data_csv) {
   }).entries(data_csv);
 
   
-   mapper_party = ['DMK','ADMK','INC','CPM','TMC(M)','CPI','PMK','DMDK','NCO','JNP','MDMK','BJP'];
+   mapper_party = ['DMK','ADMK','INC','CPM','TMC(M)','CPI','PMK','DMDK','NCO','JNP','MDMK','BJP','IND'];
 
    data_mapper_data = data_csv.filter(function(d) { return mapper_party.indexOf(d.PARTY) > -1 })
   
@@ -1184,7 +1184,7 @@ d3.csv("assembly_tn_detail.csv", function(data_csv) {
          
 	var xScale = d3.scale.linear()
 	       .domain([xExtents[0], xExtents[1]])
-	       .range([padding, width_data - padding * 2]);
+	       .range([padding, width_data - padding * .5]);
 
 	var yScale = d3.scale.linear()
 	       .domain([0, yExtents[1]])
