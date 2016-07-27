@@ -1969,6 +1969,7 @@ d3.csv("tn_data.csv", function(error, data) {
       .attr("dy", ".35em")
       .attr("text-anchor", "end")
       .attr("transform", null)
+	  .attr('class',function (d) { return 'party_filters '+d.name.replace('_','')+'s' })
       .text(function(d) { return d.name.replace('_',''); })
     .filter(function(d) { return d.x < width / 2; })
       .attr("x", 6 + sankey.nodeWidth())
