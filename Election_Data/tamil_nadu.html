@@ -1241,6 +1241,7 @@ function data_scatter(type_votes){
 	pathContainers.selectAll('path')
 	.data(function (d) { return [d]; }) // continues the data from the pathContainer
 	.enter().append('path')
+	  .attr('class',function (d) { return d.party })
 	  .attr('stroke',function (d) { return color_map[d[0]['party']]; })
 	  .attr('d', d3.svg.line()
 	    .x(function (d) { return xScale(d.x); })
@@ -1313,6 +1314,7 @@ function data_scatter(type_votes){
 	pathContainers.selectAll('circle')
 	.data(function (d) { return d; })
 	.enter().append('circle')
+	.attr('class',function (d) { return d.party })
     .attr('stroke',function (d) { return d3.rgb(color_map[d.party]).darker(); })
 	.attr('stroke-width','.5')
 	.attr('fill',function (d) { return color_map[d.party]; })
