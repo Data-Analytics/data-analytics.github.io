@@ -1770,6 +1770,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       .attr("class", "solidArc")
       .attr("stroke", function(d) { return d3.rgb(color_map[d.data.key]).darker(); })
       .attr("d", arc)
+	  .attr('class',function (d) { return 'party_filters '+d.data.key+'s' })
 	  .attr("data-title",function(d) { return  'party : '+d.data.key+' <br/> contested seats : '+d.data.contest+' <br/> seats won : '+d.data.values+' <br/> convertion percentage : '+d.data.score ;});
 
   var outerPath = party_performance_trend_svg.selectAll(".outlineArc")
@@ -1931,6 +1932,7 @@ d3.csv("tn_data.csv", function(error, data) {
       .attr("height", function(d) { return d.dy; })
       .attr("width", sankey.nodeWidth())
      .style("fill", function(d) { return color_map[d.name.replace('_','')]; })
+	  .attr('class',function (d) { return 'party_filters '+d.name.replace('_','')+'s' })
       .style("stroke", function(d) { return d3.rgb(color_map[d.name.replace('_','')]).darker(2); })
 	   .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats'; });
 
@@ -1940,6 +1942,7 @@ d3.csv("tn_data.csv", function(error, data) {
     .attr("x", sankey.nodeWidth()/2)
 	.attr("text-anchor", "middle")
 	.style("font-size", "15px")
+	.attr('class',function (d) { return 'party_filters '+d.name.replace('_','')+'s' })
 	.attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
 	//.style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
 	.text(function(d) { return d.dy>29 ?d.value:' '; });
@@ -1950,6 +1953,7 @@ d3.csv("tn_data.csv", function(error, data) {
     .attr("x", sankey.nodeWidth()/2)
 	.attr("text-anchor", "middle")
 	.style("font-size", "12px")
+	.attr('class',function (d) { return 'party_filters '+d.name.replace('_','')+'s' })
 	.attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
 	//.style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
 	.text(function(d) { return d.dy>29 ?d.name.replace('_',''):' '; });
