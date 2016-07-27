@@ -1440,6 +1440,15 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		
     data_root["values"] = nest
 
+	d3.csv("color_mapper.csv", function(error_color, color_data) {
+
+	color_map = {}
+
+	color_data.forEach(function (d) {
+		
+		color_map[d.party] = d.color;
+        
+	});
 	
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
@@ -1453,12 +1462,14 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       .attr("height", function(d) { return d.dy; })
       .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.NAME+' <br/> party : '+d.PARTY+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
       .attr("sub_link",function(d) { return d.constituency+' '+d.PARTY+' '+d.NAME ;})
-      .style("fill", function(d) { return d.color;})
+      .style("fill", function(d) { return color_map[d.PARTY];})
 	  .style("stroke", '#fff' )
       .style("stroke-width", 0.5);        
 
       $("rect").tooltip({container: '.tree_map', html: true, placement:'top'});
-      
+	  
+    });
+	
     var lastsearch = '';
     var $box = {};
     
