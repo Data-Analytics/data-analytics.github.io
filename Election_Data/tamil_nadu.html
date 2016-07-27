@@ -2137,13 +2137,13 @@ d3.selectAll("polygon").each( function(d, i){
 	});
 	
 	$(".party-legend").mouseover(function(){
-		d3.selectAll('polygon').style("fill-opacity",0.1);
-		d3.selectAll('.'+$(this).attr("data-party")).style("fill-opacity",1);
+		d3.selectAll('polygon').style("fill-opacity",'0.1');
+		d3.selectAll('.'+$(this).attr("data-party")).style("fill-opacity",'1');
 	})
 		
 
 	$(".party-legend").mouseout(function(){
-		d3.selectAll('polygon').style("fill-opacity",1);
+		d3.selectAll('polygon').style("fill-opacity",'1');
 	})		
 		
 $("polygon").tooltip({container: 'body', html: true, placement:'top'});
