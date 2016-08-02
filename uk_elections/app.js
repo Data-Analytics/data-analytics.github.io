@@ -518,7 +518,7 @@ function mapView(a) {
     }
 
     function c(a) {
-        state.isHomePage ? window.open("http://www.bloomberg.com/graphics/2015-uk-election/#" + a.properties.constituency.id, "_blank") : state.selected.setConstituency(a.properties.constituency)
+        state.isHomePage ? window.open("http://data-analytics.github.io/uk_elections/#" + a.properties.constituency.id, "_blank") : state.selected.setConstituency(a.properties.constituency)
     }
 
     function d() {
@@ -1280,7 +1280,7 @@ function cartogramView(a) {
         }).forEach(function(a, b) {
             a.hexCoords = coords[b]
         }), b ? j.renderData() : (i = a.append("svg").attr("width", "100%").attr("height", "100%").attr("viewBox", [0, 0, e, f]), i.append("defs").append("g#seat").append("polygon").attr("vector-effect", "non-scaling-stroke").attr("points", h).attr("transform", "scale(11.5)"), d = ƒ("geo", "properties", "geoCentroid", 0), k.domain(d3.extent(data.constituencies, d)), l.domain([0, d3.max(data.constituencies, ƒ("geo", "properties", "geoArea"))]), c = i.append("g.seats"), void(b = c.selectAll("use").data(data.constituencies).enter().append("g").append("use").on("click", function(a) {
-            state.isHomePage ? window.open("http://www.bloomberg.com/graphics/2015-uk-election/#" + a.id, "_blank") : state.selected.setConstituency(a)
+            state.isHomePage ? window.open("http://data-analytics.github.io/uk_elections/#" + a.id, "_blank") : state.selected.setConstituency(a)
         }).attr("xlink:href", "#seat").attr("transform", function(a) {
             var b = a.geo.properties;
             return "translate(" + b.geoCentroid + ") scale(" + l(b.geoArea) + ")"
