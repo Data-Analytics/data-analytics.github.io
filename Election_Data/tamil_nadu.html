@@ -1539,7 +1539,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     	  
 	var layers = d3.layout.stack()(['VOTES'].map(function(period) {
 	    return data_set.map(function(d) {
-		  return {x: d['rank']+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : d.color, party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes };
+		  return {x: d['rank']+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : color_map[d.PARTY], party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes };
 		});
     }));
 
@@ -1667,7 +1667,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		var foreground = progress_bar_svg
 							.append("path")
 							.datum({ endAngle : 0})
-							.style("fill", value_data[0]['color'])
+							.style("fill", color_map[value_data[0]['PARTY']])
 							.attr("class", "foreground")
 							.attr("d", arc);
 
