@@ -1515,8 +1515,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 			data_set = data_csv.filter(function(d){return (d.year==year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
 		}
 			
-		
-
+	deposit_data_set = data_set.filter(function(d){return (d.VOTES>=d.polled_votes/6) })
+			
 	var margin = {top: 10, right: 30, bottom: 15, left: 60},
 				width = 960 - margin.left - margin.right,
 				height = 320 - margin.top - margin.bottom;
@@ -1533,7 +1533,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 	
 	var constituency_name = '';
 	
-    data_set.forEach(function(o) {
+    data_set.forEach(function(o) {	
 		constituency_name = o.AC_NAME;
 	  });
     	  
@@ -1552,7 +1552,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     var x = d3.scale.linear()
         .domain([0, yGroupMax])
         .range([0, width-(margin.left*5/2)]);
-
+	
 	var color = d3.scale.ordinal()
 		.range(["#7aa1c2","#72d8f2","#f3daa4","#66ca9b","#f7f7f7","#f7f7f7"]);
 	
@@ -1567,7 +1567,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .tickSize(0)
         .tickPadding(9)
         .orient("left");
-
+	
     var layer = horizontal_bar_svg.selectAll(".layer")
         .data(layers)
         .enter().append("g")
@@ -1576,30 +1576,48 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		d3.selectAll(".tick > text")
 			.style("font-size", "13px")	
   
-  
     var rect = layer.selectAll("rect")
         .data(function(d) { return  d; })
         .enter().append("rect")
         .attr("y", function(d) { return yScale(d.x); })
         .attr("height", yScale.rangeBand())
         .attr("x", function(d) { return  x(d.y0); })
-        .attr("width", function(d) { return x(d.y); })
 		.style("fill", function(d,i) { return d.color; })
 		.style("stroke", function(d,i) { return d3.rgb(d.color).darker(); })
 		.attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
-      
+		.attr("width", function(d) { return x(d.y); });
+		
 	var rect = layer.selectAll("text")
         .data(function(d) { return  d; })
         .enter().append("text")
         .attr("y", function(d) { return yScale(d.x)+(yScale.rangeBand()*4/5); })
-        .attr("x", function(d) { return  x(d.y)+3; })
         .style("text-anchor", "start")
 		.attr("fill", "#444")
 		.style("font-size","13px")
 		.text(function(d) { return addThousandsSeparator(d.votes)+' votes'; })
+		.attr("x", function(d) { return  x(d.y)+3; });
 		
 		$(".constituency_tag").append("("+constituency_name+")");
 
+	
+	layer.append("g")
+			.attr("class", "guide_deposit")
+		.append("line")
+			.attr('stroke-width',1)
+			.style("stroke", "rgb(99, 99, 99)")
+			.attr("x1", x(0))
+			.attr("x2", x(yGroupMax))
+			.attr("y1", yScale(layers[0][parseInt(deposit_data_set.length)]['x']) - yScale.rangeBand()*.1)
+			.attr("y2", yScale(layers[0][parseInt(deposit_data_set.length)]['x']) - yScale.rangeBand()*.1);
+			
+	horizontal_bar_svg.append("text")
+		.attr("x",width-margin.left-margin.left-margin.right)
+		.attr("y", yScale(layers[0][parseInt(deposit_data_set.length)]['x']) +13)
+		.style("fill", "rgb(99, 99, 99)")
+		.style("font-size","13px")
+		.style("text-anchor", "end")
+		.text("Deposit Threshold");
+				
     horizontal_bar_svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + (height -margin.bottom - margin.top) + ")")
@@ -1612,7 +1630,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
 	horizontal_bar_svg.append("text")
 		.attr("x", width-margin.left-margin.left-margin.right)
-		.attr("y", height-(margin.top/2)-35)
+		.attr("y", height-(margin.top/2)-30)
 		.style("fill", "rgb(99, 99, 99)")
 		.style("font-size","13px")
 		.style("text-anchor", "end")
@@ -1673,7 +1691,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
 			foreground
 				.transition()
-				.duration(1000)
+				.delay(1000)
+				.duration(500)
 				.ease("linear")
 				.attrTween("d", function(d) {
 				var interpolate = d3.interpolate(d.endAngle, twoPi * value)
