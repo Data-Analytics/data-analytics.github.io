@@ -904,13 +904,16 @@ function toggleButton(button) {
 flowyear_detail = getParameterByName('flowyear');
 year_detail = getParameterByName('year');
 extra_year_detail = getParameterByName('extra_year');
+extra_year_detail_sub = getParameterByName('extra_year');
 
 acct_no = getParameterByName('acct_no');
 
   if (acct_no == undefined){ $(".detail_display").hide(); }
   else{ $(".detail_display").show();}
   
-  if (extra_year_detail == undefined){ extra_year_detail= 2016; }
+  if ((extra_year_detail == undefined) && (year_detail >= 2009)){ extra_year_detail= year_detail; }
+  if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2016; }
+   
   if (year_detail == undefined){ year_detail= extra_year_detail; }
   if (flowyear_detail == undefined){ flowyear_detail= '2011_2016'; }
   
@@ -1384,7 +1387,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 	
 		if (acct_no != undefined){
 	
-		if(extra_year_detail != undefined){
+		if(extra_year_detail_sub != undefined){
 			data_set = data_csv.filter(function(d){return (d.year==extra_year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
 			}
 		else {
@@ -1394,7 +1397,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 	//		data_set = data_csv.filter(function(d){return (d.year==year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
 	
 	
-
+	deposit_data_set = data_set.filter(function(d){return (d.VOTES>=d.polled_votes/6) })
+	
 	var margin = {top: 10, right: 30, bottom: 15, left: 60},
 				width = 960 - margin.left - margin.right,
 				height = 320 - margin.top - margin.bottom;
@@ -1478,6 +1482,24 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		
 		$(".constituency_tag").append("("+constituency_name+")");
 
+	layer.append("g")
+			.attr("class", "guide_deposit")
+		.append("line")
+			.attr('stroke-width',1)
+			.style("stroke", "rgb(99, 99, 99)")
+			.attr("x1", x(0))
+			.attr("x2", x(yGroupMax))
+			.attr("y1", yScale(layers[0][parseInt(deposit_data_set.length)]['x']) - yScale.rangeBand()*.1)
+			.attr("y2", yScale(layers[0][parseInt(deposit_data_set.length)]['x']) - yScale.rangeBand()*.1);
+			
+	horizontal_bar_svg.append("text")
+		.attr("x",width-margin.left-margin.left-margin.right)
+		.attr("y", yScale(layers[0][parseInt(deposit_data_set.length)]['x']) +13)
+		.style("fill", "rgb(99, 99, 99)")
+		.style("font-size","13px")
+		.style("text-anchor", "end")
+		.text("Deposit Threshold");
+	
     horizontal_bar_svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + (height -margin.bottom - margin.top) + ")")
