@@ -1015,6 +1015,7 @@ function toggleButton(button) {
 flowyear_detail = getParameterByName('flowyear');
 year_detail = getParameterByName('year');
 extra_year_detail = getParameterByName('extra_year');
+extra_year_detail_sub = getParameterByName('extra_year');
 
 acct_no = getParameterByName('acct_no');
 
@@ -1507,7 +1508,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 	
 		if (acct_no != undefined){
 		
-		if(extra_year_detail != undefined){
+		if(extra_year_detail_sub != undefined){
 		
 			data_set = data_csv.filter(function(d){return (d.year==extra_year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
 			}
@@ -1598,7 +1599,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		.attr("x", function(d) { return  x(d.y)+3; });
 		
 		$(".constituency_tag").append("("+constituency_name+")");
-
 	
 	layer.append("g")
 			.attr("class", "guide_deposit")
