@@ -1022,7 +1022,10 @@ acct_no = getParameterByName('acct_no');
   if (acct_no == undefined){ $(".detail_display").hide(); }
   else{ $(".detail_display").show();}
   
-  if (extra_year_detail == undefined){ extra_year_detail= 2016; }
+  if ((extra_year_detail == undefined) && (year_detail >= 2009)){ extra_year_detail= year_detail; }
+  
+  if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2016; }
+   
   if (year_detail == undefined){ year_detail= extra_year_detail; }
   
   if (flowyear_detail == undefined){ flowyear_detail= '2011_2016'; }
