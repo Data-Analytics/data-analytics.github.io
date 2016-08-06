@@ -573,7 +573,7 @@
 			<div class="col-md-12 panel panel-default">   
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h2>Constituency wise party trend 1967 - 2016 (Pondicherry)</h2>
+					<h2>Constituency wise party trend 1964 - 2016 (Pondicherry)</h2>
 				</div>	
            </div>
            <div class="row">		   
@@ -649,7 +649,7 @@
 			<div class="col-md-12 panel panel-default">
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h2 class="details_constituency">Assembly Elections 1967 - 2016 for Constituency<i class="constituency_tag_percent"></i></h2>
+					<h2 class="details_constituency">Assembly Elections 1964- 2016 for Constituency<i class="constituency_tag_percent"></i></h2>
 				</div>	
            </div>
            <div class="row">		   
@@ -758,20 +758,18 @@ function toggleButton(button) {
 
 flowyear_detail = getParameterByName('flowyear');
 year_detail = getParameterByName('year');
-acct_no = getParameterByName('acct_no');
-acct_name = getParameterByName('acct_name');
 
+acct_no = getParameterByName('acct_no');
 cons_id = getParameterByName('cons_id');
 
-  if (acct_no == undefined){ $(".detail_display").hide(); }
-  else{ $(".detail_display").show();}
+if (acct_no == undefined){ $(".detail_display").hide(); }
+else{ $(".detail_display").show();}
 
+if (cons_id == undefined){ $(".detail_percent_display").hide(); }
+else{ $(".detail_percent_display").show();}
   
-  if (cons_id == undefined){ $(".detail_percent_display").hide(); }
-  else{ $(".detail_percent_display").show();}
-  
-  if (year_detail == undefined){ year_detail= 2016; }
-  if (flowyear_detail == undefined){ flowyear_detail= '2011_2016'; }
+if (year_detail == undefined){ year_detail= 2016; }
+if (flowyear_detail == undefined){ flowyear_detail= '2011_2016'; }
   
 $('#'+year_detail+'').addClass('active');
 $(".year_tag").append("("+year_detail+")");

@@ -18,7 +18,8 @@
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>  
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>    
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>  
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
   <meta property="og:title"  content="ASSEMBLY ELECTIONS 1957 - 2016(Kerala)" /> 
@@ -796,7 +797,7 @@
 			<div class="col-md-12 panel panel-default">   
 			<div class="row">
 				<div class="col-md-12 panel-heading1">
-					<h2>Constituency wise party trend</h2>
+					<h2>Constituency wise party trend 1957 - 2016 (Kerala)</h2>
 				</div>	
            </div>
            <div class="row">		   
@@ -863,6 +864,81 @@
 	</div>
 	</div>
 	
+		<div id="detailConstituency">
+	
+	<div class="container-fluid detail_percent_display">
+	<div class="container">
+			<div class="row">
+			<div class="col-md-12 panel panel-default">
+			<div class="row">
+				<div class="col-md-12 panel-heading1">
+					<h2 class="details_constituency">Assembly Elections 1957 - 2016 for Constituency<i class="constituency_tag_percent"></i></h2>
+				</div>	
+           </div>
+           <div class="row">		   
+				<div class=" col-md-12 panel-body">
+					 <div class="chart">  
+						 <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+						  <g class="headers" transform="translate(80,5)">
+							  <rect class="party-legend" data-party="BAC" data-highlight="[data-party=BAC]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#A99888"></rect>
+							  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BAC</text>
+							
+							  <rect class="party-legend" data-party="INC(U)" data-highlight="[data-party=INC(U)]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+							  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">INC(U)</text>
+							
+							  <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+							  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+							
+							  <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+							  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+							
+							  <rect class="party-legend" data-party="MUL" data-highlight="[data-party=MUL]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#014BC6"></rect>
+							  <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">MUL</text>
+
+							  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+							  <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+							
+							  <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+							  <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+							
+							  <rect class="party-legend" data-party="RSP" data-highlight="[data-party=RSP]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#F8F907"></rect>
+							  <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#000">RSP</text>
+							
+							  <rect class="party-legend" data-party="KEC" data-highlight="[data-party=KEC]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FFAD01"></rect>
+							  <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">KEC</text>
+							
+							  <rect class="party-legend" data-party="SSP" data-highlight="[data-party=SSP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+							  <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SSP</text>
+							
+							  <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
+							  <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+							
+							  <rect class="party-legend" data-party="PSP" data-highlight="[data-party=PSP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#FFD380"></rect>
+							  <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">PSP</text>
+							
+							  <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
+							  <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+							
+							  <rect class="party-legend" data-party="CON" data-highlight="[data-party=CON]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+							  <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">CON</text>
+							  
+							</svg>
+						  </g>
+
+						<div class="col-md-12 panel-body">
+							<div class="percent_stackedbar"></div>
+						</div>
+					    </div>
+				     </div>
+				</div>
+			</div>
+			</div>
+			</div>
+	</div>
+	</div>
+	
+	
+	
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 <script type="text/javascript">
 
@@ -907,9 +983,14 @@ extra_year_detail = getParameterByName('extra_year');
 extra_year_detail_sub = getParameterByName('extra_year');
 
 acct_no = getParameterByName('acct_no');
+cons_id = getParameterByName('cons_id');
+
 
   if (acct_no == undefined){ $(".detail_display").hide(); }
   else{ $(".detail_display").show();}
+  
+  if (cons_id == undefined){ $(".detail_percent_display").hide(); }
+  else{ $(".detail_percent_display").show();}
   
   if ((extra_year_detail == undefined) && (year_detail >= 2009)){ extra_year_detail= year_detail; }
   if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2016; }
@@ -1333,6 +1414,16 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		
     data_root["values"] = nest
 
+		d3.csv("color_mapper.csv", function(error_color, color_data) {
+
+		color_map = {}
+
+		color_data.forEach(function (d) {
+			
+			color_map[d.party] = d.color;
+			
+		});
+		
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
     .enter().append("a")
@@ -1350,6 +1441,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
       $("rect").tooltip({container: '.tree_map', html: true, placement:'top'});
       
+	  });
+		
     var lastsearch = '';
     var $box = {};
     
@@ -1599,6 +1692,168 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
 		}
 
+	if (cons_id != undefined){
+		
+			d3.csv("color_mapper.csv", function(error_color, color_data) {
+
+			color_map = {}
+			color_data.forEach(function (d) {
+				color_map[d.party] = d.color;
+			});
+	
+			cons_set = data_csv.filter(function(d){ return (d.AC_NAME==cons_id) })
+			
+			year_list = [];
+			cons_set.forEach(function (d) {
+				 
+				year_list.push(parseInt(d['YEAR']))
+				
+			});
+			
+			year_list = _.uniq(year_list);
+				
+			var cons_layers =[]	
+			year_list.forEach(function (period) {
+				cons_layers.push(cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) }))
+			});
+			
+		
+			var party_names = ['INC','CPM','CPI','MUL','KEC','RSP','CON','SSP','KEC(M)','PSP','INC(U)','JNP','IND','Others'];
+	
+            year_stack=[];
+			cons_layers.forEach(function (year) {	
+				party_view = {'year': parseInt(year[0]['YEAR'])};			
+				
+				sub_party ={}
+				ind_party = []
+				year.forEach(function (d) {
+					sub_party[d.PARTY] = parseInt(d.VOTES)
+					if (d.PARTY=='IND'){
+						ind_party.push(parseInt(d.VOTES)
+						);
+					}
+					else{
+						sub_party[d.PARTY] = parseInt(d.VOTES)
+					}
+				});
+				
+				if (ind_party.length>0){
+					sub_party['IND'] = _.reduce(_.values(ind_party), function(a, b){ return a + b; }, 0)	
+				}
+				
+				party_names.forEach(function (o) {
+				   if (sub_party[o]!=undefined){
+						party_view[o] = sub_party[o];
+						sub_party = _.omit(sub_party,o)
+					}
+				   else{ party_view[o] = 0 }	
+				});
+				
+				var other_party = _.reduce(_.values(sub_party), function(a, b){ return a + b; }, 0)
+				party_view['Others'] = other_party				
+				year_stack.push(party_view)
+			});
+			
+			var cons_margin = {top: 20, right: 20, bottom: 35, left: 20},
+				cons_width = 1200 - cons_margin.left - cons_margin.right,
+				cons_height = 400 - cons_margin.top - cons_margin.bottom;
+
+			var cons_x = d3.scale.ordinal()
+				.rangeRoundBands([0, cons_width], .2);
+
+			var cons_y = d3.scale.linear()
+				.range([cons_height, 0]);
+
+			var cons_xAxis = d3.svg.axis()
+				.scale(cons_x)
+				.orient("bottom");
+
+			var cons_yAxis = d3.svg.axis()
+				.scale(cons_y)
+				.orient("left");
+
+			var percent_svg = d3.select(".percent_stackedbar").append("svg")
+						.style("width", "100%")
+						.attr("data-height","0.54")
+						.attr("viewBox","0 0 "+(cons_width + cons_margin.left + cons_margin.right)+" "+(cons_height + cons_margin.top + cons_margin.bottom))
+						.append("g")
+						.attr("transform", "translate(" + cons_margin.left + "," + cons_margin.top + ")");
+
+			year_stack.forEach(function(d) {
+					var y0 = 0;
+					d.party = party_names.map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name],value: +d[name],YEAR:d['year']}; });
+					d.count_total = d.party[d.party.length - 1].y1;
+					d.party.forEach(function(o) { o.y0 /= y0; o.y1 /= y0; o.y0= o.y0*100,o.y1=o.y1*100 });
+					d.total = d.party[d.party.length - 1].y1;
+			  });
+  		    
+			year_stack.forEach(function(sub_stack) {
+				sub_stack.party.forEach(function(l) {
+						l.percent = parseFloat((l.value*100/sub_stack.count_total).toFixed(2));	
+						l.polled_votes = sub_stack.count_total;	
+					});					
+			});
+				
+			  cons_x.domain([1957,1960,1965,1967,1970,1977,1980,1982,1987,1991,1996,2001,2006,2011,2016]);
+			  cons_y.domain([0, d3.max(year_stack, function(d) { return d.total; })]);
+
+			  percent_svg.append("g")
+					.attr("class", "x axis")
+					.attr("transform", "translate(0," + cons_height + ")")
+					.call(cons_xAxis);
+
+			  var percent_party = percent_svg.selectAll(".party")
+				  .data(year_stack)
+				  .enter().append("g")
+				  .attr("class", "party")
+				  .attr("transform", function(d) { return "translate(" + cons_x(d['year']) + ",0)"; });
+
+			  percent_party.selectAll("rect")
+				  .data(function(d) { return d.party; })
+				  .enter().append("rect")
+				  .attr('class',function (d) { return 'party_filters '+d.name+'s' })
+				  .attr("width", cons_x.rangeBand())
+				  .attr("y", function(d) { return cons_y(d.y1); })
+				  .attr("height", function(d) { return cons_y(d.y0) - cons_y(d.y1); })
+				  .style("fill", function(d) { return color_map[d.name] })
+				  .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })
+				  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/> Constituency : '+cons_id+' <br/> party : '+d.name+' <br/> percentage : '+d.percent.toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.value)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})		
+				  .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
+				  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
+				  
+			  percent_party.selectAll(".value")
+				.data(function(d) { return d.party; })
+				.enter().append("text")
+				.attr('class',function (d) { return 'value party_filters '+d.name+'s' })
+				.attr("y", function(d) { return ((cons_y(d.y1)+cons_y(d.y0))/2)-1; })
+				.attr("x", cons_x.rangeBand()/2)
+				.attr("text-anchor", "middle")
+				.style("font-size", "15px")
+				  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/> Constituency : '+cons_id+' <br/> party : '+d.name+' <br/> percentage : '+d.percent.toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.value)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})		
+				.style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+				.text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.percent.toFixed(0)+'%':' '; });
+
+			  percent_party.selectAll(".name")
+				.data(function(d) { return d.party; })
+				.enter().append("text")
+				.attr('class',function (d) { return 'name party_filters '+d.name+'s' })
+				.attr("y", function(d) { return ((cons_y(d.y1)+cons_y(d.y0))/2)+12; })
+				.attr("x", cons_x.rangeBand()/2)
+				.attr("text-anchor", "middle")
+				.style("font-size", "12px")
+				  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/> Constituency : '+cons_id+' <br/> party : '+d.name+' <br/> percentage : '+d.percent.toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.value)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})		
+				.style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+				.text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.name:' '; });
+
+			$("rect").tooltip({container: '.percent_stackedbar', html: true, placement:'top'});
+			$("text").tooltip({container: '.percent_stackedbar', html: true, placement:'top'});
+			
+			$(".constituency_tag_percent").append("("+cons_id+")");
+	
+			});
+	
+		}
+		
 	d3.csv("color_mapper.csv", function(error_color, color_data) {
 
 	color_map = {}
@@ -1939,6 +2194,9 @@ color_data.forEach(function (d) {
                         .append("td")
 						.attr("bgcolor",function(d) { return color_map[d] })
 						.append("font")
+						.append('a')
+						.style("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
+						.attr("href",function(d,i) { return  i==0? '?cons_id='+d+'#detailConstituency' : '#Constituency_partyTrend' })
 						.attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
 						.text(function(d) { return d; })		
 
