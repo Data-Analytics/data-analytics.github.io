@@ -1823,14 +1823,12 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 			
 			year_list = _.uniq(year_list);
 				
-			var cons_layers = d3.layout.stack()(year_list.map(function(period) {
-			     
-					return cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) })	
-					
-				}));
-				
-				
-			var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','Others'];
+			var cons_layers =[]	
+			year_list.forEach(function (period) {
+				cons_layers.push(cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) }))
+			});
+			
+		var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','Others'];
 	
             year_stack=[];
 			cons_layers.forEach(function (year) {	
@@ -1865,15 +1863,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 				party_view['Others'] = other_party				
 				year_stack.push(party_view)
 			});
-			
-			/*year_headers = ;
-			
-			full_year_stack=[];
-			year_headers.forEach(function (year_head) {	
-					console.log(year_head);
-					
-			
-			});*/
 			
 			var cons_margin = {top: 20, right: 20, bottom: 35, left: 20},
 				cons_width = 1200 - cons_margin.left - cons_margin.right,
@@ -1968,13 +1957,12 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
 			$("rect").tooltip({container: '.percent_stackedbar', html: true, placement:'top'});
 			$("text").tooltip({container: '.percent_stackedbar', html: true, placement:'top'});
-	
+			
 			$(".constituency_tag_percent").append("("+cons_id+")");
 	
 			});
 	
 		}	
-		//cons_id
 		
 	d3.csv("color_mapper.csv", function(error_color, color_data) {
 
