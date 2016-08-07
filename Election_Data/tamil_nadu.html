@@ -1595,6 +1595,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 		});
     }));
 
+   layers[0] = layers[0].sort(function(a, b){ return d3.ascending(a.rank, b.rank); })
+   
    var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); });
 
     var yScale = d3.scale.ordinal()
@@ -2342,7 +2344,6 @@ d3.text("tn_data.csv", function(error, data) {
   });
 	   	
 });
-
 </script>
 <script>var sharebutton_is_horizontal = false; document.write('<script src="//cdn.front.to/libs/share7.js"></scr' + 'ipt>'); document.write("<div style='display: none'>");</script><a href="http://sharebutton.org/">share this button</a><script>document.write("</div>");</script>
 </body>
