@@ -1008,13 +1008,13 @@ $('#'+flowyear_detail+'').addClass('active');
 $(".successive_year_tag").append(" ("+flowyear_detail.replace('_', ' to ')+") ");
 
 color_map = {}
-d3.csv("color_mapper.csv", function(error_color, color_data) {
+d3.json("color_mapper.json", function(error_color, color_data) {
 	color_data.forEach(function (d) {
 		color_map[d.party] = d.color;
 	});
 });
 
-d3.csv("sample_kerala.csv", function(data) { 
+d3.json("overall_kl.json", function(data) { 
 	
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 1200 - margin.left - margin.right,
