@@ -1591,11 +1591,15 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     	  
 	var layers = d3.layout.stack()(['VOTES'].map(function(period) {
 	    return data_set.map(function(d) {
-		  return {x: d['rank']+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : color_map[d.PARTY], party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes };
+		  return {x: d['rank']+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : color_map[d.PARTY], party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes,rank:d.rank };
 		});
     }));
 
+   console.log(layers);	
+   
    layers[0] = layers[0].sort(function(a, b){ return d3.ascending(a.rank, b.rank); })
+   
+   console.log(layers);
    
    var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); });
 
