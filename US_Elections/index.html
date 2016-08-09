@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<!-------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     28-01-2016
+ Modified:    28-03-2016
+ Copyright:  (c) sushanth 2016
+ Licence:     protected
+--------------------------------------------------------------->
+<html manifest="election.appcache" >
+ <head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="author" content="Sushanth">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2016 Tamil Nadu Election,Tamil Nadu Assembly Election Results 2016 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2016', Which of the Dravidian duos might get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
+  <meta name="news_keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
+  <meta name="keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
+  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/basic.css" rel="stylesheet">
+  <link href="css/feature.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link href="css/custom-styles.css" rel="stylesheet">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/sankey.js"></script>
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
+  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="js/underscore-min.js"></script>  
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
+  <title>US Elections 2012 Results</title>
+</head>
+<body><style>
+.counties{
+  fill:#666;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+</style>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<body>
+<div class="se-pre-con"></div>
+      <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>US Elections 2012 Results, 'A visual guide to the check out the trends of 2012 results</p>
+                    <p class="synopsis">This interactive map will bring you minute-by-minute results, from the national standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
+                                    
+                <p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+                <span class='st_twitter_hcount' displayText='Tweet'></span>
+                <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+                <span class='st_googleplus_hcount' displayText='Google'></span>
+                <span class='st_email_hcount' displayText='Email'></span></p>
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        
+    <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>US Elections 2012 Results</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+                     <div class="updated_map"></div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    </div>
+<script>
+
+var width = 960,
+    height = 600;
+
+var svg = d3.select(".updated_map").append("svg")
+            .style("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width)+" "+(height))
+
+var rateById = d3.map();
+
+var quantize = d3.scaleQuantize()
+    .domain([0, 0.15])
+    .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
+var projection = d3.geoAlbers()
+    .scale(1280)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geoPath()
+    .projection(projection);
+
+party_color = {};
+party_State = {};
+party_votes = {};
+party_county = {};
+party_percent = {};
+winning_party = {};
+
+
+d3.csv("us_county_full_data_rank.csv", function(us1) {
+
+    us1 = us1.filter(function(d){return d.rank==1 })
+    
+color_map = {'GOP':'#E61B23','Dem':'#55B0E6'}
+
+   us1.forEach(function (d) {
+   
+        party_color[d['FIPS Code']] = color_map[d.Party]
+        party_State[d['FIPS Code']]    = d['Unnamed: 1']
+        party_votes[d['FIPS Code']] = d['Votes']
+        party_county[d['FIPS Code']]    = d['County Name']
+        party_percent[d['FIPS Code']] = (d['Votes']*100/d['TOTAL VOTES CAST']).toFixed(2);
+        winning_party[d['FIPS Code']] = d.Party
+
+        }); 
+
+d3.queue()
+    .defer(d3.json, "us_counties.json")
+    .defer(d3.csv, "us_county_full_data_rank.csv", function(d) { rateById.set(d.FIPS, d.FIPS); })
+    .await(ready);
+     
+ console.log(party_color);
+
+function ready(error, us) {
+  if (error) throw error;
+
+  svg.append("g")
+      .attr("class", "counties")
+    .selectAll("path")
+      .data(topojson.feature(us, us.objects.counties).features)
+    .enter().append("path")
+    .attr("class", function(d) { return d.id })
+      .attr("fill", function(d) { return party_color[d.id]; })
+      .attr("data-title", function(d) { return 'State : '+party_State[d.id]+'<br/> county : '+party_county[d.id]+'<br/> party : '+winning_party[d.id]+'<br/> votes : '+party_votes[d.id]+'<br/> votes(%) : '+party_percent[d.id] })
+      .attr("d", path);
+
+  svg.append("path")
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr("class", "states")
+      .attr("d", path);
+      
+  $("path").tooltip({container: '.updated_map', html: true, placement:'top'}); 
+
+}
+});
+</script>
+</body>
+</html>
