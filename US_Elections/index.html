@@ -131,7 +131,7 @@ color_map = {'GOP':'#E61B23','Dem':'#55B0E6'}
         party_percent[d['FIPS Code']] = (d['Votes']*100/d['TOTAL VOTES CAST']).toFixed(2);
         winning_party[d['FIPS Code']] = d.Party
         
-        county_list.push(d['County Name']);
+        county_list.push(d['County Name']+', '+d['State']);
         
         }); 
 
@@ -153,7 +153,7 @@ function ready(error, us) {
     .attr("class", function(d) { return d.id })
       .attr("fill", function(d) { return party_color[d.id]; })
       .attr("data-title", function(d) { return 'State : '+party_State[d.id]+'<br/> county : '+party_county[d.id]+'<br/> party : '+winning_party[d.id]+'<br/> votes : '+addThousandsSeparator(party_votes[d.id])+'<br/> votes(%) : '+party_percent[d.id] })
-      .attr("sub_link",function(d) { return party_county[d.id] ;})
+      .attr("sub_link",function(d) { return party_county[d.id]+', '+party_State[d.id] ;})
       .attr("d", path);
 
   svg.append("path")
