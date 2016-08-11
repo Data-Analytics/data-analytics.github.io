@@ -58,7 +58,7 @@ function onRender() {
       .attr("y", function(d) { return d.y; })
       .attr("width", function(d) { return d.dx; })
       .attr("height", function(d) { return d.dy; })
-  .attr("data-title",function(d) { return 'Constituency : '+d.constituency+'<br/> Candidate : '+d.name+'<br/> party : '+d.party+'<br/> votes : '+d.votes+'</p>' ;})
+      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+'<br/> Candidate : '+d.name+'<br/> party : '+d.party+'<br/> votes : '+d.votes ;})
       .attr("sub_link",function(d) { return d.constituency+d.state+d.party ;})
       .style("fill", function(d) { return (d.color); })
       .style("stroke", '#fff')
