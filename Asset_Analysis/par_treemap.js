@@ -2,11 +2,12 @@ var width = 960,
     height = 500;
 
 var svg = d3.select(".par_treemap").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("xmlns", 'http://www.w3.org/2000/svg')
-        .attr("xlink", 'http://www.w3.org/1999/xlink')
-        .attr("version", '1.1');
+                .style("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+width+" "+height)
+                .attr("xmlns", 'http://www.w3.org/2000/svg')
+                .attr("xlink", 'http://www.w3.org/1999/xlink')
+                .attr("version", '1.1');
  
 function onRender() {   
      var group_by = document.getElementById("options_view").value,
@@ -16,11 +17,12 @@ function onRender() {
        .remove();
 
     var svg = d3.select(".par_treemap").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("xmlns", 'http://www.w3.org/2000/svg')
-        .attr("xlink", 'http://www.w3.org/1999/xlink')
-        .attr("version", '1.1');
+                .style("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+width+" "+height)
+                .attr("xmlns", 'http://www.w3.org/2000/svg')
+                .attr("xlink", 'http://www.w3.org/1999/xlink')
+                .attr("version", '1.1');
         
     var treemap = d3.layout.treemap()
         .padding(0.5)
@@ -58,10 +60,8 @@ function onRender() {
       .attr("y", function(d) { return d.y; })
       .attr("width", function(d) { return d.dx; })
       .attr("height", function(d) { return d.dy; })
-      .attr("data-title",function(d) { return '<p>Constituency : '+d.constituency
-+'</p> <br/> <p>Candidate : '+d.name+'</p><br/><p> '+parameter+' : '+addCommas(d[parameter])+'</p><br/> <p> '+group_by+' : '+d[group_by]+'</p>' ;})
-      .attr("sub_link",function(d) { return d.constituency
-+d.state+d.party ;})
+      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/> Candidate : '+d.name+'<br/> '+parameter+' : '+addCommas(d[parameter])+'<br/>  '+group_by+' : '+d[group_by] ;})
+      .attr("sub_link",function(d) { return d.constituency+' '+d.state+' '+d.party ;})
       .style("fill", function(d) { return d3.rgb(d.color).darker(parseFloat((d.votes/d.polled_votes)).toFixed(1)*2.5); })
       //.style("opacity", function(d) { return 1 - parseFloat((d.votes/d.polled_votes)).toFixed(1); })
       .style("stroke", '#fff')
@@ -101,4 +101,3 @@ function addCommas(n){
         });
 
       }
-      //);
