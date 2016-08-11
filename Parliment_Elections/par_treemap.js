@@ -69,7 +69,7 @@ function onRender() {
       .attr("y", function(d) { return d.y; })
       .attr("width", function(d) { return d.dx; })
       .attr("height", function(d) { return d.dy; })
-      .attr("data-title",function(d) { return '<p>Constituency : '+d.constituency+'</p> <br/> <p>Candidate : '+d.name+'</p> <br/> <p>State : '+d.state+'</p> <br/> <p>party : '+d.party+'</p> <br/><p> percentage-votes : '+((d.votes/d.polled_votes)*100).toFixed(2)+'</p><br/><p> votes : '+d.votes+'</p>' ;})
+      .attr("data-title",function(d) { return 'Constituency : '+d.constituency+'<br/> Candidate : '+d.name+'<br/> State : '+d.state+'<br/> party : '+d.party+'<br/> percentage-votes : '+((d.votes/d.polled_votes)*100).toFixed(2)+'<br/> votes : '+d.votes+'' ;})
       .attr("sub_link",function(d) { return d.constituency+d.state+d.party ;})
       .style("fill", function(d) { return d3.rgb(d.color).darker(parseFloat((d.votes/d.polled_votes)).toFixed(1)*2.5);})
       //.style("opacity", function(d) { return 1 - parseFloat((d.votes/d.polled_votes)).toFixed(1); })
