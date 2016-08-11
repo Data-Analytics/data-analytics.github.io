@@ -1,18 +1,22 @@
-var sub_width = parseInt(d3.select('.par_treemap').style('width'), 10);
-        
-var width = sub_width,
+var width = 960,
     height = 500;
 
 var svg = d3.select(".par_treemap").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("xmlns", 'http://www.w3.org/2000/svg')
-        .attr("xlink", 'http://www.w3.org/1999/xlink')
-        .attr("version", '1.1')
-        .style("width", "100%")
-        .attr("data-height","0.54")
-        .attr("viewBox","0 0 "+sub_width+" 540");
- 
+                .style("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+width+" "+height)
+                .attr("xmlns", 'http://www.w3.org/2000/svg')
+                .attr("xlink", 'http://www.w3.org/1999/xlink')
+                .attr("version", '1.1');
+
+var svg = d3.select(".par_treemap").append("svg")
+                .style("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+width+" "+height)
+                .attr("xmlns", 'http://www.w3.org/2000/svg')
+                .attr("xlink", 'http://www.w3.org/1999/xlink')
+               .attr("version", '1.1');
+
 function onRender() {   
 
     var group_by = document.getElementById("options_view").value;

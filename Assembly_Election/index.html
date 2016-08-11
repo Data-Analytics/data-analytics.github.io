@@ -14,23 +14,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="The graphical image tree map showing the trend of the each party performance in the Maharastra,Haryana,Jammu & Kashmir and Jharkhand Assembly elections held in the year 2014 and Delhi Assembly elections held in the year 2015.">
     <meta name="author" content="Sushanth">
-    <meta http-equiv="refresh" content="600">
-    <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet">    
+    <link href="css/basic.css" rel="stylesheet">
+    <link href="css/feature.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <link href="css/custom-styles.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>  
+    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
-    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
-    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
     <link rel="shortcut icon" href="/./images/logo.png">
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
     <meta property="og:title"  content="Assembly Elections" />
     <meta property="og:url"   content="http://data-analytics.github.io/Assembly_Election"/>
     <meta property="og:description" content="The graphical image tree map showing the trend of the each party performance in the Maharastra,Haryana,Jammu & Kashmir and Jharkhand Assembly elections held in the year 2014 and Delhi Assembly elections held in the year 2015." /> 
@@ -42,92 +37,95 @@
     <title>Assembly Elections</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
-        <header class="inner container" >
-          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
-          <h1 id="project_title">Assembly Elections</h1>
-          <p id="project_title_p">The graphical image tree map showing the trend of the each party performance in the Maharastra,Haryana,Jammu & Kashmir and Jharkhand Assembly elections held in the year 2014 and Bihar and Delhi Assembly elections held in the year 2015. 
-          </p>
-        </header>
-        <div id="banner">
-          <div class="container" >
-              <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
-              <div class="downloads">
-                <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
-              </div>
+  
+  <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Assembly Elections Results 2014 & 2015, 'A visual guide to the check out the trends</p>
+                    <p class="synopsis">The graphical image tree map showing the trend of the each party performance in the Maharastra,Haryana,Jammu & Kashmir and Jharkhand Assembly elections held in the year 2014 and Bihar and Delhi Assembly elections held in the year 2015.</p>
+                                    
+                <p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+                <span class='st_twitter_hcount' displayText='Tweet'></span>
+                <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+                <span class='st_googleplus_hcount' displayText='Google'></span>
+                <span class='st_email_hcount' displayText='Email'></span></p>
+                </div>
             </div>
-          </div><!-- end banner -->
-    </div>
-         
-    <!-- MAIN CONTENT -->
+        </div>
+    </div>  
+ 
+     <div class="container-fluid">
     <div class="container">
-      <section id="main_content" class="inner">
-        <br/><span class='st_facebook_hcount' displayText='Facebook'></span>
-        <span class='st_twitter_hcount' displayText='Tweet'></span>
-        <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
-        <span class='st_googleplus_hcount' displayText='Google'></span>
-        <span class='st_email_hcount' displayText='Email'></span><br/>
-    
-       <svg width="960" height="80" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1000 60" style="width:100%" data-height="0.54"  >
-  
-      <rect class="party-legend" data-party="RJD" data-highlight="[data-party=RJD]" data-toggle="highlight" x="0.0" width="58.75" height="20" fill="#21610B"></rect>
-      <text x="29.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">RJD</text>
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Assembly Elections</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+ 
+                   <svg data-height="0.54" viewBox="0 0 1200 25" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                      <g class="headers" transform="translate(80,0)">
+                      
+                      <rect class="party-legend" data-party="RJD" data-highlight="[data-party=RJD]" data-toggle="highlight" x="0.0" width="58.75" height="20" fill="#21610B"></rect>
+                      <text x="29.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">RJD</text>
 
-      <rect class="party-legend" data-party="JD" data-highlight="[data-party=JD]" data-toggle="highlight" x="58.75" width="58.75" height="20" fill="#594671"></rect>
-      <text x="88.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD</text>	
-	  
-      <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="117.5" width="58.75" height="20" fill="#019733"></rect>
-      <text x="146.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-    
-      <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="176.25" width="58.75" height="20" fill="#FB7B0D"></rect>
-      <text x="205.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BJP</text>
-    
-      <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235" width="58.75" height="20" fill="#DE0000"></rect>
-      <text x="264.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-    
-      <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="293.75" width="58.75" height="20" fill="#000000"></rect>
-      <text x="323.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JNP</text>
-    
-      <rect class="party-legend" data-party="NCP" data-highlight="[data-party=NCP]" data-toggle="highlight" x="352.5" width="58.75" height="20" fill="#8064a2"></rect>
-      <text x="381.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NCP</text>
-    
-      <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="411.25" width="58.75" height="20" fill="#95b3d7"></rect>
-      <text x="440.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">IND</text>
-    
-      <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="470" width="58.75" height="20" fill="#DE0000"></rect>
-      <text x="499.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-    
-      <rect class="party-legend" data-party="INLD" data-highlight="[data-party=INLD]" data-toggle="highlight" x="528.75" width="58.75" height="20" fill="#800000"></rect>
-      <text x="558.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INLD</text>
-    
-      <rect class="party-legend" data-party="JKNC" data-highlight="[data-party=JKNC]" data-toggle="highlight" x="587.5" width="58.75" height="20" fill="#B15928"></rect>
-      <text x="616.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JKNC</text>
-    
-      <rect class="party-legend" data-party="JVM" data-highlight="[data-party=JVM]" data-toggle="highlight" x="646.25" width="58.75" height="20" fill="#4bacc6"></rect>
-      <text x="675.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JVM</text>
-    
-      <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="705" width="58.75" height="20" fill="#0C6965"></rect>
-      <text x="734.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AAP</text>
-    
-      <rect class="party-legend" data-party="SHS" data-highlight="[data-party=SHS]" data-toggle="highlight" x="763.75" width="58.75" height="20" fill="#F05A00"></rect>
-      <text x="793.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SHS</text>
-    
-      <rect class="party-legend" data-party="JMM" data-highlight="[data-party=JMM]" data-toggle="highlight" x="822.5" width="58.75" height="20" fill="#77968E"></rect>
-      <text x="851.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JMM</text>
-    
-      <rect class="party-legend" data-party="PDP" data-highlight="[data-party=PDP]" data-toggle="highlight" x="881.25" width="58.75" height="20" fill="#9DBC2A"></rect>
-      <text x="910.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">PDP</text>
-  
-    </svg>
+                      <rect class="party-legend" data-party="JD" data-highlight="[data-party=JD]" data-toggle="highlight" x="58.75" width="58.75" height="20" fill="#594671"></rect>
+                      <text x="88.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD</text>    
+                      
+                      <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="117.5" width="58.75" height="20" fill="#019733"></rect>
+                      <text x="146.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                    
+                      <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="176.25" width="58.75" height="20" fill="#FB7B0D"></rect>
+                      <text x="205.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BJP</text>
+                    
+                      <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235" width="58.75" height="20" fill="#DE0000"></rect>
+                      <text x="264.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                    
+                      <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="293.75" width="58.75" height="20" fill="#000000"></rect>
+                      <text x="323.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JNP</text>
+                    
+                      <rect class="party-legend" data-party="NCP" data-highlight="[data-party=NCP]" data-toggle="highlight" x="352.5" width="58.75" height="20" fill="#8064a2"></rect>
+                      <text x="381.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NCP</text>
+                    
+                      <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="411.25" width="58.75" height="20" fill="#95b3d7"></rect>
+                      <text x="440.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">IND</text>
+                    
+                      <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="470" width="58.75" height="20" fill="#DE0000"></rect>
+                      <text x="499.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                    
+                      <rect class="party-legend" data-party="INLD" data-highlight="[data-party=INLD]" data-toggle="highlight" x="528.75" width="58.75" height="20" fill="#800000"></rect>
+                      <text x="558.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INLD</text>
+                    
+                      <rect class="party-legend" data-party="JKNC" data-highlight="[data-party=JKNC]" data-toggle="highlight" x="587.5" width="58.75" height="20" fill="#B15928"></rect>
+                      <text x="616.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JKNC</text>
+                    
+                      <rect class="party-legend" data-party="JVM" data-highlight="[data-party=JVM]" data-toggle="highlight" x="646.25" width="58.75" height="20" fill="#4bacc6"></rect>
+                      <text x="675.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JVM</text>
+                    
+                      <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="705" width="58.75" height="20" fill="#0C6965"></rect>
+                      <text x="734.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AAP</text>
+                    
+                      <rect class="party-legend" data-party="SHS" data-highlight="[data-party=SHS]" data-toggle="highlight" x="763.75" width="58.75" height="20" fill="#F05A00"></rect>
+                      <text x="793.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SHS</text>
+                    
+                      <rect class="party-legend" data-party="JMM" data-highlight="[data-party=JMM]" data-toggle="highlight" x="822.5" width="58.75" height="20" fill="#77968E"></rect>
+                      <text x="851.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JMM</text>
+                    
+                      <rect class="party-legend" data-party="PDP" data-highlight="[data-party=PDP]" data-toggle="highlight" x="881.25" width="58.75" height="20" fill="#9DBC2A"></rect>
+                      <text x="910.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">PDP</text>
+                         </g>
+                </svg>
+                
     <p class="form-inline">
         <label value="group">Filter by: </label>
     <select id="options_view">
         <option value="Bihar" class="name">Bihar</option>
-		<option value="NCT OF Delhi" class="name">NCT OF Delhi</option>
+        <option value="NCT OF Delhi" class="name">NCT OF Delhi</option>
         <option value="Haryana" class="name">Haryana</option>
         <option value="Maharashtra" class="name">Maharashtra</option>
         <option value="Jammu & Kashmir" class="name">Jammu & Kashmir</option>
@@ -138,11 +136,13 @@
          <label align="left" >Search:</label>
             <input type="text" class="search" placeholder="eg: chennai">
    </p>
-    <div class="par_treemap" align="center">
+    <div class="par_treemap">
         <script type="text/javascript" src="ass_treemap.js"></script>
     </div>
-  </section>
-  </div>
+    </div>
+    </div>
+    </div>
+    </div>
   
   <script>
  onRender();

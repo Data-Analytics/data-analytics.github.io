@@ -14,23 +14,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="The graphical image tree map showing the trend of the each party performance in the Tamil nadu Assembly elections held in the year 2011.">
     <meta name="author" content="Sushanth">
-    <meta http-equiv="refresh" content="600">
     <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet">    
+    <link href="css/basic.css" rel="stylesheet">
+    <link href="css/feature.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <link href="css/custom-styles.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>  
+    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
-    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
-    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
     <link rel="shortcut icon" href="/./images/logo.png">
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
     <meta property="og:title"  content="Assembly Elections - Tamil Nadu(2011)" />
     <meta property="og:url"   content="http://data-analytics.github.io/Assembly_Election_TN"/>
     <meta property="og:description" content="The graphical image tree map showing the trend of the each party performance in the Tamil nadu Assembly elections held in the year 2011." /> 
@@ -42,38 +38,42 @@
     <title>Assembly Elections - Tamil Nadu</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
-        <header class="inner container" >
-          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
-          <h1 id="project_title">Assembly Elections - Tamil Nadu</h1>
-          <p id="project_title_p">The  graphical image tree map showing the trend of the each party performance in the Tamil nadu Assembly elections held in the year 2011 
-          </p>
-        </header>
-        <div id="banner">
-          <div class="container">
-              <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
-              <div class="downloads">
-                <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
-              </div>
+  
+  <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    
+                <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Assembly Elections - Tamil Nadu, 'A visual guide to the check out the trends</p>
+                <p class="synopsis">The  graphical image tree map showing the trend of the each party performance in the Tamil nadu Assembly elections held in the year 2011 </p>
+                                    
+                <p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+                <span class='st_twitter_hcount' displayText='Tweet'></span>
+                <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+                <span class='st_googleplus_hcount' displayText='Google'></span>
+                <span class='st_email_hcount' displayText='Email'></span></p>
+                
+                </div>
             </div>
-          </div><!-- end banner -->
-    </div>
-         
-    <!-- MAIN CONTENT -->
-    <div class="container ">
-      <section id="main_content" class="inner">
-        <br/><span class='st_facebook_hcount' displayText='Facebook'></span>
-        <span class='st_twitter_hcount' displayText='Tweet'></span>
-        <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
-        <span class='st_googleplus_hcount' displayText='Google'></span>
-        <span class='st_email_hcount' displayText='Email'></span><br/>
+        </div>
+    </div>  
     
-       <svg width="960" height="80" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
-      <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="0.0" width="94" height="20" fill="#019733"></rect>
+     <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Assembly Elections - Tamil Nadu</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+    
+       <svg data-height="0.54" viewBox="0 0 1200 25" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                      <g class="headers" transform="translate(80,0)">
+                    
+                    <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="0.0" width="94" height="20" fill="#019733"></rect>
       <text x="47" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
     
       <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="94" width="94" height="20" fill="#FB7B0D"></rect>
@@ -107,11 +107,14 @@
          <label align="left" >Search:</label>
             <input type="text" class="search" placeholder="eg: chennai">
    </p>
-    <div class="par_treemap" align="center">
+    <div class="par_treemap">
         <script type="text/javascript" src="ass_treemap.js"></script>
     </div>
-  </section>
-  </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
   
   <script>
  onRender();
