@@ -14,23 +14,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content=" The  graphical image tree map showing the trend of the each party performing in the elections for the corresponding years ">
     <meta name="author" content="Sushanth">
-    <meta http-equiv="refresh" content="600">
     <meta name="keywords" content="data-visualisation, data-analytics, javascript, d3.js, data visualisation ,treemap,tree map,image treemap,imagemap">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/style.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="/./css/bootstrap.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet">    
+    <link href="css/basic.css" rel="stylesheet">
+    <link href="css/feature.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-    <script type="text/javascript" src="/./javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/d3.v2.min.js"></script>
-    <script type="text/javascript" src="/./javascripts/bootstrap.min.js"></script>
+    <link href="css/custom-styles.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.min.js"></script>  
+    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>
     <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-    <script type="text/javascript" src="/./javascripts/facebook_link.js"></script>
-    <script type="text/javascript" src="/./javascripts/googleplus_link.js"></script>
-    <script type="text/javascript" src="/./javascripts/twitter-share.js"></script>
     <link rel="shortcut icon" href="/./images/logo.png">
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "cc30e3a2-dbb5-4545-ac40-64ca85fe3e37", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> 
     <meta property="og:title"  content="Parliment Elections - Vote Shares" />
     <meta property="og:url"   content="http://data-analytics.github.io/Vote_Analysis" />
     <meta property="og:description" content="The graphical image tree map showing the vote share by each party in the elections Since Independence." /> 
@@ -42,37 +38,41 @@
     <title>Parliment Elections - Vote Shares</title>
   </head>
   <body >
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer jumbotron-icon" id="overview" >
-        <header class="inner container">
-          <div class="info-icons pull-left"><a class="fa fa-home fa-2" id="home" href="/./" ></a>&nbsp;&nbsp;&nbsp;</div>
-          <h1 id="project_title">Parliment Elections - Vote Shares</h1>
-          <p id="project_title_p">The graphical image tree map showing the vote share by each party in the elections Since Independence 
-          </p>
-        </header>
-        <div id="banner">
-          <div class="container">
-              <a class="button"  href="/./"><strong>Home</strong></a>
-              <a href="https://github.com/Sushanthece/D3-Image_map/fork" class="button fork"><strong>Fork On GitHub</strong></a>
-              <div class="downloads">
-                <span>Downloads:</span>
-                  <a href="https://github.com/Sushanthece/D3-Image_map/archive/gh-pages.zip" class="button">ZIP</a>
-                  <a href="https://github.com/Sushanthece/D3-Image_map" class="button">view on github</a>
-              </div>
-            </div>
-          </div><!-- end banner -->
-    </div>
-         
-    <!-- MAIN CONTENT -->
-    <div class="container ">
-      <section id="main_content" class="inner">
-        <br/><span class='st_facebook_hcount' displayText='Facebook'></span>
-        <span class='st_twitter_hcount' displayText='Tweet'></span>
-        <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
-        <span class='st_googleplus_hcount' displayText='Google'></span>
-        <span class='st_email_hcount' displayText='Email'></span><br/>
-       <svg width="960" height="80" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
   
+    <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    
+                <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Parliment Elections - Vote Shares</p>
+                <p class="synopsis">The graphical image tree map showing the vote share by each party in the elections Since Independence  </p>
+                                    
+                <p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+                <span class='st_twitter_hcount' displayText='Tweet'></span>
+                <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+                <span class='st_googleplus_hcount' displayText='Google'></span>
+                <span class='st_email_hcount' displayText='Email'></span></p>
+                
+                </div>
+            </div>
+        </div>
+    </div>  
+
+     <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Assembly Elections - Tamil Nadu</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+    
+       <svg data-height="0.54" viewBox="0 0 1200 25" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                      <g class="headers" transform="translate(80,0)">
+
       <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#019733"></rect>
       <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
     
@@ -114,38 +114,26 @@
     
       <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#9DBC2A"></rect>
       <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">ADMK</text>
+     </g>
     </svg>
     <p class="form-inline">
     <label value="year">Year : </label>
     <select id="year">
-        <option value="2014" class="name">2014</option>
-        <option value="2009" class="name">2009</option>
-        <option value="2004" class="name">2004</option>
-        <option value="1999" class="name">1999</option>
-        <option value="1998" class="name">1998</option>
-        <option value="1996" class="name">1996</option>
-        <option value="1992" class="name">1992</option>
-        <option value="1991" class="name">1991</option>
-        <option value="1989" class="name">1989</option>
-        <option value="1985" class="name">1985</option>
-        <option value="1984" class="name">1984</option>
-        <option value="1980" class="name">1980</option>
-        <option value="1977" class="name">1977</option>
-        <option value="1971" class="name">1971</option>
-        <option value="1967" class="name">1967</option>
-        <option value="1962" class="name">1962</option>
-        <option value="1957" class="name">1957</option>
-        <option value="1951" class="name">1951</option>
     </select>
-   <button id ="submit" value="submit" onClick='onRender();' >submit</button>
+   <button class="btn btn-primary" id ="submit" value="submit" onClick='onRender();' >submit</button>
+   
             <label align="left" >Search:</label>
             <input type="text" class="search" placeholder="eg: chennai">
    </p>
-    <div class="par_treemap" align="center">
+    <div class="par_treemap" >
         <script type="text/javascript" src="par_treemap.js"></script>
     </div>
-  </section>
-  </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  
   <script>
   onRender();
   </script>

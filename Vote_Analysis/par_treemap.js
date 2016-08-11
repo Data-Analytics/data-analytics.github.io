@@ -2,12 +2,21 @@ var width = 960,
     height = 500;
 
 var svg = d3.select(".par_treemap").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("xmlns", 'http://www.w3.org/2000/svg')
-        .attr("xlink", 'http://www.w3.org/1999/xlink')
-        .attr("version", '1.1');
- 
+                .style("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+width+" "+height)
+                .attr("xmlns", 'http://www.w3.org/2000/svg')
+                .attr("xlink", 'http://www.w3.org/1999/xlink')
+                .attr("version", '1.1');
+
+  var select_box = d3.select('#year')     
+                .selectAll("option")
+                    .data(['2014','2009','2004','1999','1998','1996','1992','1991','1989','1985','1984','1980','1977','1971','1967','1962','1957','1951'])
+                    .enter().append("option")
+                    .attr("value", function (d) { return d; })
+                    .attr("class","name")
+                    .text(function (d) { return d; });
+
 function onRender() {   
  
 
@@ -15,14 +24,15 @@ function onRender() {
           
      d3.select('.par_treemap').select("svg")
        .remove();
-
+   
     var svg = d3.select(".par_treemap").append("svg")
-        .attr("width", width)
-        .attr("height", height)
-        .attr("xmlns", 'http://www.w3.org/2000/svg')
-        .attr("xlink", 'http://www.w3.org/1999/xlink')
-        .attr("version", '1.1');
-        
+                .style("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+width+" "+height)
+                .attr("xmlns", 'http://www.w3.org/2000/svg')
+                .attr("xlink", 'http://www.w3.org/1999/xlink')
+                .attr("version", '1.1');
+
     var treemap = d3.layout.treemap()
         .padding(0.5)
         .size([width, height])
