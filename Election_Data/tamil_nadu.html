@@ -2258,7 +2258,7 @@ d3.csv("tn_data.csv", function(error, data) {
     .style("font-size", "15px")
     .attr('class',function (d) { return 'party_filters '+d.name.replace('_','')+'s' })
     .attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
-    //.style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+    .style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
     .text(function(d) { return d.dy>29 ?d.value:' '; });
 
   node
@@ -2269,7 +2269,7 @@ d3.csv("tn_data.csv", function(error, data) {
     .style("font-size", "12px")
     .attr('class',function (d) { return 'party_filters '+d.name.replace('_','')+'s' })
     .attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
-    //.style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+    .style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
     .text(function(d) { return d.dy>29 ?d.name.replace('_',''):' '; });
     
   $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});
@@ -2304,8 +2304,7 @@ d3.csv("tn_data.csv", function(error, data) {
 // load the data (using the timelyportfolio csv method)
 d3.text("tn_data.csv", function(error, data) {
 
-   var parsedCSV = d3.csv.parseRows(data);
-   
+   var parsedCSV = d3.csv.parseRows(data); 
    var container = d3.select(".party_trend")
                       .append("table")
                        .attr("id","myTable")
@@ -2342,10 +2341,7 @@ d3.text("tn_data.csv", function(error, data) {
                         .attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
                         .text(function(d) { return d; });
 
-    $('#myTable').DataTable({
-        "sScrollX": "100%",
-        "sScrollXInner": "150%"
-  });
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
            
 });
 </script>
