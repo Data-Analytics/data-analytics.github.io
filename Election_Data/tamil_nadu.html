@@ -2149,7 +2149,7 @@ var sankey = d3.sankey()
 var path = sankey.link();
 
 // load the data (using the timelyportfolio csv method)
-d3.csv("pondi_data.csv", function(error, data) {
+d3.csv("tn_data.csv", function(error, data) {
 
 data.forEach(function (d) {
         d.source_year =d[flowyear_detail.substring(0, 4)]
