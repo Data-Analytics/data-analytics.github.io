@@ -1,19 +1,10 @@
 <!DOCTYPE html>
-<!-------------------------------------------------------------
- Name:        data-analytics.github.io
- Purpose:     Data visualisation and analytics examples 
- Author:      sushanth
- Created:     28-01-2016
- Modified:    28-03-2016
- Copyright:  (c) sushanth 2016
- Licence:     protected
---------------------------------------------------------------->
 <html manifest="election.appcache" >
  <head>
   <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <meta name="author" content="Sushanth">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
   <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2016 Tamil Nadu Election,Tamil Nadu Assembly Election Results 2016 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2016', Which of the Dravidian duos might get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
   <meta name="news_keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
   <meta name="keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
@@ -1063,7 +1054,14 @@
             scrollTop : 0             
         }, 500);
     });    
-    
+
+color_map = {}
+d3.json("color_mapper.json", function(error_color, color_data) {
+    color_data.forEach(function (d) {
+        color_map[d.party] = d.color;
+    });
+});
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -1119,12 +1117,6 @@ $(".extra_year_tag").append("("+extra_year_detail+")");
 $('#'+year_detail+'_flow').addClass('active');
 $('#'+flowyear_detail+'').addClass('active');
 $(".successive_year_tag").append(" ("+flowyear_detail.replace('_', ' to ')+") ");
-
-color_map = {}
-d3.json("color_mapper.json", function(error_color, color_data) {
-    color_data.forEach(function (d) {
-        color_map[d.party] = d.color;
-    });
 
 d3.json("overall_tn.json", function(data) { 
     
@@ -2333,8 +2325,7 @@ d3.text("tn_data.csv", function(error, data) {
                         .text(function(d) { return d; });
 
     $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
-           
-});
+   
 });
 
 </script>

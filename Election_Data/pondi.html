@@ -1,4 +1,6 @@
-<html><head>
+<!DOCTYPE html>
+<html manifest="election.appcache" >
+<head>
   <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -743,6 +745,14 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
+color_map = {}
+d3.json("color_mapper.json", function(error_color, color_data) {
+    color_data.forEach(function (d) {
+        color_map[d.party] = d.color;
+    });
+});
+
 var countButton = d3.select(document.getElementById('count_votes'));
 var percentButton = d3.select(document.getElementById('percent_votes'));
 
@@ -778,13 +788,6 @@ $('#'+year_detail+'_flow').addClass('active');
 $('#'+flowyear_detail+'').addClass('active');
 
 $(".successive_year_tag").append("("+flowyear_detail.replace('_', ' to ')+")");
-
-color_map = {}
-d3.json("color_mapper.json", function(error_color, color_data) {
-    color_data.forEach(function (d) {
-        color_map[d.party] = d.color;
-    });
-
 
 d3.json("overall_py.json", function(data) { 
         
@@ -1875,15 +1878,9 @@ d3.text("pondi_data.csv", function(error, data) {
                         .attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
                         .text(function(d) { return d; })        
 
-                        
-    $('#myTable').DataTable({
-        "sScrollX": "100%",
-        "sScrollXInner": "150%"
-  });
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
     
 });
-});
-
 
 </script>
 <script>var sharebutton_is_horizontal = false; document.write('<script src="//cdn.front.to/libs/share7.js"></scr' + 'ipt>'); document.write("<div style='display: none'>");</script><a href="http://sharebutton.org/">share this button</a><script>document.write("</div>");</script>

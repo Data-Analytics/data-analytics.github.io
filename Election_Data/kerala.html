@@ -1,6 +1,9 @@
-<html><head>
+<!DOCTYPE html>
+<html manifest="election.appcache" >
+<head>
   <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sushanth">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Kerala Assembly Election Results 2016 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2016', Which of the Dravidian duos might get the stronghold in Kerala? What will be the pre-poll alliances? For the state march is a crucial month to predict next political face.">
@@ -938,8 +941,6 @@
     </div>
     </div>
     
-    
-    
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 <script type="text/javascript">
 
@@ -955,6 +956,15 @@
             scrollTop : 0             
         }, 500);
     });    
+
+color_map = {}
+d3.json("color_mapper.json", function(error_color, color_data) {
+    color_data.forEach(function (d) {
+        color_map[d.party] = d.color;
+    });
+});
+
+
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -1006,12 +1016,6 @@ $(".extra_year_tag").append("("+extra_year_detail+")");
 $('#'+year_detail+'_flow').addClass('active');
 $('#'+flowyear_detail+'').addClass('active');
 $(".successive_year_tag").append(" ("+flowyear_detail.replace('_', ' to ')+") ");
-
-color_map = {}
-d3.json("color_mapper.json", function(error_color, color_data) {
-    color_data.forEach(function (d) {
-        color_map[d.party] = d.color;
-    });
 
 d3.json("overall_kl.json", function(data) { 
     
@@ -2194,13 +2198,8 @@ d3.text("kerala_data.csv", function(error, data) {
                         .attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })
                         .text(function(d) { return d; })        
 
-
-    $('#myTable').DataTable({
-        "sScrollX": "100%",
-        "sScrollXInner": "150%"
-  });
+      $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
                 
-});
 });
 </script>
 <script>var sharebutton_is_horizontal = false; document.write('<script src="//cdn.front.to/libs/share7.js"></scr' + 'ipt>'); document.write("<div style='display: none'>");</script><a href="http://sharebutton.org/">share this button</a><script>document.write("</div>");</script>
