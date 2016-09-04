@@ -1511,7 +1511,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     var lastsearch = '';
     var $box = {};
     
-    function add_search(search, chart) {
+    function add_search_tree(search, chart) {
       var $chart = $(chart);
       $(search).on('keypress, change, keyup', function() {
         var search = $(this).val();
@@ -1526,7 +1526,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     }
 
    
-   add_search('.search', '.tree_map');
+   add_search_tree('.search', '.tree_map');
     
 
  var Industry = constituency_list;
@@ -1535,7 +1535,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     source: function(req, responseFn) {
         var re = $.ui.autocomplete.escapeRegex(req.term);
         var matcher = new RegExp( "^" + re, "i" );
-        var a = $.grep( Industry, function(item,index){
+        var a = $.grep(Industry, function(item,index){
             return matcher.test(item);
         });
         responseFn( a );
