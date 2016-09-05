@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
   <link href="css/custom-styles.css" rel="stylesheet">
   <link href="css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css"> 
   <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
   <script type="text/javascript" src="js/jquery.min.js"></script>  
   <script type="text/javascript" src="js/d3.js"></script>
@@ -24,6 +25,7 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/underscore-min.js"></script>  
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
+  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>   
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
   <meta property="og:title"  content="ASSEMBLY ELECTIONS 1957 - 2016(Kerala)" /> 
   <meta property="og:url"   content="http://data-analytics.github.io/Election_Data/kerala.html" /> 
@@ -220,8 +222,14 @@
                       
                       <p class="form-inline header_form" >
                         <label align="left" >Search:</label>
-                        <input type="text" class="geo_search" placeholder="eg: chennai">
+                        <input type="text" class="geo_search" placeholder="eg: chennai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label value="year">based on 2011 : </label>
+                        <select multiple="multiple" id="year_2011" class="select_year"></select>&nbsp;&nbsp;
+                        <label value="year">based on 2016 : </label>
+                        <select multiple="multiple" id="year_2016" class="select_year"></select>
+                         <input type="button" value="submit" class="party_filter"></input> 
                       </p>
+                        
                         
                        
                      <div class="chart">
@@ -1893,8 +1901,48 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     
   $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
 
-data_set = data_csv.filter(function(d){return (d.YEAR==extra_year_detail) & (d.rank==1) })
+    function map_filter(year_2011,year_2016){
+
+    data_csv = data_csv.filter(function(d){return ((d.YEAR==2011) |(d.YEAR==2016)) & (d.rank==1) })
+
+    sub_click = _.pluck(party_2011.filter(function(d) { return d[2011]!='' }),2011)
+
+    /* data_csv.forEach(function(o) {
+           if (o.YEAR==2011){
+           o.PARTY = sub_click.indexOf(o.PARTY) > -1? o.PARTY:'Others'            
+           }
+          else if (o.YEAR==2016){
+           o.PARTY = sub_click.indexOf(o.PARTY) > -1? o.PARTY:'Others'            
+           }           
+      });
+*/
+    var data_csv_2011 = []
+                    _.each(data_csv, function(d) { if(_.contains(year_2011, d.PARTY)) { data_csv_2011.push(d);}});     
+
+    data_csv_2011 = data_csv_2011.filter(function(d){return (d.YEAR==2011) & (d.rank==1) })
+
+   
+    var data_csv_2016 = []
+                    _.each(data_csv, function(d) { if(_.contains(year_2016, d.PARTY)) { data_csv_2016.push(d);}});     
+
+    data_csv_2016 = data_csv_2016.filter(function(d){return (d.YEAR==2016) & (d.rank==1) })
+
     
+    cons_2011 = _.pluck(_.uniq(data_csv_2011, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
+    cons_2016 = _.pluck(_.uniq(data_csv_2016, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
+  
+  Array.prototype.extend = function (other_array) {
+      /* you should include a test to check whether other_array really is an array */
+      other_array.forEach(function(v) {this.push(v)}, this);    
+
+   }
+
+    data_set = data_csv.filter(function(d){return (d.YEAR==extra_year_detail) & (d.rank==1) })
+    var data_set_sub = []
+                    _.each(data_set, function(d) { if(_.contains(cons_2011, d.AC_NAME)) { data_set_sub.push(d);}});     
+    var data_set = []
+                    _.each(data_set_sub, function(d) { if(_.contains(cons_2016, d.AC_NAME)) { data_set.push(d);}});     
+ 
     constituency_color = {}
     Candidate = {}
     PARTY ={}
@@ -1927,12 +1975,21 @@ data_set = data_csv.filter(function(d){return (d.YEAR==extra_year_detail) & (d.r
      });
      
     d3.selectAll("polygon").each( function(d, i){    
+      if (PARTY[d3.select(this).attr("id")] !=undefined)
+    {
           
         d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/> Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/> party : '+PARTY[d3.select(this).attr("id")]+' <br/> percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/> votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/> polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))
         d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+PARTY[d3.select(this).attr("id")]+' '+Candidate[d3.select(this).attr("id")] ;})
         d3.select(this).style("fill", constituency_color[d3.select(this).attr("id")] )
         d3.select(this).style("stroke","#ddd")
         d3.select(this).style("stroke-width", 2)
+      }
+    else{
+    d3.select(this).style("fill", '#fff' )
+    d3.select(this).style("stroke","#ddd")
+    d3.select(this).style("stroke-width", 2)
+    d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+'<br/>  Election Canceled ')
+    }   
         
     });
     
@@ -1971,6 +2028,37 @@ data_set = data_csv.filter(function(d){return (d.YEAR==extra_year_detail) & (d.r
     
     $("polygon").tooltip({container: 'body', html: true, placement:'top'});
 
+      
+  }
+
+$('.party_filter').click( function(n) {
+
+ var year_2016 = [];
+      $('#year_2016 :selected').each(function(i, selected){
+          year_2016[i] = $(selected).val();
+      });
+
+ var year_2011 = [];
+        $('#year_2011 :selected').each(function(i, selected){
+            year_2011[i] = $(selected).val();
+        });
+
+  map_filter(year_2011,year_2016);
+
+});
+
+ var year_2016 = [];
+      $('#year_2016 :selected').each(function(i, selected){
+          year_2016[i] = $(selected).val();
+      });
+
+ var year_2011 = [];
+        $('#year_2011 :selected').each(function(i, selected){
+            year_2011[i] = $(selected).val();
+        });
+
+  map_filter(year_2011,year_2016);
+
 
     });
 
@@ -2005,6 +2093,29 @@ var path = sankey.link();
 // load the data (using the timelyportfolio csv method)
 d3.csv("kerala_data.csv", function(error, data) {
 
+  party_2011 = _.uniq(data, function(item, key, a) {  return item[2011]; });
+  party_2016 = _.uniq(data, function(item, key, a) {  return item[2016]; });
+
+ var select_box = d3.select('#year_2011')     
+                .selectAll("option")
+                    .data(party_2011.filter(function(d) { return d[2011]!='' })) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d[2011]; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d[2011]; });
+
+ var select_box = d3.select('#year_2016')     
+                .selectAll("option")
+                    .data(party_2016.filter(function(d) { return d[2016]!='' }))
+                    .enter().append("option")
+                    .attr("value", function (d) { return d[2016]; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d[2016]; });
+
+
+$(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
 
     data.forEach(function (d) {
         d.source_year =d[flowyear_detail.substring(0, 4)]
