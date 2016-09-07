@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-------------------------------------------------------------
+<!--------------------------------------------------------------
  Name:        data-analytics.github.io
  Purpose:     Data visualisation and analytics examples 
  Author:      sushanth
  Created:     28-01-2016
- Modified:    28-03-2016
+ Modified:    07-09-2016
  Copyright:  (c) sushanth 2016
  Licence:     protected
---------------------------------------------------------------->
+---------------------------------------------------------------->
 <head>
 <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -33,10 +33,22 @@
   stroke-width:0.3;
 }
 
+
+.counties .active {
+  stroke-width: 2;
+  stroke: #000;
+   
+}
+
 .states {
   fill: none;
   stroke: #666;
   stroke-linejoin: round;
+}
+
+.background {
+  fill: none;
+  pointer-events: all;
 }
 
 </style>
@@ -86,7 +98,8 @@
 <script>
 
 var width = 960,
-    height = 600;
+    height = 600,
+    centered;
 
 var svg = d3.select(".geo_map").append("svg")
             .style("width", "100%")
@@ -105,6 +118,14 @@ var projection = d3.geoAlbers()
 
 var path = d3.geoPath()
     .projection(projection);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked);
+
+var g = svg.append("g");
 
 party_color = {};
 party_State = {};
@@ -140,23 +161,22 @@ d3.queue()
     .defer(d3.csv, "us_county_full_data_rank.csv", function(d) { rateById.set(d.FIPS, d.FIPS); })
     .await(ready);
      
- console.log(party_color);
-
 function ready(error, us) {
   if (error) throw error;
 
-  svg.append("g")
-      .attr("class", "counties")
-    .selectAll("path")
+  g.append("g")
+       .attr("class", "counties")
+       .selectAll("path")
       .data(topojson.feature(us, us.objects.counties).features)
     .enter().append("path")
     .attr("class", function(d) { return d.id })
       .attr("fill", function(d) { return party_color[d.id]; })
       .attr("data-title", function(d) { return 'State : '+party_State[d.id]+'<br/> county : '+party_county[d.id]+'<br/> party : '+winning_party[d.id]+'<br/> votes : '+addThousandsSeparator(party_votes[d.id])+'<br/> votes(%) : '+party_percent[d.id] })
       .attr("sub_link",function(d) { return party_county[d.id]+', '+party_State[d.id] ;})
-      .attr("d", path);
+      .attr("d", path) 
+      .on("click", clicked);
 
-  svg.append("path")
+  g.append("path")
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
       .attr("class", "states")
       .attr("d", path);
@@ -196,6 +216,32 @@ function ready(error, us) {
     
 }
 });
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
 </script>
 </body>
 </html>
