@@ -95,6 +95,24 @@
             </div>
     </div>
     </div>
+     <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Detail View</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+                    <div class="table_view"></div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    </div>    
 <script>
 
 var width = 960,
@@ -218,6 +236,53 @@ function ready(error, us) {
 });
 
 function clicked(d) {
+  
+  d3.csv('us_county_full_data_rank.csv',function(data){
+
+    sub_data = data.filter(function(o){ return o['FIPS Code']==d['id'] });
+  
+
+  function tabulate(data, columns) {
+
+    d3.select('.table_view').select('table').remove();
+    
+    var table = d3.select('.table_view').append('table').attr('class','table')
+    var thead = table.append('thead')
+    var tbody = table.append('tbody');
+
+    // append the header row
+    thead.append('tr')
+      .selectAll('th')
+      .data(columns).enter()
+      .append('th')
+        .text(function (column) { return column; });
+
+    // create a row for each object in the data
+    var rows = tbody.selectAll('tr')
+      .data(data)
+      .enter()
+      .append('tr');
+
+    // create a cell in each row for each column
+    var cells = rows.selectAll('td')
+      .data(function (row) {
+        return columns.map(function (column) {
+          return {column: column, value: row[column]};
+        });
+      })
+      .enter()
+      .append('td')
+        .text(function (d) { return d.value; });
+
+    return table;
+  }
+
+  // render the table(s)
+  tabulate(sub_data, ['State','County Name', 'Party','Votes','FIPS Code','rank']); // 2 column table
+
+  });
+  _
+  
   var x, y, k;
 
   if (d && centered !== d) {
