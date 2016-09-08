@@ -292,11 +292,14 @@ function clicked(d) {
   }else{
     $('.overall_div').hide();  
   }
-   
+
   d3.select('.table_view').select('table').remove();
   d3.select(".horizontal_bar").select("svg").remove();
   $( ".constituency_tag" ).empty();
+  
 
+  if (d != undefined)
+  {
   d3.csv('us_county_full_data_rank.csv',function(data){
     sub_data = data.filter(function(o){ return o['FIPS Code']==d['id'] & o['Votes']>0 });
 
@@ -456,7 +459,7 @@ function clicked(d) {
   tabulate(sub_data, ['County Name','State','Party','Votes','Vote %','Candidate','rank']); // 2 column table
 
   });
-  
+  }
   var x, y, k;
   if (d && centered !== d) {
     var centroid = path.centroid(d);
