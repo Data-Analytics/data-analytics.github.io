@@ -1310,7 +1310,7 @@ function data_scatter(type_votes){
     pathContainers.selectAll('path')
     .data(function (d) { return [d]; }) // continues the data from the pathContainer
     .enter().append('path')
-      .attr('cla',function (d) { console.log(d); return d })
+      .attr('cla',function (d) { return d })
       .attr('class',function (d) { return 'party_filters '+d[0]['party']+'s' })
       .attr('stroke',function (d) { return color_map[d[0]['party']]; })
       .attr('d', d3.svg.line()
