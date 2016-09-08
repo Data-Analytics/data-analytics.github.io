@@ -18,7 +18,8 @@
 <link href="css/custom-styles.css" rel="stylesheet">
 <link href="css/jquery-ui.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.min.js"></script>  
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3-queue.v3.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
 <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
 <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
@@ -50,6 +51,21 @@
   fill: none;
   pointer-events: all;
 }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+
+  .line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+
 
 </style>
 </head>
@@ -95,13 +111,14 @@
             </div>
     </div>
     </div>
+     <div class="overall_div">
      <div class="container-fluid">
     <div class="container">
             <div class="row">
             <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
-                    <h2>Detail View</h2>
+                    <h2>Detail View for County<i class="constituency_tag"></i></h2>
                 </div>    
            </div>
            <div class="row">           
@@ -112,8 +129,31 @@
             </div>
             </div>
     </div>
-    </div>    
+    </div> 
+    
+    <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Detail Analysis for County<i class="constituency_tag"></i></h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+                    <div class="horizontal_bar"></div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    </div>
+    </div>
 <script>
+
+$('.overall_div').hide();
+
 
 var width = 960,
     height = 600,
@@ -126,15 +166,15 @@ var svg = d3.select(".geo_map").append("svg")
 
 var rateById = d3.map();
 
-var quantize = d3.scaleQuantize()
+var quantize = d3.scale.quantize()
     .domain([0, 0.15])
     .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
 
-var projection = d3.geoAlbers()
+var projection = d3.geo.albers()
     .scale(1280)
     .translate([width / 2, height / 2]);
 
-var path = d3.geoPath()
+var path = d3.geo.path()
     .projection(projection);
 
 svg.append("rect")
@@ -235,16 +275,33 @@ function ready(error, us) {
 }
 });
 
+var check_id = -100
+
 function clicked(d) {
   
-  d3.csv('us_county_full_data_rank.csv',function(data){
-
-    sub_data = data.filter(function(o){ return o['FIPS Code']==d['id'] });
+   if (d != undefined)
+  {
+   if (check_id != d['id'])
+  {
+    $('.overall_div').show();
+  } 
+  else{
+    $('.overall_div').hide();
+  }  
+  }else{
+    $('.overall_div').hide();  
+  }
   
+  check_id = d['id'];
+   
+  d3.select('.table_view').select('table').remove();
+  d3.select(".horizontal_bar").select("svg").remove();
+  $( ".constituency_tag" ).empty();
 
-  function tabulate(data, columns) {
+  d3.csv('us_county_full_data_rank.csv',function(data){
+    sub_data = data.filter(function(o){ return o['FIPS Code']==d['id'] & o['Votes']>0 });
 
-    d3.select('.table_view').select('table').remove();
+    function tabulate(data, columns) {
     
     var table = d3.select('.table_view').append('table').attr('class','table')
     var thead = table.append('thead')
@@ -277,14 +334,131 @@ function clicked(d) {
     return table;
   }
 
+
+    var margin = {top: 10, right: 30, bottom: 15, left: 70},
+                width = 960 - margin.left - margin.right,
+                height = 210 - margin.top - margin.bottom;
+    
+    var horizontal_bar_svg = d3.select(".horizontal_bar").append("svg")
+                .attr("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+(width)+" "+(height))
+                .attr("xmlns", 'http://www.w3.org/2000/svg')
+                .attr("xlink", 'http://www.w3.org/1999/xlink')
+                .attr("version", '1.1')
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top/4 + ")");
+    
+    var constituency_name = '';
+    
+    sub_data.forEach(function(o) {    
+        constituency_name = o['County Name']+', '+o['State']; 
+        o.Candidate = o['First name']+' '+o['Last name']
+        o['Vote %'] = (o['Votes']*100/o['TOTAL VOTES CAST']).toFixed(2)+'%' 
+      });
+    
+    $(".constituency_tag").append("("+constituency_name+")");
+      
+    var layers = d3.layout.stack()(['Votes'].map(function(period) {
+        return sub_data.map(function(d) {
+          return {x: d['rank']+': '+d.Party, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : color_map[d.Party], party:d.Party,constituency:d['County Name'],name:d['First name']+''+d['Last name'],polled_votes:d['TOTAL VOTES CAST'],rank:d.rank,State:d.State };
+        });
+    }));
+
+ ///tabulate(sub_data, ['State','County Name', 'Party','Votes','First name','Last name','rank']); // 2 column table
+
+   layers[0] = layers[0].sort(function(a, b){ return d3.ascending(a.rank, b.rank); })
+   
+   var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); });
+
+    var yScale = d3.scale.ordinal()
+        .domain(layers[0].map(function(d) { return d.x; }))
+        .rangeRoundBands([0, height- margin.top - margin.bottom], .2);
+
+    var x = d3.scale.linear()
+        .domain([0, yGroupMax])
+        .range([0, width-(margin.left*5/2)]);
+    
+    var color = d3.scale.ordinal()
+        .range(["#7aa1c2","#72d8f2","#f3daa4","#66ca9b","#f7f7f7","#f7f7f7"]);
+    
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")        
+        .tickPadding(12)
+        .ticks(4);
+        
+    var yAxis = d3.svg.axis()
+        .scale(yScale)
+        .tickSize(0)
+        .tickPadding(9)
+        .orient("left");
+    
+    var layer = horizontal_bar_svg.selectAll(".layer")
+        .data(layers)
+        .enter().append("g")
+        .attr("class", "layer");
+        
+        d3.selectAll(".tick > text")
+            .style("font-size", "13px")    
+  
+    var rect = layer.selectAll("rect")
+        .data(function(d) { return  d; })
+        .enter().append("rect")
+        .attr("y", function(d) { return yScale(d.x); })
+        .attr("height", yScale.rangeBand())
+        .attr("x", function(d) { return  x(d.y0); })
+        .style("fill", function(d,i) { return d.color; })
+        .style("stroke", function(d,i) { return d3.rgb(d.color).darker(); })
+        .attr("data-title",function(d) { return 'County : '+d.constituency+' <br/> State : '+d.State+' <br/> Candidate : '+d.name+' <br/> party : '+d.party+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+        .attr("width", function(d) { return x(d.y); });
+        
+    var rect = layer.selectAll("text")
+        .data(function(d) { return  d; })
+        .enter().append("text")
+        .attr("y", function(d) { return yScale(d.x)+(yScale.rangeBand()*4/5); })
+        .style("text-anchor", "start")
+        .attr("fill", "#444")
+        .style("font-size","13px")
+        .text(function(d) { return addThousandsSeparator(d.votes)+' votes'; })
+        .attr("x", function(d) { return  x(d.y)+3; });
+        
+    horizontal_bar_svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + (height -margin.bottom - margin.top) + ")")
+        .call(xAxis)
+        .selectAll("text").style("text-anchor", "middle")
+            .attr("dx", "-.18em")
+            .attr("dy", ".15em")
+            .style("fill", "rgb(99, 99, 99)")
+            .style("font-size","13px")
+
+    horizontal_bar_svg.append("text")
+        .attr("x", width-margin.left-margin.left-margin.right)
+        .attr("y", height-(margin.top/2)-30)
+        .style("fill", "rgb(99, 99, 99)")
+        .style("font-size","13px")
+        .style("text-anchor", "end")
+        .text("Votes");
+              
+    horizontal_bar_svg.append("g")
+        .attr("class", "y axis")
+        .attr("transform", "translate(0,0)")
+        .call(yAxis)
+        .selectAll("text")
+            .style("fill", "rgb(99, 99, 99)")
+            .style("font-size","13px");
+        
+        
+      $("rect").tooltip({container: '.horizontal_bar', html: true, placement:'top'});
+    
+
   // render the table(s)
-  tabulate(sub_data, ['State','County Name', 'Party','Votes','First name','Last name','rank']); // 2 column table
+  tabulate(sub_data, ['County Name','State','Party','Votes','Vote %','Candidate','rank']); // 2 column table
 
   });
-  _
   
   var x, y, k;
-
   if (d && centered !== d) {
     var centroid = path.centroid(d);
     x = centroid[0];
@@ -305,6 +479,7 @@ function clicked(d) {
       .duration(750)
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
       .style("stroke-width", 1.5 / k + "px");
+
 }
 
 </script>
