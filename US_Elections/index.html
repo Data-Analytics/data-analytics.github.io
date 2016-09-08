@@ -52,19 +52,19 @@
   pointer-events: all;
 }
 
-  .axis path,
-  .axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-  }
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
 
 
-  .line {
-    fill: none;
-    stroke: steelblue;
-    stroke-width: 1.5px;
-  }
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
 
 
 </style>
@@ -284,6 +284,7 @@ function clicked(d) {
    if (check_id != d['id'])
   {
     $('.overall_div').show();
+    check_id = d['id'];
   } 
   else{
     $('.overall_div').hide();
@@ -291,8 +292,6 @@ function clicked(d) {
   }else{
     $('.overall_div').hide();  
   }
-  
-  check_id = d['id'];
    
   d3.select('.table_view').select('table').remove();
   d3.select(".horizontal_bar").select("svg").remove();
