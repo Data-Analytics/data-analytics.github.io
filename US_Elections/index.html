@@ -261,7 +261,8 @@ function ready(error, us) {
    add_search('.geo_search', '.geo_map');
 
     $( ".geo_search" ).autocomplete({
-    minLength: 2, 
+    minLength: 3, 
+    max:15,
     source: function(req, responseFn) {
         var re = $.ui.autocomplete.escapeRegex(req.term);
         var matcher = new RegExp( "^" + re, "i" );
