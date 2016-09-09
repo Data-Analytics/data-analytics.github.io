@@ -367,7 +367,7 @@ function clicked(d) {
       
     var layers = d3.layout.stack()(['Votes'].map(function(period) {
         return sub_data.map(function(d) {
-          return {x: d['rank']+': '+d.Party, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : color_map[d.Party], party:d.Party,constituency:d['County Name'],name:d['First name']+''+d['Last name'],polled_votes:d['TOTAL VOTES CAST'],rank:d.rank,State:d.State };
+          return {x: d['rank']+': '+d.Party, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : color_map[d.Party], party:d.Party,constituency:d['County Name'],name:d['First name']+' '+d['Last name'],polled_votes:d['TOTAL VOTES CAST'],rank:d.rank,State:d.State };
         });
     }));
 
