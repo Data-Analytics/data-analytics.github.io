@@ -309,11 +309,12 @@ function clicked(d) {
 
     var constituency_name = '';
     
-    sub_data.forEach(function(o) {    
+    sub_data.forEach(function(o,i) {    
         constituency_name = o['County Name']+', '+o['State']; 
         sub_name = o['County Name']; 
         o.Candidate = o['First name']+' '+o['Last name']
-        o['Vote %'] = (o['Votes']*100/o['TOTAL VOTES CAST']).toFixed(2)+'%' 
+        o['Vote %'] = (o['Votes']*100/o['TOTAL VOTES CAST']).toFixed(2)+'%'
+        o.rank =  i
       });
     
 
