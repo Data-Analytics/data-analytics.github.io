@@ -307,6 +307,18 @@ function clicked(d) {
   d3.csv('us_county_full_data_rank.csv',function(data){
     sub_data = data.filter(function(o){ return o['FIPS Code']==d['id'] & o['Votes']>0 });
 
+    var constituency_name = '';
+    
+    sub_data.forEach(function(o) {    
+        constituency_name = o['County Name']+', '+o['State']; 
+        sub_name = o['County Name']; 
+        o.Candidate = o['First name']+' '+o['Last name']
+        o['Vote %'] = (o['Votes']*100/o['TOTAL VOTES CAST']).toFixed(2)+'%' 
+      });
+    
+
+    sub_data = sub_data.filter(function(o){ return o['County Name']==sub_name});
+
     function tabulate(data, columns) {
     
     var table = d3.select('.table_view').append('table').attr('class','table')
@@ -354,14 +366,6 @@ function clicked(d) {
                 .attr("version", '1.1')
                 .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top/4 + ")");
-    
-    var constituency_name = '';
-    
-    sub_data.forEach(function(o) {    
-        constituency_name = o['County Name']+', '+o['State']; 
-        o.Candidate = o['First name']+' '+o['Last name']
-        o['Vote %'] = (o['Votes']*100/o['TOTAL VOTES CAST']).toFixed(2)+'%' 
-      });
     
     $(".constituency_tag").append("("+constituency_name+")");
       
