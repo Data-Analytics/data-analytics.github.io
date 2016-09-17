@@ -27,9 +27,10 @@
   {
     display: none;
    }
-   .holded_data{
-      display: none!important;
-   }
+   ul,li {
+          line-height: 15px;
+          font-size: 12px;
+    }
   </style>
   </head>
  <body onload="onRender()">
@@ -60,11 +61,15 @@
            <div class="row">           
                 <div class=" col-md-12 panel-body">
                     <p class="form-inline header_form" >
-	     <label>Finals Date</label><select multiple="multiple" class="points" id="date"></select>
-  		 <label>Events Category</label> <select multiple="multiple" class="points" id="event_category"></select>
-			 <label class="holded_data">Events</label> <select class="holded_data" multiple="multiple" class="points" id="event"></select>
+	     <label>Medal Awarded Date :</label><select multiple="multiple" class="points" id="date"></select>
+  		 <label>Sport :</label> <select multiple="multiple" class="points" id="event_category"></select>
+			 <label>Event Type :</label> <select multiple="multiple" class="points" id="event"></select>
 			 <input type="button" class="btn btn-primary" value="submit" onclick="onRender();"></input>
                       </p>
+                    <p class="form-inline header_form" >
+       <ul class="event_names" id="event_names">contains following events
+       </ul>
+                      </p>                      
                      <div class="table_view"></div>
                 </div>
             </div>
@@ -94,7 +99,7 @@ d3.csv('data.csv',function(data){
 	});
 
     var uniqueevent= _.uniq(data, function(item, key, a) { 
-      return item.event;
+      return item.event_type;
 	});
 
 
@@ -120,10 +125,10 @@ d3.csv('data.csv',function(data){
                 .selectAll("option")
                     .data(uniqueevent)
                     .enter().append("option")
-                    .attr("value", function (d) { return d.event; })
+                    .attr("value", function (d) { return d.event_type; })
                     .attr("class","name")
                     .attr("selected","")
-                    .text(function (d) { return d.event; });
+                    .text(function (d) { return d.event_type; });
 
     $(".points").multipleSelect({ placeholder: "Select Values" });
 
@@ -204,11 +209,16 @@ d3.csv('data.csv',function(data){
     _.each(links, function(d) { if(_.contains(event_category, d.disipline)) { event_links.push(d);}}); 
  
  var datas = []
-    _.each(event_links, function(d) { if(_.contains(event,d.event)) { datas.push(d);}});
+    _.each(event_links, function(d) { if(_.contains(event,d.event_type)) { datas.push(d);}});
 
   
   var uniqueCountry = _.uniq(data, function(item, key, a) { 
       return item.medals__team;
+  });
+
+
+  var uniqueevents_names = _.uniq(datas, function(item, key, a) { 
+      return item.event;
   });
 
     country_mapper={}
@@ -257,13 +267,32 @@ d3.csv('data.csv',function(data){
          o.Rank = Ranks;   
         });
 
+   $("#event_names").empty();
+   $("#event_names").text('contains following events..') 
+//class="event_names" id="event_names"
+  
+    var select_event = d3.select('#event_names')     
+                .selectAll("li")
+                    .data(uniqueevents_names)
+                    .enter().append("li")
+                    .attr("value", function (d) { return d.event; })
+                    .attr("class","names")
+                    .text(function (d) { return d.event; });
+
+   $("li.names").hide();
    $( ".table_view" ).empty();
+
   // render the table(s)
   tabulate(data_count, ['Rank','Flag','Country','Gold','Silver','Bronze','Total']); // 2 column table
     $('.table').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
     
 });
-
 }   
+$("ul").click(function (evt) {
+        console.log('stupid_values');      
+        if(evt.target.tagName != 'UL') 
+            return;
+        $("li", this).toggle();
+    });
 </script>
  </html>
