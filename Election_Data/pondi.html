@@ -965,7 +965,7 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
                                     .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
                                     .append('td')
                                     .attr('class',function(d) { return d+'s'})
-                                    .style("font-size",'10px')
+                                    .style("font-size",'15px')
                                     .text(function(o,i) { return i<2? o:'' })
                                     .append('div')
                                     .attr('class',function(d,i) { return i<2? '':'progress'; })
