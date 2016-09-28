@@ -68,6 +68,55 @@
             </div>
         </div>
     </div>
+    <div id="overall_view">
+    <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Assembly Election Results <i class="year_tag"></i> Party Standings</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+
+                          <div class="dropdown header_year">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
+                            <ul class="dropdown-menu" role="menu">
+                            
+                                    <li data-year="2016" id="2016_flow"><a href="?year=2016#overall_view">2016 results</a></li>
+                                    <li data-year="2011" id="2011_flow"><a href="?year=2011#overall_view">2011 results</a></li>
+                                    <li data-year="2006" id="2006_flow"><a href="?year=2006#overall_view">2006 results</a></li>
+                                    <li data-year="2001" id="2001_flow"><a href="?year=2001#overall_view">2001 results</a></li>
+                                    <li data-year="1996" id="1996_flow"><a href="?year=1996#overall_view">1996 results</a></li>                            
+                                    <li data-year="1991" id="1991_flow"><a href="?year=1991#overall_view">1991 results</a></li>
+                                    <li data-year="1989" id="1989_flow"><a href="?year=1989#overall_view">1989 results</a></li>
+                                    <li data-year="1984" id="1984_flow"><a href="?year=1984#overall_view">1984 results</a></li>
+                                    <li data-year="1980" id="1980_flow"><a href="?year=1980#overall_view">1980 results</a></li>
+                                    <li data-year="1977" id="1977_flow"><a href="?year=1977#overall_view">1977 results</a></li>
+                                    <li data-year="1971" id="1971_flow"><a href="?year=1971#overall_view">1971 results</a></li>
+                                    <li data-year="1967" id="1967_flow"><a href="?year=1967#overall_view">1967 results</a></li>    
+                                    
+                              </ul>
+                      </div><br/><br/>
+                    <div class="row">
+                    <div class="col-md-2"></div> 
+                    <div class="col-md-8"> 
+                     <div class="overall_view_report">  
+                     </div>
+                    </div>
+                    <div class="col-md-2"></div> 
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    </div>
+    </div>
         
     <div class="container-fluid">
     <div class="container">
@@ -134,7 +183,6 @@
             </div>
     </div>
     </div>
-    
 
     <div class="container-fluid">
     <div class="container">
@@ -1216,7 +1264,49 @@ var svg = d3.select(".stacked_bar").append("svg")
 
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
       $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});
+    
+      year_data_set = data.filter(function(d){return (d.YEAR==year_detail) })
+
+      year_data_sets = year_data_set[0].party.filter(function(d){return (d.value>0) })
       
+      year_data_sets.sort(function(a, b) { return b.value - a.value; })
+      
+      heading_colors = []
+      year_data_sets.forEach(function(o) {
+        heading_colors.push(color_map[o.name])
+      })
+
+      max_seats = d3.max(year_data_sets, function(d) { return d.value; }); 
+      
+      lowresult_data  = d3.select('.overall_view_report')
+                                         .selectAll('div')
+                                        .data([year_data_sets])
+                                        .enter()
+                                        .append("div")
+                                        .append("table")
+                                        .attr("class","table table-condensed party-summary")
+
+                        lowresult_data.append('tbody')
+                                .selectAll("tr")
+                                .data(function(o) { return o }).enter()
+                                .append("tr")
+                                .selectAll("td")
+                                    .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
+                                    .append('td')
+                                    .attr('class',function(d) { return d+'s'})
+                                    .style("font-size",'10px')
+                                    .text(function(o,i) { return i<2? o:'' })
+                                    .append('div')
+                                    .attr('class',function(d,i) { return i<2? '':'progress'; })
+                                    .append('div')
+                                    .attr('class','progress-bar progress-bar-striped')
+                                    .attr('role','progressbar')
+                                    .attr('aria-valuenow','70')
+                                    .attr('aria-valuemin','0')
+                                    .attr('aria-valuemax','100')
+                                    .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
+                                    .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
+                                   
   });
 
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
