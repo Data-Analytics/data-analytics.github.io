@@ -965,6 +965,7 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
                                     .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
                                     .append('td')
                                     .attr('class',function(d) { return d+'s'})
+                                    .style("max-width",'10px')
                                     .style("font-size",'15px')
                                     .text(function(o,i) { return i<2? o:'' })
                                     .append('div')
@@ -978,6 +979,7 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
                                     .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
                                     .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
      
+     d3.selectAll('.removed_data').remove();
 
   });
         

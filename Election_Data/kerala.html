@@ -1198,22 +1198,23 @@ var svg = d3.select(".stacked_bar").append("svg")
                                 .selectAll("td")
                                     .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
                                     .append('td')
-                                    .attr('class',function(d) { return d+'s'})
+                                    .attr('class',function(d) { return d+'s sublines'})
+                                    .style("max-width",'10px')
                                     .style("font-size",'15px')
                                     .text(function(o,i) { return i<2? o:'' })
                                     .append('div')
-                                    .attr('class',function(d,i) { return i<2? '':'progress'; })
+                                    .attr('class',function(d,i) { return i<2? 'removed_data':'progress'; })
                                     .append('div')
                                     .attr('class','progress-bar progress-bar-striped')
                                     .attr('role','progressbar')
-                                    .attr('aria-valuenow','70')
+                                    .attr('aria-valuenow','10')
                                     .attr('aria-valuemin','0')
-                                    .attr('aria-valuemax','100')
+                                    .attr('aria-valuemax','10')
                                     .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
                                     .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
      
-      
-  });
+      d3.selectAll('.removed_data').remove();
+  });    
     
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
     
