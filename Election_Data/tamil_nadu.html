@@ -1308,7 +1308,7 @@ var svg = d3.select(".stacked_bar").append("svg")
                                     .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
                                     .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
                                    
-            d3.selectAll('.removed_data').remove();                       
+            d3.selectAll('.removed_data').remove();                   
   });
 
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
