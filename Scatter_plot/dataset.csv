@@ -1,0 +1,22 @@
+id,continent,country,city,gender,ethnicity,cats,dogs,horses,elephants,revenue,profit,is_active,is_valid,last_update_date
+1,Asia,China,Beijing,Male,Asian,8167,5167,527,1200,5000.15,322,1,0,12-Jan-2016
+2,Asia,China,Beijing,Unknown,Asian,3167,2427,527,1220,5015,966,1,0,15-Mar-2015
+3,Asia,China,Beijing,Male,Whites,4000,2437,5227,2220,20120,-2212,0,0,16-May-2014
+4,Asia,India,Mumbai,Male,Asian,1492,3242,557,1400,3311,501,0,0,17-Jul-2013
+5,Asia,India,Mumbai,Female,Asian,1092,4122,237,1230,101,21.54,1,1,17-Sep-2015
+6,America,USA,Chicago,Male,Asian,2782,23122,3312,5232,3001,-10.5,1,1,19-Nov-2014
+7,America,USA,Chicago,Female,Asian,2182,512,312,634,3012,0,0,1,20-Jan-2014
+8,America,USA,Chicago,Unknown,Asian,782,3122,32123,622,5122,2440.15,1,1,23-Mar-2013
+9,Africa,South Africa,Cape Town,Male,Asian,4253,6122,123,6343,3211,-15050,0,0,24-May-2012
+10,Africa,South Africa,Cape Town,Female,Asian,3253,5232,522,322,2144,2021,0,0,26-Jul-2011
+11,Australia,Australia,Brisbane,Male,Asian,702,1232,3213,5122,2123,221,1,1,26-Sep-2010
+12,Asia,India,Bangalore,Male,Asian,2288,5122,2511,5221,55110,3005.54,0,1,20-Mar-2013
+13,Asia,India,Bangalore,Female,Asian,2088,5166,5123,5122,2212,-500.05,1,1,15-Jan-2015
+14,North America,Canada,Toronto,Male,Asian,10015,5167,527,232,50014,500.15,0,0,11-Apr-2016
+15,North America,Canada,Toronto,Female,Asian,8015,5167,527,1200,32211,4012.5,1,0,8-Sep-2008
+16,Asia,China,Shanghai,Male,Asian,2015,5135,5661,7231,7008.6,3015.6,0,0,5-Jul-2010
+17,Asia,China,Shanghai,Male,Blacks,3000,6123,650,251,322.17,-901.1,1,1,2-May-2012
+18,Asia,China,Shanghai,Male,Whites,1200,3126,901,1200,22150.25,4005.15,1,0,27-Feb-2014
+19,Asia,China,Shanghai,Female,Asian,1515,3321,873,1200,22115.05,-4005.15,1,0,24-Dec-2015
+20,Asia,China,Shanghai,Female,Whites,1800,5512,526,1200,80012,60012,1,0,21-Oct-2007
+21,Australia,New Zealand,Auckland,Male,Asian,1605,205,5124,2312,8002,4000,1,1,20-Jul-2015
