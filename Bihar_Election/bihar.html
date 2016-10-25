@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!--------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     28-01-2016
+ Modified:    21-09-2016
+ Copyright:  (c) sushanth 2016
+ Licence:     protected(not suppose to se it directly)
+---------------------------------------------------------------->
+<html>
+ <head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
+  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2016 Tamil Nadu Election,Tamil Nadu Assembly Election Results 2016 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2016', Which of the Dravidian duos might get the stronghold in Tamil Nadu? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
+  <meta name="news_keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
+  <meta name="keywords" content="tamil nadu polls, tamil nadu assembly polls, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
+  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/basic.css" rel="stylesheet">
+  <link href="css/feature.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link href="css/custom-styles.css" rel="stylesheet">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css">
+  <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/sankey.js"></script>
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
+  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>  
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
+  <meta property="og:title"  content="Assembly Elections 2015 (Bihar)" /> 
+  <meta property="og:url"   content="http://data-analytics.github.io/Election_Data/tamil_nadu.html" /> 
+  <meta property="og:image" content="images/images.png" /> 
+  <html itemscope itemtype="http://schema.org/Blog">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 2015 (Bihar)">
+  <meta itemprop="image" content="images/images.png">
+  <title>Assembly Elections 2015 (Bihar)</title>
+    <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Bihar Assembly Elections 2015</p>
+                    <p class="synopsis">This interactive map will bring you minute-by-minute results, from the national standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
+                                    
+                <p align="center"><span class='st_facebook_hcount' displayText='Facebook'></span>
+                <span class='st_twitter_hcount' displayText='Tweet'></span>
+                <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+                <span class='st_googleplus_hcount' displayText='Google'></span>
+                <span class='st_email_hcount' displayText='Email'></span></p>
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Bihar Assembly Elections 2015<i class="extra_year_tag"></i></h2>
+                </div>    
+           </div>
+           
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+ 
+                   <svg data-height="0.54" viewBox="0 0 1200 25" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                      <g class="headers" transform="translate(80,0)">
+                      
+                      <rect class="party-legend" data-party="RJD" data-highlight="[data-party=RJD]" data-toggle="highlight" x="0.0" width="58.75" height="20" fill="#21610B"></rect>
+                      <text x="29.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">RJD</text>
+
+                      <rect class="party-legend" data-party="JD" data-highlight="[data-party=JD]" data-toggle="highlight" x="58.75" width="58.75" height="20" fill="#594671"></rect>
+                      <text x="88.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD</text>    
+                      
+                      <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="117.5" width="58.75" height="20" fill="#019733"></rect>
+                      <text x="146.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                    
+                      <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="176.25" width="58.75" height="20" fill="#FB7B0D"></rect>
+                      <text x="205.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BJP</text>
+                    
+                      <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235" width="58.75" height="20" fill="#DE0000"></rect>
+                      <text x="264.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                    
+                      <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="293.75" width="58.75" height="20" fill="#000000"></rect>
+                      <text x="323.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JNP</text>
+                    
+                      <rect class="party-legend" data-party="NCP" data-highlight="[data-party=NCP]" data-toggle="highlight" x="352.5" width="58.75" height="20" fill="#8064a2"></rect>
+                      <text x="381.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NCP</text>
+                    
+                      <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="411.25" width="58.75" height="20" fill="#95b3d7"></rect>
+                      <text x="440.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">IND</text>
+                    
+                      <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="470" width="58.75" height="20" fill="#DE0000"></rect>
+                      <text x="499.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                    
+                      <rect class="party-legend" data-party="INLD" data-highlight="[data-party=INLD]" data-toggle="highlight" x="528.75" width="58.75" height="20" fill="#800000"></rect>
+                      <text x="558.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INLD</text>
+                    
+                      <rect class="party-legend" data-party="JKNC" data-highlight="[data-party=JKNC]" data-toggle="highlight" x="587.5" width="58.75" height="20" fill="#B15928"></rect>
+                      <text x="616.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JKNC</text>
+                    
+                      <rect class="party-legend" data-party="JVM" data-highlight="[data-party=JVM]" data-toggle="highlight" x="646.25" width="58.75" height="20" fill="#4bacc6"></rect>
+                      <text x="675.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JVM</text>
+                    
+                      <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="705" width="58.75" height="20" fill="#0C6965"></rect>
+                      <text x="734.375" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AAP</text>
+                    
+                      <rect class="party-legend" data-party="SHS" data-highlight="[data-party=SHS]" data-toggle="highlight" x="763.75" width="58.75" height="20" fill="#F05A00"></rect>
+                      <text x="793.125" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SHS</text>
+                    
+                      <rect class="party-legend" data-party="JMM" data-highlight="[data-party=JMM]" data-toggle="highlight" x="822.5" width="58.75" height="20" fill="#77968E"></rect>
+                      <text x="851.875" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JMM</text>
+                    
+                      <rect class="party-legend" data-party="PDP" data-highlight="[data-party=PDP]" data-toggle="highlight" x="881.25" width="58.75" height="20" fill="#9DBC2A"></rect>
+                      <text x="910.625" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">PDP</text>
+                         </g>
+                </svg>
+
+                      <p class="form-inline header_form" >
+                        <label align="left" >Search:</label>
+                        <input type="text" class="geo_search" placeholder="eg: Alamnagar">
+                      </p>
+<svg class="bihar" data-height="0.54" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1100 570" style="width: 100%;">
+<g class="headers" transform="translate(180,0)">
+<polygon shape="poly" alt="1"  id="Valmiki Nagar" points="85,40,88,36,91,32,91,29,86,24,84,22,86,19,90,20,93,20,98,19,105,19,111,19,113,20,119,23,126,28,131,38,138,39,141,43,142,43,142,45,134,47,131,53,128,57,129,59,127,61,126,63,127,68,124,71,119,73,119,77,122,80,125,80,128,84,132,84,136,90,139,94,143,94,149,99,151,100,150,101,148,101,147,105,152,110,156,118,161,118,162,121,162,130,156,131,149,133,148,135,144,131,148,126,148,116,145,112,140,113,137,116,137,118,132,118,131,112,131,110,126,108,125,112,119,109,118,104,115,100,118,98,117,92,116,90,116,84,110,82,114,76,112,74,104,77,102,77,102,72,103,71,106,65,108,63,107,60,104,54,97,52,95,49,98,45,99,42,98,39,94,38,91,41,90,42,87,41" "(0);" tie="header=[Valmikinagar Constituency] body=[Winner:RAJESH SINGH<br />Party:Janata Dal (United)]"/>
+
+<polygon shape="poly" alt="2"  id="Ramnagar (SC)" points="157,29,166,29,165,31,175,30,178,33,182,31,185,33,200,34,204,41,199,45,193,52,190,54,191,58,182,61,182,65,173,63,171,59,168,60,167,70,163,68,160,72,160,74,162,76,162,80,154,81,154,73,150,68,148,60,145,64,143,61,140,49,140,46,140,45,142,45,142,43,141,43,137,39,131,38,125,28,118,22,112,19,116,19,117,14,119,12,122,11,122,7,125,7,130,6,130,11,130,12,139,14,139,19,142,17,145,17,149,23,149,27,153,27" "(0);" tie="header=[Ramnagar(SC) Constituency] body=[Winner: BHAGIRATHI DEVI<br />Party:Bharatiya Janata Party]"/>
+
+<polygon shape="poly" alt="3"  id="Narkatiaganj" points="160,89,163,89,165,87,168,89,171,86,177,86,183,88,186,87,188,85,190,82,186,79,185,77,187,74,191,79,194,83,195,78,193,69,195,65,194,58,190,58,182,61,182,65,173,63,171,59,168,60,167,70,163,68,160,72,160,74,162,76,162,80,154,81,155,83,159,86,158,89" "(0);" tie="header=[Narkatiaganj Constituency] body=[Winner:SATISH CHANDRA DUBEY <br />Party:Bharatiya Janata Party]"/>
+
+<polygon shape="poly" alt="4"  id="Bagaha" points="154,98,156,95,157,95,158,89,159,86,154,82,154,73,150,67,148,60,145,64,142,60,140,49,140,45,133,48,131,53,128,57,129,60,127,61,126,63,127,67,127,68,124,71,119,73,119,78,122,80,125,80,128,84,133,84,139,94,142,94,151,100" "(0);" tie="header=[Bagaha Constituency] body=[Winner:PRABHAT RANJAN SINGH <br />Party:Janata Dal (United)]"/>
+
+<polygon shape="poly" alt="5"  id="Lauriya" points="173,111,175,109,173,104,173,97,174,96,180,95,186,97,191,97,192,97,194,92,191,90,188,90,186,87,183,88,177,86,171,86,168,89,165,87,163,89,158,89,157,95,156,95,154,99,150,101,148,101,147,105,152,110,156,118,161,118,162,120,167,119,171,118,172,116,174,116,174,113,171,112" "(0);" tie="header=[Lauriya Constituency] body=[Winner:VINAY BIHARI <br />Party:IND]"/>
+
+<polygon shape="poly" alt="6"  id="Nautan" points="174,154,171,150,171,144,159,143,156,134,155,131,162,130,162,120,170,118,171,118,172,116,174,116,173,120,176,121,182,121,184,124,187,125,188,129,192,131,192,137,196,137,198,140,198,143,190,148,187,151,187,155,183,155,177,152" "(0);" tie="header=[Nautan Constituency] body=[Winner:MANORMA PRASAD <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="7"  id="Chanpatia" points="199,115,196,121,191,119,189,121,184,119,182,121,175,121,173,120,174,115,174,113,171,112,175,109,173,104,173,97,175,96,180,95,186,97,192,97,194,97,198,95,201,99,201,105,205,110,209,109,211,109,217,116,213,120,206,125,203,126,202,121,199,120" "(0);" tie="header=[Chanpatia Constituency] body=[Winner:CHANDRA MOHAN RAI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="8"  id="Bettiah" points="207,140,213,136,215,133,217,130,215,126,217,122,218,119,217,116,209,123,203,126,202,121,199,120,199,116,196,121,191,119,188,121,184,119,182,121,184,124,187,125,188,129,192,131,192,137,196,137,199,141,208,140" "(0);" tie="header=[Bettiah Constituency] body=[Winner:RENU DEVI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="9"  id="Sikta" points="215,98,212,102,210,109,205,110,201,105,201,98,198,94,194,97,192,97,194,92,190,89,187,90,186,87,190,83,186,79,185,77,187,74,194,83,195,78,193,69,195,65,194,58,192,58,190,58,191,58,190,54,193,52,200,44,204,41,209,52,209,61,208,64,210,65,208,74,204,79,205,83,218,88,220,89,220,95" "(0);" tie="header=[Sikta Constituency] body=[Winner:DILIP VARMA <br />Party:IND]"/>
+
+<polygon shape="poly" alt="10"  id="Raxaul" points="219,102,223,102,225,98,230,102,236,100,236,115,239,116,242,113,244,116,247,115,245,111,248,110,251,110,255,111,256,112,258,109,256,104,252,101,252,97,247,95,239,94,234,88,230,86,225,90,223,87,220,89,220,95,214,99,212,103,210,109,212,108,216,102" "(0);" tie="header=[Raxaul Constituency] body=[Winner:DR. AJAY KUMAR SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="11"  id="Sugauli" points="210,140,214,141,219,137,220,141,228,139,232,134,235,123,232,119,236,115,236,100,230,102,225,98,223,102,216,102,212,108,210,109,212,110,217,116,218,119,215,126,217,130,213,136,208,140,205,141,208,144,210,142" "(0);" tie="header=[Sugauli Constituency] body=[Winner:RAMCHANDRA SAHANI
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="12"  id="Narkatia" points="236,141,238,147,243,146,244,141,249,138,246,135,248,131,242,128,238,122,241,120,243,123,246,127,250,128,255,126,257,128,259,130,268,129,269,127,264,123,266,117,274,117,279,111,278,110,271,110,266,114,261,113,262,108,265,107,257,106,258,110,256,112,252,110,245,111,246,116,244,116,242,113,239,116,236,115,232,119,235,123,232,134,228,139,230,138,234,140" "(0);" tie="header=[Narkatia Constituency] body=[Winner:SHYAM BIHARI PRASAD
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="13"  id="Harsidhi (SC)" points="213,166,220,167,222,165,222,160,227,161,231,160,236,162,238,164,239,164,239,160,237,156,241,156,241,147,238,147,236,141,229,138,227,140,219,141,219,138,219,137,214,141,210,140,210,142,208,144,208,148,212,150,215,152,213,154,209,154,206,151,206,154,202,151,204,157,206,162,213,161,215,161" "(0);" tie="header=[Harsidhi(SC)Constituency] body=[Winner:KRISHANA NANDAN PASWAN <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="14"  id="Govindganj" points="200,181,206,178,214,183,218,179,214,177,212,171,213,169,213,166,215,161,206,162,202,151,206,154,206,151,209,154,213,154,215,152,208,148,208,144,205,140,198,141,198,144,194,145,187,151,187,155,182,155,182,158,185,162,189,170,191,174,195,174,198,182" "(0);" tie="header=[Govindganj Constituency] body=[Winner:MEENA DWIVEDI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="15"  id="Kesaria" points="225,171,227,180,235,182,234,190,240,191,242,188,247,190,251,189,254,191,257,191,260,197,254,199,246,200,242,205,241,210,240,211,235,207,232,206,229,201,222,195,218,189,214,183,218,179,214,177,212,170,213,169,213,165,220,167,222,165,225,165,226,167" "(0);" tie="header=[Kesaria Constituency] body=[Winner:SACHINDRA PD. SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="16"  id="Kalyanpur" points="266,196,270,192,269,190,268,187,265,187,261,182,255,182,248,181,247,176,246,172,242,167,239,165,237,163,234,161,231,160,227,161,222,160,222,165,225,165,226,168,225,172,227,178,227,180,235,182,234,190,240,190,242,188,246,190,251,189,254,191,257,191,260,197,260,199,262,199" "(0);" tie="header=[Kalyanpur Constituency] body=[Winner:RAZIA KHATOON <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="17"  id="Pipra" points="269,198,276,201,286,197,289,204,296,203,298,197,293,192,289,188,284,184,279,187,278,189,274,189,271,184,271,180,265,174,261,168,264,164,259,165,256,163,252,163,245,165,241,166,245,171,247,177,248,181,257,182,261,182,265,187,268,187,270,192,267,195,266,197" "(0);" tie="header=[Pipra Constituency] body=[Winner:AWADHESH PRASAD KUSHWAHA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="18"  id="Madhuban" points="277,168,280,167,281,161,288,161,290,164,291,169,288,170,284,171,289,179,290,180,288,182,284,182,284,184,279,188,279,187,277,189,274,189,271,185,271,184,271,180,267,176,261,168,263,164,263,161,265,154,269,151,274,150,278,151,273,159,276,161,274,165" "(0);" tie="header=[Madhuban Constituency] body=[Winner:SHIVJEE RAI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="19"  id="Motihari" points="257,138,260,143,265,153,265,154,263,162,263,164,259,165,255,163,248,163,248,164,241,166,239,164,239,160,237,156,241,156,241,147,243,146,245,140,248,138,249,138,246,135,248,131,243,128,238,122,241,120,245,127,251,128,255,126,259,130,257,133,253,135,253,137,257,139" "(0);" tie="header=[Motihari Constituency] body=[Winner:PRAMOD KUMAR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="20"  id="Chiraia" points="278,138,282,145,279,148,280,149,285,148,286,150,289,147,292,151,295,146,298,147,293,160,290,162,288,161,281,161,280,167,277,168,274,165,276,161,273,159,278,151,274,150,268,151,265,154,258,139,257,138,253,137,253,135,257,133,259,130,268,129,269,127,273,130,274,133,279,134,279,137" "(0);" title=""/>
+
+<polygon shape="poly" alt="21"  id="Dhaka" points="295,128,295,138,292,142,298,146,298,147,295,146,292,151,288,147,286,150,285,148,280,150,279,148,282,145,278,137,279,136,279,134,274,133,273,129,268,126,264,123,264,123,266,117,273,117,275,116,279,110,285,110,284,116,282,118,286,125,288,127,295,127,295,129,295,127" "(0);" tie="header=[Dhaka Constituency] body=[Winner:PAWAN KUMAR JAISWAL <br />Party:IND]"/>
+
+<polygon shape="poly" alt="22"  id="Sheohar" points="308,144,312,151,312,155,314,159,312,162,316,166,316,169,311,169,313,176,313,188,313,193,313,195,304,195,301,193,301,189,295,185,292,183,288,182,290,180,287,175,284,171,291,169,289,163,288,161,290,162,293,160,298,147,298,145,302,143" "(0);" title=""/>
+
+<polygon shape="poly" alt="23"  id="Riga" points="319,161,322,162,324,156,321,149,322,145,324,145,325,148,328,149,331,147,329,145,326,143,328,140,328,137,322,138,316,136,315,133,312,137,311,136,311,130,309,128,308,129,295,128,295,138,292,142,298,146,299,144,303,143,309,144,312,151,312,156,314,159,315,161" "(0);" title=""/>
+
+<polygon shape="poly" alt="24"  id="Bathnaha (SC)" points="324,123,330,119,333,117,335,117,336,125,344,122,346,123,344,129,348,130,348,132,345,135,349,142,345,143,347,153,342,154,336,150,335,146,330,146,326,143,328,139,328,137,321,138,316,136,315,133,312,137,311,131,311,130,308,128,312,126,317,123,320,122,323,123" "(0);" tie="header=[Bathnaha(SC) Constituency] body=[Winner:DINKAR RAM <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="25"  id="Parihar" points="352,142,365,142,365,130,365,118,358,112,352,111,350,107,348,107,347,109,344,111,340,110,338,115,334,116,334,118,335,118,336,125,344,122,346,123,344,129,348,130,348,132,345,135,349,142" "(0);" tie="header=[Parihar Constituency] body=[Winner:RAM NARESH PR. YADAV. <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="26"  id="Sursand" points="358,157,365,157,362,161,363,163,358,165,353,166,353,168,357,171,361,175,363,179,369,179,371,180,372,179,369,174,370,173,376,175,378,173,372,172,370,168,375,168,379,163,380,162,377,157,380,151,375,148,368,145,364,142,348,142,345,143,347,149,347,151,352,151,357,155" "(0);" tie="header=[Sursand Constituency] body=[Winner:SHAHID ALI KHAN <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="27"  id="Bajpatti" points="353,185,345,191,351,195,352,200,360,198,364,201,367,197,367,195,364,192,362,193,360,185,360,182,363,179,361,176,353,168,353,167,353,165,357,165,363,163,362,161,365,157,358,157,354,153,352,151,347,151,347,153,344,154,344,165,344,172,346,175,344,178,347,182,351,184" "(0);" tie="header=[Bajpatti Constituency] body=[Winner:RANJU GEETA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="28"  id="Sitamarhi" points="330,170,335,170,338,170,343,174,344,173,344,153,342,154,336,150,335,146,330,146,328,149,324,148,323,144,322,146,321,150,324,156,322,163,325,167,328,171" "(0);" tie="header=[Sitamarhi Constituency] body=[Winner:SUNIL KUMAR ALIAS PINTU <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="30"  id="Belsand" points="315,188,322,188,324,184,320,180,323,176,326,176,328,170,322,162,318,161,315,161,314,159,312,162,316,166,316,169,311,169,313,176,313,188" "(0);" tie="header=[Belsand Constituency] body=[Winner:SUNITA SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="29"  id="Runnisaidpur" points="323,206,329,195,333,189,337,190,339,191,342,186,343,188,345,192,353,185,347,182,344,177,347,175,345,173,343,174,338,171,338,170,329,170,327,172,326,176,323,176,320,180,324,184,322,188,313,188,313,195,316,199,319,204,320,206" "(0);" title=""/>
+
+<polygon shape="poly" alt="31"  id="Harlakhi" points="385,155,393,149,397,149,398,142,407,141,410,146,408,150,406,152,403,152,400,162,402,165,397,168,394,175,390,174,389,178,382,179,380,176,377,174,378,173,371,172,370,168,375,168,380,162,377,156,380,151,382,149,384,152,382,155" "(0);" tie="header=[Harlakhi Constituency] body=[Winner:SHALIGRAM YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="32"  id="Benipatti" points="388,187,393,181,398,180,405,184,412,182,417,179,420,180,422,178,424,170,418,165,422,161,415,164,409,164,408,169,405,168,402,165,397,168,394,175,390,174,389,178,382,179,379,176,377,174,376,175,369,173,369,174,372,179,371,180,371,184,376,183,378,183,379,189,383,187,387,187" "(0);" tie="header=[Benipatti Constituency] body=[Winner:VINOD NARAIN JHA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="33"  id="Khajauli" points="427,166,427,172,432,172,432,175,423,178,422,178,424,170,418,165,422,161,415,164,409,164,408,169,401,165,400,162,403,152,407,152,410,146,407,141,410,140,416,141,417,144,423,145,425,145,425,149,430,147,434,148,434,152,435,158,428,164" "(0);" tie="header=[Khajauli Constituency] body=[Winner:ARUN SHANKAR PRASAD <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="34"  id="Babubarhi" points="437,177,432,174,432,171,431,172,427,171,427,165,435,158,434,151,439,151,442,147,450,146,455,147,457,148,460,149,463,150,462,154,463,164,464,171,464,182,458,180,457,182,455,180,439,179" "(0);" tie="header=[Babubarhi Constituency] body=[Winner:UMA KANT YADAV <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="35"  id="Bisfi" points="408,199,411,196,412,190,417,191,418,180,418,179,412,182,405,184,398,180,393,181,388,187,383,187,380,193,381,195,380,201,382,203,390,204,395,199,405,197,406,200" "(0);" tie="header=[Bisfi Constituency] body=[Winner:DR. FAIYAJ AHMAD <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="36"  id="Madhubani" points="410,209,412,211,411,217,414,218,417,214,423,216,428,210,434,211,435,205,435,202,438,199,438,194,432,196,424,194,417,194,417,191,412,190,411,196,407,200,408,205,409,208" "(0);" tie="header=[Madhubani Constituency] body=[Winner:RAM DEO MAHTO <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="37"  id="Rajnagar (SC)" points="441,191,437,192,437,194,431,196,424,194,417,194,417,190,418,179,420,180,423,178,432,175,433,175,440,179,455,180,457,182,458,180,465,182,462,186,460,189,459,193,458,196,454,199,451,195,451,200,445,201,443,199,447,193,446,191" "(0);" tie="header=[Rajnagar(SC)Constituency] body=[Winner:RAM LAKHAN RAM RAMAN <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="38"  id="Jhanjharpur" points="444,215,455,222,455,230,460,236,462,228,467,226,460,218,464,210,467,205,463,203,463,195,459,195,454,199,451,195,451,201,445,201,443,199,447,193,446,191,440,191,437,192,438,195,438,199,435,202,434,211,437,211,442,211" "(0);" tie="header=[Jhanjharpur Constituency] body=[Winner:NITISH MISHRA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="39"  id="Phulparas" points="472,189,476,188,477,177,482,179,484,189,490,191,489,195,482,202,483,209,475,213,472,211,471,215,467,215,468,222,472,221,476,221,478,222,485,221,486,222,482,227,476,228,471,237,465,242,462,237,460,235,462,229,467,226,460,217,467,205,463,203,463,195,459,195,460,188,465,188,468,188,470,188" "(0);" tie="header=[Phulparas Constituency] body=[Winner:GULJAR DEVI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="40"  id="Laukaha" points="512,176,510,184,507,186,500,188,499,191,494,191,490,192,490,191,484,189,481,179,477,178,476,188,471,189,470,188,460,188,465,182,465,181,462,154,463,151,468,153,478,157,481,159,482,157,488,160,489,164,498,167,498,170,509,173,512,175" "(0);" tie="header=[Laukaha Constituency] body=[Winner:HARI PRASAD SAH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="41"  id="Nirmali" points="527,173,522,171,518,170,515,176,512,175,510,184,506,186,500,188,499,191,494,191,490,192,489,195,490,197,496,197,497,195,503,195,500,199,503,201,507,200,508,204,515,203,517,201,523,200,523,207,530,206,532,208,537,208,538,210,541,207,539,203,538,193,541,191,541,186,549,185,549,182,549,181,545,180,543,176,534,176,533,181,530,184,528,179,528,174,527,174" "(0);" tie="header=[Nirmali Constituency] body=[Winner:ANIRUDDHA PRASAD YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="42"  id="Pipra" points="512,235,511,241,507,240,507,236,497,236,495,231,500,229,500,221,497,219,491,220,490,217,490,212,496,209,496,204,493,203,493,200,496,199,496,195,503,195,500,200,504,201,507,200,508,204,515,203,518,200,523,200,523,206,531,206,532,208,533,208,534,211,528,212,527,222,529,224,527,227,522,231,521,232,519,227,515,233" "(0);" tie="header=[Pipra Constituency] body=[Winner:SUJATA DEVI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="43"  id="Supaul" points="495,231,497,236,504,236,507,236,507,241,507,243,500,245,492,242,486,248,482,242,485,238,477,238,476,236,472,235,476,228,482,227,486,222,484,221,478,222,476,221,471,221,468,222,467,215,471,215,472,211,475,213,483,209,482,202,489,195,490,197,496,197,496,199,493,200,493,202,493,203,496,205,496,209,490,211,490,218,492,220,497,219,500,222,500,228" "(0);" tie="header=[Supaul Constituency] body=[Winner:BIJENDRA PRASAD YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="44"  id="Triveniganj (SC)" points="545,231,556,234,569,235,570,231,571,228,559,226,556,219,549,214,549,206,552,203,552,196,549,192,549,185,541,186,541,191,538,194,539,203,541,207,538,210,537,208,533,208,534,211,528,212,527,219,527,222,529,224,528,227,533,229,537,230,544,231" "(0);" tie="header=[Triveniganj(SC) Constituency] body=[Winner:AMLA DEVI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="45"  id="Chhatapur" points="569,212,569,221,563,226,559,226,556,219,549,214,549,206,553,203,552,196,549,192,549,181,545,180,543,176,534,176,533,181,530,184,528,179,528,174,528,173,536,170,537,165,542,164,542,159,552,158,559,152,559,149,559,148,562,148,560,155,560,161,563,170,564,182,562,188,560,191,563,200,565,207" "(0);" tie="header=[Chhatapur Constituency] body=[Winner:NEERAJ KUMAR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="46"  id="Narpatganj" points="575,237,569,235,571,228,562,226,569,221,569,212,565,207,560,191,564,182,563,169,560,161,560,152,563,148,565,166,568,172,577,177,583,175,586,176,586,181,585,186,586,188,590,188,589,192,587,193,586,202,581,206,581,220,580,224,586,231,587,238,581,236,574,237" "(0);" tie="header=[Narpatganj Constituency] body=[Winner:DEVANTI YADAV <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="47"  id="Raniganj (SC)" points="589,250,596,246,600,251,603,246,615,249,617,243,614,228,613,224,614,218,612,215,607,216,600,216,593,216,589,219,581,219,580,225,586,231,587,238,581,236,574,236,574,238,570,239,570,243,566,245,566,250,573,250,580,253" "(0);" tie="header=[Raniganj(SC) Constituency] body=[Winner:PARMANAND RISHIDEO <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="48"  id="Forbesganj" points="608,194,615,203,617,203,617,207,615,207,615,215,613,216,612,215,604,216,593,216,589,219,581,219,581,206,586,202,587,193,589,192,590,188,587,188,585,186,586,181,586,176,592,175,592,181,598,182,603,184,604,186,604,191,607,194" "(0);" tie="header=[Forbesganj Constituency] body=[Winner:PADAM PARAG ROY 'VENU' <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="49"  id="Araria" points="618,197,614,201,616,203,617,203,617,207,615,207,615,215,612,216,614,218,613,225,616,235,617,244,630,244,632,240,632,233,634,233,634,230,630,228,631,224,631,218,633,214,636,210,632,204,633,200,632,196,629,198,626,196,626,192,620,191,621,187,619,186,617,191,617,194,619,196" "(0);" tie="header=[Araria Constituency] body=[Winner:ZAKIR HUSSAIN KHAN  <br />Party:LJP]"/>
+
+<polygon shape="poly" alt="50"  id="Jokihat" points="650,203,644,200,633,200,632,203,636,210,632,215,631,219,631,225,630,227,634,230,634,233,632,233,632,240,630,244,636,244,640,241,642,238,648,237,647,230,648,227,655,226,656,207,653,201" "(0);" tie="header=[Jokihat Constituency] body=[Winner:SARFRAZ ALAM <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="51"  id="Sikti" points="640,178,646,177,646,179,642,184,650,192,652,198,652,202,650,203,645,200,633,200,632,196,629,198,626,196,626,192,620,191,621,187,620,186,618,187,617,194,619,196,614,201,608,194,607,194,604,191,604,185,606,182,606,177,609,173,618,172,623,169,632,172,637,176,639,179,639,178,638,178,639,178,639,178,638,179,639,178,639,178,638,178,641,178,639,178,638,178,638,177,639,179" "(0);" tie="header=[Sikti Constituency] body=[Winner:ANANDI PRASAD YADAV
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="52"  id="Bahadurganj" points="667,199,659,204,656,208,653,201,652,201,652,196,650,192,642,184,646,179,646,177,650,176,650,174,653,172,653,168,662,173,665,173,665,175,670,176,671,174,673,176,672,182,674,185,677,185,683,182,685,187,692,188,693,191,694,202,692,203,684,203,677,207,675,205,669,206,666,204,669,200,668,199" "(0);" tie="header=[Bahadurganj Constituency] body=[Winner:MOHAMMAD TOUSIF ALAM <br />Party:INC]"/>
+
+<polygon shape="poly" alt="53"  id="Thakurganj" points="701,200,694,201,692,188,685,187,683,181,677,185,674,185,672,181,673,176,673,175,671,173,670,176,665,175,665,173,667,171,668,163,670,163,677,167,680,166,680,163,684,160,687,165,689,166,689,169,697,174,699,174,700,179,703,179,706,173,714,165,715,160,715,155,713,153,715,150,721,153,726,148,732,146,733,149,726,155,728,159,733,160,732,163,729,168,723,175,716,178,715,181,716,186,709,187,707,192,704,197,702,200" "(0);" tie="header=[Thakurganj Constituency] body=[Winner:NAUSHAD ALAM <br />Party:LJP]"/>
+
+<polygon shape="poly" alt="54"  id="Kishanganj" points="702,207,698,215,702,214,707,209,712,209,720,200,723,200,723,196,728,195,730,192,735,189,739,182,742,181,744,178,742,175,733,176,735,172,740,168,736,163,732,162,730,167,723,174,723,175,716,178,715,182,716,186,709,187,702,201,702,199,695,201,694,206,700,206" "(0);" tie="header=[Kishanganj Constituency] body=[Winner:DR MOHAMMAD JAWAID <br />Party:INC]"/>
+
+<polygon shape="poly" alt="56"  id="Amour" points="661,221,656,221,655,222,655,226,648,227,647,232,648,237,641,239,641,242,645,247,648,252,646,256,651,256,654,258,665,253,672,251,676,252,676,250,679,251,678,248,676,245,679,233,681,227,682,222,670,222,665,222" "(0);" tie="header=[Amour Constituency] body=[Winner:SABA ZAFAR
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="55"  id="Kochadhaman" points="690,226,683,234,680,246,679,252,676,245,681,227,682,222,664,222,660,221,655,221,656,207,659,204,668,199,669,200,666,204,669,206,676,205,678,207,684,203,693,203,695,201,694,205,702,206,698,215,698,218,700,220,699,223,699,226,695,227,693,227" "(0);" tie="header=[Kochadhaman Constituency] body=[Winner:AKHATARUL IMAN <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="57"  id="Baisi" points="640,270,646,264,650,264,650,259,647,256,651,256,654,258,666,253,672,251,676,253,678,259,678,266,673,265,678,268,679,275,673,281,664,279,660,282,657,287,657,290,653,287,648,286,646,279,642,274,639,273,639,271" "(0);" tie="header=[Baisi Constituency] body=[Winner:SANTOSH KUMAR
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="58"  id="Kasba" points="620,275,629,273,632,270,638,272,646,264,649,264,650,259,646,256,648,252,642,243,641,242,641,239,636,244,616,244,615,249,603,246,600,251,603,255,604,258,610,257,615,266,619,272" "(0);" tie="header=[Kasba Constituency] body=[Winner:MD. AFAQUE ALAM <br />Party:INC]"/>
+
+<polygon shape="poly" alt="59"  id="Banmankhi (SC)" points="559,286,566,285,567,278,573,279,578,276,581,272,594,268,601,266,602,259,603,258,604,257,600,251,596,246,587,251,579,253,573,250,565,250,563,252,557,252,555,256,555,259,560,261,563,268,562,274,560,274,559,281,557,286" "(0);" tie="header=[Banmankhi(SC) Constituency] body=[Winner:KRISHNA KUMAR RISHI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="60"  id="Rupauli" points="574,297,579,298,581,295,582,299,592,305,596,303,596,317,591,319,589,326,593,332,587,334,577,336,572,334,569,330,573,323,566,321,566,313,563,303,562,299,565,294,560,288,558,286,566,285,566,278,572,279,578,277,579,283,574,288" "(0);" tie="header=[Rupauli Constituency] body=[Winner:BIMA BHARTI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="61"  id="Dhamdaha" points="613,293,597,290,594,290,597,301,595,304,592,305,582,298,581,295,578,298,574,297,574,287,579,283,578,276,581,272,591,269,601,266,602,258,610,257,618,270,620,275,623,274,622,280,623,287,622,291,622,294" "(0);" tie="header=[Dhamdaha Constituency] body=[Winner:LESHI SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="62"  id="Purnia" points="636,293,641,297,642,292,654,292,657,290,652,286,648,286,645,279,642,274,640,273,638,271,637,272,632,270,628,274,622,274,623,286,622,291,622,294,628,293,631,296,633,294,637,293" "(0);" tie="header=[Purnia Constituency] body=[Winner:RAJ KISHORE KESHARI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="63"  id="Katihar" points="636,312,640,321,644,321,644,324,650,324,653,320,651,317,652,315,648,305,651,303,656,298,654,292,643,292,641,297,641,301,637,305,636,310" "(0);" tie="header=[Katihar Constituency] body=[Winner:TAR KISHORE PRASAD <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="64"  id="Kadwa" points="670,303,670,311,658,315,652,315,648,305,656,298,654,292,657,290,657,287,661,282,661,281,664,279,673,281,677,277,684,279,685,285,688,287,691,297,683,298,681,302,677,306,674,303" "(0);" tie="header=[Kadwa Constituency] body=[Winner:BHOLA RAY <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="65"  id="Balrampur" points="692,304,698,308,698,313,703,315,711,320,718,321,717,316,712,313,710,304,711,302,712,295,712,287,709,287,704,283,701,283,695,276,691,276,691,267,690,264,691,263,683,261,678,259,678,265,674,265,677,267,679,275,677,277,684,279,685,285,688,287,691,297,693,299,692,302,691,304" "(0);" tie="header=[Balrampur Constituency] body=[Winner:DULAL CHANDRA GOSHWAMI <br />Party:IND]"/>
+
+<polygon shape="poly" alt="66"  id="Pranpur" points="657,331,663,334,668,333,670,337,674,336,674,332,677,329,680,331,684,327,687,325,688,319,692,319,696,314,699,313,698,308,691,304,693,299,692,297,682,298,681,302,677,306,673,303,670,303,670,311,658,315,652,315,651,317,653,320,656,322,658,326,655,329" "(0);" tie="header=[Pranpur Constituency] body=[Winner:BINOD KUMAR SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="67"  id="Manihari (ST)" points="633,345,641,351,647,347,647,352,656,353,663,353,665,359,666,362,675,362,676,367,686,370,684,364,688,358,688,354,676,349,676,342,672,340,673,337,670,337,667,333,663,335,655,329,658,326,656,322,652,320,650,324,644,324,643,322,640,321,638,338,633,339,634,343" "(0);" tie="header=[Manihari(ST) Constituency] body=[Winner:MANOHAR PRASAD SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="68"  id="Barari" points="600,344,612,337,621,343,626,345,633,345,634,341,633,339,638,338,640,321,640,321,637,317,623,318,616,316,614,319,608,316,608,311,602,309,603,315,601,316,598,318,596,316,591,319,589,326,593,332,589,335,592,343,595,345" "(0);" tie="header=[Barari Constituency] body=[Winner:BIBHASHA CHANDRA CHOUDHARY <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="69"  id="Korha (SC)" points="636,306,636,309,638,317,638,318,637,317,629,317,623,318,616,316,614,319,608,316,608,310,602,309,603,314,598,318,596,316,596,303,597,300,594,290,600,290,616,293,622,294,628,293,631,296,633,294,637,293,641,296,641,301,638,304" "(0);" tie="header=[Korha(SC) Constituency] body=[Winner:MAHESH PASWAN  <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="70"  id="Alamnagar" points="533,334,543,332,548,328,555,331,561,330,566,331,569,329,570,330,573,323,566,321,566,312,562,300,555,299,551,300,545,298,536,299,535,297,528,302,534,310,535,317,534,328,531,332,531,335" "(0);" tie="header=[Alamnagar Constituency] body=[Winner:NARENDRA N. YADAV  <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="71"  id="Bihariganj" points="538,272,534,280,535,288,538,291,535,298,537,299,546,298,551,300,557,299,562,300,565,293,558,286,557,286,559,281,560,274,562,274,563,268,560,260,555,258,554,258,547,255,544,264,538,271" "(0);" tie="header=[Bihariganj Constituency] body=[Winner:RENU KUMARI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="72"  id="Singheshwar (SC)" points="518,245,517,248,521,251,530,254,533,253,532,248,537,248,541,248,543,253,546,252,549,255,555,258,556,253,557,252,563,252,566,249,566,245,570,243,570,239,574,237,569,235,554,234,544,231,532,229,527,227,523,230,522,234,525,234,525,239,521,243" "(0);" tie="header=[Singheshwar(SC)Constituency] body=[Winner:RAMESH RISHIDEV <br />Party:JDU]"/>
+
+
+<polygon shape="poly" alt="73"  id="Madhepura" points="504,259,510,256,513,264,519,270,528,267,533,267,536,270,536,276,539,270,543,265,545,262,547,255,549,254,546,252,542,253,540,248,532,248,533,252,530,254,520,251,517,248,518,245,525,239,525,234,522,234,522,231,521,232,519,227,514,234,512,235,511,241,507,241,507,242,500,246,500,253,501,257,503,259" "(0);" tie="header=[Madhepura Constituency] body=[Winner:CHANDRASHEKHAR <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="74"  id="Sonbarsha (SC)" points="505,284,512,291,508,293,500,291,498,296,504,303,507,306,509,308,512,304,513,305,517,301,521,306,525,307,529,304,528,302,535,297,538,291,535,287,534,279,536,276,536,270,533,267,527,267,518,270,522,271,520,274,516,279,516,285,509,284" "(0);" tie="header=[Sonbarsha(SC) Constituency] body=[Winner:RATNESH SADA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="75"  id="Saharsa" points="480,275,492,275,493,279,499,282,499,286,505,285,506,284,516,285,516,279,522,271,519,270,513,264,510,256,503,259,502,258,501,262,493,262,484,262,481,265,483,270" "(0);" tie="header=[Saharsa Constituency] body=[Winner:ALOK RANJAN <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="77"  id="Mahishi" points="465,252,467,260,461,257,455,268,459,272,463,268,466,271,474,270,472,268,477,267,481,266,481,266,484,262,500,262,502,259,501,257,500,253,500,245,492,242,486,248,482,242,485,238,477,238,475,236,472,235,471,237,466,242,464,246,466,248" "(0);" tie="header=[Mahishi Constituency] body=[Winner:DR ABDUL GAFOOR <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="76"  id="Simri Bakhtiarpur" points="468,280,470,294,478,298,483,310,495,312,498,309,507,306,497,296,500,291,508,293,512,291,505,285,499,286,499,282,493,278,492,275,480,275,483,270,481,266,472,268,474,270,466,271,463,268,462,271,464,277" "(0);" tie="header=[Simri Bakhtiarpur Constituency] body=[Winner:DR ARUN KUMAR
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="78"  id="Kusheshwar Asthan (SC)" points="435,264,443,265,443,277,443,284,450,287,454,286,458,289,464,290,466,293,469,293,470,293,468,280,464,277,462,271,462,269,459,272,455,267,453,262,446,258,440,254,438,255,435,259,435,263" "(0);" tie="header=[Kusheshwar Asthan(SC) Constituency] body=[Winner:SHASHI BHUSHAN HAJARI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="79"  id="Gaura Bauram" points="447,240,447,246,441,247,436,244,433,245,433,249,433,251,427,248,427,259,434,261,435,261,436,258,438,255,440,254,453,262,455,268,461,257,467,260,465,252,466,248,464,246,465,242,460,235,460,238,457,240,457,242,462,241,459,244,454,246,450,246,448,242" "(0);" tie="header=[Gaura Bauram Constituency] body=[Winner:DR. IZHAR AHMAD <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="80"  id="Benipur" points="419,225,425,227,430,227,433,230,437,231,432,233,433,237,436,238,436,244,433,245,433,250,427,248,428,259,425,265,418,263,409,258,417,251,419,247,424,245,424,242,427,240,421,242,419,236,417,232,415,231,413,225,414,222,419,221,420,222" "(0);" tie="header=[Benipur Constituency] body=[Winner:GOPAL JEE THAKUR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="81"  id="Alinagar" points="442,221,437,221,437,220,433,220,434,224,430,227,433,230,437,231,432,233,433,238,435,238,437,244,441,247,446,246,447,246,447,240,450,246,454,246,460,244,462,241,457,242,457,240,460,238,460,235,454,230,455,230,455,222,444,215,441,216,441,219" "(0);" tie="header=[Alinagar Constituency] body=[Winner:ABDUL BARI SIDDIQUI <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="82"  id="Darbhanga Rural" points="399,225,405,228,410,230,414,228,413,223,414,222,419,221,420,223,419,225,426,227,431,227,434,224,433,220,437,220,439,221,441,221,440,218,442,215,443,215,441,211,434,211,428,210,423,216,417,214,414,218,411,217,412,211,408,208,406,210,399,209,399,215,400,219,398,222,398,225" "(0);" tie="header=[Darbhanga Rural Constituency] body=[Winner:LALIT KUMAR YADAV <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="83"  id="Darbhanga" points="378,221,384,220,388,220,388,225,389,227,391,231,394,230,395,224,398,224,399,220,400,219,398,213,393,217,389,214,378,216,377,220,377,222" "(0);" tie="header=[Darbhanga Constituency] body=[Winner:SANJAY SARAOGI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="86"  id="Keoti" points="371,216,373,211,372,209,377,204,380,202,381,202,383,203,390,204,395,199,405,197,407,200,409,208,407,209,406,210,399,209,399,214,398,213,393,217,389,214,382,215,379,215,377,217,377,221,377,224,379,227,375,230,374,233,365,233,370,227,372,223,372,219,373,218,370,216" "(0);" tie="header=[Keoti Constituency] body=[Winner:ASHOK KUMAR YADAV <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="84"  id="Hayaghat" points="387,245,388,239,391,239,391,235,397,235,402,238,402,242,409,244,410,243,412,235,416,233,417,233,421,242,424,242,424,245,418,247,416,252,409,258,399,256,390,252" "(0);" tie="header=[Hayaghat Constituency] body=[Winner:AMAR NATH GAMI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="85"  id="Bahadurpur" points="369,243,375,243,386,244,387,244,388,239,391,239,391,235,397,235,402,238,402,242,409,244,410,243,412,235,416,233,417,233,415,231,414,228,409,230,398,225,395,224,394,230,391,231,388,225,388,220,383,220,377,222,377,224,379,227,375,230,374,233,365,233,366,237,367,240" "(0);" tie="header=[Bahadurpur Constituency] body=[Winner:MADAN SAHNI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="87"  id="Jale" points="363,208,363,216,366,218,368,225,370,225,371,225,372,222,372,219,373,217,370,216,372,216,373,211,372,209,380,201,381,195,380,193,382,187,379,189,378,183,371,184,371,180,368,179,363,179,360,182,361,193,362,193,364,192,367,195,367,197,364,201,364,203,362,208" "(0);" tie="header=[Jale Constituency] body=[Winner:VIJAY KUMAR MISHRA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="88"  id="Gaighat" points="339,241,341,227,340,224,341,222,341,214,344,210,352,209,359,219,362,221,366,218,368,225,371,225,365,234,366,239,361,244,357,248,351,249,347,249,342,244,339,243" "(0);" tie="header=[Gaighat Constituency] body=[Winner:VEENA DEVI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="89"  id="Aurai" points="326,207,330,207,333,210,335,209,334,214,341,214,344,210,352,209,358,217,359,219,362,221,366,218,363,216,363,208,362,208,364,203,364,200,360,198,352,200,351,195,345,192,342,186,339,191,333,189,327,198,323,206,323,207,324,209" "(0);" tie="header=[Aurai Constituency] body=[Winner:RAM SURAT RAI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="90"  id="Minapur" points="299,215,301,214,310,214,313,217,317,216,324,227,326,227,329,221,333,212,334,212,335,209,333,210,330,207,326,207,324,209,323,206,319,206,319,204,313,195,303,195,301,193,301,189,291,183,287,182,284,182,284,183,290,189,298,197,296,203,292,204,292,211,296,216" "(0);" tie="header=[Minapur Constituency] body=[Winner:DINESH PRASAD <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="91"  id="Bochaha (SC)" points="327,242,332,243,339,238,341,227,340,223,341,222,341,214,334,214,334,212,333,213,326,226,326,227,323,226,317,216,314,217,317,223,317,225,314,226,314,234,320,238,324,242,326,242" "(0);" tie="header=[Bochaha(SC) Constituency] body=[Winner:RAMAI RAM <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="92"  id="Sakra (SC)" points="326,264,331,262,335,265,342,264,351,263,355,263,353,256,355,252,355,248,347,249,341,243,339,243,339,239,339,238,332,243,332,246,325,250,325,257,323,261" "(0);" title=""/>
+
+<polygon shape="poly" alt="93"  id="Kurhani" points="305,260,313,261,316,263,323,261,325,257,325,250,332,246,332,243,324,242,317,237,314,235,312,236,307,236,305,233,302,237,302,243,301,246,301,249,302,252,303,259" "(0);" title=""/>
+
+<polygon shape="poly" alt="94"  id="Muzaffarpur" points="309,230,305,233,307,236,312,236,313,236,315,237,318,237,318,236,314,234,314,227,311,229" "(0);" tie="header=[Muzaffarpur Constituency] body=[Winner:SURESH KUMAR SHARMA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="95"  id="Kanti" points="284,227,291,239,296,244,300,246,302,245,302,237,304,233,306,233,309,230,314,228,314,226,317,225,317,223,314,217,313,217,310,214,301,214,296,216,292,213,288,215,288,218,283,221,283,224" "(0);" tie="header=[Kanti Constituency] body=[Winner:AJIT KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="96"  id="Baruraj" points="266,227,270,227,274,225,279,225,283,226,283,225,283,221,288,218,288,215,292,213,293,213,292,211,292,204,290,204,286,197,276,201,265,196,263,200,266,201,262,208,261,212,263,218,265,221,264,224" "(0);" tie="header=[Baruraj Constituency] body=[Winner:BRIJ KISHOR SINGH <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="97"  id="Paroo" points="266,236,267,242,260,246,260,251,267,253,270,257,277,255,277,252,287,250,293,251,297,249,301,250,301,246,298,245,295,244,291,239,283,226,278,225,273,225,270,227,267,227,267,231,267,234" "(0);" tie="header=[Paroo Constituency] body=[Winner:ASHOK KUMAR SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="98"  id="Sahebganj" points="243,218,247,224,247,229,252,236,252,245,251,250,255,253,257,253,260,251,260,246,267,242,266,235,267,234,267,227,264,223,265,221,261,212,263,207,266,200,263,200,264,198,262,199,260,199,260,198,254,199,246,200,242,206,241,211,241,213,245,216,243,217" "(0);" tie="header=[Sahebgan Constituency] body=[Winner:RAJU KUMAR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="99"  id="Baikunthpur" points="205,206,211,210,212,215,221,216,226,220,243,217,245,216,241,213,240,211,233,206,232,206,228,200,222,195,214,182,214,183,206,178,198,182,204,183,203,187,202,191,200,195,203,203" "(0);" tie="header=[Baikunthpur Constituency] body=[Winner:MANJEET KUMAR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="100"  id="Barauli" points="179,179,187,175,191,174,194,174,198,182,204,183,202,191,201,196,203,203,203,203,196,202,192,203,191,201,188,198,184,200,177,196,174,194,175,188,177,184,173,184,174,182,178,181" "(0);" tie="header=[Barauli Constituency] body=[Winner:RAM PRAVESH RAI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="101"  id="Gopalganj" points="152,174,159,174,165,174,170,171,174,169,170,165,170,159,174,154,177,152,183,155,182,157,187,166,191,174,187,175,178,179,178,181,173,183,173,184,176,184,175,188,173,194,165,194,164,192,163,189,163,185,155,184,152,185,150,181,149,177,151,176" "(0);" tie="header=[Gopalganj Constituency] body=[Winner:SUBAS SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="102"  id="Kuchaikote" points="139,174,141,171,149,173,152,173,152,174,166,174,173,169,169,165,170,159,174,154,172,151,164,154,159,153,153,155,150,156,143,153,134,152,132,153,129,156,131,168,134,169,134,172" "(0);" tie="header=[Kuchaikote Constituency] body=[Winner:AMRENDRA KUMAR PANDEY <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="103"  id="Bhorey (SC)" points="136,182,137,188,137,193,122,192,113,184,114,181,110,181,110,184,97,182,97,173,97,170,102,169,104,173,107,171,107,168,112,169,119,167,120,161,124,156,124,150,134,151,133,153,129,156,130,163,131,167,134,169,134,172,139,174,139,177,138,181" "(0);" tie="header=[Bhorey(SC) Constituency] body=[Winner:IDRADEO MAJHI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="104"  id="Hathua" points="140,197,149,204,158,201,165,207,165,194,163,190,163,184,152,185,149,176,151,176,152,173,146,172,141,171,139,174,139,178,137,181,136,182,137,189,137,194" "(0);" tie="header=[Hathua Constituency] body=[Winner:RAM SEWAK SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="105"  id="Siwan" points="148,216,150,210,155,207,158,203,158,201,165,207,165,193,174,194,174,196,174,198,173,201,176,204,171,206,170,210,167,213,164,215,167,221,160,219,157,220,154,221" "(0);" title=""/>
+
+<polygon shape="poly" alt="106"  id="Ziradei" points="134,213,128,213,128,219,133,222,139,223,142,234,149,234,157,231,157,227,154,224,154,221,148,216,150,210,155,207,158,202,158,201,149,204,137,194,137,196,136,201,139,204,138,211" "(0);" tie="header=[Ziradei Constituency] body=[Winner:ASHA DEVI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="107"  id="Darauli (SC)" points="126,238,135,249,137,251,137,256,143,256,145,250,147,246,147,241,153,241,157,236,159,233,157,231,149,234,142,233,139,223,133,222,128,219,128,216,128,216,124,217,123,219,119,217,113,216,116,220,116,223,112,224,115,228,117,228,117,232,120,233,119,239" "(0);" tie="header=[Darauli(SC) Constituency] body=[Winner:RAMAYAN MANJHI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="108"  id="Raghunathpur" points="167,238,161,238,160,234,167,234,169,232,171,221,166,220,159,219,154,221,154,224,157,227,157,231,159,233,152,242,147,241,147,246,143,255,149,258,155,262,157,263,165,262,163,259,165,257,165,253,160,252,163,245,166,242,168,239" "(0);" tie="header=[Raghunathpur Constituency] body=[Winner:VIKRAM KUNWAR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="109"  id="Daraundha" points="177,232,172,233,168,232,167,234,160,234,161,237,168,239,164,244,160,252,165,253,165,257,163,259,165,262,174,265,176,272,180,272,182,267,178,261,177,254,172,250,175,249,184,250,186,248,191,248,192,247,192,245,193,242,192,239,196,240,198,237,192,236,189,233,187,239,184,239,184,235,186,233,184,229,178,228,178,232,176,232,176,232,176,232,178,232,176,232" "(0);" tie="header=[Daraundha Constituency] body=[Winner:JAGMATO DEVI <br />Party:JDU]"/>
+<polygon shape="poly" alt="110"  id="Barharia" points="185,215,185,222,179,222,177,225,176,229,177,228,178,229,178,231,172,233,169,232,171,221,167,221,164,215,170,210,171,206,175,204,173,201,174,198,174,194,184,200,188,198,192,203,191,205,191,209,188,213" "(0);" tie="header=[Barharia Constituency] body=[Winner:SHYAM BAHADUR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="111"  id="Goriakothi" points="194,227,204,225,208,223,210,228,214,225,223,225,226,225,226,220,220,216,212,215,211,210,207,208,203,203,196,202,192,203,191,209,186,214,185,223,188,224,191,223,193,227,195,227,193,227" "(0);" tie="header=[Goriakothi Constituency] body=[Winner:BHUMENDRA NARAYAN SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="112"  id="Maharajganj" points="203,239,201,242,199,242,198,247,193,249,192,247,193,242,193,239,196,240,198,236,193,236,189,233,188,239,184,239,185,235,186,233,183,229,179,228,177,228,178,223,180,222,185,222,185,223,191,223,194,227,203,225,208,224,211,228,214,225,223,225,223,228,217,236,214,241,207,241" "(0);" tie="header=[Maharajganj Constituency] body=[Winner:DAMODAR SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="113"  id="Ekma" points="200,260,195,262,196,265,188,266,185,271,183,272,179,272,181,272,182,267,179,262,178,261,177,254,172,250,176,249,184,250,186,248,190,248,192,247,193,250,198,247,199,242,201,242,203,239,207,241,210,242,212,248,209,251,204,251,202,254,203,257,203,260" "(0);" tie="header=[Ekma Constituency] body=[Winner:MANORANJAN SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="114"  id="Manjhi" points="201,284,203,278,209,282,216,282,216,279,221,279,221,277,218,274,220,266,218,263,210,262,210,254,207,251,204,251,202,254,203,258,203,260,198,261,194,262,196,265,188,266,184,272,185,273,192,274,192,276,190,276,190,281,194,280,198,282" "(0);" tie="header=[Manjhi Constituency] body=[Winner:GAUTAM SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="115"  id="Baniapur" points="234,226,232,233,234,237,228,243,225,245,224,248,230,255,227,258,225,257,224,261,220,263,216,263,210,262,210,254,207,251,209,251,212,248,210,243,208,241,214,241,223,228,223,225,226,225,226,220,234,219,234,224" "(0);" tie="header=[Baniapur Constituency] body=[Winner:KEDAR NATH SINGH
+ <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="116"  id="Taraiya" points="237,256,245,254,248,254,251,250,252,240,252,236,248,229,247,224,243,217,233,219,234,225,232,233,234,237,224,246,225,248,230,255,233,255" "(0);" tie="header=[Taraiya Constituency] body=[Winner:JANAK SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="117"  id="Marhaura" points="238,274,233,275,230,279,224,277,221,278,218,273,220,266,218,263,222,263,224,260,225,257,227,258,230,255,238,256,246,254,247,254,249,257,248,259,242,260,239,261,240,267,240,271,240,273" "(0);" tie="header=[Marhaura Constituency] body=[Winner:JITENDRA KUMAR RAI <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="118"  id="Chapra" points="206,298,206,302,215,301,223,301,226,301,226,294,227,288,224,280,222,278,220,279,216,279,216,282,209,282,203,278,201,284,205,287,205,291,202,291,202,293,207,295" "(0);" tie="header=[Chapra Constituency] body=[Winner:JANARDAN SINGH SIGRIWAL <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="119"  id="Garkha (SC)" points="232,303,235,306,239,305,240,299,246,300,248,294,248,291,251,290,253,290,255,285,251,278,244,280,240,276,238,274,232,275,230,279,224,277,221,278,224,280,227,288,226,296,226,301,227,304" "(0);" tie="header=[Garkha(SC) Constituency] body=[Winner:GYAN CHAND MANJHI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="120"  id="Amnour" points="261,270,260,274,251,273,250,278,243,280,238,274,240,273,239,261,244,260,248,259,249,257,247,254,251,250,255,253,257,253,260,251,267,253,270,257,271,260,265,264,261,263,262,268" "(0);" tie="header=[Amnour Constituency] body=[Winner:KRISHANA KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="121"  id="Parsa" points="257,293,265,293,263,288,266,287,275,287,280,289,283,289,287,287,286,282,280,275,275,273,276,266,267,263,265,264,261,263,262,267,260,274,251,273,250,278,255,284,253,290,255,292" "(0);" tie="header=[Parsa Constituency] body=[Winner:CHHOTELAL RAI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="122"  id="Sonepur" points="288,299,286,289,286,287,283,289,280,289,275,287,265,287,263,288,265,293,259,293,259,295,260,297,266,296,269,299,272,299,276,303,275,305,275,308,279,312,284,314,288,313,289,309,289,302" "(0);" tie="header=[Sonepur Constituency] body=[Winner:VINAY KUMAR SINGH <br />Party:BJP]"/>
+
+
+<polygon shape="poly" alt="123"  id="Hajipur" points="298,288,290,285,286,287,287,293,289,301,290,306,291,307,298,307,299,307,300,300,306,304,308,305,311,298,305,292,302,290" "(0);" tie="header=[Hajipur Constituency] body=[Winner:NITYANAND ROY <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="124"  id="Lalganj" points="310,286,305,285,302,287,304,289,302,290,293,286,290,285,286,287,286,283,282,277,279,274,275,273,276,267,279,267,286,266,290,268,292,265,298,265,301,262,303,267,309,273,308,277,307,279,311,280,312,283,317,284,316,287,314,289,312,288,310,287" "(0);" tie="header=[Lalganj Constituency] body=[Winner:ANNU SHUKLA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="125"  id="Vaishali" points="314,267,317,270,321,270,321,271,315,273,314,277,311,280,307,279,309,273,303,267,300,262,298,265,292,265,290,268,286,266,277,267,276,266,266,263,271,260,270,257,277,255,277,252,287,250,293,251,298,249,301,250,303,254,303,259,306,260,313,261,316,263,315,265" "(0);" tie="header=[Vaishali Constituency] body=[Winner:BRISHIN PATEL <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="126"  id="Mahua" points="327,267,331,271,332,278,332,286,330,290,323,288,323,294,318,295,314,290,314,288,315,288,317,284,312,283,311,280,314,277,315,273,321,271,321,270,317,270,314,267,316,263,323,261,326,264,327,268" "(0);" tie="header=[Mahua Constituency] body=[Winner:RAVINDRA RAY <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="128"  id="Raghopur" points="314,315,318,316,318,323,325,320,330,322,334,322,336,326,327,331,324,332,314,332,309,332,304,326,302,321,302,316,303,312,300,307,300,305,300,301,309,305,311,298,313,299,315,306,318,305,319,305,319,308,314,313,313,315" "(0);" tie="header=[Raghopur Constituency] body=[Winner:SATISH KUMAR
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="127"  id="Raja Pakar (SC)" points="321,298,318,295,314,289,309,286,304,285,302,288,304,289,302,290,311,298,313,299,315,306,319,305,318,309,313,314,318,316,318,322,325,320,331,322,334,319,332,316,336,311,333,305,339,301,334,299,331,302,326,300,323,300" "(0);" tie="header=[Raja Pakar(SC) Constituency] body=[Winner:SANJAY KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="129"  id="Mahnar" points="352,289,350,299,344,305,341,317,344,323,341,326,336,326,333,322,332,322,334,319,332,316,336,311,333,304,334,304,339,301,334,299,331,302,326,300,323,300,318,295,323,294,323,288,330,290,331,291,336,291,341,291,346,291" "(0);" tie="header=[Mahnar Constituency] body=[Winner:DR. ACHYUATANAND
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="130"  id="Patepur (SC)" points="354,267,350,273,350,281,353,283,353,288,351,290,346,291,331,291,330,290,332,286,332,278,331,270,326,266,327,264,331,262,334,264,336,265,354,263,355,263,355,265" "(0);" tie="header=[Patepur(SC) Constituency] body=[Winner:MAHENDRA BAITHA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="131"  id="Kalyanpur (SC)" points="366,254,364,259,367,266,367,268,361,270,355,268,354,267,355,264,355,262,353,256,355,252,355,249,357,248,366,238,368,243,369,243,385,244,388,244,390,252,390,254,386,257,381,256,382,261,379,265,378,268,375,268,374,263,369,261,372,258,372,255,369,255" "(0);" tie="header=[Kalyanpur(SC) Constituency] body=[Winner:RAMSEWAK HAZARI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="132"  id="Warisnagar" points="393,272,394,280,397,283,400,283,405,286,407,279,409,276,412,276,417,271,413,268,416,267,420,267,420,264,419,263,409,258,399,256,390,252,389,254,390,255,386,257,381,256,382,261,377,268,384,271,390,272" "(0);" tie="header=[Warisnagar Constituency] body=[Winner:ASHOK KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="133"  id="Samastipur" points="370,277,373,282,378,282,379,277,385,276,388,278,392,278,393,278,393,272,388,272,383,271,377,268,375,268,374,263,369,261,372,258,372,255,369,255,366,254,364,259,367,266,367,268,360,270,360,272,361,278,365,277,369,277" "(0);" tie="header=[Samastipur Constituency] body=[Winner:AKHTARUL ISLAM SAHIN <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="134"  id="Ujiarpur" points="383,296,386,302,387,306,384,312,378,309,374,304,371,303,374,300,373,294,374,288,375,284,376,282,378,282,380,277,385,275,388,279,394,277,394,280,397,283,399,284,395,290,392,290,386,293" "(0);" tie="header=[Ujiarpur Constituency] body=[Winner:DURGA PRASAD SINGH <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="135"  id="Morwa" points="359,287,365,293,364,295,359,295,360,303,361,309,355,313,352,314,347,312,344,308,343,307,344,305,350,299,352,289,353,287,353,282,350,280,350,273,354,267,360,270,361,278,366,277,370,277,361,278,364,279,366,282,360,286,359,286" "(0);" tie="header=[Morwa Constituency] body=[Winner:BAIDHNATH SAHANI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="136"  id="Sarairanjan" points="374,320,371,316,367,315,367,308,360,307,359,295,364,295,365,293,359,286,366,283,363,279,361,278,370,277,373,282,375,282,373,294,374,300,371,303,375,304,378,309,384,312,387,314,388,316,386,319,378,318,375,318" "(0);" tie="header=[Sarairanjan Constituency] body=[Winner:VIJAY KUMAR CHAUDHARY <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="137"  id="Mohiuddinnagar" points="351,335,354,339,357,340,359,333,362,335,366,333,371,328,374,324,374,320,370,316,367,315,366,308,361,308,361,310,351,314,347,311,343,308,341,318,344,323,342,326,340,329,344,333,343,335,349,335" "(0);" tie="header=[MohiuddinnagarConstituency] body=[Winner:RANA GANGESHWAR SINGH
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="138"  id="Bibhutipur" points="396,307,402,307,411,312,413,310,411,300,413,297,412,294,412,290,406,289,405,288,405,286,400,283,398,285,395,290,391,290,385,294,383,296,387,303,387,306,390,306,393,306,393,307" "(0);" tie="header=[Bibhutipur Constituency] body=[Winner:RAM BALAK SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="139"  id="Rosera (SC)" points="420,292,423,289,422,282,425,280,430,277,433,275,435,275,438,279,438,281,441,281,443,281,443,265,436,264,429,259,425,265,421,264,420,266,413,268,417,271,411,277,409,276,406,283,405,289,411,290,412,293,419,293" "(0);" tie="header=[Rosera(SC) Constituency] body=[Winner:MANJU HAJARI
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="140"  id="Hasanpur" points="433,295,437,304,445,305,451,308,454,303,458,303,465,296,467,293,463,290,458,289,453,286,450,288,443,284,443,281,438,281,438,278,435,275,433,275,421,282,424,289,427,286,429,286,429,290,430,294" "(0);" tie="header=[Hasanpur Constituency] body=[Winner:RAJ KUMAR RAY <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="141"  id="Cheria Bariarpur" points="436,322,431,324,424,320,421,317,417,316,413,312,412,311,413,310,411,300,413,297,412,293,418,293,419,293,424,288,425,288,428,286,430,294,427,294,432,304,434,311,436,314,440,317,441,320,441,322" "(0);" tie="header=[Cheria Bariarpur Constituency] body=[Winner:KUMARI MANJU VERMA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="142"  id="Bachhwara" points="393,330,395,324,400,326,401,328,409,327,414,326,415,324,415,321,419,318,420,317,417,316,412,311,410,313,402,307,393,307,392,306,387,306,384,313,386,314,388,316,386,319,375,318,374,319,375,322,376,323,382,323,386,327,390,330" "(0);" tie="header=[Bachhwara Constituency] body=[Winner:ABDHESH KUMAR RAI <br />Party:CPI]"/>
+
+<polygon shape="poly" alt="143"  id="Teghra" points="402,346,413,352,414,352,415,347,417,339,416,334,417,329,417,326,421,325,422,320,421,317,415,322,414,326,401,328,399,325,395,324,393,330,393,333,393,339,392,343,396,345,399,344,401,346" "(0);" tie="header=[Teghra Constituency] body=[Winner:LALAN KU. <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="144"  id="Matihani" points="426,345,432,345,433,342,438,347,439,343,447,343,447,349,451,351,448,359,450,365,443,370,437,369,435,367,432,363,425,362,420,357,420,355,417,349,415,347,418,338,420,339,424,335,429,335,432,335,432,339,426,344" "(0);" tie="header=[Matihani Constituency] body=[Winner:NARENDRA KUMAR SINGH URF BOGO SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="145"  id="Sahebpur Kamal" points="451,334,452,339,447,343,447,349,451,351,448,359,450,364,454,364,455,361,459,357,467,350,473,346,474,345,479,346,481,345,485,340,478,337,474,331,472,329,468,329,466,331,463,332,460,336,458,338,456,335" "(0);" tie="header=[Sahebpur Kamal Constituency] body=[Winner:PARVEEN AMANULLAH
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="146"  id="Begusarai" points="444,330,441,328,435,327,430,325,431,324,421,318,422,322,421,325,417,326,416,332,417,338,417,340,418,338,420,338,424,335,431,335,432,336,431,340,426,345,432,345,433,343,438,347,439,343,447,343,452,339,451,334,447,333" "(0);" tie="header=[Begusarai Constituency] body=[Winner:SURENDRA MEHTA
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="147"  id="Bakhri (SC)" points="454,322,461,330,462,332,462,333,458,338,456,336,450,334,445,333,441,328,434,327,431,325,431,324,438,322,441,322,440,317,434,312,432,307,433,307,427,294,431,294,433,295,437,304,445,305,451,308,452,307,451,313,453,315,457,313,457,316,453,320" "(0);" tie="header=[Bakhri(SC) Constituency] body=[Winner:RAMANAND RAM <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="148"  id="Alauli (SC)" points="473,314,472,315,471,322,466,325,466,331,463,332,460,330,455,323,453,319,457,316,457,313,452,315,451,313,452,307,454,303,458,303,467,293,470,293,473,295,478,298,483,310,484,310,484,313,480,317,479,320,474,319,474,314" "(0);" tie="header=[Alauli(SC) Constituency] body=[Winner:RAM CHANDRA SADA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="149"  id="Khagaria" points="495,330,491,330,485,340,478,337,473,329,468,329,466,331,466,325,471,322,472,314,473,314,474,319,480,320,480,317,484,313,484,310,495,312,497,317,498,319,504,320,511,327,506,328,497,329" "(0);" tie="header=[Khagaria Constituency] body=[Winner:POONAM DEVI YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="150"  id="Beldaur" points="510,335,512,341,517,340,521,338,522,343,527,341,528,340,532,342,534,335,533,334,531,335,531,332,534,328,535,314,534,310,529,304,524,307,521,306,517,301,513,305,512,304,509,308,507,306,498,309,495,312,498,319,504,320,511,327,505,328,497,329,495,330,500,339,504,339,506,333,509,333" "(0);" tie="header=[Beldaur Constituency] body=[Winner:PANNALAL SINGH PATEL <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="151"  id="Parbatta" points="506,347,505,353,507,359,507,365,520,367,525,364,529,355,539,349,536,344,532,342,528,340,522,343,521,338,515,341,511,341,509,334,506,333,503,339,500,338,503,343,506,346" "(0);" tie="header=[Parbatta Constituency] body=[Winner:SAMRAT CHOUDHARY ALIAS RAKESH KUMAR <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="152"  id="Bihpur" points="562,334,567,338,567,340,564,342,566,348,562,350,564,356,566,358,567,361,558,358,544,359,540,362,536,360,534,361,534,364,530,363,526,363,525,363,529,355,539,349,536,344,532,342,534,335,533,334,543,332,548,328,555,331,561,330,563,333" "(0);" tie="header=[Bihpur Constituency] body=[Winner:KUMAR SHAILENDRA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="153"  id="Gopalpur" points="598,350,599,359,592,365,589,364,586,367,584,370,581,366,577,363,570,362,567,361,565,357,563,355,562,349,566,348,564,342,567,340,567,338,562,334,562,333,562,330,567,331,569,329,572,334,577,336,593,332,589,335,592,343,595,345,600,344,601,344,602,345" "(0);" tie="header=[Gopalpur Constituency] body=[Winner:NARENDRA KUMAR NIRAJ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="154"  id="Pirpainti (SC)" points="600,371,601,374,598,377,599,379,606,378,606,380,608,379,608,369,615,371,620,367,630,373,633,363,634,360,632,355,640,359,641,351,633,345,625,345,612,337,601,344,601,344,601,346,598,350,599,359,594,363,593,365,600,363,600,366,600,370" "(0);" tie="header=[Pirpainti(SC)Constituency] body=[Winner:AMAN KUMAR  <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="155"  id="Kahalgaon" points="563,389,564,386,560,383,564,378,558,373,558,371,562,369,567,374,570,379,572,381,577,379,578,376,576,373,579,371,584,371,585,369,589,364,592,365,595,365,600,363,600,374,599,378,599,378,605,378,606,380,605,390,599,388,593,393,587,396,584,395,577,392,570,391,566,391,564,390" "(0);" tie="header=[Kahalgaon Constituency] body=[Winner:SADANAND SINGH <br />Party:INC]"/>
+
+<polygon shape="poly" alt="156"  id="Bhagalpur" points="547,369,556,371,557,373,558,371,562,369,562,365,561,362,549,362,549,366" "(0);" tie="header=[Bhagalpur Constituency] body=[Winner:ASHWINI KUMAR CHOUBEY <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="157"  id="Sultanganj" points="519,378,513,388,514,392,531,391,541,391,552,392,550,383,549,380,544,377,542,375,541,371,542,367,538,363,540,362,536,360,534,361,533,364,525,363,519,367,516,369,507,370,509,376,513,376,516,378" "(0);" tie="header=[Sultanganj Constituency] body=[Winner:SUBODH RAI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="158"  id="Nathnagar" points="556,391,564,390,563,389,564,386,560,383,564,378,558,373,558,372,557,373,556,371,546,369,547,369,549,366,549,362,561,362,562,369,567,374,571,381,572,381,577,379,578,376,576,373,579,371,584,371,584,369,577,363,566,361,559,358,543,359,540,362,538,362,542,367,541,371,542,376,549,380,551,387,552,392" "(0);" tie="header=[Nathnagar Constituency] body=[Winner:AJAI KUMAR MANDAL <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="159"  id="Amarpur" points="525,404,522,411,510,412,511,407,510,399,512,394,514,392,538,391,553,392,555,397,551,410,551,417,547,418,543,415,542,411,540,409,538,410,536,406,538,402,533,399,528,403" "(0);" tie="header=[Amarpur Constituency] body=[Winner:JANARDAN MANJHI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="160"  id="Dhauraiya (SC)" points="566,415,569,426,576,426,578,430,584,429,585,424,584,421,584,416,583,406,583,403,586,400,587,396,576,392,565,391,563,390,552,392,555,397,551,409,551,413,552,414,555,413,560,416,565,414" "(0);" tie="header=[Dhauraiya(SC) Constituency] body=[Winner:MANISH KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="161"  id="Banka" points="534,424,536,427,529,430,531,438,531,443,539,443,543,444,552,447,554,438,562,435,569,432,569,438,574,438,574,435,577,435,578,430,576,426,569,426,566,414,564,414,560,416,555,413,551,415,551,417,546,418,543,414,541,413,537,418,535,422,533,423" "(0);" tie="header=[Banka Constituency] body=[Winner:JAVED IQBAL ANSARI  <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="162"  id="Katoria (ST)" points="517,439,519,448,515,451,515,459,518,462,518,466,523,465,524,467,527,471,532,470,535,475,535,478,540,478,542,481,545,477,551,483,550,473,555,466,563,468,571,471,572,459,575,451,574,447,576,442,577,440,573,438,569,438,569,432,554,438,552,447,539,443,531,443,531,443,531,438,529,430,529,427,522,433,520,438" "(0);" tie="header=[Katoria(ST) Constituency] body=[Winner:SONELAL HEMBRAM <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="163"  id="Belhar" points="491,427,493,437,492,443,487,447,494,447,499,460,504,464,506,469,506,474,512,480,519,478,525,476,527,472,523,465,518,466,518,461,514,459,515,451,519,448,517,439,520,438,522,433,529,427,529,430,536,427,534,423,534,422,540,414,542,413,541,409,538,410,537,406,538,402,533,399,526,404,524,406,522,412,511,412,507,413,502,417,497,418,491,413,485,413,487,421,486,425" "(0);" tie="header=[Belhar Constituency] body=[Winner:GIRIDHARI YADAV <br >Party:JDU]"/>
+
+<polygon shape="poly" alt="164"  id="Tarapur" points="473,394,470,401,477,404,479,410,486,413,491,413,497,418,502,417,504,414,511,412,511,407,510,398,514,391,513,388,519,378,516,378,513,376,508,376,507,374,504,378,504,385,498,394,497,392,497,386,494,383,492,380,481,383,481,387,474,390" "(0);" tie="header=[Tarapur Constituency] body=[Winner:NEETA CHOUDHARY <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="165"  id="Munger" points="495,355,495,360,489,360,489,367,493,365,496,367,502,373,504,375,504,377,507,374,509,376,507,370,517,369,519,366,507,365,507,359,505,353,506,346,502,343,500,339,495,330,491,330,484,341,480,346,473,345,454,362,454,364,463,363,467,359,474,353,479,350,479,354,483,354,483,351,487,351,489,355,494,355" "(0);" tie="header=[Munger Constituency] body=[Winner:ANANT KUMAR SATYARTHY <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="166"  id="Jamalpur" points="468,371,465,387,474,388,474,391,481,387,481,383,492,380,495,384,498,387,497,393,498,394,504,385,504,377,504,375,493,365,489,367,489,360,495,360,495,354,489,355,486,351,483,351,483,354,479,354,479,350,472,355,463,363,464,365,465,369" "(0);" tie="header=[Jamalpur Constituency] body=[Winner:SHAILESH KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="167"  id="Suryagarha" points="459,393,458,399,453,399,449,403,449,411,446,414,443,408,435,404,433,396,430,393,424,391,428,382,425,373,432,367,436,368,443,370,449,364,463,363,465,369,468,371,465,388" "(0);" tie="header=[Suryagarha Constituency] body=[Winner:PREM RANJAN PATEL <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="168"  id="Lakhisarai" points="403,376,406,382,412,377,413,383,405,393,408,402,410,413,413,415,425,416,432,415,433,408,435,404,432,395,430,393,424,390,428,382,425,373,432,367,435,368,432,363,425,362,420,357,418,357,414,362,410,362,402,361,397,366,396,368,401,374" "(0);" tie="header=[Lakhisarai Constituency] body=[Winner:VIJAY KUMAR SINHA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="169"  id="Sheikhpura" points="389,378,391,382,390,388,378,397,378,412,374,412,382,417,385,414,390,414,397,411,405,412,407,415,409,412,410,412,405,393,413,383,412,377,406,382,403,375,400,374,395,377,391,374,387,377,386,378" "(0);" tie="header=[Sheikhpura Constituency] body=[Winner:RANDHIR KUMAR SONI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="170"  id="Barbigha" points="369,381,365,390,363,394,366,396,369,399,375,396,378,398,378,396,390,388,390,382,389,378,387,378,381,376,379,372,373,371,370,369,370,374,370,377" "(0);" tie="header=[Barbigha Constituency] body=[Winner:GAJANAND SHAHI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="171"  id="Asthawan" points="349,377,355,372,358,370,357,364,360,360,367,355,371,357,376,361,382,364,386,366,396,368,402,375,400,374,395,377,391,374,386,378,381,376,379,372,370,369,370,377,364,392,363,394,359,397,356,392,357,387,350,382,348,380,348,377" "(0);" tie="header=[Asthawan Constituency] body=[Winner:JITENDRA KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="172"  id="Biharsharif" points="338,368,337,359,342,360,353,361,357,364,358,370,348,377,345,376,341,385,339,385,336,381,339,371" "(0);" tie="header=[Biharsharif Constituency] body=[Winner:DR. SUNIL KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="173"  id="Rajgir (SC)" points="321,399,328,395,333,392,340,388,340,385,341,385,345,376,348,377,348,381,357,387,356,393,359,397,353,396,349,404,346,410,342,416,339,413,320,421,318,416,321,413,322,409,327,406,326,403" "(0);" tie="header=[Rajgir(SC) Constituency] body=[Winner:SATYADEO NARAIN ARYA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="174"  id="Islampur" points="299,371,306,375,306,377,310,381,307,385,311,387,312,394,313,396,305,411,300,413,297,408,291,410,292,406,290,404,292,399,287,399,290,390,286,386,287,379,286,377,290,374,292,373,290,369" "(0);" tie="header=[Islampur Constituency] body=[Winner:RAJIB RANJAN <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="175"  id="Hilsa" points="290,354,289,363,288,369,290,369,299,371,306,375,307,378,310,382,307,385,310,387,318,382,322,377,320,373,325,371,326,366,319,364,315,364,312,359,309,356,308,359,305,355,307,349,296,349,296,346,290,350,289,352" "(0);" tie="header=[Hilsa Constituency] body=[Winner:USHA SINHA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="176"  id="Nalanda" points="310,412,312,413,316,412,318,415,318,415,321,413,322,409,327,406,325,402,321,399,340,388,340,385,336,381,339,371,337,362,332,365,326,367,325,371,320,373,322,377,318,382,312,386,311,387,313,396,305,410,306,411" "(0);" tie="header=[Nalanda Constituency] body=[Winner:SHRAWON KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="177"  id="Harnaut" points="315,348,317,345,321,345,321,341,329,341,335,342,342,346,348,346,350,351,353,351,356,357,359,361,357,364,352,361,337,359,337,362,326,367,319,364,315,364,311,358,309,356,308,359,305,355,307,349,309,349" "(0);" tie="header=[Harnaut Constituency] body=[Winner:HARINARAYAN SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="178"  id="Mokama" points="373,342,370,349,374,356,373,359,386,366,395,368,396,367,402,361,415,362,418,357,420,357,420,354,416,348,415,347,414,352,403,347,401,346,399,344,396,346,393,343,392,342,393,338,393,330,390,330,382,323,376,323,374,320,374,324,370,328,369,330,374,328,373,334,377,337,383,338,380,341,376,342" "(0);" tie="header=[Mokama Constituency] body=[Winner:ANANT KUMAR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="179"  id="Barh" points="344,339,345,344,351,344,355,348,354,352,359,362,367,355,373,358,374,356,370,348,373,342,380,341,383,338,377,337,373,334,374,328,369,330,366,333,362,335,359,333,357,340,354,339,351,335,343,335" "(0);" tie="header=[Barh Constituency] body=[Winner:GYANENDRA KUMAR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="180"  id="Bakhtiarpur" points="302,343,303,339,307,337,308,341,313,341,309,336,310,332,324,332,336,326,341,326,341,327,340,329,344,333,342,335,343,335,346,344,351,344,355,348,354,352,350,351,348,346,341,346,334,342,321,341,321,345,317,345,315,348,306,349,296,349,296,346,297,344,298,341,300,341,300,344" "(0);" tie="header=[Bakhtiarpur Constituency] body=[Winner:ANIRUDDH KUMAR <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="181"  id="Digha" points="261,313,262,322,267,322,269,321,271,317,275,316,279,317,281,314,281,313,275,309,274,307,261,308,261,312" "(0);" tie="header=[Digha Constituency] body=[Winner:PUNAM DEVI <br />Party:JDU"/>
+
+<polygon shape="poly" alt="182"  id="Bankipur" points="289,315,292,316,299,319,302,315,303,312,301,308,300,306,299,307,291,307,289,305,289,309,288,313" "(0);" tie="header=[Bankipur Constituency] body=[Winner:NITIN NABIN <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="183"  id="Kumhrar" points="270,322,280,324,283,322,286,321,290,316,288,314,287,313,284,314,281,313,279,317,274,316,270,317,269,321,269,322" "(0);" tie="header=[Kumhrar Constituency] body=[Winner:ARUN KUMAR SINHA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="184"  id="Patna Sahib" points="288,323,301,324,303,324,302,321,302,315,298,320,299,319,292,316,290,315,290,317,287,320" "(0);" tie="header=[Patna Sahib Constituency] body=[Winner:NAND KISHORE YADAV <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="185"  id="Fatuha" points="287,336,292,339,288,348,289,351,296,346,298,341,300,341,301,343,302,342,304,338,307,337,308,341,313,341,309,336,310,332,308,331,303,324,288,323,287,320,280,324,281,329,281,334,284,336" "(0);" tie="header=[Fatuha Constituency] body=[Winner:DR. RAMANAND YADAV <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="186"  id="Danapur" points="248,300,258,299,259,303,258,306,259,309,261,308,275,307,276,303,272,298,268,299,265,296,260,297,259,293,253,291,252,290,248,290,248,295,247,300" "(0);" tie="header=[Danapur Constituency] body=[Winner:ASHA DEVI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="187"  id="Maner" points="235,311,233,324,236,328,236,330,242,333,247,326,253,324,258,325,262,322,261,308,260,309,258,305,259,302,258,299,246,300,240,299,239,305,234,306,235,309" "(0);" tie="header=[Maner Constituency] body=[Winner:BHAI VIRENDRA <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="188"  id="Phulwari (SC)" points="266,331,264,339,264,345,268,348,276,345,280,342,288,345,289,345,292,339,286,336,284,336,281,334,281,326,280,324,269,322,266,322,261,322,257,326,256,327,259,328,261,330,261,332,264,332,266,330" "(0);" tie="header=[Phulwari(SC) Constituency] body=[Winner:SHYAM RAJAK <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="189"  id="Masaurhi (SC)" points="252,354,253,347,255,348,264,345,268,349,269,348,280,342,288,345,289,352,290,360,288,366,283,365,277,369,269,370,264,372,265,369,263,364,258,368,251,371,248,368,250,363,252,359,251,356,252,353,251,354,251,355,251,355,251,356" "(0);" tie="header=[Masaurhi(SC) Constituency] body=[Winner:ARUN MANJHI<br />Party:JDU]"/>
+
+<polygon shape="poly" alt="190"  id="Paliganj" points="226,348,233,353,236,350,247,350,250,351,252,354,251,357,252,359,248,369,246,373,243,381,238,378,234,381,227,380,230,376,226,374,220,374,217,374,221,369,218,365,221,362" "(0);" tie="header=[Paliganj Constituency] body=[Winner:DR. USHA VIDYARTHI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="191"  id="Bikram" points="225,335,228,343,226,349,233,353,236,350,247,350,251,352,252,354,253,347,255,348,264,345,264,338,266,330,263,332,261,332,261,330,256,327,257,325,253,324,247,327,242,333,236,330,236,328,233,323,228,326,225,334" "(0);" tie="header=[Bikram Constituency] body=[Winner:ANIL KUMAR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="192"  id="Sandesh" points="199,335,196,337,199,347,200,346,203,342,207,342,206,346,210,347,211,352,214,358,221,362,226,348,228,343,225,334,228,326,233,323,230,319,229,318,222,321,219,325,217,331,208,328,206,323,198,321,189,322,186,323,190,327,194,329,200,329,199,334" "(0);" tie="header=[Sandesh Constituency] body=[Winner:SANJAY SINGH (TIGER) <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="193"  id="Barhara" points="195,306,195,296,203,297,206,299,206,302,214,301,226,301,227,304,231,303,235,306,234,306,235,310,233,324,228,318,222,321,218,321,215,319,220,315,216,313,210,313,207,311,203,311,197,314,198,319,198,320,197,321,189,322,190,314,190,311,189,311,192,306,188,311,189,307,192,304" "(0);" tie="header=[Barhara Constituency] body=[Winner:RAGHWENDRA PRATAP SINGH <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="194"  id="Arrah" points="207,323,207,325,208,328,217,331,219,325,221,321,218,321,215,319,220,315,216,313,211,313,207,311,202,311,197,314,198,318,198,321,206,323" "(0);" tie="header=[Arrah Constituency] body=[Winner:AMRENDRA PRATAP SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="195"  id="Agiaon (SC)" points="189,347,190,341,196,339,199,347,203,342,206,342,206,346,209,346,210,347,212,355,215,359,221,362,217,366,212,369,206,366,197,368,194,366,187,366,186,369,183,369,180,364,176,366,177,362,178,358,175,356,177,349,179,352,184,351,184,348,183,346,184,345,188,345" "(0);" tie="header=[Agiaon (SC) Constituency] body=[Winner:SHIVESH KUMAR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="196"  id="Tarari" points="162,370,162,385,170,387,177,387,182,391,188,386,194,383,202,381,209,378,213,369,213,368,211,369,206,366,197,368,194,366,187,366,186,369,183,369,180,364,176,366,175,365,171,367,168,363,165,370" "(0);" tie="header=[Tarari Constituency] body=[Winner:NARENDRA KUMAR PANDEY ALIAS SUNIL PANDEY
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="197"  id="Jagdishpur" points="166,340,164,347,158,349,158,354,156,355,155,362,155,365,162,366,162,371,162,370,165,370,168,363,171,368,175,365,176,365,178,358,175,356,177,349,179,352,184,351,183,345,188,345,189,347,190,341,197,339,196,337,199,335,200,329,194,329,188,328,179,328,178,330,172,332,167,331,163,333,163,336" "(0);" tie="header=[Jagdishpur Constituency] body=[Winner:DINESH KUMAR SINGH <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="198"  id="Shahpur" points="162,312,163,320,161,333,164,333,167,331,172,332,178,330,180,328,193,328,188,325,186,323,189,322,190,312,189,310,188,307,188,306,185,305,184,304,179,300,176,302,176,304,172,303,171,302,169,299,164,308,161,310,162,313" "(0);" tie="header=[Shahpur Constituency] body=[Winner:MUNNI DEVI
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="199"  id="Brahampur" points="147,320,150,322,147,331,146,337,137,334,143,342,145,349,139,349,139,357,146,359,150,361,155,359,156,355,158,354,158,349,164,347,166,340,163,336,163,333,161,333,163,321,162,314,161,310,164,308,169,299,170,296,162,296,161,306,158,309,148,309,144,309,141,313,141,316,145,320" "(0);" tie="header=[Brahampur Constituency] body=[Winner:DILMARNI DEVI <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="200"  id="Buxar" points="116,316,105,326,106,328,108,329,111,328,114,325,121,325,123,323,125,319,132,322,137,320,138,324,145,324,146,322,146,320,140,316,142,312,144,309,142,303,136,298,133,300,127,300,125,302,124,308,124,315,118,316" "(0);" tie="header=[Buxar Constituency] body=[Winner:PROF. SUKHADA PANDE
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="201"  id="Dumraon" points="124,335,127,332,127,329,126,324,123,324,122,324,125,319,132,322,137,320,138,324,145,324,146,320,147,321,150,322,147,332,146,337,137,334,137,335,143,342,145,349,139,349,139,356,130,360,120,358,119,356,111,357,110,357,109,350,106,348,103,350,99,345,98,342,102,340,104,338,108,338,114,335,115,335,116,337,119,335,122,334" "(0);" tie="header=[Dumraon Constituency] body=[Winner:DR. DAUD ALI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="202"  id="Rajpur (SC)" points="84,358,95,366,99,371,107,372,115,375,118,374,122,370,121,365,119,363,121,362,120,358,119,356,110,357,109,350,106,348,103,350,98,342,101,340,104,338,108,338,115,335,116,337,122,334,124,335,127,332,126,325,125,324,121,324,120,326,113,325,111,328,107,329,105,328,105,326,100,330,100,333,95,334,94,339,90,343,86,343,86,345,89,345,90,346,90,348,84,349,85,353,80,354,80,355,79,357,82,359" "(0);" tie="header=[Rajpur(SC) Constituency] body=[Winner:SANTOSH KUMAR NIRALA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="203"  id="Ramgarh" points="50,368,45,369,41,373,37,373,34,379,30,377,25,381,24,386,29,390,39,393,44,391,46,388,50,388,49,382,45,380,50,379,53,379,60,375,63,375,66,371,66,375,70,375,74,377,78,377,80,376,82,377,85,375,87,376,87,380,97,377,99,375,99,371,96,367,84,358,82,359,79,357,79,354,74,352,68,357,67,359,63,359,60,364,52,366" "(0);" tie="header=[Ramgarh Constituency] body=[Winner:AMBIKA SINGH <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="204"  id="Mohania (SC)" points="84,400,89,410,88,418,84,421,80,419,78,413,79,411,73,405,68,400,62,397,50,393,44,390,46,388,49,388,49,382,45,380,52,379,54,379,60,375,63,375,66,371,66,375,70,374,75,378,78,377,81,376,82,377,85,375,87,376,87,380,86,384,85,388,87,393,85,399" "(0);" tie="header=[Mohania(SC) Constituency] body=[Winner:CHHEDI PASWAN <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="205"  id="Bhabua" points="61,417,62,426,70,433,72,435,61,444,63,449,60,455,69,449,73,449,74,445,78,440,81,431,86,426,86,420,84,421,80,419,78,412,79,411,73,405,67,400,64,398,55,395,49,393,44,390,38,393,42,397,42,402,44,406,45,411,48,413,48,420,52,417,58,417" "(0);" tie="header=[Bhabua Constituency] body=[Winner:DR. PRAMOD KUMAR SINGH <br />Party:LJP]"/>
+
+<polygon shape="poly" alt="206"  id="Chainpur" points="19,426,19,437,22,444,25,450,25,456,31,459,33,462,38,462,39,468,44,472,40,475,41,478,44,478,48,481,44,485,44,492,43,494,53,495,62,494,65,491,70,493,77,489,77,479,74,475,80,465,83,460,81,453,73,449,69,449,60,455,63,449,61,444,72,435,62,426,61,417,52,417,48,420,48,413,45,411,42,402,42,397,38,392,29,390,23,386,18,388,18,395,19,401,15,410,14,415,14,417,17,418,18,422,16,425" "(0);" tie="header=[Chainpur Constituency] body=[Winner:BRIJ KISHOR VIND
+ <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="207"  id="Chenari (SC)" points="105,450,105,456,115,457,123,461,115,477,107,492,91,495,76,500,62,498,51,498,44,497,41,495,42,494,53,495,61,494,65,491,70,493,77,489,77,479,74,475,83,460,81,453,73,449,74,445,78,440,81,431,86,426,86,420,89,417,89,412,93,418,98,421,103,422,103,427,104,428,110,418,112,421,110,433,104,438,103,447" "(0);" tie="header=[Chenari(SC) Constituency] body=[Winner:SHYAM BIHARI RAM <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="208"  id="Sasaram" points="117,416,121,415,129,416,134,416,137,424,129,425,127,430,131,431,127,435,131,443,133,449,122,462,116,457,105,456,105,449,103,446,104,437,110,433,112,421,110,418,112,413,115,415" "(0);" tie="header=[Sasaram Constituency] body=[Winner:JAWAHAR PRASAD <br />Party:BJP]"/>
+
+
+<polygon shape="poly" alt="209"  id="Kargahar" points="114,380,116,388,124,388,117,402,120,414,120,415,116,416,112,413,109,420,104,428,103,427,103,422,97,421,92,417,89,412,89,410,84,400,87,393,85,387,87,380,97,377,99,375,99,371,108,372,115,375,116,377" "(0);" tie="header=[Kargahar Constituency] body=[Winner:RAM DHANI SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="210"  id="Dinara" points="137,374,138,385,134,395,132,397,124,393,122,392,124,388,116,388,114,381,116,377,115,375,118,374,122,370,121,365,119,362,121,362,120,358,130,360,139,357,150,361,155,359,155,365,162,366,162,371,156,375,147,377,141,375" "(0);" tie="header=[Dinara Constituency] body=[Winner:JAY KUMAR SINGH
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="211"  id="Nokha" points="145,407,143,414,136,414,134,416,120,415,117,402,122,392,132,397,136,399,143,399,146,400,148,397,149,400,157,403,161,405,163,407,168,403,175,392,180,394,180,397,177,404,160,415,157,421,153,417,153,412,150,408" "(0);" tie="header=[Nokha Constituency] body=[Winner:RAMESHWAR PRASAD <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="212"  id="Dehri" points="138,444,155,423,157,421,152,416,153,412,150,408,145,407,143,414,135,414,134,417,137,424,129,425,127,430,131,431,127,435,133,449" "(0);" tie="header=[Dehri Constituency] body=[Winner:JYOTI RASHMI <br />Party:IND]"/>
+
+<polygon shape="poly" alt="213"  id="Karakat" points="180,393,179,394,175,392,167,404,163,407,159,404,149,400,148,397,145,400,139,399,136,399,132,397,134,395,138,385,137,374,146,377,156,375,161,372,162,371,162,385,171,387,177,387,182,391,182,393" "(0);" tie="header=[Karakat Constituency] body=[Winner:RAJESHWAR RAJ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="214"  id="Arwal" points="187,401,195,400,198,400,206,403,211,400,214,395,211,392,214,388,215,383,219,380,220,377,217,376,217,374,221,369,218,365,213,369,209,378,199,382,193,383,182,391,182,393,180,394,183,398,184,402" "(0);" tie="header=[Arwal Constituency] body=[Winner:CHITRANJAN KUMAR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="215"  id="Kurtha" points="220,403,224,409,228,409,233,405,243,407,243,402,240,399,237,394,240,380,239,378,233,382,227,380,230,376,226,374,217,374,217,376,220,376,219,380,215,383,214,388,211,392,214,395,212,399,212,401" "(0);" tie="header=[Kurtha Constituency] body=[Winner:SATYADEV SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="216"  id="Jahanabad" points="250,393,249,403,247,407,243,407,243,401,238,397,237,393,240,379,243,381,248,368,252,371,260,367,263,364,265,369,264,372,264,376,263,378,266,380,261,387,257,394" "(0);" tie="header=[Jehanabad Constituency] body=[Winner:ABHIRAM SHARMA <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="217"  id="Ghosi" points="276,414,283,406,287,406,290,404,292,398,287,399,290,390,286,386,287,380,286,377,292,373,289,369,288,369,288,366,283,365,277,369,269,370,264,372,263,377,266,380,272,380,272,384,274,387,277,388,277,391,274,391,271,398,275,408" "(0);" tie="header=[Ghosi Constituency] body=[Winner:RAHUL KUMAR  <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="218"  id="Makhadumapur (SC)" points="254,418,263,414,269,411,272,415,275,417,277,413,274,407,271,397,274,391,277,391,277,388,274,387,272,383,272,380,266,380,257,394,250,393,249,403,249,407,252,407,253,416" "(0);" tie="header=[Makhdumpur(SC) Constituency] body=[Winner:JITAN RAM MANJHI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="219"  id="Goh" points="224,420,220,431,212,438,206,443,203,435,197,438,193,435,188,435,188,429,192,425,188,421,186,421,188,417,188,411,195,406,194,400,197,400,206,403,212,400,214,401,220,403,224,408,219,410,220,414,224,416,227,416,225,419" "(0);" tie="header=[Goh Constituency] body=[Winner:DR. RANVIJAY KUMAR
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="220"  id="Obra" points="166,428,166,432,160,433,163,442,170,441,172,445,173,442,179,440,188,435,188,429,192,425,188,421,185,421,188,417,188,411,195,406,194,400,184,402,183,398,180,394,180,397,177,404,159,416,157,422,156,423,155,423,161,423,163,423,163,427,166,427" "(0);" tie="header=[Obra Constituency] body=[Winner:SOMPRAKASH SINGH <br />Party:IND]"/>
+
+<polygon shape="poly" alt="221"  id="Nabinagar" points="162,451,162,442,161,440,162,440,160,434,166,432,166,427,163,427,163,423,154,423,146,434,133,449,122,462,116,476,123,483,126,490,130,488,132,491,135,491,134,488,138,485,137,478,141,478,139,473,139,468,147,465,151,465,155,463,158,465,161,466,162,458,164,452" "(0);" tie="header=[Nabinagar Constituency] body=[Winner:VIRENDRA KUMAR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="222"  id="Kutumba (SC)" points="160,489,164,499,164,501,170,499,175,490,175,488,178,490,179,484,177,481,172,480,171,470,161,466,155,463,151,466,146,465,139,468,139,474,141,478,137,478,138,486,134,488,135,492,131,491,130,488,125,490,128,495,128,500,131,503,135,501,136,499,136,494,138,494,138,498,142,498,141,493,144,491,147,493,149,491,153,495,157,489" "(0);" tie="header=[Kutumba(SC) Constituency] body=[Winner:LALAN RAM <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="223"  id="Aurangabad" points="187,494,182,493,182,489,178,487,179,484,177,481,172,480,171,470,161,466,162,457,164,452,162,451,162,442,161,440,163,440,163,442,170,441,172,445,173,442,180,440,186,436,190,439,189,444,192,451,189,452,188,460,184,468,186,472,182,474,185,478,189,478,189,486,189,494,186,494,186,494" "(0);" tie="header=[Aurangabad Constituency] body=[Winner:RAMADHAR SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="224"  id="Rafiganj" points="217,444,210,439,206,443,203,435,197,438,193,435,188,435,186,436,190,438,189,444,192,452,189,452,188,461,184,468,186,472,182,474,185,478,189,478,189,494,187,495,189,498,194,494,198,494,201,488,201,487,203,483,206,479,205,473,212,474,212,469,219,469,222,465,225,459,222,455,223,451,220,448,218,445" "(0);" tie="header=[Rafiganj Constituency] body=[Winner:ASHOK KUMAR SINGH <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="225"  id="Gurua" points="231,443,229,441,223,444,221,447,218,445,223,451,222,455,225,459,219,469,212,469,212,474,215,476,217,481,220,480,224,480,225,484,228,484,233,480,237,477,242,479,242,477,241,472,245,469,246,465,244,463,249,457,252,454,250,452,253,448,253,444,250,439,240,440,238,442" "(0);" tie="header=[Gurua Constituency] body=[Winner:SURENDRA PRASAD SINHA <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="226"  id="Sherghati" points="226,490,225,496,227,498,234,497,235,493,241,495,241,504,248,504,249,513,250,515,254,513,255,505,259,498,256,494,259,491,258,487,262,483,251,479,247,476,245,468,245,469,241,472,242,478,237,477,227,484,225,484,224,481,223,480,217,480,215,476,211,474,205,473,206,479,203,483,203,483,210,483,215,485,220,486,222,487" "(0);" tie="header=[Sherghati Constituency] body=[Winner:VINOD PRASAD YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="227"  id="Imamganj(SC)" points="191,533,195,522,195,518,201,518,200,513,203,513,216,515,219,505,227,502,227,498,225,496,226,490,221,486,213,485,210,483,203,483,201,488,198,494,194,494,188,498,187,495,189,494,182,493,182,489,178,487,178,490,175,488,175,490,170,499,163,501,159,504,164,509,166,513,166,517,176,517,177,520,180,527,185,525,187,531,190,534" "(0);" tie="header=[Imamganj(SC) Constituency] body=[Winner:UDAY NARAIN CHOUDHARY <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="228"  id="Barachatti (SC)" points="280,476,282,481,288,483,299,487,298,496,301,499,299,502,288,503,291,509,279,517,277,516,278,508,274,513,269,512,260,517,253,517,251,515,254,513,255,505,259,498,256,494,259,491,258,487,262,483,252,479,247,476,245,468,246,465,244,462,252,455,254,460,258,465,260,472,265,474,274,468" "(0);" tie="header=[Barachatti(SC) Constituency] body=[Winner:JYOTI DEVI <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="229"  id="Bodh Gaya (SC)" points="297,463,300,466,305,456,310,459,313,464,311,477,313,484,317,488,323,488,323,491,306,493,307,498,300,498,298,496,299,487,281,480,281,477,273,468,265,474,259,472,258,464,252,455,252,454,250,452,255,460,259,458,263,459,267,457,273,459,278,457,281,455,285,457,292,458" "(0);" tie="header=[Bodh Gaya(SC) Constituency] body=[Winner:SHYAM DEO PASWAN <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="230"  id="Gaya Town" points="266,443,269,449,266,458,260,457,254,456,255,452,258,448,259,446,262,446" "(0);" tie="header=[Gaya Town Constituency] body=[Winner:PREM KUMAR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="231"  id="Tikari" points="253,425,253,436,248,439,240,440,238,442,231,443,228,441,222,445,221,447,218,445,210,439,220,431,224,420,227,416,223,416,220,414,219,409,223,408,225,409,228,409,233,405,243,407,246,407,245,411,248,418,251,418,250,424" "(0);" tie="header=[Tikari Constituency] body=[Winner:DR. ANIL KUMAR
+ <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="232"  id="Belaganj" points="272,423,269,435,266,443,261,446,258,447,253,457,265,458,263,458,257,459,255,459,252,454,250,451,253,449,253,445,249,438,250,438,253,435,253,425,250,423,250,418,248,418,245,409,246,407,249,404,248,406,252,407,254,417,254,418,269,411,272,415,275,417,275,419" "(0);" tie="header=[Belaganj Constituency] body=[Winner:SURENDRA PRASAD YADAV <br />Party:RJD]"/>
+
+<polygon shape="poly" alt="234"  id="Wazirganj" points="281,438,290,438,290,441,295,439,301,434,310,441,310,448,305,456,300,466,291,458,284,457,281,455,272,459,266,457,269,449,266,443,270,434,274,434,276,437,279,435" "(0);" tie="header=[Wazirganj Constituency] body=[Winner:VIRENDRA SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="233"  id="Atri" points="320,429,313,437,309,440,301,434,294,439,290,441,290,438,281,438,279,435,276,437,273,434,269,434,272,425,275,419,275,416,278,412,283,406,288,406,290,404,292,407,291,410,297,408,301,413,305,411,313,413,316,412,319,416,318,417,320,421" "(0);" tie="header=[Atri Constituency] body=[Winner:KRISHNA NANDAN YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="235"  id="Rajauli (SC)" points="335,456,349,464,355,462,355,465,362,465,366,475,366,482,359,483,353,479,349,480,349,485,346,486,345,492,342,491,339,487,332,489,328,490,323,488,318,488,313,484,311,477,313,464,310,459,305,456,309,449,312,447,316,445,321,442,324,450,326,450,327,457,331,458,333,453" "(0);" tie="header=[Rajauli(SC) Constituency] body=[Winner:KANHAIYA KUMAR <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="236"  id="Hisua" points="353,435,354,446,351,449,354,454,353,459,354,462,349,464,335,456,333,453,331,458,327,457,326,449,324,450,321,442,314,446,309,448,310,441,310,439,314,436,317,432,322,432,334,430,337,436,348,436,351,434" "(0);" tie="header=[Hisua Constituency] body=[Winner:ANIL SINGH <br />Party:BJP]"/>
+
+<polygon shape="poly" alt="237"  id="Nawada" points="353,420,358,431,351,433,351,434,348,436,337,436,334,430,322,432,317,432,320,429,320,420,339,413,342,416,345,412,348,414,345,418,353,418" "(0);" tie="header=[Nawada Constituency] body=[Winner:PURNIMA YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="238"  id="Gobindpur" points="370,434,384,432,387,430,386,426,392,423,396,433,403,435,407,433,413,439,415,444,421,447,409,455,402,455,395,445,386,445,380,446,374,442,369,452,370,458,365,464,362,465,355,465,355,462,354,462,353,459,354,454,351,449,354,446,353,436,351,434,351,433,358,431,359,426,366,426,371,430" "(0);" tie="header=[Gobindpur Constituency] body=[Winner:KAUSHAL YADAV <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="239"  id="Warsaliganj" points="389,419,386,426,387,431,381,433,370,434,371,430,366,426,359,426,358,430,353,419,353,418,345,418,348,414,345,411,347,408,353,396,359,397,363,394,369,399,375,396,378,399,378,412,374,412,382,417,386,414,388,414" "(0);" tie="header=[Warsaliganj Constituency] body=[Winner:PRADIP KUMAR <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="240"  id="Sikandra (SC)" points="431,425,434,428,441,426,444,432,446,443,450,442,443,449,433,459,428,452,421,453,422,449,421,447,415,444,412,439,407,433,402,435,396,433,392,423,386,426,389,419,388,414,390,414,397,411,405,412,407,415,409,412,412,415,416,415,430,416,433,420,433,424" "(0);" tie="header=[Sikandra(SC) Constituency] body=[Winner:RAMESHWAR PASWAN <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="241"  id="Jamui" points="453,432,457,443,461,446,461,450,450,449,448,446,449,442,446,443,444,432,441,426,433,428,431,425,433,423,433,420,429,415,432,415,433,406,435,404,443,408,446,413,446,414,449,411,449,403,453,399,458,399,459,393,466,387,474,389,473,394,471,401,467,402,461,402,460,406,463,412,463,418,461,424,460,426,455,423,454,430" "(0);" tie="header=[Jamui Constituency] body=[Winner:AJAY PRATAP <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="242"  id="Jhajha" points="469,451,477,458,480,462,485,463,489,457,492,464,498,464,502,463,499,460,494,447,487,447,492,443,493,436,491,426,491,427,486,425,487,421,485,412,478,410,477,404,470,401,466,402,461,402,460,406,463,413,463,419,460,425,460,426,455,423,454,431,453,432,456,441,457,443,461,446,461,450,466,449" "(0) tie="header=[Jhajha Constituency] body=[Winner:DAMODAR RAWAT <br />Party:JDU]"/>
+
+<polygon shape="poly" alt="243"  id="Chakai" points="467,501,477,511,483,513,484,509,485,504,488,504,489,498,488,495,492,487,497,484,501,479,506,473,506,468,503,463,501,462,499,464,492,464,489,457,485,463,480,462,475,456,466,449,461,450,449,449,448,445,447,445,433,459,434,464,432,473,438,478,442,479,447,474,454,479,463,478,459,484,461,491,457,497,459,499,462,503" "(0);" tie="header=[Chakai Constituency] body=[Winner:SUMIT KUMAR SINGH <br />Party:JMM]"/>
+</g>
+</svg>
+</div>
+    </div>
+    </div>
+    </div>
+    </div>
+ <script>
+  
+
+d3.csv("Bihar.csv", function(data_set) {
+ 
+
+     console.log(data_set);
+
+    constituency_color = {}
+    Candidate = {}
+    PARTY ={}
+    percent_votes = {}
+    votes = {}
+    polled_votes = {}
+    constituency_list =[]
+     data_set.forEach(function(o) {
+      o.votes = parseInt(o.votes);
+      constituency_list.push(o.constituency)
+      votes[o.constituency] = o.votes;
+      constituency_color[o.constituency] = o.color
+      Candidate[o.constituency] = o.name
+      PARTY[o.constituency] = o.party
+          
+      });
+   
+
+function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+    
+
+    d3.selectAll("polygon").each(function(d, i){    
+    
+    console.log(d3.select(this).attr("id"));
+
+    if (PARTY[d3.select(this).attr("id")] !=undefined)
+    {    
+    d3.select(this).attr("data-title", 'Candidate : '+Candidate[d3.select(this).attr("id")]+'<br/> Party : '+PARTY[d3.select(this).attr("id")]+'<br/> Constituency : '+d3.select(this).attr("id")+'<br/> votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")]))
+    d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id"); })
+    d3.select(this).style("fill", constituency_color[d3.select(this).attr("id")] )
+    d3.select(this).style("stroke","#ddd")
+    d3.select(this).style("stroke-width", 2)
+    d3.select(this).attr("class", PARTY[d3.select(this).attr("id")])
+    
+    }
+    else{
+    d3.select(this).style("fill", '#fff' )
+    d3.select(this).style("stroke","#ddd")
+    d3.select(this).style("stroke-width", 2)
+    d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+'<br/>  Election Canceled ')
+    }
+    });
+    
+    var lastsearch = '';
+    var $box = {};
+    
+    function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function() {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp( "^" + search, "i" );
+          $('polygon', $chart).each(function(){
+              $(this).css('fill-opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+      });
+    }
+
+   add_search('.geo_search', '.bihar');
+
+     var Industry = constituency_list;
+    
+    $( ".geo_search" ).autocomplete({
+    source: function(req, responseFn) {
+        var re = $.ui.autocomplete.escapeRegex(req.term);
+        var matcher = new RegExp( "^" + re, "i" );
+        var a = $.grep( Industry, function(item,index){
+            return matcher.test(item);
+        });
+        responseFn( a );
+    }
+    });
+
+     $("polygon").tooltip({container: 'body', html: true, placement:'top'});
+      
+    });
+
+ </script>   
+</html>
