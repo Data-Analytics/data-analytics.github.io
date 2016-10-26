@@ -1,7 +1,7 @@
 party,constituency,name,margin,state,votes,color
-Janata Dal (United),Agiaon (SC),Prabhunath Prasad,14704,Bihar,52276,#594671
+Janata Dal (United),Agiaon,Prabhunath Prasad,14704,Bihar,52276,#594671
 Janata Dal (United),Alamnagar,Narendra Narayan Yadav,43876,Bihar,87962,#594671
-Rashtriya Janata Dal,Alauli (SC),Chandan Kumar,24470,Bihar,70519,#21610B
+Rashtriya Janata Dal,Alauli,Chandan Kumar,24470,Bihar,70519,#21610B
 Rashtriya Janata Dal,Alinagar,Abdul Bari Siddiqui,13460,Bihar,67461,#21610B
 Janata Dal (United),Amarpur,Janardan Manjhi,11773,Bihar,73707,#594671
 Bharatiya Janata Party,Amnour,Shatrudhan Tiwary,5251,Bihar,39134,#FB7B0D
@@ -21,14 +21,14 @@ Rashtriya Janata Dal,Bahadurpur,Bhola Yadav,16989,Bihar,71547,#21610B
 Bharatiya Janata Party,Baikunthpur,Mithilesh Tiwari,14115,Bihar,56162,#FB7B0D
 Rashtriya Janata Dal,Baisi,Abdus Subhan,38740,Bihar,67022,#21610B
 Janata Dal (United),Bajpatti,Dr. Ranju Geeta,16946,Bihar,67194,#594671
-Rashtriya Janata Dal,Bakhri (SC),Upendra Paswan,40256,Bihar,72632,#21610B
+Rashtriya Janata Dal,Bakhri,Upendra Paswan,40256,Bihar,72632,#21610B
 Bharatiya Janata Party,Bakhtiarpur,Ranvijay Singh,7902,Bihar,61496,#FB7B0D
 Communist Party of India (Marxist-Leninist) (Liberation),Balrampur,Mahboob Alam,20419,Bihar,62513,#DE0000
 Rashtriya Janata Dal,Baniapur,Kedar Nath Singh,15951,Bihar,69851,#21610B
 Bharatiya Janata Party,Banka,Ram Narayan Mandal,3730,Bihar,52379,#FB7B0D
 Bharatiya Janata Party,Bankipur,Nitin Naveen,39767,Bihar,86759,#FB7B0D
-Bharatiya Janata Party,Banmankhi (SC),Krishna Kumar Rishi,708,Bihar,59053,#FB7B0D
-Rashtriya Janata Dal,Barachatti (SC),Samta Devi,19126,Bihar,70909,#21610B
+Bharatiya Janata Party,Banmankhi,Krishna Kumar Rishi,708,Bihar,59053,#FB7B0D
+Rashtriya Janata Dal,Barachatti,Samta Devi,19126,Bihar,70909,#21610B
 Rashtriya Janata Dal,Barari,Neeraj Kumar,14336,Bihar,71175,#21610B
 Rashtriya Janata Dal,Barauli,Md Nematullah,504,Bihar,61690,#21610B
 Indian National Congress,Barbigha,Sudarshan Kumar,15717,Bihar,46406,#019733
@@ -36,7 +36,7 @@ Bharatiya Janata Party,Barh,Gyanendra Kumar Singh,8359,Bihar,63989,#FB7B0D
 Rashtriya Janata Dal,Barhara,Saroj Yadav,13308,Bihar,65001,#21610B
 Janata Dal (United),Barharia,Shyam Bahadur Singh,14583,Bihar,65168,#594671
 Rashtriya Janata Dal,Baruraj,Nand Kumar Rai,4909,Bihar,68011,#21610B
-Bharatiya Janata Party,Bathnaha (SC),Dinkar Ram,20166,Bihar,74763,#FB7B0D
+Bharatiya Janata Party,Bathnaha,Dinkar Ram,20166,Bihar,74763,#FB7B0D
 Indian National Congress,Begusarai,Amita Bhushan,16531,Bihar,83521,#019733
 Rashtriya Janata Dal,Belaganj,Surendra Prasad Yadav,30341,Bihar,71067,#21610B
 Janata Dal (United),Beldaur,Panna Lal Singh Patel,13525,Bihar,63216,#594671
@@ -47,34 +47,34 @@ Janata Dal (United),Benipur,Sunil Choudhary,26443,Bihar,69511,#594671
 Indian National Congress,Bettiah,Madan Mohan Tiwari,2320,Bihar,66786,#019733
 Bharatiya Janata Party,Bhabua,Anand Bhushan Pandey,7744,Bihar,50768,#FB7B0D
 Indian National Congress,Bhagalpur,Ajeet Sharma,10658,Bihar,70514,#019733
-Indian National Congress,Bhorey (SC),Anil Kumar,14871,Bihar,74365,#019733
+Indian National Congress,Bhorey,Anil Kumar,14871,Bihar,74365,#019733
 Janata Dal (United),Bibhutipur,Ram Balak Singh,17235,Bihar,57882,#594671
 Janata Dal (United),Bihariganj,Niranjan Kumar Mehta,29253,Bihar,78361,#594671
 Bharatiya Janata Party,Biharsharif,Dr.Sunil Kumar,2340,Bihar,76201,#FB7B0D
 Rashtriya Janata Dal,Bihpur,Varsha Rani,12716,Bihar,68963,#21610B
 Indian National Congress,Bikram,Siddharth,44311,Bihar,94088,#019733
 Rashtriya Janata Dal,Bisfi,Faiyaz Ahmad,35325,Bihar,70975,#21610B
-Independent,Bochaha (SC),Beby Kumari,24130,Bihar,67720,#95b3d7
-Rashtriya Janata Dal,Bodh Gaya (SC),Kumar Sarvjeet,30473,Bihar,82656,#21610B
+Independent,Bochaha,Beby Kumari,24130,Bihar,67720,#95b3d7
+Rashtriya Janata Dal,Bodh Gaya,Kumar Sarvjeet,30473,Bihar,82656,#21610B
 Rashtriya Janata Dal,Brahampur,Shambhu Nath Yadav,30776,Bihar,94079,#21610B
 Indian National Congress,Buxar,Sanjay Kumar Tiwari Alias Munna Tiwari,10181,Bihar,66527,#019733
 Bharatiya Janata Party,Chainpur,Brij Kishor Bind,671,Bihar,58913,#FB7B0D
 Rashtriya Janata Dal,Chakai,Savitri Devi,12113,Bihar,47064,#21610B
 Bharatiya Janata Party,Chanpatia,Prakash Rai,464,Bihar,61304,#FB7B0D
 Bharatiya Janata Party,Chapra,Dr. C.N. Gupta,11379,Bihar,71646,#FB7B0D
-Rashtriya Lok Samta Party,Chenari (SC),Lalan Paswan,9781,Bihar,68148,#999
+Rashtriya Lok Samta Party,Chenari,Lalan Paswan,9781,Bihar,68148,#999
 Janata Dal (United),Cheria Bariarpur,Kumari Manju Verma,29736,Bihar,69795,#594671
 Bharatiya Janata Party,Chhatapur,Niraj Kumar Singh,9292,Bihar,75697,#FB7B0D
 Bharatiya Janata Party,Chiraia,Lal Babu Prasad Gupta,4374,Bihar,62831,#FB7B0D
 Bharatiya Janata Party,Danapur,Asha Devi,5209,Bihar,72192,#FB7B0D
-Communist Party of India (Marxist-Leninist) (Liberation),Darauli (SC),Satyadeo Ram,9584,Bihar,49576,#DE0000
+Communist Party of India (Marxist-Leninist) (Liberation),Darauli,Satyadeo Ram,9584,Bihar,49576,#DE0000
 Janata Dal (United),Daraundha,Kavita Singh,13222,Bihar,66255,#594671
 Bharatiya Janata Party,Darbhanga,Sanjay Saraogi,7460,Bihar,77776,#FB7B0D
 Rashtriya Janata Dal,Darbhanga Rural,Lalit Kumar Yadav,34491,Bihar,70557,#21610B
 Rashtriya Janata Dal,Dehri,Mohammad Iliyas Hussain,3898,Bihar,49402,#21610B
 Rashtriya Janata Dal,Dhaka,Faisal Rahman,19197,Bihar,87458,#21610B
 Janata Dal (United),Dhamdaha,Leshi Singh,29817,Bihar,75400,#594671
-Janata Dal (United),Dhauraiya (SC),Manish Kumar,24154,Bihar,68858,#594671
+Janata Dal (United),Dhauraiya,Manish Kumar,24154,Bihar,68858,#594671
 Bharatiya Janata Party,Digha,Sanjiv Chaurasia,24779,Bihar,92671,#FB7B0D
 Janata Dal (United),Dinara,Jai Kumar Singh,2691,Bihar,64699,#594671
 Janata Dal (United),Dumraon,Dadan Yadav,30339,Bihar,81081,#594671
@@ -82,7 +82,7 @@ Janata Dal (United),Ekma,Manoranjan Singh,8126,Bihar,49508,#594671
 Rashtriya Janata Dal,Fatuha,Dr. Rama Nand Yadav,30402,Bihar,77210,#21610B
 Bharatiya Janata Party,Forbesganj,Vidya Sagar Keshri,25238,Bihar,85929,#FB7B0D
 Rashtriya Janata Dal,Gaighat,Maheshwar Prasad Yadav,3501,Bihar,67313,#21610B
-Rashtriya Janata Dal,Garkha (SC),Muneshwar Chaudhary,39883,Bihar,89249,#21610B
+Rashtriya Janata Dal,Garkha,Muneshwar Chaudhary,39883,Bihar,89249,#21610B
 Janata Dal (United),Gaura Bauram,Madan Sahni,14062,Bihar,51403,#594671
 Bharatiya Janata Party,Gaya Town,Prem Kumar,22789,Bihar,66891,#FB7B0D
 Janata Dal (United),Ghosi,Krishan Nandan Prasad Verma,21625,Bihar,67248,#594671
@@ -96,13 +96,13 @@ Bharatiya Janata Party,Gurua,Rajiv Nandan,6515,Bihar,56480,#FB7B0D
 Bharatiya Janata Party,Hajipur,Awadhesh Singh,12195,Bihar,86773,#FB7B0D
 Rashtriya Lok Samta Party,Harlakhi,Basant Kumar,3892,Bihar,40468,#999
 Janata Dal (United),Harnaut,Hari Narayan Singh,14295,Bihar,71933,#594671
-Rashtriya Janata Dal,Harsidhi (SC),Rajendra Kumar,10267,Bihar,75203,#21610B
+Rashtriya Janata Dal,Harsidhi,Rajendra Kumar,10267,Bihar,75203,#21610B
 Janata Dal (United),Hasanpur,Raj Kumar Ray,29600,Bihar,63094,#594671
 Janata Dal (United),Hathua,Ramsewak Singh,22984,Bihar,57917,#594671
 Janata Dal (United),Hayaghat,Amar Nath Gami,33231,Bihar,65677,#594671
 Rashtriya Janata Dal,Hilsa,Atri Muni Urph Shakti Singh Yadav,26076,Bihar,72347,#21610B
 Bharatiya Janata Party,Hisua,Anil Singh,12239,Bihar,82493,#FB7B0D
-Hindustani Awam Morcha (Secular),Imamganj (SC),Jitan Ram Manjhi,29408,Bihar,79389,#999
+Hindustani Awam Morcha (Secular),Imamganj,Jitan Ram Manjhi,29408,Bihar,79389,#999
 Janata Dal (United),Islampur,Chandrasen Prasad,22602,Bihar,66587,#594671
 Rashtriya Janata Dal,Jagdishpur,Ram Vishun Singh,10195,Bihar,49020,#21610B
 Rashtriya Janata Dal,Jahanabad,Mundrika Singh Yadav,30321,Bihar,76458,#21610B
@@ -115,26 +115,26 @@ Janata Dal (United),Jokihat,Sarfraz Alam,53980,Bihar,92890,#594671
 Indian National Congress,Kadwa,Shakeel Ahmad Khan,5799,Bihar,56141,#019733
 Indian National Congress,Kahalgaon,Sadanand Singh,21229,Bihar,64981,#019733
 Bharatiya Janata Party,Kalyanpur,Sachindra Prasad Singh,11488,Bihar,50060,#FB7B0D
-Janata Dal (United),Kalyanpur (SC),Maheshwar Hazari,37686,Bihar,84904,#594671
+Janata Dal (United),Kalyanpur,Maheshwar Hazari,37686,Bihar,84904,#594671
 Independent,Kanti,Ashok Kumar Choudhary (Sadatpur),9275,Bihar,58111,#95b3d7
 Rashtriya Janata Dal,Karakat,Sanjay Kumar Singh,12119,Bihar,59720,#21610B
 Janata Dal (United),Kargahar,Bashisht Singh,12907,Bihar,57018,#594671
 Indian National Congress,Kasba,Md. Afaque Alam,1794,Bihar,81633,#019733
 Bharatiya Janata Party,Katihar,Tarkishore Prasad,14894,Bihar,66048,#FB7B0D
-Rashtriya Janata Dal,Katoria (ST),Sweety Sima Hembram,10337,Bihar,54760,#21610B
+Rashtriya Janata Dal,Katoria,Sweety Sima Hembram,10337,Bihar,54760,#21610B
 Rashtriya Janata Dal,Keoti,Faraz Fatmi,7830,Bihar,68601,#21610B
 Rashtriya Janata Dal,Kesaria,Dr. Rajesh Kumar,15947,Bihar,62902,#21610B
 Janata Dal (United),Khagaria,Poonam Devi Yadav,25565,Bihar,64767,#594671
 Rashtriya Janata Dal,Khajauli,Sitaram Yadav,10703,Bihar,71534,#21610B
 Indian National Congress,Kishanganj,Dr Mohammad Jawaid,8609,Bihar,66522,#019733
 Janata Dal (United),Kochadhaman,Mujahid Alam,18843,Bihar,55929,#594671
-Indian National Congress,Korha (SC),Punam Kumari Alias Punam Paswan,5426,Bihar,78409,#019733
+Indian National Congress,Korha,Punam Kumari Alias Punam Paswan,5426,Bihar,78409,#019733
 Janata Dal (United),Kuchaikote,Amrendra Kumar Pandey,3562,Bihar,72224,#594671
 Bharatiya Janata Party,Kumhrar,Arun Kumar Sinha,37275,Bihar,87792,#FB7B0D
 Bharatiya Janata Party,Kurhani,Kedar Prasad Gupta,11570,Bihar,73227,#FB7B0D
 Janata Dal (United),Kurtha,Satyadeo Singh,14119,Bihar,43676,#594671
-Janata Dal (United),Kusheshwar Asthan (SC),Shashi Bhusan Hazari,19850,Bihar,50062,#594671
-Indian National Congress,Kutumba (SC),Rajesh Kumar,10098,Bihar,51303,#019733
+Janata Dal (United),Kusheshwar Asthan,Shashi Bhusan Hazari,19850,Bihar,50062,#594671
+Indian National Congress,Kutumba,Rajesh Kumar,10098,Bihar,51303,#019733
 Bharatiya Janata Party,Lakhisarai,Vijay Kumar Sinha,6556,Bihar,75901,#FB7B0D
 Lok Jan Shakti Party,Lalganj,Raj Kumar Sah,20293,Bihar,80842,#999
 Janata Dal (United),Laukaha,Lakshmeshwar Roy,23833,Bihar,79971,#594671
@@ -146,15 +146,15 @@ Janata Dal (United),Maharajganj,Hem Narayan Sah,20292,Bihar,68459,#594671
 Rashtriya Janata Dal,Mahishi,Dr. Abdul Ghafoor,26135,Bihar,56436,#21610B
 Janata Dal (United),Mahnar,Umesh Singh Kushwaha,26455,Bihar,69825,#594671
 Rashtriya Janata Dal,Mahua,Tej Pratap Yadav,28155,Bihar,66927,#21610B
-Rashtriya Janata Dal,Makhadumapur (SC),Subedar Das,26777,Bihar,66631,#21610B
+Rashtriya Janata Dal,Makhadumapur,Subedar Das,26777,Bihar,66631,#21610B
 Rashtriya Janata Dal,Maner,Bhai Virendra,22828,Bihar,89773,#21610B
-Indian National Congress,Manihari (ST),Manohar Prasad Singh,13680,Bihar,61704,#019733
+Indian National Congress,Manihari,Manohar Prasad Singh,13680,Bihar,61704,#019733
 Indian National Congress,Manjhi,Vijay Shanker Dubey,8866,Bihar,29558,#019733
 Rashtriya Janata Dal,Marhaura,Jeetendra Kumar Rai,16718,Bihar,66714,#21610B
-Rashtriya Janata Dal,Masaurhi (SC),Rekha Devi (Vill- Pabheda),39186,Bihar,89657,#21610B
+Rashtriya Janata Dal,Masaurhi,Rekha Devi (Vill- Pabheda),39186,Bihar,89657,#21610B
 Janata Dal (United),Matihani,Narendra Kumar Singh Alias Bogo Singh,22688,Bihar,89297,#594671
 Rashtriya Janata Dal,Minapur,Rajeev Kumar Urf Munna Yadav,23940,Bihar,80790,#21610B
-Bharatiya Janata Party,Mohania (SC),Niranjan Ram,7581,Bihar,60911,#FB7B0D
+Bharatiya Janata Party,Mohania,Niranjan Ram,7581,Bihar,60911,#FB7B0D
 Rashtriya Janata Dal,Mohiuddinnagar,Ejya Yadav,23431,Bihar,47137,#21610B
 Independent,Mokama,Anant Kumar Singh,18348,Bihar,54005,#95b3d7
 Janata Dal (United),Morwa,Vidya Sagar Singh Nishad,18816,Bihar,59206,#594671
@@ -177,35 +177,35 @@ Janata Dal (United),Parbatta,Ramanad Prasad Singh,28924,Bihar,76248,#594671
 Bharatiya Janata Party,Parihar,Gaytri Devi,4017,Bihar,66388,#FB7B0D
 Bharatiya Janata Party,Paroo,Ashok Kumar Singh,13539,Bihar,80445,#FB7B0D
 Rashtriya Janata Dal,Parsa,Chandrika Rai,42335,Bihar,77211,#21610B
-Rashtriya Janata Dal,Patepur (SC),Prema Chaudhary,12461,Bihar,67548,#21610B
+Rashtriya Janata Dal,Patepur,Prema Chaudhary,12461,Bihar,67548,#21610B
 Bharatiya Janata Party,Patna Sahib,Nand Kishore Yadav,2792,Bihar,88108,#FB7B0D
 Janata Dal (United),Phulparas,Guljar Devi,13415,Bihar,64368,#594671
-Janata Dal (United),Phulwari (SC),Shyam Rajak,45713,Bihar,94094,#594671
+Janata Dal (United),Phulwari,Shyam Rajak,45713,Bihar,94094,#594671
 Bharatiya Janata Party,Pipra,Shyambabu Prasad Yadav,3930,Bihar,65552,#FB7B0D
 Rashtriya Janata Dal,Pipra,Yadubansh Kumar Yadav,36369,Bihar,85944,#21610B
-Rashtriya Janata Dal,Pirpainti (SC),Ram Vilash Paswan,5144,Bihar,80058,#21610B
+Rashtriya Janata Dal,Pirpainti,Ram Vilash Paswan,5144,Bihar,80058,#21610B
 Bharatiya Janata Party,Pranpur,Binod Kumar Singh,8101,Bihar,47924,#FB7B0D
 Bharatiya Janata Party,Purnia,Vijay Kumar Khemka,32815,Bihar,92020,#FB7B0D
 Janata Dal (United),Rafiganj,Ashok Kumar Singh,9525,Bihar,62897,#594671
 Rashtriya Janata Dal,Raghopur,Tejashwi Prasad Yadav,22733,Bihar,91236,#21610B
 Rashtriya Janata Dal,Raghunathpur,Harishankar Yadav,10622,Bihar,61042,#21610B
-Rashtriya Janata Dal,Raja Pakar (SC),Shivchandra Ram,15155,Bihar,61251,#21610B
-Rashtriya Janata Dal,Rajauli (SC),Prakash Veer,4615,Bihar,70549,#21610B
-Janata Dal (United),Rajgir (SC),Ravi Jyoti Kumar,5390,Bihar,62009,#594671
-Bharatiya Janata Party,Rajnagar (SC),Ram Prit Paswan,6242,Bihar,71614,#FB7B0D
-Janata Dal (United),Rajpur (SC),Santosh Kumar Nirala,32788,Bihar,84184,#594671
+Rashtriya Janata Dal,Raja Pakar,Shivchandra Ram,15155,Bihar,61251,#21610B
+Rashtriya Janata Dal,Rajauli,Prakash Veer,4615,Bihar,70549,#21610B
+Janata Dal (United),Rajgir,Ravi Jyoti Kumar,5390,Bihar,62009,#594671
+Bharatiya Janata Party,Rajnagar,Ram Prit Paswan,6242,Bihar,71614,#FB7B0D
+Janata Dal (United),Rajpur,Santosh Kumar Nirala,32788,Bihar,84184,#594671
 Bharatiya Janata Party,Ramgarh,Ashok Kumar Singh,8011,Bihar,57501,#FB7B0D
-Bharatiya Janata Party,Ramnagar (SC),Bhagirathi Devi,17988,Bihar,82166,#FB7B0D
-Janata Dal (United),Raniganj (SC),Achmit Rishidev,14930,Bihar,77717,#594671
+Bharatiya Janata Party,Ramnagar,Bhagirathi Devi,17988,Bihar,82166,#FB7B0D
+Janata Dal (United),Raniganj,Achmit Rishidev,14930,Bihar,77717,#594671
 Bharatiya Janata Party,Raxaul,Ajay Kumar Singh,3169,Bihar,64731,#FB7B0D
 Indian National Congress,Riga,Amit Kumar,22856,Bihar,79217,#019733
-Indian National Congress,Rosera (SC),Dr. Ashok Kumar,34361,Bihar,85506,#019733
+Indian National Congress,Rosera,Dr. Ashok Kumar,34361,Bihar,85506,#019733
 Rashtriya Janata Dal,Runnisaidpur,Mangita Devi,14110,Bihar,55699,#21610B
 Janata Dal (United),Rupauli,Bima Bharti,9672,Bihar,50945,#594671
 Rashtriya Janata Dal,Saharsa,Arun Kumar,39206,Bihar,102850,#21610B
 Rashtriya Janata Dal,Sahebganj,Ramvichar Rai,10660,Bihar,70583,#21610B
 Rashtriya Janata Dal,Sahebpur Kamal,Shreenarayan Yadav,45474,Bihar,78225,#21610B
-Rashtriya Janata Dal,Sakra (SC),Lal Babu Ram,13012,Bihar,75010,#21610B
+Rashtriya Janata Dal,Sakra,Lal Babu Ram,13012,Bihar,75010,#21610B
 Rashtriya Janata Dal,Samastipur,Akhtarul Islam Shaheen,31080,Bihar,82508,#21610B
 Rashtriya Janata Dal,Sandesh,Arun Kumar,25427,Bihar,74306,#21610B
 Janata Dal (United),Sarairanjan,Vijay Kumar Choudhary,34044,Bihar,81055,#594671
@@ -214,14 +214,14 @@ Rashtriya Janata Dal,Shahpur,Rahul Tiwary,14570,Bihar,69315,#21610B
 Janata Dal (United),Sheikhpura,Randhir Kumar Soni,13101,Bihar,41755,#594671
 Janata Dal (United),Sheohar,Sharfuddin,461,Bihar,44576,#594671
 Janata Dal (United),Sherghati,Vinod Prasad Yadav,4834,Bihar,44579,#594671
-Indian National Congress,Sikandra (SC),Sudhir Kumar Alias Banty Choudhary,7990,Bihar,59092,#019733
+Indian National Congress,Sikandra,Sudhir Kumar Alias Banty Choudhary,7990,Bihar,59092,#019733
 Janata Dal (United),Sikta,Khurshid Urf Firoj Ahmad,2835,Bihar,69870,#594671
 Bharatiya Janata Party,Sikti,Vijay Kumar Mandal,8106,Bihar,76995,#FB7B0D
 Janata Dal (United),Simri Bakhtiarpur,Dinesh Chandra Yadav,37806,Bihar,78514,#594671
-Janata Dal (United),Singheshwar (SC),Ramesh Rishidev,50200,Bihar,83073,#594671
+Janata Dal (United),Singheshwar,Ramesh Rishidev,50200,Bihar,83073,#594671
 Rashtriya Janata Dal,Sitamarhi,Sunil Kumar,14722,Bihar,81557,#21610B
 Bharatiya Janata Party,Siwan,Vyas Deo Prasad,3534,Bihar,55156,#FB7B0D
-Janata Dal (United),Sonbarsha (SC),Ratnesh Sada,53763,Bihar,88789,#594671
+Janata Dal (United),Sonbarsha,Ratnesh Sada,53763,Bihar,88789,#594671
 Rashtriya Janata Dal,Sonepur,Dr. Ramanuj Prasad,36396,Bihar,86082,#21610B
 Bharatiya Janata Party,Sugauli,Ramchandra Sahni,7756,Bihar,62384,#FB7B0D
 Janata Dal (United),Sultanganj,Subodh Roy,14033,Bihar,63345,#594671
@@ -234,7 +234,7 @@ Communist Party of India (Marxist-Leninist) (Liberation),Tarari,Sudama Prasad,27
 Rashtriya Janata Dal,Teghra,Birendra Kumar,15611,Bihar,68975,#21610B
 Janata Dal (United),Thakurganj,Naushad Alam (Tatpauwa),8087,Bihar,74239,#594671
 Janata Dal (United),Tikari,Abhay Kumar Sinha,31813,Bihar,86975,#594671
-Janata Dal (United),Triveniganj (SC),Veena Bharti,52400,Bihar,89869,#594671
+Janata Dal (United),Triveniganj,Veena Bharti,52400,Bihar,89869,#594671
 Rashtriya Janata Dal,Ujiarpur,Alok Kumar Mehta,47460,Bihar,85466,#21610B
 Janata Dal (United),Vaishali,Raj Kishore Singh,31061,Bihar,79286,#594671
 Independent,Valmiki Nagar,Dhirendra Pratap Singh Alias Rinku Singh,33580,Bihar,66860,#95b3d7
