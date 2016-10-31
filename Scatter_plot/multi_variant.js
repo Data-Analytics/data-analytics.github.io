@@ -413,7 +413,7 @@ function merge_charts(data,width_value){
 
     var yAxis_sub = d3.svg.axis()
         .scale(y)
-        .ticks(1)
+        .ticks(0)
         .orient("left")
         .tickSubdivide(true)
         .tickFormat(d3.format("2s"));  
