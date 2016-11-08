@@ -29,10 +29,9 @@
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
-  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
   <script type="text/javascript" src="js/bootstrap.min.js"></script>  
   <script type="text/javascript" src="js/underscore-min.js"></script>
-  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>  
+  <script type="text/javascript" src="js/jquery.multiple.select.js"></script>  
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>  
   <meta property="og:title"  content="US Elections 2016" /> 
@@ -46,20 +45,17 @@
   <title>US Elections 2016</title>
 </head>
 <body>
-
       <div class="container-fluid header-style">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 header-logo">
-                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>The U.S Election 2016</p>
+                    <p class="heading-part">The US Election Results 2016</p>
                     <p class="synopsis">This interactive map will bring you minute-by-minute results, from the national standings down to individual candidates and constituencies.</p>
                     <p class="synopsis">It aims to make the swing or transfer of seats from the past to the current elections</p>
                 </div>
             </div>
         </div>
     </div>
-
-
 <div id="overall_view">
     <div class="container-fluid">
     <div class="container">
@@ -67,7 +63,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
-                    <h2>United States presidential election Overall Results 2012</h2>
+                    <h2>United States presidential election Overall Results 2016</h2>
                 </div>    
            </div>
            <div class="row">           
@@ -96,7 +92,7 @@
         <div class="col-md-12 panel panel-default">
         <div class="row">
             <div class="col-md-12 panel-heading1">
-                <h2 class="details_constituency">United States presidential election Results 2012</h2>
+                <h2 class="details_constituency">United States presidential election Results 2016</h2>
             </div>    
         </div>
         <div class="row">           
@@ -142,13 +138,14 @@
     
 <script src="uStates.js"></script>
 <script>
-color_map = {'Republican':'#E61B23','Democratic':'#55B0E6'}
+
+color_map = {'Republican':'#FE6A59','Democratic':'#008FD5','Greens':'#17AA5C','Libertarian':'#FDD400','Others':'#E7A520'}
+taken_color_map = {'Republican':'#FFDBD2','Democratic':'#C2DCF9','Greens':'#17AA5C','Libertarian':'#FDD400','Others':'#E7A520'}
 
 d3.csv("overall_results.csv", function(data) {
 
   data_set = {}
-  data.forEach(function(d) {
-   data_set[d.statecode] ={party:d[2012],old_party:d[2016],State:d.State,Electorates:d.Electorates,color : color_map[d[2012]]} ;
+  data.forEach(function(d) {data_set[d.statecode] ={party:d[2012],old_party:d[2016],State:d.State,Electorates:d.Electorates,color : color_map[d[2016]],taken_color : taken_color_map[d[2016]]} ;
    d.Electorates = parseInt(d.Electorates)
   });
 
@@ -178,29 +175,34 @@ d3.csv("overall_results.csv", function(data) {
                                         .append("table")
                                         .attr("class","table table-condensed party-summary")
 
-                        lowresult_data.append('tbody')
-                                .selectAll("tr")
-                                .data(function(o) { return o }).enter()
-                                .append("tr")
-                                .selectAll("td")
-                                    .data(function(d,l) { return [d.key,d.values,l+':'+(d.values*100/max_seats).toFixed(2)] }).enter()
-                                    .append('td')
-                                    .attr('class',function(d) { return d+'s'})
-                                    .style("max-width",'10px')
-                                    .style("font-size",'15px')
-                                    .text(function(o,i) { return i<2? o:'' })
-                                    .append('div')
-                                    .attr('class',function(d,i) { return i<2? '':'progress'; })
-                                    .append('div')
-                                    .attr('class','progress-bar progress-bar-striped')
-                                    .attr('role','progressbar')
-                                    .attr('aria-valuenow','70')
-                                    .attr('aria-valuemin','0')
-                                    .attr('aria-valuemax','100')
-                                    .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
-                                    .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
+      lowresult_data.append('tbody')
+              .selectAll("tr")
+              .data(function(o) { return o }).enter()
+              .append("tr")
+              .selectAll("td")
+                  .data(function(d,l) { return [d.key+'_image',d.key,d.values,l+':'+(d.values*100/max_seats).toFixed(2)] }).enter()
+                  .append('td')
+                  .attr('class',function(d) { return d+'s'})
+                  .style("max-width",'10px')
+                  .style("font-size",'15px')
+                  .style("padding-top",function(o,i) { return i>0? '9px':'' })
+                  .text(function(o,i) { return i<3 & i>0? o:'' })
+                  .append('div')
+                  .attr('class',function(d,i) { return i<3? '':'progress'; })
+                  .append('div')
+                  .attr('class','progress-bar progress-bar-striped')
+                  .attr('role','progressbar')
+                  .attr('aria-valuenow','70')
+                  .attr('aria-valuemin','0')
+                  .attr('aria-valuemax','100')
+                  .style('background-color',function(d,i) { return i<3? '':heading_colors[parseInt(d.split(':')[0])]; })
+                  .style('width',function(d,i) { return i<3? '0%':d.split(':')[1]+'%'; });
                                    
-            d3.selectAll('.removed_data').remove();                   
+            d3.selectAll('.removed_data').remove();
+            d3.select('.Democratic_images').append('img').attr("width","30px").attr("src","images/Democratic.png");
+            d3.select('.Republican_images').append('img').attr("width","30px").attr("src","images/Republican.png");  
+            d3.select('.Greens_images').append('img').attr("width","30px").attr("src","images/Greens_images.png");
+            d3.select('.Libertarian_images').append('img').attr("width","30px").attr("src","images/Libertarian.png");                 
 
 });
 
@@ -276,11 +278,11 @@ data.forEach(function (d) {
     name_list = []
     data_Count.forEach(function (d) {
 
-      graph.nodes.push({ "name": d.key.split("_")[0], "color": color_map[d.key.split("_")[0]] });
-      graph.nodes.push({ "name": '_'+d.key.split("_")[1], "color": color_map[d.key.split("_")[1]] });
+      graph.nodes.push({ "name": '_'+d.key.split("_")[0], "color": color_map[d.key.split("_")[0]] });
+      graph.nodes.push({ "name": d.key.split("_")[1], "color": color_map[d.key.split("_")[1]] });
 
-      graph.links.push({ "source": d.key.split("_")[0],
-                         "target": '_'+d.key.split("_")[1],
+      graph.links.push({ "source": '_'+d.key.split("_")[0],
+                         "target": d.key.split("_")[1],
                          "source_color": color_map[d.key.split("_")[0]],
                          "target_color": color_map[d.key.split("_")[1]],
                          "value": d.values });
@@ -349,7 +351,7 @@ data.forEach(function (d) {
       .attr("width", sankey.nodeWidth())
      .style("fill", function(d) { return color_map[d.name.replace('_','')]; })
       .style("stroke", function(d) { return d3.rgb(color_map[d.name.replace('_','')]).darker(2); })
-       .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats'; });
+       .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats <br/> <img width="120px" src="images/'+d.name+'.png"/>'; });
     
   node
     .append("text")

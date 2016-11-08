@@ -77,7 +77,7 @@ function map_filter(year_2012,year_2016){
     d3.select(id).select('svg').remove();
     
     var keys = Object.keys(data);
-    
+
     group_data = []
     keys.forEach(function(d, i){
         val_list = data[d]
@@ -120,9 +120,11 @@ function map_filter(year_2012,year_2016){
 			.style("stroke-width",'1px')
 			.style("stroke",'#444')
 			.attr("sub_link",function(d) { return d.n })
-			.attr("data-title",function(d){ return'State : '+d.n+'<br/> Electorates : '+data[d.id].Electorates+'<br/> Party : '+data[d.id].party ; })
-			.style("fill",function(d){ return data_set_filtered[d.id]!=undefined? data_set_filtered[d.id].color :'#fff' ; });
-	
+			.attr("data-title",function(d){ return '<img src="images/'+data[d.id].party+'.png" /> <br/> State : '+d.n+'<br/> Electorates : '+data[d.id].Electorates+'<br/> Party : '+data[d.id].party })
+			.style("fill",function(d){ return data_set_filtered[d.id]!=undefined? (data[d.id].party==data[d.id].old_party? data[d.id].color : data[d.id].taken_color) :'#fff' ; })
+			.on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
+      		.on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
+
     $("path").tooltip({container: '.statesvg', html: true, placement:'top'});
 
 };
@@ -135,6 +137,8 @@ function map_filter(year_2012,year_2016){
         uStatePaths.forEach(function(o) {
 			constituency_list.push(o.n)
 			});
+        
+        console.log(data);
 
 		var svg = d3.select(id).append("svg")
             .style("width", "100%")
@@ -148,11 +152,16 @@ function map_filter(year_2012,year_2016){
 			.style("stroke-width",'1px')
 			.style("stroke",'#fff')
 			.attr("sub_link",function(d) { return d.n })
-			.attr("data-title",function(d){ return'State : '+d.n+'<br/> Electorates : '+data[d.id].Electorates+'<br/> Party : '+data[d.id].party ; })
-			.style("fill",function(d){ return data[d.id].color; });
+			.attr("state_code",function(d) { return d.id })
+			.attr("data-title",function(d){ return '<img src="images/'+data[d.id].party+'.png" /> <br/> State : '+d.n+'<br/> Electorates : '+data[d.id].Electorates+'<br/> Party : '+data[d.id].party })
+			.style("fill",function(d){ return data[d.id].party==data[d.id].old_party? data[d.id].color : data[d.id].taken_color })
+			.on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
+      		.on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
+            //.on("click", function() {  detail_option(d3.select(this).attr("state_code"));  });
+            // d3.hsl(array_dark[array_dark.length-1]).darker(step);
 
-		var lastsearch = '';
-		var $box = {};
+			var lastsearch = '';
+			var $box = {};
 		    
 		    function add_search(search, chart) {
 		      var $chart = $(chart);
@@ -168,9 +177,9 @@ function map_filter(year_2012,year_2016){
 		      });
 		    }
 
-		   add_search('.geo_search', '.statesvg');
+		    add_search('.geo_search', '.statesvg');
 
-		     var Industry = constituency_list;
+		    var Industry = constituency_list;
 		    
 		    $( ".geo_search" ).autocomplete({
 		    source: function(req, responseFn) {
@@ -183,13 +192,8 @@ function map_filter(year_2012,year_2016){
 		    }
 		    });
 
-	      $("path").tooltip({container: '.statesvg', html: true, placement:'top'});
-	      
+	        $("path").tooltip({container: '.statesvg', html: true, placement:'top'});
 
 	}
 	this.uStates=uStates;
 })();
-
-
-
-
