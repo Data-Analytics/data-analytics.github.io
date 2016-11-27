@@ -1157,14 +1157,14 @@ else{ $(".detail_display").show();}
 
 if (cons_id == undefined){ $(".detail_percent_display").hide(); }
 else{ $(".detail_percent_display").show();}
-
+        
 if ((extra_year_detail == undefined) && (year_detail >= 2009)){ extra_year_detail= year_detail; }
-
 if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2016; }
 
 if (year_detail == undefined){ year_detail= extra_year_detail; }
-
 if (flowyear_detail == undefined){ flowyear_detail= '2011_2016'; }
+
+if (year_detail <2009){ $('#individual_hold').hide() }
 
 $('#'+year_detail+'').addClass('active');
 $(".year_tag").append("("+year_detail+")");
