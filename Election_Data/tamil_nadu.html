@@ -1784,6 +1784,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .style("fill", "rgb(99, 99, 99)")
         .style("font-size","13px")
         .style("text-anchor", "end")
+        .attr("data-title","Guide line: 1/6 of polled votes<br/> (16.66 % approx)")
         .text("Deposit Threshold");
                 
     horizontal_bar_svg.append("g")
@@ -1812,7 +1813,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
             .style("fill", "rgb(99, 99, 99)")
             .style("font-size","13px");
         
-        
+      $("text").tooltip({container: '.horizontal_bar', html: true, placement:'top'});
       $("rect").tooltip({container: '.horizontal_bar', html: true, placement:'top'});
     
         var twoPi = 2 * Math.PI;
