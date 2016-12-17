@@ -47,6 +47,8 @@
   <title>Assembly Elections 1957 - 2016(Kerala)</title>
 </head>
 <body>
+
+      <div class="se-pre-con"></div>
       <div class="container-fluid header-style">
         <div class="container">
             <div class="row">
@@ -1014,6 +1016,11 @@
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 <script type="text/javascript">
 
+    $(window).load(function() {
+        $(".se-pre-con").fadeOut("slow");;
+    });
+
+
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 50) {        
             $('#return-to-top').fadeIn(200);    
@@ -1687,6 +1694,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .style("fill", "rgb(99, 99, 99)")
         .style("font-size","13px")
         .style("text-anchor", "end")
+        .attr("data-title","Guide line: 1/6 of polled votes<br/> (16.66 % approx)")
         .text("Deposit Threshold");
     
     horizontal_bar_svg.append("g")
@@ -1715,7 +1723,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
             .style("fill", "rgb(99, 99, 99)")
             .style("font-size","13px");
         
-        
+      $("text").tooltip({container: '.horizontal_bar', html: true, placement:'top'});  
       $("rect").tooltip({container: '.horizontal_bar', html: true, placement:'top'});
     
         var twoPi = 2 * Math.PI;
