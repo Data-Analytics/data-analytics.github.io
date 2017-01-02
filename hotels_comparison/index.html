@@ -80,9 +80,9 @@
         <option value="marimekko" class="name">marimekko</option>
         <option value="grouped_bar" class="name">grouped bar</option>
     </select>
-    <!--<label value="Select_color">Chart Color : </label>
+    <label value="Select_color">Chart Color : </label>
     <select id="color_view"> 
-    </select>-->
+    </select>
    <button id ="submit" value="submit" class="btn btn-primary" onClick='onRender();' >submit</button>
    </p>
     <div id="page-wrapper">
@@ -185,6 +185,20 @@ onRender();
 onAreaRender(); 
 onSparkRender();
 
+
+d3.csv('color_pallet.csv', function(col_val) {
+
+var select_box = d3.select('#color_view')     
+                .selectAll("option")
+                    .data(col_val) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d.color_pallet_1+'_'+d.color_pallet_2+'_'+d.color_pallet_3  })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d.color_code; });
+
+});
+
 function onAreaRender() {   
     var elems = $('#options_view_area').val();
     var types = $('#options_type_area').val();
@@ -218,8 +232,7 @@ function onAreaRender() {
             normalized_stacked_area.make(options);
         } else if ( elems == 'stacked_area' ) {
             stacked_area.make(options);
-        } 
-        
+        }  
     });
       
 }
@@ -228,8 +241,13 @@ function onRender() {
     var elem = $('#options_view').val();
     var type = $('#options_type').val();
     var colors_val = $('#color_view').val();
+	
+	if (colors_val==null)
+	{
+		colors_val = '#FC8D59_#FFFFBF_#91CF60'
+	}
 
-     d3.select('#marimekkomap').select("svg")
+    d3.select('#marimekkomap').select("svg")
        .remove();
 
         if ( type == 'os_data' ) {
@@ -242,6 +260,16 @@ function onRender() {
 
     d3.csv(type+".csv", function(pivot) {
 
+		Array.prototype.extend = function (other_array) {
+		    /* you should include a test to check whether other_array really is an array */
+		    other_array.forEach(function(v) {this.push(v)}, this);    
+		}
+
+    	color_list =  [d3.rgb(colors_val.split('_')[0]).darker()]
+
+    	color_list.extend(colors_val.split('_'))
+    	color_list.push(d3.rgb(colors_val.split('_')[2]).darker());
+    	
         var options = {
         width: 1200,
         height: 500,
@@ -249,7 +277,7 @@ function onRender() {
         data: pivot,
         groupby :'intent',
         values : col_values,
-        color:d3.scale.ordinal().range(['#e67e22','#e74c3c','#3498db','#9b59b6','#f1c40f'])
+        color:d3.scale.linear().range(color_list)
         };
         
         if ( elem == 'normalized_stacked_bar' ) {
@@ -317,7 +345,7 @@ d3.csv(types+".csv", function(error, data) {
 
         Headers_list = Object.keys(data[0])
     	Headers_list.shift();
-     
+
     var select_box = d3.select('#Select_xaxis')     
                     .selectAll("option")
                         .data(Headers_list) 
