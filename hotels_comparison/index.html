@@ -77,8 +77,8 @@
         <option value="normalized_horizontal_stacked_bar" class="name">normalized horizontal stacked bar</option>
         <option value="stacked_bar" class="name">stacked bar</option>
         <option value="normalized_stacked_bar" class="name">normalized stacked bar</option>
-        <!--<option value="marimekko" class="name">marimekko</option>
-        --><option value="grouped_bar" class="name">grouped bar</option>
+        <option value="marimekko" class="name">marimekko</option>
+        <option value="grouped_bar" class="name">grouped bar</option>
     </select>
     <label value="Select_color">Chart Color : </label>
     <select id="color_view"> 
@@ -277,7 +277,7 @@ function onRender() {
         data: pivot,
         groupby :'intent',
         values : col_values,
-        color:d3.scale.linear().range(color_list)
+        color:d3.scale.ordinal().range(color_list)
         };
         
         if ( elem == 'normalized_stacked_bar' ) {
