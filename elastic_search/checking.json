@@ -1,0 +1,1513 @@
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 14,
+    "max_score" : 0.36984813,
+    "hits" : [ {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "04e46bf73131789945d538cb76eff67a323531cb195ff95e93e686a770351ba5",
+      "_score" : 0.36984813,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Tue, 13 Dec 2016 00:00:00 GMT",
+        "entities" : [ {
+          "entity" : "CFO",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Bloomberg",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "New York Times",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Hyundai",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Fiat Chrysler",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Autonomous Bubble Car Google",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Carnegie Mellon University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google",
+          "appearances" : 5,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Pacifica",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "2017",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "last week",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "Ruth Porat",
+          "appearances" : 2,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Chris Urmson",
+          "appearances" : 3,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Larry Page",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "John Krafcik",
+          "appearances" : 2,
+          "type" : "PERSON"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Business",
+            "abs_relevance" : "5",
+            "relevance" : "100",
+            "label" : "Business"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "04011002",
+            "abs_relevance" : "1.9758425",
+            "relevance" : "100",
+            "label" : "economy, business and finance - manufacturing and engineering - automotive equipment"
+          }, {
+            "code" : "15039001",
+            "abs_relevance" : "1.0052842",
+            "relevance" : "51",
+            "label" : "sport - motor racing - Formula One"
+          } ]
+        },
+        "pageUrl" : "https://www.technologyreview.com/s/603126/google-puts-the-brakes-on-its-autonomous-bubble-car/",
+        "pageUrlDigest" : "04e46bf73131789945d538cb76eff67a323531cb195ff95e93e686a770351ba5",
+        "text" : "Google looks to be making a U-turn on its plans to create a fully autonomous car.\nLast year, the company unveiled its vision of the future of autonomous cars: small, bubble-shaped vehicles without steering wheels or pedals. Fast-forward 18 months, though, and now a report by the Information (paywall) suggests that the company is putting that plan on hold. Instead, it will work with automakers to develop more conventional autonomous cars.\nThe news follows the departure of the project’s technical lead, Chris Urmson, earlier this year. Urmson was apparently a keen advocate of the control-free concept. But according to the New York Times, the former Carnegie Mellon University researcher struggled to see eye-to-eye with the former head of Hyundai’s American division, John Krafcik, who was appointed CEO of the autonomous-car project last year.\nWith Urmson gone—and apparently starting his own autonomous-car venture—the project’s ambitions have been reined in, reportedly by Alphabet’s CEO, Larry Page, and CFO, Ruth Porat. Perhaps we shouldn’t be surprised: last week, Bloomberg noted that Porat has been tightening budgets on Google research projects, killing ones that don’t pass muster with Page in order to focus on commercializing the most promising initiatives.\nInstead of building its adorable visions of the future, then, Google will instead double down on projects carried out in collaboration with automakers, the Information claims. In particular, it will turn its attention to an ongoing project with Fiat Chrysler to build autonomous hybrid Pacifica minivans. The vehicles may even be used in a robotic taxi scheme, an idea that the company is reportedly exploring for launch in 2017.\nEarlier this year, Krafcik said that the autonomous-car project was getting set to graduate from a project beneath Google’s X moonshot umbrella to become its own independent company. It looks as though that transition is going to come with a significant scaling back on ambition in an effort to achieve a commercial reality.\n(Read more: The Information, Recode, “Why Google’s Self-Driving Bubble Cars Might Catch On,” “Alphabet’s Self-Driving-Car Wizard Picked a Great Time to Quit”)",
+        "publisherCountry" : "United States",
+        "author" : "Jamie Condliffe",
+        "siteName" : "MIT Technology Review",
+        "publisherRegion" : "North America",
+        "title" : "Google Puts the Brakes on Its Autonomous Bubble Car"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "0efd43a51892efc593812cf2349526b480352fc9f44f34bd6c5861b084b61bf5",
+      "_score" : 0.33848876,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Tue, 13 Dec 2016 00:00:00 GMT",
+        "entities" : [ {
+          "entity" : "80 percent",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "Erica Greene",
+          "appearances" : 2,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Donald Trump",
+          "appearances" : 2,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Bassey",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Justine Sacco",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Jared Cohen",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Leslie Jones",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Marc Daalder",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "David Auerbach",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Erik Carter",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Turkey",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Reddit",
+          "appearances" : 6,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "China",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Twitter",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "2000s",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "Password Alert",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Times",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google Brain",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Microsoft",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "New York Times",
+          "appearances" : 4,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Jigsaw",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google",
+          "appearances" : 8,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Conversation AI",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Project Shield",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Trump",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Arts&Entertainment>Books&Literature",
+            "abs_relevance" : "3",
+            "relevance" : "100",
+            "label" : "Arts & Entertainment>Books & Literature"
+          }, {
+            "code" : "LawGovt&Politics>Politics",
+            "abs_relevance" : "3",
+            "relevance" : "100",
+            "label" : "Law, Govt & Politics>Politics"
+          }, {
+            "code" : "Food&Drink",
+            "abs_relevance" : "2",
+            "relevance" : "67",
+            "label" : "Food & Drink"
+          }, {
+            "code" : "Automotive",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Automotive"
+          }, {
+            "code" : "Science>Physics",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Science>Physics"
+          }, {
+            "code" : "ReligionAndSpirituality>Judaism",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Religion and Spirituality>Judaism"
+          }, {
+            "code" : "Arts&Entertainment>Movies",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Arts & Entertainment>Movies"
+          }, {
+            "code" : "Home&Garden>Appliances",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Home & Garden>Appliances"
+          }, {
+            "code" : "Business>Marketing",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Business>Marketing"
+          }, {
+            "code" : "Technology&Computing>Email",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Technology & Computing>Email"
+          }, {
+            "code" : "Education>LanguageLearning",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Education>Language Learning"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "14022000",
+            "abs_relevance" : "0.6650533",
+            "relevance" : "100",
+            "label" : "social issue - abusive behaviour"
+          }, {
+            "code" : "01027000",
+            "abs_relevance" : "0.3573079",
+            "relevance" : "54",
+            "label" : "arts, culture and entertainment - internet"
+          } ]
+        },
+        "pageUrl" : "https://www.technologyreview.com/s/603072/if-only-ai-could-save-us-from-ourselves/",
+        "pageUrlDigest" : "0efd43a51892efc593812cf2349526b480352fc9f44f34bd6c5861b084b61bf5",
+        "text" : "Humans have broken the Internet. Cyberbullying, harassment, social shaming, and sheer unpleasantness plague such sites as Twitter and Reddit, especially if you happen to attract the wrong sort of attention. Consider the way Ghostbusters star Leslie Jones and public relations executive Justine Sacco became targets for mass abuse.\nThe companies that run online services are typically squeezed between charges of indifference to harassment and suppression of free speech. But now Google thinks it can use artificial intelligence to lessen this tragedy of the digital commons. (Disclosure: I worked for Google in the 2000s.) A technology incubator in the company, called Jigsaw—formerly known as Google Ideas—says it intends to spot and remove digital harassment with an automated program called Conversation AI. As Jigsaw’s president, Jared Cohen, told Wired, “I want to use the best technology we have at our disposal to begin to take on trolling and other nefarious tactics that give hostile voices disproportionate weight, [and] to do everything we can to level the playing field.”\nIt’s gutsy for Google to take this on, and it’s different from some of Jigsaw’s previous work. That has included Project Shield, which protects news sites and sites promoting freedom of expression against denial-of-service attacks. Another Jigsaw effort, Password Alert, is a Chrome extension that guards against phishing attacks. Those were primarily technical challenges. But fighting trolls and online mobs is also a sociological problem.\nConversation AI is an offshoot of one of the most successful of Google’s “moonshot” projects, Google Brain. It has helped revolutionize the field of machine learning through large-scale neural networks, and given Google advantages such as software that is more skillful than humans at recognizing images. But Conversation AI won’t be able to defeat online abuse. Though Jigsaw’s stated goal is to “fight the rise of online mobs,” the program itself is a far more modest—and therefore more plausible—project. Conversation AI will primarily streamline the community moderation that is today performed by humans. So even if it is unable to neutralize the worst behavior online, it might foster more and better discourse on some sites.\nAllusion detection\nJigsaw is starting Conversation AI at the New York Times, where it will be rolled out in a few months to help the company manage its online comments. Human moderators currently review nearly every comment published on the site. Right now, Conversation AI is reading 18 million of them, learning to detect each individual category of comments that get rejected—insubstantial, off-topic, spam, incoherent, inflammatory, obscene, attack on commenter, attack on author, attack on publisher.\nThe Times’s goal is not necessarily to reduce abuse in its comments, a problem it already considers under control. Instead, it hopes to reduce the human moderators’ workload. “We don’t ever expect to have a system that’s fully automated,” Erica Greene, engineering manager of the New York Times community team, told me. Times community editor Bassey Etim estimates that somewhere between 50 and 80 percent of comments could eventually be auto-moderated, freeing up employees to devote their efforts to creating more compelling content from the paper’s comment sections.\nThe New York Times site poses very different problems from the real-time free-for-all of Twitter and Reddit. And given the limitations of machine learning—as it exists today—Conversation AI cannot possibly fight abuse in the Internet’s wide-open spaces. For all the dazzling achievements of machine learning, it still hasn’t cracked human language, where patterns like the ones it can find in Go or images prove diabolically elusive.\nIllustrations by Erik Carter\nThe linguistic problem in abuse detection is context. Conversation AI’s comment analysis doesn’t model the entire flow of a discussion; it matches individual comments against learned models of what constitute good or bad comments. For example, comments on the New York Times site might be deemed acceptable if they tend to include common words, phrases, and other features. But Greene says Google’s system frequently flagged comments on articles about Donald Trump as abusive because they quoted him using words that would get a comment rejected if they came from a reader. For these sorts of articles, the Times will simply turn off automatic moderation.\nIt’s impossible, then, to see Conversation AI faring well on a wide-open site like Twitter. How would it detect the Holocaust allusions in abusive tweets sent to the Jewish journalist Marc Daalder: “This is you if Trump wins,” with a picture of a lamp shade, and “You belong here,” with a picture of a toaster oven? Detecting the abusiveness relies on historical knowledge and cultural context that a machine-learning algorithm could detect only if it had been trained on very similar examples. Even then, how would it be able to differentiate between abuse and the same picture with “This is what I’m buying if Trump wins”? The level of semantic and practical knowledge required is beyond what machine learning currently even aims at.\nConsequently, a dedicated Twitter troll will no doubt find a novel way of expressing abuse that evades a system like Conversation AI. By blocking some comments, machine learning could do a decent job of getting commenters to stop casually calling each other “fags” and “homos,” if that’s the goal. But machine learning will not be able to foil a person hell-bent on insinuating that someone is queer.\nIn other words, Conversation AI will enable moderation tasks to be executed more efficiently in communities that already tend to be pretty well behaved. It is incapable of rooting out the worst of the abuse we hear about, which frequently shows up on sites with minimal moderation standards. Policing abuse on Twitter and Reddit is impossible without fundamentally altering the nature of those platforms.\nGated communities\nPolicing abuse on Twitter and Reddit is impossible without fundamentally altering the nature of those platforms.\nFacebook’s success is a reminder that most people, and certainly most companies, prefer a relatively sheltered and controlled environment to one where strangers can intrude into others’ business and start fights. So if Conversation AI or similar tools make it easier and more efficient to exercise such control, it’s a reminder that “solving” the abuse problem, whether through human or automated means, requires moving away from maximal inclusivity as the highest ideal online. Even seemingly “open” communities such as StackExchange and MetaFilter require constant moderator intervention and community policing. Truly anarchic communities, such as Twitter, 4chan, and some channels on Reddit, prove to be the exceptions online, not the rule. Nor are anarchic communities moneymakers. Twitter has had trouble attracting a buyer, partly because of its reputation for abusive content, while Reddit has had a high degree of staff turnover and difficulties monetizing. The Wild West nature of those sites will become only more apparent if tools like Conversation AI make moderated sites function even better.\nIt’s worth noting one big potential downside. Because Conversation AI is being trained to approve content that hews to certain lexical, grammatical, and stylistic guidelines, it won’t just filter out abusive content. It could also tend to strike diverse content. That raises questions of what censorship-minded governments could do with it. Just as the Times curates its communities, so too can the governments of Turkey and China curate theirs. While Jigsaw efforts like Project Shield aim to provide defenses for politically sensitive websites, Conversation AI makes it easier to filter out unwanted speech—but the question is, unwanted by whom? There is no label on the box that says, “Use only to prevent abuse.”\nDavid Auerbach is writing a book on human and computer languages and their convergence, to be published by Pantheon. He worked for 11 years as a software engineer at Google and Microsoft, primarily in server infrastructure.",
+        "publisherCountry" : "United States",
+        "author" : "David Auerbach",
+        "siteName" : "MIT Technology Review",
+        "publisherRegion" : "North America",
+        "title" : "If Only AI Could Save Us from Ourselves"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "64126d12d48ad7ec64a84d5b7206232eb499643eebce499d7a84fe1de8ccde92",
+      "_score" : 0.2935064,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Tue, 13 Dec 2016 00:00:00 GMT",
+        "entities" : [ {
+          "entity" : "100 percent",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "Tesla",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Steve Mahan",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "John Krafcik",
+          "appearances" : 4,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Texas",
+          "appearances" : 2,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Pittsburgh",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "San Francisco",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Austin",
+          "appearances" : 2,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "October",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "2009",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "September 2015",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "several years ago",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "Google",
+          "appearances" : 4,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Ford",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Waymo",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Commercialize Autonomous Car Technology Waymo",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "GM",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Technology&Computing",
+            "abs_relevance" : "11",
+            "relevance" : "100",
+            "label" : "Technology & Computing"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "04011002",
+            "abs_relevance" : "3.4316287",
+            "relevance" : "100",
+            "label" : "economy, business and finance - manufacturing and engineering - automotive equipment"
+          } ]
+        },
+        "pageUrl" : "https://www.technologyreview.com/s/603115/alphabet-sets-up-a-new-company-to-commercialize-autonomous-car-technology/",
+        "pageUrlDigest" : "64126d12d48ad7ec64a84d5b7206232eb499643eebce499d7a84fe1de8ccde92",
+        "text" : "Waymo wants to work on autonomous ride sharing, trucks, and private vehicles—but when we can expect them is unclear.\nSteve Mahan, right, became the first member of the public to ride alone in one of Alphabet's self-driving cars. The trip occurred in October in the suburbs of Austin, Texas.\nAlphabet’s self-driving car technology is a small step closer to working as a chauffeur—the project will now operate as an independent company called Waymo inside the holding corporation created out of Google last year. When the technology might be ready to drive people around remains unclear.\nAt a briefing in San Francisco, John Krafcik, an experienced auto executive who has led the project since September 2015 and is now Waymo’s CEO, said the company would seek to bring self-driving technology to market in multiple ways.\n“We can imagine our self-driving technology being used in lots of areas—in ride sharing, in trucking logistics, even personal vehicles,” he said. Krafcik said those efforts would not involve Waymo making vehicles itself, but declined to say anything about what kinds of partnership and licensing deals his company might strike, or when he expected to put the technology into real use.\nKrafcik also confirmed reports that he has reversed the project’s earlier stance that self-driving technology should be deployed in vehicles lacking steering wheels and pedals. But he said the company remains committed to the idea that it is unsafe to deploy self-driving technology that sometimes requires a human to take over.\n“We are absolutely all in 100 percent on fully driverless solutions,” said Krafcik. “We have found in our past that there are just fundamental issues with that handoff between the software and the human.”\nIn tests several years ago, Google found that employees who were given a chance to test self-driving prototypes became dangerously complacent (see “Lazy Humans Shaped Google’s New Autonomous Car”).\nWaymo’s position against what is called partial autonomy puts it at odds with others working on autonomous car technology, such as Tesla (see “10 Breakthrough Technologies 2015: Autopilot”).\nWaymo’s debut comes at a time when Alphabet’s lead in self-driving technology is narrowing.\nThe project began inside Google’s X research lab in 2009, and its prototypes have covered more than two million miles on public roads. Waymo today shared a video of its first test on public roads without a safety driver inside the vehicle ready to take over, in which a blind man rode in a prototype in Austin, Texas. But established auto companies such as GM, and startups such as Uber, now have sizable self-driving car projects of their own.\nAlthough Alphabet's project is widely seen as the most advanced in the world, the company faces a more complex route to commercialization because it has no existing auto or transportation business (see \"Alphabet's Self-Driving Car Wizard Picked a Great Time to Quit\").\nCarmakers such as Ford and GM could simply slot their self-driving technology into existing production lines. Ride service companies Uber and Lyft say they will add autonomous vehicles to their existing fleets of cars serving customers. Uber is already giving rides in its self-driving prototypes in Pittsburgh (see \"My Self-Driving Uber Needed Human Help\").",
+        "publisherCountry" : "United States",
+        "author" : "Tom Simonite",
+        "siteName" : "MIT Technology Review",
+        "publisherRegion" : "North America",
+        "title" : "Alphabet Sets Up a New Company to Commercialize Autonomous Car Technology"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "73d5bd808875268ff9fa147bd00f79c38719730b63e086b15e4113d312deee64",
+      "_score" : 0.26547372,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Tue, 13 Dec 2016 19:18:00 GMT",
+        "entities" : [ {
+          "entity" : "$ 1.7 million",
+          "appearances" : 2,
+          "type" : "MONEY"
+        }, {
+          "entity" : "McGill University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "University of Manitoba",
+          "appearances" : 3,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Canada Research Chair in Biomedical Engineering Zahra Moussavi",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Alzheimer 's",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Weston Brain Institute",
+          "appearances" : 5,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google Street View",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Monash University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Alzheimer",
+          "appearances" : 3,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "University of ManitobaWebsite",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Australia",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "North America",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Alexandra Stewart",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Moussavi",
+          "appearances" : 5,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Alzehimer",
+          "appearances" : 1,
+          "type" : "PERSON"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Health&Fitness>Disorders",
+            "abs_relevance" : "8",
+            "relevance" : "100",
+            "label" : "Health & Fitness>Disorders"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "07001006",
+            "abs_relevance" : "1.3880204",
+            "relevance" : "100",
+            "label" : "health - disease - alzheimer's disease"
+          }, {
+            "code" : "07018000",
+            "abs_relevance" : "1.0092273",
+            "relevance" : "73",
+            "label" : "health - medical conditions"
+          }, {
+            "code" : "07001000",
+            "abs_relevance" : "0.99565685",
+            "relevance" : "72",
+            "label" : "health - disease"
+          } ]
+        },
+        "pageUrl" : "https://medworm.com/index.php?rid=269350526&cid=d_26_26_f&fid=23279&url=http%3A%2F%2Fwww.cbc.ca%2Fnews%2Fcanada%2Fmanitoba%2Fu-of-m-researcher-to-study-use-of-magnetic-fields-as-alzheimer-s-treatment-1.3895385%3Fcmp%3Drss",
+        "pageUrlDigest" : "73d5bd808875268ff9fa147bd00f79c38719730b63e086b15e4113d312deee64",
+        "text" : "A University of Manitoba researcher will study a possible new treatment for Alzheimer’s disease. (Google Street View)\nA University of Manitoba researcher has received a major funding boost to study a possible new treatment for Alzheimer's disease.\nCanada Research Chair in Biomedical Engineering Zahra Moussavi received $1.7 million from the Weston Brain Institute, a privately financed initiative that targets brain disease.\nThe funding will be used for the first large clinical trial of repetitive transcranial magnetic stimulation (TMS) treatment for Alzehimer's disease.\nCanada Research Chair in Biomedical Engineering Zahra Moussavi received $1.7 million from the Weston Brain Institute for her research. (University of Manitoba/Website)\nTMS treatment involves placing a coil on the patient's scalp to produce a magnetic field.\nThe magnetic fields give off pulses which pass through the skull to induce a current inside the brain, Moussavi explained.\n\"So it indirectly activates the neuronal activity, increases the excitability — or, if it is given at low frequency, it increases inhibition,\" she said.\nThe treatment is non-invasive and feels a bit like poking to the head for about 10 minutes.\nTMS at low or high frequencies has been used to treat other neurological and neurodegenerative disorders but it is still largely at the research stage.\nPilot project showed promising results\nMoussavi did a pilot project with repetitive TMS, which was the first in North America, a few years ago. Without substantive funding she couldn't continue but said it laid the groundwork for the proposal for the Weston Brain Institute.\nThe pilot tested 10 patients and there were promising results. Moussavi said the people at early stages of Alzheimer's had significant improvements, and those with more moderate cases of Alzheimer's improved slightly.\nPeople with advanced Alzehimer's didn't improve, but Moussavi said their condition also didn't decline.\n\"Alzheimer's disease is a neurodegenerative disease. We are basically battling a disease that is going downhill, so any effort to stabilize the condition could be considered an improvement,\" she said.\nWhile Moussavi said the results were \"very encouraging,\" the sample size was too small to know how successful it would be on a large scale.\nThe new funding will allow for the first large placebo-controlled double-blind study to see just how successful TMS treatment could be for Alzheimer's.\n\"The Weston Brain Institute is pleased to support this kind of critical high-risk, high-reward work,\" said Alexandra Stewart, executive director at the Weston Brain Institute, in a news release.\nThe multi-centre clinical trial will involve the University of Manitoba working with McGill University and Monash University in Australia.",
+        "publisherCountry" : "Canada",
+        "author" : "CBC News",
+        "siteName" : "CBC News",
+        "publisherRegion" : "North America",
+        "title" : "U of M researcher to study use of magnetic fields as Alzheimer's treatment"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "60bafd12dfe75172f0e4a5f44c9b029a12ef797921fc733599f3913503b10e61",
+      "_score" : 0.22890383,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Wed, 14 Dec 2016 00:00:00 GMT",
+        "entities" : [ {
+          "entity" : "1970s",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "2000",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "0 %",
+          "appearances" : 2,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "$ 38 million",
+          "appearances" : 1,
+          "type" : "MONEY"
+        }, {
+          "entity" : "18 million",
+          "appearances" : 1,
+          "type" : "MONEY"
+        }, {
+          "entity" : "billion-dollar",
+          "appearances" : 1,
+          "type" : "MONEY"
+        }, {
+          "entity" : "England",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "New York",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "US",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "ies",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Kaiser Permanente 's Care Management Institute",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "National Institute of Mental Health",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Yale",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google",
+          "appearances" : 3,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Integrated Behavioral Health",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "the University of Wisconsin-Madison",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Texas Tech",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Mute 00:00 Current Time 0:00  Duration Time 0:00 Fullscreen Need Text No",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Rezvan Ameli",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Kaiser Permanente",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Judson Brewer",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Jon Kabat-Zinn",
+          "appearances" : 2,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Richard Davidson",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Andrew Bertagnolli",
+          "appearances" : 1,
+          "type" : "PERSON"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Health&Fitness>PsychologyPsychiatry",
+            "abs_relevance" : "3",
+            "relevance" : "100",
+            "label" : "Health & Fitness>Psychology/Psychiatry"
+          }, {
+            "code" : "ReligionAndSpirituality>Buddhism",
+            "abs_relevance" : "2",
+            "relevance" : "67",
+            "label" : "Religion and Spirituality>Buddhism"
+          }, {
+            "code" : "Arts&Entertainment>Books&Literature",
+            "abs_relevance" : "2",
+            "relevance" : "67",
+            "label" : "Arts & Entertainment>Books & Literature"
+          }, {
+            "code" : "Health&Fitness>ADD",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Health & Fitness>A.D.D."
+          }, {
+            "code" : "Business>Marketing",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Business>Marketing"
+          }, {
+            "code" : "PersonalFinance>Insurance",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Personal Finance>Insurance"
+          }, {
+            "code" : "Science>Biology",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Science>Biology"
+          }, {
+            "code" : "Home&Garden",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Home & Garden"
+          }, {
+            "code" : "Travel>ByUSLocale",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Travel>By US Locale"
+          }, {
+            "code" : "Health&Fitness>Disorders",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Health & Fitness>Disorders"
+          }, {
+            "code" : "Arts&Entertainment>Television",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Arts & Entertainment>Television"
+          }, {
+            "code" : "Travel>TravelingWithKids",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Travel>Traveling with Kids"
+          }, {
+            "code" : "Health&Fitness>Depression",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Health & Fitness>Depression"
+          }, {
+            "code" : "Food&Drink>Desserts&Baking",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Food & Drink>Desserts & Baking"
+          }, {
+            "code" : "Business>Construction",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Business>Construction"
+          }, {
+            "code" : "Technology&Computing>WebSearch",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Technology & Computing>Web Search"
+          }, {
+            "code" : "Business>BusinessSoftware",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Business>Business Software"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "07005000",
+            "abs_relevance" : "0.9832373",
+            "relevance" : "100",
+            "label" : "health - medical research"
+          } ]
+        },
+        "pageUrl" : "https://www.wired.com/2016/12/think-youre-enlightened-try-eating-laws/#respond",
+        "pageUrlDigest" : "60bafd12dfe75172f0e4a5f44c9b029a12ef797921fc733599f3913503b10e61",
+        "text" : "Loaded: 0%\nProgress: 0%\n00:00\nPlay\nMute\n00:00\nCurrent Time 0:00\n/\nDuration Time 0:00\nFullscreen\nNeed Text\nNo compatible source was found for this video.\nAdvertisement 0:15\nSurviving Family Occasions with Tips From Google's Mindfulness Mentor\nshare\nplay\nsave\nI am a skip button.\nIf your worst critic over the holidays isn’t your fitness tracker, it may be your relatives. You may only break bread with those wackos once a year—but the emotional repercussions from those brief moments can feel long-lasting.\nYou’re not alone. Nearly half of Americans experience family-induced stress over the holidays. And while your family’s particular brand of baggage may be frustrating, a growing body of scientific evidence suggests that drawing attention to your feelings—mindfulness—can make them easier to manage, by reducing stress while increasing mood and productivity. Scientists are still trying to understand exactly how mindfulness works, but that hasn’t stopped it from growing to a billion-dollar business, with meditation-teaching apps like Headspace raising over $38 million in funding.\nMindfulness’ path from east to west began in the 1970s, when Jon Kabat-Zinn first separated the practice from its religious underpinnings: Buddhism. Scientists have since tried to apply the constructs of neuroscience to mindfulness. Neuroscientist Richard Davidson’s research at the University of Wisconsin-Madison with Buddhist monks identified neurological changes associated with meditation, suggesting that meditation could be learned, like calligraphy or Go. Others found that meditation offset some of the effects of age-related cortical thinning.\nThat research also started to suggest that mindfulness could have a direct impact on mental health. Yi-Yuang Tang, a neuroscientist at Texas Tech, found that meditation affected self-regulation including emotional regulation, attention control, and self-awareness, and psychiatrist Judson Brewer at Yale observed that the default mode network (the pathways that fire when the mind wanders to unhappy places) deactivated during meditation. The idea that mindfulness could change these areas of the brain at all is exciting for psychiatric research dealing with depression, ADHD, anxiety, and Alzheimer’s disease.\nOf course, the problem with approaching mindfulness as therapy is that the inputs are a lot more variable than, say, an antidepressant pill. With over 18 million US adults meditating each year, the demand for experienced teachers has spiked rapidly—and plenty of ordinary people have failed to replicate Kabat-Zinn’s results. “It has become a big marketing tool to get a mindfulness certificate,” says Rezvan Ameli, a clinical psychologist at the National Institute of Mental Health and the author of 25 Lessons In Mindfulness. “In older times it took decades to become a mindfulness teacher.”\nBut Americans are getting closer to standardizing mindfulness care just like any other therapy. In England, where healthcare is universal, mindfulness-based cognitive therapy can only be administered by physicians. Kaiser Permanente, one of the nation’s largest not-for-profit healthcare and health insurance providers, is experimenting with delivering care using mindfulness apps. “In-person classes require people to come to a building at a certain time,” says Andrew Bertagnolli, the director of Integrated Behavioral Health at Kaiser Permanente’s Care Management Institute. “We’re exploring alternative ways to get these concepts out that fit people’s lifestyles. But the tools have to be effective.” And it’s hard to build effective treatments when the precise neural biology of mindfulness remains unknown.\nWhile scientists continue researching mindfulness, though, companies don’t have to wait for the medical establishment to catch up. They can just recruit their own, highly experienced mindfulness coach, like Chade-Meng Tan. Meng joined Google as an engineer in 2000—he was employee number 107—before launching “Search Inside Yourself,” a mindfulness-based emotional intelligence course for Google employees. Despite its launch nearly a decade ago, the course continues to fill up almost instantly, and it’s evolved into a New York Times bestselling book and institute by the same name.\nIn the video up top, Meng explores how self-love, loving-kindness, and awareness of mortality can combat the “my family is crazy”-ies. These exercises can be practiced in real-time because that semblance of calm you’ve worked so hard to cultivate can go out the window in the heat of a moment. “You think you’re enlightened?” Meng asks. “Go to a family reunion and see how enlightened you are.”\nChade-Meng Tang’s second book, Joy on Demand (HarperOne) was released earlier this year.",
+        "publisherCountry" : "United States",
+        "author" : "Blanca Myers",
+        "siteName" : "WIRED",
+        "publisherRegion" : "North America",
+        "title" : "Think You’re Enlightened? Try Eating With Your In-Laws"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "55804cd43a122565af39a050746a5a0724521ca75d475b775b5ead9c5408d4d2",
+      "_score" : 0.21568228,
+      "_source" : {
+        "text" : "Sarah Parcak (Photography by Melissa Golden; Satellite image courtesy of Sarah Parcak)\nSarah Parcak is an Egyptologist, but her lab is more Silicon Valley than Valley of the Kings: sleek desks, beanbag chairs, bountiful snacks and a row of computer screens that, even after 9 on a Monday morning, still exhibit glassy black stares. In air-conditioned downtown Birmingham, there is no need to rise at 4 a.m. to beat the punishing Nile Delta sun. Nor is it likely that anyone working here will inhale dangerous bat dung spores, or contract a nasty parasite while transecting flooded rice fields, or face a tombside run-in with a rabid dog. In this cool, quiet room, where some of the most exciting modern explorations of the ancient world are underway, the closest thing to a historic artifact is Parcak’s fat laptop, which she hasn’t had time to replace in the last seven years.\n“Everybody makes fun of me because it’s a beast,” she says as the machine sputters and churns. “But it still works, and everything is on here.”\nAnd she means everything.\nExploiting subtle and, to the naked eye, often invisible differences in topog-raphy, geology and plant life, Parcak, a 38-year-old University of Alabama at Birmingham professor of anthropology, has used satellite imagery and other remote sensing tools to expose a stunning array of forgotten sites from multiple lost cultures. In Egypt, her specialty area, she and her team have expanded the civilization’s known scope, spotting more than 3,000 ancient settlements, more than a dozen pyramids and over a thousand lost tombs, and uncovered the city grid of Tanis, of Raiders of the Lost Ark fame. After the Arab Spring, in 2011, she created, via satellite, a first-of-its-kind countrywide looting map, documenting how plundered tombs first appeared as little black pimples on the landscape and then spread like a rash. She has pointed out the ruins of an amphitheater at the Roman harbor of Portus to archaeologists who had spent their whole careers digging above it, mapped the ancient Dacian capital of what is now Romania, and—using hyperspectral camera data—aided in the ongoing search for prehistoric hominid fossils in eroded Kenyan lake beds.\nThis year alone, her satellite images revealed, in desolate Newfoundland, what many believe to be the second-known Viking site in North America, as well as a mammoth ceremonial platform in Petra that millions of visitors to the famous Jordanian city, not a few of them professional excavators, completely missed. She is now busy satellite-mapping the whole of Peru for a crowd-sourcing project called GlobalXplorer, set to debut in early 2017, that may yield her most audacious set of revelations yet. Meanwhile, she continues to happen upon new finds, sometimes while idly thumbing through Google Earth on her iPhone at the airport.\nIn a discipline where discovery is traditionally confined to a two-meter-square excavation pit, Parcak treats the heavens as her trenches, sieving pixels like sand. “Sarah is doing this on a scale bigger than anybody else,” says Patty Gerstenblith, director of DePaul University’s Center for Art, Museum and Cultural Heritage Law.\nIn the lab, Parcak’s ancient computer finally regains consciousness, and she grins, shoving back sand-colored hair. I wonder which fancy new data set we’ll see first. But instead she’s calling up on the screen a hand-drawn Napoleonic map of the Nile, albeit in digitized form. “It’s kind of like French Google Earth from 200 years ago,” she says. She points out a “village ruiné” that has caught her eye: She hopes the image will lead her closer to the city of Itjtawy, the lost capital of Middle Kingdom Egypt.\n“It doesn’t matter how modern our images are,” she explains. “We always go back to every map that’s ever been made, because they contain information that no longer exists.” Only after scrutinizing local architecture and landscape changes over millennia will she study data-rich satellite images that reveal latent terrestrial clues. She’s already used NASA radar to locate a wealthy suburb of Itjtawy, a find she has confirmed on the ground by analyzing soil samples that reveal bits of worked amethyst and other valued stones. Along with cross-referencing colonial-era surveys, the next step is to layer satellite images to make a 3-D topographical map of the area, which might indicate where the ancients chose to build on rises in the ground, to escape Nile flooding.\n“People think I’m Harry Potter, and I wave a wand over an image and something appears and it looks easy,” she says. “Any discovery in remote sensing rests on hundreds of hours of deep, deep study. Before looking at satellite imagery of a cemetery or a pyramid field, you have to already understand why something should be there.”\nCompared with her minimalist lab, Parcak’s Birmingham home, which she shares with her husband, an archaeologist named Gregory Mumford, is much more the stereotypical Egyptologist’s lair, piled with jackal statuettes and papyri and, incongruously, a model ruin of a medieval stone castle (actually her 4-year-old son’s Playmobil set). Among her favorite touches is a framed antique Sphinx sketch. In this artist’s interpretation, the Sphinx’s eyes are not stony and unseeing but bright and inquisitive and almost alarmed, as though glimpsing something startling from way up there. Archaeologists have long pined for a bird’s-eye view like this, deploying hot air balloons, kites, helicopters, powered parachutes and blimps to snap pictures of their sites. But, until recently, satellite images were not sharp enough to reveal the small features these researchers sought, like mud brick walls.\nParcak always assumed that she would find mummies the old-fashioned way—by descending into the earth, not orbiting by satellite some 450 miles above. She had her first tomb dream when she was about 5, which was peculiar, because no mummy inhabits her hometown of Bangor, Maine. “I wasn’t taken to a museum,” says this daughter of restaurateurs turned social workers. “Apparently I just started talking about Egypt.”\nAt Yale University, Parcak studied Egyptology and archaeology and embarked on her first of many Egyptian digs. But in her final year she spied a class on “remote sensing,” the study of the earth from afar. Parcak’s Yale professor warned that an archaeology student would flounder in his course, which was a tangle of algorithms, electromagnetic spectrum analyses and software programs. Parcak bombed the midterm. Toward the end of a semester of despair and stubborn cramming, though, came a moment of clarity: The whole field popped into view, like the base of an excavated pyramid. Parcak realized that her home turf of Egypt, because it’s an area of major Western government surveillance interest, offered some of the richest available satellite data on the planet. “All of a sudden,” she says, “I understood remote sensing.”\nToday she toggles between cutting-edge satellite data and classic fieldwork. Often she’ll start with an open-access source like Google Earth to get a sense of the landscape, then zero in on a small area and, for a few hundred to several thousand dollars, purchase additional images from a private satellite company called DigitalGlobe. To show me a key procedure, she yanks out her iPhone and scrolls up the western European shoreline. “We are a looooong way from Egypt,” she says. A few years ago, after consulting with Norse specialists and studying Viking architecture, Parcak began to scrutinize a farmer’s plot in Papa Stour, among the remotest of Scotland’s Shetland Islands. She ordered infrared satellite imagery of the tweedy green and brown fields. After some computer processing, a bright pink line revealed itself.\nPlants growing over buried structures tend to be less healthy because their root systems are stunted. These differences in vigor are seldom apparent in visible light, the narrow part of the electromagnetic spectrum that the human eye can see: To humans, plants tend to look evenly green. But certain satellites record the infrared wavelengths reflected by the plant’s chlorophyll. Using false colors and software programs, Parcak tweaks these differences until the healthy plants look redder on screen, and sicker ones appear pink. Excavating near the fuchsia dash of less robust vegetation, Parcak and her colleagues unearthed a stout Viking wall, soapstone bowls and a faceted carnelian bead. These same spectral patterns helped focus Parcak’s search for the possible Viking site in Newfoundland, where she later dredged up the apparent remains of a hearth and some 20 pounds of roasted bog iron, a good indicator of Viking iron-making.\nAnd because Parcak frequently works in deserts, she is constantly tweaking her methods for areas where it’s not always possible to probe plant life. Her remote imagery can expose moisture differences in surfaces above buried mud bricks, eerily revealing foundations of vanished buildings. In other climates, frost lines may highlight ruins, or chemicals from shell middens or certain types of stone may bleed into the surrounding soil, offering a telltale spectral signature.\n“A lot of us looking at one of these images would say, ‘Nice desert!’” says Eric Cline, an archaeologist at George Washington University. “But then Sarah hits a button and all of a sudden there’s a city right there. She is an artist as well as an archaeologist, because it is an artist’s job to interpret these things.”\nParcak often confirms discoveries made at her desk by visiting previously unseen sites and coring the earth or otherwise scouting for artifacts, a process called “ground truthing.” Her hit rate in the field is near 100 percent. “When I was a little kid,” she says, “you could show me a patch of three-leaf clover, and I would find the four-leaf clover.”",
+        "humanLanguage" : "en",
+        "title" : "Space Archaeologist Sarah Parcak Uses Satellites to Uncover Ancient Egyptian Ruins",
+        "entities" : [ {
+          "entity" : "2017",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "last seven years",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "2011",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "Monday",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "100 percent",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "4 a.m.",
+          "appearances" : 1,
+          "type" : "TIME"
+        }, {
+          "entity" : "morning",
+          "appearances" : 1,
+          "type" : "TIME"
+        }, {
+          "entity" : "Patty Gerstenblith",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Harry Potter",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Gregory Mumford",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Sarah Parcak",
+          "appearances" : 6,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Eric Cline",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "several thousand dollars",
+          "appearances" : 1,
+          "type" : "MONEY"
+        }, {
+          "entity" : "Scotland",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Romania",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Bangor",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Tanis",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Maine",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Egypt",
+          "appearances" : 4,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Papa Stour",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Shetland Islands",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "desolate Newfoundland",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "North America",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Newfoundland",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Silicon Valley than Valley",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Parcak",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Itjtawy",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Peru",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Middle Kingdom Egypt",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Petra",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Birmingham",
+          "appearances" : 3,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Google Earth",
+          "appearances" : 3,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Arab Spring",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "DePaul University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Yale University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Parcak",
+          "appearances" : 5,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Sphinx",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "George Washington University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Nile Delta",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "DigitalGlobe",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Uncover Ancient Egyptian Ruins Sarah Parcak",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Norse",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "NASA",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Yale",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "University of Alabama",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Cultural Heritage Law",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Nile",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Playmobil",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Pets>Dogs",
+            "abs_relevance" : "5",
+            "relevance" : "100",
+            "label" : "Pets>Dogs"
+          }, {
+            "code" : "Food&Drink",
+            "abs_relevance" : "5",
+            "relevance" : "100",
+            "label" : "Food & Drink"
+          }, {
+            "code" : "Arts&Entertainment>FineArt",
+            "abs_relevance" : "4",
+            "relevance" : "80",
+            "label" : "Arts & Entertainment>Fine Art"
+          }, {
+            "code" : "LawGovt&Politics",
+            "abs_relevance" : "3",
+            "relevance" : "60",
+            "label" : "Law, Govt & Politics"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "01001000",
+            "abs_relevance" : "0.6641134",
+            "relevance" : "100",
+            "label" : "arts, culture and entertainment - archeology"
+          } ]
+        },
+        "author" : "Abigail Tucker",
+        "siteName" : "Smithsonian",
+        "pageUrl" : "http://www.smithsonianmag.com/innovation/space-archaeologist-sarah-parcak-winner-smithsonians-history-ingenuity-award-180961120/",
+        "pageUrlDigest" : "55804cd43a122565af39a050746a5a0724521ca75d475b775b5ead9c5408d4d2"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "fb59fc5c102cc271b1a9b60bb71282e945d9d1373037c543f7bdffd0ca908ee8",
+      "_score" : 0.21353194,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Wed, 14 Dec 2016 00:00:00 GMT",
+        "entities" : [ {
+          "entity" : "Uber",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Pittsburgh",
+          "appearances" : 2,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "San Francisco",
+          "appearances" : 3,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "San Francisco Uber",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Boston",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Singapore",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "California",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "2017",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "December 8 Uber",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "Robotic Taxis Are Headed",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Volvo",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Department of Motor Vehicles",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Uber",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "MIT Technology Review",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "MIT",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Fiat Chrysler",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Chrysler Pacifica",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Bloomberg",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Business",
+            "abs_relevance" : "5",
+            "relevance" : "100",
+            "label" : "Business"
+          }, {
+            "code" : "Automotive>CarCulture",
+            "abs_relevance" : "2",
+            "relevance" : "40",
+            "label" : "Automotive>Car Culture"
+          }, {
+            "code" : "Sports>Football",
+            "abs_relevance" : "2",
+            "relevance" : "40",
+            "label" : "Sports>Football"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "04011002",
+            "abs_relevance" : "1.6709654",
+            "relevance" : "100",
+            "label" : "economy, business and finance - manufacturing and engineering - automotive equipment"
+          } ]
+        },
+        "pageUrl" : "https://www.technologyreview.com/s/603136/ubers-robotic-taxis-are-headed-to-san-francisco/",
+        "pageUrlDigest" : "fb59fc5c102cc271b1a9b60bb71282e945d9d1373037c543f7bdffd0ca908ee8",
+        "text" : "Uber is expanding its self-driving taxi service to San Francisco.\nThe ride-hailing company has announced that people hailing an UberX in San Francisco may soon find an autonomous car pulling up to greet them. The venture will be the first outing of the company’s latest autonomous vehicle—Volvo XC90s, bedecked with LIDAR systems and seven cameras to sense the world around them. According to the Wall Street Journal, just five cars will hit the city’s streets initially, with more being added over time.\nAutonomous vehicles could transform the taxi industry by removing the need for human drivers. The company’s Pittsburgh trial, which has been underway for almost three months, and now this effort, are both attempts by Uber to widely deploy self-driving vehicles before its rivals. The MIT spin-off nuTonomy is also running small-scale autonomous taxi services in Singapore and Boston.\nThe cars are far from perfect. When MIT Technology Review’s Will Knight took a ride on one of those vehicles, he said that “the car performed admirably in many difficult situations,” but also noted that “several times the person behind the wheel needed to take control: once so the car didn’t become stuck behind a truck, and once to avoid another vehicle making a sudden turn.”\nThere’s another sticking point as well. According to California’s Department of Motor Vehicles, as of December 8 Uber did not hold a permit for testing its autonomous cars in the state. In a statement, Uber said that it \"understand[s] that there is a debate over whether or not we need a testing permit to launch self-driving Ubers in San Francisco,\" adding that it has \"looked at this issue carefully\" and decided that it doesn’t believe one is required. It remains to be seen if state officials will agree.\nThe ride-hailing firm may face more self-driving competition before long. Just yesterday, it was announced that the self-driving car technology being developed by Google will now operate as an independent company called Waymo. The news signals intent to commercialize its research, and sources tell Bloomberg that the company plans to deploy a ride-sharing service with Fiat Chrysler, using semi-autonomous Chrysler Pacifica minivans, as early as 2017.\n(Read more: Uber, The Wall Street Journal, “Uber’s Pittsburgh Project Is a Crucial Test for Self-Driving Cars,” “My Self-Driving Uber Needed Human Help,” “What to Know Before You Get In a Self-driving Car”)",
+        "publisherCountry" : "United States",
+        "author" : "Jamie Condliffe",
+        "siteName" : "MIT Technology Review",
+        "publisherRegion" : "North America",
+        "title" : "Uber’s Robotic Taxis Are Headed to San Francisco"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "2c67972ebd51e89d12636897f04fe3bf2503f8c372d0d557f83100aa86cd5dae",
+      "_score" : 0.18276677,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Fri, 09 Dec 2016 22:11:37 GMT",
+        "entities" : [ {
+          "entity" : "39 percent",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "46 percent",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "29 percent",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "UK",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Reuters Health",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "STI",
+          "appearances" : 3,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "University College London Department of Infection and Population Health",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "the University of North Carolina",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Net Foundation",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "UK National Health Service",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Chapel Hill",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "2013",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "November 24 , 2016",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "September 2014",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "2014",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "December 8 , 2016",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "Kate Muessig",
+          "appearances" : 3,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Jo Gibbs",
+          "appearances" : 4,
+          "type" : "PERSON"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Technology&Computing>CellPhones",
+            "abs_relevance" : "3",
+            "relevance" : "100",
+            "label" : "Technology & Computing>Cell Phones"
+          }, {
+            "code" : "LawGovt&Politics",
+            "abs_relevance" : "2",
+            "relevance" : "67",
+            "label" : "Law, Govt & Politics"
+          }, {
+            "code" : "Health&Fitness>Sexuality",
+            "abs_relevance" : "2",
+            "relevance" : "67",
+            "label" : "Health & Fitness>Sexuality"
+          }, {
+            "code" : "Health&Fitness>AIDSHIV",
+            "abs_relevance" : "2",
+            "relevance" : "67",
+            "label" : "Health & Fitness>AIDS/HIV"
+          }, {
+            "code" : "Health&Fitness>Disorders",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Health & Fitness>Disorders"
+          }, {
+            "code" : "Food&Drink",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Food & Drink"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "04010006",
+            "abs_relevance" : "0.82264006",
+            "relevance" : "100",
+            "label" : "economy, business and finance - media - online"
+          }, {
+            "code" : "07003000",
+            "abs_relevance" : "0.6303379",
+            "relevance" : "77",
+            "label" : "health - health treatment"
+          }, {
+            "code" : "07005000",
+            "abs_relevance" : "0.55400586",
+            "relevance" : "67",
+            "label" : "health - medical research"
+          } ]
+        },
+        "pageUrl" : "https://medworm.com/index.php?rid=267735156&cid=d_26_26_f&fid=23271&url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2Freuters%2FhealthNews%2F%7E3%2FJaDU0aiP6rg%2Fus-health-sti-mobile-apps-idUSKBN13Y2P4",
+        "pageUrlDigest" : "2c67972ebd51e89d12636897f04fe3bf2503f8c372d0d557f83100aa86cd5dae",
+        "text" : "(Reuters Health) – Of nearly 90 mobile phone apps focusing on sexually transmitted infections (STIs), about a third had inaccurate and incomplete information in a recent study.\nThis significant variation in content, quality and medical advice could lead to sexual health risks for those who search for answers online before talking to a doctor.\n“Due to the stigmatized nature of STIs, apps could be a great medium for providing accurate information to those most at risk,” said lead author Jo Gibbs of the University College London Department of Infection and Population Health in the UK.\n“However, there is very little guidance available for the consumer to assess the accuracy and quality of information provided by apps, and to identify and distinguish those which are likely to provide legitimate, trustworthy content,” she told Reuters Health.\nIn September 2014, the research team looked on Google Play and iTunes for STI and genital infection apps that featured information about testing, diagnosis and treatment. They analyzed 87 apps to see if they met the 19 principles of the Health on the Net Foundation, which require health apps to include medical qualifications, confidentiality, cited facts and contact information.\nThe team also compared diagnosis and treatment information in the apps to what’s offered on the UK National Health Service’s STI website.\nAbout 29 percent of apps met more than six Health on the Net criteria, and content varied widely. About 39 percent, or 34 of 87 apps, covered one or two infections such as gonorrhea and genital warts, and 46 percent covered multiple STIs. Five apps focused on STI testing in particular.\nImportantly, 13 apps were fully accurate, 46 were mostly accurate and 28 were partially accurate, the researchers report in the journal Sexually Transmitted Infections.\nOf the 87 apps examined, 25 contained more than one piece of potentially harmful information, for example, “certain medicinal herbs may also be beneficial in creating a strong immune response against HSV in non-infected partners,” or advice that getting treatment for genital warts will cause “a very bad time” and “will shatter your relationships.”\nApps that were available on both iOS and Android phones were more accurate than single-platform apps. In total, only one app provided completely accurate information about chlamydia, the most common STI in the UK. No apps contained documentation or citations.\nFuture studies could show how much has changed with STI app availability and accuracy since 2014, Gibbs noted.\n“As with any review of apps, there is a lag between conducting the review and the results being published,” she said. “The landscape may have changed during this time.”\nThe UK National Health Service estimates 102 billion downloads of health-related apps worldwide. The organization plans to develop a library of endorsed apps for a variety of medical conditions in the future.\n“This is definitely an important topic, and it’s great to see that an updated review has been done,” said Kate Muessig of the University of North Carolina at Chapel Hill, who wasn’t involved with the study. Gibbs and colleagues based the STI study methods on previous research that Muessig has conducted about HIV apps.\n“Most available HIV/STD apps have failed to attract user attention and positive reviews,” Muessig and colleagues wrote in 2013. “Public health practitioners should work with app developers to incorporate elements” that reduce risk, improve app inclusiveness and increase interactivity.\nIn the meantime, smartphone users looking for STI information should probably stick to official online sources, Gibbs added.\n“Although some of the apps we reviewed were of high quality, these were hard to identify,” she said. “We would recommend consumers looking for information on STIs to access endorsed health websites or their local sexual health services.”\nSOURCE: bit.ly/2hfvtwz and bit.ly/2hcqGvc Sexually Transmitted Infections, online November 24, 2016 and December 8, 2016.",
+        "publisherCountry" : "United States",
+        "author" : "Carolyn Crist",
+        "siteName" : "Reuters",
+        "publisherRegion" : "North America",
+        "title" : "STI apps may have inaccurate, harmful information"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "fa41a6a7b7fbf458fe9c8d7174e1598156e25ce979ca41095c89fec69d3461cd",
+      "_score" : 0.18092987,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Wed, 14 Dec 2016 00:00:00 GMT",
+        "entities" : [ {
+          "entity" : "2011",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "2014",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "2 percent",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "$ 160 million",
+          "appearances" : 1,
+          "type" : "MONEY"
+        }, {
+          "entity" : "$ 199",
+          "appearances" : 1,
+          "type" : "MONEY"
+        }, {
+          "entity" : "$ 299",
+          "appearances" : 1,
+          "type" : "MONEY"
+        }, {
+          "entity" : "Philadelphia",
+          "appearances" : 1,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Amazon",
+          "appearances" : 2,
+          "type" : "LOCATION"
+        }, {
+          "entity" : "Samsung",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Stanford",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Intel",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "MIT Initiative",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Watson",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "San Jose State University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Artificial Intelligence Engineer Nanodegree",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "IBM",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Mercedes-Benz",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Digital Economy",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Penn State University",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Tech Industry Sebastian Thrun",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "AT&T",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Udacity",
+          "appearances" : 7,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Watson",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "David Passmore",
+          "appearances" : 2,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Erik Brynjolfsson",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Sebastian Thrun",
+          "appearances" : 5,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Dan Haddigan",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Rob High",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Udacity",
+          "appearances" : 2,
+          "type" : "PERSON"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Education",
+            "abs_relevance" : "18",
+            "relevance" : "100",
+            "label" : "Education"
+          }, {
+            "code" : "Technology&Computing",
+            "abs_relevance" : "12",
+            "relevance" : "67",
+            "label" : "Technology & Computing"
+          }, {
+            "code" : "Home&Garden",
+            "abs_relevance" : "8",
+            "relevance" : "44",
+            "label" : "Home & Garden"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "05010001",
+            "abs_relevance" : "0.9441524",
+            "relevance" : "100",
+            "label" : "education - teaching and learning - students"
+          }, {
+            "code" : "05000000",
+            "abs_relevance" : "0.89799774",
+            "relevance" : "95",
+            "label" : "education"
+          }, {
+            "code" : "13010000",
+            "abs_relevance" : "0.58220255",
+            "relevance" : "62",
+            "label" : "science and technology - technology (general)"
+          }, {
+            "code" : "05007000",
+            "abs_relevance" : "0.5555912",
+            "relevance" : "59",
+            "label" : "education - university"
+          } ]
+        },
+        "pageUrl" : "https://www.technologyreview.com/s/603064/online-education-pioneer-boots-up-a-jobs-program-for-the-tech-industry/",
+        "pageUrlDigest" : "fa41a6a7b7fbf458fe9c8d7174e1598156e25ce979ca41095c89fec69d3461cd",
+        "text" : "Sebastian Thrun helped stoke the hype around massive online open college courses—but has pivoted his own startup to focus on vocational training instead.\nSebastian Thrun smiles a little awkwardly as he explains why he no longer believes in the educational revolution he sold to the world just a few years ago.\nThe lean, balding robotics pioneer has been instrumental in convincing investors, governments, and colleges to splurge millions on the online college education platforms dubbed MOOCs, or massive online open courses, billed as opening up quality education to anyone on Earth (see “The Crisis in Higher Education”). Thrun, a Stanford professor, helped birth the frenzy when he put his introductory artificial intelligence course online in 2011, accidentally attracting 160,000 students.\nAmazed by the response, he took time out from Stanford and also from a side job working on autonomous cars and other research at Google to found Udacity, a company offering MOOCs in computing, math, and physics.\nIt attracted $160 million in venture capital investment and teamed up with San Jose State University to offer courses valid for college credit. But within two years of Udacity’s launch, Thrun began to question whether MOOCs could make much of a mark on the world in their current form.\nUdacity’s completion rates were as low as 2 percent, and the people who made it through were mostly the kind of well-motivated students already served well by conventional institutions. Meanwhile, it was clear that many people sought out MOOCs to improve their employment prospects, but providers seemed more focused on emulating colleges than serving that need.\nThrun, now Udacity’s president, didn’t waste much time turning the company away from its founding ideas to market itself as a gateway to a new job in the tech industry. The company partners with employers such as Amazon and Facebook to offer “nanodegrees” that are tightly vocational. “We are happy we moved out of the MOOC space,” he says. “We are able to outpace universities with curricula that you wouldn't find in any university, that empower students to find jobs.”\nUdacity works with its corporate partners to create courses intended to produce job candidates with skills those same companies find in short supply, such as machine learning and mobile app development. More than 30 companies, such as Intel and Samsung, have signed up with Udacity as “hiring partners” that gain access to graduating students before they hit the wider job market.\nThrun says this model allows Udacity to fill an important—and lucrative—education gap that college-style MOOCs don’t. He argues that technology has created new jobs and changed existing ones faster than colleges can keep up, and that many people can’t afford the time and expense of conventional education anyway.\n“There's growing mismatch between people's educational needs and this idea of once-in-a-lifetime education at college,” he says. “That made sense when people had one job for life. Now technology moves fast and people are forced into new jobs quickly.”\nTell us why or why not.\nUdacity currently offers 12 nanodegrees, ranging from front-end Web developer (created with help from companies including AT&T and Google) to self-driving car engineer (shaped by partners including Mercedes-Benz and Uber’s trucking division, Otto). Some 3,000 people have graduated from nanodegree programs in the past two years, and 13,000 more are currently enrolled. Around 900 people have gotten jobs related to the program they studied.\nStudents pay $199 a month for most nanodegrees, and work through courses at their own pace. Taking six months to finish is typical, and to give students additional motivation, for most courses the company refunds half your tuition if you finish within a year. For some courses, paying $299 a month gives you the right to a full refund if you don’t get a job within six months of graduation. (So far only one person has taken up that deal.) Student fees provide most of Udacity’s revenue, although some partner companies contribute financially as well. By contrast, many coding and other technology boot camps require students to enroll full-time, and fees can be much higher.\nDan Haddigan signed up for Udacity’s front-end Web developer nanodegree late in 2014 in the hope of finding better prospects than he had working as an art seller, a job he landed after graduating with a fine arts degree. He praises the personal feedback provided on coding exercises and project work, and career counseling offered once a course is done.\nHaddigan completed his course in about five months, working on it before and after work most days. Worries that his atypical education might hold him back evaporated when he got the first position he applied for after completing the Udacity class. He is now a Web developer with IntuitSolutions, a Philadelphia company specializing in creating e-commerce sites.\nHaddigan thinks that a growing need for technology skills has made companies more open-minded to alternative backgrounds like his own. “They are willing to overlook things like whether you have a formal degree as long as you have the know-how,” he says.\nThat kind of thinking led IBM’s Watson group to work with Udacity to co-create the Artificial Intelligence Engineer Nanodegree (Amazon and Chinese ride-sharing company DiDi also contributed). Rob High, chief technology officer for the Watson group, says researchers inventing new artificial intelligence techniques will continue to come from conventional, elite educational backgrounds. But large numbers of less elite programmers and managers also need to understand the technology if IBM and others are to deploy it broadly, he says.\nThe way Udacity’s new model neatly matches the motivations of students and tech companies suggests it could become well established even outside technology, says David Passmore, a professor of education at Penn State University.\nTell us what you think.\nThe company’s reasonable tuition and sharp focus on jobs has value in an era when tuition is more expensive than ever, he says. The way Udacity works with companies to create courses provides them a relatively easy and direct way to shape the skills in the job market, says Passmore, who could see it easily adapted to industries like manufacturing.\nThrun doesn’t have plans to expand beyond technology, where Udacity’s brand and his network are strongest, but Erik Brynjolfsson, director of the MIT Initiative on the Digital Economy, says that still leaves a large market, since technology skills are now needed in every industry (see “How Technology Is Destroying Jobs”).",
+        "publisherCountry" : "United States",
+        "author" : "Tom Simonite",
+        "siteName" : "MIT Technology Review",
+        "publisherRegion" : "North America",
+        "title" : "Online Education Pioneer Boots Up a Jobs Program for the Tech Industry"
+      }
+    }, {
+      "_index" : "pfizer",
+      "_type" : "web_page",
+      "_id" : "9642e67ff5c58a2837c09a1541e9cd64d8f2a5f9bf17bf73edb4ba1c244277de",
+      "_score" : 0.17794327,
+      "_source" : {
+        "humanLanguage" : "en",
+        "date" : "Tue, 13 Dec 2016 00:00:00 GMT",
+        "entities" : [ {
+          "entity" : "70-80 %",
+          "appearances" : 1,
+          "type" : "PERCENT"
+        }, {
+          "entity" : "FSA",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Google",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Food Standards Agency",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "UK Food Standards Agency",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "Foods Standards Agency",
+          "appearances" : 1,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "BBC",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "BBC World Service",
+          "appearances" : 2,
+          "type" : "ORGANIZATION"
+        }, {
+          "entity" : "2013",
+          "appearances" : 1,
+          "type" : "DATE"
+        }, {
+          "entity" : "Elizabeth Cassin",
+          "appearances" : 1,
+          "type" : "PERSON"
+        }, {
+          "entity" : "Sian Thomas",
+          "appearances" : 4,
+          "type" : "PERSON"
+        } ],
+        "classification" : {
+          "IAB_en" : [ {
+            "code" : "Health&Fitness>Disorders",
+            "abs_relevance" : "3",
+            "relevance" : "100",
+            "label" : "Health & Fitness>Disorders"
+          }, {
+            "code" : "Style&Fashion>Accessories",
+            "abs_relevance" : "2",
+            "relevance" : "67",
+            "label" : "Style & Fashion>Accessories"
+          }, {
+            "code" : "Technology&Computing>WebSearch",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Technology & Computing>Web Search"
+          }, {
+            "code" : "Society>SeniorLiving",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Society>Senior Living"
+          }, {
+            "code" : "Science",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Science"
+          }, {
+            "code" : "LawGovt&Politics",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Law, Govt & Politics"
+          }, {
+            "code" : "Health&Fitness>WomensHealth",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Health & Fitness>Women's Health"
+          }, {
+            "code" : "Food&Drink",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Food & Drink"
+          }, {
+            "code" : "Family&Parenting>Pregnancy",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Family & Parenting>Pregnancy"
+          }, {
+            "code" : "Automotive",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Automotive"
+          }, {
+            "code" : "Arts&Entertainment>Books&Literature",
+            "abs_relevance" : "1",
+            "relevance" : "33",
+            "label" : "Arts & Entertainment>Books & Literature"
+          } ],
+          "IPTC_en" : [ {
+            "code" : "07001000",
+            "abs_relevance" : "0.87386423",
+            "relevance" : "100",
+            "label" : "health - disease"
+          }, {
+            "code" : "07001001",
+            "abs_relevance" : "0.5388179",
+            "relevance" : "62",
+            "label" : "health - disease - communicable diseases"
+          } ]
+        },
+        "pageUrl" : "https://medworm.com/index.php?rid=268901558&cid=d_26_26_f&fid=23277&url=http%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fblogs-trending-38227094",
+        "pageUrlDigest" : "9642e67ff5c58a2837c09a1541e9cd64d8f2a5f9bf17bf73edb4ba1c244277de",
+        "text" : "If you're suffering with projectile vomiting and watery diarrhoea, reach for your phone and post an update.\nNo really - while it won't ease your pain, a tweet or two could help researchers track the spread of the winter vomiting bug.\nThe UK Food Standards Agency has been using social media to track levels of norovirus, a highly contagious illness which spreads via food and through person-to-person contact. The symptoms usually last for one to two days, with the person remaining infectious for a further two days.\nIf you've ever had it, you know what it means: vomiting, diarrhoea, pain, and the general feeling of having been run over by a car.\nListen to More or Less\nHear this story and others from the world of numbers and statistics from the BBC World Service.\nIn 2013, the Foods Standards Agency started looking at new ways to track the virus. They analysed Google searches but found that social media was a better source of data. \"It's more about the immediacy… what's happening in their lives right now,\" says Dr Sian Thomas.\nOn the other hand, \"if you're in hospital or a nursing home and you're sick, then they might take a sample and send it to a laboratory for analysis,\" she says.\nThe FSA compared this official sample data with the volume of relevant tweets and concluded that \"there's a really good correlation between the number of mentions on Twitter of 'sick' and a range of search terms, with the incidents of illness as defined by laboratory reports.\"\n\"Our current estimate is that between 70-80% of the time, we are able to accurately predict an increase the next week.\"\nFollow BBC Trending on Facebook\nJoin the conversation on this and other stories here.\nThe model searches for Tweets containing words and phrases relating to norovirus symptoms. \"There's a whole range of things\", says Dr Thomas. \"It's mostly about the impact that being sick has on other things that are going on around them.\"\nResearchers exclude tweets which include references to pregnancy, anxiety, and alcohol. According to Dr Thomas, the task of filtering \"gets more tricky towards Christmas.\"\nBy tracking the volume of symptom-related tweets, the Food Standards Agency can try to intervene before a national outbreak.\n\"In order to have the biggest impact, it's better to roll out that intervention when the numbers of cases of norovirus are going up… when we've got three consecutive weeks of a predicted increase,\" says Dr Thomas.\nIf the team predict a national outbreak, they plan to run a digital campaign explaining how to look after yourself.\n\"The intervention is really quite basic,\" she notes. \"It's about washing your hands, it's about looking after yourself, and not coming in to contact with other people while you're sick.\"\nNorovirus can be dangerous for children or the elderly. Fortunately for healthy adults though, the illness is usually a minor, if messy, inconvenience.\nBlog by Elizabeth Cassin, More or Less, BBC World Service\nDreams of spending Christmas at home with family will come true for at least ten people who'd thought they were going to be spending the festive season apart, all thanks to a businessman's enterprising scheme.READ MORE\nYou can follow BBC Trending on Twitter @BBCtrending, and find us on Facebook. All our stories are at bbc.com/trending.",
+        "publisherCountry" : "United Kingdom",
+        "author" : "BBC Trending",
+        "siteName" : "BBC News",
+        "publisherRegion" : "Northern Europe",
+        "title" : "Tweet when you vomit: It's your duty"
+      }
+    } ]
+  }
+}
