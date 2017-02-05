@@ -983,6 +983,19 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
                                         .append("div")
                                         .append("table")
                                         .attr("class","table table-condensed party-summary")
+						
+					    lowresult_data.append('thead')
+                                .selectAll("tr")
+                                .data([['Party','Seats','Seat Share']]).enter()
+                                .append("tr")
+                                .selectAll("th")
+                                    .data(function(d,l) { return d }).enter()
+                                    .append('th')
+                                    .style("max-width",'10px')
+                                    .style("font-size",'15px')
+									.append("font")
+									.attr("color","#636363")
+                                    .text(function(o,i) { return o });
 
                         lowresult_data.append('tbody')
                                 .selectAll("tr")

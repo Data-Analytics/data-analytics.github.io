@@ -1354,13 +1354,15 @@ var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','NCO','JNP'
     
                   lowresult_data.append('thead')
                                 .selectAll("tr")
-                                .data([['PARTY','SEATS','SEAT SHARE']]).enter()
+                                .data([['Party','Seats','Seat Share']]).enter()
                                 .append("tr")
                                 .selectAll("th")
                                     .data(function(d,l) { return d }).enter()
                                     .append('th')
                                     .style("max-width",'10px')
                                     .style("font-size",'15px')
+									.append("font")
+									.attr("color","#636363")
                                     .text(function(o,i) { return o });
 
                         lowresult_data.append('tbody')
