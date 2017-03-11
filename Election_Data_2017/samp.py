@@ -1,5 +1,5 @@
 import pandas as pd
-for states in ['Punjab','Goa','Manipur','Uttar_Pradesh','Uttarakhand']:
+for states in ['Manipur']:#['Punjab','Goa','Manipur','Uttar_Pradesh','Uttarakhand']:
 	data = pd.read_csv(states+'.csv')
 	data_latest = pd.read_csv(states+'_2017.csv')
 	fixed_cols = data.columns
