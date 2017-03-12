@@ -498,7 +498,7 @@ function map_filter(year_2012,year_2017,other_data){
        mapper_data_view.forEach(function(o) {
             map_data.forEach(function(g){
               if (o.properties.ac == g.ac){
-			    constituency_list.push(o.properties.ac_name);
+	            console.log(o.properties.ac_name,o.properties.pc_name)
                 o.result = g
               }
             });
