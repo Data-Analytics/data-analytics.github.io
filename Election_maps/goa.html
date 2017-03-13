@@ -38,7 +38,7 @@ color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#F
 
       d3.csv("Goa.csv", function(goa_data) { 
       var centered;
-	
+    
          goa_data.forEach(function(o) {
           o.polled_votes = parseInt(o.polled_votes);
           o.votes = parseInt(o.VOTES);
@@ -63,16 +63,16 @@ color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#F
       var svg = d3.select("body").append("svg")
           .attr("width", width)
           .attr("height", height);
-		
-		
-		svg.append("rect")
-			.attr("class", "background")
-			.attr("width", width)
-			.attr("height", height)
-			.attr("fill",'none')
-			.attr("pointer-events",'all')
-			.on("click", clicked);
-	
+        
+        
+        svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all')
+            .on("click", clicked);
+    
       var g = svg.append("g");
 
       d3.json("goatopo.json", function(error, data) {
@@ -134,9 +134,9 @@ color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#F
             .text(function(d) { return d.properties.name; });
       }
 
-	  
+      
 function clicked(d) {
-	  
+      
   var x, y, k;
   if (d && centered !== d) {
     var centroid = path.centroid(d);

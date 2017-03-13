@@ -386,6 +386,7 @@ function getParameterByName(name, url) {
 }
 
 function map_filter(year_2012,year_2017,other_data){
+    var centered;
 
     color_map = {"NISHAD":"#dbabab","ADS":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BSP":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AAP":"#61a220","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#ADB13E","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","RLD":"#9DBF87","RLD(M)":"#9DBF87","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","FPM":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","SBSP":"#dbabab","NPP":"#363636","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","LJP":"#363636","NPF":"#363636","JD(U)":"#363636","PECP":"#F4D032","RLD":"#9DBF87",'QED':"#363636","IEMC":"#363636","AD":"#363636"};
 
@@ -394,26 +395,26 @@ function map_filter(year_2012,year_2017,other_data){
     map_data_12 = other_data.filter(function(d){return (d.YEAR==2012) & (d['#']==1) })
     map_data_17 = other_data.filter(function(d){return (d.YEAR==2017) & (d['#']==1) })
     
-	map_data.forEach(function(o) {
-	    map_data_12.forEach(function(o_12) {
+    map_data.forEach(function(o) {
+        map_data_12.forEach(function(o_12) {
            if (o_12.ac == o.ac){
-			    o['12_PARTY'] = o_12['PARTY']
+                o['12_PARTY'] = o_12['PARTY']
               }         
         });
-	    map_data_17.forEach(function(o_17) {
+        map_data_17.forEach(function(o_17) {
            if (o_17.ac == o.ac){
-			    o['17_PARTY'] = o_17['PARTY']
+                o['17_PARTY'] = o_17['PARTY']
               }         
-        });		
-	});
- 	
+        });        
+    });
+     
    var map_data_2012 = []
                     _.each(map_data, function(d) { if(_.contains(year_2012, d['12_PARTY'])) { map_data_2012.push(d);}});     
    
     var map_data = []
                     _.each(map_data_2012, function(d) { if(_.contains(year_2017, d['17_PARTY'])) { map_data.push(d);}});     
     
-	var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
+    var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
        
        var margin = {top: 20, right: 20, bottom: 20, left: 20},
         width = sub_width - margin.left - margin.right,
@@ -433,6 +434,15 @@ function map_filter(year_2012,year_2017,other_data){
             .attr("xlink", 'http://www.w3.org/1999/xlink')
             .attr("version", '1.1');
 
+       svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all')
+            .on("click", clicked);
+
+ 
       var g = svg.append("g");
     
       d3.json("uttarakhand.assembly.topojson", function(error, data) {
@@ -489,15 +499,41 @@ function map_filter(year_2012,year_2017,other_data){
             .style("text-anchor", "start")
             .text(function(d) { return d.properties.name; });
       }
+
+function clicked(d) {
+      
+  var x, y, k;
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+}      
       
       constituency_list =[]
       function drawSubUnits(data){
         
-	   mapper_data_view = topojson.feature(data, data.objects.polygons).features
+       mapper_data_view = topojson.feature(data, data.objects.polygons).features
        mapper_data_view.forEach(function(o) {
             map_data.forEach(function(g){
               if (o.properties.ac == g.ac){
-			    constituency_list.push(o.properties.ac_name);
+                constituency_list.push(o.properties.ac_name);
                 o.result = g
               }
             });
@@ -507,10 +543,11 @@ function map_filter(year_2012,year_2017,other_data){
             .data(mapper_data_view)
           .enter().append("path")
             .attr("class", "subunit")
-            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br> Party : '+d.result.PARTY+'<br/> votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> year: '+d.result.YEAR : ''})
+            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br>  Candidate : '+d.result.NAME+'</br> Party : '+d.result.PARTY+'<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ''})
             .attr("sub_link", function (d){ return d.properties.ac_name })
             .attr("fill", function(d) { return d.result!=undefined? color_map[d.result.PARTY] : '#fff'  })
-            .attr("d", path);
+            .attr("d", path)
+            .on("click", clicked);
 
       $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
       
@@ -546,7 +583,7 @@ var lastsearch = '';
     });
     
       }
-	  }
+      }
 year_detail = getParameterByName('year');
 if (year_detail == undefined){ year_detail= 2017; }
 $(".year_tag").append("("+year_detail+")");
@@ -602,7 +639,7 @@ $(".successive_year_tag").append(" (2012 - 2017)");
       $('#year_2012 :selected').each(function(i, selected){
             year_2012[i] = $(selected).val();
       });
-	  map_filter(year_2012,year_2017,map_data);
+      map_filter(year_2012,year_2017,map_data);
 
       var year_data_sets = d3.nest()
               .key(function(d) { return d['PARTY']; })
