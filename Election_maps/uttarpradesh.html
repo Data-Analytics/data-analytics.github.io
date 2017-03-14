@@ -37,22 +37,23 @@
 
 color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","SBSP":"#dbabab","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AAP":"#61a220","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#ADB13E","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","RLD":"#9DBF87","RLD(M)":"#9DBF87","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","FPM":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","NPP":"#363636","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","LJP":"#363636","NPF":"#363636","JD(U)":"#363636","BSP":"#22409A","PECP":"#F4D032","RLD":"#9DBF87",'QED':"#363636","IEMC":"#363636","AD":"#363636"};
 
-      d3.csv("Uttar_Pradesh_2017.csv", function(uttarpradesh_data) { 
-      
-         uttarpradesh_data.forEach(function(o) {
-            o.polled_votes = parseInt(o.polled_votes);
-            o.votes = parseInt(o.VOTES);
-            o.YEAR = parseInt(o.YEAR);
-            o.rank = parseInt(o['#']);
-            o.ac = parseInt(o.AC_NO);
-            o.vote_percent = parseFloat(o.vote_percent);
+      d3.csv("Uttarpradesh_2017.csv", function(Uttarpradesh_data) { 
+      var centered;
+    
+         Uttarpradesh_data.forEach(function(o) {
+          o.polled_votes = parseInt(o.polled_votes);
+          o.votes = parseInt(o.VOTES);
+          o.YEAR = parseInt(o.YEAR);
+          o.rank = parseInt(o['#']);
+          o.ac = parseInt(o.AC_NO);
+          o.vote_percent = parseFloat(o.vote_percent);
           });
        
-      uttarpradesh_data = uttarpradesh_data.filter(function(d){return (d.YEAR==2017) })
-      uttarpradesh_data = uttarpradesh_data.filter(function(d){return (d.rank==1) })
+      Uttarpradesh_data = Uttarpradesh_data.filter(function(d){return (d.YEAR==2017) })
+      Uttarpradesh_data = Uttarpradesh_data.filter(function(d){return (d.rank==1) })
 
 
-      var width =  parseInt(d3.select('.container').style('width'), 10), height = window.innerHeight*.8;
+      var width = window.innerWidth, height = window.innerHeight;
 
       var projection = d3.geoMercator();
 
@@ -60,14 +61,21 @@ color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","SBSP":"#dbabab","AIFB":"#F
           .projection(projection)
           .pointRadius(2);
 
-      var svg = d3.select(".container").append("svg")
+      var svg = d3.select("body").append("svg")
           .attr("width", width)
-          .attr("height", height)
-          .attr("transform","translate(0,"+(window.innerHeight*.1)+")");
-
+          .attr("height", height);
+        
+        svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all')
+            .on("click", clicked);
+    
       var g = svg.append("g");
 
-      d3.json("uttarpradesh_assembly.json", function(error, data) {
+      d3.json("Uttarpradesh_assembly.json", function(error, data) {
 
         if (error) throw error;
 
@@ -126,13 +134,39 @@ color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","SBSP":"#dbabab","AIFB":"#F
             .text(function(d) { return d.properties.name; });
       }
 
+      
+function clicked(d) {
+      
+  var x, y, k;
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+}
 
       function drawSubUnits(data){
         
         mapper_data_view = topojson.feature(data, data.objects.polygons).features
 
         mapper_data_view.forEach(function(o) {
-            uttarpradesh_data.forEach(function(g){
+            Uttarpradesh_data.forEach(function(g){
               if (o.properties.ac == g.ac){
                 o.result = g
               }
@@ -146,14 +180,14 @@ color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","SBSP":"#dbabab","AIFB":"#F
             .attr("data-title", function (d){ return 'Constituency : '+d.properties.ac_name+'</br> Party : '+d.result.PARTY+'<br/> votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> year: '+d.result.YEAR })
             .attr("fill", function(d) { return d.result!=undefined? color_map[d.result.PARTY] : '#00ff00'  })
             //.attr("fill", function (d){ console.log(d); return d.properties.ac_name })
-            
-            .attr("d", path);
+            .attr("d", path)
+            .on("click", clicked);
 
-      $("path").tooltip({container: '.container', html: true, placement:'top'});
+      $("path").tooltip({container: 'body', html: true, placement:'top'});
             
       }
-
       });
+
 
 
     </script>

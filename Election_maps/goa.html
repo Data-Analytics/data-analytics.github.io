@@ -42,7 +42,7 @@ color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","
           o.polled_votes = parseInt(o.polled_votes);
           o.votes = parseInt(o.VOTES);
           o.YEAR = parseInt(o.YEAR);
-          o.rank = parseInt(o['rank']);
+          o.rank = parseInt(o['#']);
           o.ac = parseInt(o.AC_NO);
           o.vote_percent = parseFloat(o.vote_percent);
           });
@@ -62,7 +62,6 @@ color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","
       var svg = d3.select("body").append("svg")
           .attr("width", width)
           .attr("height", height);
-        
         
         svg.append("rect")
             .attr("class", "background")
@@ -160,7 +159,6 @@ function clicked(d) {
 
 }
 
-
       function drawSubUnits(data){
         
         mapper_data_view = topojson.feature(data, data.objects.polygons).features
@@ -186,11 +184,9 @@ function clicked(d) {
       $("path").tooltip({container: 'body', html: true, placement:'top'});
             
       }
-
       });
 
 
     </script>
-
   </body>
 </html>
