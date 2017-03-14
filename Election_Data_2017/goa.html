@@ -445,7 +445,7 @@ function map_filter(year_2012,year_2017,other_data){
 
       var g = svg.append("g");
     
-      d3.json("goatopo.json", function(error, data) {
+      d3.json("goa_assembly.json", function(error, data) {
         if (error) throw error;
         var boundary = centerZoom(data);
         drawSubUnits(data);
