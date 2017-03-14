@@ -100,8 +100,8 @@
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
-                                <li data-year="2017" id="2017_flow"><a href="?year=2017#overall_view">2017 results</a></li>
-                                <li data-year="2012" id="2012_flow"><a href="?year=2012#overall_view">2012 results</a></li>
+                                <li data-year="2017" class="2017_id"><a href="?year=2017#overall_view">2017 results</a></li>
+                                <li data-year="2012" class="2012_id"><a href="?year=2012#overall_view">2012 results</a></li>
                             </ul>
                       </div><br/><br/>
                     <div class="row">
@@ -170,8 +170,8 @@
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
-                                <li data-year="2017" id="extra_2017"><a href="?year=2017#individual_hold">2017 results</a></li>
-                                <li data-year="2012" id="extra_2012"><a href="?year=2012#individual_hold">2012 results</a></li>
+                                <li data-year="2017" class="2017_id"><a href="?year=2017#individual_hold">2017 results</a></li>
+                                <li data-year="2012" class="2012_id"><a href="?year=2012#individual_hold">2012 results</a></li>
                             </ul>
                     </div>
                       
@@ -246,8 +246,8 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
                                     
-                                    <li data-year="2016" id="2017_flow"><a href="?year=2017#party_Trend">2017 results</a></li>
-                                    <li data-year="2011" id="2012_flow"><a href="?year=2012#party_Trend">2012 results</a></li>
+                                    <li data-year="2016" class="2017_id"><a href="?year=2017#party_Trend">2017 results</a></li>
+                                    <li data-year="2011" class="2012_id"><a href="?year=2012#party_Trend">2012 results</a></li>
                                     
                               </ul>
                       </div>
@@ -582,7 +582,7 @@ year_detail = getParameterByName('year');
 if (year_detail == undefined){ year_detail= 2017; }
 $(".year_tag").append("("+year_detail+")");
 $(".successive_year_tag").append(" (2012 - 2017)");
-$('#'+year_detail+'').addClass('active');
+$('.'+year_detail+'_id').addClass('active');
 
     d3.csv("Goa.csv", function(map_data) { 
 
