@@ -606,6 +606,17 @@ function clicked(d) {
             .on("click", clicked)
            .on('dblclick',function(d){ return d.result!=undefined? window.open('?year='+d.result.YEAR+'&acct_no='+d.result.AC_NO+"#perConstituency","_self"):''  });
 
+    g.selectAll(".geom-label")
+      .data(mapper_data_view)
+    .enter().append("text")
+      .attr("class", "geom-label")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .style("text-transform", "uppercase")
+      .text(function(d) { return d.properties.ac_name })
+      .style("font-size", function(d) { return Math.min(16, path.measure(d) / this.getComputedTextLength()) + "px"; });
+ 
       $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
       
 var lastsearch = '';
@@ -845,13 +856,12 @@ function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var 
      horizontal_bar_svg.selectAll("rect")
         .data(data_set)
       .enter().append("rect")
-        //.attr("x", function(d) { return x(d.sales); })
         .style("fill", function(d,i) { return color_map[d.PARTY]; })
         .attr("width", function(d) {return x(d.votes); } )
         .attr("y", function(d) { return y(d.PARTY_ID); })
         .attr("data-title",function(d) { return 'Constituency : '+d.AC_NAME+' <br/> Candidate : '+d.NAME+' <br/> party : '+d.PARTY+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
         .attr("height", y.bandwidth());
-
+             
      horizontal_bar_svg.selectAll("text")
         .data(data_set)
       .enter().append("text")

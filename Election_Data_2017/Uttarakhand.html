@@ -609,6 +609,17 @@ function clicked(d) {
             .on("click", clicked)
             .on('dblclick',function(d){ return d.result!=undefined? window.open('?year='+d.result.YEAR+'&acct_no='+d.result.AC_NO+"#perConstituency","_self"):''  });
 
+    g.selectAll(".geom-label")
+      .data(mapper_data_view)
+    .enter().append("text")
+      .attr("class", "geom-label")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .style("text-transform", "uppercase")
+      .text(function(d) { return d.properties.ac_name })
+      .style("font-size", function(d) { return Math.min(16, path.measure(d) / this.getComputedTextLength()) + "px"; });
+ 
       $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
       
 var lastsearch = '';
@@ -644,6 +655,7 @@ var lastsearch = '';
     
       }
       }
+
 year_detail = getParameterByName('year');
 if (year_detail == undefined){ year_detail= 2017; }
 $(".year_tag").append("("+year_detail+")");

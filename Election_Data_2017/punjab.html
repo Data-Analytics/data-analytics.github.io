@@ -303,16 +303,13 @@
             <div class="row">           
                 <div class=" col-md-12 panel-body">
 
-                          <div class="dropdown header_year">
+                        <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
-                                    
                                     <li data-year="2016" class="2017_id"><a href="?year=2017#party_Trend">2017 results</a></li>
                                     <li data-year="2011" class="2012_id"><a href="?year=2012#party_Trend">2012 results</a></li>
-                                    
                               </ul>
-                      </div>
-                      
+                        </div>
                         <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
                               <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#61a220"></rect>
@@ -345,10 +342,8 @@
                               <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
                             </g>
                         </svg>
-                    
                           <div class="party_performance_trend_svg">
                          </div>
-
                 </div>
           </div>
             
@@ -370,7 +365,6 @@
            </div>
            <div class="row">           
                 <div class=" col-md-12 panel-body">
-                    
                     <div  class="sankey_chart">
                          <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
@@ -407,11 +401,8 @@
                     </div>
                 </div>
           </div>
-            
             </div>
-            </div>
-            
-    
+            </div>    
     </div>
     </div>
     </div>
@@ -607,6 +598,17 @@ function clicked(d) {
             .on("click", clicked)
             .on('dblclick',function(d){ return d.result!=undefined? window.open('?year='+d.result.YEAR+'&acct_no='+d.result.AC_NO+"#perConstituency","_self"):''  });
 
+    g.selectAll(".geom-label")
+      .data(mapper_data_view)
+    .enter().append("text")
+      .attr("class", "geom-label")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .style("text-transform", "uppercase")
+      .text(function(d) { return d.properties.ac_name })
+      .style("font-size", function(d) { return Math.min(16, path.measure(d) / this.getComputedTextLength()) + "px"; });
+ 
       $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
       
 var lastsearch = '';
@@ -984,7 +986,6 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
                 if(d.key==o.key){
                     o.contest = d.value
                 }
-
             });
             o.score  = (o.value*100/o.contest).toFixed(2);            
         });
@@ -1231,17 +1232,40 @@ $('.party_filter').click( function(n) {
           o.ac = parseInt(o.AC_NO);
           o.vote_percent = parseFloat(o.vote_percent);
           });
+
   d3.select('.geo_map').select('svg').remove();
 
   map_filter(year_2012,year_2017,map_data);
   
   });
 });
-
     </script>
 <script>var sharebutton_is_horizontal = false; document.write('<script src="//cdn.front.to/libs/share7.js"></scr' + 'ipt>'); document.write("<div style='display: none'>");</script><a href="http://sharebutton.org/">share this button</a><script>document.write("</div>");</script>
 <div class="container footer_details">
 The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="http://eci.nic.in/eci_main1/ElectionStatistics.aspx"> eci.nic.in </a> and  <a target="_blank" href="http://eciresults.nic.in/"> eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
-
+<div class="container">
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//EXAMPLE.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+   </div>
   </body>
 </html>
