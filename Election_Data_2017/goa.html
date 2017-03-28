@@ -535,7 +535,9 @@ function getParameterByName(name, url) {
           })
           .enter()
           .append('td')
-          .attr("bgcolor",function(d) { return color_map[d.value] })            
+          .attr("bgcolor",function(d) { return color_map[d.value] })  
+          .append("font")
+          .style("color",function(d) { return color_map[d.value] == undefined ? "#636363" : ((parseInt(color_map[d.value].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })                          
           .text(function (d) { return d.value; });
 
       return table;
@@ -767,9 +769,9 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
 
     year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
     year_data_set_all.forEach(function(o) {
-	   o.VOTES = addThousandsSeparator(parseInt(o.VOTES))
-	});
-	
+       o.VOTES = addThousandsSeparator(parseInt(o.VOTES))
+    });
+
     // render the table(s)
     tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME','PARTY','VOTES','vote_percent']); // 2 column table
     
