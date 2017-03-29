@@ -772,11 +772,11 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
 
     year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
     year_data_set_all.forEach(function(o) {
-       o.VOTES = addThousandsSeparator(parseInt(o.VOTES))
+       o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
     });
 
     // render the table(s)
-    tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME','PARTY','VOTES','vote_percent']); // 2 column table
+    tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME','PARTY','votes_gained','vote_percent']); // 2 column table
     
     $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
     

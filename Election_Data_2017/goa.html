@@ -300,16 +300,16 @@
                     <h2>party wise performance trend <i class="year_tag"></i></h2>
                 </div>    
            </div>    
-<div class="row">           
+            <div class="row">           
                 <div class=" col-md-12 panel-body">
 
-                          <div class="dropdown header_year">
+                        <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
                                     <li data-year="2016" class="2017_id"><a href="?year=2017#party_Trend">2017 results</a></li>
                                     <li data-year="2011" class="2012_id"><a href="?year=2012#party_Trend">2012 results</a></li>
                             </ul>
-                      </div>
+                        </div>
                       
                         <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
@@ -368,6 +368,14 @@
            </div>
            <div class="row">           
                 <div class=" col-md-12 panel-body">
+                    <div class="dropdown header_year">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
+                            <ul class="dropdown-menu" role="menu">
+                                    <li data-year="2016" class="2017_id"><a href="?year=2017#party_Trend">2017 results</a></li>
+                                    <li data-year="2011" class="2012_id"><a href="?year=2012#party_Trend">2012 results</a></li>
+                            </ul>
+                    </div>
+              
                      <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="http://www.w3.org/2000/svg" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
                               <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#61a220"></rect>
@@ -769,11 +777,11 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
 
     year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
     year_data_set_all.forEach(function(o) {
-       o.VOTES = addThousandsSeparator(parseInt(o.VOTES))
+       o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
     });
 
     // render the table(s)
-    tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME','PARTY','VOTES','vote_percent']); // 2 column table
+    tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME','PARTY','votes_gained','vote_percent']); // 2 column table
     
     $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
     
