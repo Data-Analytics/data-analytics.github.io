@@ -721,7 +721,7 @@ function clicked(d) {
       .attr("text-anchor", "middle")
       .style("text-transform", "uppercase")
       .text(function(d) { return d.properties.ac_name })
-      .style("font-size", function(d) { return Math.min(16, path.measure(d) / this.getComputedTextLength()) + "px"; });
+      .style("font-size", function(d) { return Math.min(12, path.measure(d) / this.getComputedTextLength()) + "px"; });
  
       $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
       
