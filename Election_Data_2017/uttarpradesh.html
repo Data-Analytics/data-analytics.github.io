@@ -1367,8 +1367,8 @@ $('.party_filter').click( function(n) {
         $('#year_2012 :selected').each(function(i, selected){
             year_2012[i] = $(selected).val();
         });
-   d3.csv("Uttar_Pradesh.csv", function(map_data) { 
-  
+   d3.csv("Uttar_Pradesh.csv", function(map_data) {
+   
     map_data.forEach(function(o) {
           o.polled_votes = parseInt(o.polled_votes);
           o.votes = parseInt(o.VOTES);
@@ -1379,7 +1379,7 @@ $('.party_filter').click( function(n) {
           });
   d3.select('.geo_map').select('svg').remove();
   map_filter(year_2012,year_2017,map_data);
-  
+
   });
 });
 
