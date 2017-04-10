@@ -137,15 +137,13 @@
                               <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
                               </g>                      
                             </svg>
-                    <div class="col-md-2"></div> 
-                    <div class="col-md-8"> 
+                    <div class="col-md-1"></div> 
+                    <div class="col-md-10"> 
                      <div class="overall_view_report">                     
                      </div>
                     </div>
-                    <div class="col-md-2"></div> 
+                    <div class="col-md-1"></div> 
                     </div>
-
-
                 </div>
             </div>
             </div>
@@ -606,8 +604,21 @@ function clicked(d) {
             .on("click", clicked)
            .on('dblclick',function(d){ return d.result!=undefined? window.open('?year='+d.result.YEAR+'&acct_no='+d.result.AC_NO+"#perConstituency","_self"):''  });
 
+g.selectAll(".geom-label")
+      .data(mapper_data_view)
+    .enter().append("text")
+      .attr("class", "geom-label")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br>  Candidate : '+d.result.NAME+'</br> Party : '+d.result.PARTY+'<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ''})
+      .attr("text-anchor", "middle")
+      .style("text-transform", "uppercase")
+      .text(function(d) { return d.properties.ac_name })
+      .style("font-size", function(d) { return Math.min(12, path.measure(d) / this.getComputedTextLength()) + "px"; });
+    
       $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
-      
+      $("text").tooltip({container: '.geo_map', html: true, placement:'top'});
+          
 var lastsearch = '';
     var $box = {};
     
@@ -655,6 +666,19 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
 
     year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
      
+    function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+   
+    year_data_set_sum = map_data.filter(function(d){return (d.YEAR==year_detail)})
+
+    year_data_set_sum_overall = d3.sum(year_data_set_sum, function(d){
+        return parseInt(d.VOTES);
+    });
+
+    var year_data_set_sum_party = d3.nest()
+              .key(function(d) { return d['PARTY']; })
+              .rollup(function(v) { return d3.sum(v, function(d) {return parseInt(d.VOTES);})  })
+              .entries(year_data_set_sum);
+ 
     year_data_set_2011 = map_data.filter(function(d){return (d.YEAR==2011 & d['#']==1)  })
     year_data_set_2016 = map_data.filter(function(d){return (d.YEAR==2016 & d['#']==1)  })
     
@@ -710,7 +734,13 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
       
       heading_colors = []
        year_data_sets.forEach(function(o) {
-        heading_colors.push(color_map[o.key])
+          heading_colors.push(color_map[o.key])
+          year_data_set_sum_party.forEach(function(p) {
+            if (p.key==o.key){
+              o.party_vote_percent = parseFloat(100*p.value/year_data_set_sum_overall).toFixed(2);
+              o.party_votes = addThousandsSeparator(p.value)
+            }
+        });
        })
   
         max_seats = d3.max(year_data_sets, function(d) { return d.value; });
@@ -723,9 +753,9 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                             .append("table")
                             .attr("class","table table-condensed party-summary")
 
-              lowresult_data.append('thead')
+          lowresult_data.append('thead')
                             .selectAll("tr")
-                            .data([['Party','Seats','Seat Share']]).enter()
+                            .data([['Party','Seats','Seat Share','Vote Percent','Total Votes']]).enter()
                             .append("tr")
                             .selectAll("th")
                                 .data(function(d,l) { return d }).enter()
@@ -736,28 +766,28 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                                 .attr("color","#636363")
                                 .text(function(o,i) { return o });
 
-                        lowresult_data.append('tbody')
+              lowresult_data.append('tbody')
                                 .selectAll("tr")
                                 .data(function(o) { return o }).enter()
                                 .append("tr")
                                 .selectAll("td")
-                                    .data(function(d,l) { return [d.key,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
+                                    .data(function(d,l) { return [d.key,d.value,l+':'+(d.value*100/max_seats).toFixed(2),d.party_vote_percent+'%',d.party_votes] }).enter()
                                     .append('td')
                                     .attr('class',function(d) { return d+'s'})
                                     .style("max-width",'10px')
                                     .style("font-size",'15px')
-                                    .text(function(o,i) { return i<2? o:'' })
+                                    .text(function(o,i) { return i!=2? o:'' })
                                     .append('div')
-                                    .attr('class',function(d,i) { return i<2? '':'progress'; })
+                                    .attr('class',function(d,i) { return i!=2? '':'progress'; })
                                     .append('div')
                                     .attr('class','progress-bar progress-bar-striped')
                                     .attr('role','progressbar')
                                     .attr('aria-valuenow','70')
                                     .attr('aria-valuemin','0')
                                     .attr('aria-valuemax','100')
-                                    .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
-                                    .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
-                                   
+                                    .style('background-color',function(d,i) { return i!=2? '':heading_colors[parseInt(d.split(':')[0])]; })
+                                    .style('width',function(d,i) { return i!=2? '0%':d.split(':')[1]+'%'; });
+                              
             d3.selectAll('.removed_data').remove();
     
          map_data.forEach(function(o) {
