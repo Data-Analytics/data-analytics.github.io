@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen" >    
+  <link href="css/basic.css" rel="stylesheet" type="text/css" media="screen" >
+  <link href="css/feature.css" rel="stylesheet" type="text/css" media="screen" >
+  <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link href="css/custom-styles.css" rel="stylesheet" type="text/css" media="screen" >
+  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
+  <script type="text/javascript" src="js/d3.layout.cloud.js"></script>
+  <script type="text/javascript" src="js/d3.cloud.simplified.js"></script>
+</head>
+<body>
+    <div class="container-fluid">        
+        <div class="row">           
+            <div class=" col-md-12 panel-body">
+            <div id="wordcloud"></div>
+
+            <div align="center"> 
+  The color is to attract the user the size denotes the number of population ,bigger the size shows the higher population and vice versa </div>
+	<script>
+	 d3.csv("data.csv", function(data) {
+	  cloud.make({
+	   width: 960,
+	   height: 420,
+	   font: "Impact",
+	   container: "#wordcloud",
+	   words: data }); 
+	   });
+	</script>
+
+            </div>
+        </div>
+    </div>    
+<script type="text/javascript">
+</script>
+</body>
+</html>
