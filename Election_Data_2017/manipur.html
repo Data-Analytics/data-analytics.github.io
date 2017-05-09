@@ -726,6 +726,7 @@ function clicked(d) {
       .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br>  Candidate : '+d.result.NAME+'</br> Party : '+d.result.PARTY+'<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ''})
       .style("text-transform", "uppercase")
       .text(function(d) { return d.properties.ac_name })
+      .attr("fill", function(d) { return d.result!=undefined? ((parseInt(color_map[d.result.PARTY].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') : '#000'  })
       .style("font-size", function(d) { return Math.min(12, path.measure(d) / this.getComputedTextLength()) + "px"; });
  
       $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
