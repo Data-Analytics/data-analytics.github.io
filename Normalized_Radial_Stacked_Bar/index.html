@@ -11,7 +11,7 @@
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 960,
     height = 500,
-    innerRadius = 180,
+    innerRadius = 110,
     outerRadius = Math.min(width, height) / 2 - 15;
     
 var g = d3.select(".chart").append("svg")
@@ -78,7 +78,7 @@ d3.csv("data.csv", function(d, i, columns) {
 
   label.append("text")
       .attr("transform", function(d) { return (x(d.State) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) < Math.PI ? "rotate(90)translate(0,16)" : "rotate(-90)translate(0,-9)"; })
-      .attr("font-size","10px")
+      .attr("font-size","6px")
       .text(function(d) { return d.State; });
 
   var yAxis = g.append("g")
