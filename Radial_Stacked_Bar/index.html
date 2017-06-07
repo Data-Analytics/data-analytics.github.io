@@ -57,7 +57,7 @@ d3.csv("data.csv", function(d, i, columns) {
           .innerRadius(function(d) { return y(d[0]); })
           .outerRadius(function(d) { return y(d[1]); })
           .startAngle(function(d) { return x(d.data.State); })
-          .endAngle(function(d) { return x(d.data.State) + x.bandwidth(); })
+          .endAngle(function(d) { return x(d.data.State) + x.bandwidth()/2; })
           .padAngle(0.01)
           .padRadius(innerRadius));
 
