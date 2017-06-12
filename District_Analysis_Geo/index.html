@@ -18,7 +18,6 @@
       }
 
     </style>
-
   </head>
   <body>
     
@@ -81,7 +80,7 @@
    <script type="text/javascript" src="js/underscore-min.js"></script>  
   
    <script>     
- var width = window.innerWidth, height = window.innerHeight*.75;
+ var width = window.innerWidth, height = window.innerHeight*.85;
 
  function render() {
       
@@ -91,7 +90,7 @@
         cols = d3.keys(performance_data[0]).slice(1)
   
         performance_data.forEach(function(o) {
-           o.Population = parseFloat(o.Population);
+           o[$('#options_view').val()] = parseFloat(o[$('#options_view').val()];)
         });
 
       var projection = d3.geoMercator();
@@ -106,9 +105,6 @@
                .style("width", "100%")
                .attr("data-height","0.54")
                .attr("viewBox","0 0 "+width+" "+height);
-            
-         // .attr("width", width)
-         // .attr("height", height);
         
         svg.append("rect")
             .attr("class", "background")
@@ -122,7 +118,7 @@
 
       d3.json("districts.json", function(error, data) {
 
-        if (error) throw error;
+      if (error) throw error;
 
       var states_names = d3.nest()
         .key(function(d) { return  d.properties.sn; })
@@ -136,7 +132,6 @@
                     .enter().append("option")
                     .attr("value", function (d) { return d.key })
                     .attr("class","name")
-                    //.attr("selected","")
                     .text(function (d) { return d.key });
 
         var boundary = centerZoom(data,$('#state').val());
@@ -145,13 +140,11 @@
 
       });
 
-    // return only the distinct / unique nodes
-     
+      // return only the distinct / unique nodes
       // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
       // It also returns the boundary itself in case you want to draw it to the map
       function centerZoom(data,state){
-        if (state!='All States') 
-          { 
+        if (state!='All States') { 
                 data.objects.polygons.geometries = data.objects.polygons.geometries.filter(function(d) { return d.properties.sn == state }) 
           }
         var o = topojson.mesh(data, data.objects.polygons, function(a, b) { return a === b; });
@@ -184,7 +177,6 @@
             .attr("class", "subunit-boundary");
       }
 
-      
 function clicked(d) {
       
           var x, y, k;
@@ -210,10 +202,10 @@ function clicked(d) {
               .style("stroke-width", 1.5 / k + "px");
 
 }
-      function drawSubUnits(data,state,options_view){
+
+function drawSubUnits(data,state,options_view){
   
-     if (state!='All States') 
-     {
+     if (state!='All States') {
          sub_performance_data = performance_data.filter(function(d) { return d.State.slice(0,d.State.length-5) == state })
      }else {
          sub_performance_data = performance_data
@@ -222,8 +214,7 @@ function clicked(d) {
     var colors = d3.scaleLinear()
                    .domain([0, d3.max(sub_performance_data, function(d) { return d[options_view]; })])
                    .range(['#fff','blue']);
-                   //.range(['#000','#000']);
-  
+         
         mapper_data_view = topojson.feature(data, data.objects.polygons).features
         if (state!='All States') 
          {
@@ -264,12 +255,12 @@ function clicked(d) {
       $("text").tooltip({container: 'body', html: true, placement:'top'});
       $("path").tooltip({container: 'body', html: true, placement:'top'});
 
-      }
- 
-      });
+       } 
+    });
 
-  }
-  render();
+}
+render();
+
     </script>
   </body>
 </html>
