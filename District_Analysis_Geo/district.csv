@@ -1,0 +1,657 @@
+State,District,Headquarters,Population,Area,Density,color
+Andaman & Nicobar Island (AN),North & Middle Andaman,Mayabunder,105539,3227,32,#a65628
+Andaman & Nicobar Island (AN),South Andaman,Port Blair,237586,3181,80,#a65628
+Andaman & Nicobar Island (AN),Nicobar,Car Nicobar,36819,1841,20,#a65628
+Andhra Pradesh (AP),Anantapur,Anantapur,4083315,19130,213,#a6cee3
+Andhra Pradesh (AP),Chittoor,Chittoor,4170468,15152,275,#a6cee3
+Andhra Pradesh (AP),East Godavari,Kakinada,5151549,10807,477,#a6cee3
+Andhra Pradesh (AP),Guntur,Guntur,4889230,11391,429,#a6cee3
+Andhra Pradesh (AP),Krishna,Machilipatnam,4529009,8727,519,#a6cee3
+Andhra Pradesh (AP),Kurnool,Kurnool,4046601,17658,229,#a6cee3
+Andhra Pradesh (AP),Prakasam,Ongole,3392764,17626,192,#a6cee3
+Andhra Pradesh (AP),Srikakulam,Srikakulam,2699471,5837,462,#a6cee3
+Andhra Pradesh (AP),Sri Potti Sriramulu Nellore,Nellore,2966082,13076,227,#a6cee3
+Andhra Pradesh (AP),Visakhapatnam,Visakhapatnam,4288113,11161,384,#a6cee3
+Andhra Pradesh (AP),Vizianagaram,Vizianagaram,2342868,6539,358,#a6cee3
+Andhra Pradesh (AP),West Godavari,Eluru,3934782,7742,508,#a6cee3
+Andhra Pradesh (AP),Kadapa,Kadapa,2884524,15359,188,#a6cee3
+Arunachal Pradesh (AR),Anjaw,Hawai,21089,6190,3,#1f78b4
+Arunachal Pradesh (AR),Changlang,Changlang,147951,4662,32,#1f78b4
+Arunachal Pradesh (AR),Dibang Valley,Anini,7948,9129,1,#1f78b4
+Arunachal Pradesh (AR),East Siang,Pasighat,99019,3603,27,#1f78b4
+Arunachal Pradesh (AR),East Kameng,Seppa,78413,4134,19,#1f78b4
+Arunachal Pradesh (AR),Kurung Kumey,Koloriang,89717,6040,15,#1f78b4
+Arunachal Pradesh (AR),Lohit,Tezu,145538,2402,28,#1f78b4
+Arunachal Pradesh (AR),Longding,Longding,51022,1192,42,#1f78b4
+Arunachal Pradesh (AR),Lower Dibang Valley,Anini,53986,3900,14,#1f78b4
+Arunachal Pradesh (AR),Lower Subansiri,Ziro,82839,3508,24,#1f78b4
+Arunachal Pradesh (AR),Papum Pare,Yupia,176385,2875,51,#1f78b4
+Arunachal Pradesh (AR),Tawang,Tawang Town,49950,2085,23,#1f78b4
+Arunachal Pradesh (AR),Tirap,Khonsa,111997,2362,47,#1f78b4
+Arunachal Pradesh (AR),Upper Siang,Yingkiong,35289,6188,5,#1f78b4
+Arunachal Pradesh (AR),Upper Subansiri,Daporijo,83205,7032,12,#1f78b4
+Arunachal Pradesh (AR),West Kameng,Bomdila,87013,7422,12,#1f78b4
+Arunachal Pradesh (AR),West Siang,Along,112272,8325,23,#1f78b4
+Assam (AS),Baksa,Mushalpur,953773,2008,475,#bc80bd
+Assam (AS),Barpeta,Barpeta,1693190,3245,632,#bc80bd
+Assam (AS),Bongaigaon,Bongaigaon,732639,1724,425,#bc80bd
+Assam (AS),Cachar,Silchar,1736319,3786,459,#bc80bd
+Assam (AS),Chirang,Kajalgaon,481818,1975,244,#bc80bd
+Assam (AS),Darrang,Mangaldoi,908090,1849,491,#bc80bd
+Assam (AS),Dhemaji,Dhemaji,688077,3237,213,#bc80bd
+Assam (AS),Dima Hasao,Haflong,213529,4888,44,#bc80bd
+Assam (AS),Dhubri,Dhubri,1948632,2838,1171,#bc80bd
+Assam (AS),Dibrugarh,Dibrugarh,1327748,3381,393,#bc80bd
+Assam (AS),Goalpara,Goalpara,1008959,1824,553,#bc80bd
+Assam (AS),Golaghat,Golaghat,1058674,3502,302,#bc80bd
+Assam (AS),Hailakandi,Hailakandi,659260,1327,497,#bc80bd
+Assam (AS),Jorhat,Jorhat,1091295,2851,383,#bc80bd
+Assam (AS),Kamrup,Goroimari,1517202,3480,436,#bc80bd
+Assam (AS),Kamrup Metropolitan,Guwahati,1260419,627,2010,#bc80bd
+Assam (AS),Karbi Anglong,Diphu,965280,10434,93,#bc80bd
+Assam (AS),Karimganj,Karimganj,1217002,1809,673,#bc80bd
+Assam (AS),Kokrajhar,Kokrajhar,886999,3129,280,#bc80bd
+Assam (AS),Lakhimpur,North Lakhimpur,1040644,2277,457,#bc80bd
+Assam (AS),Marigaon,Marigaon,957853,1704,618,#bc80bd
+Assam (AS),Nagaon,Nagaon,2826006,3831,711,#bc80bd
+Assam (AS),Nalbari,Nalbari,769919,1009,763,#bc80bd
+Assam (AS),Sivasagar,Sibsagar,1150253,2668,431,#bc80bd
+Assam (AS),Sonitpur,Tezpur,1925975,5324,365,#bc80bd
+Assam (AS),Tinsukia,Tinsukia,1316948,3790,347,#bc80bd
+Assam (AS),Udalguri,Udalguri,832769,1676,497,#bc80bd
+Bihar (BR),Araria,Araria,2806200,2829,992,#e34a33
+Bihar (BR),Arwal,Arwal,699563,4839,1099,#e34a33
+Bihar (BR),Aurangabad,Aurangabad,2511243,3303,760,#e34a33
+Bihar (BR),Banka,Banka,2029339,3018,672,#e34a33
+Bihar (BR),Begusarai,Begusarai,2954367,1917,1540,#e34a33
+Bihar (BR),Bhagalpur,Bhagalpur,3032226,2569,1180,#e34a33
+Bihar (BR),Bhojpur,Arrah,2720155,2473,1136,#e34a33
+Bihar (BR),Buxar,Buxar,1707643,1624,1003,#e34a33
+Bihar (BR),Darbhanga,Darbhanga,3921971,2278,1721,#e34a33
+Bihar (BR),East Champaran,Motihari,5082868,3969,1281,#e34a33
+Bihar (BR),Gaya,Gaya,4379383,4978,880,#e34a33
+Bihar (BR),Gopalganj,Gopalganj,2558037,2033,1258,#e34a33
+Bihar (BR),Jamui,Jamui,1756078,3099,567,#e34a33
+Bihar (BR),Jehanabad,Jehanabad,1124176,1569,1206,#e34a33
+Bihar (BR),Kaimur,Bhabua,1626900,3363,488,#e34a33
+Bihar (BR),Katihar,Katihar,3068149,3056,1004,#e34a33
+Bihar (BR),Khagaria,Khagaria,1657599,1486,1115,#e34a33
+Bihar (BR),Kishanganj,Kishanganj,1690948,1884,898,#e34a33
+Bihar (BR),Lakhisarai,Lakhisarai,1000717,1229,815,#e34a33
+Bihar (BR),Madhepura,Madhepura,1994618,1787,1116,#e34a33
+Bihar (BR),Madhubani,Madhubani,4476044,3501,1279,#e34a33
+Bihar (BR),Munger,Munger,1359054,1419,958,#e34a33
+Bihar (BR),Muzaffarpur,Muzaffarpur,4778610,3173,1506,#e34a33
+Bihar (BR),Nalanda,Bihar Sharif,2872523,2354,1220,#e34a33
+Bihar (BR),Nawada,Nawada,2216653,2492,889,#e34a33
+Bihar (BR),Patna,Patna,5772804,3202,1803,#e34a33
+Bihar (BR),Purnia,Purnia,3273127,3228,1014,#e34a33
+Bihar (BR),Rohtas,Sasaram,2962593,3850,763,#e34a33
+Bihar (BR),Saharsa,Saharsa,1897102,1702,1125,#e34a33
+Bihar (BR),Samastipur,Samastipur,4254782,2905,1465,#e34a33
+Bihar (BR),Saran,Chhapra,3943098,2641,1493,#e34a33
+Bihar (BR),Sheikhpura,Sheikhpura,634927,689,922,#e34a33
+Bihar (BR),Sheohar,Sheohar,656916,443,1882,#e34a33
+Bihar (BR),Sitamarhi,Sitamarhi,3419622,2199,1491,#e34a33
+Bihar (BR),Siwan,Siwan,3318176,2219,1495,#e34a33
+Bihar (BR),Supaul,Supaul,2228397,2410,919,#e34a33
+Bihar (BR),Vaishali,Hajipur,3495021,2036,1717,#e34a33
+Bihar (BR),West Champaran,Bettiah,3935042,5229,753,#e34a33
+Chandigarh (CH),Chandigarh,Chandigarh,1054686,114,9252,#66bd63
+Chhattisgarh (CG),Bastar,Jagdalpur,1411644,4030,140,#878787
+Chhattisgarh (CG),Bijapur,Bijapur,255180,6555,39,#878787
+Chhattisgarh (CG),Bilaspur,Bilaspur,2662077,6377,322,#878787
+Chhattisgarh (CG),Dantewada,Dantewada,532791,3411,59,#878787
+Chhattisgarh (CG),Dhamtari,Dhamtari,799199,4081,236,#878787
+Chhattisgarh (CG),Durg,Durg,3343079,8542,391,#878787
+Chhattisgarh (CG),Jashpur,Jashpur Nagar,852043,5825,146,#878787
+Chhattisgarh (CG),Janjgir-champa,Naila Janjgir,1620632,3848,421,#878787
+Chhattisgarh (CG),Korba,Korba,1206563,6615,183,#878787
+Chhattisgarh (CG),Koriya,Baikunthpur,659039,6578,100,#878787
+Chhattisgarh (CG),Kanker,Kanker,748593,6513,115,#878787
+Chhattisgarh (CG),Kabeerdham,Kawardha,584667,4237,195,#878787
+Chhattisgarh (CG),Mahasamund,Mahasamund,1032275,4779,216,#878787
+Chhattisgarh (CG),Narayanpur,Narayanpur,140206,6640,20,#878787
+Chhattisgarh (CG),Raigarh,Raigarh,1493627,7068,211,#878787
+Chhattisgarh (CG),Rajnandgaon,Rajnandgaon,1537520,8062,191,#878787
+Chhattisgarh (CG),Raipur,Raipur,4062160,13083,310,#878787
+Chhattisgarh (CG),Surajpur,Surajpur,660280,6787,150,#878787
+Chhattisgarh (CG),Surguja,Surguja,420661,3265,150,#878787
+Dadra & Nagar Haveli (DN),Dadra & Nagar Haveli,Silvassa,342853,704,698,#b35806
+Daman & Diu (DD),Daman,Daman,190855,72,2651,#4d4d4d
+Daman & Diu (DD),Diu,Diu,52056,40,1301,#4d4d4d
+NCT of Delhi (DL),Central Delhi,Daryaganj,578671,25,23149,#b2df8a
+NCT of Delhi (DL),East Delhi,Preet Vihar,1707725,440,26683,#b2df8a
+NCT of Delhi (DL),New Delhi,Connaught Place,133713,22,3820,#b2df8a
+NCT of Delhi (DL),North Delhi,Sadar Bazaar,883418,59,14973,#b2df8a
+NCT of Delhi (DL),North East Delhi,Shahdara,2240749,52,37346,#b2df8a
+NCT of Delhi (DL),North West Delhi,Kanjhawala,3651261,130,8298,#b2df8a
+NCT of Delhi (DL),South Delhi,Saket,2733752,250,10935,#b2df8a
+NCT of Delhi (DL),South West Delhi,Vasant Vihar,2292363,395,5445,#b2df8a
+NCT of Delhi (DL),West Delhi,Rajouri Garden,2531583,112,19625,#b2df8a
+Goa (GA),North Goa,Panaji,817761,1736,471,#d6604d
+Goa (GA),South Goa,Margao,639962,1966,326,#d6604d
+Gujarat (GJ),Ahmedabad,Ahmedabad,7208200,8707,890,#80b1d3
+Gujarat (GJ),Amreli,Amreli,1513614,6760,205,#80b1d3
+Gujarat (GJ),Anand,Anand,2090276,2942,711,#80b1d3
+Gujarat (GJ),Aravalli,Modasa,1051746,3217,327,#80b1d3
+Gujarat (GJ),Banas Kantha,Palanpur,3116045,12703,290,#80b1d3
+Gujarat (GJ),Bharuch,Bharuch,1550822,6524,238,#80b1d3
+Gujarat (GJ),Bhavnagar,Bhavnagar,2877961,11155,288,#80b1d3
+Gujarat (GJ),Dohad,Dahod,2126558,3642,582,#80b1d3
+Gujarat (GJ),Dang,Ahwa,226769,1764,129,#80b1d3
+Gujarat (GJ),Gandhinagar,Gandhinagar,1387478,649,660,#80b1d3
+Gujarat (GJ),Jamnagar,Jamnagar,2159130,14125,153,#80b1d3
+Gujarat (GJ),Junagadh,Junagadh,2742291,8839,310,#80b1d3
+Gujarat (GJ),Kutch,Bhuj,2090313,45652,46,#80b1d3
+Gujarat (GJ),Kheda,Nadiad,2298934,4215,541,#80b1d3
+Gujarat (GJ),Mahesana,Mehsana,2027727,4386,462,#80b1d3
+Gujarat (GJ),Narmada,Rajpipla,590379,2749,214,#80b1d3
+Gujarat (GJ),Navsari,Navsari,1330711,2211,602,#80b1d3
+Gujarat (GJ),Patan,Patan,1342746,5738,234,#80b1d3
+Gujarat (GJ),Panch Mahals,Godhra,2388267,5219,458,#80b1d3
+Gujarat (GJ),Porbandar,Porbandar,586062,2294,255,#80b1d3
+Gujarat (GJ),Rajkot,Rajkot,3157676,11203,282,#80b1d3
+Gujarat (GJ),Sabar Kantha,Himatnagar,2427346,7390,328,#80b1d3
+Gujarat (GJ),Surendranagar,Surendranagar,1755873,10489,167,#80b1d3
+Gujarat (GJ),Surat,Surat,4996391,4327,653,#80b1d3
+Gujarat (GJ),Tapi,Vyara,806489,3435,249,#80b1d3
+Gujarat (GJ),Vadodara,Vadodara,3639775,7794,467,#80b1d3
+Gujarat (GJ),Valsad,Valsad,1703068,3034,561,#80b1d3
+Haryana (HR),Ambala,Ambala,1136784,1569,722,#33a02c
+Haryana (HR),Bhiwani,Bhiwani,1629109,5140,341,#33a02c
+Haryana (HR),Faridabad,Faridabad,1798954,783,2298,#33a02c
+Haryana (HR),Fatehabad,Fatehabad,941522,2538,371,#33a02c
+Haryana (HR),Gurgaon,Gurgaon,1514085,2760,1241,#33a02c
+Haryana (HR),Hissar,Hissar,1742815,3788,438,#33a02c
+Haryana (HR),Jhajjar,Jhajjar,956907,1868,522,#33a02c
+Haryana (HR),Jind,Jind,1332042,2702,493,#33a02c
+Haryana (HR),Karnal,Karnal,1506323,2471,598,#33a02c
+Haryana (HR),Kaithal,Kaithal,1072861,2799,467,#33a02c
+Haryana (HR),Kurukshetra,Kurukshetra,964231,1530,630,#33a02c
+Haryana (HR),Mahendragarh,Narnaul,921680,1900,485,#33a02c
+Haryana (HR),Mewat,Nuh,1089406,1765,729,#33a02c
+Haryana (HR),Palwal,Palwal,1040493,1367,761,#33a02c
+Haryana (HR),Panchkula,Panchkula,558890,816,622,#33a02c
+Haryana (HR),Panipat,Panipat,1202811,1250,949,#33a02c
+Haryana (HR),Rewari,Rewari,896129,1559,562,#33a02c
+Haryana (HR),Rohtak,Rohtak,1058683,1668,607,#33a02c
+Haryana (HR),Sirsa,Sirsa,1295114,4276,303,#33a02c
+Haryana (HR),Sonipat,Sonipat,1480080,2260,697,#33a02c
+Haryana (HR),Yamuna Nagar,Yamuna Nagar,1214162,1756,687,#33a02c
+Himachal Pradesh (HP),Bilaspur,Bilaspur,382056,1167,327,#fb9a99
+Himachal Pradesh (HP),Chamba,Chamba,518844,6528,80,#fb9a99
+Himachal Pradesh (HP),Hamirpur,Hamirpur,454293,1118,406,#fb9a99
+Himachal Pradesh (HP),Kangra,Dharamshala,1507223,5739,263,#fb9a99
+Himachal Pradesh (HP),Kinnaur,Reckong Peo,84298,6401,13,#fb9a99
+Himachal Pradesh (HP),Kullu,Kullu,437474,5503,79,#fb9a99
+Himachal Pradesh (HP),Lahul & Spiti,Keylong,31528,13835,2,#fb9a99
+Himachal Pradesh (HP),Mandi,Mandi,999518,3950,253,#fb9a99
+Himachal Pradesh (HP),Shimla,Shimla,813384,5131,159,#fb9a99
+Himachal Pradesh (HP),Sirmaur,Nahan,530164,2825,188,#fb9a99
+Himachal Pradesh (HP),Solan,Solan,576670,1936,298,#fb9a99
+Himachal Pradesh (HP),Una,Una,521057,1540,328,#fb9a99
+Jammu & Kashmir (JK),Anantnag,Anantnag,1070144,2853,375,#e31a1c
+Jammu & Kashmir (JK),Badgam,Badgam,735753,1406,537,#e31a1c
+Jammu & Kashmir (JK),Bandipore,Bandipore,385099,3010,128,#e31a1c
+Jammu & Kashmir (JK),Baramula,Baramulla,1015503,3329,305,#e31a1c
+Jammu & Kashmir (JK),Doda,Doda,409576,11691,79,#e31a1c
+Jammu & Kashmir (JK),Ganderbal,Ganderbal,297003,258,1151,#e31a1c
+Jammu & Kashmir (JK),Jammu,Jammu,1526406,3097,596,#e31a1c
+Jammu & Kashmir (JK),Kargil,Kargil,143388,14036,10,#e31a1c
+Jammu & Kashmir (JK),Kathua,Kathua,615711,2651,232,#e31a1c
+Jammu & Kashmir (JK),Kishtwar,Kishtwar,231037,1848,125,#e31a1c
+Jammu & Kashmir (JK),Kupwara,Kupwara,875564,2379,368,#e31a1c
+Jammu & Kashmir (JK),Kulgam,Kulgam,422786,457,925,#e31a1c
+Jammu & Kashmir (JK),Leh,Leh,147104,45110,3,#e31a1c
+Jammu & Kashmir (JK),Poonch,Poonch,476820,1674,285,#e31a1c
+Jammu & Kashmir (JK),Pulwama,Pulwama,570060,1398,598,#e31a1c
+Jammu & Kashmir (JK),Rajouri,Rajouri,619266,2630,235,#e31a1c
+Jammu & Kashmir (JK),Ramban,Ramban,283313,1330,213,#e31a1c
+Jammu & Kashmir (JK),Reasi,Reasi,314714,1710,184,#e31a1c
+Jammu & Kashmir (JK),Samba,Samba,318611,913,318,#e31a1c
+Jammu & Kashmir (JK),Shupiyan,Shupiyan,265960,312,852,#e31a1c
+Jammu & Kashmir (JK),Srinagar,Srinagar,1269751,2228,703,#e31a1c
+Jammu & Kashmir (JK),Udhampur,Udhampur,555357,4550,211,#e31a1c
+Jharkhand (JH),Bokaro,Bokaro,2061918,2861,716,#993404
+Jharkhand (JH),Chatra,Chatra,1042304,3700,275,#993404
+Jharkhand (JH),Deoghar,Deoghar,1491879,2479,602,#993404
+Jharkhand (JH),Dhanbad,Dhanbad,2682662,2075,1284,#993404
+Jharkhand (JH),Dumka,Dumka,1321096,4404,300,#993404
+Jharkhand (JH),East Singhbhum,Jamshedpur,2291032,3533,648,#993404
+Jharkhand (JH),Garhwa,Garhwa,1322387,4064,327,#993404
+Jharkhand (JH),Giridih,Giridih,2445203,4887,497,#993404
+Jharkhand (JH),Godda,Godda,1311382,2110,622,#993404
+Jharkhand (JH),Gumla,Gumla,1025656,5327,193,#993404
+Jharkhand (JH),Hazaribagh,Hazaribag,1734005,4302,403,#993404
+Jharkhand (JH),Jamtara,Jamtara,790207,1802,439,#993404
+Jharkhand (JH),Khunti,Khunti,530299,2467,215,#993404
+Jharkhand (JH),Kodarma,Koderma,717169,1312,427,#993404
+Jharkhand (JH),Latehar,Latehar,725673,3630,200,#993404
+Jharkhand (JH),Lohardaga,Lohardaga,461738,1494,310,#993404
+Jharkhand (JH),Pakur,Pakur,899200,1805,498,#993404
+Jharkhand (JH),Palamu,Daltonganj,1936319,5082,381,#993404
+Jharkhand (JH),Ramgarh,Ramgarh,949159,1212,684,#993404
+Jharkhand (JH),Ranchi,Ranchi,2912022,7974,557,#993404
+Jharkhand (JH),Sahibganj,Sahebganj,1150038,1599,719,#993404
+Jharkhand (JH),Seraikela Kharsawan,Seraikela,1063458,2725,390,#993404
+Jharkhand (JH),Simdega,Simdega,599813,3750,160,#993404
+Jharkhand (JH),West Singhbhum,Chaibasa,1501619,7186,209,#993404
+Karnataka (KA),Bagalkot,Bagalkot,1890826,6583,288,#b3de69
+Karnataka (KA),Bangalore Rural,Bangalore,987257,2239,441,#b3de69
+Karnataka (KA),Bangalore,Bangalore,9588910,2190,4378,#b3de69
+Karnataka (KA),Belgaum,Belgaum,4778439,13415,356,#b3de69
+Karnataka (KA),Bellary,Bellary,2532383,8439,300,#b3de69
+Karnataka (KA),Bidar,Bidar,1700018,5448,312,#b3de69
+Karnataka (KA),Bijapur,Bijapur,2175102,10517,207,#b3de69
+Karnataka (KA),Chamrajnagar,Chamarajanagar,1020962,5102,200,#b3de69
+Karnataka (KA),Chikmagalur,Chikmagalur,1137753,7201,158,#b3de69
+Karnataka (KA),Chikkaballapura,Chikkaballapur,1254377,4208,298,#b3de69
+Karnataka (KA),Chitradurga,Chitradurga,1660378,8437,197,#b3de69
+Karnataka (KA),Davanagere,Davangere,1946905,5926,329,#b3de69
+Karnataka (KA),Dharwad,Dharwad,1846993,4265,434,#b3de69
+Karnataka (KA),Dakshina Kannada,Mangalore,2083625,4559,457,#b3de69
+Karnataka (KA),Gadag,Gadag-Betageri,1065235,4651,229,#b3de69
+Karnataka (KA),Gulbarga,Gulbarga,2564892,10990,233,#b3de69
+Karnataka (KA),Hassan,Hassan,1776221,6814,261,#b3de69
+Karnataka (KA),Haveri,Haveri,1598506,4825,331,#b3de69
+Karnataka (KA),Kodagu,Madikeri,554762,4102,135,#b3de69
+Karnataka (KA),Kolar,Kolar,1540231,4012,384,#b3de69
+Karnataka (KA),Koppal,Koppal,1391292,5565,250,#b3de69
+Karnataka (KA),Mandya,Mandya,1808680,4961,365,#b3de69
+Karnataka (KA),Mysore,Mysore,2994744,6854,437,#b3de69
+Karnataka (KA),Raichur,Raichur,1924773,6839,228,#b3de69
+Karnataka (KA),Shimoga,Shimoga,1755512,8495,207,#b3de69
+Karnataka (KA),Tumkur,Tumkur,2681449,10598,253,#b3de69
+Karnataka (KA),Udupi,Udupi,1177908,3879,304,#b3de69
+Karnataka (KA),Uttara Kannada,Karwar,1353299,10291,132,#b3de69
+Karnataka (KA),Ramanagara,Ramanagara,1082739,3573,303,#b3de69
+Karnataka (KA),Yadgir,Yadgir,1172985,5225,224,#b3de69
+Kerala (KL),Alappuzha,Alappuzha,2121943,1414,1501,#ff7f00
+Kerala (KL),Ernakulam,Kakkanad,3279860,2951,1069,#ff7f00
+Kerala (KL),Idukki,Painavu,1107453,4479,254,#ff7f00
+Kerala (KL),Kannur,Kannur,2525637,2966,852,#ff7f00
+Kerala (KL),Kasaragod,Kasaragod,1302600,1992,654,#ff7f00
+Kerala (KL),Kollam,Kollam,2629703,2498,1056,#ff7f00
+Kerala (KL),Kottayam,Kottayam,1979384,2203,896,#ff7f00
+Kerala (KL),Kozhikode,Kozhikode,3089543,2345,1318,#ff7f00
+Kerala (KL),Malappuram,Malappuram,4110956,3550,1058,#ff7f00
+Kerala (KL),Palakkad,Palakkad,2810892,4480,627,#ff7f00
+Kerala (KL),Pathanamthitta,Pathanamthitta,1195537,2462,453,#ff7f00
+Kerala (KL),Thrissur,Thrissur,3110327,3032,1026,#ff7f00
+Kerala (KL),Thiruvananthapuram,Thiruvananthapuram,3307284,2192,1509,#ff7f00
+Kerala (KL),Wayanad,Kalpetta,816558,2131,383,#ff7f00
+Lakshadweep (LD),Lakshadweep,Kavaratti,64429,32,2013,#01665e
+Madhya Pradesh (MP),Agar,Agar,480000,2785,172,#bebada
+Madhya Pradesh (MP),Alirajpur,Alirajpur,728677,3182,229,#bebada
+Madhya Pradesh (MP),Anuppur,Anuppur,749521,3747,200,#bebada
+Madhya Pradesh (MP),Ashok Nagar,Ashok Nagar,844979,4674,181,#bebada
+Madhya Pradesh (MP),Balaghat,Balaghat,1701156,9229,184,#bebada
+Madhya Pradesh (MP),Barwani,Barwani,1385659,5432,256,#bebada
+Madhya Pradesh (MP),Betul,Betul,1575247,10043,157,#bebada
+Madhya Pradesh (MP),Bhind,Bhind,1703562,4459,382,#bebada
+Madhya Pradesh (MP),Bhopal,Bhopal,2368145,2772,854,#bebada
+Madhya Pradesh (MP),Burhanpur,Burhanpur,756993,3427,221,#bebada
+Madhya Pradesh (MP),Chhatarpur,Chhatarpur,1762857,8687,203,#bebada
+Madhya Pradesh (MP),Chhindwara,Chhindwara,2090306,11815,177,#bebada
+Madhya Pradesh (MP),Damoh,Damoh,1263703,7306,173,#bebada
+Madhya Pradesh (MP),Datia,Datia,786375,2694,292,#bebada
+Madhya Pradesh (MP),Dewas,Dewas,1563107,7020,223,#bebada
+Madhya Pradesh (MP),Dhar,Dhar,2184672,8153,268,#bebada
+Madhya Pradesh (MP),Dindori,Dindori,704218,7427,94,#bebada
+Madhya Pradesh (MP),Guna,Guna,1240938,6485,194,#bebada
+Madhya Pradesh (MP),Gwalior,Gwalior,2030543,5465,445,#bebada
+Madhya Pradesh (MP),Harda,Harda,570302,3339,171,#bebada
+Madhya Pradesh (MP),Hoshangabad,Hoshangabad,1240975,6698,185,#bebada
+Madhya Pradesh (MP),Indore,Indore,3272335,3898,839,#bebada
+Madhya Pradesh (MP),Jabalpur,Jabalpur,2460714,5210,472,#bebada
+Madhya Pradesh (MP),Jhabua,Jhabua,1024091,6782,285,#bebada
+Madhya Pradesh (MP),Katni,Katni,1291684,4947,261,#bebada
+Madhya Pradesh (MP),East Nimar,Khandwa,1309443,7349,178,#bebada
+Madhya Pradesh (MP),West Nimar,Khargone,1872413,8010,233,#bebada
+Madhya Pradesh (MP),Mandla,Mandla,1053522,5805,182,#bebada
+Madhya Pradesh (MP),Mandsaur,Mandsaur,1339832,5530,242,#bebada
+Madhya Pradesh (MP),Morena,Morena,1965137,4991,394,#bebada
+Madhya Pradesh (MP),Narsinghpur,Narsinghpur,1092141,5133,213,#bebada
+Madhya Pradesh (MP),Neemuch,Neemuch,825958,4267,194,#bebada
+Madhya Pradesh (MP),Panna,Panna,1016028,7135,142,#bebada
+Madhya Pradesh (MP),Raisen,Raisen,1331699,8466,157,#bebadaNARSIMHAPUR
+Madhya Pradesh (MP),Rajgarh,Rajgarh,1546541,6143,251,#bebada
+Madhya Pradesh (MP),Ratlam,Ratlam,1454483,4861,299,#bebada
+Madhya Pradesh (MP),Rewa,Rewa,2363744,6314,374,#bebada
+Madhya Pradesh (MP),Sagar,Sagar,2378295,10252,272,#bebada
+Madhya Pradesh (MP),Satna,Satna,2228619,7502,297,#bebada
+Madhya Pradesh (MP),Sehore,Sehore,1311008,6578,199,#bebada
+Madhya Pradesh (MP),Seoni,Seoni,1378876,8758,157,#bebada
+Madhya Pradesh (MP),Shahdol,Shahdol,1064989,6205,172,#bebada
+Madhya Pradesh (MP),Shajapur,Shajapur,1512353,6196,244,#bebada
+Madhya Pradesh (MP),Sheopur,Sheopur,687952,6585,104,#bebada
+Madhya Pradesh (MP),Shivpuri,Shivpuri,1725818,10290,168,#bebada
+Madhya Pradesh (MP),Sidhi,Sidhi,1126515,10520,232,#bebada
+Madhya Pradesh (MP),Singrauli,Singrauli,1178132,5672,208,#bebada
+Madhya Pradesh (MP),Tikamgarh,Tikamgarh,1444920,5055,286,#bebada
+Madhya Pradesh (MP),Ujjain,Ujjain,1986597,6091,356,#bebada
+Madhya Pradesh (MP),Umaria,Umaria,643579,4062,158,#bebada
+Madhya Pradesh (MP),Vidisha,Vidisha,1458212,7362,198,#bebada
+Maharashtra (MH),Ahmednagar,Ahmednagar,4543083,17048,266,#fb8072
+Maharashtra (MH),Akola,Akola,1818617,5429,321,#fb8072
+Maharashtra (MH),Amravati,Amravati,2887826,12235,237,#fb8072
+Maharashtra (MH),Aurangabad,Aurangabad,3695928,10107,365,#fb8072
+Maharashtra (MH),Beed,Beed,2585962,10693,242,#fb8072
+Maharashtra (MH),Bhandara,Bhandara,1198810,3890,293,#fb8072
+Maharashtra (MH),Buldana,Buldhana,2588039,9661,268,#fb8072
+Maharashtra (MH),Chandrapur,Chandrapur,2194262,11443,192,#fb8072
+Maharashtra (MH),Dhule,Dhule,2048781,8095,285,#fb8072
+Maharashtra (MH),Garhchiroli,Gadchiroli,1071795,14412,74,#fb8072
+Maharashtra (MH),Gondiya,Gondia,1322331,5431,253,#fb8072
+Maharashtra (MH),Hingoli,Hingoli,1178973,4526,244,#fb8072
+Maharashtra (MH),Jalgaon,Jalgaon,4224442,11765,359,#fb8072
+Maharashtra (MH),Jalna,Jalna,1958483,7718,255,#fb8072
+Maharashtra (MH),Kolhapur,Kolhapur,3874015,7685,504,#fb8072
+Maharashtra (MH),Latur,Latur,2455543,7157,343,#fb8072
+Maharashtra (MH),Mumbai City,Mumbai ,3145966,69,20038,#fb8072
+Maharashtra (MH),Mumbai Suburban,Bandra (East),9332481,369,20925,#fb8072
+Maharashtra (MH),Nanded,Nanded,3356566,10528,319,#fb8072
+Maharashtra (MH),Nandurbar,Nandurbar,1646177,5055,276,#fb8072
+Maharashtra (MH),Nagpur,Nagpur,4653171,9892,470,#fb8072
+Maharashtra (MH),Nashik,Nashik,6109052,15539,393,#fb8072
+Maharashtra (MH),Osmanabad,Osmanabad,1660311,7569,219,#fb8072
+Maharashtra (MH),Palghar,Palghar,2990116,5344,560,#fb8072
+Maharashtra (MH),Parbhani,Parbhani,1835982,6511,295,#fb8072
+Maharashtra (MH),Pune,Pune,9426959,15643,603,#fb8072
+Maharashtra (MH),Raigad,Alibag,2635394,7152,368,#fb8072
+Maharashtra (MH),Ratnagiri,Ratnagiri,1612672,8208,196,#fb8072
+Maharashtra (MH),Sangli,Sangli,2820575,8572,329,#fb8072
+Maharashtra (MH),Satara,Satara,3003922,10475,287,#fb8072
+Maharashtra (MH),Sindhudurg,Oros,848868,5207,163,#fb8072
+Maharashtra (MH),Solapur,Solapur,4315527,14895,290,#fb8072
+Maharashtra (MH),Thane,Thane,8070032,4214,1900,#fb8072
+Maharashtra (MH),Wardha,Wardha,1296157,6309,205,#fb8072
+Maharashtra (MH),Washim,Washim,1196714,5155,244,#fb8072
+Maharashtra (MH),Yavatmal,Yavatmal,2775457,13582,204,#fb8072
+Manipur (MN),Bishnupur,Bishnupur,240363,496,485,#41b6c4
+Manipur (MN),Churachandpur,Churachandpur,271274,4574,59,#41b6c4
+Manipur (MN),Chandel,Chandel,144028,3317,43,#41b6c4
+Manipur (MN),Imphal East,Porompat,452661,710,638,#41b6c4
+Manipur (MN),Senapati,Senapati,354972,3269,109,#41b6c4
+Manipur (MN),Tamenglong,Tamenglong,140143,4391,32,#41b6c4
+Manipur (MN),Thoubal,Thoubal,420517,514,818,#41b6c4
+Manipur (MN),Ukhrul,Ukhrul,183115,4547,40,#41b6c4
+Manipur (MN),Imphal West,Lamphelpat,514683,519,992,#41b6c4
+Meghalaya (ML),East Garo Hills,Williamnagar,317618,2603,121,#cb181d
+Meghalaya (ML),East Khasi Hills,Shillong,824059,2752,292,#cb181d
+Meghalaya (ML),Jaintia Hills,Jowai,392852,3819,103,#cb181d
+Meghalaya (ML),Ri Bhoi,Nongpoh,258380,2378,109,#cb181d
+Meghalaya (ML),South Garo Hills,Baghmara,142574,1850,77,#cb181d
+Meghalaya (ML),West Garo Hills,Tura,642923,3714,173,#cb181d
+Meghalaya (ML),West Khasi Hills,Nongstoin,385601,5247,73,#cb181d
+Mizoram (MZ),Aizawl,Aizawl,404054,3577,113,#88419d
+Mizoram (MZ),Champhai,Champhai,125370,3168,39,#88419d
+Mizoram (MZ),Kolasib,Kolasib,83054,1386,60,#88419d
+Mizoram (MZ),Lawangtlai,Lawangtlai,117444,2519,46,#88419d
+Mizoram (MZ),Lunglei,Lunglei,154094,4572,34,#88419d
+Mizoram (MZ),Mamit,Mamit,85757,2967,28,#88419d
+Mizoram (MZ),Saiha,Saiha,56366,1414,40,#88419d
+Mizoram (MZ),Serchhip,Serchhip,64875,1424,46,#88419d
+Nagaland (NL),Dimapur,Dimapur,379769,926,410,#b15928
+Nagaland (NL),Kiphire,Kiphire,74033,1255,66,#b15928
+Nagaland (NL),Kohima,Kohima,270063,1041,213,#b15928
+Nagaland (NL),Longleng,Longleng,50593,885,89,#b15928
+Nagaland (NL),Mokokchung,Mokokchung,193171,1615,120,#b15928
+Nagaland (NL),Mon,Mon,259604,1786,145,#b15928
+Nagaland (NL),Peren,Peren,163294,2300,55,#b15928
+Nagaland (NL),Phek,Phek,163294,2026,81,#b15928
+Nagaland (NL),Tuensang,Tuensang,414801,4228,98,#b15928
+Nagaland (NL),Wokha,Wokha,166239,1628,120,#b15928
+Nagaland (NL),Zunheboto,Zunheboto,141014,1255,112,#b15928
+Odisha (OD),Anugul,Angul,1271703,6347,199,#ef6548
+Odisha (OD),Bauda,Boudh,439917,4289,142,#ef6548
+Odisha (OD),Bhadrak,Bhadrak,1506522,2788,601,#ef6548
+Odisha (OD),Balangir,Balangir,1648574,6552,251,#ef6548
+Odisha (OD),Bargarh,Bargarh,1478833,5832,253,#ef6548
+Odisha (OD),Baleshwar,Balasore,2317419,3706,609,#ef6548
+Odisha (OD),Cuttack,Cuttack,2618708,3915,666,#ef6548
+Odisha (OD),Debagarh,Debagarh,312164,2781,106,#ef6548
+Odisha (OD),Dhenkanal,Dhenkanal,1192948,4597,268,#ef6548
+Odisha (OD),Ganjam,Chhatrapur,3520151,8033,429,#ef6548
+Odisha (OD),Gajapati,Paralakhemundi,575880,3056,133,#ef6548
+Odisha (OD),Jharsuguda,Jharsuguda,579499,2202,274,#ef6548
+Odisha (OD),Jajapur,Panikoili,1826275,2885,630,#ef6548
+Odisha (OD),Jagatsinghapur,Jagatsinghpur,1136604,1759,681,#ef6548
+Odisha (OD),Khordha,Khordha,2246341,2888,799,#ef6548
+Odisha (OD),Kendujhar,Kendujhar,1802777,8336,217,#ef6548
+Odisha (OD),Kalahandi,Bhawanipatna,1573054,8197,199,#ef6548
+Odisha (OD),Kandhamal,Phulbani,731952,6004,91,#ef6548
+Odisha (OD),Koraput,Koraput,1376934,8534,156,#ef6548
+Odisha (OD),Kendrapara,Kendrapara,1439891,2546,545,#ef6548
+Odisha (OD),Malkangiri,Malkangiri,612727,6115,106,#ef6548
+Odisha (OD),Mayurbhanj,Baripada,2513895,10418,241,#ef6548
+Odisha (OD),Nabarangapur,Nabarangpur,1218762,5135,230,#ef6548
+Odisha (OD),Nuapada,Nuapada,606490,3408,157,#ef6548
+Odisha (OD),Nayagarh,Nayagarh,962215,3954,247,#ef6548
+Odisha (OD),Puri,Puri,1697983,3055,488,#ef6548
+Odisha (OD),Rayagada,Rayagada,961959,7585,136,#ef6548
+Odisha (OD),Sambalpur,Sambalpur,1044410,6702,158,#ef6548
+Odisha (OD),Subarnapur,Subarnapur,652107,2284,279,#ef6548
+Odisha (OD),Sundargarh,Sundergarh,2080664,9942,214,#ef6548
+Puducherry (PY),Karaikal,Karaikal,200314,160,1252,#8c96c6
+Puducherry (PY),Mahe,Mahé,41934,9,4659,#8c96c6
+Puducherry (PY),Puducherry,Pondicherry,946600,293,3231,#8c96c6
+Puducherry (PY),Yanam,Yanam,55616,17,3272,#8c96c6
+Punjab (PB),Amritsar,Amritsar,2490891,2673,932,#54278f
+Punjab (PB),Barnala,Barnala,596294,1423,419,#54278f
+Punjab (PB),Bathinda,Bathinda,1388859,3355,414,#54278f
+Punjab (PB),Firozpur,Firozpur,2026831,5334,380,#54278f
+Punjab (PB),Faridkot,Faridkot,618008,1472,424,#54278f
+Punjab (PB),Fatehgarh Sahib,Fatehgarh Sahib,599814,1180,508,#54278f
+Punjab (PB),Fazilka,Fazilka,67424,561,120,#54278f
+Punjab (PB),Gurdaspur,Gurdaspur,2299026,3542,649,#54278f
+Punjab (PB),Hoshiarpur,Hoshiarpur,1582793,3397,466,#54278f
+Punjab (PB),Jalandhar,Jalandhar,2181753,2625,831,#54278f
+Punjab (PB),Kapurthala,Kapurthala,817668,1646,501,#54278f
+Punjab (PB),Ludhiana,Ludhiana,3487882,3744,975,#54278f
+Punjab (PB),Mansa,Mansa,768808,2174,350,#54278f
+Punjab (PB),Moga,Moga,992289,2235,444,#54278f
+Punjab (PB),Muktsar,Sri Muktsar Sahib,902702,2596,348,#54278f
+Punjab (PB),Pathankot,Pathankot,1998464,5021,398,#54278f
+Punjab (PB),Patiala,Patiala,2892282,3175,596,#54278f
+Punjab (PB),Rupnagar,Rupnagar,683349,1400,488,#54278f
+Punjab (PB),Sahibzada Ajit Singh Nagar,Sahibzada Ajit Singh Nagar (Mohali),986147,1188,830,#54278f
+Punjab (PB),Sangrur,Sangrur,1654408,3685,449,#54278f
+Punjab (PB),Shahid Bhagat Singh Nagar,Nawanshahr,614362,1283,479,#54278f
+Punjab (PB),Tarn Taran,Tarn Taran Sahib,1120070,2414,464,#54278f
+Rajasthan (RJ),Ajmer,Ajmer,2584913,8481,305,#fdb462
+Rajasthan (RJ),Alwar,Alwar,3671999,8380,438,#fdb462
+Rajasthan (RJ),Bikaner,Bikaner,2367745,27244,78,#fdb462
+Rajasthan (RJ),Barmer,Barmer,2604453,28387,92,#fdb462
+Rajasthan (RJ),Banswara,Banswara,1798194,5037,399,#fdb462
+Rajasthan (RJ),Bharatpur,Bharatpur,2549121,5066,503,#fdb462
+Rajasthan (RJ),Baran,Baran,1223921,6955,175,#fdb462
+Rajasthan (RJ),Bundi,Bundi,1113725,5550,193,#fdb462
+Rajasthan (RJ),Bhilwara,Bhilwara,2410459,10455,230,#fdb462
+Rajasthan (RJ),Churu,Churu,2041172,16830,148,#fdb462
+Rajasthan (RJ),Chittaurgarh,Chittorgarh,1544392,10856,193,#fdb462
+Rajasthan (RJ),Dausa,Dausa,1637226,3429,476,#fdb462
+Rajasthan (RJ),Dhaulpur,Dholpur,1207293,3084,398,#fdb462
+Rajasthan (RJ),Dungarpur,Dungarpur,1388906,3771,368,#fdb462
+Rajasthan (RJ),Ganganagar,Ganganagar,1969520,10990,179,#fdb462
+Rajasthan (RJ),Hanumangarh,Hanumangarh,1779650,9670,184,#fdb462
+Rajasthan (RJ),Jhunjhunun,Jhunjhunu,2139658,5928,361,#fdb462
+Rajasthan (RJ),Jalor,Jalore,1830151,10640,172,#fdb462
+Rajasthan (RJ),Jodhpur,Jodhpur,3685681,22850,161,#fdb462
+Rajasthan (RJ),Jaipur,Jaipur,6663971,11152,598,#fdb462
+Rajasthan (RJ),Jaisalmer,Jaisalmer,672008,38401,17,#fdb462
+Rajasthan (RJ),Jhalawar,Jhalawar,1411327,6219,227,#fdb462
+Rajasthan (RJ),Karauli,Karauli,1458459,5530,264,#fdb462
+Rajasthan (RJ),Kota,Kota,1950491,5446,374,#fdb462
+Rajasthan (RJ),Nagaur,Nagaur,3309234,17718,187,#fdb462
+Rajasthan (RJ),Pali,Pali,2038533,12387,165,#fdb462
+Rajasthan (RJ),Pratapgarh,Pratapgarh,868231,4112,211,#fdb462
+Rajasthan (RJ),Rajsamand,Rajsamand,1158283,3853,302,#fdb462
+Rajasthan (RJ),Sikar,Sikar,2677737,7732,346,#fdb462
+Rajasthan (RJ),Sawai Madhopur,Sawai Madhopur,1338114,4500,257,#fdb462
+Rajasthan (RJ),Sirohi,Sirohi,1037185,5136,202,#fdb462
+Rajasthan (RJ),Tonk,Tonk,1421711,7194,198,#fdb462
+Rajasthan (RJ),Udaipur,Udaipur,3067549,13430,242,#fdb462
+Sikkim (SK),East Sikkim,Gangtok,281293,954,295,#238b45
+Sikkim (SK),North Sikkim,Mangan,43354,4226,10,#238b45
+Sikkim (SK),South Sikkim,Namchi,146742,750,196,#238b45
+Sikkim (SK),West Sikkim,Geyzing,136299,1166,117,#238b45
+Tamil Nadu (TN),Ariyalur,Ariyalur,752481,3208,387,#fccde5
+Tamil Nadu (TN),Chennai,Chennai (Madras),4681087,174,26903,#fccde5
+Tamil Nadu (TN),Coimbatore,Coimbatore,3472578,7469,748,#fccde5
+Tamil Nadu (TN),Cuddalore,Cuddalore,2600880,3999,702,#fccde5
+Tamil Nadu (TN),Dharmapuri,Dharmapuri,1502900,4532,332,#fccde5
+Tamil Nadu (TN),Dindigul,Dindigul,2161367,6058,357,#fccde5
+Tamil Nadu (TN),Erode,Erode,2259608,5714,397,#fccde5
+Tamil Nadu (TN),Kanchipuram,Kanchipuram,3990897,4433,927,#fccde5
+Tamil Nadu (TN),Kanyakumari,Nagercoil,1863174,1685,1106,#fccde5
+Tamil Nadu (TN),Karur,Karur,1076588,2901,371,#fccde5
+Tamil Nadu (TN),Krishnagiri,Krishnagiri,1883731,5086,370,#fccde5
+Tamil Nadu (TN),Madurai,Madurai,3041038,3676,823,#fccde5
+Tamil Nadu (TN),Nagapattinam,Nagapattinam,1614069,2716,668,#fccde5
+Tamil Nadu (TN),Nilgiris,Udagamandalam (Ootacamund/Ooty),735071,2549,288,#fccde5
+Tamil Nadu (TN),Namakkal,Namakkal,1721179,3429,506,#fccde5
+Tamil Nadu (TN),Perambalur,Perambalur,564511,1752,323,#fccde5
+Tamil Nadu (TN),Pudukkottai,Pudukkottai,1618725,4651,348,#fccde5
+Tamil Nadu (TN),Ramanathapuram,Ramanathapuram,1337560,4123,320,#fccde5
+Tamil Nadu (TN),Salem,Salem,3480008,5245,663,#fccde5
+Tamil Nadu (TN),Sivaganga,Sivaganga,1341250,4086,324,#fccde5
+Tamil Nadu (TN),Tirupur,Tirupur,2471222,5106,476,#fccde5
+Tamil Nadu (TN),Tiruchirappalli,Tiruchirappalli,2713858,4407,602,#fccde5
+Tamil Nadu (TN),Theni,Theni,1243684,3066,433,#fccde5
+Tamil Nadu (TN),Tirunelveli,Tirunelveli,3072880,6703,458,#fccde5
+Tamil Nadu (TN),Thanjavur,Thanjavur,2402781,3397,691,#fccde5
+Tamil Nadu (TN),Thoothukudi,Thoothukudi (Tuticorin),1738376,4594,378,#fccde5
+Tamil Nadu (TN),Tiruvallur,Tiruvallur,3725697,3424,1049,#fccde5
+Tamil Nadu (TN),Tiruvarur,Tiruvarur,1268094,2377,533,#fccde5
+Tamil Nadu (TN),Tiruvannamalai,Tiruvannaamalai,2468965,6191,399,#fccde5
+Tamil Nadu (TN),Vellore,Vellore,3928106,6077,646,#fccde5
+Tamil Nadu (TN),Viluppuram,Viluppuram,3463284,7190,462,#fccde5
+Tamil Nadu (TN),Virudhunagar,Virudhunagar,1943309,3446,454,#fccde5
+Telengana (TS),Adilabad,Adilabad,2737738,16105,170,#fec44f
+Telengana (TS),Hyderabad,Hyderabad,4010238,217,18480,#fec44f
+Telengana (TS),Karimnagar,Karimnagar,3811738,11823,322,#fec44f
+Telengana (TS),Khammam,Khammam,2798214,16029,175,#fec44f
+Telengana (TS),Mahbubnagar,Mahabubnagar,4042191,18432,219,#fec44f
+Telengana (TS),Medak,Sangareddi,3031877,9699,313,#fec44f
+Telengana (TS),Nalgonda,Nalgonda,3483648,14240,245,#fec44f
+Telengana (TS),Nizamabad,Nizamabad,2552073,7956,321,#fec44f
+Telengana (TS),Rangareddy,Hyderabad,5296396,7493,707,#fec44f
+Telengana (TS),Warangal,Warangal,3522644,12846,252,#fec44f
+Tripura (TR),Dhalai,Ambassa,377988,2400,157,#dd3497
+Tripura (TR),Gomati,"Udaipur, Tripura",436868,1523,287,#dd3497
+Tripura (TR),Khowai,Khowai,327391,1006,326,#dd3497
+Tripura (TR),North Tripura,Dharmanagar,415946,1445,288,#dd3497
+Tripura (TR),Sepahijala,Bishramganj,484233,1045,463,#dd3497
+Tripura (TR),South Tripura,Belonia,433737,1534,283,#dd3497
+Tripura (TR),Unokoti,Kailashahar,277335,592,469,#dd3497
+Tripura (TR),West Tripura,Agartala,917534,943,973,#dd3497
+Uttar Pradesh (UP),Agra,Agra,4380793,4027,1084,#8dd3c7
+Uttar Pradesh (UP),Aligarh,Aligarh,3673849,3747,1007,#8dd3c7
+Uttar Pradesh (UP),Allahabad,Allahabad,5959798,5481,1087,#8dd3c7
+Uttar Pradesh (UP),Ambedkar Nagar,Akbarpur,2398709,2372,1021,#8dd3c7
+Uttar Pradesh (UP),Auraiya,Auraiya,1372287,2051,681,#8dd3c7
+Uttar Pradesh (UP),Azamgarh,Azamgarh,4616509,4053,1139,#8dd3c7
+Uttar Pradesh (UP),Baghpat,Baghpat,1302156,1345,986,#8dd3c7
+Uttar Pradesh (UP),Bahraich,Bahraich,2384239,4926,415,#8dd3c7
+Uttar Pradesh (UP),Ballia,Ballia,3223642,2981,1081,#8dd3c7
+Uttar Pradesh (UP),Balrampur,Balrampur,2149066,3349,642,#8dd3c7
+Uttar Pradesh (UP),Banda,Banda,1799541,4413,404,#8dd3c7
+Uttar Pradesh (UP),Bara Banki,Barabanki,3257983,3825,739,#8dd3c7
+Uttar Pradesh (UP),Bareilly,Bareilly,4465344,4120,1084,#8dd3c7
+Uttar Pradesh (UP),Basti,Basti,2461056,2687,916,#8dd3c7
+Uttar Pradesh (UP),Bijnor,Bijnor,3683896,4561,808,#8dd3c7
+Uttar Pradesh (UP),Budaun,Budaun,3712738,5168,718,#8dd3c7
+Uttar Pradesh (UP),Bulandshahr,Bulandshahr,3498507,3719,788,#8dd3c7
+Uttar Pradesh (UP),Chandauli,Chandauli,1952713,2554,768,#8dd3c7
+Uttar Pradesh (UP),Amethi (Chhatrapati Shahuji Maharaj Nagar),Gauriganj,326723,3063,106,#8dd3c7
+Uttar Pradesh (UP),Chitrakoot,Chitrakoot,990626,3202,315,#8dd3c7
+Uttar Pradesh (UP),Deoria,Deoria,3098637,2535,1220,#8dd3c7
+Uttar Pradesh (UP),Etah,Etah,1761152,2456,717,#8dd3c7
+Uttar Pradesh (UP),Etawah,Etawah,1579160,2287,683,#8dd3c7
+Uttar Pradesh (UP),Faizabad,Faizabad,2468371,2765,1054,#8dd3c7
+Uttar Pradesh (UP),Farrukhabad,Fatehgarh,1887577,2279,865,#8dd3c7
+Uttar Pradesh (UP),Fatehpur,Fatehpur,2632684,4152,634,#8dd3c7
+Uttar Pradesh (UP),Firozabad,Firozabad,2496761,2361,1044,#8dd3c7
+Uttar Pradesh (UP),Gautam Buddha Nagar,Noida,1674714,1269,1252,#8dd3c7
+Uttar Pradesh (UP),Ghaziabad,Ghaziabad,4661452,1175,3967,#8dd3c7
+Uttar Pradesh (UP),Ghazipur,Ghazipur,3622727,3377,1072,#8dd3c7
+Uttar Pradesh (UP),Gonda,Gonda,3431386,4425,857,#8dd3c7
+Uttar Pradesh (UP),Gorakhpur,Gorakhpur,4436275,3325,1336,#8dd3c7
+Uttar Pradesh (UP),Hamirpur,Hamirpur,1104021,4325,268,#8dd3c7
+Uttar Pradesh (UP),Hardoi,Hardoi,4091380,5986,683,#8dd3c7
+Uttar Pradesh (UP),Mahamaya Nagar,Hathras,1565678,1752,851,#8dd3c7
+Uttar Pradesh (UP),Jalaun,Orai,1670718,4565,366,#8dd3c7
+Uttar Pradesh (UP),Jaunpur,Jaunpur,4476072,4038,1108,#8dd3c7
+Uttar Pradesh (UP),Jhansi,Jhansi,2000755,5024,398,#8dd3c7
+Uttar Pradesh (UP),Jyotiba Phule Nagar,Amroha,1838771,2321,818,#8dd3c7
+Uttar Pradesh (UP),Kannauj,Kannauj,1658005,1993,792,#8dd3c7
+Uttar Pradesh (UP),Kanpur Dehat,Akbarpur (Mati),1795092,3021,594,#8dd3c7
+Uttar Pradesh (UP),Kanpur Nagar,Kanpur,4572951,3156,1415,#8dd3c7
+Uttar Pradesh (UP),Kansiram Nagar,Kasganj,1438156,1955,736,#8dd3c7
+Uttar Pradesh (UP),Kaushambi,Manjhanpur,1596909,1837,897,#8dd3c7
+Uttar Pradesh (UP),Kushinagar,Padrauna,3560830,2909,1226,#8dd3c7
+Uttar Pradesh (UP),Lakhimpur Kheri,Lakhimpur,4013634,7674,523,#8dd3c7
+Uttar Pradesh (UP),Lalitpur,Lalitpur,1218002,5039,242,#8dd3c7
+Uttar Pradesh (UP),Lucknow,Lucknow,4588455,2528,1815,#8dd3c7
+Uttar Pradesh (UP),Maharajganj,Maharajganj,2665292,2953,903,#8dd3c7
+Uttar Pradesh (UP),Mahoba,Mahoba,876055,2847,288,#8dd3c7
+Uttar Pradesh (UP),Mainpuri,Mainpuri,1847194,2760,670,#8dd3c7
+Uttar Pradesh (UP),Mathura,Mathura,2541894,3333,761,#8dd3c7
+Uttar Pradesh (UP),Mau,Mau,2205170,1713,1287,#8dd3c7
+Uttar Pradesh (UP),Meerut,Meerut,3447405,2522,1342,#8dd3c7
+Uttar Pradesh (UP),Mirzapur,Mirzapur,2494533,4522,561,#8dd3c7
+Uttar Pradesh (UP),Moradabad,Moradabad,4773138,3718,1284,#8dd3c7
+Uttar Pradesh (UP),Muzaffarnagar,Muzaffarnagar,4138605,4008,1033,#8dd3c7
+Uttar Pradesh (UP),Panchsheel Nagar district (Hapur),Hapur,1451983,1161,1250,#8dd3c7
+Uttar Pradesh (UP),Pilibhit,Pilibhit,2037225,3499,567,#8dd3c7
+Uttar Pradesh (UP),Pratapgarh,Pratapgarh,3173752,3717,854,#8dd3c7
+Uttar Pradesh (UP),Rae Bareli,Raebareli,3404004,4609,739,#8dd3c7
+Uttar Pradesh (UP),Rampur,Rampur,2335398,2367,987,#8dd3c7
+Uttar Pradesh (UP),Saharanpur,Saharanpur,3464228,3689,939,#8dd3c7
+Uttar Pradesh (UP),Sambhal(Bheem Nagar),Sambhal,2217020,16,11433,#8dd3c7
+Uttar Pradesh (UP),Sant Kabir Nagar,Khalilabad,1714300,1442,1014,#8dd3c7
+Uttar Pradesh (UP),Sant Ravidas Nagar,Gyanpur,1554203,960,1531,#8dd3c7
+Uttar Pradesh (UP),Shahjahanpur,Shahjahanpur,3002376,4575,673,#8dd3c7
+Uttar Pradesh (UP),Shamli,Shamli,1317815,1032,1300,#8dd3c7
+Uttar Pradesh (UP),Shrawasti,Shravasti,1114615,1948,572,#8dd3c7
+Uttar Pradesh (UP),Siddharth Nagar,Navgarh,2553526,2751,882,#8dd3c7
+Uttar Pradesh (UP),Sitapur,Sitapur,4474446,5743,779,#8dd3c7
+Uttar Pradesh (UP),Sonbhadra,Robertsganj,1862612,6788,274,#8dd3c7
+Uttar Pradesh (UP),Sultanpur,Sultanpur,3790922,4436,855,#8dd3c7
+Uttar Pradesh (UP),Unnao,Unnao,3110595,4561,682,#8dd3c7
+Uttar Pradesh (UP),Varanasi,Varanasi,3682194,1535,2399,#8dd3c7
+Uttarakhand (UK),Almora,Almora,621927,3090,198,#9e9ac8
+Uttarakhand (UK),Bageshwar,Bageshwar,259840,2310,116,#9e9ac8
+Uttarakhand (UK),Chamoli,Gopeshwar,391114,7692,49,#9e9ac8
+Uttarakhand (UK),Champawat,Champawat,259315,1781,147,#9e9ac8
+Uttarakhand (UK),Dehradun,Dehradun,1698560,3088,550,#9e9ac8
+Uttarakhand (UK),Haridwar,Haridwar,1927029,2360,817,#9e9ac8
+Uttarakhand (UK),Nainital,Nainital,955128,3853,225,#9e9ac8
+Uttarakhand (UK),Pauri Garhwal,Pauri,686527,5438,129,#9e9ac8
+Uttarakhand (UK),Pithoragarh,Pithoragarh,485993,7110,69,#9e9ac8
+Uttarakhand (UK),Rudraprayag,Rudraprayag,236857,1896,119,#9e9ac8
+Uttarakhand (UK),Tehri Garhwal,New Tehri,616409,4085,169,#9e9ac8
+Uttarakhand (UK),Udham Singh Nagar,Rudrapur,1648367,2912,648,#9e9ac8
+Uttarakhand (UK),Uttarkashi,Uttarkashi,329686,7951,41,#9e9ac8
+West Bengal (WB),Alipurduar,Alipurduar,1700000,3383,400,#cab2d6
+West Bengal (WB),Bankura,Bankura,3596292,6882,523,#cab2d6
+West Bengal (WB),Bardhaman,Bardhaman,7723663,7024,1100,#cab2d6
+West Bengal (WB),Birbhum,Suri,3502387,4545,771,#cab2d6
+West Bengal (WB),Cooch Behar,Cooch Behar,2822780,3387,833,#cab2d6
+West Bengal (WB),Dakshin Dinajpur,Balurghat,1670931,2183,753,#cab2d6
+West Bengal (WB),Darjeeling,Darjeeling,1842034,3149,585,#cab2d6
+West Bengal (WB),Hugli,Hugli-Chuchura,5520389,3149,1753,#cab2d6
+West Bengal (WB),Howrah,Howrah,4841638,1467,3300,#cab2d6
+West Bengal (WB),Jalpaiguri,Jalpaiguri,3869675,6227,621,#cab2d6
+West Bengal (WB),Kolkata,Kolkata,4486679,185,24252,#cab2d6
+West Bengal (WB),Maldah,English Bazar,3997970,3733,1071,#cab2d6
+West Bengal (WB),Murshidabad,Baharampur,7102430,5324,1334,#cab2d6
+West Bengal (WB),Nadia,Krishnanagar,5168488,3927,1316,#cab2d6
+West Bengal (WB),North 24 Parganas,Barasat,10082852,4094,2463,#cab2d6
+West Bengal (WB),Paschim Medinipur,Midnapore,5094238,9345,1076,#cab2d6
+West Bengal (WB),Purba Medinipur,Tamluk,4417377,4736,923,#cab2d6
+West Bengal (WB),Purulia,Purulia,2927965,6259,468,#cab2d6
+West Bengal (WB),South 24 Parganas,Alipore,8153176,9960,819,#cab2d6
+West Bengal (WB),Uttar Dinajpur,Raiganj,3000849,3180,956,#cab2d6

@@ -1,0 +1,275 @@
+<html>
+  <head>
+    <style>
+
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", sans-serif;
+      }
+
+      .subunit {
+        stroke: #333;
+        stroke-width: 1px;
+      }
+
+      .subunit-boundary {
+        fill: none;
+        stroke: #3a403d;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    
+    <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>District Analysis - India</p>
+                    <p class="synopsis">The graphical image tree map showing the trend of the each district in india describing corresponding states with respect to population, area in (sq km) and density in (per sq km) as per the latest available data as of  year 2014 .</p>                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid detail_percent_display">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>District Wise Population Analysis</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+                     <div class="chart">                            
+                        <div class="col-md-12 panel-body">
+                            <p class="form-inline header_form">
+                                <label value="group">Order by: </label>
+                                <select id="options_view">   
+                                    <option value="Population" class="name">Population</option>
+                                    <option value="Area" class="name">Area</option>
+                                    <option value="Density" class="name">Density</option>
+                                </select>
+                                <label value="state">State : </label>
+                                <select id="state" class="select_state">
+                                    <option selected value="All States" class="name">All States</option>
+                                </select>
+                                <input type="button" value="submit" class="party_filter btn btn-success" onclick=render();></input> 
+                            </p>
+                            <div class="cartogram"></div>
+                        </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+
+   <div class="container"></div>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/d3.v4.min.js"></script>
+   <link href="css/bootstrap.css" rel="stylesheet">    
+   <link href="css/basic.css" rel="stylesheet">
+   <link href="css/feature.css" rel="stylesheet">
+   <link href="css/custom-styles.css" rel="stylesheet">
+   <script type="text/javascript" src="js/topojson.min.js"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="js/underscore-min.js"></script>  
+  
+   <script>     
+ var width = window.innerWidth, height = window.innerHeight*.75;
+
+ function render() {
+      
+     d3.csv("district.csv", function(performance_data) { 
+         var centered;
+  
+        cols = d3.keys(performance_data[0]).slice(1)
+  
+        performance_data.forEach(function(o) {
+           o.Population = parseFloat(o.Population);
+        });
+
+      var projection = d3.geoMercator();
+
+      var path = d3.geoPath()
+          .projection(projection)
+          .pointRadius(2);
+ 
+      d3.select('.cartogram').select('svg').remove();
+       
+      var svg = d3.select(".cartogram").append("svg")
+               .style("width", "100%")
+               .attr("data-height","0.54")
+               .attr("viewBox","0 0 "+width+" "+height);
+            
+         // .attr("width", width)
+         // .attr("height", height);
+        
+        svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all')
+            .on("click", clicked);
+    
+      var g = svg.append("g");
+
+      d3.json("districts.json", function(error, data) {
+
+        if (error) throw error;
+
+      var states_names = d3.nest()
+        .key(function(d) { return  d.properties.sn; })
+        .entries(data.objects.polygons.geometries);
+
+        states_names = states_names.sort(function(a, b){ return d3.ascending(a.key, b.key); })
+
+        var select_box = d3.select('#state')     
+                .selectAll("option")
+                    .data(states_names) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d.key })
+                    .attr("class","name")
+                    //.attr("selected","")
+                    .text(function (d) { return d.key });
+
+        var boundary = centerZoom(data,$('#state').val());
+        drawSubUnits(data,$('#state').val(),$('#options_view').val());
+       //drawOuterBoundary(data, boundary);
+
+      });
+
+    // return only the distinct / unique nodes
+     
+      // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
+      // It also returns the boundary itself in case you want to draw it to the map
+      function centerZoom(data,state){
+        if (state!='All States') 
+          { 
+                data.objects.polygons.geometries = data.objects.polygons.geometries.filter(function(d) { return d.properties.sn == state }) 
+          }
+        var o = topojson.mesh(data, data.objects.polygons, function(a, b) { return a === b; });
+
+        projection
+            .scale(1)
+            .translate([0, 0]);
+
+        var b = path.bounds(o),
+            s = 1 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+            t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+        projection
+            .scale(s)
+            .translate(t);
+        return o;
+
+      }
+
+
+      function addThousandsSeparator(t){
+          var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}
+           return a
+      }
+    
+      function drawOuterBoundary(data, boundary){
+        g.append("path")
+            .datum(boundary)
+            .attr("d", path)
+            .attr("class", "subunit-boundary");
+      }
+
+      
+function clicked(d) {
+      
+          var x, y, k;
+          if (d && centered !== d) {
+            var centroid = path.centroid(d);
+            x = centroid[0];
+            y = centroid[1];
+            k = 4;
+            centered = d;
+          } else {
+            x = width / 2;
+            y = height / 2;
+            k = 1;
+            centered = null;
+          }
+
+          g.selectAll("path")
+              .classed("active", centered && function(d) { return d === centered; });
+
+          g.transition()
+              .duration(750)
+              .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
+              .style("stroke-width", 1.5 / k + "px");
+
+}
+      function drawSubUnits(data,state,options_view){
+  
+     if (state!='All States') 
+     {
+         sub_performance_data = performance_data.filter(function(d) { return d.State.slice(0,d.State.length-5) == state })
+     }else {
+         sub_performance_data = performance_data
+     }
+
+    var colors = d3.scaleLinear()
+                   .domain([0, d3.max(sub_performance_data, function(d) { return d[options_view]; })])
+                   .range(['#fff','blue']);
+                   //.range(['#000','#000']);
+  
+        mapper_data_view = topojson.feature(data, data.objects.polygons).features
+        if (state!='All States') 
+         {
+           mapper_data_view = mapper_data_view.filter(function(d) { return d.properties.sn == state})
+         }
+
+        mapper_data_view.forEach(function(o) {
+            sub_performance_data.forEach(function(p){
+              if (o.properties.dn == p.District){
+                o.result = p[options_view]
+              }
+            });
+          });
+
+    g.selectAll(".subunit")
+          .data(mapper_data_view)
+          .enter().append("path")
+            .attr("class", "subunit")
+            .attr("fill", function (d,i){ return d.result!=undefined? colors(d.result) : "#fff" })
+            .attr("stroke","#222")
+            .attr("data-title", function (d){ return d.result!=undefined? 'State : '+d.properties.sn+'<br/>District : '+ d.properties.dn+'<br/> '+options_view+' : '+addThousandsSeparator(d.result):'' })  
+            .attr("d", path)
+            .on("click", clicked);
+
+    g.selectAll(".geom-label")
+      .data(mapper_data_view)
+    .enter().append("text")
+      .attr("class", "geom-label")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .attr("data-title", function (d){ return d.result!=undefined? 'State : '+d.properties.sn+'<br/>District : '+ d.properties.dn+'<br/> '+options_view+' : '+addThousandsSeparator(d.result):'' })  
+      .attr("text-anchor", "middle")
+      .style("text-transform", "uppercase")
+      .text(function(d) { return d.properties.dn })
+      .attr("fill", function(d) { return d.result!=undefined? ((parseInt(colors(d.result).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') : '#000'  })
+      .style("font-size", function(d) { return Math.min(12, path.measure(d) / this.getComputedTextLength()) + "px"; });
+ 
+      $("text").tooltip({container: 'body', html: true, placement:'top'});
+      $("path").tooltip({container: 'body', html: true, placement:'top'});
+
+      }
+ 
+      });
+
+  }
+  render();
+    </script>
+  </body>
+</html>
