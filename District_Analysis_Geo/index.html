@@ -20,7 +20,6 @@
     </style>
   </head>
   <body>
-    
     <div class="container-fluid header-style">
         <div class="container">
             <div class="row">
@@ -60,9 +59,9 @@
                             </p>
                             <div class="cartogram"></div>
                         </div>
-                        </div>
-                     </div>
+                    </div>
                 </div>
+            </div>
             </div>
             </div>
             </div>
@@ -79,6 +78,7 @@
    <script type="text/javascript" src="js/bootstrap.min.js"></script>
    <script type="text/javascript" src="js/underscore-min.js"></script>  
   
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
    <script>     
  var width = window.innerWidth, height = window.innerHeight*.85;
 
@@ -163,7 +163,6 @@
         return o;
 
       }
-
 
       function addThousandsSeparator(t){
           var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}
