@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     28-01-2016
+ Modified:    18-07-2017
+ Copyright:  (c) sushanth 2017
+ Licence:     protected(not suppose to se it directly)
+-------------------------------------------------------------->
+<html>
+  <head>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sushanth">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/d3.v4.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">    
+    <link href="css/basic.css" rel="stylesheet">
+    <link href="css/feature.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <link href="css/custom-styles.css" rel="stylesheet">
+    <script type="text/javascript" src="js/topojson.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>  
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
+    <title>District Wise Chloropeth Analysis</title>
+    <style>
+        body {
+              margin: 0;
+              font-family: "Helvetica Neue", sans-serif;
+            }
+
+            #select, #legend {
+                margin: 0 auto;
+                display: table;
+            }
+
+            #select select {
+                margin-right: 15px;
+            }
+
+            #legend {
+                margin: 5px auto;
+            }
+            #legend text {
+                font-size: .7em;
+            }
+
+            .subunit.district {
+              fill: #ddd;
+              stroke: #fff;
+              stroke-width: .5px;
+            }
+            .subunit.state {
+                fill: none;
+        stroke: #000;
+        stroke-width: .5px;
+            }
+            .subunit-boundary {
+              fill: none;
+              stroke: #3a403d;
+            }
+    </style>
+  </head>
+  <body>
+       <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>District Analysis - India</p>
+                    <p class="synopsis">There's a lot of human judgment involved in creating choropleth maps. You can significantly change what you communicate to your readers by altering the number of classes, the type of breaks, and the color scheme..</p>                
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <div class="container-fluid detail_percent_display">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 panel panel-default">
+
+                    <div class="row">
+                        <div class="col-md-12 panel-heading1">
+                            <h2>District Wise Population Analysis</h2>
+                        </div>    
+                    </div>
+
+                    <div class="row">           
+                        <div class=" col-md-12 panel-body">
+                            <div class="chart">                            
+                                <div class="col-md-12 panel-body">
+
+                                      <div id="select">
+                                        <p class="form-inline header_form">
+                                          <select id="column"></select>
+                                          <select id="breaks"></select>
+                                          <select id="count"></select>
+                                          <select id="colors"></select>
+                                        <!--  <button id="states" class="btn btn-success" data="showing">Hide states</button>-->
+                                       </p>
+                                      </div>
+
+                                              <div id="legend"></div>
+                                              <div id="map"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+    <script src="http://www.hindustantimes.com/static/common/js/d3.moveto.js"></script>
+    <script>
+        var width = window.innerWidth, height = window.innerHeight * 1.2;
+
+            var projection = d3.geoMercator();
+
+            var path = d3.geoPath()
+                .projection(projection);
+
+            var svg = d3.select("#map").append("svg")
+                        .style("width", "100%")
+                           .attr("data-height","0.54")
+                           .attr("viewBox","0 0 "+width+" "+height);
+   
+            var legendHeight = 22,
+              legendBarHeight = 10,
+              legendWidth = width / 8;
+
+            var legend = d3.select("#legend").append("svg")
+                        .style("width", "100%")
+                       .attr("data-height","0.54")
+                       .attr("viewBox","0 0 "+legendWidth+" "+legendHeight);
+   
+            var legendX = d3.scaleLinear()
+              .range([0, legendWidth]);
+
+            var t = d3.transition()
+              .duration(750);
+
+            var columns = [{
+                name: "Sex ratio",
+                column: "sex_ratio"
+            },{
+                name: "Muslim pop. (%)",
+                column: "muslim_pct"
+            },{
+                name: "Houseless / lakh pop.",
+                column: "houseless_per_lakh"
+            }];
+
+            columns.forEach(function(d){
+                $("#select #column").append("<option value='" + d.column + "'>" + d.name + "</option>")
+            });
+
+            var breaks = [
+              {
+                type: "Equidistant",
+                value: "e"
+              },
+              {
+                type: "Quantile",
+                value: "q"
+              },
+              {
+                type: "Logarithmic",
+                value: "l"
+              },
+              {
+                type: "K-means",
+                value: "k"
+              }
+            ];
+
+            breaks.forEach(function(d){
+              $("#select #breaks").append("<option value='" + d.value + "'>" + d.type + "</option>");
+            });
+
+            [3,4,5,6,7,8].forEach(function(d){
+              $("#select #count").append("<option value='" + d + "'>" + d + "</option>");
+            });
+            $("#select #count").val(4);
+
+            var colors = {
+              "BuGn": {
+                3:["#e5f5f9", "#99d8c9", "#2ca25f"],
+                4:["#edf8fb", "#b2e2e2", "#66c2a4", "#238b45"],
+                5:["#edf8fb", "#b2e2e2", "#66c2a4", "#2ca25f", "#006d2c"],
+                6:["#edf8fb", "#ccece6", "#99d8c9", "#66c2a4", "#2ca25f", "#006d2c"],
+                7:["#edf8fb", "#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45", "#005824"],
+                8:["#f7fcfd", "#e5f5f9", "#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45", "#005824"]
+              },
+              "BuPu": {
+                3:["#e0ecf4", "#9ebcda", "#8856a7"],
+                4:["#edf8fb", "#b3cde3", "#8c96c6", "#88419d"],
+                5:["#edf8fb", "#b3cde3", "#8c96c6", "#8856a7", "#810f7c"],
+                6:["#edf8fb", "#bfd3e6", "#9ebcda", "#8c96c6", "#8856a7", "#810f7c"],
+                7:["#edf8fb", "#bfd3e6", "#9ebcda", "#8c96c6", "#8c6bb1", "#88419d", "#6e016b"],
+                8:["#f7fcfd", "#e0ecf4", "#bfd3e6", "#9ebcda", "#8c96c6", "#8c6bb1", "#88419d", "#6e016b"]
+              },
+              "GnBu": {
+                3:["#e0f3db", "#a8ddb5", "#43a2ca"],
+                4:["#f0f9e8", "#bae4bc", "#7bccc4", "#2b8cbe"],
+                5:["#f0f9e8", "#bae4bc", "#7bccc4", "#43a2ca", "#0868ac"],
+                6:["#f0f9e8", "#ccebc5", "#a8ddb5", "#7bccc4", "#43a2ca", "#0868ac"],
+                7:["#f0f9e8", "#ccebc5", "#a8ddb5", "#7bccc4", "#4eb3d3", "#2b8cbe", "#08589e"],
+                8:["#f7fcf0", "#e0f3db", "#ccebc5", "#a8ddb5", "#7bccc4", "#4eb3d3", "#2b8cbe", "#08589e"]
+              },
+              "OrRd": {
+                3:["#fee8c8", "#fdbb84", "#e34a33"],
+                4:["#fef0d9", "#fdcc8a", "#fc8d59", "#d7301f"],
+                5:["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"],
+                6:["#fef0d9", "#fdd49e", "#fdbb84", "#fc8d59", "#e34a33", "#b30000"],
+                7:["#fef0d9", "#fdd49e", "#fdbb84", "#fc8d59", "#ef6548", "#d7301f", "#990000"],
+                8:["#fff7ec", "#fee8c8", "#fdd49e", "#fdbb84", "#fc8d59", "#ef6548", "#d7301f", "#990000"]
+              },
+              "PuBu": {
+                3:["#ece7f2", "#a6bddb", "#2b8cbe"],
+                4:["#f1eef6", "#bdc9e1", "#74a9cf", "#0570b0"],
+                5:["#f1eef6", "#bdc9e1", "#74a9cf", "#2b8cbe", "#045a8d"],
+                6:["#f1eef6", "#d0d1e6", "#a6bddb", "#74a9cf", "#2b8cbe", "#045a8d"],
+                7:["#f1eef6", "#d0d1e6", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#034e7b"],
+                8:["#fff7fb", "#ece7f2", "#d0d1e6", "#a6bddb", "#74a9cf", "#3690c0", "#0570b0", "#034e7b"]
+              },
+              "PuBuGn": {
+                3:["#ece2f0", "#a6bddb", "#1c9099"],
+                4:["#f6eff7", "#bdc9e1", "#67a9cf", "#02818a"],
+                5:["#f6eff7", "#bdc9e1", "#67a9cf", "#1c9099", "#016c59"],
+                6:["#f6eff7", "#d0d1e6", "#a6bddb", "#67a9cf", "#1c9099", "#016c59"],
+                7:["#f6eff7", "#d0d1e6", "#a6bddb", "#67a9cf", "#3690c0", "#02818a", "#016450"],
+                8:["#fff7fb", "#ece2f0", "#d0d1e6", "#a6bddb", "#67a9cf", "#3690c0", "#02818a", "#016450"]
+              },
+              "PuRd": {
+                3:["#e7e1ef", "#c994c7", "#dd1c77"],
+                4:["#f1eef6", "#d7b5d8", "#df65b0", "#ce1256"],
+                5:["#f1eef6", "#d7b5d8", "#df65b0", "#dd1c77", "#980043"],
+                6:["#f1eef6", "#d4b9da", "#c994c7", "#df65b0", "#dd1c77", "#980043"],
+                7:["#f1eef6", "#d4b9da", "#c994c7", "#df65b0", "#e7298a", "#ce1256", "#91003f"],
+                8:["#f7f4f9", "#e7e1ef", "#d4b9da", "#c994c7", "#df65b0", "#e7298a", "#ce1256", "#91003f"]
+              },
+              "RdPu": {
+                3:["#fde0dd", "#fa9fb5", "#c51b8a"],
+                4:["#feebe2", "#fbb4b9", "#f768a1", "#ae017e"],
+                5:["#feebe2", "#fbb4b9", "#f768a1", "#c51b8a", "#7a0177"],
+                6:["#feebe2", "#fcc5c0", "#fa9fb5", "#f768a1", "#c51b8a", "#7a0177"],
+                7:["#feebe2", "#fcc5c0", "#fa9fb5", "#f768a1", "#dd3497", "#ae017e", "#7a0177"],
+                8:["#fff7f3", "#fde0dd", "#fcc5c0", "#fa9fb5", "#f768a1", "#dd3497", "#ae017e", "#7a0177"]
+              },
+              "YlGn": {
+                3:["#f7fcb9", "#addd8e", "#31a354"],
+                4:["#ffffcc", "#c2e699", "#78c679", "#238443"],
+                5:["#ffffcc", "#c2e699", "#78c679", "#31a354", "#006837"],
+                6:["#ffffcc", "#d9f0a3", "#addd8e", "#78c679", "#31a354", "#006837"],
+                7:["#ffffcc", "#d9f0a3", "#addd8e", "#78c679", "#41ab5d", "#238443", "#005a32"],
+                8:["#ffffe5", "#f7fcb9", "#d9f0a3", "#addd8e", "#78c679", "#41ab5d", "#238443", "#005a32"]
+              },
+              "YlGnBu": {
+                3:["#edf8b1", "#7fcdbb", "#2c7fb8"],
+                4:["#ffffcc", "#a1dab4", "#41b6c4", "#225ea8"],
+                5:["#ffffcc", "#a1dab4", "#41b6c4", "#2c7fb8", "#253494"],
+                6:["#ffffcc", "#c7e9b4", "#7fcdbb", "#41b6c4", "#2c7fb8", "#253494"],
+                7:["#ffffcc", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#0c2c84"],
+                8:["#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#0c2c84"]
+              },
+              "YlOrBu": {
+                3:["#fff7bc", "#fec44f", "#d95f0e"],
+                4:["#ffffd4", "#fed98e", "#fe9929", "#cc4c02"],
+                5:["#ffffd4", "#fed98e", "#fe9929", "#d95f0e", "#993404"],
+                6:["#ffffd4", "#fee391", "#fec44f", "#fe9929", "#d95f0e", "#993404"],
+                7:["#ffffd4", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#8c2d04"],
+                8:["#ffffe5", "#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#8c2d04"]
+              },
+              "YlOrRd": {
+                3:["#ffeda0", "#feb24c", "#f03b20"],
+                4:["#ffffb2", "#fecc5c", "#fd8d3c", "#e31a1c"],
+                5:["#ffffb2", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"],
+                6:["#ffffb2", "#fed976", "#feb24c", "#fd8d3c", "#f03b20", "#bd0026"],
+                7:["#ffffb2", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#b10026"],
+                8:["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#b10026"]
+              },
+            };
+
+            Object.keys(colors).forEach(function(d){
+              $("#select #colors").append("<option value='" + d + "'>" + d + "</option>");
+            });
+
+            d3.queue()
+              .defer(d3.json, "map.json")
+              .defer(d3.csv, "data.csv")
+              .defer(d3.json, "states.json")
+              .await(ready);
+
+            function ready(error, map, data, states) {
+
+              if (error) throw error;
+
+              var boundary = centerZoom(map);
+              drawSubUnits(map, "district");
+              drawOuterBoundary(map, boundary);
+
+              var buckets = colorSubUnits(data, $("#select #breaks").val(), $("#select #count").val(), $("#select #colors").val(), $("#select #column").val());
+              drawLegend(buckets, $("#select #colors").val());
+
+              $("#select select").change(function(){
+                buckets = colorSubUnits(data, $("#select #breaks").val(), $("#select #count").val(), $("#select #colors").val(), $("#select #column").val());
+                drawLegend(buckets, $("#select #colors").val());
+              });
+
+              drawSubUnits(states, "state");
+
+              $("#select #states").click(function(){
+                  if ($(this).attr("data") == "showing"){
+                      $(".subunit.state").fadeOut();
+                      $(this).text("Show states");
+                      $(this).attr("data", "hiding");
+                  } else {
+                      $(".subunit.state").fadeIn();
+                      $(this).text("Hide states");
+                      $(this).attr("data", "showing");
+                  }
+
+              });
+
+            };
+
+            function drawLegend(buckets, colorScheme){
+
+              // update legendX domain
+              legendX.domain([buckets[0].x, buckets[buckets.length - 1].x + buckets[buckets.length - 1].width]);
+
+              // JOIN
+              var legendRect = legend.selectAll(".legend-rect")
+                .data(buckets, function(d){ return d.bucket; });
+
+              var legendNumber = legend.selectAll(".legend-number")
+                .data(buckets, function(d){ return d.bucket; });
+
+              var legendMax = legend.selectAll(".legend-max")
+                .data([buckets[buckets.length - 1].x + buckets[buckets.length - 1].width]);
+
+              // EXIT
+              legendRect.exit()
+                .transition(t)
+                  .attr("opacity", 1e-6)
+                  .remove();
+
+              legendNumber.exit()
+                .transition(t)
+                  .attr("opacity", 1e-6)
+                  .remove();
+
+              // UPDATE
+              legendRect
+                .transition(t)
+                  .attr("width", function(d){ return legendX(d.x + d.width); })
+                  .attr("x", function(d){ return legendX(d.x); })
+                  .attr("fill", function(d){ return d.color });
+              
+              legendNumber
+                .transition(t)
+                  .attr("x", function(d){ return legendX(d.x); })
+                  .text(function(d){ return d.x.toFixed(2); });
+
+              legendMax
+                  .attr("x", function(d){ return legendX(d); })
+                  .text(function(d){ return d.toFixed(2); })
+
+              // ENTER
+              legendRect.enter().append("rect")
+                  .attr("class", "legend-rect")
+                  .attr("y", 0)
+                  .attr("height", legendBarHeight)
+                  .attr("x", function(d){ return legendX(d.x); })
+                  .attr("fill", function(d){ return d.color })
+                  .attr("width", function(d){ return legendX(d.x + d.width); });
+
+              legendNumber.enter().append("text")
+                  .attr("class", "legend-number")
+                  .attr("y", legendHeight)
+                  .attr("x", function(d){ return legendX(d.x); })
+                  .text(function(d){ return d.x.toFixed(2); });
+                  
+              legendMax.enter().append("text")
+                  .attr("class", "legend-max")
+                  .attr("y", legendHeight)
+                  .attr("x", function(d){ return legendX(d); })
+                  .style("text-anchor", "end")
+                  .text(function(d){ return d.toFixed(2); });
+
+            }
+
+            function colorSubUnits(data, breakType, breakCount, colorScheme, value){
+              
+                // string to number
+                var nums = data.filter(function(d){ return d[value] != ""; }).map(function(d){ return +d[value]; });
+                
+              var buckets = chroma.limits(nums, breakType, breakCount);
+                
+              svg.selectAll(".subunit.district")
+                .transition(t)
+                  .style("fill", function(d){
+                    // lookup district
+                    var district = data.filter(function(e){
+                      return e.district == d.properties.district && e.state == d.properties.st_nm;
+                    });
+                    
+                    if (district.length == 0){
+                      return "black";
+                    } else {
+                      district = district[0];
+
+                      if (district[value] == "") return "black";
+
+                      var bucketNumber = d3.min(buckets.map(function(bucket, i){
+                        if (district[value] <= bucket){
+                          return i;
+                        }
+                      }));
+                      
+                      return colors[colorScheme][breakCount][bucketNumber - 1];
+                    }
+                    
+                  });
+
+              // an array to return for drawing the legend
+              var arr = [];
+              buckets.forEach(function(d, i){
+
+                if (i != 0){
+                  var obj = {};
+                  obj.bucket = i;
+                  obj.x = buckets[i - 1];
+                  obj.width = d - obj.x;
+                  obj.color = colors[colorScheme][breakCount][i - 1];
+                  arr.push(obj);
+                }
+                
+              });
+              return arr;
+            }
+
+            // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
+            // It also returns the boundary itself in case you want to draw it to the map
+            function centerZoom(data){
+              var o = topojson.mesh(data, data.objects.polygons, function(a, b) { return a === b; });
+
+              projection
+                  .scale(1)
+                  .translate([0, 0]);
+
+              var b = path.bounds(o),
+                  s = 1 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+                  t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+              projection
+                  .scale(s)
+                  .translate(t);
+
+              return o;
+            }
+
+            function drawOuterBoundary(data, boundary){
+              svg.append("path")
+                  .datum(boundary)
+                  .attr("d", path)
+                  .attr("class", "subunit-boundary");
+            }
+
+            function drawSubUnits(data, cl){
+              svg.selectAll(".subunit." + cl)
+            .data(topojson.feature(data, data.objects.polygons).features)
+          .enter().append("path")
+            .attr("class", "subunit " + cl)
+            .attr("data-title", function (d) { return 'State : '+d.properties.st_nm+'<br/> District : '+ d.properties.district })
+            .attr("d", path);
+
+
+          $("text").tooltip({container: 'body', html: true, placement:'top'});
+          $("path").tooltip({container: 'body', html: true, placement:'top'});
+
+            }
+
+    </script>
+
+  </body>
+</html>
