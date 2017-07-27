@@ -224,10 +224,6 @@ function drawSubUnits(data,state,options_view){
      }else {
          sub_performance_data = performance_data
      }
-
-    var colors = d3.scaleLinear()
-                   .domain([0, d3.max(sub_performance_data, function(d) { return d[options_view]; })])
-                   .range(['#fff','blue']);
          
         mapper_data_view = topojson.feature(data, data.objects.polygons).features
         if (state!='All States') 
@@ -235,14 +231,20 @@ function drawSubUnits(data,state,options_view){
            mapper_data_view = mapper_data_view.filter(function(d) { return d.properties.sn == state})
          }
 
+        state_color = 'blue' 
         mapper_data_view.forEach(function(o) {
             sub_performance_data.forEach(function(p){
               if (o.properties.dn == p.District){
                 o.result = p[options_view]
+                state_color = p['color']
               }
             });
           });
 
+    var colors = d3.scaleLinear()
+                   .domain([0, d3.max(sub_performance_data, function(d) { return d[options_view]; })])
+                   .range(['#fff',d3.rgb(state_color).darker()]);
+   
     g.selectAll(".subunit")
           .data(mapper_data_view)
           .enter().append("path")
