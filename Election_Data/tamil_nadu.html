@@ -1022,7 +1022,7 @@
         $('body,html').animate({
             scrollTop : 0             
         }, 500);
-    });    
+    });
 
 color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","DMDK":"#f1c40f","DMK":"#c0392b","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","GNLF":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MDMK":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","MUL":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","PMK":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","TMC":"#4747ff","TMC(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636"};
 
@@ -1203,7 +1203,7 @@ var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','NCO','JNP'
         heading_colors.push(color_map[o.name])
       })
 
-      max_seats = d3.max(year_data_sets, function(d) { return d.value; }); 
+      max_seats = d3.max(year_data_sets, function(d) { return d.value; });
       
       lowresult_data  = d3.select('.overall_view_report')
                                          .selectAll('div')
@@ -1337,7 +1337,7 @@ function data_scatter(type_votes){
     .attr('class', 'line');
 
     pathContainers.selectAll('path')
-    .data(function (d) { return [d]; }) // continues the data from the pathContainer
+    .data(function (d) { return [d]; })// continues the data from the pathContainer
     .enter().append('path')
       .attr('cla',function (d) { return d })
       .attr('class',function (d) { return 'party_filters '+d[0]['party']+'s' })
@@ -1387,7 +1387,7 @@ function data_scatter(type_votes){
         d3.selection.prototype.moveToFront = function() { 
           return this.each(function() { 
             this.parentNode.appendChild(this); 
-          }); 
+          });
         };
 
     // skip this functionality for IE9, which doesn't like it
@@ -1626,7 +1626,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
    
    layers[0] = layers[0].sort(function(a, b){ return d3.ascending(a.rank, b.rank); })
    
-   var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); });
+   var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; });});
 
     var yScale = d3.scale.ordinal()
         .domain(layers[0].map(function(d) { return d.x; }))
@@ -1891,9 +1891,9 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
               
             year_stack.forEach(function(sub_stack) {
                 sub_stack.party.forEach(function(l) {
-                        l.percent = parseFloat((l.value*100/sub_stack.count_total).toFixed(2));    
+                        l.percent = parseFloat((l.value*100/sub_stack.count_total).toFixed(2));
                         l.polled_votes = sub_stack.count_total;    
-                    });                    
+                    });     
             });
                 
               cons_x.domain([1967,1971,1977,1980,1984,1989,1991,1996,2001,2006,2011,2016]);
@@ -1919,7 +1919,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
                   .attr("height", function(d) { return cons_y(d.y0) - cons_y(d.y1); })
                   .style("fill", function(d) { return color_map[d.name] })
                   .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})        
+                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
                   .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
                   .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
                   
@@ -1931,7 +1931,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
                 .attr("x", cons_x.rangeBand()/2)
                 .attr("text-anchor", "middle")
                 .style("font-size", "15px")
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})        
+                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
                 .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
                 .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.percent.toFixed(0)+'%':' '; });
 
@@ -1943,7 +1943,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
                 .attr("x", cons_x.rangeBand()/2)
                 .attr("text-anchor", "middle")
                 .style("font-size", "12px")
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})        
+                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
                 .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
                 .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.name:' '; });
 
@@ -1977,7 +1977,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
               .rollup(function(v) { return v.length; })
               .entries(contest_data_csv);
               
-    winning_data_csv = contest_data_csv.filter(function(d){return (d.rank==1)});  
+    winning_data_csv = contest_data_csv.filter(function(d){return (d.rank==1)});
     
         var winning_data_count = d3.nest()
               .key(function(d) { return d.PARTY; })
@@ -2033,7 +2033,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       .attr("d", outlineArc);  
     
   var max_value = d3.max(winning_data_count, function(d) { return d.values; });
-  winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});  
+  winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});
   
   party_performance_trend_svg.append("text")
     .attr("class", "aster-score")
@@ -2058,13 +2058,13 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       });
 
     var data_csv_2011 = []
-                    _.each(data_csv, function(d) { if(_.contains(year_2011, d.PARTY)) { data_csv_2011.push(d);}});     
+                    _.each(data_csv, function(d) { if(_.contains(year_2011, d.PARTY)) { data_csv_2011.push(d);}});
 
     data_csv_2011 = data_csv_2011.filter(function(d){return (d.YEAR==2011) & (d.rank==1) })
 
    
     var data_csv_2016 = []
-                    _.each(data_csv, function(d) { if(_.contains(year_2016, d.PARTY)) { data_csv_2016.push(d);}});     
+                    _.each(data_csv, function(d) { if(_.contains(year_2016, d.PARTY)) { data_csv_2016.push(d);}});
 
     data_csv_2016 = data_csv_2016.filter(function(d){return (d.YEAR==2016) & (d.rank==1) })
 
@@ -2080,9 +2080,9 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
     data_set = data_csv.filter(function(d){return (d.YEAR==extra_year_detail) & (d.rank==1) })
     var data_set_sub = []
-                    _.each(data_set, function(d) { if(_.contains(cons_2011, d.AC_NAME)) { data_set_sub.push(d);}});     
+                    _.each(data_set, function(d) { if(_.contains(cons_2011, d.AC_NAME)) { data_set_sub.push(d);}});
     var data_set = []
-                    _.each(data_set_sub, function(d) { if(_.contains(cons_2016, d.AC_NAME)) { data_set.push(d);}});     
+                    _.each(data_set_sub, function(d) { if(_.contains(cons_2016, d.AC_NAME)) { data_set.push(d);}});
 
     constituency_color = {}
     Candidate = {}
@@ -2178,7 +2178,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     
         d3.selectAll('.party_filters').style("opacity",'1');
         d3.selectAll('polygon').style("fill-opacity",'1');
-    })        */
+    })*/
         
     $("polygon").tooltip({container: 'body', html: true, placement:'top'});
       
@@ -2333,7 +2333,7 @@ data.forEach(function (d) {
       .attr("d", path)
       .style("stroke-width", function(d) { return Math.max(1, d.dy); })
       .style("fill", function(d) { return d.target_color; })
-      .style("stroke", function(d) { return d.target_color; })      
+      .style("stroke", function(d) { return d.target_color; })
       .sort(function(a, b) { return b.dy - a.dy; })
       .attr("data-title",function(d) { return d.source.name == d.target.name.replace('_','') ?  d.source.name+' has retained '+format(d.value)+' seats'  : d.target.name.replace('_','') + " has got "+ format(d.value)+" seats from "+ d.source.name; });
 
@@ -2378,9 +2378,9 @@ data.forEach(function (d) {
     .style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
     .text(function(d) { return d.dy>29 ?d.name.replace('_',''):' '; });
 
-  $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});      
-  $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});  
-  $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'});      
+  $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'});
 
 // add in the title for the nodes
   node.append("text")
@@ -2404,7 +2404,7 @@ data.forEach(function (d) {
     link.attr("d", path);
   }
   
-});    
+});
  
 // load the data (using the timelyportfolio csv method)
 d3.text("tn_data.csv", function(error, data) {

@@ -975,7 +975,7 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
         heading_colors.push(color_map[o.name])
       })
 
-      max_seats = d3.max(year_data_sets, function(d) { return d.value; }); 
+      max_seats = d3.max(year_data_sets, function(d) { return d.value; });
       
       lowresult_data  = d3.select('.overall_view_report')
                                          .selectAll('div')
@@ -1111,7 +1111,7 @@ function data_scatter(type_votes){
     .attr('class', 'line');
     
     pathContainers.selectAll('path')
-    .data(function (d) { return [d]; }) // continues the data from the pathContainer
+    .data(function (d) { return [d]; })// continues the data from the pathContainer
     .enter().append('path')
       .attr('stroke',function (d) { return color_map[d[0]['party']]; })
       .attr('d', d3.svg.line()
@@ -1159,7 +1159,7 @@ function data_scatter(type_votes){
         d3.selection.prototype.moveToFront = function() { 
           return this.each(function() { 
             this.parentNode.appendChild(this); 
-          }); 
+          });
         };
 
     // skip this functionality for IE9, which doesn't like it
@@ -1391,7 +1391,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
    layers[0] = layers[0].sort(function(a, b){ return d3.ascending(a.rank, b.rank); })
    
-   var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); });
+   var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; });});
 
     var yScale = d3.scale.ordinal()
         .domain(layers[0].map(function(d) { return d.x; }))
@@ -1493,7 +1493,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
             .style("fill", "rgb(99, 99, 99)")
             .style("font-size","13px");
         
-      $("text").tooltip({container: '.horizontal_bar', html: true, placement:'top'});  
+      $("text").tooltip({container: '.horizontal_bar', html: true, placement:'top'});
       $("rect").tooltip({container: '.horizontal_bar', html: true, placement:'top'});
     
         var twoPi = 2 * Math.PI;
@@ -1654,9 +1654,9 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
               
             year_stack.forEach(function(sub_stack) {
                 sub_stack.party.forEach(function(l) {
-                        l.percent = parseFloat((l.value*100/sub_stack.count_total).toFixed(2));    
+                        l.percent = parseFloat((l.value*100/sub_stack.count_total).toFixed(2));
                         l.polled_votes = sub_stack.count_total;    
-                    });                    
+                    });
             });
                 
               cons_x.domain([1964,1969,1974,1977,1980,1985,1990,1991,1996,2001,2006,2011,2016]);
@@ -1682,7 +1682,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
                   .attr("height", function(d) { return cons_y(d.y0) - cons_y(d.y1); })
                   .style("fill", function(d) { return color_map[d.name] })
                   .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})        
+                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
                   .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
                   .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
                   
@@ -1694,7 +1694,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
                 .attr("x", cons_x.rangeBand()/2)
                 .attr("text-anchor", "middle")
                 .style("font-size", "15px")
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})        
+                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
                 .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
                 .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.percent.toFixed(0)+'%':' '; });
 
@@ -1706,7 +1706,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
                 .attr("x", cons_x.rangeBand()/2)
                 .attr("text-anchor", "middle")
                 .style("font-size", "12px")
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})        
+                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
                 .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
                 .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.name:' '; });
 
@@ -1740,7 +1740,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
               .rollup(function(v) { return v.length; })
               .entries(contest_data_csv);
               
-    winning_data_csv = contest_data_csv.filter(function(d){return (d.rank==1)});  
+    winning_data_csv = contest_data_csv.filter(function(d){return (d.rank==1)});
     
         var winning_data_count = d3.nest()
               .key(function(d) { return d.PARTY; })
@@ -1797,7 +1797,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       .attr("d", outlineArc);  
     
   var max_value = d3.max(winning_data_count, function(d) { return d.values; });
-  winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});  
+  winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});
   
   party_performance_trend_svg.append("text")
     .attr("class", "aster-score")
@@ -1908,7 +1908,7 @@ data.forEach(function (d) {
       .attr("d", path)
       .style("stroke-width", function(d) { return Math.max(1, d.dy); })
       .style("fill", function(d) { return d.target_color; })
-      .style("stroke", function(d) { return d.target_color; })      
+      .style("stroke", function(d) { return d.target_color; })
       .sort(function(a, b) { return b.dy - a.dy; })
       .attr("data-title",function(d) { return d.source.name == d.target.name.replace('_','') ?  d.source.name+' has retained '+format(d.value)+' seats'  : d.target.name.replace('_','') + " has got "+ format(d.value)+" seats from "+ d.source.name; });
 
@@ -1953,9 +1953,9 @@ data.forEach(function (d) {
     .style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
     .text(function(d) { return d.dy>29 ?d.name.replace('_',''):' '; });
 
-  $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});      
-  $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});  
-  $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'});      
+  $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'});
 
 // add in the title for the nodes
   node.append("text")
@@ -1979,7 +1979,7 @@ data.forEach(function (d) {
     link.attr("d", path);
   }
   
-});    
+});
 
 // load the data (using the timelyportfolio csv method)
 d3.text("pondi_data.csv", function(error, data) {
@@ -2020,7 +2020,7 @@ d3.text("pondi_data.csv", function(error, data) {
                         .style("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff') })
                         .attr("href",function(d,i) { return  i==0? '?cons_id='+d+'#detailConstituency' : '#Constituency_partyTrend' })
                         .attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff') })
-                        .text(function(d) { return d; })        
+                        .text(function(d) { return d; })
 
     $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
     
