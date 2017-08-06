@@ -14,14 +14,14 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sushanth">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/d3.v4.min.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet">    
-    <link href="css/basic.css" rel="stylesheet">
-    <link href="css/feature.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css" >
+    <link rel="stylesheet" type="text/css" media="screen" href="css/feature.css" >
     <link rel="stylesheet" type="text/css" media="screen" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-    <link href="css/custom-styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/custom-styles.css" >
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/d3.v4.min.js"></script>
     <script type="text/javascript" src="js/topojson.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/underscore-min.js"></script>  
@@ -265,8 +265,8 @@ function drawSubUnits(data,state,options_view){
       .attr("text-anchor", "middle")
       .style("text-transform", "uppercase")
       .text(function(d) { return d.properties.dn })
-      .attr("fill", function(d) { return d.result!=undefined? ((parseInt(colors(d.result).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') : '#000'  })
-      .style("font-size", function(d) { return Math.min(12, path.measure(d) / this.getComputedTextLength()) + "px"; });
+      .attr("fill", function(d) { return d.result!=undefined? ((parseInt(colors(d.result).replace('#', ''), 16) > 0xffffff / 2) ? '#fff' : '#000') : '#000'  })
+      .style("font-size", function(d) { console.log(path.measure(d),d); return Math.min(12, path.measure(d) / this.getComputedTextLength()) + "px"; });
  
       $("text").tooltip({container: 'body', html: true, placement:'top'});
       $("path").tooltip({container: 'body', html: true, placement:'top'});

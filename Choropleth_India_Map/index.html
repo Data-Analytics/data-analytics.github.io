@@ -326,9 +326,7 @@
                       $(this).text("Hide states");
                       $(this).attr("data", "showing");
                   }
-
               });
-
             };
 
             function drawLegend(buckets, colorScheme){
@@ -482,13 +480,10 @@
             .attr("data-title", function (d) { return 'State : '+d.properties.st_nm+'<br/> District : '+ d.properties.district })
             .attr("d", path);
 
-
           $("text").tooltip({container: 'body', html: true, placement:'top'});
           $("path").tooltip({container: 'body', html: true, placement:'top'});
 
             }
-
     </script>
-
   </body>
 </html>
