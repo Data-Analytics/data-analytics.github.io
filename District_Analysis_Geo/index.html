@@ -64,17 +64,16 @@
                     <div class="row">
                         <div class="col-md-12 panel-heading1">
                             <h2>District Wise Population Analysis</h2>
-                        </div>    
+                        </div>
                     </div>
 
-                    <div class="row">           
+                    <div class="row">
                         <div class=" col-md-12 panel-body">
-                            <div class="chart">                            
+                            <div class="chart">
                                 <div class="col-md-12 panel-body">
-
                                     <p class="form-inline header_form">
                                         <label value="group">Order by: </label>
-                                        <select id="options_view">   
+                                        <select id="options_view">
                                             <option value="Population" class="name">Population</option>
                                             <option value="Area" class="name">Area</option>
                                             <option value="Density" class="name">Density</option>
@@ -83,19 +82,16 @@
                                         <select id="state" class="select_state"></select>
                                         <input type="button" value="submit" class="party_filter btn btn-success" onclick=render();></input> 
                                     </p>
-
                                     <div class="cartogram"></div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-   <script>     
+   <script>
  var width = window.innerWidth, height = window.innerHeight*.85;
 
  function render() {

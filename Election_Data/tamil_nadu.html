@@ -1193,9 +1193,7 @@ var party_names = ['DMK','ADMK','INC','CPM','TMC','CPI','PMK','DMDK','NCO','JNP'
       $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});
     
       year_data_set = data.filter(function(d){return (d.YEAR==year_detail) })
-
-      year_data_sets = year_data_set[0].party.filter(function(d){return (d.value>0) })
-      
+      year_data_sets = year_data_set[0].party.filter(function(d){return (d.value>0) })      
       year_data_sets.sort(function(a, b) { return b.value - a.value; })
       
       heading_colors = []
