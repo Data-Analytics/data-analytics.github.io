@@ -1,0 +1,200 @@
+body {
+	width: 480px;
+	margin: 10px auto;
+	margin-bottom: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+a {
+	-webkit-transition:	color .2s ease-in-out;
+	-moz-transition: 		color .2s ease-in-out;
+	-ms-transition:			color .2s ease-in-out;
+	-o-transition: 			color .2s ease-in-out;
+	transition: 				color .2s ease-in-out;
+	color: gray;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+}
+
+.svg-container {
+	position: relative;
+	overflow: hidden;
+	width: 330xpx;
+	height: 594px;
+	border: 5px solid rgba(0,0,0,1);
+	border-radius: 2px;
+	float: left;
+}
+
+aside {
+	position: relative;
+	float: left;
+	width: 130px;
+	height: 460px;
+	margin-left: 10px;
+}
+
+aside .score {
+	width: 100px;
+	padding: 10px;
+	border: 5px solid rgba(0,0,0,1);
+	border-radius: 2px;
+	color: gray;
+}
+
+aside .score table {
+	margin: 0;
+}
+
+.num {
+	font-family: monospace;
+	font-size: 17px;
+	color: lightsteelblue;
+}
+
+aside .next {
+	width: 100px;
+	height: 60px;
+	padding: 10px;
+	border: 5px solid rgba(0,0,0,1);
+	border-radius: 2px;
+	margin-bottom: 10px;
+}
+
+aside .pause {
+	color: gray;
+	font-size: 12px;
+	font-style: italic;
+	padding-left: 3px;
+	margin-top: 15px;
+}
+
+aside .pause .hotkey {
+	font-style: normal;
+	font-size: 12px;
+}
+
+#modal {
+	position: absolute;
+	top: -100px;
+	background-color: white;
+	border-bottom: 5px solid rgba(0,0,0,1);
+	padding: 20px;
+	width: 310px;
+	text-align: center;
+	-webkit-transition:	top .5s ease-in-out;
+	-moz-transition: 		top .5s ease-in-out;
+	-ms-transition:			top .5s ease-in-out;
+	-o-transition: 			top .5s ease-in-out;
+	transition: 				top .5s ease-in-out;
+}
+
+#modal a {
+	text-decoration: none;
+	color: gray;
+	font-size: 25px;
+}
+#modal a:hover {
+	color: black;
+}
+
+#modal.active-modal {
+	top: 0px;
+}
+
+#pause {
+	display: none;
+}
+
+#pause.paused {
+	display: block;
+	position: absolute;
+	width: 350px;
+	height: 630px;
+	background: white;
+	color: gray;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center
+}
+
+table {
+	color: gray;
+	margin: 5px auto;
+}
+
+.hotkey {
+	text-align: right;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.description {
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic
+}
+
+.stats {
+	float: right;
+	text-align: right;
+	color: gray;
+}
+
+.stats #gamesplayed {
+	color: lightsteelblue;
+	text-align: center;
+	font-size: 55px;
+	font-family: monospace;
+	border: 1px solid whitesmoke;
+	border-radius: 2px;
+	padding: 0 5px;
+	margin: 0;
+}
+
+.stats span {
+	font-size: 13px;
+	color: lightgray;
+}
+
+.highestscore {
+	margin-top: 50px;
+}
+
+#hs-lines,
+#hs-time {
+	color: lightsteelblue;
+	font-size: 23px;
+	border: 1px solid whitesmoke;
+	padding: 0 5px;
+	border-radius: 2px;
+}
+
+footer {
+	clear: both;
+	padding-top: 40px;
+	color: gray;
+	font-size: 10px;
+}
+
+footer a {
+	text-decoration: none;
+	color: blue;
+	font-size: 12px;
+}
+
+footer a:hover {
+	color: black;
+}
+
+.share {
+	float: right;
+}
+
+.fb-like {
+	margin-right: 30px;
+}

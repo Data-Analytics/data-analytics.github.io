@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     3-10-2017
+ Modified:    3-11-2017
+ Copyright:  (c) sushanth 2017
+ Licence:     protected(not suppose to se it directly)
+-------------------------------------------------------------->
+<html>
+  <head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
+    <title>Tetris Game</title>
+
+    <link href="css/feature.css" rel="stylesheet">
+    <link href="css/custom-styles.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/./images/logo.png">  
+    <script type="text/javascript" src="/./javascripts/d3.v3.min.js"></script>  
+    <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+    <script type="text/javascript" src="js/tetris.js"></script>
+
+  </head>
+  <body>
+
+      <div class="container">
+        <div class="svg-container">
+            <div id="modal">
+                <a href="#" id="new-game">New Game</a>
+            </div>
+
+            <div id="pause">
+                <p>Paused</p>
+
+                <table>
+                    <tr>
+                        <td class="hotkey">Left arrow</td>
+                        <td class="description"> - move left</td>
+                    </tr>
+
+                    <tr>
+                        <td class="hotkey">Right arrow</td>
+                        <td class="description"> - move right</td>
+                    </tr>
+
+                    <tr>
+                        <td class="hotkey">Down arrow</td>
+                        <td class="description"> - move down</td>
+                    </tr>
+
+                    <tr>
+                        <td class="hotkey">Up arrow</td>
+                        <td class="description"> - rotate</td>
+                    </tr>
+
+                    <tr>
+                        <td class="hotkey">Space</td>
+                        <td class="description"> - drop</td>
+                    </tr>
+
+                    <tr>
+                        <td class="hotkey">p</td>
+                        <td class="description"> - pause/unpause</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <aside>
+            <div class="next">
+
+            </div>
+
+            <div class="score">
+                <table>
+                    <tr><td style="width: 50px">Level:</td>
+                        <td class="num" id="level">1</td></tr>
+                    <tr><td>Lines:</td>
+                        <td class="num" id="lines">0</td></tr>
+                    <tr><td>Time:</td>
+                        <td class="num" id="time">0</td></tr>
+                </table>
+            </div>
+
+            <div class="pause">
+                <input type="checkbox" onclick="toggleGrid()"></input>Grid</br>
+                <span class="hotkey">p</span> - pause</div>
+        </aside>
+
+      </div>
+
+      <script>
+        tetris();
+
+        document.querySelector("#new-game").onclick = function(e) {
+          e.preventDefault();
+          newGame();
+        };
+      </script>
+
+    </body>
+</html>
