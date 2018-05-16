@@ -616,7 +616,7 @@ function map_filter(year_2013,year_2018,other_data){
 
       var g = svg.append("g");
     
-      d3.json("Karnataka_assembly.json", function(error, data) {
+      d3.json("karnataka_assembly.json", function(error, data) {
         if (error) throw error;
         var boundary = centerZoom(data);
         drawSubUnits(data);
