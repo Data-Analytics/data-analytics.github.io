@@ -24,6 +24,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
   <link rel="shortcut icon" href="/./images/logo.png">
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -41,7 +42,7 @@
 <meta name="news_keywords" content="General Election 2019,Elections 2019,Election schedule 2019,Lok Sabha Elections 2019,Election dates" itemprop="keywords"/>
 <meta name="description" content="Election 2019 Dates: Voting will be held across India in seven phases on April 11, April 18, April 23, April 29, May 6, May 12 and May 19. Lok Sabha election 2019 result will be declared on May 23." itemprop="description"/><meta name="publish-date" content="Tue, 12 Mar 2019 19:26:33 +0530" itemprop=""/><meta name="created-date" content="Tue, 12 Mar 2019 19:26:33 +0530" itemprop=""/><meta name="modified-date" content="Fri, 15 Mar 2019 16:54:06 +0530" itemprop="datePublished"/><meta name="section" content="india" itemprop="articleSection"/><meta name="url" content="https://www.ndtv.com/india-news/lok-sabha-elections-2019-date-schedule-facts-voter-list-all-you-need-know-2006580" itemprop="url"/><meta name="keywords" content="General Election 2019,Elections 2019,Election schedule 2019,Lok Sabha Elections 2019,Election dates" >
 <meta property="taboola:title" content="Lok Sabha Election 2019: Dates, Schedule, Facts - All Details Here"/>
-
+  <meta itemprop="image" content="images/election_dates.png">
 <style>
 .state-legend {
     margin-bottom: 20px;
@@ -89,25 +90,25 @@ text {
 <div class="col-md-6 panel-body">
 <div class="row">
 <p class="btn-group filter-2019-schedule">
-	  <a class="urlfilter btn btn-xs btn-primary" href="?2019-Schedule=null">Overall</a>
-		<a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=1">11-Apr</a>
-		<a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=2">18-Apr</a>
-		<a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=3">23-Apr</a>
-		<a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=4">29-Apr</a>
-		<a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=5">6-May</a>
-		<a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=6">12-May</a>
-		<a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=7">19-May</a>
+      <a class="urlfilter btn btn-xs btn-primary" href="?2019-Schedule=null">Overall</a>
+        <a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=1">11-Apr</a>
+        <a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=2">18-Apr</a>
+        <a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=3">23-Apr</a>
+        <a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=4">29-Apr</a>
+        <a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=5">6-May</a>
+        <a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=6">12-May</a>
+        <a class="urlfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Schedule=7">19-May</a>
 </p>
 </div>
 </div>
 <div class="col-md-6 panel-body">
 <div class="row">
            <p class="btn-group filter-2019-schedule-cast">
-	  <a class="cstfilter btn btn-xs btn-primary" href="?2019-Cast=null">Overall</a>
+      <a class="cstfilter btn btn-xs btn-primary" href="?2019-Cast=null">Overall</a>
 
-		<a class="cstfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Cast=GEN">GEN</a>
-		<a class="cstfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Cast=SC">SC</a>
-		<a class="cstfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Cast=ST">ST</a>
+        <a class="cstfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Cast=GEN">GEN</a>
+        <a class="cstfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Cast=SC">SC</a>
+        <a class="cstfilter btn btn-xs btn-default" data-toggle="toggle" href="?2019-Cast=ST">ST</a>
 </p>
          </div>
 </div>
@@ -838,32 +839,32 @@ var tabulate = function (data,columns) {
   $('#myTable').DataTable().destroy();
   
   d3.selectAll('table').remove();
-			
+            
   var table = d3.select('.data_table').append('table')
           .attr("id","myTable")
           .attr("class","table table-bordered");
-	var thead = table.append('thead')
+    var thead = table.append('thead')
    .attr("class","data_head");
-	var tbody = table.append('tbody')
+    var tbody = table.append('tbody')
 
-	thead.append('tr')
-	  .selectAll('th')
-	    .data(columns)
-	    .enter()
-	  .append('th')
+    thead.append('tr')
+      .selectAll('th')
+        .data(columns)
+        .enter()
+      .append('th')
         .attr("class","dynatable-head")
-	    .text(function (d) { return d })
+        .text(function (d) { return d })
 
-	var rows = tbody.selectAll('tr')
-	    .data(data)
-	    .enter()
-	  .append('tr')
+    var rows = tbody.selectAll('tr')
+        .data(data)
+        .enter()
+      .append('tr')
 
-	var cells = rows.selectAll('td')
-	    .data(function(row) {
-	    	return columns.map(function (column) {
-	    		return { column: column, value: row[column] }
-	      })
+    var cells = rows.selectAll('td')
+        .data(function(row) {
+            return columns.map(function (column) {
+                return { column: column, value: row[column] }
+          })
       })
       .enter()
     .append('td')
@@ -898,13 +899,13 @@ var state_val = d3.select(this).attr("title")
 if (schedule!=null&schedule!='null'){
  
       data_csv = data_csv.filter(function(d){return (d.Phase==schedule) })
-	  d3.selectAll('.urlfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Schedule='+schedule)? 'urlfilter btn btn-xs btn-primary' : 'urlfilter btn btn-xs btn-default'})// );
+      d3.selectAll('.urlfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Schedule='+schedule)? 'urlfilter btn btn-xs btn-primary' : 'urlfilter btn btn-xs btn-default'})// );
 }
 
 if (cast!=null&cast!='null'){
  
       data_csv = data_csv.filter(function(d){return (d.Category==cast) })
-	  d3.selectAll('.cstfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Cast='+cast)? 'cstfilter btn btn-xs btn-primary' : 'cstfilter btn btn-xs btn-default'})// );
+      d3.selectAll('.cstfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Cast='+cast)? 'cstfilter btn btn-xs btn-primary' : 'cstfilter btn btn-xs btn-default'})// );
 }
 
        sub_csv = data_csv.filter(function(d){  return (d.State==state_val) })
@@ -917,40 +918,40 @@ if (cast!=null&cast!='null'){
 if (schedule!=null&schedule!='null'){
  
       data_csv = data_csv.filter(function(d){return (d.Phase==schedule) })
-	  d3.selectAll('.urlfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Schedule='+schedule)? 'urlfilter btn btn-xs btn-primary' : 'urlfilter btn btn-xs btn-default'})// );
+      d3.selectAll('.urlfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Schedule='+schedule)? 'urlfilter btn btn-xs btn-primary' : 'urlfilter btn btn-xs btn-default'})// );
 }
 
 if (cast!=null&cast!='null'){
  
       data_csv = data_csv.filter(function(d){return (d.Category==cast) })
-	  d3.selectAll('.cstfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Cast='+cast)? 'cstfilter btn btn-xs btn-primary' : 'cstfilter btn btn-xs btn-default'})// );
+      d3.selectAll('.cstfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Cast='+cast)? 'cstfilter btn btn-xs btn-primary' : 'cstfilter btn btn-xs btn-default'})// );
 }
 
        sub_csv = data_csv
-	   
+       
  }
  
 
         head_date ={}
-	    head_name ={}
-		state_name = {}
-		head_dates = {}
-		head_Category = {}
+        head_name ={}
+        state_name = {}
+        head_dates = {}
+        head_Category = {}
      
-	  var constituency_list = [] 
+      var constituency_list = [] 
       sub_csv.forEach(function(o) {
 
-		head_date[o.constituency_code] = o.Phase
-		head_name[o.constituency_code] = o.constituency
-		state_name[o.constituency_code] = o.State_Short
-		head_dates[o.constituency_code] = o.Date
-		head_Category[o.constituency_code] = o.Category
-		constituency_list.push(o.constituency);
+        head_date[o.constituency_code] = o.Phase
+        head_name[o.constituency_code] = o.constituency
+        state_name[o.constituency_code] = o.State_Short
+        head_dates[o.constituency_code] = o.Date
+        head_Category[o.constituency_code] = o.Category
+        constituency_list.push(o.constituency);
        })
 
- 	var columns = ['State','constituency','Category','Date']
-	
-	sub_csv = sub_csv.filter(function(d){ return d.constituency!='NONE'})
+     var columns = ['State','constituency','Category','Date']
+    
+    sub_csv = sub_csv.filter(function(d){ return d.constituency!='NONE'})
     tabulate(sub_csv,columns)
   
  d3.selectAll("path").each( function(d, i){
@@ -960,7 +961,7 @@ if (cast!=null&cast!='null'){
     d3.select(this).attr("data-title",'Constituency : '+head_name[d3.select(this).attr("id")] +'<br/> State : '+state_name[d3.select(this).attr("id")]+'<br/> Election Date : '+head_dates[d3.select(this).attr("id")]+'<br/> Election Phase : '+head_date[d3.select(this).attr("id")]+'<br/> Category : '+head_Category[d3.select(this).attr("id")] )
     d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+head_name[d3.select(this).attr("id")]})
     d3.select(this).attr("legend_link",function(d) { return 'Phase -'+head_date[d3.select(this).attr("id")] })
-	d3.select(this).attr("state_link",function(d) { return head_name[d3.select(this).attr("id")] })
+    d3.select(this).attr("state_link",function(d) { return head_name[d3.select(this).attr("id")] })
     d3.select(this).style("fill", color(head_date[d3.select(this).attr("id")]-1) )
     d3.select(this).style("stroke","#ddd")
     d3.select(this).style("stroke-width", .5)
@@ -1013,7 +1014,7 @@ var lastsearch = '';
     }
     });
 
-	
+    
        d3.selectAll('.legends3').remove();
   
         var svgLegned3 = d3.select(".india_map")
@@ -1039,13 +1040,13 @@ var lastsearch = '';
         }).style("stroke", function (d, i) {
             return d3.rgb(color(i)).darker()
         })
-		.on("mouseover", function(d) {
-		
-		d3.selectAll('path').attr('opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
-		
+        .on("mouseover", function(d) {
+        
+        d3.selectAll('path').attr('opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
+        
             })
-        .on("mouseout", function(d) {		
-				d3.selectAll('path').attr('opacity',1.0);
+        .on("mouseout", function(d) {
+                d3.selectAll('path').attr('opacity',1.0);
 
         });
         
@@ -1067,31 +1068,31 @@ var lastsearch = '';
 if (schedule!=null&schedule!='null'){
  
       data_csv = data_csv.filter(function(d){return (d.Phase==schedule) })
-	  d3.selectAll('.urlfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Schedule='+schedule)? 'urlfilter btn btn-xs btn-primary' : 'urlfilter btn btn-xs btn-default'})// );
+      d3.selectAll('.urlfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Schedule='+schedule)? 'urlfilter btn btn-xs btn-primary' : 'urlfilter btn btn-xs btn-default'})// );
 }
 
 if (cast!=null&cast!='null'){
  
       data_csv = data_csv.filter(function(d){return (d.Category==cast) })
-	  d3.selectAll('.cstfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Cast='+cast)? 'cstfilter btn btn-xs btn-primary' : 'cstfilter btn btn-xs btn-default'})// );
+      d3.selectAll('.cstfilter').attr('class',function(s){ return (d3.select(this).attr("href")=='?2019-Cast='+cast)? 'cstfilter btn btn-xs btn-primary' : 'cstfilter btn btn-xs btn-default'})// );
 }
 
-	    head_date ={}
-	    head_name ={}
-		state_name = {}
-		head_dates = {}
-		head_Category = {}
+        head_date ={}
+        head_name ={}
+        state_name = {}
+        head_dates = {}
+        head_Category = {}
       var constituency_list = [] 
       data_csv.forEach(function(o) {
 
-		head_date[o.constituency_code] = o.Phase
-		head_name[o.constituency_code] = o.constituency
-		state_name[o.constituency_code] = o.State_Short
-		head_dates[o.constituency_code] = o.Date
-		head_Category[o.constituency_code] = o.Category
-		constituency_list.push(o.constituency);
+        head_date[o.constituency_code] = o.Phase
+        head_name[o.constituency_code] = o.constituency
+        state_name[o.constituency_code] = o.State_Short
+        head_dates[o.constituency_code] = o.Date
+        head_Category[o.constituency_code] = o.Category
+        constituency_list.push(o.constituency);
        })
-	  
+      
 var columns = ['State','constituency','Category','Date']
 
 data_csv = data_csv.filter(function(d){ return d.constituency!='NONE'})
@@ -1159,7 +1160,7 @@ var lastsearch = '';
     
         var svgLegned3 = d3.select(".india_map")
             
-	     d3.select('.legends3').remove();
+         d3.select('.legends3').remove();
 
         //D3 Vertical Legend//////////////////////////
         var legend3 = svgLegned3.selectAll('.legend3')
@@ -1182,16 +1183,16 @@ var lastsearch = '';
         }).style("stroke", function (d, i) {
             return d3.rgb(color(i)).darker()
         })
-		.on("mouseover", function(d) {
-		
-		d3.selectAll('path').attr('opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
-		
+        .on("mouseover", function(d) {
+        
+        d3.selectAll('path').attr('opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
+        
             })
-        .on("mouseout", function(d) {		
-				d3.selectAll('path').attr('opacity',1.0);
+        .on("mouseout", function(d) {        
+                d3.selectAll('path').attr('opacity',1.0);
 
         });
-		
+        
         
         legend3.append('text')
             .attr("x", 12)
