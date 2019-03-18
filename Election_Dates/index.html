@@ -834,6 +834,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+
 var tabulate = function (data,columns) {
 
   $('#myTable').DataTable().destroy();
@@ -859,7 +860,8 @@ var tabulate = function (data,columns) {
         .data(data)
         .enter()
       .append('tr')
-
+    .attr("state_link",function (d) { return  d.constituency })
+    
     var cells = rows.selectAll('td')
         .data(function(row) {
             return columns.map(function (column) {
@@ -871,10 +873,13 @@ var tabulate = function (data,columns) {
       .text(function (d) { return d.value })
 
     $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%"});
-   
-   
+  
   return table;
+
 }
+
+
+
 
 d3.csv("election.csv", function(data_csv) {
  
@@ -983,7 +988,7 @@ if (cast!=null&cast!='null'){
 
     
 var lastsearch = '';
-    var $box = {};
+
     
     function add_search(search, chart) {
       var $chart = $(chart);
@@ -1059,7 +1064,11 @@ var lastsearch = '';
         })
             .style("text-anchor", "start")
             .style("font-size", 10)
-   
+
+$('tr').hover(function() {
+     table_search($(this).attr("state_link"), '.india_map');
+ 
+});			
  
  });
  
@@ -1106,7 +1115,8 @@ tabulate(data_csv,columns)
     d3.select(this).attr("data-title",'Constituency : '+head_name[d3.select(this).attr("id")] +'<br/> State : '+state_name[d3.select(this).attr("id")]+'<br/> Election Date : '+head_dates[d3.select(this).attr("id")]+'<br/> Election Phase : '+head_date[d3.select(this).attr("id")]+'<br/> Category : '+head_Category[d3.select(this).attr("id")] )
     d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+head_name[d3.select(this).attr("id")]})
     d3.select(this).attr("legend_link",function(d) { return 'Phase -'+head_date[d3.select(this).attr("id")] })
-    d3.select(this).style("fill", color(head_date[d3.select(this).attr("id")]-1) )
+	d3.select(this).attr("state_link",function(d) { return head_name[d3.select(this).attr("id")] })
+	d3.select(this).style("fill", color(head_date[d3.select(this).attr("id")]-1) )
     d3.select(this).style("stroke","#ddd")
     d3.select(this).style("stroke-width", .5)
     d3.select(this).attr("class", d3.select(this).attr("id"))
@@ -1126,7 +1136,7 @@ tabulate(data_csv,columns)
     
 
 var lastsearch = '';
-    var $box = {};
+
     
     function add_search(search, chart) {
       var $chart = $(chart);
@@ -1136,7 +1146,7 @@ var lastsearch = '';
           lastsearch = search;
           var re = new RegExp( "^" + search, "i" );
           $('path', $chart).each(function(){
- $(this).css('fill-opacity', re.test($(this).attr("state_link")) ? '1.0': '0.1');
+              $(this).css('fill-opacity', re.test($(this).attr("state_link")) ? '1.0': '0.1');
           });
         }
       });
@@ -1203,6 +1213,7 @@ var lastsearch = '';
         })
             .style("text-anchor", "start")
             .style("font-size", 10)
+
 
 });
 </script>
