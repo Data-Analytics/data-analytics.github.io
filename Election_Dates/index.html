@@ -894,8 +894,8 @@ var color = d3.scale.category10()
  cast = getParameterByName('2019-Cast');
 
  d3.selectAll('.statefilter').on("click", function() {
- 
- if (d3.select(this).attr("data-title")!='Clear State filter'){
+
+ if (d3.select(this).attr("id")!='ALL_ALL'){
     
 var state_val = d3.select(this).attr("data-title")
 
