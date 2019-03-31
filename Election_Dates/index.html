@@ -923,6 +923,7 @@ if (cast!=null&cast!='null'){
        d3.selectAll('rect').attr("fill",'#fff');
        d3.select('#ALL_ALL').attr("fill","rgb(238, 102, 102)");
        sub_csv = data_csv
+	   state_val = undefined
        }
 
 
@@ -970,7 +971,7 @@ if (cast!=null&cast!='null'){
   
 
  d3.selectAll("path").each( function(d, i){
-   if (d3.select(this).attr("id")=='--01' & state_val=='JAMMU AND KASHMIR' ){
+   if (d3.select(this).attr("id")=='--01' & (state_val=='JAMMU AND KASHMIR' |state_val== undefined) ){
    d3.select(this).style("fill",'#D3D3D3')
     d3.select(this).style("stroke","#ddd")
     d3.select(this).style("stroke-width", .5)
