@@ -1056,11 +1056,11 @@ var lastsearch = '';
         })
         .on("mouseover", function(d) {
         
-        d3.selectAll('path').attr('opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
+        d3.selectAll('path').attr('fill-opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
         
             })
         .on("mouseout", function(d) {
-                d3.selectAll('path').attr('opacity',1.0);
+                d3.selectAll('path').attr('fill-opacity',1.0);
 
         });
         
@@ -1206,11 +1206,11 @@ var lastsearch = '';
         })
         .on("mouseover", function(d) {
         
-        d3.selectAll('path').attr('opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
+        d3.selectAll('path').attr('fill-opacity',function (s){ return d3.select(this).attr("legend_link")==d? 1.0 :0.2 });
         
             })
         .on("mouseout", function(d) {
-                d3.selectAll('path').attr('opacity',1.0);
+                d3.selectAll('path').attr('fill-opacity',1.0);
 
         });
         
