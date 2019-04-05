@@ -837,6 +837,12 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+$('path').on('click',function(){ 
+
+if (d3.select(this).attr("state_link")!=undefined){
+window.open('https://www.google.co.in/search?q='+d3.select(this).attr("state_link").toLowerCase()+' lok sabha');
+}
+});
 
 var tabulate = function (data,columns) {
 
