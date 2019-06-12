@@ -86,7 +86,16 @@
             </div>
         </div>
     </div>
-
+	
+    <div class="container-fluid">
+	    <div class="container">
+		<p class="form-inline header_form">
+		<label value="state_val">States : </label>
+		<select multiple="multiple" id="state_val_id" class="select_state"></select>&nbsp;&nbsp;
+		<input type="button" value="submit" class="state_filter"></input> 
+		</p>
+		</div>
+	</div>				
     <div id="overall_view">
     <div class="container-fluid">
         <div class="container">
@@ -1171,7 +1180,7 @@ function map_filter(year_2014,year_2019,other_data){
   function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
   
    d3.select('.maps').selectAll("path").each( function(d, i){
-    console.log(d3.select(this).attr("id"));
+
     d3.select(this).attr("data-title",'Constituency : '+head_name[d3.select(this).attr("id")] +'<br/> State : '+state_name[d3.select(this).attr("id")]+'</br>  Candidate : '+candidate[d3.select(this).attr("id")]+'</br> Party : '+Party_val[d3.select(this).attr("id")]+'<br/> Votes : '+addThousandsSeparator(votes_val[d3.select(this).attr("id")])+'<br/> Vote percent: '+votes_percent[d3.select(this).attr("id")]+'% <br/> Polled Votes: '+addThousandsSeparator(polled_votes_val[d3.select(this).attr("id")])+' <br/> Year: '+year_val[d3.select(this).attr("id")] )
     d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+head_name[d3.select(this).attr("id")]})
     //d3.select(this).attr("legend_link",function(d) { return 'Phase -'+head_date[d3.select(this).attr("id")] })
@@ -1227,9 +1236,28 @@ acct_no = getParameterByName('acct_no');
 if (acct_no == undefined){ $(".detail_display").hide(); }
 
     d3.csv("parliament.csv", function(map_data) { 
+	
+	 state_list = _.uniq(map_data, function(item,a) { return item['ST_NAME']; });
+	 
+    var select_box = d3.select('#state_val_id')
+                .selectAll("option")
+                    .data(state_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['ST_NAME']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['ST_NAME']; });
+				
+      $(".select_state").multipleSelect({ placeholder: "Here is the placeholder" });
+	  
+   var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
 
-    full_data = map_data
-
+	var full_data = []
+                    _.each(map_data, function(d) { if(_.contains(state_values, d['ST_NAME'])) { full_data.push(d);}});
+ 
     year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
     year_data_set_all.forEach(function(o) {
        o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
