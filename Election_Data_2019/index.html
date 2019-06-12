@@ -1250,16 +1250,32 @@ $('.'+year_detail+'_id').addClass('active');
 acct_no = getParameterByName('acct_no');
 st_no = getParameterByName('st_no');
 
-function execute_data(){
+function execute_data(execute_status){
 
-	  
+
 if (acct_no == undefined){ $(".detail_display").hide(); }
 
     d3.csv("parliament.csv", function(map_full_data) { 
 	
-	 state_list = _.uniq(map_full_data, function(item,a) { return item['ST_NAME']; });
-	 
+	state_list = _.uniq(map_full_data, function(item,a) { return item['ST_NAME']; });
+
+	if (execute_status!='refresh')
+    {	
+	d3.select("#state_val_id").selectAll('option').remove();
     var select_box = d3.select('#state_val_id')
+                .selectAll("option")
+                    .data(state_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['ST_NAME']; })
+                    .attr("class","name")
+                    .property("selected", function (d) { return execute_status.indexOf(d['ST_NAME'])>-1; })
+                    .text(function (d) { return d['ST_NAME']; });
+    var map_data = []
+                    _.each(map_full_data, function(d) { if(_.contains(execute_status, d['ST_NAME'])) { map_data.push(d);}});
+   
+    
+	}else{
+	var select_box = d3.select('#state_val_id')
                 .selectAll("option")
                     .data(state_list) 
                     .enter().append("option")
@@ -1267,17 +1283,14 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                     .attr("class","name")
                     .attr("selected","")
                     .text(function (d) { return d['ST_NAME']; });
-				
-      $(".select_state").multipleSelect({ placeholder: "Here is the placeholder" });
+     
+	var map_data = map_full_data
+	
+	}
+     	
+      $("#state_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
 	  
-   var state_values = [];
-      $('#state_val_id :selected').each(function(i, selected){
-          state_values[i] = $(selected).val();
-      });
-
-	var map_data = []
-                    _.each(map_full_data, function(d) { if(_.contains(state_values, d['ST_NAME'])) { map_data.push(d);}});
-   
+	
 	var full_data = map_data
 	
     year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
@@ -1318,6 +1331,8 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
     party_2014 = _.uniq(year_data_set_2014, function(item, key, a) { return item['PARTY']; });
     party_2019 = _.uniq(year_data_set_2019, function(item, key, a) { return item['PARTY']; });
     
+	d3.select("#year_2014").selectAll('option').remove();
+	d3.select("#year_2019").selectAll('option').remove();
 	
     var select_box = d3.select('#year_2014')
                 .selectAll("option")
@@ -1337,8 +1352,9 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                     .attr("selected","")
                     .text(function (d) { return d['PARTY']; });
 
-      $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
-
+      $("#year_2014").multipleSelect({ placeholder: "Here is the placeholder" });
+      $("#year_2019").multipleSelect({ placeholder: "Here is the placeholder" });
+ 
       var year_2019 = [];
       $('#year_2019 :selected').each(function(i, selected){
           year_2019[i] = $(selected).val();
@@ -1912,11 +1928,16 @@ $('.party_filter').click( function(n) {
 
 }
 
-execute_data()
+execute_data('refresh')
 
 $('.state_filter').click( function(n) {
 
-execute_data()
+ var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+	  
+execute_data(state_values)
 
 });
     </script>
