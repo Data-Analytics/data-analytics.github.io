@@ -15,8 +15,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sushanth">
   <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2019 India Election,India parliament Election Results 2019 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2019', Which of the Dravidian duos might get the stronghold in India? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
-  <meta name="news_keywords" content="India polls, India parliament polls,   India elections, India parliament elections, chennai news, India news, india news">
-  <meta name="keywords" content="India polls, India parliament polls,   India elections, India parliament elections, chennai news, India news, india news">
+  <meta name="news_keywords" content="India polls, India parliament polls, India elections, India parliament elections, chennai news, India news, india news">
+  <meta name="keywords" content="India polls, India parliament polls, India elections, India parliament elections, chennai news, India news, india news">
   <link href="css/bootstrap.css" rel="stylesheet">    
   <link href="css/basic.css" rel="stylesheet">
   <link href="css/feature.css" rel="stylesheet">
@@ -38,13 +38,13 @@
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> 
   <meta property="og:title"  content="parliament ELECTIONS 2014 - 2019 (India)" /> 
-  <meta property="og:url"   content="http://data-analytics.github.io/Election_Data_2019/India.html" /> 
+  <meta property="og:url"   content="http://data-analytics.github.io/Election_Data_2019/" /> 
   <meta property="og:description" content="India parliament Election Results 2019 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2019'" /> 
   <html itemscope itemtype="http://schema.org/Blog">
   <meta itemprop="description" content="India parliament Election Results 2019 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2019'">
   <meta itemprop="name" content="India Parliament ELECTIONS 2014 - 2019 (India)">
-  <meta property="og:image" content="http://data-analytics.github.io/images/India.png" /> 
-  <meta itemprop="image" content="http://data-analytics.github.io/images/India.png">
+  <meta property="og:image" content="http://data-analytics.github.io/images/lok_sabha.jpg" /> 
+  <meta itemprop="image" content="http://data-analytics.github.io/images/lok_sabha.jpg">
   <script type="text/javascript" src="js/topojson.min.js"></script>
   <title>parliament Elections 2014 - 2019 (India)</title>  
     <style>
@@ -1159,7 +1159,6 @@ function map_filter(year_2014,year_2019,other_data){
 		states = {}
         color_map = {"TDP":"#AB9005","BJP":"#ff7f0e","YSRCP":"#08406F","INC":"#3498DB","JP":"#D22215","IND":"#CEB58C","NOTA":"#DDD1CA","PPI":"#363636","SPP":"#363636","VCK":"#9C5ABD","CPI(M)(L)":"#F27A67","DBP":"#363636","MPP":"#363636","PRSP":"#363636","AIFB":"#363636","RPI(K)":"#363636","IPBP":"#363636","API":"#363636","NSP":"#363636","RPI(A)":"#363636","MCPI":"#363636","SP":"#0E6D37","BMP":"#363636","IUML":"#014BC6","CPI(M)(L)":"#363636","BSP":"#22409A","AYSRCP":"#363636","ANC":"#363636","CPI(M)":"#F27A67","SDPI":"#363636","SUCI":"#363636","SFB":"#363636","CPI":"#F27A67","ARPS":"#363636","RKSP":"#363636","PPA":"#1C8D3E","JD(S)":"#00923F","NPP":"#DB7093","AITC":"#00FF00","AUDF":"#00FF00","HND":"#363636","ASDC":"#363636","AGP":"#A10807","PJP(S)":"#363636","BNJD":"#363636","VPI":"#363636","BPF":"#363636","UPP":"#363636","TNRMPI":"#363636","BGP":"#363636","AJM":"#363636","NCP":"#adb2bc","ADP":"#363636","JD(U)":"#228B22","BLND":"#363636","SBSP":"#363636","JKP":"#363636","RHS":"#363636","SS":"#FD6A1D","RLSP":"#BBD9EC","LJSP":"#363636","RMGP":"#363636","JP":"#363636","JDR":"#363636","RJP":"#363636","RSP(S)":"#363636","BVP":"#363636","SSD":"#363636","BND":"#363636","RJD":"#007C01","JAP":"#363636","BAP":"#363636","BPP":"#363636","AAP":"#0080C0","PBI":"#363636","ABMP":"#363636","PSP(L)":"#363636","VIP":"#0392D6","SJDL":"#363636","AAM":"#363636","JHP":"#363636","VSP":"#363636","JKNPP":"#363636","AJPR":"#363636","AIMEIM":"#217A3A","JMM":"#344130","BP":"#363636","MMM":"#363636","RRP":"#363636","YKP":"#363636","LJSP":"#DB1E14","JVP":"#363636","SSP":"#363636","JPJD":"#363636","BSSP":"#363636","BJKD":"#363636","PM":"#363636","WAP":"#363636","BLRP":"#363636","BDP":"#363636","HAM(S)":"#EFF0EC","SUP":"#363636","RPI":"#363636","AKP":"#363636","BAAP":"#363636","ABJS":"#363636","LJVM":"#363636","RSD":"#363636","AHFB":"#363636","RVP":"#363636","MSP":"#363636","MAP":"#363636","RUC":"#363636","NAICP":"#363636","RPP":"#363636","GGP":"#363636","VJJP":"#363636","BTP":"#363636","RTRP":"#363636","SBP":"#363636","JSVP":"#363636","LGP":"#363636","MNP":"#363636","NBP":"#363636","VPP":"#363636","SVPP":"#363636","BMFP":"#363636","BRSP":"#363636","BSCP":"#363636","RSP":"#363636","INLD":"#363636","RLP":"#363636","AAP(P)":"#363636","JJp":"#363636","RMPI":"#363636","SNP":"#363636","RMEP":"#363636","LSP":"#363636","AVP":"#363636","BKP":"#363636","NED":"#363636","RAM":"#363636","JKPDP":"#363636","JKNC":"#FF0000","JKPC":"#630000","PDP":"#118452","DSSP":"#363636","BBM":"#363636","HJP":"#363636","SJP":"#363636","ABML":"#363636","KKJHS":"#363636","MLPI":"#363636","ASP":"#363636","INCP":"#363636","ANP":"#363636","RS":"#363636","ICF":"#363636","KCVP":"#363636","SJP(K)":"#363636","NLP":"#363636","BDJS":"#363636","KC(M)":"#363636","KC":"#363636","RSP":"#C9D3EE","PNP":"#363636","PSP":"#363636","RSSP":"#363636","ABP":"#363636","PRC":"#363636","MJVP":"#363636","PSPU":"#363636","JC":"#363636","SIP":"#363636","ABHM":"#363636","RAD":"#363636","ABGP":"#363636","SSRD":"#363636","SVP":"#363636","SP(M)":"#363636","MDP":"#363636","SP":"#363636","AIUC":"#363636","VBA":"#D0562B","LS":"#363636","RMP":"#363636","RJP(S)":"#363636","ARP":"#363636","HBP":"#363636","PRP":"#363636","PJP":"#363636","BPSP":"#363636","NNP":"#363636","BVA":"#363636","PP":"#363636","NP":"#363636","DMSK":"#363636","ACDP":"#363636","JMBP":"#363636","HPP":"#363636","SWP":"#363636","NEIDP":"#363636","NPF":"#DA251D","UDP":"#363636","MNF":"#CA8C1F","PRISM":"#363636","NDPP":"#FD4242","BJD":"#03A31F","RIM":"#363636","KS":"#363636","FPI":"#363636","SKD":"#363636","KP":"#363636","OPD":"#363636","JSP":"#363636","SAD":"#F69B0C","HSS":"#363636","NJP":"#363636","PEP":"#363636","SBM":"#363636","BLSD":"#363636","SAD(T)":"#363636","LIP":"#B98377","IDRF":"#363636","SAD(A)":"#363636","NPP":"#363636","BRP(D)":"#363636","BJSP":"#363636","NPF":"#363636","IPGP":"#363636","RLP":"#9CD43D","IIC":"#363636","SDF":"#F6EB01","SKM":"#D64E10","HSP":"#E0741C","SRP":"#363636","AIADMK":"#b2d33c","MNM":"#363636","NTK":"#363636","DMDK":"#F8F801","DMK":"#c0392b","TNIK":"#363636","PMK":"#F3D658","GPI":"#363636","UMK":"#363636","AMPK":"#363636","TMC(M)":"#9FC634","IPFT":"#363636","AB":"#363636","MJP":"#363636","SLSP":"#363636","RLD":"#0A8202","BLSP":"#363636","BBSP":"#363636","JSD":"#363636","BHP":"#363636","BHF":"#363636","RLSP":"#363636","LJP":"#363636","NBMP":"#363636","LD":"#363636","RND":"#363636","VIP":"#363636","AJP":"#363636","BKPP":"#363636","JSSP":"#363636","JAAS":"#363636","BJNP":"#363636","NEP":"#363636","JDL":"#363636","KRP":"#363636","JBP":"#363636","YVP":"#363636","AP":"#363636","RJAP(U)":"#363636","ADUP":"#363636","BAEP":"#363636","SD":"#363636","PMSP":"#363636","RJGP":"#363636","AD":"#C56D57","BRP(I)":"#363636","AIPF":"#363636","WPI":"#363636","AIJAP":"#363636","PDS":"#363636","JESM":"#363636","RJSP":"#363636","BNARSP":"#363636","JP(N)":"#363636","JPP":"#363636","Rp(K)":"#363636","ABSKRP":"#363636","JVM(P)":"#7E441D","AP":"#CEB537","UPNS":"#363636","JMM":"#363636","UKD(D)":"#363636","UKD":"#363636","PLM":"#363636","TRS":"#E67CC4","NPRP":"#363636","NIP":"#363636","PJD":"#363636","TJS":"#363636","CKAP":"#363636","ESP":"#363636","MKVP":"#363636","NAP":"#363636","ANAP":"#363636","AINRC":"#C8C68C","SDP":"#363636","STR":"#363636","PPA":"#363636","BED":"#363636","HJC":"#363636","SJ(D)":"#363636","BSD":"#363636","AD":"#363636","SAP":"#363636","MNS":"#363636","PWPI":"#363636","PVP":"#363636","AOP":"#363636","NUZP":"#363636","BYS":"#363636","TNMC":"#363636","MDMK":"#363636","MMK":"#363636","PT":"#363636","MD":"#363636","RPD":"#363636","QED":"#363636","MC":"#363636","JBSP":"#363636","#N/A":"#fff"};
 
-	  
       var constituency_list = [] 
       map_data.forEach(function(o) {
         
@@ -1907,8 +1906,14 @@ $('.party_filter').click( function(n) {
         $('#year_2014 :selected').each(function(i, selected){
             year_2014[i] = $(selected).val();
         });
+		
    d3.csv("parliament.csv", function(map_full_data) { 
   
+  var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+	  
   	var map_data = []
                     _.each(map_full_data, function(d) { if(_.contains(state_values, d['ST_NAME'])) { map_data.push(d);}});
  
