@@ -1181,7 +1181,7 @@ function map_filter(year_2014,year_2019,other_data){
   function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
   
    d3.select('.maps').selectAll("path").each( function(d, i){
-
+  
 	if (d3.select(this).attr("id")=='--01'){
    d3.select(this).style("fill",'#D3D3D3')
     d3.select(this).style("stroke","#ddd")
@@ -1190,7 +1190,6 @@ function map_filter(year_2014,year_2019,other_data){
     }else if (head_name[d3.select(this).attr("id")] !=undefined){ 
     d3.select(this).attr("data-title",'Constituency : '+head_name[d3.select(this).attr("id")] +'<br/> State : '+state_name[d3.select(this).attr("id")]+'</br>  Candidate : '+candidate[d3.select(this).attr("id")]+'</br> Party : '+Party_val[d3.select(this).attr("id")]+'<br/> Votes : '+addThousandsSeparator(votes_val[d3.select(this).attr("id")])+'<br/> Vote percent: '+votes_percent[d3.select(this).attr("id")]+'% <br/> Polled Votes: '+addThousandsSeparator(polled_votes_val[d3.select(this).attr("id")])+' <br/> Year: '+year_val[d3.select(this).attr("id")] )
     d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+head_name[d3.select(this).attr("id")]})
-    //d3.select(this).attr("legend_link",function(d) { return 'Phase -'+head_date[d3.select(this).attr("id")] })
     d3.select(this).attr("state_link",function(d) { return head_name[d3.select(this).attr("id")] })
     d3.select(this).style("fill", color_name[d3.select(this).attr("id")] )
     d3.select(this).style("stroke","#ddd")
@@ -1284,10 +1283,8 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
      
 	var map_data = map_full_data
 	
-	}
-     	
+	}	
       $("#state_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
-	  
 	
 	var full_data = map_data
 	
@@ -1733,7 +1730,6 @@ var formatNumber = d3.format(",.0f"),
     //color = d3.scale.category20b();
     
    d3.select('.sankey_chart').select('svg').remove();
- 
  
 // append the svg canvas to the page
 var svg = d3.select(".sankey_chart").append("svg")
