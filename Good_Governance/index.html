@@ -3938,16 +3938,14 @@ var tabulate = function (data,columns,colors) {
       })
       .enter()
     .append('td')
-      .attr('bgcolor', function (d,i) { return i==1? colors(d.value): '' })
-	  .style('color', function (d,i) { return i==1? ((parseInt((colors(d.value)).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff'): '#000' })
-	  .attr('data-title', function (d,i) { return i==2? d.sub_value : ''  })
-	  .text(function (d,i) { return i==1?(d.value).toFixed(2): d.value })
+      .attr('bgcolor', function (d,i) { return i==2? colors(d.value): '' })
+	  .style('color', function (d,i) { return i==2? ((parseInt((colors(d.value)).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff'): '#000' })
+	  .attr('data-title', function (d,i) { return i==3? d.sub_value : ''  })
+	  .text(function (d,i) { return (i==2)? (d.value).toFixed(2) : ((i==4)? (d.value).toFixed(2)+'%' : d.value) })
 
-	  //field_category_list
-	  
       $("td").tooltip({container: 'body', html: true, placement:'top'});
    
-    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%","pageLength": 18,"order": [[ 1, "desc" ]]});
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%","pageLength": 18,"order": [[ 2, "desc" ]]});
   
   return table;
 
@@ -4021,7 +4019,7 @@ function execute_data(execute_status){
 
 	filtered_category_selected = _.pluck(_.uniq(map_filtered_data, function(item,a) { return item['field_category']; }),'field_category');
 	var map_filtered_data = _.map(map_group_data, function(num){
-    return { State: _.uniq(num, function(item,a) { return item['map_state_names']; })[0].map_state_names,state_code :_.uniq(num, function(item,a) { return item['state_code']; })[0].state_code,  field_category_list: filtered_category_selected.join() ,  field_category: filtered_category_selected.length==1? filtered_category_selected[0].slice(0, filtered_category_selected[0].length-8) : 'Selected Categories',  points: d3.sum(num, function(d) { return d.points; }) , avg_points: d3.mean(num, function(d) { return d.points; }), overall_points: d3.sum(num, function(d) { return d.overall_points; }) };
+    return { State: _.uniq(num, function(item,a) { return item['map_state_names']; })[0].map_state_names,States_category : _.uniq(num, function(item,a) { return item['States_category']; })[0].States_category,state_code :_.uniq(num, function(item,a) { return item['state_code']; })[0].state_code,  field_category_list: filtered_category_selected.join() ,  field_category: filtered_category_selected.length==1? filtered_category_selected[0].slice(0, filtered_category_selected[0].length-8) : 'Selected Categories',  points: d3.sum(num, function(d) { return d.points; }) , Ratings: (d3.mean(num, function(d) { return d.points; }))*100,  avg_points: d3.mean(num, function(d) { return d.points; }), overall_points: d3.sum(num, function(d) { return d.overall_points; }) };
      });
 	 
 	}
@@ -4030,11 +4028,12 @@ function execute_data(execute_status){
 	
     map_filtered_data.forEach(function(o) {
 	    o['field_category_list'] = o.field_category
+		o['Ratings'] = (o.points*100/9)
+		
 	});
 	
 	}
-	 
-	var columns = ['State','points','field_category']
+	var columns = ['State','States_category','points','field_category','Ratings']
 	var colors = d3.scale.linear()
 		   .domain([ d3.min(map_filtered_data, function(d) { return d.points; }), d3.max(map_filtered_data, function(d) { return d.points; })])
 		   .range(['#FEF3F3',d3.rgb('#f55').darker()]);
@@ -4046,6 +4045,7 @@ function execute_data(execute_status){
         head_Category = {}
 		head_overall = {}
 		head_average = {}
+		head_State_cg = {}
       var states_id = [] 
 	  
 	  
@@ -4059,6 +4059,8 @@ function execute_data(execute_status){
 		
 		}
 		
+		head_State_cg[o.state_code] = o.States_category
+        
 	    head_average[o.state_code] = o.avg_points
         head_points[o.state_code] = o.points
 		head_overall[o.state_code] = o.overall_points
@@ -4076,9 +4078,7 @@ function execute_data(execute_status){
     d3.select(this).style("stroke","#fff")
     d3.select(this).style("stroke-width", 1)
     d3.select(this).attr("class", d3.select(this).attr("id"))    
-    //d3.select(this).attr("data-toggle", "tooltip")
-	//d3.select(this).attr("data-title",'State : '+head_State[d3.select(this).attr("id")] +'<br/> Rating : '+((head_average[d3.select(this).attr("id")]*100)).toFixed(1)+'% <br/> Points : '+(head_points[d3.select(this).attr("id")]).toFixed(1)+'<br/> Category : '+head_Category[d3.select(this).attr("id")] )
-	d3.select(this).attr("state_link",function(d) { return head_State[d3.select(this).attr("id")] })
+    d3.select(this).attr("state_link",function(d) { return head_State[d3.select(this).attr("id")] })
     
 	
 	var hover_id = d3.select(this).attr("id")
@@ -4091,7 +4091,7 @@ function execute_data(execute_status){
         title: function() {
           var d = this.__data__
 		   if (head_State[hover_id]!=undefined){
-		  return 'State : '+head_State[hover_id] +'<br/> Rating : '+((head_average[hover_id]*100)).toFixed(1)+'% <br/> Points : '+(head_points[hover_id]).toFixed(2)+'<br/> Category : '+head_Category[hover_id] 
+		  return 'State : '+head_State[hover_id] +' <br/> States Category : '+head_State_cg[hover_id]+' <br/> Rating : '+((head_average[hover_id]*100)).toFixed(1)+'% <br/> Points : '+(head_points[hover_id]).toFixed(2)+'<br/> Category : '+head_Category[hover_id] 
 		  }else{
 		  return 'State : '+hover_state
 		  
@@ -4100,19 +4100,14 @@ function execute_data(execute_status){
         }
       });
 	  
-	//$("#"+d3.select(this).attr("id")).tooltip({container: 'body', html: true, placement:'top' });
-	
 	}else{
 	
 	d3.select(this).style("fill", "#fff")
     d3.select(this).style("stroke","#ddd")
     d3.select(this).style("stroke-width", 1)
-	//d3.select(this).attr("data-toggle", "tooltip")    
-	//d3.select(this).attr("data-title",d3.select(this).attr("state_value"))
     d3.select(this).attr("state_link",function(d) { return head_State[d3.select(this).attr("id")] })
 	
 	var hover_id = d3.select(this).attr("state_value")
-	console.log(hover_id);
 
 	$('svg #'+d3.select(this).attr("id")).tipsy({ 
         gravity: 'w', 
@@ -4124,8 +4119,6 @@ function execute_data(execute_status){
       });
 	  
 	}
-	
-    //$("#"+d3.select(this).attr("id")).tooltip({container: 'body', html: true, placement:'top'});
 	
     });
 
@@ -4159,9 +4152,6 @@ var lastsearch = '';
         responseFn( a );
     }
     });
-
- 
-   // $("path").tooltip({container: 'body', html: true, placement:'top', trigger: 'hover'});
     
 }
 
