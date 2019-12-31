@@ -3941,7 +3941,7 @@ var tabulate = function (data,columns) {
     .append('td')
       .text(function (d,i) { return i==1?(d.value).toFixed(2): d.value })
 
-    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%","pageLength": 18});
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%","pageLength": 18,"order": [[ 1, "desc" ]]});
   
   return table;
 
