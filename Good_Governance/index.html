@@ -14,6 +14,8 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sushanth">
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="css/tipsy.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/feature.css">
   <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
@@ -29,6 +31,8 @@
   <script type="text/javascript" src="js/underscore-min.js"></script>
   <script type="text/javascript" src="js/jquery.multiple.select.js"></script>  
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js"></script>
+  <script type="text/javascript" src="js/tipsy.js"></script>
+
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
   <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -116,15 +120,10 @@ text {
    <label align="left">Search:</label>
    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" class="geo_search ui-autocomplete-input" placeholder="eg: Tamil Nadu" autocomplete="off">
 </p>
-<!--height="695.70178"
-   width="611.85999"
-   -->
-<svg
- xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   id="svg2"
-   viewBox="0 0 611.85999 695.70178 "
-   class="india_map"
+
+<svg data-height="1" xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 611.85999 695.70178"
+   class="india_map" xlink:xlink="http://www.w3.org/1999/xlink" version="1.1"
 >
 
   <path
@@ -3981,6 +3980,7 @@ function execute_data(execute_status){
 	
 	if (execute_status!='refresh')
     {	
+	
 	d3.select("#state_val_id").selectAll('option').remove();
     var select_box = d3.select('#state_val_id')
                 .selectAll("option")
@@ -4012,8 +4012,10 @@ function execute_data(execute_status){
 
     });
 
+	filtered_category_selected = _.pluck(_.uniq(map_filtered_data, function(item,a) { return item['field_category']; }),'field_category');
+	
 	var map_filtered_data = _.map(map_group_data, function(num){
-    return { State: _.uniq(num, function(item,a) { return item['map_state_names']; })[0].map_state_names,state_code :_.uniq(num, function(item,a) { return item['state_code']; })[0].state_code,  field_category: 'Selected Categories',  points: d3.sum(num, function(d) { return d.points; }) , avg_points: d3.mean(num, function(d) { return d.points; }), overall_points: d3.sum(num, function(d) { return d.overall_points; }) };
+    return { State: _.uniq(num, function(item,a) { return item['map_state_names']; })[0].map_state_names,state_code :_.uniq(num, function(item,a) { return item['state_code']; })[0].state_code,  field_category: filtered_category_selected.length==1? filtered_category_selected[0].slice(0, filtered_category_selected[0].length-8) : 'Selected Categories',  points: d3.sum(num, function(d) { return d.points; }) , avg_points: d3.mean(num, function(d) { return d.points; }), overall_points: d3.sum(num, function(d) { return d.overall_points; }) };
      });
 	 
 	   
@@ -4060,25 +4062,54 @@ function execute_data(execute_status){
 	  
  d3.selectAll("path").each( function(d, i){
     
-	//console.log('State : '+head_State[d3.select(this).attr("id")] +'<br/> Rating : '+((head_average[d3.select(this).attr("id")]*100)).toFixed(1)+'% <br/> Points : '+(head_points[d3.select(this).attr("id")]).toFixed(1)+'<br/> Category : '+head_Category[d3.select(this).attr("id")]);
-	
 	if (head_State[d3.select(this).attr("id")]!=undefined){
+	
     d3.select(this).style("fill", colors(head_points[d3.select(this).attr("id")]) )
     d3.select(this).style("stroke","#ddd")
     d3.select(this).style("stroke-width", 1)
     d3.select(this).attr("class", d3.select(this).attr("id"))    
-    d3.select(this).attr("data-toggle", "tooltip")
-	d3.select(this).attr("data-title",'State : '+head_State[d3.select(this).attr("id")] +'<br/> Rating : '+((head_average[d3.select(this).attr("id")]*100)).toFixed(1)+'% <br/> Points : '+(head_points[d3.select(this).attr("id")]).toFixed(1)+'<br/> Category : '+head_Category[d3.select(this).attr("id")] )
+    //d3.select(this).attr("data-toggle", "tooltip")
+	//d3.select(this).attr("data-title",'State : '+head_State[d3.select(this).attr("id")] +'<br/> Rating : '+((head_average[d3.select(this).attr("id")]*100)).toFixed(1)+'% <br/> Points : '+(head_points[d3.select(this).attr("id")]).toFixed(1)+'<br/> Category : '+head_Category[d3.select(this).attr("id")] )
 	d3.select(this).attr("state_link",function(d) { return head_State[d3.select(this).attr("id")] })
+    
+	
+	var hover_id = d3.select(this).attr("id")
+	
+	$('svg #'+d3.select(this).attr("id")).tipsy({ 
+        gravity: 'w', 
+        html: true, 
+        title: function() {
+          var d = this.__data__
+		  return 'State : '+head_State[hover_id] +'<br/> Rating : '+((head_average[hover_id]*100)).toFixed(1)+'% <br/> Points : '+(head_points[hover_id]).toFixed(2)+'<br/> Category : '+head_Category[hover_id] 
+        }
+      });
+	  
+	//$("#"+d3.select(this).attr("id")).tooltip({container: 'body', html: true, placement:'top' });
+	
 	}else{
+	
 	d3.select(this).style("fill", "#fff")
     d3.select(this).style("stroke","#ddd")
     d3.select(this).style("stroke-width", 1)
-	d3.select(this).attr("data-toggle", "tooltip")    
-	d3.select(this).attr("data-title","")
+	//d3.select(this).attr("data-toggle", "tooltip")    
+	//d3.select(this).attr("data-title",d3.select(this).attr("state_value"))
     d3.select(this).attr("state_link",function(d) { return head_State[d3.select(this).attr("id")] })
+	
+	var hover_id = d3.select(this).attr("state_value")
+	
 
+	$('svg #'+d3.select(this).attr("id")).tipsy({ 
+        gravity: 'w', 
+        html: true, 
+        title: function() {
+          var d = this.__data__
+		  return 'State : '+hover_id  
+        }
+      });
+	  
 	}
+	
+    //$("#"+d3.select(this).attr("id")).tooltip({container: 'body', html: true, placement:'top'});
 	
     });
 
@@ -4114,7 +4145,7 @@ var lastsearch = '';
     });
 
  
-    $("path").tooltip({container: '#svg_maps', html: true, placement:'top'});
+   // $("path").tooltip({container: 'body', html: true, placement:'top', trigger: 'hover'});
     
 }
 
