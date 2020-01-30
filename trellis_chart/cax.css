@@ -1,0 +1,71 @@
+body {
+  font: 20px 'Open Sans', sans-serif;
+  shape-rendering: crispEdges;
+}
+.day {
+  stroke: #666;
+}
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.axis path,
+.axis line {
+fill: none;
+stroke: #000;
+shape-rendering: crispEdges;
+}
+
+.footer_details {
+    position: relative;
+    min-height: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #6b6b6b;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+    .sub_header {
+        background-color: #ff9835;
+        padding: 8px 6px;
+        margin: 5px 0 20px 0; 
+        color: white;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+    }
+    rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;   
+      }
+
+      text.mono {
+        font-size: 9pt;
+        font-family: Consolas, courier;
+        fill: #aaa;
+      }
+
+      text.axis-workweek {
+        fill: #000;
+      }
+
+      text.axis-worktime {
+        fill: #000;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
