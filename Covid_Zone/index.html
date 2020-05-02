@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     12-30-2019
+ Modified:    12-30-2019
+ Copyright:  (c) sushanth 2019
+ Licence:     protected(not suppose to se it directly)
+-------------------------------------------------------------->
+<html>
+ <head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/feature.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/custom-styles.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.covid19india.org/favicon-32x32.png"/>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/d3.v4.min.js"></script>
+    <script type="text/javascript" src="js/topojson.min.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js"></script>
+  
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+  <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sushanth">
+<meta property="og:image" content="http://data-analytics.github.io/images/covid_zone.png" />
+<meta property="og:title"  content="COVID -19 India District Wise Zone Analysis" />
+<meta property="og:url"   content="http://data-analytics.github.io/Covid_Zone" />
+<meta property="og:description" content="Centre issues state-wise division of Covid-19 red, orange &amp; green zones.This classification of districts is to be followed by states and Union Territories for a week post May 3 for containment operations. Metropolitan cities like Mumbai, Delhi, Kolkata, Hyderabad, Pune, Bengaluru and Ahmedabad have been designated as red zones in the new classification. " /> 
+<meta name="news_keywords" content="covid zones in india,Red zone,covid-19,coronavirus,green zone,Orange Zone,Union health ministry" itemprop="keywords"/>
+<meta name="description" content="Centre issues state-wise division of Covid-19 red, orange &amp; green zones.This classification of districts is to be followed by states and Union Territories for a week post May 3 for containment operations. Metropolitan cities like Mumbai, Delhi, Kolkata, Hyderabad, Pune, Bengaluru and Ahmedabad have been designated as red zones in the new classification." itemprop="url"/>
+<meta name="keywords" content="covid zones in india,Red zone,covid-19,coronavirus,green zone,Orange Zone,Union health ministry" >
+<meta property="taboola:title" content="COVID -19 India District Wise Zone Analysis"/>
+<meta itemprop="image" content="http://data-analytics.github.io/images/covid_zone.png">
+<style>
+body{
+    background-color: #f1f1f1;
+}
+.state-legend {
+    margin-bottom: 20px;
+}
+rect.state-legend {
+    stroke: rgba(0,0,0,.2);
+}
+rect{
+    cursor: pointer;
+    pointer-events: All;
+}
+text {
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.dataTables_length{
+    display:none
+}
+
+.footer_details {
+    position: relative;
+    min-height: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #6b6b6b;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+
+          body {
+            margin: 0;
+            font-family: "Helvetica Neue", sans-serif;
+          }
+
+          .subunit {
+            stroke: #333;
+            stroke-width: 1px;
+          }
+
+          .subunit-boundary {
+            fill: none;
+            stroke: #3a403d;
+          }
+</style>
+    <title>COVID -19 India District Wise Zone Analysis</title>
+    
+  </head>
+  <body>
+<div class="container">
+	<div class="col-md-12 header-logo">
+		<p class="heading-part " style="text-align: -webkit-center"><a class="fa fa-home fa-2" id="home" href="/./"></a>COVID -19 India District Wise Zone Analysis</p>
+		<p style="text-align: -webkit-center">Centre issues state-wise division of Covid-19 red, orange &amp; green zones.</p>
+		<p style="text-align: -webkit-center">This classification of districts is to be followed by states and Union Territories for a week post May 3 for containment operations. Metropolitan cities like Mumbai, Delhi, Kolkata,Chennai, Hyderabad, Pune, Bengaluru and Ahmedabad have been designated as red zones in the new classification.</p>
+	</div>
+</div>
+
+    <div class="container-fluid detail_percent_display">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 panel panel-default">
+
+                    <div class="row">
+                        <div class=" col-md-12 panel-body">
+                            <div class="chart">
+                                <div class="col-md-12 panel-body">
+                                    <p class="form-inline header_form">
+                                        <label value="state">State : </label>
+                                        <select id="state" class="select_state"></select>
+                                        <input type="button" value="submit" class="party_filter btn btn-default" onclick=render();></input> 
+                                    </p>
+									<div class="col-md-8">
+										<div class="cartogram"></div>
+									</div>
+									<div class="col-md-4">
+										<div class="tabular_view"></div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script>
+ var width = window.innerWidth, 
+ 
+ height = window.innerHeight*1.5;
+
+d3.csv("state_mapper.csv", function(state_mapper) { 
+
+state_mapper = state_mapper.sort(function(a, b){ return d3.ascending(a.Display_name, b.Display_name); })
+
+var select_box = d3.select('#state')     
+		.selectAll("option")
+			.data(state_mapper) 
+			.enter().append("option")
+			.attr("value", function (d) { return d.File_name })
+			.attr("class","name")
+			.attr("selected","selected")
+			.text(function (d) { return d.Display_name });
+});
+					
+					
+ function render() {
+      
+      if ($('#state').val()==null){
+	  
+		   selected_state  ='westbengal'
+	  }else{
+	       selected_state = $('#state').val()
+	  }
+
+      var projection = d3.geoMercator();
+
+      var path = d3.geoPath()
+          .projection(projection)
+          .pointRadius(2);
+ 
+      d3.select('.cartogram').select('svg').remove();
+       
+      var svg = d3.select(".cartogram").append("svg")
+               .style("width", "100%")
+               .attr("data-height","0.54")
+               .attr("viewBox","0 0 "+width+" "+height);
+        
+        svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all');
+//            .on("click", clicked);
+    
+      var g = svg.append("g");
+      d3.csv('combined_data.csv',function(performance_data){
+
+      d3.json(selected_state+".json", function(error, data) {
+
+      if (error) throw error;
+	  
+      var states_names = d3.nest()
+        .key(function(d) { return  d.properties.sn; })
+        .entries(data.objects[selected_state+'_district'].geometries);
+
+        var boundary = centerZoom(data,$('#state').val());
+        drawSubUnits(data,$('#state').val());
+
+      });
+       
+	   var centered;
+ 
+      // return only the distinct / unique nodes
+      // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
+      // It also returns the boundary itself in case you want to draw it to the map
+      function centerZoom(data,state){
+
+        var o = topojson.mesh(data, data.objects[selected_state+'_district'], function(a, b) { return a === b; });
+
+        projection
+            .scale(1)
+            .translate([0, 0]);
+
+        var b = path.bounds(o),
+            s = 1 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+            t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+        projection
+            .scale(s)
+            .translate(t);
+        return o;
+
+      }
+
+      function addThousandsSeparator(t){
+          var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}
+           return a
+      }
+    
+      function drawOuterBoundary(data, boundary){
+        g.append("path")
+            .datum(boundary)
+            .attr("d", path)
+            .attr("class", "subunit-boundary");
+      }
+
+function clicked(d) {
+      
+          var x, y, k;
+          if (d && centered !== d) {
+            var centroid = path.centroid(d);
+            x = centroid[0];
+            y = centroid[1];
+            k = 4;
+            centered = d;
+          } else {
+            x = width / 2;
+            y = height / 2;
+            k = 1;
+            centered = null;
+          }
+
+          g.selectAll("path")
+              .classed("active", centered && function(d) { return d === centered; });
+
+          g.transition()
+              .duration(750)
+              .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
+              .style("stroke-width", 1.5 / k + "px");
+
+}
+
+function drawSubUnits(data,state){
+
+        sub_performance_data = performance_data         
+        mapper_data_view = topojson.feature(data, data.objects[state+'_district']).features
+    	
+        state_color = 'blue' 
+        mapper_data_view.forEach(function(o) {
+            sub_performance_data.forEach(function(p){
+              if (o.properties.district == p.district){
+                o.result = p['Zone'].split(' ')[0]
+                o.color = o.result=='Red' ? '#fb8072' : (o.result=='Green'? '#b3de69' : '#fdb462')
+              }
+            });
+          });
+
+    g.selectAll(".subunit")
+          .data(mapper_data_view)
+          .enter().append("path")
+            .attr("class", "subunit")
+           .attr("fill", function (d,i){ return d.result!=undefined? d.color : "#fff" })
+            .attr("stroke","#222")
+            .attr("data-title", function (d){ return d.result!=undefined? 'State : '+d.properties.st_nm+'<br/>District : '+ d.properties.district+'<br/> Zone : '+d.result : ''})  
+            .attr("d", path)
+            .on("click", clicked);
+
+    g.selectAll(".geom-label")
+      .data(mapper_data_view)
+    .enter().append("text")
+      .attr("class", "geom-label")
+      .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .attr("data-title", function (d){ return d.result!=undefined? 'State : '+d.properties.st_nm+'<br/>District : '+ d.properties.district+'<br/> Zone : '+d.result : ''})  
+      .attr("text-anchor", "middle")
+      .style("text-transform", "uppercase")
+      .text(function(d) { return d.properties.district })
+      .attr("fill", function(d) { return d.result!=undefined? ((parseInt(d.color.replace('#', ''), 16) > 0xffffff / 2) ? '#fff' : '#000') : '#000'  })
+	  .style("font-size", function(d) { return Math.min(15, path.measure(d) / this.getComputedTextLength()) + "px"; });
+ 
+      $("text").tooltip({container: 'body', html: true, placement:'top'});
+      $("path").tooltip({container: 'body', html: true, placement:'top'});
+
+var tabulate = function (data,columns) {
+
+  $('#myTable').DataTable().destroy();
+  
+  d3.selectAll('table').remove();
+            
+  var table = d3.select('.tabular_view').append('table')
+          .attr("id","myTable")
+          .attr("class","table table-bordered");
+    var thead = table.append('thead')
+   .attr("class","data_head");
+    var tbody = table.append('tbody')
+
+    thead.append('tr')
+      .selectAll('th')
+        .data(columns)
+        .enter()
+      .append('th')
+        .attr("class","dynatable-head")
+        .text(function (d) { return d.replace("descriptionandorserviceprovided","Service Provided Details").replace('nameoftheorganisation','Organisation').replace('_',' ') })
+
+    var rows = tbody.selectAll('tr')
+        .data(data)
+        .enter()
+      .append('tr')
+      .attr("state_link",function (d) { return  d.color }); 
+    
+    var cells = rows.selectAll('td')
+        .data(function(row) { 
+            return columns.map(function (column) {
+                return { column: column, value: row[column] ,url : row['color']}
+          })
+      })
+      .enter()
+    .append('td')
+       .attr('bgcolor', function (d,i) { return i==2? d.url: '' })
+	  .style('color', function (d,i) { return i==2? ((parseInt((d.url).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff'): '#000' })
+	   .attr('data-title', function (d,i) { return i==2? d.value+' Zone' : ''  })
+	   .text(function (d,i) { return d.value });
+	  
+
+      $("td").tooltip({container: 'body', html: true, placement:'top'});
+   
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%","pageLength": 10,"order": [[ 2, "asc" ]]});
+  
+  return table;
+
+}
+
+tabular_data= [];
+mapper_data_view.forEach(function(d){
+ console.log(d);
+ tabular_sub = {}
+ tabular_sub['Zone'] = d.result
+ tabular_sub['color'] = d.color
+ tabular_sub['State'] = d.properties.st_nm
+ tabular_sub['District'] = d.properties.district 
+ tabular_data.push(tabular_sub)
+})
+	   
+console.log(tabular_data);	   
+    sub_columns = ["State","District","Zone"]
+
+	tabulate(tabular_data,sub_columns);
+
+
+       } 
+ });
+}
+render();
+
+    </script>
+	<div class="container footer_details">
+The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth </a>using data from <a target="_blank" href="https://www.mohfw.gov.in/#">mohfw.gov.in </a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth</a>.</div>
+</div>
+
+  </body>
+</html>

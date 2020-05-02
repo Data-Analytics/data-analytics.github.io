@@ -1,0 +1,3 @@
+import glob as glob
+
+data['objects']['westbengal_district']['geometries']
