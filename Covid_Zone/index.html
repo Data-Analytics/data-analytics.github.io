@@ -138,7 +138,7 @@ text {
    <script>
  var width = window.innerWidth, 
  
- height = width*.7;
+ height = width*.7<550? 550 : width*.7 ;
 
 d3.csv("state_mapper.csv", function(state_mapper) { 
 
@@ -362,7 +362,7 @@ mapper_data_view.forEach(function(d){
  tabular_sub['State'] = d.properties.st_nm
  tabular_sub['District'] = d.properties.district 
  tabular_data.push(tabular_sub)
- 
+
 })
 	   
     sub_columns = ["State","District","Zone"]
