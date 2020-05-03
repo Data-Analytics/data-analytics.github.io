@@ -119,8 +119,7 @@ text {
                                 <div class="col-md-12 panel-body">
                                     <p class="form-inline header_form">
                                         <label value="state">State : </label>
-                                        <select id="state" class="select_state"></select>
-                                        <input type="button" value="submit" class="party_filter btn btn-default" onclick=render();></input> 
+                                        <select id="state" class="select_state" onchange=render();></select>
                                     </p>
 									<div class="col-md-8">
 										<div class="cartogram"></div>
@@ -139,7 +138,7 @@ text {
    <script>
  var width = window.innerWidth, 
  
- height = window.innerHeight*1.5;
+ height = width*.7;
 
 d3.csv("state_mapper.csv", function(state_mapper) { 
 
@@ -356,16 +355,16 @@ var tabulate = function (data,columns) {
 
 tabular_data= [];
 mapper_data_view.forEach(function(d){
- console.log(d);
+
  tabular_sub = {}
  tabular_sub['Zone'] = d.result
  tabular_sub['color'] = d.color
  tabular_sub['State'] = d.properties.st_nm
  tabular_sub['District'] = d.properties.district 
  tabular_data.push(tabular_sub)
+ 
 })
 	   
-console.log(tabular_data);	   
     sub_columns = ["State","District","Zone"]
 
 	tabulate(tabular_data,sub_columns);
