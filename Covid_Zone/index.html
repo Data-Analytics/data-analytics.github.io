@@ -135,6 +135,29 @@ text {
             </div>
         </div>
     </div>
+	
+	
+	<div class="container-fluid detail_percent_display">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 panel panel-default">
+
+                    <div class="row">
+                        <div class=" col-md-12 panel-body">
+                            <div class="chart">
+                                <div class="col-md-12 panel-body">
+                                    <div class="col-md-12">
+										<div class="detail_tables"></div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
    <script>
  var width = window.innerWidth, 
  
@@ -308,7 +331,7 @@ var tabulate = function (data,columns) {
 
   $('#myTable').DataTable().destroy();
   
-  d3.selectAll('table').remove();
+  d3.selectAll('#myTable').remove();
             
   var table = d3.select('.tabular_view').append('table')
           .attr("id","myTable")
@@ -323,7 +346,7 @@ var tabulate = function (data,columns) {
         .enter()
       .append('th')
         .attr("class","dynatable-head")
-        .text(function (d) { return d.replace("descriptionandorserviceprovided","Service Provided Details").replace('nameoftheorganisation','Organisation').replace('_',' ') })
+        .text(function (d) { return d.replace('_',' ') })
 
     var rows = tbody.selectAll('tr')
         .data(data)
@@ -374,6 +397,67 @@ mapper_data_view.forEach(function(d){
  });
 }
 render();
+
+
+
+var detail_tabulate = function (data,columns) {
+
+  $('#detailTable').DataTable().destroy();
+  
+  d3.selectAll('#detailTable').remove();
+            
+  var table = d3.select('.detail_tables').append('table')
+          .attr("id","detailTable")
+          .attr("class","table table-bordered");
+    var thead = table.append('thead')
+   .attr("class","data_head");
+    var tbody = table.append('tbody')
+
+    thead.append('tr')
+      .selectAll('th')
+        .data(columns)
+        .enter()
+      .append('th')
+        .attr("class","dynatable-head")
+        .text(function (d) { return d })
+
+    var rows = tbody.selectAll('tr')
+        .data(data)
+        .enter()
+      .append('tr')
+      .attr("state_link",function (d) { return  d.color }); 
+    
+    var cells = rows.selectAll('td')
+        .data(function(row) { 
+            return columns.map(function (column) {
+                return { column: column, value: row[column] }
+          })
+      })
+      .enter()
+    .append('td')
+       .attr('bgcolor', function (d,i) { return i>0? (i==2? '#fb8072': (i==3? '#fdb462' : (i==4? '#b3de69' : '#969696'))) : '' })
+	  .style('color', function (d,i) { return d.value=='Allowed'? d3.rgb('#b3de69').darker(2) : ( d.value=='Not allowed'? d3.rgb('#fb8072').darker(2) : '#000' )})
+	  .style('font-size', function (d,i) { return d.value=='Allowed'? '20px': ( d.value=='Not allowed'? '20px' : '#000' )})
+	  
+	  // .attr('data-title', function (d,i) { return i==2? d.value+' Zone' : ''  })
+	   .text(function (d,i) { return d.value });
+	  
+   //o.color = o.result=='Red' ? '#fb8072' : (o.result=='Green'? '#b3de69' : '#fdb462')
+             
+			 
+      $("td").tooltip({container: 'body', html: true, placement:'top'});
+   
+    $('#detailTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "250%","pageLength": 10,"order": [[ 0, "asc" ]]});
+  
+  return table;
+
+}
+
+d3.csv("data.csv", function(data_detail) { 
+
+	detail_tabulate(data_detail,['Activity','Containment zone','Red Zone','Orange Zone','Green Zone']);
+	
+});
 
     </script>
 	<div class="container footer_details">
