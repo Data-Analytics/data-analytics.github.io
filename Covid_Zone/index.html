@@ -80,7 +80,11 @@ text {
     padding-bottom: 15px;
 }
 
-
+.filer_labels{
+width: 100px;
+text-align:right;
+padding:5px;
+}
           body {
             margin: 0;
             font-family: "Helvetica Neue", sans-serif;
@@ -101,11 +105,11 @@ text {
   </head>
   <body>
 <div class="container">
-	<div class="col-md-12 header-logo">
-		<p class="heading-part " style="text-align: -webkit-center"><a class="fa fa-home fa-2" id="home" href="/./"></a>COVID -19 India District Wise Zone Analysis</p>
-		<p style="text-align: -webkit-center">Centre issues state-wise division of Covid-19 red, orange &amp; green zones.</p>
-		<p style="text-align: -webkit-center">This classification of districts is to be followed by states and Union Territories for a week post May 3 for containment operations. Metropolitan cities like Mumbai, Delhi, Kolkata,Chennai, Hyderabad, Pune, Bengaluru and Ahmedabad have been designated as red zones in the new classification.</p>
-	</div>
+    <div class="col-md-12 header-logo">
+        <p class="heading-part " style="text-align: -webkit-center"><a class="fa fa-home fa-2" id="home" href="/./"></a>COVID -19 India District Wise Zone Analysis</p>
+        <p style="text-align: -webkit-center">Centre issues state-wise division of Covid-19 red, orange &amp; green zones.</p>
+        <p style="text-align: -webkit-center">This classification of districts is to be followed by states and Union Territories for a week post May 3 till May 18 for containment operations. Metropolitan cities like Mumbai, Delhi, Kolkata,Chennai, Hyderabad, Pune, Bengaluru and Ahmedabad have been designated as red zones in the new classification.</p>
+    </div>
 </div>
 
     <div class="container-fluid detail_percent_display">
@@ -118,15 +122,17 @@ text {
                             <div class="chart">
                                 <div class="col-md-12 panel-body">
                                     <p class="form-inline header_form">
-                                        <label value="state">State : </label>
+                                        <label class="filer_labels" value="state">State : </label>
                                         <select id="state" class="select_state" onchange=render();></select>
+                                        <label class="filer_labels" value="lang">Language : </label>
+                                        <select id="lang" class="select_lan" onchange=render();></select>
                                     </p>
-									<div class="col-md-8">
-										<div class="cartogram"></div>
-									</div>
-									<div class="col-md-4">
-										<div class="tabular_view"></div>
-									</div>
+                                    <div class="col-md-8">
+                                        <div class="cartogram"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="tabular_view"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -135,9 +141,9 @@ text {
             </div>
         </div>
     </div>
-	
-	
-	<div class="container-fluid detail_percent_display">
+    
+    
+    <div class="container-fluid detail_percent_display">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 panel panel-default">
@@ -145,11 +151,7 @@ text {
                     <div class="row">
                         <div class=" col-md-12 panel-body">
                             <div class="chart">
-                                <div class="col-md-12 panel-body">
-                                    <div class="col-md-12">
-										<div class="detail_tables"></div>
-									</div>
-                                </div>
+                                       <div class="detail_tables"></div>
                             </div>
                         </div>
                     </div>
@@ -157,36 +159,55 @@ text {
             </div>
         </div>
     </div>
-	
+    
    <script>
- var width = window.innerWidth, 
+var width = window.innerWidth, 
  
- height = width*.7<550? 550 : width*.7 ;
+height = width*.7<550? 550 : width*.7 ;
 
 d3.csv("state_mapper.csv", function(state_mapper) { 
 
 state_mapper = state_mapper.sort(function(a, b){ return d3.ascending(a.Display_name, b.Display_name); })
 
 var select_box = d3.select('#state')     
-		.selectAll("option")
-			.data(state_mapper) 
-			.enter().append("option")
-			.attr("value", function (d) { return d.File_name })
-			.attr("class","name")
-			.attr("selected","selected")
-			.text(function (d) { return d.Display_name });
+        .selectAll("option")
+            .data(state_mapper) 
+            .enter().append("option")
+            .attr("value", function (d) { return d.File_name })
+            .attr("class","name")
+            .attr("selected","selected")
+            .text(function (d) { return d.Display_name });
 });
-					
-					
+
+d3.csv("lan.csv", function(lang_mapper) { 
+
+//lang_mapper = lang.sort(function(a, b){ return d3.ascending(a.Language, b.Language); })
+
+var select_box = d3.select('#lang')     
+        .selectAll("option")
+            .data(lang_mapper) 
+            .enter().append("option")
+            .attr("value", function (d) { return d.File })
+            .attr("class","name")
+            .text(function (d) { return d.Language });
+});
+                    
  function render() {
       
       if ($('#state').val()==null){
-	  
-		   selected_state  ='westbengal'
-	  }else{
-	       selected_state = $('#state').val()
-	  }
+      
+           selected_state  ='westbengal'
+      }else{
+           selected_state = $('#state').val()
+      }
 
+      if ($('#lang').val()==null){
+      
+           selected_lang  ='en.json'
+      }else{
+           selected_lang = $('#lang').val()
+      }
+      
       var projection = d3.geoMercator();
 
       var path = d3.geoPath()
@@ -194,7 +215,9 @@ var select_box = d3.select('#state')
           .pointRadius(2);
  
       d3.select('.cartogram').select('svg').remove();
-       
+
+      d3.selectAll('.tooltip').remove();
+
       var svg = d3.select(".cartogram").append("svg")
                .style("width", "100%")
                .attr("data-height","0.54")
@@ -206,15 +229,16 @@ var select_box = d3.select('#state')
             .attr("height", height)
             .attr("fill",'none')
             .attr("pointer-events",'all');
-//            .on("click", clicked);
     
       var g = svg.append("g");
       d3.csv('combined_data.csv',function(performance_data){
 
+      d3.json('locals/'+selected_lang, function(error_sub, l_data) {
+      
       d3.json(selected_state+".json", function(error, data) {
 
       if (error) throw error;
-	  
+      
       var states_names = d3.nest()
         .key(function(d) { return  d.properties.sn; })
         .entries(data.objects[selected_state+'_district'].geometries);
@@ -224,7 +248,7 @@ var select_box = d3.select('#state')
 
       });
        
-	   var centered;
+       var centered;
  
       // return only the distinct / unique nodes
       // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
@@ -290,7 +314,7 @@ function drawSubUnits(data,state){
 
         sub_performance_data = performance_data         
         mapper_data_view = topojson.feature(data, data.objects[state+'_district']).features
-    	
+        
         state_color = 'blue' 
         mapper_data_view.forEach(function(o) {
             sub_performance_data.forEach(function(p){
@@ -310,7 +334,7 @@ function drawSubUnits(data,state){
             .attr("data-title", function (d){ return d.result!=undefined? 'State : '+d.properties.st_nm+'<br/>District : '+ d.properties.district+'<br/> Zone : '+d.result : ''})  
             .attr("d", path)
             .on("click", clicked);
-
+    
     g.selectAll(".geom-label")
       .data(mapper_data_view)
     .enter().append("text")
@@ -320,9 +344,9 @@ function drawSubUnits(data,state){
       .attr("data-title", function (d){ return d.result!=undefined? 'State : '+d.properties.st_nm+'<br/>District : '+ d.properties.district+'<br/> Zone : '+d.result : ''})  
       .attr("text-anchor", "middle")
       .style("text-transform", "uppercase")
-      .text(function(d) { return d.properties.district })
+      .text(function(d) { return selected_lang=='en.json' ? d.properties.district : (l_data.state[d.properties.st_nm]==undefined? d.properties.district :(l_data.state[d.properties.st_nm][d.properties.district]==undefined? d.properties.district : l_data.state[d.properties.st_nm][d.properties.district]) ) })
       .attr("fill", function(d) { return d.result!=undefined? ((parseInt(d.color.replace('#', ''), 16) > 0xffffff / 2) ? '#fff' : '#000') : '#000'  })
-	  .style("font-size", function(d) { return Math.min(15, path.measure(d) / this.getComputedTextLength()) + "px"; });
+      .style("font-size", function(d) { return Math.min(15, path.measure(d) / this.getComputedTextLength()) + "px"; });
  
       $("text").tooltip({container: 'body', html: true, placement:'top'});
       $("path").tooltip({container: 'body', html: true, placement:'top'});
@@ -357,16 +381,18 @@ var tabulate = function (data,columns) {
     var cells = rows.selectAll('td')
         .data(function(row) { 
             return columns.map(function (column) {
-                return { column: column, value: row[column] ,url : row['color']}
+                return { column: column, value: row[column] ,url : row['color'] ,states : row['State'] }
           })
       })
       .enter()
     .append('td')
        .attr('bgcolor', function (d,i) { return i==2? d.url: '' })
-	  .style('color', function (d,i) { return i==2? ((parseInt((d.url).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff'): '#000' })
-	   .attr('data-title', function (d,i) { return i==2? d.value+' Zone' : ''  })
-	   .text(function (d,i) { return d.value });
-	  
+       .attr('color', function (d,i) { return i==2? d3.rgb(d.url).darker(2): '' })
+      
+      //.style('color', function (d,i) { return i==2? ((parseInt((d.url).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff'): '#000' })
+       .attr('data-title', function (d,i) { return i==2? d.value+' Zone' : ''  })
+       .text(function (d,i) { return selected_lang=='en.json' ?  d.value : (i==0? (l_data.state[d.value]!=undefined?  l_data.state[d.value].title : d.value) : (i==1?  (l_data.state[d.states][d.value]!=undefined?  l_data.state[d.states][d.value] : d.value) : d.value ) )  });
+      
 
       $("td").tooltip({container: 'body', html: true, placement:'top'});
    
@@ -387,14 +413,17 @@ mapper_data_view.forEach(function(d){
  tabular_data.push(tabular_sub)
 
 })
-	   
+       
     sub_columns = ["State","District","Zone"]
 
-	tabulate(tabular_data,sub_columns);
+    tabulate(tabular_data,sub_columns);
 
 
        } 
  });
+ 
+ });
+ 
 }
 render();
 
@@ -436,15 +465,14 @@ var detail_tabulate = function (data,columns) {
       .enter()
     .append('td')
        .attr('bgcolor', function (d,i) { return i>0? (i==2? '#fb8072': (i==3? '#fdb462' : (i==4? '#b3de69' : '#969696'))) : '' })
-	  .style('color', function (d,i) { return d.value=='Allowed'? d3.rgb('#b3de69').darker(2) : ( d.value=='Not allowed'? d3.rgb('#fb8072').darker(2) : '#000' )})
-	  .style('font-size', function (d,i) { return d.value=='Allowed'? '20px': ( d.value=='Not allowed'? '20px' : '#000' )})
-	  
-	  // .attr('data-title', function (d,i) { return i==2? d.value+' Zone' : ''  })
-	   .text(function (d,i) { return d.value });
-	  
-   //o.color = o.result=='Red' ? '#fb8072' : (o.result=='Green'? '#b3de69' : '#fdb462')
+      .style('color', function (d,i) { return d.value=='Allowed'? d3.rgb('#b3de69').darker(2) : ( d.value=='Not allowed'? d3.rgb('#fb8072').darker(2) : '#000' )})
+      .style('font-size', function (d,i) { return d.value=='Allowed'? '12px': ( d.value=='Not allowed'? '12px' : '#000' )})
+      
+      // .attr('data-title', function (d,i) { return i==2? d.value+' Zone' : ''  })
+       .text(function (d,i) { return d.value });
+      
              
-			 
+             
       $("td").tooltip({container: 'body', html: true, placement:'top'});
    
     $('#detailTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "250%","pageLength": 10,"order": [[ 0, "asc" ]]});
@@ -455,12 +483,12 @@ var detail_tabulate = function (data,columns) {
 
 d3.csv("data.csv", function(data_detail) { 
 
-	detail_tabulate(data_detail,['Activity','Containment zone','Red Zone','Orange Zone','Green Zone']);
-	
+    detail_tabulate(data_detail,['Activity','Containment zone','Red Zone','Orange Zone','Green Zone']);
+    
 });
 
     </script>
-	<div class="container footer_details">
+    <div class="container footer_details">
 The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth </a>using data from <a target="_blank" href="https://www.mohfw.gov.in/#">mohfw.gov.in </a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth</a>.</div>
 </div>
 
