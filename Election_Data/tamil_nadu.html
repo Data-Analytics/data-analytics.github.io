@@ -1298,7 +1298,7 @@ function data_scatter(type_votes){
     
     //Width and height
     var width_data = 1050;
-    var height_data = 400;
+    var height_data = 450;
     var padding = 50;
       
     // Define axis ranges & scales  
@@ -1309,7 +1309,7 @@ function data_scatter(type_votes){
            .domain([xExtents[0], xExtents[1]])
            .range([padding, width_data - padding * .5]);
 
-    var yScale = d3.scale.linear()
+    var yScale = d3.scale.sqrt()//.log().base(1)//.pow().exponent(.35)
            .domain([0, yExtents[1]])
            .range([height_data - padding, padding]);
 
