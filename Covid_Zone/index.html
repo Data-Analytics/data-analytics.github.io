@@ -17,10 +17,10 @@
   
   <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/feature.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/custom-styles.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="http://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
   <link rel="icon" type="image/png" sizes="32x32" href="https://www.covid19india.org/favicon-32x32.png"/>
   <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -30,21 +30,21 @@
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js"></script>
   
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
-  <script type="text/javascript" src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Sushanth">
-<meta property="og:image" content="http://data-analytics.github.io/images/covid_zone.png" />
+<meta property="og:image" content="https://data-analytics.github.io/images/covid_zone.png" />
 <meta property="og:title"  content="COVID -19 India District Wise Zone Analysis" />
-<meta property="og:url"   content="http://data-analytics.github.io/Covid_Zone" />
+<meta property="og:url"   content="https://data-analytics.github.io/Covid_Zone" />
 <meta property="og:description" content="Centre issues state-wise division of Covid-19 red, orange &amp; green zones.This classification of districts is to be followed by states and Union Territories for a week post May 3 for containment operations. Metropolitan cities like Mumbai, Delhi, Kolkata, Hyderabad, Pune, Bengaluru and Ahmedabad have been designated as red zones in the new classification. " /> 
 <meta name="news_keywords" content="covid zones in india,Red zone,covid-19,coronavirus,green zone,Orange Zone,Union health ministry" itemprop="keywords"/>
 <meta name="description" content="Centre issues state-wise division of Covid-19 red, orange &amp; green zones.This classification of districts is to be followed by states and Union Territories for a week post May 3 for containment operations. Metropolitan cities like Mumbai, Delhi, Kolkata, Hyderabad, Pune, Bengaluru and Ahmedabad have been designated as red zones in the new classification." itemprop="url"/>
 <meta name="keywords" content="covid zones in india,Red zone,covid-19,coronavirus,green zone,Orange Zone,Union health ministry" >
 <meta property="taboola:title" content="COVID -19 India District Wise Zone Analysis"/>
-<meta itemprop="image" content="http://data-analytics.github.io/images/covid_zone.png">
+<meta itemprop="image" content="https://data-analytics.github.io/images/covid_zone.png">
 <style>
 body{
     background-color: #f1f1f1;
@@ -167,7 +167,7 @@ d3.csv("state_mapper.csv", function(state_mapper) {
 
 state_mapper = state_mapper.sort(function(a, b){ return d3.ascending(a.Display_name, b.Display_name); })
 
-var select_box = d3.select('#state')     
+var select_box = d3.select('#state')
         .selectAll("option")
             .data(state_mapper) 
             .enter().append("option")
@@ -177,19 +177,7 @@ var select_box = d3.select('#state')
             .text(function (d) { return d.Display_name });
 });
 
-d3.csv("lan.csv", function(lang_mapper) { 
 
-//lang_mapper = lang.sort(function(a, b){ return d3.ascending(a.Language, b.Language); })
-
-var select_box = d3.select('#lang')     
-        .selectAll("option")
-            .data(lang_mapper) 
-            .enter().append("option")
-            .attr("value", function (d) { return d.File })
-            .attr("class","name")
-            .text(function (d) { return d.Language });
-});
-                    
  function render() {
       
       if ($('#state').val()==null){
@@ -199,12 +187,7 @@ var select_box = d3.select('#lang')
            selected_state = $('#state').val()
       }
 
-      if ($('#lang').val()==null){
-      
-           selected_lang  ='en.json'
-      }else{
-           selected_lang = $('#lang').val()
-      }
+
       
       var projection = d3.geoMercator();
 
@@ -231,8 +214,6 @@ var select_box = d3.select('#lang')
       var g = svg.append("g");
       d3.csv('combined_data.csv',function(performance_data){
 
-      d3.json('locals/'+selected_lang, function(error_sub, l_data) {
-      
       d3.json(selected_state+".json", function(error, data) {
 
       if (error) throw error;
@@ -342,7 +323,7 @@ function drawSubUnits(data,state){
       .attr("data-title", function (d){ return d.result!=undefined? 'State : '+d.properties.st_nm+'<br/>District : '+ d.properties.district+'<br/> Zone : '+d.result : ''})  
       .attr("text-anchor", "middle")
       .style("text-transform", "uppercase")
-      .text(function(d) { return selected_lang=='en.json' ? d.properties.district : (l_data.state[d.properties.st_nm]==undefined? d.properties.district :(l_data.state[d.properties.st_nm][d.properties.district]==undefined? d.properties.district : l_data.state[d.properties.st_nm][d.properties.district]) ) })
+      .text(function(d) { return  d.properties.district }) //selected_lang=='en.json' ? : (l_data.state[d.properties.st_nm]==undefined? d.properties.district :(l_data.state[d.properties.st_nm][d.properties.district]==undefined? d.properties.district : l_data.state[d.properties.st_nm][d.properties.district]) ) })
       .attr("fill", function(d) { return d.result!=undefined? ((parseInt(d.color.replace('#', ''), 16) > 0xffffff / 2) ? '#fff' : '#000') : '#000'  })
       .style("font-size", function(d) { return Math.min(15, path.measure(d) / this.getComputedTextLength()) + "px"; });
  
@@ -389,7 +370,7 @@ var tabulate = function (data,columns) {
       
       //.style('color', function (d,i) { return i==2? ((parseInt((d.url).replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff'): '#000' })
        .attr('data-title', function (d,i) { return i==2? d.value+' Zone' : ''  })
-       .text(function (d,i) { return selected_lang=='en.json' ?  d.value : (i==0? (l_data.state[d.value]!=undefined?  l_data.state[d.value].title : d.value) : (i==1?  (l_data.state[d.states][d.value]!=undefined?  l_data.state[d.states][d.value] : d.value) : d.value ) )  });
+       .text(function (d,i) { return   d.value }) //selected_lang=='en.json' ? : (i==0? (l_data.state[d.value]!=undefined?  l_data.state[d.value].title : d.value) : (i==1?  (l_data.state[d.states][d.value]!=undefined?  l_data.state[d.states][d.value] : d.value) : d.value ) )  });
       
 
       $("td").tooltip({container: 'body', html: true, placement:'top'});
@@ -418,7 +399,7 @@ mapper_data_view.forEach(function(d){
 
 
        } 
- });
+
  
  });
  
