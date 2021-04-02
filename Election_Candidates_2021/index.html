@@ -423,7 +423,7 @@ $('#detailTable').DataTable().destroy();
         .text(function(d,i) { return  d.value })
         .on('click',function (d,i) { return (i!=0)? load_data_detail(d.Constituency_Id,d.Alliance) : '' });
 
-    var tables =  $('#detailTable').DataTable({"scrollX": "100%","orderCellsTop": true,"pageLength": 10,"lengthChange": false,"order": [[ 1, "asc" ]] });
+    var tables =  $('#detailTable').DataTable({"scrollX": "100%","orderCellsTop": true,"pageLength": 10,"lengthChange": false,"order": [[ 0, "asc" ]] });
 
   $(".dataTables_scrollHeadInner").css({"width":"100%"});
   $(".table").css({"width":"100%"});
