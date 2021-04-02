@@ -1,0 +1,860 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
+  <meta name="description" content="Tamil Nadu Assembly Election Candidates List 2021 'A visual guide to the check out the Alliance/Party Wise Candidates across Constituencies in Tamil Nadu for Assembly Elections 2021.">
+  <meta name="news_keywords" content="Tamil Nadu polls, Tamil Nadu assembly polls, , Tamil Nadu elections, Tamil Nadu assembly elections, chennai news, Tamil Nadu news, india news">
+  <meta name="keywords" content="Tamil Nadu polls, Tamil Nadu assembly polls, , Tamil Nadu elections, Tamil Nadu assembly elections, chennai news, Tamil Nadu news, india news">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/feature.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/custom-styles.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/multiple-select.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.dataTables.min.css">
+  <link rel="shortcut icon" href="/./images/logo.png">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/d3.v4.min.js"></script>  <script type="text/javascript" src="js/sankey.js"></script>
+  <script type="text/javascript" src="js/topojson.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
+  <script type="text/javascript" src="js/jquery.multiple.select.js"></script>
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 2021 (Tamil Nadu)" />
+  <meta property="og:url"   content="https://data-analytics.github.io/Election_Candidates_2021" /> 
+  <meta property="og:description" content="Tamil Nadu Assembly Election Candidates List 2021 'A visual guide to the check out the Alliance/Party Wise Candidates across Constituencies in Tamil Nadu for Assembly Elections 2021. One line Comparison as well'" />
+  <html itemscope itemtype="https://schema.org/Blog">
+  <meta property="og:image" content="https://data-analytics.github.io/images/candidates.png" /> 
+  <meta itemprop="image" content="https://data-analytics.github.io/images/candidates.png">
+  <meta itemprop="description" content="Tamil Nadu Assembly Election Candidates List 2021 'A visual guide to the check out the Alliance/Party Wise Candidates across Constituencies in Tamil Nadu for Assembly Elections 2021. One line Comparison as well'">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 2021 (Tamil Nadu)">
+  <title>ASSEMBLY ELECTIONS 2021 (Tamil Nadu)</title>
+  <style>
+        body {
+        margin: 0;
+        font-family: "Helvetica Neue", sans-serif;
+      }
+
+      .subunit {
+        stroke: #333;
+        stroke-width: 1px;
+      }
+      .subunit-boundary {
+        fill: none;
+        stroke: #3a403d;
+      }
+
+      .place-label {
+        font-size: .7em;
+        text-shadow: 0px 0px 2px #fff;
+      }
+      .tick{
+      font-size:16px;
+      }
+      
+      
+    }
+
+table.dataTable tbody th,
+  table.dataTable tbody td {
+      white-space: nowrap;
+  }
+
+#mytable  {
+    width:100%;
+    overflow-x:scroll;
+}
+    
+
+  </style>
+  </head>
+  <body>
+
+    <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    
+                    <center><p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Tamil Nadu Assembly Election 2021 -- Candidates List</p></center>
+                    <p class="synopsis"><a class="fa fa-home fa-2" id="home" href="/./"></a>'A visual guide to the check out the Alliance/Party Wise Candidates across Constituencies in Tamil Nadu for Assembly Elections 2021.'</p>
+                    <p class="synopsis">This interactive map will bring Candidates List, from the Major Alliance/Party down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
+                    <p class="synopsis">It aims to make the Assembly elections candidates/party in Tamil Nadu  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="overall_view">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2>Assembly Election Party Wise Seat Share <i class="year_tag"></i>  </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-md-12 panel-body">
+                    
+                                <div class="dropdown header_year">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Alliance/Front</button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li data-year="AIADMK+" id="AIADMK+"><a href="?year=AIADMKplus#overall_view">National Democratic Alliance (NDA)</a></li>
+                                        <li data-year="DMK+" id="DMK+"><a href="?year=DMKplus#overall_view">Secular Progressive Alliance (SPA)</a></li>
+                                        <li data-year="AMMK+" id="AMMK+"><a href="?year=AMMKplus#overall_view">Amma Makkal Munnettra Kazagam Front (AMMK)</a></li>
+                                        <li data-year="MNM+" id="MNM+"><a href="?year=MNMplus#overall_view">Makkal Needhi Maiam Front (MNM)</a></li>
+                                        <li data-year="NTK" id="NTK"><a href="?year=NTK#overall_view">Naam Tamilar Katchi</a></li>
+                                    </ul>
+                                </div><br/><br/>
+
+                                <div class="row">
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-10">
+                                        <div class="overall_view_report"></div>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overall_view">
+        <div class="container-fluid">
+            <div class="container">          
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">   
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2>party wise Allocation trend <i class="year_tag"></i></h2>
+                            </div>    
+                        </div>    
+                        <div class="row">
+                            <div class=" col-md-12 panel-body">
+                                <div class="dropdown header_year">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Alliance/Front</button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li data-year="AIADMK+" id="AIADMK+"><a href="?year=AIADMKplus#overall_view">National Democratic Alliance (NDA)</a></li>
+                                        <li data-year="DMK+" id="DMK+"><a href="?year=DMKplus#overall_view">Secular Progressive Alliance (SPA)</a></li>
+                                        <li data-year="AMMK+" id="AMMK+"><a href="?year=AMMKplus#overall_view">Amma Makkal Munnettra Kazagam Front (AMMK)</a></li>
+                                        <li data-year="MNM+" id="MNM+"><a href="?year=MNMplus#overall_view">Makkal Needhi Maiam Front (MNM)</a></li>
+                                        <li data-year="NTK" id="NTK"><a href="?year=NTK#overall_view">Naam Tamilar Katchi</a></li>
+                                    </ul>
+                                </div><br/><br/>
+                                <div class="col-md-12">
+                                    <p class="form-inline header_form" >
+                                        <label style="text-align: right;" align="left" >Search:</label>
+                                        <input style="width:220px" type="text" class="geo_search" placeholder="eg: Alappuzha">
+
+                                        <label style="text-align: right;" value="year">Party : </label>
+                                        <select multiple="multiple" id="year_party" class="select_year"></select>
+             
+                                        <input type="button" value="submit" class="party_filter"></input>
+                                    </p>
+                                </div>
+                                
+                                <div class="chart">
+                                    <div class="geo_map"></div>
+                                </div>
+                                <div class="container footer_details">
+                                    * Note Singe click on Constituenciey zooms In  with near by / surrounded constituencies and Double click on Constituenciey Shows Details of the candidate
+                                </div>
+                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+    <div id="summary_view">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2>Assembly Election 2021 Constituenciey wise Candidates </h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=" col-md-12 panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="summary_view_report"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Detail Constituency & Candidate View</h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+<script>
+ $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
+        }else {
+            $('#return-to-top').fadeOut(200);
+        }
+    });
+
+    $('#return-to-top').click(function() {
+        $('body,html').animate({
+            scrollTop : 0
+        }, 500);
+    });
+
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+year_detail = getParameterByName('year');
+if (year_detail == undefined){ year_detail= 'AIADMKplus'; }
+$(".year_tag").append(" ("+year_detail.replace('plus','+')+") ");
+
+    d3.csv("s22.csv", function(map_data) { 
+     //.toLowerCase()
+     year_data_set_all = map_data.filter(function(d){return (d.Alliance ==year_detail.replace('plus','+'))  })
+
+ 
+      var year_data_sets = d3.nest()
+              .key(function(d) { return d['Party']+'___'+d['Color']; })
+              .rollup(function(v) { return v.length;  })
+              .entries(year_data_set_all);
+    
+
+ function load_data_detail(Constituency_Id,Alliance){
+
+$('#myModal').modal('toggle')
+
+$('.sub_loader').show();
+
+d3.select('.modal-body').selectAll('table').remove();
+
+   sub_map_data = summary_data_set_all.filter(function(d) { return (d['constId']==Constituency_Id &  d['Alliance']==Alliance ) })
+   
+  $('#myTable').DataTable().destroy();
+  
+  d3.select('.modal-body').selectAll('table').remove();
+            
+  var table = d3.select('.modal-body').append('table')
+          .attr("id","myTable")
+          .attr("class","table table-bordered");
+
+    var thead = table.append('thead')
+        .attr("class","data_head");
+   
+    var tbody = table.append('tbody')
+
+    var candidates_details = ['Status','Candidate Name','Alliance_Front','Constituency','Party']
+
+    candidates_group = []
+    candidates_details.forEach(function(d){
+
+    candidates_row = {}
+    candidates_row['key'] = d
+    candidates_row['values'] = sub_map_data[0][d]
+    candidates_group.push(candidates_row)
+
+    })
+
+   var geo_width = parseInt(d3.select('.geo_map').style('width'), 10)
+
+   thead.append('tr')
+      .selectAll('th')
+        .data(['Candidate Details'])
+        .enter()
+      .append('th')
+       .attr('colspan', geo_width<550? 2 : 3)
+        .style('text-align','center')
+        .attr('bgcolor', '#00afee')
+        .style('color', '#fff')
+        .style('text-align', 'center')
+        .text(function (d) { return d})
+
+    var attr_span = geo_width<550? 'colspan' : 'rowspan'
+    var attr_span_width = geo_width<550? 2 : 5
+
+    tbody.append('tr')
+      .selectAll('th')
+        .data([sub_map_data[0].image_url.replace(' ','%20').replace(' ','%20').replace(' ','%20')])
+        .enter()
+      .append('th')
+       .attr(attr_span, attr_span_width)
+        .append('div')
+        .attr('id','imagePreview')
+        .style('background-color','#fff')
+        .append('img')
+        .style('border','#000')
+       .style('border-width','thick')
+        .style('border-radius','50%')
+       .style('display','block')
+       .style('margin-left','auto')
+       .style('margin-right','auto')
+        .attr('width', '180')
+        .attr('height', '180')
+        .attr('src',function (d) { return d })
+
+  var rows = tbody.selectAll("tr")
+                .data(candidates_group)
+                    .enter()
+                   .append('tr');
+      
+    var cells = rows.selectAll("td")
+        .data(function(row,i) {
+            // he does it this way to guarantee you only use the
+            // values for the columns you provide.
+            return ['key','values'].map(function(column) {
+                // return a new object with a value set to the row's column value.
+                return { value: row[column], column : column, sl_no : i};
+            });
+        })
+        .enter()
+        .append("td")
+        .style('text-align', function(d,i) { return i==0? 'left' :'center'})
+        .style('font-weight', function(d,i) { return i==0? 400 : 700 })
+        .style('background-color', function(d,i) { return (d.sl_no==3 & i==1)? sub_map_data[0].Color : '#fff' }) 
+        .style("color", function(d,i) { return (d.sl_no!=3 |i==0)? '#363636' : (parseInt(sub_map_data[0].Color.replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
+       .text(function(d,i) { return (d.value.replace('_','/')) });
+
+}
+
+function tabulate(data, columns) {
+
+$('.loader').show();
+
+$('#detailTable').DataTable().destroy();
+  
+  d3.select('.summary_view_report').selectAll('table').remove();
+            
+  var table = d3.select('.summary_view_report').append('table')
+          .attr("id","detailTable")
+          .attr("class","table table-bordered");
+
+    var thead = table.append('thead')
+        .attr("class","data_head");
+   
+    var tbody = table.append('tbody')
+
+    thead.append('tr')
+      .selectAll('th')
+        .data(columns)
+        .enter()
+      .append('th')
+        .style('text-align',function (d,i) { return i==0? 'left' : 'center' })
+        .attr('bgcolor', '#00afee')
+        .style('color', '#fff')
+        .style('text-align', 'center')
+        .text(function (d) { return d.replace('_',' ').replace('_',' ')})
+
+
+    // create a row for each object in the data
+    var rows = tbody.selectAll("tr")
+        .data(data)
+        .enter()
+        .append("tr");
+
+    // create a cell in each row for each column
+    // At this point, the rows have data associated.
+    // So the data function accesses it.
+    var cells = rows.selectAll("td")
+        .data(function(row) {
+            // he does it this way to guarantee you only use the
+            // values for the columns you provide.
+            return columns.map(function(column) {
+                // return a new object with a value set to the row's column value.
+                return { value: row[column], column : column , color : row[column.replace('_Candidate','_Color')] , party : row[column.replace('_Candidate','_Party')], Alliance : column.split('_')[0], Constituency_Id : row['Constituency_Id'] };
+            });
+        })
+        .enter()
+        .append("td")
+        .attr('data-target', function (d,i) { return (i!=0)? '#myModal': '' })
+        .attr('bgcolor',function (d,i) { return (i==0 )? '#fff' : d.color })
+        .style("color", function(d,i) { return (i==0 )? '#363636' : (parseInt(d.color.replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
+        .style("cursor", function(d,i) { return (i==0 )? '' : 'pointer'})
+        .style('font-weight',function (d,i) { return (i==0 )? 700 : 300 })
+
+        .text(function(d,i) { return  d.value })
+        .on('click',function (d,i) { return (i!=0)? load_data_detail(d.Constituency_Id,d.Alliance) : '' });
+
+    var tables =  $('#detailTable').DataTable({"scrollX": "100%","orderCellsTop": true,"pageLength": 10,"lengthChange": false,"order": [[ 1, "asc" ]] });
+
+  $(".dataTables_scrollHeadInner").css({"width":"100%"});
+  $(".table").css({"width":"100%"});
+
+  $('a.next').click();
+  $('a.previous').click();
+
+
+    return table;
+
+}
+function district_filter(map_data_district){
+    
+    summary_data_set_all = map_data_district.filter(function(d){return (d.Alliance_Front.toLowerCase() !='others')  })
+
+
+      var summary_data_sets = d3.nest()
+              .key(function(d) { return d['Constituency']; })
+              .rollup(function(v) { return v;  })
+              .entries(summary_data_set_all);
+
+        summary_data_sets.forEach(function(d){
+           d.Constituency = d.key
+           d.Constituency_Id = d.value[0].constId
+          // d.District = d.value[0].District   
+           d.value.forEach(function(dv){
+            d[dv.Alliance+'_Party'] = dv.Party
+            d[dv.Alliance+'_Candidate'] = dv['Candidate Name']
+            d[dv.Alliance+'_Color'] = dv.Color
+            d.Alliance = dv.Alliance
+           });
+        });
+
+       tabulate(summary_data_sets,['Constituency','AIADMK+_Candidate','DMK+_Candidate','AMMK+_Candidate','MNM+_Candidate','NTK_Candidate']);
+}
+      year_data_sets.sort(function(a, b) { return b.value - a.value; })
+
+        max_seats = d3.max(year_data_sets, function(d) { return d.value; });
+
+        lowresult_data  = d3.select('.overall_view_report')
+                             .selectAll('div')
+                            .data([year_data_sets])
+                            .enter()
+                            .append("div")
+                            .append("table")
+                            .attr("class","table table-condensed party-summary")
+
+          lowresult_data.append('thead')
+                            .selectAll("tr")
+                            .data([['Party','Seats','Seat Share']]).enter()
+                            .append("tr")
+                            .selectAll("th")
+                                .data(function(d,l) { return d }).enter()
+                                .append('th')
+                                .style("max-width",'10px')
+                                .style("font-size",'15px')
+                                .append("font")
+                                .attr("color","#636363")
+                                .text(function(o,i) { return o });
+
+              lowresult_data.append('tbody')
+                                .selectAll("tr")
+                                .data(function(o) { return o }).enter()
+                                .append("tr")
+                                .selectAll("td")
+                                    .data(function(d,l) { return [d.key.split('___')[0],d.value,l+':'+(d.value*100/max_seats).toFixed(2)+':'+d.key.split('___')[1]] }).enter()
+                                    .append('td')
+                                    .attr('class',function(d) { return d+'s'})
+                                    .style("max-width",'10px')
+                                    .style("font-size",'15px')
+                                    .text(function(o,i) { return i!=2? o:'' })
+                                    .append('div')
+                                    .attr('class',function(d,i) { return i!=2? '':'progress'; })
+                                    .append('div')
+                                    .attr('class','progress-bar progress-bar-striped')
+                                    .attr('role','progressbar')
+                                    .attr('aria-valuenow','70')
+                                    .attr('aria-valuemin','0')
+                                    .attr('aria-valuemax','100')
+                                    .style('background-color',function(d,i) { return i!=2? '': d.split(':')[2]})//d.key.split('___')[1] })
+                                    .style('width',function(d,i) { return i!=2? '0%':d.split(':')[1]+'%'; });
+                              
+
+function map_filter(year_party,other_data){
+    var centered;
+
+    other_data = other_data.filter(function(d){return (d.Alliance==year_detail.replace('plus','+')) })
+
+    var map_data = []
+                    _.each(other_data, function(d) { if(_.contains(year_party, d.Party)) { map_data.push(d);}});
+
+    var sub_width = parseInt(d3.select('.geo_map').style('width'), 10)
+       
+       var margin = {top: 20, right: 20, bottom: 20, left: 20},
+        width = sub_width*.75 - margin.left - margin.right,
+        height = 460 - margin.top - margin.bottom;
+
+      var projection = d3.geoMercator();
+
+      var path = d3.geoPath()
+          .projection(projection)
+          .pointRadius(2);
+
+      var svg = d3.select(".geo_map").append("svg")
+            .attr("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width)+" "+(height))
+            .attr("xmlns", 'https://www.w3.org/2000/svg')
+            .attr("xlink", 'https://www.w3.org/1999/xlink')
+            .attr("version", '1.1');
+
+        svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all')
+            .on("click", clicked)
+
+
+      var g = svg.append("g");
+    
+      d3.json("tamilnadu_assembly.json", function(error, data) {
+
+        if (error) throw error;
+        var boundary = centerZoom(data);
+        drawSubUnits(data);
+        drawOuterBoundary(data, boundary);
+
+      });
+
+      // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
+      // It also returns the boundary itself in case you want to draw it to the map
+      function centerZoom(data){
+        var o = topojson.mesh(data, data.objects['tamilnadu.assembly'], function(a, b) { return a === b; });
+
+        projection
+            .scale(1)
+            .translate([0, 0]);
+
+        var b = path.bounds(o),
+            s = 1 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+            t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+        projection
+            .scale(s)
+            .translate(t);
+
+        return o;
+      }
+
+      function addThousandsSeparator(t){
+          var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+    
+      function drawOuterBoundary(data, boundary){
+        g.append("path")
+            .datum(boundary)
+            .attr("d", path)
+            .attr("class", "subunit-boundary");
+      }
+
+      function drawPlaces(data){
+        g.append("path")
+            .datum(topojson.feature(data, data.objects.places))
+            .attr("d", path)
+            .attr("class", "place");
+
+        g.selectAll(".place-label")
+            .data(topojson.feature(data, data.objects.places).features)
+          .enter().append("text")
+            .attr("class", "place-label")
+            .attr("transform", function(d) { return "translate(" + projection(d.geometry.coordinates) + ")"; })
+            .attr("dy", ".35em")
+            .attr("x", 6)
+            .style("text-anchor", "start")
+            .text(function(d) { return d.properties.name; });
+      }
+
+function clicked(d) {
+      
+  var x, y, k;
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  }else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+}
+      constituency_list =[]
+      function drawSubUnits(data){
+        
+       mapper_data_view = topojson.feature(data, data.objects['tamilnadu.assembly']).features
+       mapper_data_view.forEach(function(o) {
+            map_data.forEach(function(g){
+              if (o.properties.ac == g.constId){
+                constituency_list.push(o.properties.ac_name);
+                  o.result = g
+              }
+            });
+          });
+ 
+ function load_data(values){
+
+$('.sub_loader').show();
+
+d3.select('.modal-body').selectAll('table').remove();
+   sub_map_data = map_data.filter(function(d) { return d['constId']==values })
+  
+  $('#myTable').DataTable().destroy();
+  
+  d3.select('.modal-body').selectAll('table').remove();
+            
+  var table = d3.select('.modal-body').append('table')
+          .attr("id","myTable")
+          .attr("class","table table-bordered");
+
+    var thead = table.append('thead')
+        .attr("class","data_head");
+   
+    var tbody = table.append('tbody')
+
+    var candidates_details = ['Status','Candidate Name','Alliance_Front','Constituency','Party']
+
+    candidates_group = []
+    candidates_details.forEach(function(d){
+
+    candidates_row = {}
+    candidates_row['key'] = d
+    candidates_row['values'] = sub_map_data[0][d]
+    candidates_group.push(candidates_row)
+
+    })
+ var geo_width = parseInt(d3.select('.geo_map').style('width'), 10)
+
+    thead.append('tr')
+      .selectAll('th')
+        .data(['Candidate Details'])
+        .enter()
+      .append('th')
+       .attr('colspan', geo_width<550? 2 : 3)
+        .style('text-align','center')
+        .attr('bgcolor', '#00afee')
+        .style('color', '#fff')
+        .style('text-align', 'center')
+        .text(function (d) { return d})
+
+    var attr_span = geo_width<550? 'colspan' : 'rowspan'
+    var attr_span_width = geo_width<550? 2 : 5
+
+    tbody.append('tr')
+      .selectAll('th')
+        .data([sub_map_data[0].image_url.replace(' ','%20').replace(' ','%20').replace(' ','%20')])
+        .enter()
+      .append('th')
+       .attr(attr_span, attr_span_width)
+        .append('div')
+        .attr('id','imagePreview')
+        .style('background-color','#fff')
+        .append('img')
+        .style('border','#000')
+       .style('border-width','thick')
+        .style('border-radius','50%')
+       .style('display','block')
+       .style('margin-left','auto')
+       .style('margin-right','auto')
+        .attr('width', '180')
+        .attr('height', '180')
+        //.style('color', '#fff')
+        //.style('text-align', 'center')
+        .attr('src',function (d) { return d })
+
+  var rows = tbody.selectAll("tr")
+                .data(candidates_group)
+                    .enter()
+                   .append('tr');
+      
+    var cells = rows.selectAll("td")
+        .data(function(row,i) {
+            // he does it this way to guarantee you only use the
+            // values for the columns you provide.
+            return ['key','values'].map(function(column) {
+                // return a new object with a value set to the row's column value.
+                return { value: row[column], column : column, sl_no : i};
+            });
+        })
+        .enter()
+        .append("td")
+        .style('text-align', function(d,i) { return i==0? 'left' :'center'})       
+        .style('font-weight', function(d,i) { return i==0? 400 : 700 })       
+        .style('background-color', function(d,i) { return (d.sl_no==3 & i==1)? sub_map_data[0].Color : '#fff' }) 
+        .style("color", function(d,i) { return (d.sl_no!=3 |i==0)? '#363636' : (parseInt(sub_map_data[0].Color.replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
+       .text(function(d,i) { return (d.value.replace('_','/')) });
+
+
+}
+
+        g.selectAll(".subunit")
+            .data(mapper_data_view)
+          .enter().append("path")
+            .attr("class", "subunit")
+            .attr('data-target', function (d,i) { return (d.result!=undefined)? '#myModal': '' })
+            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br>  Candidate : '+d.result['Candidate Name']+'</br> Front : '+d.result.Alliance_Front+'</br> Party : '+d.result.Party : ''})
+            .attr("sub_link", function (d){ return d.properties.ac_name })
+            .attr("fill", function(d) { return d.result!=undefined? d.result.Color : '#fff'  })
+            .attr("d", path)
+            .on("click", clicked)
+            .on('dblclick',function (d,i) { return  $('#myModal').modal('toggle'),  load_data(d.result.constId); });
+
+    $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
+
+var lastsearch = '';
+    var $box = {};
+    
+    function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function() {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp( "^" + search, "i" );
+          $('path', $chart).each(function(){
+              $(this).css('fill-opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+      });
+    }
+
+   add_search('.geo_search', '.geo_map');
+   var Industry = constituency_list;
+    
+    $( ".geo_search" ).autocomplete({
+    source: function(req, responseFn) {
+        var re = $.ui.autocomplete.escapeRegex(req.term);
+        var matcher = new RegExp( "^" + re, "i" );
+        var a = $.grep( Industry, function(item,index){
+            return matcher.test(item);
+        });
+        responseFn( a );
+    }
+    });
+    
+      }
+      }
+  
+      party_alliance = _.uniq(year_data_set_all, function(item, key, a) { return item['Party']; });
+
+      var select_box = d3.select('#year_party')     
+                .selectAll("option")
+                    .data(party_alliance.filter(function(d) { return d['Party']!='' }))
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['Party']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['Party']; });
+
+      $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
+
+      var year_party = [];
+      $('#year_party :selected').each(function(i, selected){
+          year_party[i] = $(selected).val();
+      });
+
+
+    /*  district_alliance = _.uniq(year_data_set_all, function(item, key, a) { return item['District']; });
+
+      var select_box = d3.select('#year_district')     
+                .selectAll("option")
+                    .data(district_alliance.filter(function(d) { return d['District']!='' }))
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['District']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['District']; });
+
+      $(".select_district").multipleSelect({ placeholder: "Here is the placeholder" });
+
+      var year_district = [];
+      $('#year_district :selected').each(function(i, selected){
+          year_district[i] = $(selected).val();
+      });
+	      
+
+*/
+      district_filter(map_data)
+      map_filter(year_party,map_data);
+  
+$('.party_filter').click( function(n) {
+      var year_party = [];
+      $('#year_party :selected').each(function(i, selected){
+          year_party[i] = $(selected).val();
+      });
+  
+  d3.select('.geo_map').select('svg').remove();
+      map_filter(year_party,map_data);
+
+});
+
+/*
+$('.party_district').click( function(n) {
+
+      var year_district = [];
+      $('#year_district :selected').each(function(i, selected){
+          year_district[i] = $(selected).val();
+      });
+      district_filter(year_district,map_data)
+
+});
+*/
+
+    });
+
+</script>
+<div class="container footer_details">
+      The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://affidavit.eci.gov.in/"> affidavit.eci.gov.in </a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
+</div>
+
+</body>
+</html>
