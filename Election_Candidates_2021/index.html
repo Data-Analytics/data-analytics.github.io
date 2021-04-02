@@ -27,11 +27,11 @@
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
   <meta property="og:title"  content="ASSEMBLY ELECTIONS 2021 (Tamil Nadu)" />
-  <meta property="og:url"   content="https://data-analytics.github.io/Election_Candidates_2021" /> 
+  <meta property="og:url"   content="http://data-analytics.github.io/Election_Candidates_2021" /> 
   <meta property="og:description" content="Tamil Nadu Assembly Election Candidates List 2021 'A visual guide to the check out the Alliance/Party Wise Candidates across Constituencies in Tamil Nadu for Assembly Elections 2021. One line Comparison as well'" />
   <html itemscope itemtype="https://schema.org/Blog">
-  <meta property="og:image" content="https://data-analytics.github.io/images/candidates.png" /> 
-  <meta itemprop="image" content="https://data-analytics.github.io/images/candidates.png">
+  <meta property="og:image" content="http://data-analytics.github.io/images/candidates.png" /> 
+  <meta itemprop="image" content="http://data-analytics.github.io/images/candidates.png">
   <meta itemprop="description" content="Tamil Nadu Assembly Election Candidates List 2021 'A visual guide to the check out the Alliance/Party Wise Candidates across Constituencies in Tamil Nadu for Assembly Elections 2021. One line Comparison as well'">
   <meta itemprop="name" content="ASSEMBLY ELECTIONS 2021 (Tamil Nadu)">
   <title>ASSEMBLY ELECTIONS 2021 (Tamil Nadu)</title>
@@ -259,7 +259,7 @@ year_detail = getParameterByName('year');
 if (year_detail == undefined){ year_detail= 'AIADMKplus'; }
 $(".year_tag").append(" ("+year_detail.replace('plus','+')+") ");
 
-    d3.csv("s22.csv", function(map_data) { 
+    d3.csv("data.csv", function(map_data) { 
      //.toLowerCase()
      year_data_set_all = map_data.filter(function(d){return (d.Alliance ==year_detail.replace('plus','+'))  })
 
