@@ -260,10 +260,9 @@ if (year_detail == undefined){ year_detail= 'AIADMKplus'; }
 $(".year_tag").append(" ("+year_detail.replace('plus','+')+") ");
 
     d3.csv("data.csv", function(map_data) { 
-     //.toLowerCase()
+
      year_data_set_all = map_data.filter(function(d){return (d.Alliance ==year_detail.replace('plus','+'))  })
 
- 
       var year_data_sets = d3.nest()
               .key(function(d) { return d['Party']+'___'+d['Color']; })
               .rollup(function(v) { return v.length;  })
@@ -293,7 +292,7 @@ d3.select('.modal-body').selectAll('table').remove();
    
     var tbody = table.append('tbody')
 
-    var candidates_details = ['Status','Candidate Name','Alliance_Front','Constituency','Party']
+    var candidates_details = ['Status','Candidate Name','Alliance_Front','Constituency','Party','Gender','Age']
 
     candidates_group = []
     candidates_details.forEach(function(d){
@@ -320,7 +319,7 @@ d3.select('.modal-body').selectAll('table').remove();
         .text(function (d) { return d})
 
     var attr_span = geo_width<550? 'colspan' : 'rowspan'
-    var attr_span_width = geo_width<550? 2 : 5
+    var attr_span_width = geo_width<550? 2 : 7
 
     tbody.append('tr')
       .selectAll('th')
@@ -440,7 +439,6 @@ function district_filter(map_data_district){
     
     summary_data_set_all = map_data_district.filter(function(d){return (d.Alliance_Front.toLowerCase() !='others')  })
 
-
       var summary_data_sets = d3.nest()
               .key(function(d) { return d['Constituency']; })
               .rollup(function(v) { return v;  })
@@ -449,7 +447,6 @@ function district_filter(map_data_district){
         summary_data_sets.forEach(function(d){
            d.Constituency = d.key
            d.Constituency_Id = d.value[0].constId
-          // d.District = d.value[0].District   
            d.value.forEach(function(dv){
             d[dv.Alliance+'_Party'] = dv.Party
             d[dv.Alliance+'_Candidate'] = dv['Candidate Name']
@@ -661,7 +658,7 @@ d3.select('.modal-body').selectAll('table').remove();
    
     var tbody = table.append('tbody')
 
-    var candidates_details = ['Status','Candidate Name','Alliance_Front','Constituency','Party']
+    var candidates_details = ['Status','Candidate Name','Alliance_Front','Constituency','Party','Gender','Age']
 
     candidates_group = []
     candidates_details.forEach(function(d){
@@ -687,7 +684,7 @@ d3.select('.modal-body').selectAll('table').remove();
         .text(function (d) { return d})
 
     var attr_span = geo_width<550? 'colspan' : 'rowspan'
-    var attr_span_width = geo_width<550? 2 : 5
+    var attr_span_width = geo_width<550? 2 : 7
 
     tbody.append('tr')
       .selectAll('th')
@@ -802,52 +799,19 @@ var lastsearch = '';
           year_party[i] = $(selected).val();
       });
 
-
-    /*  district_alliance = _.uniq(year_data_set_all, function(item, key, a) { return item['District']; });
-
-      var select_box = d3.select('#year_district')     
-                .selectAll("option")
-                    .data(district_alliance.filter(function(d) { return d['District']!='' }))
-                    .enter().append("option")
-                    .attr("value", function (d) { return d['District']; })
-                    .attr("class","name")
-                    .attr("selected","")
-                    .text(function (d) { return d['District']; });
-
-      $(".select_district").multipleSelect({ placeholder: "Here is the placeholder" });
-
-      var year_district = [];
-      $('#year_district :selected').each(function(i, selected){
-          year_district[i] = $(selected).val();
-      });
-	      
-
-*/
       district_filter(map_data)
       map_filter(year_party,map_data);
   
-$('.party_filter').click( function(n) {
-      var year_party = [];
-      $('#year_party :selected').each(function(i, selected){
-          year_party[i] = $(selected).val();
-      });
-  
-  d3.select('.geo_map').select('svg').remove();
-      map_filter(year_party,map_data);
+    $('.party_filter').click( function(n) {
+          var year_party = [];
+          $('#year_party :selected').each(function(i, selected){
+              year_party[i] = $(selected).val();
+          });
+      
+      d3.select('.geo_map').select('svg').remove();
+          map_filter(year_party,map_data);
 
-});
-
-/*
-$('.party_district').click( function(n) {
-
-      var year_district = [];
-      $('#year_district :selected').each(function(i, selected){
-          year_district[i] = $(selected).val();
-      });
-      district_filter(year_district,map_data)
-
-});
-*/
+    });
 
     });
 
