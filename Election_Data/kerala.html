@@ -5,7 +5,7 @@
  Author:      sushanth
  Created:     28-01-2016
  Modified:    21-09-2016
- Copyright:  (c) sushanth 2016
+ Copyright:  (c) sushanth 2021
  Licence:     protected(not suppose to se it directly)
 ---------------------------------------------------------------->
 <html manifest="election.appcache" >
@@ -14,7 +14,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sushanth">
-  <meta name="description" content="Kerala Assembly Election Results 2016 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2016', Which of the Dravidian duos might get the stronghold in Kerala? What will be the pre-poll alliances? For the state march is a crucial month to predict next political face.">
+  <meta name="description" content="Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2021', Which of the Dravidian duos might get the stronghold in Kerala? What will be the pre-poll alliances? For the state march is a crucial month to predict next political face.">
   <meta name="news_keywords" content="Kerala polls, Kerala assembly polls, jayalalithaa, chennai floods, Kerala elections, Kerala assembly elections, chennai news, Kerala news, india news">
   <meta name="keywords" content="Kerala polls, Kerala assembly polls, jayalalithaa, chennai floods, Kerala elections, Kerala assembly elections, chennai news, Kerala news, india news">
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
@@ -36,15 +36,22 @@
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1957 - 2016(Kerala)" />
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1957 - 2021(Kerala)" />
   <meta property="og:url"   content="https://data-analytics.github.io/Election_Data/kerala.html" />
-  <meta property="og:description" content="Kerala Assembly Election Results 2016 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2016'" />
-  <meta property="og:image" content="/./images/election_2016_kerala.jpg" />
+  <meta property="og:description" content="Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2021'" />
+  <meta property="og:image" content="/./images/election_2021_kerala.jpg" />
   <html itemscope itemtype="https://schema.org/Blog">
-  <meta itemprop="description" content="Kerala Assembly Election Results 2016 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2016'">
-  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1957 - 2016(Kerala)">
-  <meta itemprop="image" content="/./images/election_2016_kerala.jpg">
-  <title>Assembly Elections 1957 - 2016(Kerala)</title>
+  <meta itemprop="description" content="Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2021'">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1957 - 2021(Kerala)">
+  <meta itemprop="image" content="/./images/election_2021_kerala.jpg">
+  <title>Assembly Elections 1957 - 2021(Kerala)</title>
+  <style>
+  .uneditable-input, input[type=text], select, textarea {
+    width: 150px !important;
+    margin: 0 auto;
+}
+  </style>
+  
 </head>
 <body>
 
@@ -54,7 +61,7 @@
             <div class="row">
                 <div class="col-md-12 header-logo">
                     
-                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Kerala Assembly Election Results 2016 'A visual guide to the check out the history of Kerala Assembly elections from 1957 until 2016</p>
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections from 1957 until 2021</p>
                     <p class="synopsis">This interactive map will bring you minute-by-minute results, from the national standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
                     <p class="synopsis">It aims to make the past 15  Assembly elections in Kerala  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
 
@@ -80,6 +87,7 @@
                         <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                <li data-year="2021" id="2021"><a href="?year=2021#overall_view">2021 results</a></li>
                                 <li data-year="2016" id="2016"><a href="?year=2016#overall_view">2016 results</a></li>
                                 <li data-year="2011" id="2011"><a href="?year=2011#overall_view">2011 results</a></li>
                                 <li data-year="2006" id="2006"><a href="?year=2006#overall_view">2006 results</a></li>
@@ -132,21 +140,24 @@
                       <div class="dropdown header_year">
                             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                <li data-year="2021" id="extra_2021"><a href="?extra_year=2021#individual_hold">2021 results</a></li>
                                 <li data-year="2016" id="extra_2016"><a href="?extra_year=2016#individual_hold">2016 results</a></li>
                                 <li data-year="2011" id="extra_2011"><a href="?extra_year=2011#individual_hold">2011 results</a></li>
                                     
                             </ul>
                       </div>
                       
-                      <p class="form-inline header_form" >
-                        <label align="left" >Search:</label>
-                        <input type="text" class="geo_search" placeholder="eg: chennai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <label value="year">based on 2011 : </label>
-                        <select multiple="multiple" id="year_2011" class="select_year"></select>&nbsp;&nbsp;
-                        <label value="year">based on 2016 : </label>
-                        <select multiple="multiple" id="year_2016" class="select_year"></select>
-                         <input type="button" value="submit" class="party_filter"></input>
-                      </p>
+                              <p class="form-inline header_form" >
+                                 <label align="left" >Search:</label>
+                                 <input type="text" class="geo_search" placeholder="eg: chennai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                 <label value="year">based on 2011 : </label>
+                                 <select multiple="multiple" id="year_2011" class="select_year"></select>&nbsp;&nbsp;
+                                 <label value="year">based on 2016 : </label>
+                                 <select multiple="multiple" id="year_2016" class="select_year"></select>
+                                 <label value="year">based on 2021 : </label>
+                                 <select multiple="multiple" id="year_2021" class="select_year"></select>
+                                 <input type="button" value="submit" class="party_filter"></input>
+                            </p>
                         
                      <div class="chart">
                         <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
@@ -353,6 +364,7 @@
                       <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                    <li data-year="2021" id="2021"><a href="?year=2021#individual">2021 results</a></li>
                                     <li data-year="2016" id="2016"><a href="?year=2016#individual">2016 results</a></li>
                                     <li data-year="2011" id="2011"><a href="?year=2011#individual">2011 results</a></li>
                                     <li data-year="2006" id="2006"><a href="?year=2006#individual">2006 results</a></li>
@@ -500,6 +512,7 @@
                         <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                    <li data-year="2021" id="2021_flow"><a href="?year=2021#party_Trend">2021 results</a></li>
                                     <li data-year="2016" id="2016_flow"><a href="?year=2016#party_Trend">2016 results</a></li>
                                     <li data-year="2011" id="2011_flow"><a href="?year=2011#party_Trend">2011 results</a></li>
                                     <li data-year="2006" id="2006_flow"><a href="?year=2006#party_Trend">2006 results</a></li>
@@ -582,7 +595,8 @@
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                         <ul class="dropdown-menu" role="menu">
-                        
+
+                        <li data-year="2016_2021" id="2016_2021"><a href="?flowyear=2016_2021#sankeyFlow">2021 results</a></li>
                         <li data-year="2011_2016" id="2011_2016"><a href="?flowyear=2011_2016#sankeyFlow">2016 results</a></li>
                         <li data-year="2001_2006" id="2001_2006"><a href="?flowyear=2001_2006#sankeyFlow">2006 results</a></li>
                         <li data-year="1996_2001" id="1996_2001"><a href="?flowyear=1996_2001#sankeyFlow">2001 results</a></li>
@@ -889,7 +903,7 @@
         }, 500);
     });
 
-color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","DMDK":"#f1c40f","DMK":"#c0392b","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","GNLF":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MDMK":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","IUML":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","PMK":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","TMC":"#4747ff","TMC(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636"};
+color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","DMDK":"#f1c40f","DMK":"#c0392b","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","GNLF":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MDMK":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","IUML":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","PMK":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","TMC":"#4747ff","TMC(M)":"#4747ff","TMK":"#363636","VCK":"#363636","BSP":"#363636","WBSP":"#363636","WPI":"#363636","OTH":"#363636","ADHRI":"#363636","API":"#363636","SDPI":"#363636","NLP":"#363636","LJD":"#363636","RMPI":"#363636","NCK":"#363636","DSGP":"#363636","SFB":"#363636","NSC":"#363636","BDJS":"#363636","CMP":"#363636","TTP":"#363636","SS":"#363636","BDP":"#363636","KJP":"#363636","KJ(S)":"#363636","RSP(L)":"#363636","JKC":"#363636"};
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -928,18 +942,18 @@ if (cons_id == undefined){ $(".detail_percent_display").hide(); }
 else{ $(".detail_percent_display").show();}
   
 if ((extra_year_detail == undefined) && (year_detail >= 2009)){ extra_year_detail= year_detail; }
-if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2016; }
+if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2021; }
    
 if (year_detail == undefined){ year_detail= extra_year_detail; }
 if (flowyear_detail != undefined){ year_detail= flowyear_detail.split("_")[1] }
-if (flowyear_detail == undefined){ flowyear_detail= '2011_2016'; }
+if (flowyear_detail == undefined){ flowyear_detail= '2016_2021'; }
  
-if ([1957,1960,1965,1967,1970,1977,1980,1982,1987,1991,1996,2001,2006,2011,2016].indexOf(parseInt(year_detail))<0)
-{ year_detail =2016,extra_year_detail=2016; }
+if ([1957,1960,1965,1967,1970,1977,1980,1982,1987,1991,1996,2001,2006,2011,2016,2021].indexOf(parseInt(year_detail))<0)
+{ year_detail =2021,extra_year_detail=2021; }
 
 if (year_detail <2009){ $('#individual_hold').hide() }
 
-sankey_flow_year = ["2011_2016","2001_2006","1996_2001","1991_1996","1987_1991","1982_1987",
+sankey_flow_year = ["2016_2021","2011_2016","2001_2006","1996_2001","1991_1996","1987_1991","1982_1987",
 "1980_1982","1977_1980","1967_1970","1965_1967","1957_1960","1957_1960"]
 
 sankey_flow_value = ''
@@ -1320,7 +1334,7 @@ function data_scatter(type_votes){
         .attr("class", "x labels")
         .attr("text-anchor", "end")
         .attr("x", width_data - padding/2)
-        .attr("y", height_data - padding/1.5)
+        .attr("y", height_data - padding/2.5)
         .style("font-size", "15px")
         .text("year*");
 
@@ -1906,39 +1920,54 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     
   $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
 
-    function map_filter(year_2011,year_2016){
+    function map_filter(year_2011,year_2016,year_2021){
 
-    data_csv = data_csv.filter(function(d){return ((d.YEAR==2011) |(d.YEAR==2016)) & (d.rank==1) })
+    data_csv = data_csv.filter(function(d){return ((d.YEAR==2011) |(d.YEAR==2016) |(d.YEAR==2021)) & (d.rank==1) })
 
     sub_click = _.pluck(party_2011.filter(function(d) { return d[2011]!='' }),2011)
 
+     data_csv.forEach(function(o) {
+           if (o.YEAR==2011){
+           o.PARTY = sub_click.indexOf(o.PARTY) >-1? o.PARTY:'Others'
+           }
+      });
+
     var data_csv_2011 = []
-                    _.each(data_csv, function(d) { if(_.contains(year_2011, d.PARTY)) { data_csv_2011.push(d);}});
+       _.each(data_csv, function(d) { if(_.contains(year_2011, d.PARTY)) { data_csv_2011.push(d);}});
 
     data_csv_2011 = data_csv_2011.filter(function(d){return (d.YEAR==2011) & (d.rank==1) })
 
    
     var data_csv_2016 = []
-                    _.each(data_csv, function(d) { if(_.contains(year_2016, d.PARTY)) { data_csv_2016.push(d);}});
+       _.each(data_csv, function(d) { if(_.contains(year_2016, d.PARTY)) { data_csv_2016.push(d);}});
 
     data_csv_2016 = data_csv_2016.filter(function(d){return (d.YEAR==2016) & (d.rank==1) })
 
-    
+    var data_csv_2021 = []
+       _.each(data_csv, function(d) { if(_.contains(year_2021, d.PARTY)) { data_csv_2021.push(d);}});
+
+    data_csv_2021 = data_csv_2021.filter(function(d){return (d.YEAR==2021) & (d.rank==1) })
+
     cons_2011 = _.pluck(_.uniq(data_csv_2011, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
     cons_2016 = _.pluck(_.uniq(data_csv_2016, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
+    cons_2021 = _.pluck(_.uniq(data_csv_2021, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
   
-  Array.prototype.extend = function (other_array) {
-      /* you should include a test to check whether other_array really is an array */
-      other_array.forEach(function(v) {this.push(v)}, this);    
-
+     Array.prototype.extend = function (other_array) {
+                 /* you should include a test to check whether other_array really is an array */
+                 other_array.forEach(function(v) {this.push(v)}, this);    
    }
 
     data_set = data_csv.filter(function(d){return (d.YEAR==extra_year_detail) & (d.rank==1) })
+
     var data_set_sub = []
-                    _.each(data_set, function(d) { if(_.contains(cons_2011, d.AC_NAME)) { data_set_sub.push(d);}});
+       _.each(data_set, function(d) { if(_.contains(cons_2011, d.AC_NAME)) { data_set_sub.push(d);}});
+    var data_set_sub_2 = []
+       _.each(data_set_sub, function(d) { if(_.contains(cons_2016, d.AC_NAME)) { data_set_sub_2.push(d);}});
     var data_set = []
-                    _.each(data_set_sub, function(d) { if(_.contains(cons_2016, d.AC_NAME)) { data_set.push(d);}});
- 
+       _.each(data_set_sub_2, function(d) { if(_.contains(cons_2021, d.AC_NAME)) { data_set.push(d);}});
+
+    console.log(data_set,data_set_sub,data_set_sub_2);
+
     constituency_color = {}
     Candidate = {}
     PARTY ={}
@@ -1946,6 +1975,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     votes = {}
     polled_votes = {}
     constituency_list =[]
+     console.log(data_set);
      data_set.forEach(function(o) {
       o.rank = parseInt(o.rank);
       o.year = parseInt(o.YEAR);
@@ -1959,7 +1989,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       PARTY[o.AC_NAME] = o.PARTY
       percent_votes[o.AC_NAME] = (parseFloat((o.votes/o.polled_votes))*100).toFixed(2)
     
-      
       });
     
 
@@ -1970,7 +1999,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         }
      });
      
-    d3.selectAll("polygon").each( function(d, i){    
+    d3.selectAll("polygon").each( function(d, i){
+       console.log(PARTY[d3.select(this).attr("id")],PARTY);    
       if (PARTY[d3.select(this).attr("id")] !=undefined)
     {
           
@@ -2029,6 +2059,11 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
 $('.party_filter').click( function(n) {
 
+ var year_2021 = [];
+      $('#year_2021 :selected').each(function(i, selected){
+          year_2021[i] = $(selected).val();
+      });
+
  var year_2016 = [];
       $('#year_2016 :selected').each(function(i, selected){
           year_2016[i] = $(selected).val();
@@ -2039,10 +2074,16 @@ $('.party_filter').click( function(n) {
             year_2011[i] = $(selected).val();
         });
 
-  map_filter(year_2011,year_2016);
+  map_filter(year_2011,year_2016,year_2021);
+
 
 });
 
+ var year_2021 = [];
+      $('#year_2021 :selected').each(function(i, selected){
+          year_2021[i] = $(selected).val();
+      });
+
  var year_2016 = [];
       $('#year_2016 :selected').each(function(i, selected){
           year_2016[i] = $(selected).val();
@@ -2052,9 +2093,7 @@ $('.party_filter').click( function(n) {
         $('#year_2011 :selected').each(function(i, selected){
             year_2011[i] = $(selected).val();
         });
-
-  map_filter(year_2011,year_2016);
-
+  map_filter(year_2011,year_2016,year_2021);
 
     });
 
@@ -2091,7 +2130,8 @@ d3.csv("kerala_data.csv", function(error, data) {
 
   party_2011 = _.uniq(data, function(item, key, a) {  return item[2011]; });
   party_2016 = _.uniq(data, function(item, key, a) {  return item[2016]; });
-
+  party_2021 = _.uniq(data, function(item, key, a) {  return item[2021]; });
+  
  var select_box = d3.select('#year_2011')     
                 .selectAll("option")
                     .data(party_2011.filter(function(d) { return d[2011]!='' })) 
@@ -2109,6 +2149,15 @@ d3.csv("kerala_data.csv", function(error, data) {
                     .attr("class","name")
                     .attr("selected","")
                     .text(function (d) { return d[2016]; });
+
+ var select_box = d3.select('#year_2021')     
+   .selectAll("option")
+       .data(party_2021.filter(function(d) { return d[2021]!='' }))
+       .enter().append("option")
+       .attr("value", function (d) { return d[2021]; })
+       .attr("class","name")
+       .attr("selected","")
+       .text(function (d) { return d[2021]; });
 
 
 $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
