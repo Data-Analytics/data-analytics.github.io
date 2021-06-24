@@ -2125,7 +2125,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
  
     d3.selectAll("polygon").each( function(d, i){
     
-           console.log(d3.select(this).attr("id"));  
     if (PARTY[d3.select(this).attr("id")] !=undefined)
     {    
     d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/>Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/>party : '+PARTY[d3.select(this).attr("id")]+' <br/>percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/>votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/>polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))

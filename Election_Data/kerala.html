@@ -1966,8 +1966,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     var data_set = []
        _.each(data_set_sub_2, function(d) { if(_.contains(cons_2021, d.AC_NAME)) { data_set.push(d);}});
 
-    console.log(data_set,data_set_sub,data_set_sub_2);
-
     constituency_color = {}
     Candidate = {}
     PARTY ={}
@@ -1975,7 +1973,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     votes = {}
     polled_votes = {}
     constituency_list =[]
-     console.log(data_set);
+
      data_set.forEach(function(o) {
       o.rank = parseInt(o.rank);
       o.year = parseInt(o.YEAR);
@@ -2000,7 +1998,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
      });
      
     d3.selectAll("polygon").each( function(d, i){
-       console.log(PARTY[d3.select(this).attr("id")],PARTY);    
+  
       if (PARTY[d3.select(this).attr("id")] !=undefined)
     {
           

@@ -381,9 +381,6 @@
   
 
 d3.csv("Bihar.csv", function(data_set) {
- 
-
-     console.log(data_set);
 
     constituency_color = {}
     Candidate = {}
@@ -408,8 +405,6 @@ function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var 
 
     d3.selectAll("polygon").each(function(d, i){    
     
-    console.log(d3.select(this).attr("id"));
-
     if (PARTY[d3.select(this).attr("id")] !=undefined)
     {    
     d3.select(this).attr("data-title", 'Candidate : '+Candidate[d3.select(this).attr("id")]+' Party : '+PARTY[d3.select(this).attr("id")]+' Constituency : '+d3.select(this).attr("id")+' votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")]))
