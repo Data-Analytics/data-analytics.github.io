@@ -8788,7 +8788,7 @@ Chengalpattu,IND,1991,Tamil Nadu,22,8,GEN,ARUNACHALAM D.,M,0,,93,106266,#bdc3c7,
 Chengalpattu,IND,1991,Tamil Nadu,22,9,GEN,VENKATASUBBAIAH J.,M,0,,59,106266,#bdc3c7,Kancheepuram
 Chengalpattu,IND,1991,Tamil Nadu,22,10,GEN,ABDULHAMEED M.G.,M,0,,44,106266,#bdc3c7,Kancheepuram
 Maduranthakam,ADMK,1991,Tamil Nadu,23,1,GEN,P. CHOCKALINGAM,M,0,,53752,99336,#b2d33c,Kancheepuram
-Maduranthakam,TMK,1991,Tamil Nadu,23,2,GEN,S.D. OGAMCHAND,M,0,,35349,99336,#222,Kancheepuram
+Maduranthakam,TMC,1991,Tamil Nadu,23,2,GEN,S.D. OGAMCHAND,M,0,,35349,99336,#222,Kancheepuram
 Maduranthakam,PMK,1991,Tamil Nadu,23,3,GEN,K. NARAYANASWAMY ALIAS MANI ARASU,M,0,,7667,99336,#d35400,Kancheepuram
 Maduranthakam,BJP,1991,Tamil Nadu,23,4,GEN,S. ADIKESAVALU,M,0,,862,99336,#ff7f0e,Kancheepuram
 Maduranthakam,IND,1991,Tamil Nadu,23,5,GEN,N.R. JANARTHANAN,M,0,,503,99336,#bdc3c7,Kancheepuram
@@ -9457,7 +9457,7 @@ Krishnagiri,PMK,1991,Tamil Nadu,77,4,GEN,KANMANI K.C.,M,0,,991,91145,#d35400,Kri
 Krishnagiri,JP,1991,Tamil Nadu,77,5,GEN,RAVI S.,M,0,,603,91145,#222,Krishnagiri
 Krishnagiri,IND,1991,Tamil Nadu,77,6,GEN,MURUGESAN M.,M,0,,550,91145,#bdc3c7,Krishnagiri
 Bargur,ADMK,1991,Tamil Nadu,78,1,GEN,JAYALALITHA J.,F,0,,67680,103841,#b2d33c,Krishnagiri
-Bargur,TMK,1991,Tamil Nadu,78,2,GEN,T. RAJHENDHER,M,0,,30465,103841,#222,Krishnagiri
+Bargur,TMC,1991,Tamil Nadu,78,2,GEN,T. RAJHENDHER,M,0,,30465,103841,#222,Krishnagiri
 Bargur,PMK,1991,Tamil Nadu,78,3,GEN,A.C. CHINNASAMY,M,0,,1815,103841,#d35400,Krishnagiri
 Bargur,DMK,1991,Tamil Nadu,78,4,GEN,E.G. SUGAVANAM,M,0,,1311,103841,#c0392b,Krishnagiri
 Bargur,IND,1991,Tamil Nadu,78,5,GEN,V.T.R. GEERAPA GOUNDER,M,0,,501,103841,#bdc3c7,Krishnagiri
@@ -9638,7 +9638,7 @@ Rasipuram,IND,1991,Tamil Nadu,94,11,GEN,V. MADHESWARAN,M,0,,74,105129,#bdc3c7,Na
 Rasipuram,IND,1991,Tamil Nadu,94,12,GEN,S. PALANIAMMAL,F,0,,59,105129,#bdc3c7,Namakkal
 Rasipuram,IND,1991,Tamil Nadu,94,13,GEN,K.P.K. MANICKAM,M,0,,56,105129,#bdc3c7,Namakkal
 Senthamangalam,ADMK,1991,Tamil Nadu,95,1,ST,CHINNASAMY K.,M,0,,72877,95653,#b2d33c,Namakkal
-Senthamangalam,TMK,1991,Tamil Nadu,95,2,ST,SIVAPPIRAKASAM S.,M,0,,17316,95653,#222,Namakkal
+Senthamangalam,TMC,1991,Tamil Nadu,95,2,ST,SIVAPPIRAKASAM S.,M,0,,17316,95653,#222,Namakkal
 Senthamangalam,PMK,1991,Tamil Nadu,95,3,ST,CHANDIRAN M.S.,M,0,,5460,95653,#d35400,Namakkal
 Namakkal,ADMK,1991,Tamil Nadu,96,1,SC,ANBALAGAN S.,M,0,,79683,112669,#b2d33c,Namakkal
 Namakkal,DMK,1991,Tamil Nadu,96,2,SC,MAYAVAN R.,M,0,,29788,112669,#c0392b,Namakkal
@@ -9737,7 +9737,7 @@ Singanallur,IND,1991,Tamil Nadu,104,11,GEN,AYYASAMY M.M.,M,0,,119,122727,#bdc3c7
 Singanallur,IND,1991,Tamil Nadu,104,12,GEN,SINNAKUTTI R.,M,0,,102,122727,#bdc3c7,Coimbatore
 Singanallur,IND,1991,Tamil Nadu,104,13,GEN,SATHYAVANI V.M.,F,0,,83,122727,#bdc3c7,Coimbatore
 Singanallur,IND,1991,Tamil Nadu,104,14,GEN,VENUGOPAL K.P.,M,0,,78,122727,#bdc3c7,Coimbatore
-Singanallur,TMK,1991,Tamil Nadu,104,15,GEN,RAJASEKARAN G.,M,0,,76,122727,#222,Coimbatore
+Singanallur,TMC,1991,Tamil Nadu,104,15,GEN,RAJASEKARAN G.,M,0,,76,122727,#222,Coimbatore
 Coimbatore North,INC,1991,Tamil Nadu,105,1,GEN,SELVARAJ K.,M,0,,41194,80640,#2ecc71,Coimbatore
 Coimbatore North,DMK,1991,Tamil Nadu,105,2,GEN,RAMANATHAN M.,M,0,,24696,80640,#c0392b,Coimbatore
 Coimbatore North,BJP,1991,Tamil Nadu,105,3,GEN,MANI ALIAS MOOKAMBIKAI MANI,M,0,,11718,80640,#ff7f0e,Coimbatore
@@ -10833,12 +10833,12 @@ Thiruvidaimarudur,IND,1991,Tamil Nadu,188,5,GEN,V. S. KANNAPIRAN,M,0,,413,111163
 Thiruvidaimarudur,IND,1991,Tamil Nadu,188,6,GEN,V. V. GNANASEKARAN,M,0,,169,111163,#bdc3c7,Thanjavur
 Thiruvidaimarudur,IND,1991,Tamil Nadu,188,7,GEN,B. SOWRIRAJAN,M,0,,158,111163,#bdc3c7,Thanjavur
 Thirumaiyam,ADMK,1991,Tamil Nadu,189,1,GEN,S. REGUPATHY,M,0,,72701,103295,#b2d33c,Pudukkottai
-Thirumaiyam,TMK,1991,Tamil Nadu,189,2,GEN,ERAMA GOVINDARASAN,M,0,,27970,103295,#222,Pudukkottai
+Thirumaiyam,TMC,1991,Tamil Nadu,189,2,GEN,ERAMA GOVINDARASAN,M,0,,27970,103295,#222,Pudukkottai
 Thirumaiyam,IND,1991,Tamil Nadu,189,3,GEN,B. ARUMUGAM,M,0,,1840,103295,#bdc3c7,Pudukkottai
 Thirumaiyam,PMK,1991,Tamil Nadu,189,4,GEN,P. MUTHU,M,0,,546,103295,#d35400,Pudukkottai
 Thirumaiyam,IND,1991,Tamil Nadu,189,5,GEN,G. ARUNACHALAM,M,0,,238,103295,#bdc3c7,Pudukkottai
 Kolathur,ADMK,1991,Tamil Nadu,190,1,SC,C. KULANDAIVELU,M,0,,91350,119389,#b2d33c,Chennai
-Kolathur,TMK,1991,Tamil Nadu,190,2,SC,V. RAJU,M,0,,26038,119389,#222,Chennai
+Kolathur,TMC,1991,Tamil Nadu,190,2,SC,V. RAJU,M,0,,26038,119389,#222,Chennai
 Kolathur,TMM,1991,Tamil Nadu,190,3,SC,M. SELVARAJ,M,0,,741,119389,#222,Chennai
 Kolathur,PMK,1991,Tamil Nadu,190,4,SC,K. SAMIAYYAH,M,0,,609,119389,#d35400,Chennai
 Kolathur,JP,1991,Tamil Nadu,190,5,SC,R. MARIAPPAN,M,0,,461,119389,#222,Chennai
@@ -10860,7 +10860,7 @@ Alangudi,IND,1991,Tamil Nadu,192,3,GEN,SINGARAVELU CHETTY R. M. M.,M,0,,651,1288
 Alangudi,IND,1991,Tamil Nadu,192,4,GEN,RAMAKRISHNAN P.,M,0,,192,128837,#bdc3c7,Pudukkottai
 Alangudi,PMK,1991,Tamil Nadu,192,5,GEN,VISUVANATHAN M.,M,0,,175,128837,#d35400,Pudukkottai
 Alangudi,IND,1991,Tamil Nadu,192,6,GEN,CHOCKALINGAM P.,M,0,,152,128837,#bdc3c7,Pudukkottai
-Aranthangi,TMK,1991,Tamil Nadu,193,1,GEN,S. THIRUNAVUKKARASU,M,0,,73571,130301,#222,Pudukkottai
+Aranthangi,TMC,1991,Tamil Nadu,193,1,GEN,S. THIRUNAVUKKARASU,M,0,,73571,130301,#222,Pudukkottai
 Aranthangi,ADMK,1991,Tamil Nadu,193,2,GEN,CHELLIAH KUZHA,M,0,,52150,130301,#b2d33c,Pudukkottai
 Aranthangi,BJP,1991,Tamil Nadu,193,3,GEN,MUTHUVEL A. K.,M,0,,2254,130301,#ff7f0e,Pudukkottai
 Aranthangi,IND,1991,Tamil Nadu,193,4,GEN,GANI ROWTHER A.,M,0,,835,130301,#bdc3c7,Pudukkottai
@@ -10941,7 +10941,7 @@ Kadaladi,TMM,1991,Tamil Nadu,202,6,GEN,RAJENDRAN P.,M,0,,178,101619,#222,
 Kadaladi,IND,1991,Tamil Nadu,202,7,GEN,SHAJAHAN S.,M,0,,134,101619,#bdc3c7,
 Mudhukulathur,INC,1991,Tamil Nadu,203,1,GEN,BALAKRISHNAN S.,M,0,,40065,95981,#2ecc71,Ramanathapuram
 Mudhukulathur,PMK,1991,Tamil Nadu,203,2,GEN,JOHN PANDIAN S.,M,0,,29021,95981,#d35400,Ramanathapuram
-Mudhukulathur,TMK,1991,Tamil Nadu,203,3,GEN,MURUGAN K.,M,0,,25499,95981,#222,Ramanathapuram
+Mudhukulathur,TMC,1991,Tamil Nadu,203,3,GEN,MURUGAN K.,M,0,,25499,95981,#222,Ramanathapuram
 Mudhukulathur,IND,1991,Tamil Nadu,203,4,GEN,MUTHUMANI THEVAR M.,M,0,,786,95981,#bdc3c7,Ramanathapuram
 Mudhukulathur,TMM,1991,Tamil Nadu,203,5,GEN,RANGARAJ S.,M,0,,261,95981,#222,Ramanathapuram
 Mudhukulathur,IND,1991,Tamil Nadu,203,6,GEN,MATHAVAN R.,M,0,,212,95981,#bdc3c7,Ramanathapuram
@@ -10960,7 +10960,7 @@ Aruppukkottai,IND,1991,Tamil Nadu,204,11,GEN,THANIKKODI E.,M,0,,67,96730,#bdc3c7
 Aruppukkottai,IND,1991,Tamil Nadu,204,12,GEN,PALANI K.,M,0,,53,96730,#bdc3c7,Virudhunagar
 Aruppukkottai,IND,1991,Tamil Nadu,204,13,GEN,TAMIL MURUGAN A.,M,0,,52,96730,#bdc3c7,Virudhunagar
 Aruppukkottai,IND,1991,Tamil Nadu,204,14,GEN,VEERASAMY AGAMUDAIYAR R.,M,0,,38,96730,#bdc3c7,Virudhunagar
-Sattur,TMK,1991,Tamil Nadu,205,1,GEN,RAMACHANDARAN K.K.S.S.R.,M,0,,59942,123261,#222,Virudhunagar
+Sattur,TMC,1991,Tamil Nadu,205,1,GEN,RAMACHANDARAN K.K.S.S.R.,M,0,,59942,123261,#222,Virudhunagar
 Sattur,ADMK,1991,Tamil Nadu,205,2,GEN,SANNASI KARUPPASAMY,M,0,,57703,123261,#b2d33c,Virudhunagar
 Sattur,PMK,1991,Tamil Nadu,205,3,GEN,GNANASEKARAN M.,M,0,,1673,123261,#d35400,Virudhunagar
 Sattur,IND,1991,Tamil Nadu,205,4,GEN,SOUNDURAMALINGAM P.,M,0,,375,123261,#bdc3c7,Virudhunagar
@@ -11047,7 +11047,7 @@ Srivilliputhur,IND,1991,Tamil Nadu,208,8,GEN,G. UTHAYASOORIYAN,M,0,,168,113502,#
 Srivilliputhur,IND,1991,Tamil Nadu,208,9,GEN,G. MUNISAMY,M,0,,143,113502,#bdc3c7,Virudhunagar
 Srivilliputhur,TDI,1991,Tamil Nadu,208,10,GEN,M. SOMASUNDARAM,M,0,,121,113502,#222,Virudhunagar
 Rajapalayam,ADMK,1991,Tamil Nadu,209,1,SC,T. SATHIAH,M,0,,68657,108212,#b2d33c,Virudhunagar
-Rajapalayam,TMK,1991,Tamil Nadu,209,2,SC,K. DHUNUSKEDI,M,0,,37169,108212,#222,Virudhunagar
+Rajapalayam,TMC,1991,Tamil Nadu,209,2,SC,K. DHUNUSKEDI,M,0,,37169,108212,#222,Virudhunagar
 Rajapalayam,IND,1991,Tamil Nadu,209,3,SC,M. POOMARI,M,0,,687,108212,#bdc3c7,Virudhunagar
 Rajapalayam,IND,1991,Tamil Nadu,209,4,SC,M. SONAI,M,0,,640,108212,#bdc3c7,Virudhunagar
 Rajapalayam,PMK,1991,Tamil Nadu,209,5,SC,T. SAKTHIVEL,M,0,,392,108212,#d35400,Virudhunagar
@@ -11138,7 +11138,7 @@ Tirunelveli,IND,1991,Tamil Nadu,218,11,GEN,NAGARAJAN A.S.,M,0,,59,100516,#bdc3c7
 Tirunelveli,IND,1991,Tamil Nadu,218,12,GEN,BAGAVATHILA PILLAI P.,M,0,,52,100516,#bdc3c7,Tirunelveli
 Tirunelveli,IND,1991,Tamil Nadu,218,13,GEN,KARUPPASAMI R.,M,0,,41,100516,#bdc3c7,Tirunelveli
 Palayamkottai,ADMK,1991,Tamil Nadu,219,1,GEN,DHARAMALINGAM P.,M,0,,45141,97909,#b2d33c,Tirunelveli
-Palayamkottai,TMK,1991,Tamil Nadu,219,2,GEN,KARUPPASAMY PANDIAN V.,M,0,,38250,97909,#222,Tirunelveli
+Palayamkottai,TMC,1991,Tamil Nadu,219,2,GEN,KARUPPASAMY PANDIAN V.,M,0,,38250,97909,#222,Tirunelveli
 Palayamkottai,MUL,1991,Tamil Nadu,219,3,GEN,MUHAMMED MEERAN MOHIDEEN L.K.S.,M,0,,12429,97909,#222,Tirunelveli
 Palayamkottai,TMM,1991,Tamil Nadu,219,4,GEN,DANIEL RATHINAM I.,M,0,,474,97909,#222,Tirunelveli
 Palayamkottai,JP,1991,Tamil Nadu,219,5,GEN,NOORL HAMEEM A.,M,0,,341,97909,#222,Tirunelveli
@@ -29567,7 +29567,7 @@ Gudalur,MNM,2021,Tamil Nadu,109,6,GEN,"BABU, J.",,,GEN,960,138257,#222,
 Gudalur,OTH,2021,Tamil Nadu,109,8,GEN,"JAYAPRAKASH, P.",,,GEN,322,138257,#222,
 Gudalur,IND,2021,Tamil Nadu,109,7,GEN,"SARAVANAN, M.",,,GEN,421,138257,#bdc3c7,
 Gudalur,NOTA,2021,Tamil Nadu,109,5,GEN,NOTA,,,GEN,1017,138257,#222,
-Coonoor,TMC,2021,Tamil Nadu,110,9,GEN,"Prabhu Inbadass, S.",,,GEN,404,135908,#222,
+Coonoor,AITC,2021,Tamil Nadu,110,9,GEN,"Prabhu Inbadass, S.",,,GEN,404,135908,#222,
 Coonoor,DMK,2021,Tamil Nadu,110,1,GEN,"Ramachandran, K.",,,GEN,61820,135908,#c0392b,
 Coonoor,ADMK,2021,Tamil Nadu,110,2,GEN,"Vinoth, D.",,,GEN,57715,135908,#b2d33c,
 Coonoor,OTH,2021,Tamil Nadu,110,8,GEN,"Arumugam, R.",,,GEN,439,135908,#222,
@@ -31136,7 +31136,7 @@ Periyakulam,IND,2021,Tamil Nadu,199,10,GEN,M.RAJENDRAN,,,GEN,242,201797,#bdc3c7,
 Periyakulam,NOTA,2021,Tamil Nadu,199,6,GEN,NOTA,,,GEN,2451,201797,#222,
 Bodinayakkanur,DMK,2021,Tamil Nadu,200,2,GEN,THANGATAMILSELVAN,,,GEN,89029,214795,#c0392b,
 Bodinayakkanur,ADMK,2021,Tamil Nadu,200,1,GEN,O.PANNEERSELVAM,,,GEN,100050,214795,#b2d33c,
-Bodinayakkanur,TMC,2021,Tamil Nadu,200,7,GEN,K.I.M HAKKEEM,,,GEN,559,214795,#222,
+Bodinayakkanur,AITC,2021,Tamil Nadu,200,7,GEN,K.I.M HAKKEEM,,,GEN,559,214795,#222,
 Bodinayakkanur,MIP,2021,Tamil Nadu,200,13,GEN,ARUN KUMAR,,,GEN,143,214795,#222,
 Bodinayakkanur,MNM,2021,Tamil Nadu,200,5,GEN,P.GANESH KUMAR,,,GEN,4128,214795,#222,
 Bodinayakkanur,OTH,2021,Tamil Nadu,200,20,GEN,P.KARUPPIAH,,,GEN,77,214795,#222,
