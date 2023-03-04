@@ -17,7 +17,7 @@
   <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2021 West Bengal Election,West Bengal Assembly Election Results 2021 'A visual guide to the check out the history of West Bengal Assembly elections, from 2011 until 2021', Which of the Dravidian duos might get the stronghold in West Bengal? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
   <meta name="news_keywords" content="West Bengal polls, West Bengal assembly polls, jayalalithaa, chennai floods, West Bengal elections, West Bengal assembly elections, chennai news, West Bengal news, india news">
   <meta name="keywords" content="West Bengal polls, West Bengal assembly polls, jayalalithaa, chennai floods, West Bengal elections, West Bengal assembly elections, chennai news, West Bengal news, india news">
-  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/basic.css" rel="stylesheet">
   <link href="css/feature.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
@@ -26,25 +26,25 @@
   <link href="css/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css">
   <link rel="shortcut icon" href="/./images/logo.png">
-  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/d3.v4.min.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
-  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
-  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/underscore-min.js"></script>
-  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>  
+  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
-  <meta property="og:title"  content="ASSEMBLY ELECTIONS 2011 - 2021 (West Bengal)" /> 
-  <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2021/West Bengal.html" /> 
-  <meta property="og:description" content="West Bengal Assembly Election Results 2021 'A visual guide to the check out West Bengal Assembly elections results, from 2011 until 2021'" /> 
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 2011 - 2021 (West Bengal)" />
+  <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2021/West Bengal.html" />
+  <meta property="og:description" content="West Bengal Assembly Election Results 2021 'A visual guide to the check out West Bengal Assembly elections results, from 2011 until 2021'" />
   <html itemscope itemtype="https://schema.org/Blog">
   <meta itemprop="description" content="West Bengal Assembly Election Results 2021 'A visual guide to the check out West Bengal Assembly elections results, from 2011 until 2021'">
   <meta itemprop="name" content="ASSEMBLY ELECTIONS 2011 - 2021 (West Bengal)">
-  <meta property="og:image" content="https://data-analytics.github.io/images/west_bengal.png" /> 
+  <meta property="og:image" content="https://data-analytics.github.io/images/west_bengal.png" />
   <meta itemprop="image" content="https://data-analytics.github.io/images/west_bengal.png">
   <script type="text/javascript" src="js/topojson.min.js"></script>
-  <title>Assembly Elections 2011 - 2021 (West Bengal)</title>  
+  <title>Assembly Elections 2011 - 2021 (West Bengal)</title>
   <style>
 
       body {
@@ -97,7 +97,7 @@
                     <h2>Assembly Election Results <i class="year_tag"></i> Party Standings</h2>
                 </div>    
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
@@ -139,14 +139,14 @@
                               <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
                               <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
                               <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                              </g>                      
+                              </g>
                             </svg>
                     <div class="col-md-1"></div> 
                     <div class="col-md-10"> 
-                     <div class="overall_view_report">                     
+                     <div class="overall_view_report">
                      </div>
                     </div>
-                    <div class="col-md-1"></div> 
+                    <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>
@@ -164,9 +164,9 @@
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>Assembly Elections View By Individual Elections <i class="year_tag"></i></h2>
-                </div>    
+                </div>
             </div>
-            <div class="row">           
+            <div class="row">
                 <div class=" col-md-12 panel-body">
             
                     <div class="dropdown header_year">
@@ -187,7 +187,7 @@
                         <select multiple="multiple" id="year_2016" class="select_year"></select>
                         <label value="year">based on 2021 : </label>
                         <select multiple="multiple" id="year_2021" class="select_year"></select>
-                        <input type="button" value="submit" class="party_filter"></input> 
+                        <input type="button" value="submit" class="party_filter"></input>
                     </p>
                        
                      <div class="chart">  
@@ -244,9 +244,9 @@
                     <h2 class="headers_constituency">Assembly Elections year <i class="year_tag"></i> for Constituency<i class="constituency_tag"></i></h2>
                 </div>    
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
-                     <div class="chart">  
+                     <div class="chart">
                     <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                           <g class="headers" transform="translate(80,0)">
                               <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#4A9F88"></rect>
@@ -277,7 +277,7 @@
                               <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
                               <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
                               <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                              </g>                      
+                              </g>
                             </svg>
                         <div class="col-md-4 panel-body">
                         <div class="progress_bar"></div>
@@ -299,20 +299,20 @@
         <div class="container">
           
             <div class="row">
-            <div class="col-md-12 panel panel-default">   
+            <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>party wise performance trend <i class="year_tag"></i></h2>
-                </div>    
-           </div>    
-<div class="row">           
+                </div>
+           </div>
+           <div class="row">
                 <div class=" col-md-12 panel-body">
 
                           <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
 
-                                    <li data-year="2021" class="2021_id"><a href="?year=2021#party_Trend">2021 results</a></li>                                    
+                                    <li data-year="2021" class="2021_id"><a href="?year=2021#party_Trend">2021 results</a></li>
                                     <li data-year="2016" class="2016_id"><a href="?year=2016#party_Trend">2016 results</a></li>
                                     <li data-year="2011" class="2011_id"><a href="?year=2011#party_Trend">2011 results</a></li>
                                     
@@ -368,13 +368,13 @@
     <div class="container">
           
             <div class="row">
-            <div class="col-md-12 panel panel-default">   
+            <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>Party Transitions Trend across successive elections<i class="successive_year_tag"></i></h2>
-                </div>    
+                </div>
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
                     
                     <div  class="sankey_chart">
@@ -426,14 +426,14 @@
 color_map = {"RSMP": "#000180","SP":"#ADB13E","GJM":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AITC":"#4A9F88","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCP":"#1f77b4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","LJP":"#4747ff","LJP(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","JD(U)":"#363636"};
 
  $(window).scroll(function() {
-        if ($(this).scrollTop() >= 50) {        
-            $('#return-to-top').fadeIn(200);    
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
         }else {
-            $('#return-to-top').fadeOut(200);   
+            $('#return-to-top').fadeOut(200);
         }
     });
 
-    $('#return-to-top').click(function() {     
+    $('#return-to-top').click(function() {
         $('body,html').animate({
             scrollTop : 0
         }, 500);
@@ -739,7 +739,7 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                     .attr("selected","")
                     .text(function (d) { return d['PARTY']; });
 
-      var select_box = d3.select('#year_2016')     
+      var select_box = d3.select('#year_2016')
                 .selectAll("option")
                     .data(party_2016.filter(function(d) { return d['PARTY']!='' }))
                     .enter().append("option")
@@ -748,7 +748,7 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                     .attr("selected","")
                     .text(function (d) { return d['PARTY']; });
 
-      var select_box = d3.select('#year_2021')     
+      var select_box = d3.select('#year_2021')
                 .selectAll("option")
                     .data(party_2021.filter(function(d) { return d['PARTY']!='' }))
                     .enter().append("option")
@@ -1064,7 +1064,7 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
                 }
 
             });
-            o.score  = (o.value*100/o.contest).toFixed(2);            
+            o.score  = (o.value*100/o.contest).toFixed(2);
         });
         
         radius = Math.min(width, height) / 2,
@@ -1173,7 +1173,7 @@ var paths = sankey.link();
               .rollup(function(v) { return v.length; })
               .entries(year_data_set_2016);
        
-		}
+        }
         
   graph = {"nodes" : [], "links" : []};
     
@@ -1193,7 +1193,7 @@ var paths = sankey.link();
     graph.nodes_all = _.uniq(graph.nodes, function(item, key, a) { return item['name']; });
     graph.nodes =[]
    
-    graph.nodes_all.forEach(function (d, i) {       
+    graph.nodes_all.forEach(function (d, i) {
        graph.nodes.push(d.name)
     });
      
@@ -1205,7 +1205,7 @@ var paths = sankey.link();
 
      //now loop through each nodes to make nodes an array of objects
      // rather than an array of strings
-     graph.nodes.forEach(function (d, i) {       
+     graph.nodes.forEach(function (d, i) {
        graph.nodes[i] = { "name": d };
      });
 
