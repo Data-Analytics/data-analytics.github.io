@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!------------------------------------------------------------
  Name:        data-analytics.github.io
- Purpose:     Data visualisation and analytics examples 
+ Purpose:     Data visualisation and analytics examples
  Author:      sushanth
- Created:     3-10-2017
- Modified:    12-06-2021
- Copyright:  (c) sushanth 2021
+ Created:     5-3-2023
+ Modified:    5-3-2023
+ Copyright:  (c) sushanth 2023
  Licence:     protected(not suppose to use it directly)
 -------------------------------------------------------------->
 <html>
@@ -182,7 +182,7 @@
                         <label value="year">based on 2011 : </label>
                         <select multiple="multiple" id="year_2011" class="select_year"></select>&nbsp;&nbsp;
                         <label value="year">based on 2016 : </label>
-                        <select multiple="multiple" id="year_2016" class="select_year"></select>
+                        <select multiple="multiple" id="year_2016" class="select_year"></select>&nbsp;&nbsp;
                         <label value="year">based on 2021 : </label>
                         <select multiple="multiple" id="year_2021" class="select_year"></select>
                         <input type="button" value="submit" class="party_filter"></input>
@@ -301,9 +301,9 @@
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>party wise performance trend <i class="year_tag"></i></h2>
-                </div>    
-           </div>    
-<div class="row">           
+                </div>
+           </div>
+           <div class="row">
                 <div class=" col-md-12 panel-body">
 
                           <div class="dropdown header_year">
@@ -360,17 +360,17 @@
             </div>
     </div>
     </div>
-    </div> 
+    </div>
 <div id="sankeyFlow">
     <div class="container-fluid">
     <div class="container">
           
             <div class="row">
-            <div class="col-md-12 panel panel-default">   
+            <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>Party Transitions Trend across successive elections<i class="successive_year_tag"></i></h2>
-                </div>    
+                </div>
            </div>
            <div class="row">
                 <div class=" col-md-12 panel-body">
@@ -422,16 +422,16 @@
 color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","AIUDF":"#A99888","BBC":"#363636","UPPL":"#F3ED13","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","MG":"#FAEA75","AAP":"#61a220","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","AGP":"#1F77B4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NPF":"#B78332","PML":"#363636","BOPF":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","GVP":"#014BC6","GVP(M)":"#014BC6","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","NPF":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","AIDUF":"#dbabab","NPP":"#363636","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","LJP":"#363636","NPF":"#363636","JD(U)":"#363636"};
 
  $(window).scroll(function() {
-        if ($(this).scrollTop() >= 50) {        
-            $('#return-to-top').fadeIn(200);    
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
         }else {
-            $('#return-to-top').fadeOut(200);   
+            $('#return-to-top').fadeOut(200);
         }
     });
 
-    $('#return-to-top').click(function() {     
+    $('#return-to-top').click(function() {
         $('body,html').animate({
-            scrollTop : 0             
+            scrollTop : 0
         }, 500);
     });
 

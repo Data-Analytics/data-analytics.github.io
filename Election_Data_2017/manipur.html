@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!------------------------------------------------------------
  Name:        data-analytics.github.io
- Purpose:     Data visualisation and analytics examples 
+ Purpose:     Data visualisation and analytics examples
  Author:      sushanth
- Created:     3-10-2017
- Modified:    3-11-2017
- Copyright:  (c) sushanth 2017
+ Created:     5-3-2023
+ Modified:    5-3-2023
+ Copyright:  (c) sushanth 2023
  Licence:     protected(not suppose to use it directly)
 -------------------------------------------------------------->
 <html manifest="election.appcache">
@@ -17,7 +17,7 @@
   <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2017 Manipur Election,Manipur Assembly Election Results 2017 'A visual guide to the check out the comparison of Manipur Assembly elections, from 2012 to 2017', Which of the Dravidian duos might get the stronghold in Manipur? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
   <meta name="news_keywords" content="Manipur polls, Manipur assembly polls, jayalalithaa, chennai floods, Manipur elections, Manipur assembly elections, chennai news, Manipur news, india news">
   <meta name="keywords" content="Manipur polls, Manipur assembly polls, jayalalithaa, chennai floods, Manipur elections, Manipur assembly elections, chennai news, Manipur news, india news">
-  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/basic.css" rel="stylesheet">
   <link href="css/feature.css" rel="stylesheet">
   <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -27,26 +27,26 @@
   <link href="css/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css">
   <link rel="shortcut icon" href="/./images/logo.png">
-  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/d3.v4.min.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
-  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
-  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/underscore-min.js"></script>
-  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>  
+  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> 
-  <meta property="og:title"  content="ASSEMBLY ELECTIONS 2012 - 2017 (Manipur)" /> 
-  <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2017/Manipur.html" /> 
-  <meta property="og:description" content="Manipur Assembly Election Results 2017 'A visual guide to the check out the comparison of Manipur Assembly elections, from 2012 to 2017'" /> 
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 2012 - 2022 (Manipur)" />
+  <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2022/Manipur.html" />
+  <meta property="og:description" content="Manipur Assembly Election Results 2022 'A visual guide to the check out the comparison of Manipur Assembly elections, from 2012 to 2022'" /> 
   <html itemscope itemtype="https://schema.org/Blog">
-  <meta itemprop="description" content="Manipur Assembly Election Results 2017 'A visual guide to the check out the comparison of Manipur Assembly elections, from 2012 to 2017'">
-  <meta itemprop="name" content="ASSEMBLY ELECTIONS 2012 - 2017 (Manipur)">
-  <meta property="og:image" content="https://data-analytics.github.io/images/manipur.png" /> 
+  <meta itemprop="description" content="Manipur Assembly Election Results 2022 'A visual guide to the check out the comparison of Manipur Assembly elections, from 2012 to 2022'">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 2012 - 2022 (Manipur)">
+  <meta property="og:image" content="https://data-analytics.github.io/images/manipur.png" />
   <meta itemprop="image" content="https://data-analytics.github.io/images/manipur.png">
   <script type="text/javascript" src="js/topojson.min.js"></script>
-  <title>Assembly Elections 2012 - 2017 (Manipur)</title>  
+  <title>Assembly Elections 2012 - 2022 (Manipur)</title>  
   <style>
 
       body {
@@ -67,6 +67,12 @@
         font-size: .7em;
         text-shadow: 0px 0px 2px #fff;
       }
+
+  .uneditable-input, input[type=text], select, textarea {
+    width: 150px !important;
+    margin: 0 auto;
+    }
+
     </style>
   </head>
   <body>
@@ -74,7 +80,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 header-logo">
-                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Manipur Assembly Election Results 2017, 'A visual guide to the check out the comparison of Manipur Assembly elections from 2012 to 2017</p>
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Manipur Assembly Election Results 2022, 'A visual guide to the check out the comparison of Manipur Assembly elections from 2012 to 2022</p>
                     <p class="synopsis">This interactive  map will bring you results, from state standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
                     <p class="synopsis">It aims to make the past 2 Assembly elections in Manipur  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
 
@@ -93,11 +99,12 @@
                     <h2>Assembly Election Results <i class="year_tag"></i> Party Standings</h2>
                 </div>    
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                <li data-year="2022" class="2022_id"><a href="?year=2022#overall_view">2022 results</a></li>
                                 <li data-year="2017" class="2017_id"><a href="?year=2017#overall_view">2017 results</a></li>
                                 <li data-year="2012" class="2012_id"><a href="?year=2012#overall_view">2012 results</a></li>
                             </ul>
@@ -162,12 +169,13 @@
                     <h2>Assembly Elections View By Individual Elections <i class="year_tag"></i></h2>
                 </div>    
             </div>
-            <div class="row">           
+            <div class="row">
                 <div class=" col-md-12 panel-body">
             
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                <li data-year="2022" class="2022_id"><a href="?year=2022#individual_hold">2022 results</a></li>
                                 <li data-year="2017" class="2017_id"><a href="?year=2017#individual_hold">2017 results</a></li>
                                 <li data-year="2012" class="2012_id"><a href="?year=2012#individual_hold">2012 results</a></li>
                             </ul>
@@ -175,12 +183,15 @@
                       
                     <p class="form-inline header_form" >
                         <label align="left" >Search:</label>
-                        <input type="text" class="geo_search" placeholder="eg: ludhiana ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="geo_search" placeholder="eg: Heingang ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <label value="year">based on 2012 : </label>
                         <select multiple="multiple" id="year_2012" class="select_year"></select>&nbsp;&nbsp;
                         <label value="year">based on 2017 : </label>
-                        <select multiple="multiple" id="year_2017" class="select_year"></select>
-                        <input type="button" value="submit" class="party_filter"></input> 
+                        <select multiple="multiple" id="year_2017" class="select_year"></select>&nbsp;&nbsp;
+                        <label value="year">based on 2022 : </label>
+                        <select multiple="multiple" id="year_2022" class="select_year"></select>
+                        <input type="button" value="submit" class="party_filter"></input>
+
                     </p>
                        
                      <div class="chart">  
@@ -292,22 +303,21 @@
         <div class="container">
           
             <div class="row">
-            <div class="col-md-12 panel panel-default">   
+            <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>party wise performance trend <i class="year_tag"></i></h2>
-                </div>    
-           </div>    
-<div class="row">           
+                </div>
+           </div>
+           <div class="row">
                 <div class=" col-md-12 panel-body">
 
                           <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
-                                    
-                                    <li data-year="2016" class="2017_id"><a href="?year=2017#party_Trend">2017 results</a></li>
-                                    <li data-year="2011" class="2012_id"><a href="?year=2012#party_Trend">2012 results</a></li>
-                                    
+                                    <li data-year="2022" class="2022_id"><a href="?year=2022#party_Trend">2022 results</a></li>
+                                    <li data-year="2017" class="2017_id"><a href="?year=2017#party_Trend">2017 results</a></li>
+                                    <li data-year="2012" class="2012_id"><a href="?year=2012#party_Trend">2012 results</a></li>
                               </ul>
                       </div>
                       
@@ -419,14 +429,14 @@
     <div class="container">
           
             <div class="row">
-            <div class="col-md-12 panel panel-default">   
+            <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>Party Transitions Trend across successive elections<i class="successive_year_tag"></i></h2>
-                </div>    
+                </div>
            </div>
-           <div class="row">           
-                <div class=" col-md-12 panel-body">                   
+           <div class="row">
+                <div class=" col-md-12 panel-body">
                     <div  class="sankey_chart">
                          <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
@@ -474,22 +484,21 @@
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
     <script>
 
-color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AITC":"#4A9F88","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCP":"#1f77b4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","LJP":"#4747ff","LJP(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","JD(U)":"#363636"};
+color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","KPA":"#363636","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AITC":"#4A9F88","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCP":"#1f77b4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","LJP":"#4747ff","LJP(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","JD(U)":"#363636"};
 
  $(window).scroll(function() {
-        if ($(this).scrollTop() >= 50) {        
-            $('#return-to-top').fadeIn(200);    
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
         }else {
-            $('#return-to-top').fadeOut(200);   
+            $('#return-to-top').fadeOut(200);
         }
     });
 
-    $('#return-to-top').click(function() {     
+    $('#return-to-top').click(function() {
         $('body,html').animate({
-            scrollTop : 0             
+            scrollTop : 0
         }, 500);
     });
-
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -505,10 +514,10 @@ function tabulate(data, columns) {
         
         $('.party_trend').empty()
         
-        color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AITC":"#4A9F88","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCP":"#1f77b4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","LJP":"#4747ff","LJP(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","JD(U)":"#363636"};
+        color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","KPA":"#363636","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AITC":"#4A9F88","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCP":"#1f77b4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","LJP":"#4747ff","LJP(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","JD(U)":"#363636"};
         
         var table = d3.select('.party_trend')
-                        .append('table')                   
+                        .append('table')
                         .attr("id","myTable")
                         .attr("class","table table-bordered");
     
@@ -539,7 +548,7 @@ function tabulate(data, columns) {
           })
           .enter()
           .append('td')
-          .attr("bgcolor",function(d) { return color_map[d.value] })            
+          .attr("bgcolor",function(d) { return color_map[d.value] })
           .append("font")
           .style("color",function(d) { return color_map[d.value] == undefined ? "#636363" : ((parseInt(color_map[d.value].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })                          
           .text(function (d) { return d.value; });
@@ -548,15 +557,16 @@ function tabulate(data, columns) {
    
     }
 
-function map_filter(year_2012,year_2017,other_data){
+function map_filter(year_2012,year_2017,year_2022,other_data){
     var centered;
 
-    color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AITC":"#4A9F88","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCP":"#1F77B4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","LJP":"#4747ff","LJP(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","JD(U)":"#363636"};
+    color_map = {"NPP":"#b2d33c","AIFB":"#FFAD01","NPF":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","KPA":"#363636","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","ADS":"#f1c40f","AITC":"#4A9F88","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","UKDP":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MAG":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","GVP":"#014BC6","NA":"#363636","NCP":"#1F77B4","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","NISHAD":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","LJP":"#4747ff","LJP(M)":"#4747ff","TMK":"#363636","VCK":"#363636","WBSP":"#363636","WPI":"#363636","KNA":"#363636","MHU":"#363636","MPP":"#363636","MRP":"#FAEA75","MSCP":"#dbabab","DRPP":"#363636","#N/A":"#363636","SAP":"#363636","JD(U)":"#363636"};
 
     map_data = other_data.filter(function(d){return (d.YEAR==year_detail) & (d['#']==1) })
 
     map_data_12 = other_data.filter(function(d){return (d.YEAR==2012) & (d['#']==1) })
     map_data_17 = other_data.filter(function(d){return (d.YEAR==2017) & (d['#']==1) })
+    map_data_22 = other_data.filter(function(d){return (d.YEAR==2022) & (d['#']==1) })
     
     map_data.forEach(function(o) {
         map_data_12.forEach(function(o_12) {
@@ -569,14 +579,22 @@ function map_filter(year_2012,year_2017,other_data){
                 o['17_PARTY'] = o_17['PARTY']
               }
         });
+        map_data_22.forEach(function(o_22) {
+           if (o_22.ac == o.ac){
+                o['22_PARTY'] = o_22['PARTY']
+              }
+        });
     });
-     
-   var map_data_2012 = []
+
+    var map_data_2012 = []
                     _.each(map_data, function(d) { if(_.contains(year_2012, d['12_PARTY'])) { map_data_2012.push(d);}});
+
+    var map_data_2017 = []
+                    _.each(map_data_2012, function(d) { if(_.contains(year_2017, d['17_PARTY'])) { map_data_2017.push(d);}});
    
     var map_data = []
-                    _.each(map_data_2012, function(d) { if(_.contains(year_2017, d['17_PARTY'])) { map_data.push(d);}});
-    
+                    _.each(map_data_2017, function(d) { if(_.contains(year_2022, d['22_PARTY'])) { map_data.push(d);}});
+
     var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
        
        var margin = {top: 20, right: 20, bottom: 20, left: 20},
@@ -762,9 +780,10 @@ var lastsearch = '';
       }
       }
 year_detail = getParameterByName('year');
-if (year_detail == undefined){ year_detail= 2017; }
+if (year_detail == undefined){ year_detail= 2022; }
 $(".year_tag").append("("+year_detail+")");
-$(".successive_year_tag").append(" (2012 - 2017)");
+if (year_detail==2022) { $(".successive_year_tag").append(" (2017 - 2022)"); } else { $(".successive_year_tag").append(" (2012 - 2017)"); }
+
 $('.'+year_detail+'_id').addClass('active');
 acct_no = getParameterByName('acct_no');
 if (acct_no == undefined){ $(".detail_display").hide(); }
@@ -798,6 +817,7 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
   
     year_data_set_2012 = map_data.filter(function(d){return (d.YEAR==2012 & d['#']==1)  })
     year_data_set_2017 = map_data.filter(function(d){return (d.YEAR==2017 & d['#']==1)  })
+    year_data_set_2022 = map_data.filter(function(d){return (d.YEAR==2022 & d['#']==1)  })
     
     year_data_set_2012.forEach(function(p) {
         year_data_set_2017.forEach(function(o) {
@@ -808,8 +828,18 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
         });
     });
 
+    year_data_set_2017.forEach(function(p) {
+        year_data_set_2022.forEach(function(o) {
+            if(p.AC_NO==o.AC_NO)
+            {
+            o['O_PARTY'] = p['PARTY']
+            }
+        });
+    });
+
     party_2012 = _.uniq(year_data_set_2012, function(item, key, a) { return item['PARTY']; });
     party_2017 = _.uniq(year_data_set_2017, function(item, key, a) { return item['PARTY']; });
+    party_2022 = _.uniq(year_data_set_2022, function(item, key, a) { return item['PARTY']; });
     
     var select_box = d3.select('#year_2012')
                 .selectAll("option")
@@ -820,7 +850,7 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                     .attr("selected","")
                     .text(function (d) { return d['PARTY']; });
 
-      var select_box = d3.select('#year_2017')     
+      var select_box = d3.select('#year_2017')
                 .selectAll("option")
                     .data(party_2017.filter(function(d) { return d['PARTY']!='' }))
                     .enter().append("option")
@@ -829,7 +859,21 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
                     .attr("selected","")
                     .text(function (d) { return d['PARTY']; });
 
+      var select_box = d3.select('#year_2022')
+                .selectAll("option")
+                    .data(party_2022.filter(function(d) { return d['PARTY']!='' }))
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['PARTY']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['PARTY']; });
+
       $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
+
+      var year_2022 = [];
+      $('#year_2022 :selected').each(function(i, selected){
+          year_2022[i] = $(selected).val();
+      });
 
       var year_2017 = [];
       $('#year_2017 :selected').each(function(i, selected){
@@ -840,7 +884,8 @@ if (acct_no == undefined){ $(".detail_display").hide(); }
       $('#year_2012 :selected').each(function(i, selected){
             year_2012[i] = $(selected).val();
       });
-      map_filter(year_2012,year_2017,map_data);
+
+      map_filter(year_2012,year_2017,year_2022,map_data);
 
       var year_data_sets = d3.nest()
               .key(function(d) { return d['PARTY']; })
@@ -1213,7 +1258,23 @@ var sankey = d3.sankey()
 
 var paths = sankey.link();
 
-year_data_set_2017.forEach(function (d) {
+    if (year_detail==2022){
+       year_data_set_2022.forEach(function (d) {
+        d.source_year =d['O_PARTY']
+        d.target_year =d['PARTY'] 
+        d.combined_year =d.source_year+'_'+d.target_year 
+        });
+
+        year_data_set_2022 = year_data_set_2022.filter(function(d){return (d.source_year!='') & (d.target_year!='') })
+        
+        var data_Count = d3.nest()
+              .key(function(d) { return d.combined_year; })
+              .rollup(function(v) { return v.length; })
+              .entries(year_data_set_2022);
+        
+        }else{
+
+         year_data_set_2017.forEach(function (d) {
         d.source_year =d['O_PARTY']
         d.target_year =d['PARTY'] 
         d.combined_year =d.source_year+'_'+d.target_year 
@@ -1225,7 +1286,9 @@ year_data_set_2017.forEach(function (d) {
               .key(function(d) { return d.combined_year; })
               .rollup(function(v) { return v.length; })
               .entries(year_data_set_2017);
-        
+
+    }
+
   graph = {"nodes" : [], "links" : []};
     
     name_list = []
@@ -1244,7 +1307,7 @@ year_data_set_2017.forEach(function (d) {
     graph.nodes_all = _.uniq(graph.nodes, function(item, key, a) { return item['name']; });
     graph.nodes =[]
    
-    graph.nodes_all.forEach(function (d, i) {       
+    graph.nodes_all.forEach(function (d, i) {
        graph.nodes.push(d.name)
     });
      
@@ -1256,7 +1319,7 @@ year_data_set_2017.forEach(function (d) {
 
      //now loop through each nodes to make nodes an array of objects
      // rather than an array of strings
-     graph.nodes.forEach(function (d, i) {       
+     graph.nodes.forEach(function (d, i) {
        graph.nodes[i] = { "name": d };
      });
 
@@ -1266,7 +1329,7 @@ year_data_set_2017.forEach(function (d) {
     .layout(32);
 
  svg.selectAll(".head")
-      .data(['2012','2017'])
+      .data(year_detail==2022? ['2017','2022'] : ['2012','2017'])
     .enter().append("text")
       .attr("y", -4)
       .attr("font-size",21)
@@ -1360,6 +1423,11 @@ year_data_set_2017.forEach(function (d) {
 
 $('.party_filter').click( function(n) {
 
+ var year_2022 = [];
+      $('#year_2022 :selected').each(function(i, selected){
+          year_2022[i] = $(selected).val();
+      });
+
  var year_2017 = [];
       $('#year_2017 :selected').each(function(i, selected){
           year_2017[i] = $(selected).val();
@@ -1380,7 +1448,7 @@ $('.party_filter').click( function(n) {
           o.vote_percent = parseFloat(o.vote_percent);
           });
   d3.select('.geo_map').select('svg').remove();
-  map_filter(year_2012,year_2017,map_data);
+  map_filter(year_2012,year_2017,year_2022,map_data);
   
   });
 });
