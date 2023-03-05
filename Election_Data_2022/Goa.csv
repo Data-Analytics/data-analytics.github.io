@@ -1,0 +1,848 @@
+#,AC_NAME,AC_NO,NAME,PARTY,VOTES,YEAR,polled_votes,vote_percent
+1,Mandrem,1,Laxmikant Parsekar,BJP,11955,2012,25928,46.11
+2,Mandrem,1,Dayanand Raghunath,INC,8520,2012,25928,32.86
+3,Mandrem,1,Sameer Salgaocar,AITC,4591,2012,25928,17.71
+4,Mandrem,1,Menino Francis Monteiro,GVP,295,2012,25928,1.14
+5,Mandrem,1,Sanjay Prabhu Dessai,IND,292,2012,25928,1.13
+6,Mandrem,1,Sanjay Damu Kole,SJP(R),275,2012,25928,1.06
+1,Pernem,2,Rajendra Arlekar,BJP,16406,2012,25890,63.37
+2,Pernem,2,Manohar Trimbak,INC,8053,2012,25890,31.1
+3,Pernem,2,Subhash Barkelo Kerkar,IND,824,2012,25890,3.18
+4,Pernem,2,Sakharam Vishram,IND,192,2012,25890,0.74
+5,Pernem,2,Kanta Sabaji Jadhav,AITC,151,2012,25890,0.58
+6,Pernem,2,Manohar Rajaram,SJP(R),96,2012,25890,0.37
+7,Pernem,2,Rajan Kambli,IND,61,2012,25890,0.24
+8,Pernem,2,Shyam Bablo Amonkar,RPI(A),57,2012,25890,0.22
+9,Pernem,2,Santosh Shankar,UGDP,50,2012,25890,0.19
+1,Bicholim,3,Naresh Rajaram Sawal,IND,8331,2012,20994,39.68
+2,Bicholim,3,Rajesh T. Patnekar,INC,6532,2012,20994,31.11
+3,Bicholim,3,Manohar Pandurang,BJP,5411,2012,20994,25.77
+4,Bicholim,3,Pandurang Dattaram,AITC,720,2012,20994,3.43
+1,Tivim,4,Kiran Mohan Kandolkar,BJP,10473,2012,20314,51.56
+2,Tivim,4,Nilkanth Ramnath,NCP,9361,2012,20314,46.08
+3,Tivim,4,Deelip Datta Chodankar,GVP,204,2012,20314,1
+4,Tivim,4,Indrakant Dattaram,IND,167,2012,20314,0.82
+5,Tivim,4,Dattaram Govind Sawant,SHS,109,2012,20314,0.54
+1,Mapusa,5,Francis D'Souza,BJP,14955,2012,20209,74
+2,Mapusa,5,Ashish Tulshidas,NCP,4786,2012,20209,23.68
+3,Mapusa,5,Francisca De Souza,IND,280,2012,20209,1.39
+4,Mapusa,5,Mittu Mujavar,AITC,188,2012,20209,0.93
+1,Siolim,6,Dayanand Mandrekar,BJP,11430,2012,21635,52.83
+2,Siolim,6,Uday Dattaram Paliemkar,INC,9259,2012,21635,42.8
+3,Siolim,6,Rajan Savlo Ghate,SJP(R),352,2012,21635,1.63
+4,Siolim,6,Abhijit Dhargalkar,JMBP,274,2012,21635,1.27
+5,Siolim,6,Ratikant Shankar,IND,254,2012,21635,1.17
+6,Siolim,6,Mukesh Madhukar,SP,66,2012,21635,0.31
+1,Saligao,7,Dilip Parulekar,BJP,10084,2012,19409,51.96
+2,Saligao,7,D'Souza Tulio,IND,4276,2012,19409,22.03
+3,Saligao,7,Suresh V. Parulekar,NCP,1729,2012,19409,8.91
+4,Saligao,7,Francisco Colaco,IND,1192,2012,19409,6.14
+5,Saligao,7,Paul Fernandes,IND,1135,2012,19409,5.85
+6,Saligao,7,Trajano D'Mello,IND,625,2012,19409,3.22
+7,Saligao,7,Gajanan Rama Naik,CPI,166,2012,19409,0.86
+8,Saligao,7,Osbert Manuel D'Cunha,IND,74,2012,19409,0.38
+9,Saligao,7,Alex Camil Rodrigues,IND,65,2012,19409,0.33
+10,Saligao,7,Manoj Anand Sangodkar,AIMF,63,2012,19409,0.32
+1,Calangute,8,Michael Vincent Lobo,BJP,9891,2012,18348,53.91
+2,Calangute,8,Agnelo Nicholas,INC,8022,2012,18348,43.72
+3,Calangute,8,Jose Paul Menino Silveira,IND,240,2012,18348,1.31
+4,Calangute,8,Ashley Francisco Gomes,IND,195,2012,18348,1.06
+1,Porvorim,9,Rohan Khaunte,IND,7972,2012,16631,47.93
+2,Porvorim,9,Govind Parvatkar,BJP,7071,2012,16631,42.52
+3,Porvorim,9,Fermeena P. Khaunte,NCP,1217,2012,16631,7.32
+4,Porvorim,9,Umesh Sukha Narvekar,IND,232,2012,16631,1.39
+5,Porvorim,9,Raju D'Souza,SJP(R),139,2012,16631,0.84
+1,Aldona,10,Ticlo Glenn J V A E Souza,BJP,11315,2012,20289,55.77
+2,Aldona,10,Dayanand G. Narvekar,INC,7839,2012,20289,38.64
+3,Aldona,10,Wilfred D'Souza,AITC,643,2012,20289,3.17
+4,Aldona,10,Ravindra Vasudev,IND,256,2012,20289,1.26
+5,Aldona,10,Julius Pereira,GSRP,236,2012,20289,1.16
+1,Panaji,11,Manohar Parrikar,BJP,11086,2012,16763,66.13
+2,Panaji,11,Yatin Parekh,INC,5018,2012,16763,29.93
+3,Panaji,11,Christopher Fonseca,CPI,383,2012,16763,2.28
+4,Panaji,11,Dominic Savio A.,JD(U),172,2012,16763,1.03
+5,Panaji,11,Balaram Karishetty,IND,104,2012,16763,0.62
+1,Taleigao,12,Jennifer A. Monserrate,INC,10682,2012,20996,50.88
+2,Taleigao,12,Dattaprasad Madhukar,BJP,9531,2012,20996,45.39
+3,Taleigao,12,Annabelle Maria Pereira,GSRP,333,2012,20996,1.59
+4,Taleigao,12,Natty Po,SJP(R),226,2012,20996,1.08
+5,Taleigao,12,Vasudev Narayan Sharma,IND,143,2012,20996,0.68
+6,Taleigao,12,Sanjay C. Korgaonkar,IND,81,2012,20996,0.39
+1,Santa Cruz,13,Atanasio J. Monserrate,INC,8644,2012,21381,40.43
+2,Santa Cruz,13,Rodolfo Louis,IND,6308,2012,21381,29.5
+3,Santa Cruz,13,Dinar Purshottam Kamat,MAG,5824,2012,21381,27.24
+4,Santa Cruz,13,Pedro Caitano Pires,CPI,221,2012,21381,1.03
+5,Santa Cruz,13,Xavier Cardo,IND,189,2012,21381,0.88
+6,Santa Cruz,13,Dinesh Nair,IND,79,2012,21381,0.37
+7,Santa Cruz,13,Jose Lopes,IND,74,2012,21381,0.35
+8,Santa Cruz,13,Heney Lobo,IND,42,2012,21381,0.2
+1,Santo Andre,14,Vishnu Surya Naik Wagh,BJP,8818,2012,17209,51.24
+2,Santo Andre,14,Francisco Silveira,INC,7599,2012,17209,44.16
+3,Santo Andre,14,Pradip Kumar Sangodkar,IND,440,2012,17209,2.56
+4,Santo Andre,14,Milton S. Marshal,AITC,352,2012,17209,2.05
+1,Cumbarjua,15,Pandurang A. Madkaikar,INC,9556,2012,19817,48.22
+2,Cumbarjua,15,Nirmala P. Sawant,IND,7981,2012,19817,40.27
+3,Cumbarjua,15,Jose Bismarque,IND,1996,2012,19817,10.07
+4,Cumbarjua,15,Pramod Naik,JMBP,155,2012,19817,0.78
+5,Cumbarjua,15,Gaurish M. Dessai,IND,129,2012,19817,0.65
+1,Maem,16,Anant Shet,BJP,12054,2012,22411,53.79
+2,Maem,16,Pravin Zantye,IND,6335,2012,22411,28.27
+3,Maem,16,Rudresh Chodankar,NCP,3585,2012,22411,16
+4,Maem,16,Kamlakant Gadekar,CPM,225,2012,22411,1
+5,Maem,16,Deepkumar Mapari,IND,212,2012,22411,0.95
+1,Sanquelim,17,Pramod Sawant,BJP,14255,2012,21592,66.02
+2,Sanquelim,17,Pratap Gauns,INC,7337,2012,21592,33.98
+1,Poriem,18,Pratapsingh Raoji Rane,INC,13772,2012,24997,55.09
+2,Poriem,18,Vishwajit Krishnarao,BJP,11225,2012,24997,44.91
+1,Valpoi,19,Vishwajit Pratapsingh,INC,12412,2012,23129,53.66
+2,Valpoi,19,Satyavijay Subrai Naik,BJP,9473,2012,23129,40.96
+3,Valpoi,19,Venkatesh Atmaram,IND,805,2012,23129,3.48
+4,Valpoi,19,Ravindra Talaulikar,IND,255,2012,23129,1.1
+5,Valpoi,19,Gajendranath,IND,184,2012,23129,0.8
+1,Priol,20,Pandurang Alias Deepak,MAG,12264,2012,24668,49.72
+2,Priol,20,Govind Gaude,IND,10164,2012,24668,41.2
+3,Priol,20,Dhaku A. Madkaikar,INC,1625,2012,24668,6.59
+4,Priol,20,Shashi Panjikar,AITC,414,2012,24668,1.68
+5,Priol,20,Rama Krishna Borkar,GVP,201,2012,24668,0.81
+1,Ponda,21,Lavoo Mamledar,MAG,12662,2012,23230,54.51
+2,Ponda,21,Ravi Naik,INC,9472,2012,23230,40.77
+3,Ponda,21,Sayad Imtiyaz,AITC,502,2012,23230,2.16
+4,Ponda,21,Gitesh Gokuldas Naik,UGDP,223,2012,23230,0.96
+5,Ponda,21,Mohan Govind Naik,IND,189,2012,23230,0.81
+6,Ponda,21,Vaibhav P Marathe,SP,91,2012,23230,0.39
+6,Ponda,21,John Mascarenhas,IND,91,2012,23230,0.39
+1,Siroda,22,Mahadev Narayan Naik,BJP,12216,2012,22984,53.15
+2,Siroda,22,Subhash Ankush,INC,9954,2012,22984,43.31
+3,Siroda,22,Vishwas Prabhudesai,IND,422,2012,22984,1.84
+4,Siroda,22,Shaila Shenvi Borkar,AITC,230,2012,22984,1
+5,Siroda,22,Savio Fernandes,SP,162,2012,22984,0.7
+1,Marcaim,23,Ramkrishna Alias Sudin,MAG,14952,2012,22674,65.94
+2,Marcaim,23,Ritesh Naik,INC,7722,2012,22674,34.06
+1,Mormugao,24,Milind Sagun Naik,BJP,7419,2012,16236,45.69
+2,Mormugao,24,Sankalp Padmanabh,INC,6506,2012,16236,40.07
+3,Mormugao,24,Nazir Khan,IND,1710,2012,16236,10.53
+4,Mormugao,24,Jerry Fernandes,AITC,346,2012,16236,2.13
+5,Mormugao,24,Narayan Ramchandra,IND,154,2012,16236,0.95
+6,Mormugao,24,Gopal Dattaram,JMBP,64,2012,16236,0.39
+7,Mormugao,24,Shantaram Vasudev,SHS,37,2012,16236,0.23
+1,Vasco Da Gama,25,Jose Luis Carlos Almeida,BJP,11468,2012,21751,52.72
+2,Vasco Da Gama,25,Jose Filepe D'Souza,NCP,6978,2012,21751,32.08
+3,Vasco Da Gama,25,G. Karl Vaz,IND,1394,2012,21751,6.41
+4,Vasco Da Gama,25,Mohammed Iqbal Shaikh,GVP,600,2012,21751,2.76
+5,Vasco Da Gama,25,Adam Abdulla Jumma,UGDP,489,2012,21751,2.25
+6,Vasco Da Gama,25,Amindin Mulla,AITC,328,2012,21751,1.51
+7,Vasco Da Gama,25,Stanley C.Almeida,IND,143,2012,21751,0.66
+8,Vasco Da Gama,25,Hamza Issak Khan,AIMF,106,2012,21751,0.49
+9,Vasco Da Gama,25,Gluck D'Souza,JD(U),104,2012,21751,0.48
+10,Vasco Da Gama,25,Prashant Mahadev,IND,77,2012,21751,0.35
+11,Vasco Da Gama,25,Jagdish Yadu Durbhatkar,SHS,64,2012,21751,0.29
+1,Dabolim,26,Mauvin Heliodoro,INC,7468,2012,15274,48.89
+2,Dabolim,26,Premanand Nanoskar,MAG,6524,2012,15274,42.71
+3,Dabolim,26,Pratap Mardolkar,AITC,849,2012,15274,5.56
+4,Dabolim,26,Simon D'Souza,IND,433,2012,15274,2.83
+1,Cortalim,27,Matanhy Saldanha,BJP,7427,2012,20422,36.37
+2,Cortalim,27,Nelly Rodrigues,GVP,5158,2012,20422,25.26
+3,Cortalim,27,Ramakant Borkar,UGDP,3716,2012,20422,18.2
+4,Cortalim,27,Caitan Xavier,INC,3393,2012,20422,16.61
+5,Cortalim,27,Tolentino D'Souza,AITC,728,2012,20422,3.56
+1,Nuvem,28,Francisco Xavier,GVP,12288,2012,21597,56.9
+2,Nuvem,28,Aleixo Sequeira,INC,8092,2012,21597,37.47
+3,Nuvem,28,Abdul Aziz Hassansha,IND,482,2012,21597,2.23
+4,Nuvem,28,Marcos Menino D'Souza,IND,279,2012,21597,1.29
+5,Nuvem,28,Prabhakar Rupo Gaude,MAG,250,2012,21597,1.16
+6,Nuvem,28,Peter Francisco,IND,206,2012,21597,0.95
+1,Curtorim,29,Aleixo Reginaldo,INC,11221,2012,19647,57.11
+2,Curtorim,29,Domnic Gaonkar,IND,7152,2012,19647,36.4
+3,Curtorim,29,Raju Krishnamurthy Iyer,IND,603,2012,19647,3.07
+4,Curtorim,29,Conceicao Santano Dias,UGDP,515,2012,19647,2.62
+5,Curtorim,29,William D'Cruz,JD(U),156,2012,19647,0.79
+1,Fatorda,30,Vijai Sardesai,IND,10375,2012,21441,48.39
+2,Fatorda,30,Damodar (Damu) G. Naik,BJP,8436,2012,21441,39.35
+3,Fatorda,30,Arthur D'Silva,IND,1126,2012,21441,5.25
+4,Fatorda,30,Piedade Noronha E Silva,AITC,695,2012,21441,3.24
+5,Fatorda,30,M. K. Shaikh,INC,660,2012,21441,3.08
+6,Fatorda,30,Ashok Tukaram,SP,57,2012,21441,0.27
+7,Fatorda,30,Dias Jawahar,IND,47,2012,21441,0.22
+8,Fatorda,30,Anwar Sayed,AIMF,45,2012,21441,0.21
+1,Margao,31,Digambar Kamat,INC,12041,2012,22149,54.36
+2,Margao,31,Mahatme Rupesh,BJP,7589,2012,22149,34.26
+3,Margao,31,Coutinho Savio Hugo,AITC,1873,2012,22149,8.46
+4,Margao,31,Ivo Almeida Coutinho,IND,396,2012,22149,1.79
+5,Margao,31,Cedric Isidorio D'Costa,IND,250,2012,22149,1.13
+1,Benaulim,32,Caetano R. Silva,GVP,9695,2012,21097,45.95
+2,Benaulim,32,Valanka Alemao,INC,7694,2012,21097,36.47
+3,Benaulim,32,Humberto Gomes,IND,1775,2012,21097,8.41
+4,Benaulim,32,John Fernandes,AITC,1277,2012,21097,6.05
+5,Benaulim,32,Ashley Francis Dias,IND,289,2012,21097,1.37
+6,Benaulim,32,P. Xavier George,IND,245,2012,21097,1.16
+7,Benaulim,32,Subhash Shivnath,IND,122,2012,21097,0.58
+1,Navelim,33,Avertano Furtado,IND,10231,2012,18780,54.48
+2,Navelim,33,Churchill Alemao,INC,8086,2012,18780,43.06
+3,Navelim,33,Iliyas Shaikh,IND,261,2012,18780,1.39
+4,Navelim,33,Jose Paul Coutinho,JD(U),202,2012,18780,1.08
+1,Cuncolim,34,Subhash Alias Rajan,BJP,7738,2012,20740,37.31
+2,Cuncolim,34,Alemao Joaquim,INC,6425,2012,20740,30.98
+3,Cuncolim,34,John Inacio Monteiro,IND,4830,2012,20740,23.29
+4,Cuncolim,34,Milagres Gonsalves,IND,603,2012,20740,2.91
+5,Cuncolim,34,Jose Alias Brany,UGDP,543,2012,20740,2.62
+6,Cuncolim,34,Mario Morais,AITC,325,2012,20740,1.57
+7,Cuncolim,34,Rony Rodrigues,IND,191,2012,20740,0.92
+8,Cuncolim,34,Derick Dias,JD(U),85,2012,20740,0.41
+1,Velim,35,Benjamin Silva,IND,13164,2012,22128,59.49
+2,Velim,35,Filipe Nery Rodrigues,INC,8238,2012,22128,37.23
+3,Velim,35,Cliffton Desouza,IND,386,2012,22128,1.74
+4,Velim,35,Michael Beny Da Costa,AITC,340,2012,22128,1.54
+1,Quepem,36,Chandrakant Kavalekar,INC,10994,2012,24861,44.22
+2,Quepem,36,Prakash Shankar Velip,IND,4621,2012,24861,18.59
+3,Quepem,36,Prakash Arjun Velip,MAG,4536,2012,24861,18.25
+4,Quepem,36,Colaco Manuel,UGDP,4356,2012,24861,17.52
+5,Quepem,36,Joseph Gonsalves,GVP,354,2012,24861,1.42
+1,Curchorem,37,Nilesh Cabral,BJP,14299,2012,19806,72.2
+2,Curchorem,37,Shyam Gopinath,INC,5507,2012,19806,27.8
+1,Sanvordem,38,Ganesh Chandru,BJP,10585,2012,23344,45.34
+2,Sanvordem,38,Arjun Anil Salgaocar,IND,8294,2012,23344,35.53
+3,Sanvordem,38,Ramnath Alias Deepak,IND,2828,2012,23344,12.11
+4,Sanvordem,38,Govind Sawant,INC,1328,2012,23344,5.69
+5,Sanvordem,38,Prashant Budho,CPM,309,2012,23344,1.32
+1,Sanguem,39,Subhash U. Phal Dessai,BJP,7454,2012,21501,34.67
+2,Sanguem,39,Alemao Yuri,NCP,6971,2012,21501,32.42
+3,Sanguem,39,Prasad Shashikant,IND,5737,2012,21501,26.68
+4,Sanguem,39,D'Costa Minguelino,GVP,880,2012,21501,4.09
+5,Sanguem,39,Eddie De Souza Tavares,IND,227,2012,21501,1.06
+6,Sanguem,39,Arun Krishna Raikar,AITC,134,2012,21501,0.62
+7,Sanguem,39,Sudesh N. Gaonkar,SP,98,2012,21501,0.46
+1,Canacona,40,Ramesh Bombo Tawadkar,BJP,14328,2012,26589,53.89
+2,Canacona,40,Isidore Aleixinho,INC,11624,2012,26589,43.72
+3,Canacona,40,Sapnesh Desai,AITC,637,2012,26589,2.4
+1,Mandrem,1,Dayanand Raghunath Sopte,INC,16490,2017,27966,58.96
+2,Mandrem,1,Laxmikant Parsekar,BJP,9371,2017,27966,33.51
+3,Mandrem,1,Shridhar Ladu Manjrekar,MAG,678,2017,27966,2.42
+4,Mandrem,1,Devendra Krishnaji Prabhu Parsekar Desai,AAP,620,2017,27966,2.22
+6,Mandrem,1,Rajendra M. Satelkar,NCP,234,2017,27966,0.84
+7,Mandrem,1,Sanjay Krishnarao Prabhu Desai,IND,101,2017,27966,0.36
+8,Mandrem,1,Bhim Raghuvir Pednekar,BMP,57,2017,27966,0.2
+5,Mandrem,1,None Of The Above,NOTA,415,2017,27966,1.48
+1,Pernem ,2,Ajgaonkar Manohar Trimbak,MAG,15745,2017,27730,56.78
+2,Pernem ,2,Rajendra Arlekar,BJP,9715,2017,27730,35.03
+3,Pernem ,2,Vikesh Ramesh Assotikar,INC,1013,2017,27730,3.65
+5,Pernem ,2,Shivanand Krishna Pilarnkar,AAP,308,2017,27730,1.11
+6,Pernem ,2,Gopaldas Anant Arlekar,GVP,180,2017,27730,0.65
+7,Pernem ,2,Santosh Shankar Mandrekar,NCP,124,2017,27730,0.45
+8,Pernem ,2,Nitin Mohan Chopdekar,BMP,105,2017,27730,0.38
+9,Pernem ,2,Dnyaneswar Sitaram Varkhankar,GPP,71,2017,27730,0.26
+4,Pernem ,2,None Of The Above,NOTA,469,2017,27730,1.69
+1,Bicholim,3,Rajesh Patnekar,BJP,10654,2017,23306,45.71
+2,Bicholim,3,Naresh Sawal,MAG,9988,2017,23306,42.86
+3,Bicholim,3,Manohar Pandurang Shirodkar,INC,1761,2017,23306,7.56
+4,Bicholim,3,Sainath Patekar,AAP,358,2017,23306,1.54
+5,Bicholim,3,Raut Pandurang Dattaram,GPP,324,2017,23306,1.39
+6,Bicholim,3,None Of The Above,NOTA,221,2017,23306,0.95
+1,Tivim,4,Nilkanth Ramnath Halarnkar,INC,11099,2017,22560,49.2
+2,Tivim,4,Kiran Mohan Kandolkar,BJP,10304,2017,22560,45.67
+3,Tivim,4,Pradeep Amonkar Ghadi,AAP,703,2017,22560,3.12
+4,Tivim,4,Douglas Lawrence Sequeira,NCP,275,2017,22560,1.22
+5,Tivim,4,None Of The Above,NOTA,179,2017,22560,0.79
+1,Mapusa,5,Francisco C. J. A. De Pinto E Souza,BJP,10957,2017,22764,48.13
+2,Mapusa,5,Vinod Fadke,MAG,4129,2017,22764,18.14
+3,Mapusa,5,Vijay Laxman Bhike,INC,3013,2017,22764,13.24
+4,Mapusa,5,Shraddha Khalap,AAP,2321,2017,22764,10.2
+5,Mapusa,5,Domnic Alphonso,IND,1543,2017,22764,6.78
+7,Mapusa,5,Sanjay Vithu Barde,NCP,289,2017,22764,1.27
+8,Mapusa,5,Rameshwari Morajkar,GSRP,103,2017,22764,0.45
+6,Mapusa,5,None Of The Above,NOTA,409,2017,22764,1.8
+1,Siolim,6,Vinoda Datarama Paliencar,GFP,10189,2017,23496,43.36
+2,Siolim,6,Dayanand Rayu Mandrekar,BJP,8748,2017,23496,37.23
+3,Siolim,6,Vishnu Mhaddu Naik,AAP,1854,2017,23496,7.89
+4,Siolim,6,Patrick Savio Almeida,IND,1497,2017,23496,6.37
+5,Siolim,6,Paresh Raikar,GSM,532,2017,23496,2.26
+6,Siolim,6,Abhijit Dhargalkar,NCP,275,2017,23496,1.17
+8,Siolim,6,Janardan Narahari Tamhankar,BMP,116,2017,23496,0.49
+9,Siolim,6,Mukesh Sawant,IND,73,2017,23496,0.31
+7,Siolim,6,None Of The Above,NOTA,212,2017,23496,0.9
+1,Saligao,7,Jayesh Vidyadhar Salgaonkar,GFP,9735,2017,21028,46.3
+2,Saligao,7,Dilip Parulekar,BJP,7598,2017,21028,36.13
+3,Saligao,7,Agnelo Nicholas Fernandes,INC,1616,2017,21028,7.68
+4,Saligao,7,Dattatraya Vittal Padgaonkar,AAP,1330,2017,21028,6.32
+5,Saligao,7,Rajesh Dabholkar,SHI,428,2017,21028,2.04
+7,Saligao,7,Gajanan Rama Naik,CPI,150,2017,21028,0.71
+6,Saligao,7,None Of The Above,NOTA,171,2017,21028,0.81
+1,Calangute,8,Michael Vincent Lobo,BJP,11136,2017,20084,55.45
+2,Calangute,8,Joseph Robert Sequeira,INC,7311,2017,20084,36.4
+3,Calangute,8,Godwin Fernandes,AAP,1465,2017,20084,7.29
+4,Calangute,8,None Of The Above,NOTA,172,2017,20084,0.86
+1,Porvorim,9,Rohan Khaunte,IND,11174,2017,19656,56.85
+2,Porvorim,9,Guruprasad R. Pawaskar,BJP,6961,2017,19656,35.41
+3,Porvorim,9,Rajesh Valvaikar,AAP,846,2017,19656,4.3
+4,Porvorim,9,Rajesh Vishnu Sinai Amonkar Alias Rajesh Amonkar,MAG,222,2017,19656,1.13
+6,Porvorim,9,Wilbur Fredrick Ticlo,IND,144,2017,19656,0.73
+7,Porvorim,9,Raju D\'Souza,SJP,133,2017,19656,0.68
+5,Porvorim,9,None Of The Above,NOTA,176,2017,19656,0.9
+1,Aldona,10,Glenn Souza Ticlo,BJP,9405,2017,21606,43.53
+2,Aldona,10,Amarnath Panjikar,INC,4949,2017,21606,22.91
+3,Aldona,10,Rosy Ursula D\'Souza,AAP,3272,2017,21606,15.14
+4,Aldona,10,Mahesh Vithu Satelkar,MAG,3000,2017,21606,13.89
+5,Aldona,10,Anandrao Narayanrao Nagvenkar,IND,643,2017,21606,2.98
+7,Aldona,10,Osbert D\'Cunha,NCP,141,2017,21606,0.65
+6,Aldona,10,None Of The Above,NOTA,196,2017,21606,0.91
+1,Panaji,11,Sidharth Sripad Kuncalienker,BJP,7924,2017,17339,45.7
+2,Panaji,11,Atanasio J. Monserrate,UGP,6855,2017,17339,39.54
+3,Panaji,11,Valmiki Naik,AAP,1944,2017,17339,11.21
+4,Panaji,11,Ketan Kirtikumar Prabhu Bhatikar,GSM,323,2017,17339,1.86
+6,Panaji,11,Dominic Savio A. E. Fernandes,NCP,62,2017,17339,0.36
+7,Panaji,11,Dilip Ghadi,IND,36,2017,17339,0.21
+8,Panaji,11,Parshuram Dodamani,IND,20,2017,17339,0.12
+5,Panaji,11,None Of The Above,NOTA,175,2017,17339,1.01
+1,Taleigao,12,Jennifer Monserrate,INC,11534,2017,22556,51.13
+2,Taleigao,12,Dattaprasad Naik,BJP,8679,2017,22556,38.48
+3,Taleigao,12,Cecille Rodrigues,AAP,1976,2017,22556,8.76
+5,Taleigao,12,Vijay V. More,IND,115,2017,22556,0.51
+4,Taleigao,12,None Of The Above,NOTA,252,2017,22556,1.12
+1,St. Cruz,13,Antonio Caetano  Fernandes,INC,6202,2017,22215,27.92
+2,St. Cruz,13,Hemant Dinanath Golatkar,BJP,5560,2017,22215,25.03
+3,St. Cruz,13,Rodolfo Louis Fernandes,IND,5262,2017,22215,23.69
+4,St. Cruz,13,Prakash Gopi Naik,MAG,2707,2017,22215,12.19
+5,St. Cruz,13,Jose Vincent Gomes,AAP,1712,2017,22215,7.71
+7,St. Cruz,13,Helena Lourenco,IND,227,2017,22215,1.02
+8,St. Cruz,13,Pedro Caitano Pires Alias Peter Pires,CPI,106,2017,22215,0.48
+9,St. Cruz,13,Shakeel Jamal Shaikh,NCP,75,2017,22215,0.34
+10,St. Cruz,13,Jose Lopes,IND,61,2017,22215,0.27
+6,St. Cruz,13,None Of The Above,NOTA,303,2017,22215,1.36
+1,St. Andre,14,Francisco Silveira,INC,8087,2017,16554,48.85
+2,St. Andre,14,Ramrao Surya Naik Wagh,BJP,3017,2017,16554,18.23
+3,St. Andre,14,Jagdish Umakant Bhobe,MAG,2393,2017,16554,14.46
+4,St. Andre,14,Dhaku Arjun Madkaikar,IND,1285,2017,16554,7.76
+5,St. Andre,14,Rama Gurudas Kankonkar,AAP,979,2017,16554,5.91
+6,St. Andre,14,Dattaram Naguesh Chari,NCP,325,2017,16554,1.96
+8,St. Andre,14,Simao Aleixo Caiado,IND,143,2017,16554,0.86
+9,St. Andre,14,Sunil Savlo Kerkar,IND,97,2017,16554,0.59
+10,St. Andre,14,Leocardio A. D. Monteiro,GSRP,47,2017,16554,0.28
+11,St. Andre,14,Ashwin Menino Rosario,IND,29,2017,16554,0.18
+7,St. Andre,14,None Of The Above,NOTA,152,2017,16554,0.92
+1,Cumbarjua,15,Pandurang Madkaikar,BJP,12395,2017,20556,60.3
+2,Cumbarjua,15,Xavier Fialho,INC,3961,2017,20556,19.27
+3,Cumbarjua,15,Prakash Dattaram Naik,AAP,2394,2017,20556,11.65
+4,Cumbarjua,15,Vishal Shambu Volvoikar,IND,990,2017,20556,4.82
+5,Cumbarjua,15,Prasad Harmalkar,IND,468,2017,20556,2.28
+6,Cumbarjua,15,None Of The Above,NOTA,348,2017,20556,1.69
+1,Maem,16,Pravin  Zantye,BJP,12430,2017,24108,51.56
+2,Maem,16,Santosh Kumar Sawant,INC,7456,2017,24108,30.93
+3,Maem,16,Atmaram Vaman Gaonker,GSM,2317,2017,24108,9.61
+4,Maem,16,Subhash Narsinha Kinalkar,NCP,528,2017,24108,2.19
+5,Maem,16,Ajeetsingh Vamanrao Rane,AAP,525,2017,24108,2.18
+7,Maem,16,Prabhakar Laximan Gaonkar,IND,174,2017,24108,0.72
+8,Maem,16,Deepkumar D Mapari,IND,159,2017,24108,0.66
+9,Maem,16,Ashok Anant Gaonkar,IND,142,2017,24108,0.59
+6,Maem,16,None Of The Above,NOTA,377,2017,24108,1.56
+1,Sanquelim,17,Dr. Pramod Pandurang Sawant,BJP,10058,2017,23700,42.44
+2,Sanquelim,17,Dharmesh Saglani,INC,7927,2017,23700,33.45
+3,Sanquelim,17,Suresh Amonkar,GSM,3831,2017,23700,16.16
+4,Sanquelim,17,Pratap Prabhakar Gauns,NCP,857,2017,23700,3.62
+5,Sanquelim,17,Milind Gauns,AAP,408,2017,23700,1.72
+7,Sanquelim,17,Mahesh Shantaram Parab,IND,218,2017,23700,0.92
+8,Sanquelim,17,Moulali Shaikh,GSRP,72,2017,23700,0.3
+6,Sanquelim,17,None Of The Above,NOTA,329,2017,23700,1.39
+1,Poriem,18,Pratapsingh R Rane,INC,14977,2017,27596,54.27
+2,Poriem,18,Vishwajit Krishnarao Rane,BJP,10911,2017,27596,39.54
+4,Poriem,18,Suhas Gajanan Naik,MAG,469,2017,27596,1.7
+5,Poriem,18,Sitaram Anant Gawas,AAP,403,2017,27596,1.46
+6,Poriem,18,Ajit Sadanand Mhalshekar,IND,284,2017,27596,1.03
+3,Poriem,18,None Of The Above,NOTA,552,2017,27596,2
+1,Valpoi,19,Vishwajit Pratapsingh Rane,INC,13493,2017,25326,53.28
+2,Valpoi,19,Satyavijay Subrai Naik,BJP,7815,2017,25326,30.86
+3,Valpoi,19,Vijay Atmaram Gaonkar,MAG,3246,2017,25326,12.82
+4,Valpoi,19,Ashish V. Kanekar,AAP,410,2017,25326,1.62
+5,Valpoi,19,None Of The Above,NOTA,362,2017,25326,1.43
+1,Priol,20,Govind Gaude,IND,15149,2017,26945,56.22
+2,Priol,20,Pandurang Alias Deepak Madhav Dhavalikar,MAG,10463,2017,26945,38.83
+3,Priol,20,Dr. Dattaram B. Dessai,AAP,456,2017,26945,1.69
+5,Priol,20,Ramkrishna B. Jalmi,INC,429,2017,26945,1.59
+4,Priol,20,None Of The Above,NOTA,448,2017,26945,1.66
+1,Ponda,21,Ravi Sitaram Naik,INC,9502,2017,25095,37.86
+2,Ponda,21,Sunil Desai,BJP,6492,2017,25095,25.87
+3,Ponda,21,Rajesh Verekar,IND,4529,2017,25095,18.05
+4,Ponda,21,Lavoo Mamledar,MAG,3796,2017,25095,15.13
+5,Ponda,21,Mulla Mansur Muzawar,AAP,522,2017,25095,2.08
+6,Ponda,21,None Of The Above,NOTA,254,2017,25095,1.01
+1,Siroda,22,Subhash Ankush Shirodkar,INC,11156,2017,24624,45.31
+2,Siroda,22,Mahadev Narayan Naik,BJP,6286,2017,24624,25.53
+3,Siroda,22,Abhay Ramchandra Prabhu,MAG,5815,2017,24624,23.62
+4,Siroda,22,Molu Anand Velip,AAP,586,2017,24624,2.38
+5,Siroda,22,Nilesh Govind Gaonkar,IND,447,2017,24624,1.82
+7,Siroda,22,Diya Chandrakant Shetkar,IND,140,2017,24624,0.57
+6,Siroda,22,None Of The Above,NOTA,194,2017,24624,0.79
+1,Marcaim,23,Ramkrishna Alias Sudin Dhavalikar,MAG,17093,2017,23356,73.18
+2,Marcaim,23,Pradeep Pundalik Shet,BJP,3413,2017,23356,14.61
+3,Marcaim,23,Urmila Alias Vindiksha Vinod Naik,INC,1259,2017,23356,5.39
+4,Marcaim,23,Surel Datta Tilve,AAP,971,2017,23356,4.16
+6,Marcaim,23,Hanumant Vasant Naik,IND,244,2017,23356,1.04
+5,Marcaim,23,None Of The Above,NOTA,376,2017,23356,1.61
+1,Mormugao,24,Milind Sagun Naik,BJP,8466,2017,17340,48.82
+2,Mormugao,24,Sankalp Amonkar,INC,8326,2017,17340,48.02
+3,Mormugao,24,Giovanni Karl Vaz,AAP,267,2017,17340,1.54
+5,Mormugao,24,Sanjay Naik,SHI,51,2017,17340,0.29
+6,Mormugao,24,Parashuram Umaji Sonurlekar,IND,48,2017,17340,0.28
+7,Mormugao,24,Maria Liberata Mendonca,IND,31,2017,17340,0.18
+4,Mormugao,24,None Of The Above,NOTA,151,2017,17340,0.87
+1,Vasco-Da-Gama,25,Jose Luis Carlos Almeida,BJP,8765,2017,26099,33.58
+2,Vasco-Da-Gama,25,Krishna (Daji) V Salkar,IND,7414,2017,26099,28.41
+3,Vasco-Da-Gama,25,Jose Filipe De Sousa,NCP,4202,2017,26099,16.1
+4,Vasco-Da-Gama,25,Saifula Khan,INC,3737,2017,26099,14.32
+5,Vasco-Da-Gama,25,Loretta Shreedharan,AAP,928,2017,26099,3.56
+6,Vasco-Da-Gama,25,Manesh Chandrakant Arolkar,MAG,654,2017,26099,2.51
+8,Vasco-Da-Gama,25,Gandhi Henriques,IND,77,2017,26099,0.3
+9,Vasco-Da-Gama,25,Chandrashekher Vast,NGRF,59,2017,26099,0.23
+7,Vasco-Da-Gama,25,None Of The Above,NOTA,263,2017,26099,1.01
+1,Dabolim,26,Mauvin Heliodoro Godinho,BJP,7234,2017,17473,41.4
+2,Dabolim,26,Premanand Nanoskar,MAG,4740,2017,17473,27.13
+3,Dabolim,26,Francisco Jose Nunes,INC,2752,2017,17473,15.75
+4,Dabolim,26,Vasant (Gopi) Naik,AAP,1117,2017,17473,6.39
+5,Dabolim,26,Kritesh Naik Gaunkar,NCP,1043,2017,17473,5.97
+7,Dabolim,26,Kenneth Ian Stewart Silveira,IND,130,2017,17473,0.74
+8,Dabolim,26,Tara Govind Kerkar,IND,124,2017,17473,0.71
+9,Dabolim,26,Preetam Keluskar,IND,109,2017,17473,0.62
+10,Dabolim,26,Suresh Barve,NGRF,56,2017,17473,0.32
+6,Dabolim,26,None Of The Above,NOTA,168,2017,17473,0.96
+1,Cortalim,27,Alina Saldanha,BJP,5666,2017,23486,24.13
+2,Cortalim,27,Antonio Vas,IND,5148,2017,23486,21.92
+3,Cortalim,27,Gilbert Mariano Rodrigues,INC,4326,2017,23486,18.42
+4,Cortalim,27,Nelly Rodrigues,GVP,3380,2017,23486,14.39
+5,Cortalim,27,Olencio Simoes,AAP,2482,2017,23486,10.57
+6,Cortalim,27,Ramakant Borkar,UGP,1708,2017,23486,7.27
+7,Cortalim,27,Sharan Meti,GSRP,258,2017,23486,1.1
+9,Cortalim,27,Miguel Antonio Rodrigues,IND,177,2017,23486,0.75
+10,Cortalim,27,Suman Sharma,MAG,75,2017,23486,0.32
+11,Cortalim,27,Gilroy Costa,GPP,56,2017,23486,0.24
+8,Cortalim,27,None Of The Above,NOTA,210,2017,23486,0.89
+1,Nuvem,28,Wilfred D\'Sa,INC,9967,2017,21447,46.47
+2,Nuvem,28,Francisco Xavier Pacheco,GSRP,4307,2017,21447,20.08
+3,Nuvem,28,Mariano Godinho,AAP,3389,2017,21447,15.8
+4,Nuvem,28,Vincent Rodrigues,NCP,2880,2017,21447,13.43
+5,Nuvem,28,Dinesh Bandodkar,IND,664,2017,21447,3.1
+6,Nuvem,28,None Of The Above,NOTA,240,2017,21447,1.12
+1,Curtorim,29,Aleixo Reginaldo Lourenco,INC,12841,2017,21303,60.28
+2,Curtorim,29,Arthur D\Xc3\Xa2\Xc2\X80\Xc2\X99Silva,BJP,5144,2017,21303,24.15
+3,Curtorim,29,Edwin Domnic Vaz,AAP,2711,2017,21303,12.73
+5,Curtorim,29,Conceicao Dias,MAG,240,2017,21303,1.13
+6,Curtorim,29,Jose Paulo Fernandes,IND,118,2017,21303,0.55
+4,Curtorim,29,None Of The Above,NOTA,249,2017,21303,1.17
+1,Fatorda,30,Vijai Sardesai,GFP,10516,2017,23038,45.65
+2,Fatorda,30,Damu G. Naik,BJP,9182,2017,23038,39.86
+3,Fatorda,30,Ranjit Cotta Carvalho,AAP,1479,2017,23038,6.42
+4,Fatorda,30,Jose D\'Silva,INC,1414,2017,23038,6.14
+6,Fatorda,30,D. S. Naik (Dilip),MAG,155,2017,23038,0.67
+7,Fatorda,30,Avin Vishwanath Naik,IND,72,2017,23038,0.31
+5,Fatorda,30,None Of The Above,NOTA,220,2017,23038,0.95
+1,Margao,31,Digambar Vasant Kamat,INC,12105,2017,22353,54.15
+2,Margao,31,Sharmad Raiturkar,BJP,7929,2017,22353,35.47
+3,Margao,31,Santosh Raiturkar,AAP,1832,2017,22353,8.2
+5,Margao,31,Jayesh Raghunath Naik,MAG,216,2017,22353,0.97
+4,Margao,31,None Of The Above,NOTA,271,2017,22353,1.21
+1,Benaulim,32,Churchill Alemao,NCP,9373,2017,21314,43.98
+2,Benaulim,32,Royla Clarina Fernandes,AAP,4182,2017,21314,19.62
+3,Benaulim,32,Caetano Rosario Silva,IND,3995,2017,21314,18.74
+4,Benaulim,32,Edwino Barreto,INC,2157,2017,21314,10.12
+5,Benaulim,32,John Fernandes,GSRP,571,2017,21314,2.68
+6,Benaulim,32,Maria Da Luz Arlinda Gomes E Rebelo,GVP,492,2017,21314,2.31
+7,Benaulim,32,Judith Aurelia Baptista Almeida Alias Judith Almeida,IND,357,2017,21314,1.67
+8,Benaulim,32,None Of The Above,NOTA,187,2017,21314,0.88
+1,Navelim,33,Luizinho Faleiro,INC,8183,2017,21351,38.33
+2,Navelim,33,Avertano Furtado,IND,5705,2017,21351,26.72
+3,Navelim,33,Edwin Cardozo (Cipru),IND,3027,2017,21351,14.18
+4,Navelim,33,Satyaviajay Naik,MAG,1798,2017,21351,8.42
+5,Navelim,33,Siddharth Karapurkar,AAP,1287,2017,21351,6.03
+6,Navelim,33,Cruz Antonio Jorge Barretto,GVP,839,2017,21351,3.93
+7,Navelim,33,Duarte Pires,IND,263,2017,21351,1.23
+8,Navelim,33,None Of The Above,NOTA,249,2017,21351,1.17
+1,Cuncolim ,34,Clafasio Dias,INC,6415,2017,22440,28.59
+2,Cuncolim ,34,Joaquim Alemao,IND,6382,2017,22440,28.44
+3,Cuncolim ,34,Subhash Alias Rajan K. Naik,BJP,5047,2017,22440,22.49
+4,Cuncolim ,34,Elvis Gomes,AAP,3437,2017,22440,15.32
+5,Cuncolim ,34,John Inacio Monteiro,GVP,488,2017,22440,2.17
+6,Cuncolim ,34,Devendra Dessai,SHI,313,2017,22440,1.39
+8,Cuncolim ,34,Derick Dias,IND,111,2017,22440,0.49
+7,Cuncolim ,34,None Of The Above,NOTA,247,2017,22440,1.1
+1,Velim,35,Filipe Nery Rodrigues,INC,10417,2017,23527,44.28
+2,Velim,35,Benjamin Silva,IND,5164,2017,23527,21.95
+3,Velim,35,Cruz Silva,AAP,3423,2017,23527,14.55
+4,Velim,35,Vinay Tari,BJP,1765,2017,23527,7.5
+5,Velim,35,Anthony Rodrigues,GFP,1460,2017,23527,6.21
+6,Velim,35,Edrich Correia,IND,335,2017,23527,1.42
+8,Velim,35,Jose Fernandes,IND,236,2017,23527,1
+9,Velim,35,Domnic John Noronha,GSRP,138,2017,23527,0.59
+10,Velim,35,Frederick Borges,NCP,108,2017,23527,0.46
+11,Velim,35,Wilson Mazarello,IND,98,2017,23527,0.42
+12,Velim,35,Constancio Fernandes,IND,79,2017,23527,0.34
+13,Velim,35,Cliffton D\'Souza,API,44,2017,23527,0.19
+7,Velim,35,None Of The Above,NOTA,260,2017,23527,1.11
+1,Quepem,36,Chandrakant (Babu) Kavlekar,INC,13525,2017,26662,50.73
+2,Quepem,36,Prakash Shankar Velip,BJP,10933,2017,26662,41.01
+3,Quepem,36,Joao Fernandes,AAP,1385,2017,26662,5.19
+5,Quepem,36,Charles D\'Silva,GSRP,251,2017,26662,0.94
+6,Quepem,36,Sudesh Gaude,MAG,211,2017,26662,0.79
+4,Quepem,36,None Of The Above,NOTA,357,2017,26662,1.34
+1,Curchorem,37,Nilesh Cabral,BJP,12830,2017,21668,59.21
+2,Curchorem,37,Shyam Gopinath Satardekar,GSM,3742,2017,21668,17.27
+3,Curchorem,37,Rosario Mariano Fernandes,INC,2778,2017,21668,12.82
+4,Curchorem,37,James Fernandes,AAP,2028,2017,21668,9.36
+5,Curchorem,37,None Of The Above,NOTA,290,2017,21668,1.34
+1,Sanvordem,38,Deepak Prabhu Pauskar,MAG,14575,2017,25377,57.43
+2,Sanvordem,38,Ganesh Chandru Gaonkar,BJP,9354,2017,25377,36.86
+3,Sanvordem,38,Shankar Kirlapalkar,INC,991,2017,25377,3.91
+5,Sanvordem,38,Balkrishna Marathe,IND,152,2017,25377,0.6
+4,Sanvordem,38,None Of The Above,NOTA,305,2017,25377,1.2
+1,Sanguem,39,Prasad S. Gaonkar,IND,7636,2017,22683,33.66
+2,Sanguem,39,Subhash Phal Dessai,BJP,6699,2017,22683,29.53
+3,Sanguem,39,Savitri Kavlekar,INC,5736,2017,22683,25.29
+4,Sanguem,39,Dattaprasad Sawardekar,IND,989,2017,22683,4.36
+5,Sanguem,39,Ravindra Arjun Velip,AAP,658,2017,22683,2.9
+6,Sanguem,39,Vasudev Gaonkar,MAG,484,2017,22683,2.13
+8,Sanguem,39,Sudesh Noni Gaunkar,IND,148,2017,22683,0.65
+9,Sanguem,39,Rakhi Naik,NCP,125,2017,22683,0.55
+7,Sanguem,39,None Of The Above,NOTA,208,2017,22683,0.92
+1,Canacona,40,Isidore Aleixinho Fernandes,INC,10853,2017,28489,38.1
+2,Canacona,40,Vijay Pai Khot,BJP,8745,2017,28489,30.7
+3,Canacona,40,Ramesh Tawadkar,IND,7739,2017,28489,27.16
+4,Canacona,40,Sandesh Telekar,AAP,452,2017,28489,1.59
+5,Canacona,40,Gourish Bandekar,MAG,398,2017,28489,1.4
+6,Canacona,40,None Of The Above,NOTA,302,2017,28489,1.06
+2,Mandrem,1,DAYANAND RAGHUNATH SOPTE,BJP,9672,2022,29643,32.63
+4,Mandrem,1,DEEPAK BHALCHANDRA KALANGUTKAR,GFP,1676,2022,29643,5.65
+1,Mandrem,1,JIT VINAYAK AROLKAR,MAG,10387,2022,29643,35.04
+9,Mandrem,1,BABLI BHASKAR NAIK,SHS,119,2022,29643,0.4
+10,Mandrem,1,D\'COSTA MARIA,SBP,46,2022,29643,0.16
+6,Mandrem,1,PRASAD K. SHAHAPURKAR,AAP,268,2022,29643,0.9
+5,Mandrem,1,SUNAYANA RAJANIKANT GAWDE,RGP,1219,2022,29643,4.11
+3,Mandrem,1,LAXMIKANT PARSEKAR,IND,5811,2022,29643,19.6
+8,Mandrem,1,Satish Sitaram Shetgaonkar,IND,184,2022,29643,0.62
+7,Mandrem,1,NOTA,NOTA,261,2022,29643,0.88
+4,Pernem,2,JITENDRA YESHWANT GAONKAR,INC,1827,2022,29203,6.26
+1,Pernem,2,PRAVIN PRABHAKAR ARLEKAR,BJP,13063,2022,29203,44.73
+2,Pernem,2,RAJAN BABUSO KORGAONKAR,MAG,9645,2022,29203,33.03
+7,Pernem,2,PUNDALIK DHARGALKAR,AAP,273,2022,29203,0.93
+8,Pernem,2,SUBHASH BARKELO KERKAR,SHS,223,2022,29203,0.76
+3,Pernem,2,SUJAY D. MHAPSEKAR,RGP,2755,2022,29203,9.43
+10,Pernem,2,GURUDAS VIRNODKAR,IND,63,2022,29203,0.22
+9,Pernem,2,KAMLAKAR SHANKAR GADKAR,IND,129,2022,29203,0.44
+5,Pernem,2,VISHNUDAS KORGAONKAR,IND,862,2022,29203,2.95
+6,Pernem,2,NOTA,NOTA,363,2022,29203,1.24
+4,Bicholim,3,MEGHASHYAM VAMAN RAUT,INC,913,2022,25886,3.53
+2,Bicholim,3,NARESH RAJARAM SAWAL,MAG,9290,2022,25886,35.89
+3,Bicholim,3,RAJESH TULSHIDAS PATNEKAR,BJP,5141,2022,25886,19.86
+5,Bicholim,3,ANISH AVINASH NAIK,RGP,593,2022,25886,2.29
+1,Bicholim,3,DR. CHANDRAKANT SHETYE,IND,9608,2022,25886,37.12
+6,Bicholim,3,NOTA,NOTA,341,2022,25886,1.32
+4,Tivim,4,AMAN LOTLIKAR,INC,1262,2022,23929,5.27
+8,Tivim,4,GODFREY D\' LIMA,NCP,73,2022,23929,0.31
+2,Tivim,4,KAVITA  KANDOLKAR,AITC,7363,2022,23929,30.77
+1,Tivim,4,NILKANTH RAMNATH HALARNKAR,BJP,9414,2022,23929,39.34
+7,Tivim,4,SWAPNESH BHANUDAS SHERLEKAR,GSP,143,2022,23929,0.6
+3,Tivim,4,TUKARAM BHARAT PARAB,RGP,5051,2022,23929,21.11
+5,Tivim,4,UDAI SALKAR,AAP,421,2022,23929,1.76
+6,Tivim,4,NOTA,NOTA,202,2022,23929,0.84
+1,Mapusa,5,JOSHUA PETER DE SOUZA,BJP,10195,2022,23138,44.06
+2,Mapusa,5,SUDHIR RAMA KANDOLKAR,INC,8548,2022,23138,36.94
+4,Mapusa,5,TARAK  AROLKAR,AITC,1366,2022,23138,5.9
+7,Mapusa,5,JITESH JIVAJI KAMAT,SHS,126,2022,23138,0.54
+3,Mapusa,5,RAHUL MHAMBRE,AAP,1511,2022,23138,6.53
+5,Mapusa,5,ROHAN SALGAONKAR,RGP,996,2022,23138,4.3
+8,Mapusa,5,NEETA PARESH KHANVILKAR,IND,60,2022,23138,0.26
+9,Mapusa,5,SUDESH DIGAMBER HASOTIKAR,IND,40,2022,23138,0.17
+6,Mapusa,5,NOTA,NOTA,296,2022,23138,1.28
+2,Siolim,6,DAYANAND RAYU MANDREKAR,BJP,7972,2022,24940,31.96
+1,Siolim,6,DELILAH MICHAEL LOBO,INC,9699,2022,24940,38.89
+8,Siolim,6,LEAO F. P. DIAS,AITC,219,2022,24940,0.88
+10,Siolim,6,CHARISMA  FERNANDES,SHS,167,2022,24940,0.67
+13,Siolim,6,DIANA FERNANDES,SBP,43,2022,24940,0.17
+3,Siolim,6,GAURESH  MANDREKAR,RGP,3188,2022,24940,12.78
+14,Siolim,6,JAGANATH  GAONKAR,JMBP,35,2022,24940,0.14
+5,Siolim,6,VISHNU  NAIK,AAP,893,2022,24940,3.58
+12,Siolim,6,ANIL VAMAN KERKAR,IND,50,2022,24940,0.2
+6,Siolim,6,DATTARAM  PEDNEKAR,IND,464,2022,24940,1.86
+11,Siolim,6,PALLAVI PRADEEP DABHOLKAR,IND,113,2022,24940,0.45
+4,Siolim,6,PATRICK SAVIO ALMEIDA,IND,1482,2022,24940,5.94
+7,Siolim,6,VINOD DATTARAM PALYEKAR,IND,409,2022,24940,1.64
+9,Siolim,6,NOTA,NOTA,206,2022,24940,0.83
+6,Saligao,7,Bholanath Ghadi Sakhalkar,AITC,352,2022,22335,1.58
+2,Saligao,7,Jayesh Salgaonkar,BJP,8146,2022,22335,36.47
+1,Saligao,7,Kedar Jayprakash Naik,INC,10045,2022,22335,44.97
+4,Saligao,7,Mario Venancio Cordeiro,AAP,847,2022,22335,3.79
+3,Saligao,7,Rohan Kalangutkar,RGP,1928,2022,22335,8.63
+5,Saligao,7,Rupesh Damodar Naik,IND,805,2022,22335,3.6
+7,Saligao,7,NOTA,NOTA,212,2022,22335,0.95
+5,Calangute,8,Anthony Menezes,AITC,1690,2022,20590,8.21
+2,Calangute,8,Joseph Robert Sequeira,BJP,4306,2022,20590,20.91
+1,Calangute,8,Michael Vincent Lobo,INC,9285,2022,20590,45.09
+3,Calangute,8,Marcelino Francisco Gonsalves,RGP,2538,2022,20590,12.33
+6,Calangute,8,ROSHAN LUKE MATHIAS,GSP,561,2022,20590,2.72
+4,Calangute,8,Sudesh Suresh Mayekar,AAP,1769,2022,20590,8.59
+7,Calangute,8,Ricardo D\'Souza,IND,268,2022,20590,1.3
+8,Calangute,8,NOTA,NOTA,173,2022,20590,0.84
+1,Porvorim,9,Rohan Khaunte,BJP,11714,2022,21237,55.16
+2,Porvorim,9,Sandeep Vazarkar,AITC,3764,2022,21237,17.72
+6,Porvorim,9,Shankar Phadte,NCP,156,2022,21237,0.73
+3,Porvorim,9,Vikas Ramchandra Prabhudesai,INC,3595,2022,21237,16.93
+4,Porvorim,9,Ritesh Chodankar,AAP,1535,2022,21237,7.23
+5,Porvorim,9,NOTA,NOTA,473,2022,21237,2.23
+1,Aldona,10,CARLOS ALVARES FERREIRA,INC,9320,2022,22496,41.43
+2,Aldona,10,GLENN JOHN VIJAY AMBROSE E SOUZA TICLO,BJP,7497,2022,22496,33.33
+3,Aldona,10,KIRAN KANDOLKAR,AITC,3647,2022,22496,16.21
+5,Aldona,10,GOVIND GOVENKAR,SHS,350,2022,22496,1.56
+4,Aldona,10,MAHESH SATELKAR,AAP,1306,2022,22496,5.81
+7,Aldona,10,POOJA MAYEKAR,IND,116,2022,22496,0.52
+6,Aldona,10,NOTA,NOTA,260,2022,22496,1.16
+1,Panaji,11,ATANASIO MONSERRATE,BJP,6787,2022,17419,38.96
+3,Panaji,11,ELVIS GOMES,INC,3175,2022,17419,18.23
+5,Panaji,11,RAJESH VINAYAK REDKAR,RGP,359,2022,17419,2.06
+4,Panaji,11,VALMIKI DATTA NAIK,AAP,777,2022,17419,4.46
+7,Panaji,11,DEVENDRA SUNDARAM,IND,40,2022,17419,0.23
+2,Panaji,11,UTPAL MANOHAR  PARRIKAR,IND,6071,2022,17419,34.85
+8,Panaji,11,YESHWANT MADAR,IND,37,2022,17419,0.21
+6,Panaji,11,NOTA,NOTA,173,2022,17419,0.99
+1,Taleigao,12,JENNIFER MONSERRATE,BJP,10167,2022,23435,43.38
+7,Taleigao,12,SHUBHANGI DEU SAWANT,MAG,123,2022,23435,0.52
+2,Taleigao,12,TONY ALFREDO RODRIGUES,INC,8126,2022,23435,34.67
+3,Taleigao,12,CECILLE RODRIGUES,AAP,2607,2022,23435,11.12
+4,Taleigao,12,Joseph Licio Roncon,RGP,1651,2022,23435,7.05
+9,Taleigao,12,DILIP KASHINATH GHADI,IND,25,2022,23435,0.11
+6,Taleigao,12,ADV. PUNDALIK NAMDEO RAIKER,IND,289,2022,23435,1.23
+8,Taleigao,12,SHIVANAND HARIJAN,IND,26,2022,23435,0.11
+5,Taleigao,12,NOTA,NOTA,421,2022,23435,1.8
+2,St.Cruz,13,Antonio Caetano Fernandes,BJP,6377,2022,22685,28.11
+1,St.Cruz,13,Rodolfo Louis Fernandes,INC,8841,2022,22685,38.97
+5,St.Cruz,13,Victor Benjamin Gonsalves,AITC,523,2022,22685,2.31
+4,St.Cruz,13,Ajay Tipu Kholkar,RGP,2497,2022,22685,11.01
+3,St.Cruz,13,Amit Palekar,AAP,4098,2022,22685,18.06
+6,St.Cruz,13,NOTA,NOTA,349,2022,22685,1.54
+3,St. Andre,14,Anthony Lino Fernandes,INC,2695,2022,16279,16.56
+8,St. Andre,14,Estevan Elvis D\'Souza,NCP,131,2022,16279,0.8
+2,St. Andre,14,Francisco Silveira,BJP,5319,2022,16279,32.67
+4,St. Andre,14,Jagdish Umakant Bhobe,AITC,1261,2022,16279,7.75
+5,St. Andre,14,Ramrao Surya Naik Wagh,AAP,1122,2022,16279,6.89
+1,St. Andre,14,Viresh Mukesh Borkar,RGP,5395,2022,16279,33.14
+6,St. Andre,14,Rama Kankonkar,IND,219,2022,16279,1.35
+7,St. Andre,14,NOTA,NOTA,137,2022,16279,0.84
+2,Cumbarjua,15,Janita Pandurang Madkaikar,BJP,3949,2022,21550,18.32
+1,Cumbarjua,15,Rajesh Faldessai,INC,6776,2022,21550,31.44
+4,Cumbarjua,15,Samil Audumber Volvaiker,AITC,3072,2022,21550,14.26
+5,Cumbarjua,15,Chhagan Narayan Naik,RGP,2442,2022,21550,11.33
+6,Cumbarjua,15,Gorakhanath Suresh Kerkar,AAP,1022,2022,21550,4.74
+8,Cumbarjua,15,Maria Christina Varela,GSP,91,2022,21550,0.42
+3,Cumbarjua,15,Rohan Ranganath Harmalkar,IND,3870,2022,21550,17.96
+7,Cumbarjua,15,NOTA,NOTA,328,2022,21550,1.52
+1,Maem,16,PREMENDRA VISHNU SHET,BJP,7874,2022,25488,30.89
+4,Maem,16,PRAVIN ZANTYE,MAG,3424,2022,25488,13.43
+2,Maem,16,SANTOSH KUMAR SAWANT,GFP,4738,2022,25488,18.59
+6,Maem,16,RAJESH TULSHIDAS KALANGUTKAR,AAP,2084,2022,25488,8.18
+3,Maem,16,SHRIKRISHNA RAVINDRA PARAB,RGP,3974,2022,25488,15.59
+10,Maem,16,DEEPKUMAR D. MAPARI,IND,89,2022,25488,0.35
+5,Maem,16,MILIND TULSHIDAS PILGAONKAR,IND,2316,2022,25488,9.09
+7,Maem,16,ROHAN VAMAN SAWAIKAR,IND,465,2022,25488,1.82
+9,Maem,16,SHEELA SANDEEP GHATWAL,IND,192,2022,25488,0.75
+8,Maem,16,NOTA,NOTA,332,2022,25488,1.3
+2,Sanquelim,17,Dharmesh Saglani,INC,11584,2022,25666,45.13
+1,Sanquelim,17,Dr. Pramod Sawant,BJP,12250,2022,25666,47.73
+4,Sanquelim,17,Mahadev Yeshwant Khandekar,MAG,370,2022,25666,1.44
+6,Sanquelim,17,Manojkumar Ghadi,AAP,109,2022,25666,0.42
+13,Sanquelim,17,Navanath Ramkrishna Mulvi,JMBP,14,2022,25666,0.05
+7,Sanquelim,17,Sagar Dhargalkar,SHS,99,2022,25666,0.39
+3,Sanquelim,17,Sujay Gauns,RGP,742,2022,25666,2.89
+9,Sanquelim,17,Daudkhan  Pathan,IND,32,2022,25666,0.12
+12,Sanquelim,17,Lavu Gurunath  Petkar,IND,25,2022,25666,0.1
+10,Sanquelim,17,Mahesh Parab,IND,30,2022,25666,0.12
+11,Sanquelim,17,Sunil Suresh Fulari,IND,27,2022,25666,0.11
+8,Sanquelim,17,Sunil Datta Satodkar,IND,98,2022,25666,0.38
+5,Sanquelim,17,NOTA,NOTA,286,2022,25666,1.11
+1,Poriem,18,DEVIYA VISHWAJIT RANE,BJP,17816,2022,29245,60.92
+4,Poriem,18,GANPAT GAONKAR,AITC,1500,2022,29245,5.13
+5,Poriem,18,RANJIT JAYASINGRAO RANE,INC,1488,2022,29245,5.09
+7,Poriem,18,GURUDAS GAONKAR,SHS,267,2022,29245,0.91
+8,Poriem,18,JAYESHWAR GAWDE,JMBP,246,2022,29245,0.84
+3,Poriem,18,SAMEER SATARKAR,RGP,3513,2022,29245,12.01
+2,Poriem,18,VISHWAJIT RANE,AAP,3873,2022,29245,13.24
+6,Poriem,18,NOTA,NOTA,542,2022,29245,1.85
+4,Valpoi,19,MANISHA SHENVI USGAONKAR,INC,2101,2022,26970,7.79
+7,Valpoi,19,VISHVESH PRABHU,MAG,346,2022,26970,1.28
+1,Valpoi,19,VISHWAJIT PRATAPSINGH RANE,BJP,14462,2022,26970,53.62
+8,Valpoi,19,DEVIDAS GAONKAR,SHS,183,2022,26970,0.68
+3,Valpoi,19,SATYAVIJAY NAIK,AAP,2599,2022,26970,9.64
+6,Valpoi,19,SUDESH MADHUKAR PARAB,JMBP,354,2022,26970,1.31
+2,Valpoi,19,TUKARAM BHARAT PARAB,RGP,6377,2022,26970,23.64
+9,Valpoi,19,ROHIDAS SADA GAONKAR,IND,137,2022,26970,0.51
+5,Valpoi,19,NOTA,NOTA,411,2022,26970,1.52
+8,Priol,20,Digvijay Madhu Velingkar,NCP,149,2022,28065,0.53
+5,Priol,20,Dinesh Shiva Zalmi,INC,303,2022,28065,1.08
+1,Priol,20,Govind Shepu Gaude,BJP,11019,2022,28065,39.26
+2,Priol,20,Pandurang Alias Deepak Dhavalikar,MAG,10806,2022,28065,38.5
+6,Priol,20,Nonu Chandrakant Naik,AAP,245,2022,28065,0.87
+4,Priol,20,Vishvesh Naik,RGP,2517,2022,28065,8.97
+9,Priol,20,Dattaram Tukaram Shetkar,IND,85,2022,28065,0.3
+3,Priol,20,Sandeep Nigalye,IND,2697,2022,28065,9.61
+7,Priol,20,NOTA,NOTA,244,2022,28065,0.87
+2,Ponda,21,KETAN PRABHU BHATIKAR,MAG,7437,2022,25801,28.82
+3,Ponda,21,RAJESH VERENKAR,INC,6839,2022,25801,26.51
+1,Ponda,21,RAVI NAIK,BJP,7514,2022,25801,29.12
+4,Ponda,21,SANISH TILVE,RGP,1770,2022,25801,6.86
+6,Ponda,21,SUREL TILVE,AAP,620,2022,25801,2.4
+8,Ponda,21,NARESH PADWALKAR,IND,92,2022,25801,0.36
+5,Ponda,21,SANDEEP SINAI KHANDEPARKAR,IND,1237,2022,25801,4.79
+7,Ponda,21,NOTA,NOTA,292,2022,25801,1.13
+5,Siroda,22,Tukaram Borkar,INC,1953,2022,25034,7.8
+1,Siroda,22,Subhash Shirodkar,BJP,8307,2022,25034,33.18
+4,Siroda,22,Sanket Naik Mule,MAG,2397,2022,25034,9.57
+6,Siroda,22,Subhash Prabhudesai,NCP,576,2022,25034,2.3
+2,Siroda,22,Mahadev Naik,AAP,6133,2022,25034,24.5
+9,Siroda,22,Mukesh Naik,SBP,184,2022,25034,0.74
+3,Siroda,22,Shailesh Naik,RGP,5063,2022,25034,20.22
+8,Siroda,22,Snehalo Gracias,IND,186,2022,25034,0.74
+7,Siroda,22,NOTA,NOTA,235,2022,25034,0.94
+4,Marcaim,23,Lavoo Mamledar,INC,1090,2022,23722,4.59
+1,Marcaim,23,Ramkrishna Alias Sudin Dhavalikar,MAG,13963,2022,23722,58.86
+8,Marcaim,23,Ravindra Talaulikar,NCP,140,2022,23722,0.59
+2,Marcaim,23,Sudesh Bhingi,BJP,4000,2022,23722,16.86
+9,Marcaim,23,Harishchandra Naik,JMBP,59,2022,23722,0.25
+3,Marcaim,23,Premanand Gaude,RGP,3488,2022,23722,14.7
+7,Marcaim,23,Santosh Tari,GSP,190,2022,23722,0.8
+5,Marcaim,23,Umesh Tendolkar,AAP,419,2022,23722,1.77
+6,Marcaim,23,NOTA,NOTA,373,2022,23722,1.57
+5,Mormugao,24,Jayesh Kashinath Shetgaonkar,AITC,123,2022,16892,0.73
+2,Mormugao,24,Milind Sagun Naik,BJP,7126,2022,16892,42.19
+1,Mormugao,24,Sankalp Amonkar,INC,9067,2022,16892,53.68
+8,Mormugao,24,Xeque Mahamod Acbar,NCP,58,2022,16892,0.34
+3,Mormugao,24,Parashuram Umaji Sonurlekar,AAP,159,2022,16892,0.94
+4,Mormugao,24,Paresh Sitaram Toraskar,RGP,130,2022,16892,0.77
+9,Mormugao,24,Enayatulla Khan,IND,28,2022,16892,0.17
+7,Mormugao,24,Nilesh Mahadev Navelkar,IND,94,2022,16892,0.56
+6,Mormugao,24,NOTA,NOTA,107,2022,16892,0.63
+2,Vasco-Da-Gama,25,Jose Luis Carlos Almeida,INC,9461,2022,25506,37.09
+1,Vasco-Da-Gama,25,Krishna V. Salkar,BJP,13118,2022,25506,51.43
+3,Vasco-Da-Gama,25,Saifula Khan,AITC,860,2022,25506,3.37
+4,Vasco-Da-Gama,25,Andre Sebastiao Viegas,RGP,851,2022,25506,3.34
+7,Vasco-Da-Gama,25,Maruti Shirgaonkar,SHS,71,2022,25506,0.28
+10,Vasco-Da-Gama,25,Sandeep Bhagwan Shetye,JMBP,20,2022,25506,0.08
+5,Vasco-Da-Gama,25,Sunil Loran,AAP,784,2022,25506,3.07
+9,Vasco-Da-Gama,25,Andrew D\xe2\x80\x99Cunha,IND,42,2022,25506,0.16
+8,Vasco-Da-Gama,25,Chandrashekher Vast,IND,55,2022,25506,0.22
+6,Vasco-Da-Gama,25,NOTA,NOTA,244,2022,25506,0.96
+5,Dabolim,26,Jose Filipe De Sousa,NCP,1037,2022,18745,5.53
+7,Dabolim,26,Mahesh Bhandari,AITC,159,2022,18745,0.85
+1,Dabolim,26,MAUVIN HELIODORO GODINHO,BJP,7594,2022,18745,40.51
+2,Dabolim,26,Captain Viriato Hipolito Mendonca Fernandes,INC,6024,2022,18745,32.14
+4,Dabolim,26,Gajanan Borkar,RGP,1129,2022,18745,6.02
+3,Dabolim,26,Premanand Nanoskar,AAP,2533,2022,18745,13.51
+8,Dabolim,26,Tara Kerkar,IND,71,2022,18745,0.38
+6,Dabolim,26,NOTA,NOTA,198,2022,18745,1.06
+4,Cortalim,27,Gilbert Mariano Rodrigues,AITC,3246,2022,23924,13.57
+6,Cortalim,27,Narayan Naik,BJP,2392,2022,23924,10
+2,Cortalim,27,Olencio Simoes,INC,4344,2022,23924,18.16
+7,Cortalim,27,Alina Saldanha,AAP,1355,2022,23924,5.66
+10,Cortalim,27,Bhakti Bhalchandra Khadapkar,SHS,55,2022,23924,0.23
+5,Cortalim,27,Teotonio Inacio  Santana Costa,RGP,2480,2022,23924,10.37
+1,Cortalim,27,Antonio Vas,IND,5522,2022,23924,23.08
+3,Cortalim,27,Girish Pillai,IND,4251,2022,23924,17.77
+9,Cortalim,27,Vishal Gajanan Naik,IND,66,2022,23924,0.28
+8,Cortalim,27,NOTA,NOTA,213,2022,23924,0.89
+1,Nuvem,28,ALEIXO SEQUEIRA,INC,8745,2022,21811,40.09
+7,Nuvem,28,Datta Borkar,BJP,569,2022,21811,2.61
+5,Nuvem,28,JOSE R CABRAL (RAJU),AITC,1718,2022,21811,7.88
+4,Nuvem,28,PACHECO FRANCISCO XAVIER,NCP,2073,2022,21811,9.5
+2,Nuvem,28,ARVIND D\'COSTA,RGP,4348,2022,21811,19.93
+6,Nuvem,28,DR. MARIANO GODINHO,AAP,1222,2022,21811,5.6
+3,Nuvem,28,WILFRED D\'SA,IND,2961,2022,21811,13.58
+8,Nuvem,28,NOTA,NOTA,175,2022,21811,0.8
+5,Curtorim,29,ANTHONY BARBOSA,BJP,2385,2022,22333,10.68
+6,Curtorim,29,ANTHONY ALBERTO PEIXOTO,AITC,353,2022,22333,1.58
+2,Curtorim,29,MORENO REBELO,INC,3905,2022,22333,17.49
+4,Curtorim,29,DOMINGO GAUNKAR (DOMNIC),AAP,2793,2022,22333,12.51
+3,Curtorim,29,RUBERT PEREIRA,RGP,3479,2022,22333,15.58
+1,Curtorim,29,ALEIXO REGINALDO LOURENCO,IND,8960,2022,22333,40.12
+9,Curtorim,29,CONCEICAO DIAS,IND,109,2022,22333,0.49
+8,Curtorim,29,ISIDORIO,IND,117,2022,22333,0.52
+7,Curtorim,29,NOTA,NOTA,232,2022,22333,1.04
+2,Fatorda,30,DAMU G. NAIK,BJP,9536,2022,24150,39.49
+5,Fatorda,30,SEOULA VAS,AITC,635,2022,24150,2.63
+1,Fatorda,30,VIJAI SARDESAI,GFP,11063,2022,24150,45.81
+4,Fatorda,30,SANDESH TELEIKAR,AAP,1050,2022,24150,4.35
+3,Fatorda,30,ADV. VALERIE FERNANDES,RGP,1556,2022,24150,6.44
+7,Fatorda,30,MICHAEL FERNS,IND,56,2022,24150,0.23
+6,Fatorda,30,NOTA,NOTA,254,2022,24150,1.05
+2,Margao,31,AJGAONKAR MANOHAR (BABU),BJP,5880,2022,22633,25.98
+1,Margao,31,DIGAMBAR KAMAT,INC,13674,2022,22633,60.42
+4,Margao,31,MAHESH AMONKAR,AITC,923,2022,22633,4.08
+3,Margao,31,LINCOLN ANTHONY VAZ,AAP,1173,2022,22633,5.18
+5,Margao,31,SHASHIRAJ SUBHA NAIK SHIRODKAR,RGP,722,2022,22633,3.19
+6,Margao,31,NOTA,NOTA,261,2022,22633,1.15
+3,Benaulim,32,Antonio Feliciano Dias (Tony),INC,4697,2022,21114,22.25
+2,Benaulim,32,Churchill Alemao,AITC,5140,2022,21114,24.34
+5,Benaulim,32,Damodar (Samir) Bandodkar,BJP,851,2022,21114,4.03
+4,Benaulim,32,Desmond Fernandes,RGP,3854,2022,21114,18.25
+1,Benaulim,32,Venzy Viegas,AAP,6411,2022,21114,30.36
+6,Benaulim,32,NOTA,NOTA,161,2022,21114,0.76
+3,Navelim,33,Avertano Furtado,INC,3806,2022,21332,17.84
+4,Navelim,33,Mohammad Rehan Mujawar,NCP,2622,2022,21332,12.29
+1,Navelim,33,Ulhas Tuenkar,BJP,5168,2022,21332,24.23
+2,Navelim,33,Valanka Natasha Alemao,AITC,4738,2022,21332,22.21
+6,Navelim,33,Bento Da Silva,RGP,2086,2022,21332,9.78
+5,Navelim,33,Pratima Betsy Coutinho,AAP,2327,2022,21332,10.91
+9,Navelim,33,Antonio Alvares,IND,161,2022,21332,0.75
+7,Navelim,33,Digvijit Chavan,IND,187,2022,21332,0.88
+10,Navelim,33,Francisco Andre Colaco,IND,69,2022,21332,0.32
+8,Navelim,33,NOTA,NOTA,168,2022,21332,0.79
+1,Cuncolim,34,Alemao Yuri,INC,9866,2022,23103,42.7
+2,Cuncolim,34,CLAFASIO DIAS,BJP,6632,2022,23103,28.71
+5,Cuncolim,34,JORSON PIEDADE FERNANDES,AITC,1282,2022,23103,5.55
+6,Cuncolim,34,PRASHANT NAIK,AAP,906,2022,23103,3.92
+3,Cuncolim,34,WILSON PETER CARDOZO,RGP,2430,2022,23103,10.52
+10,Cuncolim,34,DERICK DIAS,IND,50,2022,23103,0.22
+9,Cuncolim,34,MILAGRES GONSALVES,IND,80,2022,23103,0.35
+11,Cuncolim,34,RAYMOND D\'CRUZ,IND,33,2022,23103,0.14
+4,Cuncolim,34,SANTOSH S. FAL DESSAI,IND,1326,2022,23103,5.74
+7,Cuncolim,34,SUDESH VINAYAK BHISE,IND,312,2022,23103,1.35
+8,Cuncolim,34,NOTA,NOTA,186,2022,23103,0.81
+3,Velim,35,BENJAMIN SILVA,AITC,4134,2022,23390,17.67
+2,Velim,35,D\'SILVA SAVIO,INC,5221,2022,23390,22.32
+5,Velim,35,FILIPE NERY RODRIGUES,NCP,3420,2022,23390,14.62
+6,Velim,35,SAVIO RODRIGUES,BJP,1331,2022,23390,5.69
+1,Velim,35,CRUZ SILVA,AAP,5390,2022,23390,23.04
+4,Velim,35,DAGLEY FERNANDES,RGP,3653,2022,23390,15.62
+7,Velim,35,NOTA,NOTA,241,2022,23390,1.03
+6,Quepem,36,ALOYSIOUS D\'SILVA,NCP,237,2022,28556,0.83
+1,Quepem,36,ALTONE D\'COSTA,INC,14994,2022,28556,52.51
+2,Quepem,36,CHANDRAKANT KAVLEKAR,BJP,11393,2022,28556,39.9
+7,Quepem,36,KANTA GAUDE,AITC,161,2022,28556,0.56
+8,Quepem,36,ALEXY FERNANDES,SHS,66,2022,28556,0.23
+4,Quepem,36,RAUL PEREIRA,AAP,315,2022,28556,1.1
+3,Quepem,36,VISHAL GAUNS DESSAI,RGP,1144,2022,28556,4.01
+5,Quepem,36,NOTA,NOTA,246,2022,28556,0.86
+2,Curchorem,37,AMIT PATKAR,INC,9301,2022,22787,40.82
+1,Curchorem,37,NILESH CABRAL,BJP,9973,2022,22787,43.77
+5,Curchorem,37,VITHOBA PRABHU DESSAI,MAG,313,2022,22787,1.37
+3,Curchorem,37,ADITYA RAUT DESSAI,RGP,2103,2022,22787,9.23
+4,Curchorem,37,GABRIEL FERNANDES,AAP,830,2022,22787,3.64
+7,Curchorem,37,AJAY BOYER,IND,51,2022,22787,0.22
+6,Curchorem,37,NOTA,NOTA,216,2022,22787,0.95
+1,Sanvordem,38,Ganesh Gaonkar,BJP,11877,2022,26530,44.77
+7,Sanvordem,38,Khemalo Sawant,INC,383,2022,26530,1.44
+3,Sanvordem,38,Vinayak Gawas,MAG,3768,2022,26530,14.2
+5,Sanvordem,38,Anil Gaonkar,AAP,846,2022,26530,3.19
+4,Sanvordem,38,Vipin Naik,RGP,2135,2022,26530,8.05
+2,Sanvordem,38,Deepak Prabhu Pauskar,IND,6687,2022,26530,25.21
+6,Sanvordem,38,Gangaram Lambor,IND,554,2022,26530,2.09
+8,Sanvordem,38,NOTA,NOTA,280,2022,26530,1.06
+8,Sanguem,39,Domacio Barreto,NCP,174,2022,23751,0.73
+3,Sanguem,39,Prasad Shashikant Gaonkar,INC,4644,2022,23751,19.55
+7,Sanguem,39,Rakhi Naik,AITC,185,2022,23751,0.78
+1,Sanguem,39,Subhash Uttam Phal Dessai,BJP,8724,2022,23751,36.73
+5,Sanguem,39,Abhijit Dessai,AAP,894,2022,23751,3.76
+4,Sanguem,39,Sunil Bombi Gaonkar,RGP,1500,2022,23751,6.32
+9,Sanguem,39,Ramesh Gopal Velingkar,IND,94,2022,23751,0.4
+2,Sanguem,39,Savitri Chandrakant Kavlekar,IND,7295,2022,23751,30.71
+6,Sanguem,39,NOTA,NOTA,241,2022,23751,1.01
+3,Canacona,40,Janardhan Bhandari,INC,5351,2022,29132,18.37
+6,Canacona,40,Mahadev Dessai,AITC,1066,2022,29132,3.66
+1,Canacona,40,Ramesh Tawadkar,BJP,9063,2022,29132,31.11
+7,Canacona,40,Anoop Balkrishna Kudtarkar,AAP,835,2022,29132,2.87
+5,Canacona,40,Prashant Suresh Pagi,RGP,1599,2022,29132,5.49
+2,Canacona,40,Isidore Aleixinho Fernandes,IND,6012,2022,29132,20.64
+9,Canacona,40,Kanay Pagi,IND,119,2022,29132,0.41
+4,Canacona,40,Vijay Pai Khot,IND,4791,2022,29132,16.45
+8,Canacona,40,NOTA,NOTA,296,2022,29132,1.02
