@@ -56938,7 +56938,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 1,
-            "ac_name": "Nippani"
+            "ac_name": "Nippani",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -56957,7 +56959,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 2,
-            "ac_name": "Chikkodi-Sadalga"
+            "ac_name": "Chikkodi-Sadalga",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -56977,7 +56981,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 3,
-            "ac_name": "Athani"
+            "ac_name": "Athani",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -56996,7 +57002,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 4,
-            "ac_name": "Kagwad"
+            "ac_name": "Kagwad",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57015,7 +57023,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 5,
-            "ac_name": "Kudachi"
+            "ac_name": "Kudachi",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57035,7 +57045,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 6,
-            "ac_name": "Raybag"
+            "ac_name": "Raybag",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57055,7 +57067,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 7,
-            "ac_name": "Hukkeri"
+            "ac_name": "Hukkeri",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57076,7 +57090,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 8,
-            "ac_name": "Arabhavi"
+            "ac_name": "Arabhavi",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57097,7 +57113,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 9,
-            "ac_name": "Gokak"
+            "ac_name": "Gokak",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57117,7 +57135,9 @@
             "pc": 1,
             "pc_name": "Chikkodi",
             "ac": 10,
-            "ac_name": "Yemkanmardi"
+            "ac_name": "Yemkanmardi",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57136,7 +57156,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 11,
-            "ac_name": "Belgaum Uttar"
+            "ac_name": "Belgaum Uttar",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57153,7 +57175,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 12,
-            "ac_name": "Belgaum Dakshin"
+            "ac_name": "Belgaum Dakshin",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57172,7 +57196,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 13,
-            "ac_name": "Belgaum Rural"
+            "ac_name": "Belgaum Rural",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57194,7 +57220,9 @@
             "pc": 12,
             "pc_name": "Uttara Kannada",
             "ac": 14,
-            "ac_name": "Khanapur"
+            "ac_name": "Khanapur",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57215,7 +57243,9 @@
             "pc": 12,
             "pc_name": "Uttara Kannada",
             "ac": 15,
-            "ac_name": "Kittur"
+            "ac_name": "Kittur",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57233,7 +57263,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 16,
-            "ac_name": "Bailhongal"
+            "ac_name": "Bailhongal",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57254,7 +57286,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 17,
-            "ac_name": "Saundatti yellamma"
+            "ac_name": "Saundatti yellamma",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57274,7 +57308,9 @@
             "pc": 2,
             "pc_name": "Belgaum",
             "ac": 18,
-            "ac_name": "Ramdurg"
+            "ac_name": "Ramdurg",
+            "district_name": "Belgaum",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57293,7 +57329,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 19,
-            "ac_name": "Mudhol"
+            "ac_name": "Mudhol",
+            "district_name": "Bagalkot",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57312,7 +57350,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 20,
-            "ac_name": "Terdal"
+            "ac_name": "Terdal",
+            "district_name": "Bagalkot",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57331,7 +57371,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 21,
-            "ac_name": "Jamkhandi"
+            "ac_name": "Jamkhandi",
+            "district_name": "Bagalkot",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57352,7 +57394,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 22,
-            "ac_name": "Bilgi"
+            "ac_name": "Bilgi",
+            "district_name": "Bagalkot",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57373,7 +57417,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 23,
-            "ac_name": "Badami"
+            "ac_name": "Badami",
+            "district_name": "Bagalkot",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57392,7 +57438,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 24,
-            "ac_name": "Bagalkot"
+            "ac_name": "Bagalkot",
+            "district_name": "Bagalkot",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57414,7 +57462,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 25,
-            "ac_name": "Hungund"
+            "ac_name": "Hungund",
+            "district_name": "Bagalkot",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57433,7 +57483,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 26,
-            "ac_name": "Muddebihal"
+            "ac_name": "Muddebihal",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57455,7 +57507,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 27,
-            "ac_name": "Devar Hippargi"
+            "ac_name": "Devar Hippargi",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57475,7 +57529,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 28,
-            "ac_name": "Basavana Bagevadi"
+            "ac_name": "Basavana Bagevadi",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57497,7 +57553,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 29,
-            "ac_name": "Babaleshwar"
+            "ac_name": "Babaleshwar",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57513,7 +57571,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 30,
-            "ac_name": "Bijapur City"
+            "ac_name": "Bijapur City",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57534,7 +57594,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 31,
-            "ac_name": "Nagthan"
+            "ac_name": "Nagthan",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57553,7 +57615,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 32,
-            "ac_name": "Indi"
+            "ac_name": "Indi",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57571,7 +57635,9 @@
             "pc": 4,
             "pc_name": "Bijapur",
             "ac": 33,
-            "ac_name": "Sindgi"
+            "ac_name": "Sindgi",
+            "district_name": "Bijapur",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -57592,7 +57658,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 34,
-            "ac_name": "Afzalpur"
+            "ac_name": "Afzalpur",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57612,7 +57680,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 35,
-            "ac_name": "Jevargi"
+            "ac_name": "Jevargi",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57634,7 +57704,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 36,
-            "ac_name": "Shorapur"
+            "ac_name": "Shorapur",
+            "district_name": "Yadgir",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57653,7 +57725,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 37,
-            "ac_name": "Shahapur"
+            "ac_name": "Shahapur",
+            "district_name": "Yadgir",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57673,7 +57747,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 38,
-            "ac_name": "Yadgir"
+            "ac_name": "Yadgir",
+            "district_name": "Yadgir",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57692,7 +57768,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 39,
-            "ac_name": "Gurmitkal"
+            "ac_name": "Gurmitkal",
+            "district_name": "Yadgir",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57713,7 +57791,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 40,
-            "ac_name": "Chittapur"
+            "ac_name": "Chittapur",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57731,7 +57811,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 41,
-            "ac_name": "Sedam"
+            "ac_name": "Sedam",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57751,7 +57833,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 42,
-            "ac_name": "Chincholi"
+            "ac_name": "Chincholi",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57775,7 +57859,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 43,
-            "ac_name": "Gulbarga Rural"
+            "ac_name": "Gulbarga Rural",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57794,7 +57880,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 44,
-            "ac_name": "Gulbarga Dakshin"
+            "ac_name": "Gulbarga Dakshin",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57810,7 +57898,9 @@
             "pc": 5,
             "pc_name": "Gulbarga",
             "ac": 45,
-            "ac_name": "Gulbarga Uttar"
+            "ac_name": "Gulbarga Uttar",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57829,7 +57919,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 46,
-            "ac_name": "Aland"
+            "ac_name": "Aland",
+            "district_name": "Gulbarga",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57848,7 +57940,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 47,
-            "ac_name": "Basavakalyan"
+            "ac_name": "Basavakalyan",
+            "district_name": "Bidar",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57867,7 +57961,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 48,
-            "ac_name": "Humnabad"
+            "ac_name": "Humnabad",
+            "district_name": "Bidar",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57886,7 +57982,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 49,
-            "ac_name": "Bidar South"
+            "ac_name": "Bidar South",
+            "district_name": "Bidar",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57904,7 +58002,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 50,
-            "ac_name": "Bidar"
+            "ac_name": "Bidar",
+            "district_name": "Bidar",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57924,7 +58024,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 51,
-            "ac_name": "Bhalki"
+            "ac_name": "Bhalki",
+            "district_name": "Bidar",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57941,7 +58043,9 @@
             "pc": 7,
             "pc_name": "Bidar",
             "ac": 52,
-            "ac_name": "Aurad"
+            "ac_name": "Aurad",
+            "district_name": "Bidar",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57962,7 +58066,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 53,
-            "ac_name": "Raichur Rural"
+            "ac_name": "Raichur Rural",
+            "district_name": "Raichur",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57979,7 +58085,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 54,
-            "ac_name": "Raichur"
+            "ac_name": "Raichur",
+            "district_name": "Raichur",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -57998,7 +58106,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 55,
-            "ac_name": "Manvi"
+            "ac_name": "Manvi",
+            "district_name": "Raichur",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58014,7 +58124,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 56,
-            "ac_name": "Devadurga"
+            "ac_name": "Devadurga",
+            "district_name": "Raichur",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58031,7 +58143,9 @@
             "pc": 6,
             "pc_name": "Raichur",
             "ac": 57,
-            "ac_name": "Lingsugur"
+            "ac_name": "Lingsugur",
+            "district_name": "Raichur",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58051,7 +58165,9 @@
             "pc": 8,
             "pc_name": "Koppal",
             "ac": 58,
-            "ac_name": "Sindhanur"
+            "ac_name": "Sindhanur",
+            "district_name": "Raichur",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58073,7 +58189,9 @@
             "pc": 8,
             "pc_name": "Koppal",
             "ac": 59,
-            "ac_name": "Maski"
+            "ac_name": "Maski",
+            "district_name": "Raichur",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58095,7 +58213,9 @@
             "pc": 8,
             "pc_name": "Koppal",
             "ac": 60,
-            "ac_name": "Kushtagi"
+            "ac_name": "Kushtagi",
+            "district_name": "Koppal",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58115,7 +58235,9 @@
             "pc": 8,
             "pc_name": "Koppal",
             "ac": 61,
-            "ac_name": "Kanakagiri"
+            "ac_name": "Kanakagiri",
+            "district_name": "Koppal",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58135,7 +58257,9 @@
             "pc": 8,
             "pc_name": "Koppal",
             "ac": 62,
-            "ac_name": "Gangawati"
+            "ac_name": "Gangawati",
+            "district_name": "Koppal",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58154,7 +58278,9 @@
             "pc": 8,
             "pc_name": "Koppal",
             "ac": 64,
-            "ac_name": "Koppal"
+            "ac_name": "Koppal",
+            "district_name": "Koppal",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58176,7 +58302,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 65,
-            "ac_name": "Shirahatti"
+            "ac_name": "Shirahatti",
+            "district_name": "Gadag",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58194,7 +58322,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 66,
-            "ac_name": "Gadag"
+            "ac_name": "Gadag",
+            "district_name": "Gadag",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58215,7 +58345,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 67,
-            "ac_name": "Ron"
+            "ac_name": "Ron",
+            "district_name": "Gadag",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58235,7 +58367,9 @@
             "pc": 3,
             "pc_name": "Bagalkot",
             "ac": 68,
-            "ac_name": "Nargund"
+            "ac_name": "Nargund",
+            "district_name": "Gadag",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58258,7 +58392,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 69,
-            "ac_name": "Navalgund"
+            "ac_name": "Navalgund",
+            "district_name": "Dharwad",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58280,7 +58416,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 70,
-            "ac_name": "Kundgol"
+            "ac_name": "Kundgol",
+            "district_name": "Dharwad",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58301,7 +58439,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 71,
-            "ac_name": "Dharwad"
+            "ac_name": "Dharwad",
+            "district_name": "Dharwad",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58319,7 +58459,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 72,
-            "ac_name": "Hubli-dharwad-East"
+            "ac_name": "Hubli-dharwad-East",
+            "district_name": "Dharwad",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58338,7 +58480,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 73,
-            "ac_name": "Hubli-dharwad-Central"
+            "ac_name": "Hubli-dharwad-Central",
+            "district_name": "Dharwad",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58356,7 +58500,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 74,
-            "ac_name": "Hubli-dharwad- West"
+            "ac_name": "Hubli-dharwad- West",
+            "district_name": "Dharwad",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58378,7 +58524,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 75,
-            "ac_name": "Kalghatgi"
+            "ac_name": "Kalghatgi",
+            "district_name": "Dharwad",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58422,7 +58570,9 @@
             "pc": 12,
             "pc_name": "Uttara Kannada",
             "ac": 79,
-            "ac_name": "Bhatkal"
+            "ac_name": "Bhatkal",
+            "district_name": "Uttara Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -58445,7 +58595,9 @@
             "pc": 12,
             "pc_name": "Uttara Kannada",
             "ac": 80,
-            "ac_name": "Sirsi"
+            "ac_name": "Sirsi",
+            "district_name": "Uttara Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -58462,7 +58614,9 @@
             "pc": 12,
             "pc_name": "Uttara Kannada",
             "ac": 81,
-            "ac_name": "Yellapur"
+            "ac_name": "Yellapur",
+            "district_name": "Uttara Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -58482,7 +58636,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 82,
-            "ac_name": "Hangal"
+            "ac_name": "Hangal",
+            "district_name": "Haveri",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58501,7 +58657,9 @@
             "pc": 11,
             "pc_name": "Dharwad",
             "ac": 83,
-            "ac_name": "Shiggaon"
+            "ac_name": "Shiggaon",
+            "district_name": "Haveri",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58521,7 +58679,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 84,
-            "ac_name": "Haveri"
+            "ac_name": "Haveri",
+            "district_name": "Haveri",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58541,7 +58701,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 85,
-            "ac_name": "Byadgi"
+            "ac_name": "Byadgi",
+            "district_name": "Haveri",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58561,7 +58723,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 86,
-            "ac_name": "Hirekerur"
+            "ac_name": "Hirekerur",
+            "district_name": "Haveri",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58580,7 +58744,9 @@
             "pc": 10,
             "pc_name": "Haveri",
             "ac": 87,
-            "ac_name": "Ranibennur"
+            "ac_name": "Ranibennur",
+            "district_name": "Haveri",
+            "region_name": "Mumbai Karnataka"
           }
         },
         {
@@ -58600,7 +58766,9 @@
             "pc": 9,
             "pc_name": "Bellary",
             "ac": 89,
-            "ac_name": "Hagaribommanahalli"
+            "ac_name": "Hagaribommanahalli",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58619,7 +58787,9 @@
             "pc": 9,
             "pc_name": "Bellary",
             "ac": 90,
-            "ac_name": "Vijayanagara"
+            "ac_name": "Vijayanagara",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58642,7 +58812,9 @@
             "pc": 9,
             "pc_name": "Bellary",
             "ac": 91,
-            "ac_name": "Kampli"
+            "ac_name": "Kampli",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58660,7 +58832,9 @@
             "pc": 8,
             "pc_name": "Koppal",
             "ac": 92,
-            "ac_name": "Siruguppa"
+            "ac_name": "Siruguppa",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58679,7 +58853,9 @@
             "pc": 9,
             "pc_name": "Bellary",
             "ac": 93,
-            "ac_name": "Bellary"
+            "ac_name": "Bellary",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58695,7 +58871,9 @@
             "pc": 9,
             "pc_name": "Bellary",
             "ac": 94,
-            "ac_name": "Bellary City"
+            "ac_name": "Bellary City",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58716,7 +58894,9 @@
             "pc": 9,
             "pc_name": "Bellary",
             "ac": 95,
-            "ac_name": "Sandur"
+            "ac_name": "Sandur",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58736,7 +58916,9 @@
             "pc": 9,
             "pc_name": "Bellary",
             "ac": 96,
-            "ac_name": "Kudligi"
+            "ac_name": "Kudligi",
+            "district_name": "Bellary",
+            "region_name": "Hyderabad Karnataka"
           }
         },
         {
@@ -58754,7 +58936,9 @@
             "pc": 18,
             "pc_name": "Chitradurga",
             "ac": 97,
-            "ac_name": "Molakalmuru"
+            "ac_name": "Molakalmuru",
+            "district_name": "Chitradurga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58777,7 +58961,9 @@
             "pc": 18,
             "pc_name": "Chitradurga",
             "ac": 98,
-            "ac_name": "Challakere"
+            "ac_name": "Challakere",
+            "district_name": "Chitradurga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58794,7 +58980,9 @@
             "pc": 18,
             "pc_name": "Chitradurga",
             "ac": 99,
-            "ac_name": "Chitradurga"
+            "ac_name": "Chitradurga",
+            "district_name": "Chitradurga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58818,7 +59006,9 @@
             "pc": 18,
             "pc_name": "Chitradurga",
             "ac": 100,
-            "ac_name": "Hiriyur"
+            "ac_name": "Hiriyur",
+            "district_name": "Chitradurga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58839,7 +59029,9 @@
             "pc": 18,
             "pc_name": "Chitradurga",
             "ac": 102,
-            "ac_name": "Holalkere"
+            "ac_name": "Holalkere",
+            "district_name": "Chitradurga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58858,7 +59050,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 103,
-            "ac_name": "Jagalur"
+            "ac_name": "Jagalur",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58881,7 +59075,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 104,
-            "ac_name": "Harapanahalli"
+            "ac_name": "Harapanahalli",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58903,7 +59099,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 105,
-            "ac_name": "Harihar"
+            "ac_name": "Harihar",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58920,7 +59118,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 106,
-            "ac_name": "Davanagere North"
+            "ac_name": "Davanagere North",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58939,7 +59139,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 107,
-            "ac_name": "Davanagere South"
+            "ac_name": "Davanagere South",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58962,7 +59164,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 108,
-            "ac_name": "Mayakonda"
+            "ac_name": "Mayakonda",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -58981,7 +59185,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 109,
-            "ac_name": "Channagiri"
+            "ac_name": "Channagiri",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59000,7 +59206,9 @@
             "pc": 13,
             "pc_name": "Davanagere",
             "ac": 110,
-            "ac_name": "Honnali"
+            "ac_name": "Honnali",
+            "district_name": "Davangere",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59022,7 +59230,9 @@
             "pc": 14,
             "pc_name": "Shimoga",
             "ac": 111,
-            "ac_name": "Shimoga Rural"
+            "ac_name": "Shimoga Rural",
+            "district_name": "Shimoga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59039,7 +59249,9 @@
             "pc": 14,
             "pc_name": "Shimoga",
             "ac": 112,
-            "ac_name": "Bhadravati"
+            "ac_name": "Bhadravati",
+            "district_name": "Shimoga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59058,7 +59270,9 @@
             "pc": 14,
             "pc_name": "Shimoga",
             "ac": 115,
-            "ac_name": "Shikaripura"
+            "ac_name": "Shikaripura",
+            "district_name": "Shimoga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59079,7 +59293,9 @@
             "pc": 14,
             "pc_name": "Shimoga",
             "ac": 116,
-            "ac_name": "Sorab"
+            "ac_name": "Sorab",
+            "district_name": "Shimoga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59100,7 +59316,9 @@
             "pc": 14,
             "pc_name": "Shimoga",
             "ac": 117,
-            "ac_name": "Sagar"
+            "ac_name": "Sagar",
+            "district_name": "Shimoga",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59135,7 +59353,9 @@
             "pc": 14,
             "pc_name": "Shimoga",
             "ac": 118,
-            "ac_name": "Byndoor"
+            "ac_name": "Byndoor",
+            "district_name": "Udupi",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -59154,7 +59374,9 @@
             "pc": 15,
             "pc_name": "Udupi",
             "ac": 122,
-            "ac_name": "Karkal"
+            "ac_name": "Karkal",
+            "district_name": "Udupi",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -59175,7 +59397,9 @@
             "pc": 15,
             "pc_name": "Udupi",
             "ac": 123,
-            "ac_name": "Sringeri"
+            "ac_name": "Sringeri",
+            "district_name": "Chikmagalur",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59195,7 +59419,9 @@
             "pc": 15,
             "pc_name": "Udupi",
             "ac": 124,
-            "ac_name": "Mudigere"
+            "ac_name": "Mudigere",
+            "district_name": "Chikmagalur",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59215,7 +59441,9 @@
             "pc": 15,
             "pc_name": "Udupi",
             "ac": 125,
-            "ac_name": "Chikmagalur"
+            "ac_name": "Chikmagalur",
+            "district_name": "Chikmagalur",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59237,7 +59465,9 @@
             "pc": 15,
             "pc_name": "Udupi",
             "ac": 126,
-            "ac_name": "Tarikere"
+            "ac_name": "Tarikere",
+            "district_name": "Chikmagalur",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59255,7 +59485,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 127,
-            "ac_name": "Kadur"
+            "ac_name": "Kadur",
+            "district_name": "Chikmagalur",
+            "region_name": "Central Karnataka"
           }
         },
         {
@@ -59274,7 +59506,9 @@
             "pc": 19,
             "pc_name": "Tumkur",
             "ac": 129,
-            "ac_name": "Tiptur"
+            "ac_name": "Tiptur",
+            "district_name": "Tumakuru",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59289,7 +59523,9 @@
             "pc": 19,
             "pc_name": "Tumkur",
             "ac": 132,
-            "ac_name": "Tumkur City"
+            "ac_name": "Tumkur City",
+            "district_name": "Tumakuru",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59312,7 +59548,9 @@
             "pc": 19,
             "pc_name": "Tumkur",
             "ac": 133,
-            "ac_name": "Tumkur Rural"
+            "ac_name": "Tumkur Rural",
+            "district_name": "Tumakuru",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59331,7 +59569,9 @@
             "pc": 19,
             "pc_name": "Tumkur",
             "ac": 134,
-            "ac_name": "Koratagere"
+            "ac_name": "Koratagere",
+            "district_name": "Tumakuru",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59347,7 +59587,9 @@
             "pc": 18,
             "pc_name": "Chitradurga",
             "ac": 137,
-            "ac_name": "Pavagada"
+            "ac_name": "Pavagada",
+            "district_name": "Tumakuru",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59366,7 +59608,9 @@
             "pc": 27,
             "pc_name": "Chikkballapur",
             "ac": 139,
-            "ac_name": "Gauribidanur"
+            "ac_name": "Gauribidanur",
+            "district_name": "Chikkaballapur",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59384,7 +59628,9 @@
             "pc": 27,
             "pc_name": "Chikkballapur",
             "ac": 140,
-            "ac_name": "Bagepalli"
+            "ac_name": "Bagepalli",
+            "district_name": "Chikkaballapur",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59402,7 +59648,9 @@
             "pc": 27,
             "pc_name": "Chikkballapur",
             "ac": 141,
-            "ac_name": "Chikkaballapur"
+            "ac_name": "Chikkaballapur",
+            "district_name": "Chikkaballapur",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59424,7 +59672,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 142,
-            "ac_name": "Sidlaghatta"
+            "ac_name": "Sidlaghatta",
+            "district_name": "Chikkaballapur",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59441,7 +59691,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 143,
-            "ac_name": "Chintamani"
+            "ac_name": "Chintamani",
+            "district_name": "Chikkaballapur",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59461,7 +59713,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 144,
-            "ac_name": "Srinivaspur"
+            "ac_name": "Srinivaspur",
+            "district_name": "Kolar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59479,7 +59733,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 145,
-            "ac_name": "Mulbagal"
+            "ac_name": "Mulbagal",
+            "district_name": "Kolar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59496,7 +59752,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 146,
-            "ac_name": "Kolar gold field"
+            "ac_name": "Kolar gold field",
+            "district_name": "Kolar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59516,7 +59774,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 147,
-            "ac_name": "Bangarapet"
+            "ac_name": "Bangarapet",
+            "district_name": "Kolar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59535,7 +59795,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 148,
-            "ac_name": "Kolar"
+            "ac_name": "Kolar",
+            "district_name": "Kolar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59556,7 +59818,9 @@
             "pc": 28,
             "pc_name": "Kolar",
             "ac": 149,
-            "ac_name": "Malur"
+            "ac_name": "Malur",
+            "district_name": "Kolar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -59575,7 +59839,9 @@
             "pc": 27,
             "pc_name": "Chikkballapur",
             "ac": 150,
-            "ac_name": "Yelahanka"
+            "ac_name": "Yelahanka",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59593,7 +59859,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 151,
-            "ac_name": "K.R.Pura"
+            "ac_name": "K.R.Pura",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59615,7 +59883,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 152,
-            "ac_name": "Byatarayanapura"
+            "ac_name": "Byatarayanapura",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59636,7 +59906,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 153,
-            "ac_name": "Yeshvanthapura"
+            "ac_name": "Yeshvanthapura",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59657,7 +59929,9 @@
             "pc": 23,
             "pc_name": "Bangalore Rural",
             "ac": 154,
-            "ac_name": "Rajarajeshwarinagar"
+            "ac_name": "Rajarajeshwarinagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59675,7 +59949,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 155,
-            "ac_name": "Dasarahalli"
+            "ac_name": "Dasarahalli",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59693,7 +59969,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 156,
-            "ac_name": "Mahalakshmi Layout"
+            "ac_name": "Mahalakshmi Layout",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59713,7 +59991,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 157,
-            "ac_name": "Malleshwaram"
+            "ac_name": "Malleshwaram",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59733,7 +60013,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 158,
-            "ac_name": "Hebbal"
+            "ac_name": "Hebbal",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59751,7 +60033,9 @@
             "pc": 24,
             "pc_name": "Bangalore North",
             "ac": 159,
-            "ac_name": "Pulakeshinagar"
+            "ac_name": "Pulakeshinagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59770,7 +60054,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 160,
-            "ac_name": "Sarvagnanagar"
+            "ac_name": "Sarvagnanagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59791,7 +60077,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 161,
-            "ac_name": "C.V. Raman Nagar"
+            "ac_name": "C.V. Raman Nagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59812,7 +60100,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 162,
-            "ac_name": "Shivajinagar"
+            "ac_name": "Shivajinagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59830,7 +60120,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 163,
-            "ac_name": "Shanti Nagar"
+            "ac_name": "Shanti Nagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59850,7 +60142,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 164,
-            "ac_name": "Gandhi Nagar"
+            "ac_name": "Gandhi Nagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59869,7 +60163,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 165,
-            "ac_name": "Rajaji Nagar"
+            "ac_name": "Rajaji Nagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59890,7 +60186,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 166,
-            "ac_name": "Govindraj Nagar"
+            "ac_name": "Govindraj Nagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59910,7 +60208,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 167,
-            "ac_name": "Vijay Nagar"
+            "ac_name": "Vijay Nagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59928,7 +60228,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 168,
-            "ac_name": "Chamrajpet"
+            "ac_name": "Chamrajpet",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59950,7 +60252,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 169,
-            "ac_name": "Chickpet"
+            "ac_name": "Chickpet",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59968,7 +60272,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 170,
-            "ac_name": "Basavanagudi"
+            "ac_name": "Basavanagudi",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -59988,7 +60294,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 171,
-            "ac_name": "Padmanaba Nagar"
+            "ac_name": "Padmanaba Nagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -60008,7 +60316,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 172,
-            "ac_name": "B.T.M.Layout"
+            "ac_name": "B.T.M.Layout",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -60027,7 +60337,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 173,
-            "ac_name": "Jayanagar"
+            "ac_name": "Jayanagar",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -60049,7 +60361,9 @@
             "pc": 25,
             "pc_name": "Bangalore Central",
             "ac": 174,
-            "ac_name": "Mahadevapura"
+            "ac_name": "Mahadevapura",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -60068,7 +60382,9 @@
             "pc": 26,
             "pc_name": "Bangalore South",
             "ac": 175,
-            "ac_name": "Bommanahalli"
+            "ac_name": "Bommanahalli",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -60089,7 +60405,9 @@
             "pc": 23,
             "pc_name": "Bangalore Rural",
             "ac": 176,
-            "ac_name": "Bangalore South"
+            "ac_name": "Bangalore South",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -60109,7 +60427,9 @@
             "pc": 23,
             "pc_name": "Bangalore Rural",
             "ac": 177,
-            "ac_name": "Anekal"
+            "ac_name": "Anekal",
+            "district_name": "Bangalore Urban",
+            "region_name": "Bangalore City"
           }
         },
         {
@@ -60127,7 +60447,9 @@
             "pc": 27,
             "pc_name": "Chikkballapur",
             "ac": 178,
-            "ac_name": "Hosakote"
+            "ac_name": "Hosakote",
+            "district_name": "Bangalore Rural",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60152,7 +60474,9 @@
             "pc": 27,
             "pc_name": "Chikkballapur",
             "ac": 179,
-            "ac_name": "Devanahalli"
+            "ac_name": "Devanahalli",
+            "district_name": "Bangalore Rural",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60174,7 +60498,9 @@
             "pc": 23,
             "pc_name": "Bangalore Rural",
             "ac": 182,
-            "ac_name": "Magadi"
+            "ac_name": "Magadi",
+            "district_name": "Ramanagara",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60195,7 +60521,9 @@
             "pc": 23,
             "pc_name": "Bangalore Rural",
             "ac": 183,
-            "ac_name": "Ramanagaram"
+            "ac_name": "Ramanagaram",
+            "district_name": "Ramanagara",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60214,7 +60542,9 @@
             "pc": 23,
             "pc_name": "Bangalore Rural",
             "ac": 184,
-            "ac_name": "Kanakapura"
+            "ac_name": "Kanakapura",
+            "district_name": "Ramanagara",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60233,7 +60563,9 @@
             "pc": 23,
             "pc_name": "Bangalore Rural",
             "ac": 185,
-            "ac_name": "Channapatna"
+            "ac_name": "Channapatna",
+            "district_name": "Ramanagara",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60253,7 +60585,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 186,
-            "ac_name": "Malavalli"
+            "ac_name": "Malavalli",
+            "district_name": "Mandya",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60273,7 +60607,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 187,
-            "ac_name": "Maddur"
+            "ac_name": "Maddur",
+            "district_name": "Mandya",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60292,7 +60628,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 188,
-            "ac_name": "Melukote"
+            "ac_name": "Melukote",
+            "district_name": "Mandya",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60310,7 +60648,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 189,
-            "ac_name": "Mandya"
+            "ac_name": "Mandya",
+            "district_name": "Mandya",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60333,7 +60673,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 190,
-            "ac_name": "Shrirangapattana"
+            "ac_name": "Shrirangapattana",
+            "district_name": "Mandya",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60355,7 +60697,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 191,
-            "ac_name": "Nagamangala"
+            "ac_name": "Nagamangala",
+            "district_name": "Mandya",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60376,7 +60720,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 192,
-            "ac_name": "Krishnarajpet"
+            "ac_name": "Krishnarajpet",
+            "district_name": "Mandya",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60395,7 +60741,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 193,
-            "ac_name": "Shravanabelagola"
+            "ac_name": "Shravanabelagola",
+            "district_name": "Hassan",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60416,7 +60764,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 194,
-            "ac_name": "Arsikere"
+            "ac_name": "Arsikere",
+            "district_name": "Hassan",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60436,7 +60786,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 195,
-            "ac_name": "Belur"
+            "ac_name": "Belur",
+            "district_name": "Hassan",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60453,7 +60805,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 196,
-            "ac_name": "Hassan"
+            "ac_name": "Hassan",
+            "district_name": "Hassan",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60474,7 +60828,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 197,
-            "ac_name": "Holenarasipur"
+            "ac_name": "Holenarasipur",
+            "district_name": "Hassan",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60494,7 +60850,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 198,
-            "ac_name": "Arkalgud"
+            "ac_name": "Arkalgud",
+            "district_name": "Hassan",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60516,7 +60874,9 @@
             "pc": 16,
             "pc_name": "Hassan",
             "ac": 199,
-            "ac_name": "Sakleshpur"
+            "ac_name": "Sakleshpur",
+            "district_name": "Hassan",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60536,7 +60896,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 200,
-            "ac_name": "Belthangady"
+            "ac_name": "Belthangady",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60569,7 +60931,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 201,
-            "ac_name": "Moodabidri"
+            "ac_name": "Moodabidri",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60588,7 +60952,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 202,
-            "ac_name": "Mangalore City North"
+            "ac_name": "Mangalore City North",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60605,7 +60971,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 203,
-            "ac_name": "Mangalore City South"
+            "ac_name": "Mangalore City South",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60624,7 +60992,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 204,
-            "ac_name": "Mangalore"
+            "ac_name": "Mangalore",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60643,7 +61013,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 205,
-            "ac_name": "Bantval"
+            "ac_name": "Bantval",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60662,7 +61034,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 206,
-            "ac_name": "Puttur"
+            "ac_name": "Puttur",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60682,7 +61056,9 @@
             "pc": 17,
             "pc_name": "Dakshina Kannada",
             "ac": 207,
-            "ac_name": "Sullia"
+            "ac_name": "Sullia",
+            "district_name": "Dakshina Kannada",
+            "region_name": "Coastal Karnataka"
           }
         },
         {
@@ -60701,7 +61077,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 208,
-            "ac_name": "Madikeri"
+            "ac_name": "Madikeri",
+            "district_name": "Kodagu",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60721,7 +61099,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 209,
-            "ac_name": "Virajpet"
+            "ac_name": "Virajpet",
+            "district_name": "Kodagu",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60740,7 +61120,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 210,
-            "ac_name": "Periyapatna"
+            "ac_name": "Periyapatna",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60759,7 +61141,9 @@
             "pc": 20,
             "pc_name": "Mandya",
             "ac": 211,
-            "ac_name": "Krishnarajanagara"
+            "ac_name": "Krishnarajanagara",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60778,7 +61162,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 212,
-            "ac_name": "Hunsur"
+            "ac_name": "Hunsur",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60799,7 +61185,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 213,
-            "ac_name": "Heggadadevankote"
+            "ac_name": "Heggadadevankote",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60816,7 +61204,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 214,
-            "ac_name": "Nanjangud"
+            "ac_name": "Nanjangud",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60839,7 +61229,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 215,
-            "ac_name": "Chamundeshwari"
+            "ac_name": "Chamundeshwari",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60856,7 +61248,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 216,
-            "ac_name": "Krishnaraja"
+            "ac_name": "Krishnaraja",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60875,7 +61269,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 217,
-            "ac_name": "Chamaraja"
+            "ac_name": "Chamaraja",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60892,7 +61288,9 @@
             "pc": 21,
             "pc_name": "Mysore",
             "ac": 218,
-            "ac_name": "Narasimharaja"
+            "ac_name": "Narasimharaja",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60917,7 +61315,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 219,
-            "ac_name": "Varuna"
+            "ac_name": "Varuna",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60936,7 +61336,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 220,
-            "ac_name": "T.Narasipur"
+            "ac_name": "T.Narasipur",
+            "district_name": "Mysore",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60956,7 +61358,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 221,
-            "ac_name": "Hanur"
+            "ac_name": "Hanur",
+            "district_name": "Chamarajanagar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60974,7 +61378,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 222,
-            "ac_name": "Kollegal"
+            "ac_name": "Kollegal",
+            "district_name": "Chamarajanagar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -60993,7 +61399,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 223,
-            "ac_name": "Chamarajanagar"
+            "ac_name": "Chamarajanagar",
+            "district_name": "Chamarajanagar",
+            "region_name": "Old Mysore Region"
           }
         },
         {
@@ -61012,7 +61420,9 @@
             "pc": 22,
             "pc_name": "Chamarajanagar",
             "ac": 224,
-            "ac_name": "Gundlupet"
+            "ac_name": "Gundlupet",
+            "district_name": "Chamarajanagar",
+            "region_name": "Old Mysore Region"
           }
         }
       ]

@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
+  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2023 Karnataka Election,Karnataka Assembly Election Results 2023 'A visual guide to the check out the comparison of Karnataka Assembly elections, from 2018 to 2023', Which of the Dravidian duos might get the stronghold in Karnataka? What will be the pre-poll alliances? For the state January is a crucial month to predict next political face.">
+  <meta name="news_keywords" content="Karnataka polls, Karnataka assembly polls,  Karnataka elections, Karnataka assembly elections, Karnataka news, india news">
+  <meta name="keywords" content="Karnataka polls, Karnataka assembly polls,  Karnataka elections, Karnataka assembly elections, Karnataka news, india news">
+  
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/basic.css" rel="stylesheet">
+  <link href="css/feature.css" rel="stylesheet">
+  <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link href="css/custom-styles.css" rel="stylesheet">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/multiple-select.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/d3.v4.min.js"></script>
+  <script type="text/javascript" src="js/sankey.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/jquery.multiple.select.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+ 
+  <script type="text/javascript" src="js/topojson.min.js"></script>
+  <title>Assembly Elections Results 2023 (Karnataka)</title>
+  
+  <style>
+
+    body {
+        margin: 0;
+        font-family: "Helvetica Neue", sans-serif;
+    }
+
+    .subunit {
+        stroke: #333;
+        stroke-width: 1px;
+    }
+
+    .subunit-boundary {
+        fill: none;
+        stroke: #3a403d;
+    }
+
+    .place-label {
+        font-size: .7em;
+        text-shadow: 0px 0px 2px #fff;
+    }
+
+    .tick{
+        font-size:16px;
+    }
+
+  </style>
+  
+  </head>
+  <body>
+  
+    <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Karnataka Assembly Election Results 2023, 'A visual guide to check out the comparison of Karnataka Assembly elections results from 2018 to 2023</p>
+                    <p class="synopsis">This interactive map will bring you minute-by-minute results, from the national standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
+                    <p class="synopsis">It aims to make Assembly elections Results in Karnataka  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="dropdown header_district" style="display: inline;">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="margin-top:5px;">Select Region </button>
+                
+                <ul class="dropdown-menu districts_dropdown" role="menu">
+                    <li data-districts="Karnataka" class="Karnataka"><a href="?districts=Karnataka#overall_view">Karnataka </a></li>
+                    <li data-districts="Mumbai Karnataka" class="Mumbai_Karnataka"><a href="?districts=Mumbai_Karnataka#overall_view">Mumbai Karnataka </a></li>
+                    <li data-districts="Hyderabad Karnataka" class="Hyderabad_Karnataka"><a href="?districts=Hyderabad_Karnataka#overall_view">Hyderabad Karnataka </a></li>
+                    <li data-districts="Coastal Karnataka" class="Coastal_Karnataka"><a href="?districts=Coastal_Karnataka#overall_view">Coastal Karnataka </a></li>
+                    <li data-districts="Central Karnataka" class="Central_Karnataka"><a href="?districts=Central_Karnataka#overall_view">Central Karnataka </a></li>
+                    <li data-districts="Old Mysore Region" class="Old_Mysore_Region"><a href="?districts=Old_Mysore_Region#overall_view">Old Mysore Region </a></li>
+                    <li data-districts="Bangalore City" class="Bangalore_City"><a href="?districts=Bangalore_City#overall_view">Bangalore City </a></li>
+                </ul>
+            </div>
+            
+            <div class="dropdown header_year" style="display: inline;margin-top:5px;!important">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="margin-top:5px;">Select Year</button>
+                
+                <ul class="dropdown-menu year_dropdown" role="menu">
+                    <li data-year="2023" class="2023_id"><a href="?year=2023#overall_view">2023 </a></li>
+                    <li data-year="2018" class="2018_id"><a href="?year=2018#overall_view">2018 </a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div><br/><br/>
+
+    <div id="overall_view">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2>Assembly Election Results <i class="year_tag"></i> <i class="type_tag"></i> Standings</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 panel-body">
+
+                                <div class="container footer_details"></div>
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <svg class="legend" class="legend" data-height="0.54" viewBox="0 0 600 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                                                <g class="headers" transform="translate(165,0)">
+                                                  <rect class="party-legend" data-party="LDF" data-highlight="[data-party=LDF]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#EE141F"></rect>
+                                                  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">LDF</text>
+                                                  <rect class="party-legend" data-party="UDF" data-highlight="[data-party=UDF]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                                                  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">UDF</text>
+                                                  <rect class="party-legend" data-party="NDA" data-highlight="[data-party=NDA]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#F47216"></rect>
+                                                  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NDA</text>
+                                                  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#363636"></rect>
+                                                  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                </div>
+                                    <div class="col-md-12"> 
+                                     <div class="overall_view_report">
+                                     </div>
+                                    </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="map_view" class="map_hider">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2><i class="type_tag"></i> Wise Map View <i class="year_tag"></i></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-12 panel-body">
+                                <div class="container footer_details"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <svg class="legend" data-height="0.54" viewBox="0 0 600 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                                            <g class="headers" transform="translate(165,0)">
+                                              <rect class="party-legend" data-party="LDF" data-highlight="[data-party=LDF]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#EE141F"></rect>
+                                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">LDF</text>
+                                              <rect class="party-legend" data-party="UDF" data-highlight="[data-party=UDF]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">UDF</text>
+                                              <rect class="party-legend" data-party="NDA" data-highlight="[data-party=NDA]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#F47216"></rect>
+                                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NDA</text>
+                                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#363636"></rect>
+                                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+
+                                <p class="form-inline header_form" >
+                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                        <p class="form-inline header_form" style="text-align: left;">
+                                            <label style="text-align: right;" align="left" >Search:</label>
+                                            <input style="width:75%;max-width: 220px;" type="text" class="geo_search" placeholder="eg: Alappuzha">
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 col-xs-12 year_filters" id="2023_filters">
+                                        <p class="form-inline header_form"  style="text-align: right;">
+                                            <label style="text-align: right;" value="year">Party : </label>
+                                            <select style="width:150px;" multiple="multiple" id="yearOption" class="select_year"></select>
+                                            <input type="button" value="submit" style="border-radius:12px;" class="btn-primary party_filter"></input>
+                                        </p>
+                                    </div>
+                                </p>
+
+                                <div class="chart">
+                                    <div class="geo_map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="perConstituency">
+        <div class="container-fluid detail_display" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2 class="headers_constituency"><i class="constituency_tag"></i> Constituency Wise <i class="type_tag"></i> Results <i class="sub_year_tag"></i> </h2> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 panel-body">
+                                <div class="chart">  
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <svg class="legend" data-height="0.54" viewBox="0 0 600 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                                                <g class="headers" transform="translate(165,0)">
+                                                  <rect class="party-legend" data-party="LDF" data-highlight="[data-party=LDF]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#EE141F"></rect>
+                                                  <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">LDF</text>
+                                                  <rect class="party-legend" data-party="UDF" data-highlight="[data-party=UDF]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                                                  <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">UDF</text>
+                                                  <rect class="party-legend" data-party="NDA" data-highlight="[data-party=NDA]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#F47216"></rect>
+                                                  <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NDA</text>
+                                                  <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#363636"></rect>
+                                                  <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-4 panel-body">
+                                        <div class="progress_bar"></div>
+                                    </div>
+                                    <div class="col-md-8 panel-body">
+                                        <div class="horizontal_bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="party_Trend">
+        <div class="container-fluid">
+            <div class="container">
+              
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2><i class="type_tag"></i> wise performance trend <i class="year_tag"></i></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 panel-body">
+
+                                 <div class="container footer_details"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <svg class="legend" data-height="0.54" viewBox="0 0 600 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                                            <g class="headers" transform="translate(165,0)">
+                                              <rect class="party-legend" data-party="LDF" data-highlight="[data-party=LDF]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#EE141F"></rect>
+                                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">LDF</text>
+                                              <rect class="party-legend" data-party="UDF" data-highlight="[data-party=UDF]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">UDF</text>
+                                              <rect class="party-legend" data-party="NDA" data-highlight="[data-party=NDA]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#F47216"></rect>
+                                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NDA</text>
+                                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#363636"></rect>
+                                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            
+                                <div class="party_performance_trend_svg"></div>
+
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div id="tableDetails">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2>Constituency wise Winner results <i class="year_tag"></i></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 panel-body">
+                            
+                                 <div class="container footer_details"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <svg class="legend" data-height="0.54" viewBox="0 0 600 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                                            <g class="headers" transform="translate(165,0)">
+                                              <rect class="party-legend" data-party="LDF" data-highlight="[data-party=LDF]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#EE141F"></rect>
+                                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">LDF</text>
+                                              <rect class="party-legend" data-party="UDF" data-highlight="[data-party=UDF]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">UDF</text>
+                                              <rect class="party-legend" data-party="NDA" data-highlight="[data-party=NDA]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#F47216"></rect>
+                                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NDA</text>
+                                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#363636"></rect>
+                                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                                <div class="party_trend"></div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="sankeyFlow">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 panel panel-default">
+                        <div class="row">
+                            <div class="col-md-12 panel-heading1">
+                                <h2><i class="type_tag"></i> Wise Transitions Trend <i class="successive_year_tag"></i> - <i class="districts_tag"></i></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 panel-body">
+                                <div class="container footer_details"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <svg class="legend" data-height="0.54" viewBox="0 0 600 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                                            <g class="headers" transform="translate(165,0)">
+                                              <rect class="party-legend" data-party="LDF" data-highlight="[data-party=LDF]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#EE141F"></rect>
+                                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">LDF</text>
+                                              <rect class="party-legend" data-party="UDF" data-highlight="[data-party=UDF]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">UDF</text>
+                                              <rect class="party-legend" data-party="NDA" data-highlight="[data-party=NDA]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#F47216"></rect>
+                                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">NDA</text>
+                                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#363636"></rect>
+                                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                                <div  class="sankey_chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+<script>
+
+color_map_Alliance = {'JDS':'#008000','NR':'#E9967A', 'ADMK':'#b2d33c','AITC':'#363636','AKTP':'#363636','API':'#363636','BDJS':'#B22222','BJP':'#ff7f0e','BSP':'#363636','C(S)':'#cc99a2','CMP':'#cc0000','CMP(J)':'#363636','CMPKSC':'#363636','CPI':'#F27A67','CPI(ML)':'#363636','CPI(ML)(L)':'#363636','CPI(MLR)':'#363636','CPM':'#ff5757','CPM(U)':'#363636','DPSP':'#363636','DSGP':'#ADC6B5','IGP':'#363636','INC':'#3498DB','INC(S)':'#cc99a2','IND':'#AAC999','INL':'#008000','IUML':'#014BC6','JD(S)':'#138808','JD(U)':'#9A9E56','JKC':'#363636','JPSS':'#363636','KC':'#FF6600','KC(AMG)':'#363636','KC(B)':'#ffc0cb','KC(J)':'#CC6600','KC(M)':'#CC9900','KEC':'#FF6600','KEC(B)':'#ffc0cb','KEC(J)':'#CC6600','KEC(M)':'#CC9900','KEC(S)':'#363636','KEC(ST)':'#363636','KJ':'#363636','KJP':'#363636','KRSP':'#363636','LJD':'#00FF7F','LJP':'#363636','NCK':'#008080','NCP':'#00B2B2','NOTA':'#000','NSC':'#FF9933','OTH':'#363636','PDP':'#363636','PGP':'#363636','RMPI':'#ff0000','RSP':'#ffa500','RSP(B) ':'#363636','RSP(L)':'#f28500','SDP':'#363636','SDPI':'#363636','SHS':'#363636','SJD':'#363636','SLAP':'#363636','SP':'#1F77B4','SS':'#363636','SUCI':'#363636','SWJP':'#363636','WPI':'#363636','OTH':'#363636','ADHRI':'#363636','BDP':'#363636','KJ(S)':'#363636','NLP':'#363636','RJD':'#363636','SFB':'#363636','TTP':'#363636','KRPP':'#ffff00','SKP':'#00FFFF'}
+
+<!--{"NR":"#E9967A", "LDF":"#EE141F","UDF":"#3498DB","NDA":"#F47216","OTH" : "#363636","IND" : "#AAC999","NOTA" : "#D9D4CE",'JDS':'#008000'}
+-->
+color_map_Party = {'JDS':'#008000','NR':'#E9967A', 'ADMK':'#b2d33c','AITC':'#363636','AKTP':'#363636','API':'#363636','BDJS':'#B22222','BJP':'#ff7f0e','BSP':'#363636','C(S)':'#cc99a2','CMP':'#cc0000','CMP(J)':'#363636','CMPKSC':'#363636','CPI':'#F27A67','CPI(ML)':'#363636','CPI(ML)(L)':'#363636','CPI(MLR)':'#363636','CPM':'#ff5757','CPM(U)':'#363636','DPSP':'#363636','DSGP':'#ADC6B5','IGP':'#363636','INC':'#3498DB','INC(S)':'#cc99a2','IND':'#AAC999','INL':'#008000','IUML':'#014BC6','JD(S)':'#138808','JD(U)':'#9A9E56','JKC':'#363636','JPSS':'#363636','KC':'#FF6600','KC(AMG)':'#363636','KC(B)':'#ffc0cb','KC(J)':'#CC6600','KC(M)':'#CC9900','KEC':'#FF6600','KEC(B)':'#ffc0cb','KEC(J)':'#CC6600','KEC(M)':'#CC9900','KEC(S)':'#363636','KEC(ST)':'#363636','KJ':'#363636','KJP':'#363636','KRSP':'#363636','LJD':'#00FF7F','LJP':'#363636','NCK':'#008080','NCP':'#00B2B2','NOTA':'#000','NSC':'#FF9933','OTH':'#363636','PDP':'#363636','PGP':'#363636','RMPI':'#ff0000','RSP':'#ffa500','RSP(B) ':'#363636','RSP(L)':'#f28500','SDP':'#363636','SDPI':'#363636','SHS':'#363636','SJD':'#363636','SLAP':'#363636','SP':'#1F77B4','SS':'#363636','SUCI':'#363636','SWJP':'#363636','WPI':'#363636','OTH':'#363636','ADHRI':'#363636','BDP':'#363636','KJ(S)':'#363636','NLP':'#363636','RJD':'#363636','SFB':'#363636','TTP':'#363636','KRPP':'#ffff00','SKP':'#00FFFF'}
+
+color_map = {'Alliance' : color_map_Alliance,'Party': color_map_Party}
+
+ $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
+        }else {
+            $('#return-to-top').fadeOut(200);
+        }
+    });
+
+    $('#return-to-top').click(function() {
+        $('body,html').animate({
+            scrollTop : 0
+        }, 500);
+    });
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+ function tabulate(data, columns) {
+        
+        $('.party_trend').empty()
+
+        var table = d3.select('.party_trend')
+                        .append('table')
+                        .attr("id","myTable")
+                        .attr("class","table table-bordered");
+    
+        var thead = table.append('thead').attr("class","data_head")
+        var tbody = table.append('tbody');
+
+        // append the header row
+        thead.append('tr')
+          .selectAll('th')
+          .data(columns).enter()
+          .append('th')
+            .attr("class","dynatable-head")
+            .text(function (column) { return column.toUpperCase().replace('_',' '); });
+
+        // create a row for each object in the data
+        var rows = tbody.selectAll('tr')
+          .data(data)
+          .enter()
+          .append('tr');
+
+        // create a cell in each row for each column
+        var cells = rows.selectAll('td')
+          .data(function (row) {
+            return columns.map(function (column) { 
+              return {column: column, value: row[column] ,  YEAR : row['YEAR'],  AC_NO : row['AC_NO']};
+            });
+          })
+          .enter()
+          .append('td')
+          .attr("bgcolor",function(d) { return color_map[selection_detail][d.value] })  
+          .append("font")
+          .style("cursor","pointer")
+          .style("color",function(d) { return color_map[selection_detail][d.value] == undefined ? "#636363" : ((parseInt(color_map[selection_detail][d.value].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })                          
+          .text(function (d) { return d.value; })
+          .on('click',function(d){ return districts_detail!='Karnataka'? window.open('?year='+d.YEAR+'&type='+selection_detail+'&acct_no='+d.AC_NO+'&districts='+districts_detail+"#perConstituency","_self") : window.open('?year='+d.YEAR+'&type='+selection_detail+'&acct_no='+d.AC_NO+"#perConstituency","_self") });
+
+      return table;
+   
+    }
+
+function map_filter(year_selected,other_data){
+
+    var centered;
+
+    map_data = other_data.filter(function(d){return (d.YEAR==year_detail) & (d['#']==1) })
+
+    map_data_year_selected = other_data.filter(function(d){return (d.YEAR==year_detail) & (d['#']==1) })
+
+    map_data.forEach(function(o) {
+        map_data_year_selected.forEach(function(o_year) {
+           if (o_year.ac == o.ac){
+                o['selected_Selected_type'] = o_year['Selected_type']
+              }
+        });
+    });
+
+   var map_data_2018 = []
+                    _.each(map_data, function(d) { if(_.contains(year_selected, d['selected_Selected_type'])) { map_data_2018.push(d);}});
+   
+    var map_data = map_data_2018;
+
+    var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
+       
+         sub_width_mapped = sub_width < 960 ? (districts_detail!='Karnataka'? sub_width*1.2 : sub_width*.80) : sub_width*.60
+
+       var margin = {top: 20, right: 20, bottom: 20, left: 20},
+        width = sub_width_mapped - margin.left - margin.right,
+        height = 460 - margin.top - margin.bottom;
+
+      var projection = d3.geoMercator();
+
+      var path = d3.geoPath()
+          .projection(projection)
+          .pointRadius(2);
+
+      var svg = d3.select(".geo_map").append("svg")
+            .attr("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width)+" "+(height))
+            .attr("xmlns", 'https://www.w3.org/2000/svg')
+            .attr("xlink", 'https://www.w3.org/1999/xlink')
+            .attr("version", '1.1');
+
+        svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all')
+            .on("click", clicked)
+
+
+      var g = svg.append("g");
+    
+      d3.json("karnataka_assembly.json", function(error, data) {
+
+        if (error) throw error;
+        var boundary = centerZoom(data);
+        drawSubUnits(data);
+       
+      });
+
+      // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
+      // It also returns the boundary itself in case you want to draw it to the map
+      function centerZoom(data){
+
+        districts_detail!='Karnataka'? data.objects['karnataka.assembly'].geometries  = data.objects['karnataka.assembly'].geometries.filter(function(d) { return d.properties.district_name == districts_detail | d.properties.region_name == districts_detail.replace('_',' ') }) : data.objects['karnataka.assembly'].geometries
+        d3.selectAll('.footer_details').select('center').remove();
+
+        var o = topojson.mesh(data, data.objects['karnataka.assembly'], function(a, b) { return a === b; });
+
+        projection
+            .scale(1)
+            .translate([0, 0]);
+
+        var b = path.bounds(o),
+            s = 1 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+            t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+        projection
+            .scale(s)
+            .translate(t);
+
+        return o;
+      }
+
+      function addThousandsSeparator(t){
+          var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+    
+    function clicked(d) {
+          
+      var x, y, k;
+      if (d && centered !== d) {
+        var centroid = path.centroid(d);
+        x = centroid[0];
+        y = centroid[1];
+        k = 4;
+        centered = d;
+      }else {
+        x = width / 2;
+        y = height / 2;
+        k = 1;
+        centered = null;
+      }
+
+      g.selectAll("path")
+          .classed("active", centered && function(d) { return d === centered; });
+
+      g.transition()
+          .duration(750)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
+          .style("stroke-width", 1.5 / k + "px");
+
+    }
+
+     constituency_list =[]
+      function drawSubUnits(dataMaps){
+
+       mapper_data_view = topojson.feature(dataMaps, dataMaps.objects['karnataka.assembly']).features
+       console.log(dataMaps.objects)
+       mapper_data_view.forEach(function(o) {
+            map_data.forEach(function(g){
+              if (o.properties.ac == g.ac){
+                constituency_list.push(o.properties.ac_name);
+                o.result = g
+              }
+            });
+          });
+ 
+         d3.selectAll('.footer_details')
+             .append('center')
+             .append('b')
+             .text(districts_detail.replace('_',' ')+' : '+ map_data.length+' Seats')
+
+        //console.log(mapper_data_view,map_data);
+
+        g.selectAll(".subunit")
+            .data(mapper_data_view)
+          .enter().append("path")
+          .style("cursor","pointer")
+            .attr("class", "subunit")
+            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br>  Candidate : '+d.result.NAME+'</br> Front : '+d.result.FRONT+'</br> Party : '+d.result.PARTY+ '<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Results Awaiting <br/> Constituency : '+d.properties.ac_name})
+            .attr("sub_link", function (d){ return d.properties.ac_name })
+            .attr("fill", function(d) { return d.result!=undefined? color_map[selection_detail][d.result.Selected_type] : '#fff'  })
+            .attr("d", path)
+            .on("click", clicked)
+           .on('dblclick',function(d){ return d.result!=undefined? (districts_detail!='Karnataka'? window.open('?year='+d.result.YEAR+'&type='+selection_detail+'&districts='+districts_detail+'&acct_no='+d.result.AC_NO+"#perConstituency","_self") : window.open('?year='+d.result.YEAR+'&type='+selection_detail+'&acct_no='+d.result.AC_NO+"#perConstituency","_self") ):''  });
+
+
+    $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
+
+    var lastsearch = '';
+    var $box = {};
+    
+    function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function(event) {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp( "^" + search, "i" );
+          $('path', $chart).each(function(){
+              $(this).css('fill-opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+        if (event.keyCode==13){
+            $(document.activeElement).filter(':input:focus').blur();
+        }
+      });
+    }
+   add_search('.geo_search', '.geo_map');
+   var Industry = constituency_list;
+   d3.select('.geo_search').attr('placeholder','eg :'+constituency_list[0]);
+
+    $( ".geo_search" ).autocomplete({
+        source: function(req, responseFn) {
+            var re = $.ui.autocomplete.escapeRegex(req.term);
+            var matcher = new RegExp( "^" + re, "i" );
+            var a = $.grep( Industry, function(item,index){
+                return matcher.test(item);
+            });
+
+            if (a.length==0){ alert("There aren't a Constituency starting with `"+re+"` in "+districts_detail+'.') }
+            responseFn( a );
+
+        }
+    });
+    
+      }
+
+      }
+
+year_detail = getParameterByName('year');
+
+districts_detail = getParameterByName('districts');
+
+selection_detail = getParameterByName('type');
+
+if (districts_detail == undefined){ districts_detail= 'Karnataka'; }
+
+if (selection_detail == undefined){ selection_detail= 'Party'; }
+
+if (year_detail == undefined){ year_detail = 2023; }
+
+if (selection_detail=='Party'){
+d3.selectAll('svg.legend').remove();
+}
+
+districts_list = ['Karnataka','Mumbai Karnataka','Hyderabad Karnataka','Coastal Karnataka','Central Karnataka','Old Mysore Region','Bangalore City']
+
+year_list = [2023,2018]
+
+type_list = ['Alliance','Party']
+
+d3.select('.districts_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?districts='+districts_list[i].replace(' ','_')+'&year='+year_detail+'&type='+selection_detail+'#overall_view'})
+
+d3.select('.type_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?districts='+districts_detail+'&year='+year_detail+'&type='+type_list[i]+'#overall_view'})
+
+d3.select('.year_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?districts='+districts_detail+'&year='+year_list[i]+'&type='+selection_detail+'#overall_view'})
+
+$('.'+districts_detail+'').addClass('active');
+d3.selectAll(".districts_tag").append('b').text("("+districts_detail.replace('_',' ')+")");
+
+$('.'+selection_detail+'').addClass('active');
+$(".selection_tag").append("("+selection_detail.replace('_',' ')+")");
+
+d3.selectAll(".year_tag").append('b').text("("+year_detail+" - "+districts_detail.replace('_',' ')+")");
+d3.selectAll(".sub_year_tag").append('b').text("("+year_detail+")");
+
+d3.selectAll(".successive_year_tag").append('b').text(" (2018 - 2023)");
+
+typeColumn = selection_detail=='Alliance'? 'FRONT' : 'PARTY'
+
+d3.selectAll(".type_tag").style('font-style','normal').text(typeColumn);
+
+$('.'+year_detail+'_id').addClass('active');
+acct_no = getParameterByName('acct_no');
+
+if (acct_no == undefined){ $(".detail_display").hide(); }
+
+if (year_detail == 2018){ $("#perConstituency_Photo").hide(); }
+else{
+
+if (window.location.href.split('#')[1]!=undefined){
+     setTimeout(function () { 
+        var selectionHeight = $('#'+window.location.href.split('#')[1]).offset().top
+            $('html, body').animate({
+                scrollTop: $('#'+window.location.href.split('#')[1]).offset().top
+            }, 500);
+       }, 1000);
+}
+
+}
+
+    d3.csv("Karnataka_counting.csv", function(map_data) { 
+
+    map_data.forEach(function(o) {
+       o.Selected_type = selection_detail=='Alliance'? o.FRONT : o.PARTY 
+      });
+
+    map_data = districts_detail!='Karnataka'? map_data.filter(function(d){ return  d['District']==districts_detail | d['Region']==districts_detail.replace('_',' ')  }) : map_data
+
+    full_data = map_data
+
+    year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
+
+    year_data_set_all.forEach(function(o) {
+       o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
+    });
+
+    // render the table(s)
+    typeColumn = selection_detail=='Alliance'? 'FRONT' : 'PARTY'
+    tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME',typeColumn,'votes_gained','vote_percent']); // 2 column table
+    
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
+    
+    function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+  
+    year_data_set_sum = map_data.filter(function(d){return (d.YEAR==year_detail)})
+
+    year_data_set_sum_overall = d3.sum(year_data_set_sum, function(d){
+        return parseInt(d.VOTES);
+    });
+
+    var year_data_set_sum_party = d3.nest()
+              .key(function(d) { return d['Selected_type']; })
+              .rollup(function(v) { return d3.sum(v, function(d) {return parseInt(d.VOTES);})  })
+              .entries(year_data_set_sum);
+   
+    year_data_set_2018 = map_data.filter(function(d){return (d.YEAR==2018 & d['#']==1)  })
+    year_data_set_2023 = map_data.filter(function(d){return (d.YEAR==2023 & d['#']==1)  })
+
+    year_data_set_2018.forEach(function(p) {
+        year_data_set_2023.forEach(function(o) {
+            if(p.AC_NO==o.AC_NO)
+            {
+            o['O_Selected_type'] = p['Selected_type']
+            }
+        });
+    });
+
+    year_data_set_year = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
+
+    yearOption = _.uniq(year_data_set_year, function(item, key, a) { return item['Selected_type']; });
+
+    yearOption = yearOption.sort(function(a, b) { return d3.ascending(a['Selected_type'], b['Selected_type']); })
+
+      var select_box = d3.select('#yearOption')
+                .selectAll("option")
+                    .data(yearOption.filter(function(d) { return d['Selected_type']!='' }))
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['Selected_type']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['Selected_type']; });
+
+      $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
+
+      var year_selected = [];
+      $('#yearOption :selected').each(function(i, selected){
+          year_selected[i] = $(selected).val();
+      });
+
+      map_filter(year_selected,map_data);
+    
+    
+      var year_data_sets = d3.nest()
+              .key(function(d) { return d['Selected_type']; })
+              .rollup(function(v) { return v.length;  })
+              .entries(year_data_set_all);
+   
+
+      year_data_sets.sort(function(a, b) { return b.value - a.value; })
+  
+      heading_colors = []
+       year_data_sets.forEach(function(o) {
+          heading_colors.push(color_map[selection_detail][o.key])
+          year_data_set_sum_party.forEach(function(p) {
+            if (p.key==o.key){
+              o.party_vote_percent = parseFloat(100*p.value/year_data_set_sum_overall).toFixed(2);
+              o.party_votes = addThousandsSeparator(p.value)
+            }
+        });
+       })
+
+        sum_seats = d3.sum(year_data_sets, function(d) { return d.value; });
+
+        lowresult_data  = d3.select('.overall_view_report')
+                             .selectAll('div')
+                            .data([year_data_sets])
+                            .enter()
+                            .append("div")
+                            .append("table")
+                            .attr("class","table table-condensed party-summary")
+
+
+             function toTitleCase(e){return e.replace(/\w\S*/g,function(e){return e.charAt(0).toUpperCase()+e.substr(1).toLowerCase()})}
+
+              typeColumn = selection_detail=='Alliance'? 'FRONT' : 'PARTY'
+
+              lowresult_data.append('thead')
+                            .selectAll("tr")
+                            .data([[toTitleCase(typeColumn),'Seats','Seat Share','Vote Percent','Total Votes']]).enter()
+                            .append("tr")
+                            .selectAll("th")
+                                .data(function(d,l) { return d }).enter()
+                                .append('th')
+                                .style("max-width",'10px')
+                                .style("font-size",'15px')
+                                .style("text-align",'center')
+                                .append("font")
+                                .attr("color","#636363")
+                                .text(function(o,i) { return o });
+
+              lowresult_data.append('tbody')
+                                .selectAll("tr")
+                                .data(function(o) { return o }).enter()
+                                .append("tr")
+                                .selectAll("td")
+                                    .data(function(d,l) { return [d.key,d.value,l+':'+(d.value*100/sum_seats).toFixed(2),d.party_vote_percent+'%',d.party_votes] }).enter()
+                                    .append('td')
+                                    .attr('class',function(d) { return d+'s'})
+                                    .style("max-width",'10px')
+                                    .style("font-size",'15px')
+                                    .style("text-align",'center')
+                                    .text(function(o,i) { return i!=2? o:'' })
+                                    .append('div')
+                                    .attr('class',function(d,i) { return i!=2? '':'progress'; })
+                                    .append('div')
+                                    .attr('class','progress-bar progress-bar-striped')
+                                    .attr('role','progressbar')
+                                    .attr('aria-valuenow','70')
+                                    .attr('aria-valuemin','0')
+                                    .attr('aria-valuemax','100')
+                                    .style('background-color',function(d,i) { return i!=2? '':heading_colors[parseInt(d.split(':')[0])]; })
+                                    .style('width',function(d,i) { return i!=2? '0%':d.split(':')[1]+'%'; });
+                                   
+            d3.selectAll('.removed_data').remove();
+    
+         map_data.forEach(function(o) {
+          o.polled_votes = parseInt(o.polled_votes);
+          o.votes = parseInt(o.VOTES);
+          o.YEAR = parseInt(o.YEAR);
+          o.rank = parseInt(o['#']);
+          o.ac = parseInt(o.AC_NO);
+          o.vote_percent = parseFloat(o.vote_percent);
+          });
+
+
+if (acct_no != undefined){
+
+    data_set = map_data.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
+    
+    deposit_data_set = data_set.filter(function(d){return (d.VOTES>=d.polled_votes/6) })
+            
+    deposit_data_set = deposit_data_set.sort(function(a, b){ return d3.descending(a.votes, b.votes); })
+
+    var horizontal_width = parseInt(d3.select('.horizontal_bar').style('width'), 10);
+
+    var horizontal_width = horizontal_width<540? 540 : horizontal_width
+
+    var margin = {top: 10, right: 30, bottom: 15, left: 78},
+                horz_width = horizontal_width*1.2 - margin.left - margin.right,
+                horz_height = 320 - margin.top - margin.bottom;
+    
+    var horizontal_bar_svg = d3.select(".horizontal_bar").append("svg")
+                .attr("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+(horz_width)+" "+(horz_height))
+                .attr("xmlns", 'https://www.w3.org/2000/svg')
+                .attr("xlink", 'https://www.w3.org/1999/xlink')
+                .attr("version", '1.1')
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top/4 + ")");
+
+    // set the ranges
+   var y = d3.scaleBand()
+           .range([horz_height - margin.top - margin.bottom, 0])
+           .padding(0.2);
+
+   var x = d3.scaleLinear()
+           .range([0, horz_width-(margin.left*5/2)]);
+           
+    var constituency_name = '';
+
+    data_set.forEach(function(o) {
+        constituency_name = o.AC_NAME;
+        o.PARTY_ID = o['#']+'. '+o.Selected_type
+      });
+   
+    data_set = data_set.sort(function(a, b){ return d3.descending(a.rank, b.rank); })
+        
+    var layer = horizontal_bar_svg.selectAll(".layer")
+        .data(data_set)
+        .enter().append("g")
+        .attr("class", "layer");
+        
+        d3.selectAll(".tick > text")
+            .style("font-size", "13px")
+     
+        d3.selectAll(".constituency_tag").append('b').text("( "+constituency_name+" )");
+    
+        x.domain([0, d3.max(data_set, function(d){ return d.votes; })])
+        y.domain(data_set.map(function(d) { return d.PARTY_ID; }));
+
+    deposit_party_id = deposit_data_set[deposit_data_set.length-1]['PARTY_ID'];
+
+    horizontal_bar_svg.append("g")
+            .attr("class", "guide_deposit")
+        .append("line")
+            .attr('stroke-width',1)
+            .style("stroke", "rgb(99, 99, 99)")
+            .attr("x1", x(0))
+            .attr("x2", x(d3.max(data_set, function(d){ return d.votes; })))
+            .attr("y1", y(deposit_party_id) + (y.bandwidth()*1.1))
+            .attr("y2", y(deposit_party_id) + (y.bandwidth()*1.1));
+            
+     horizontal_bar_svg.append("text")
+        .attr("x",x(d3.max(data_set, function(d){ return d.votes; })))
+        .attr("y", y(deposit_party_id) + (y.bandwidth()*1.1)+16)
+        .style("fill", "rgb(99, 99, 99)")
+        .style("font-size","16px")
+        .style("text-anchor", "end")
+        .attr("data-title","Guide line: 1/6 of polled votes<br/> (16.66 % approx)")
+        .text("Deposit Threshold");
+
+     horizontal_bar_svg.selectAll("text.details")
+        .data(data_set)
+      .enter().append("text")
+        .attr("class","details")
+        .attr("y", function(d) { return y(d.PARTY_ID)+(y.bandwidth()*4/5); })
+        .style("text-anchor", "start")
+        .attr("fill", "#444")
+        .style("font-size","16px")
+        .attr("x", function(d) { return  x(d.votes)+3; })
+        .text(function(d) { return addThousandsSeparator(d.votes)+' votes'; });
+
+    // append the rectangles for the bar chart
+     horizontal_bar_svg.selectAll("rect")
+        .data(data_set)
+      .enter().append("rect")
+        .style("fill", function(d,i) { return color_map[selection_detail][d.Selected_type]; })
+        .attr("width", function(d) {return x(d.votes); } )
+        .attr("stroke-width", .5)
+        .attr("stroke", function(d,i) { return d3.rgb(color_map[selection_detail][d.Selected_type]).darker(); })
+        .attr("y", function(d) { return y(d.PARTY_ID); })
+        .attr("data-title",function(d) { return 'Constituency : '+d.AC_NAME+' <br/> Candidate : '+d.NAME+' <br/> Front : '+d.FRONT+'</br> Party : '+d.PARTY+' <br/> Vote Percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+        .attr("height", y.bandwidth());
+
+        // add the x Axis
+        horizontal_bar_svg.append("g")
+           .attr("transform", "translate(0," + (horz_height- margin.top - margin.bottom) + ")")
+           .call(d3.axisBottom(x).tickFormat(d3.format(".2s")));
+
+        // add the y Axis
+        horizontal_bar_svg.append("g")
+           .call(d3.axisLeft(y));
+    
+
+        var twoPi = 2 * Math.PI;
+        
+        var sub_width = parseInt(d3.select('.progress_bar').style('width'), 10);
+    
+        var margin = {top: 20, right: 20, bottom: 20, left: 20},
+                progress_width = sub_width - margin.left - margin.right,
+                progress_height = 250 - margin.top - margin.bottom;
+    
+        var progress_bar_svg = d3.select(".progress_bar").append("svg")
+                .attr("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+(progress_width)+" "+(progress_height))
+                .attr("xmlns", 'https://www.w3.org/2000/svg')
+                .attr("xlink", 'https://www.w3.org/1999/xlink')
+                .attr("version", '1.1')
+                .append("g")
+                .attr("transform", "translate(" + progress_width/2 + "," + progress_height*7/12+ ")");
+    
+        value_data = data_set.filter(function(d){return (d.rank==1) })
+        
+        value = value_data[0]['votes']/parseFloat(value_data[0]['polled_votes']);
+        fontSize = 16;
+        
+        var arcs_val = d3.arc()
+                    .innerRadius(d3.min([progress_width,progress_height])*.27)
+                    .outerRadius(d3.min([progress_width,progress_height])*.4)
+                    .startAngle(0);
+
+        var background = progress_bar_svg
+                        .append("path")
+                        .datum({ endAngle : twoPi})
+                        .style("fill", "#ddd")
+                        .attr("d", arcs_val);
+
+        var foreground = progress_bar_svg
+                            .append("path")
+                            .datum({ endAngle : 0})
+                            .style("fill", color_map[selection_detail][value_data[0]['Selected_type']])
+                            .attr("class", "foreground")
+                            .attr("d", arcs_val);
+
+        var text = progress_bar_svg.append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("dy", ".35em")
+                    .style("fill", "rgb(99, 99, 99)")
+                    .attr("font-size", fontSize)
+                    .text((value*100).toFixed(2) + "%");
+                    
+        var text = progress_bar_svg.append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("y", -100)
+                    .attr("dy", ".35em")
+                    .style("fill", "rgb(99, 99, 99)")
+                    .attr("font-size", fontSize)
+                    .text('Winning Party ('+value_data[0]['Selected_type']+')');
+
+            function arcTween(newAngle) {
+              return function(d) {
+               var interpolate = d3.interpolate(d.endAngle, newAngle);
+               return function(t) {
+                 d.endAngle = interpolate(t);
+                 return arcs_val(d);
+               };
+              };
+            }
+
+            d3.interval(function() {
+              foreground.transition()
+                 .duration(750)
+                 .attrTween("d", arcTween(twoPi * value));
+            }, 1500);
+
+      setTimeout(function () { 
+        var runnerHeight = -1;
+        $('div.internal_winner').each(function() {
+            if ($(this).attr('status')=='runner'){
+                if ($(this).height() > runnerHeight) {
+                    runnerHeight = $(this).height();
+                }
+            }
+        });
+         if ($('.winning_Alliance').width()>920){
+         $("div[status=runner]").height(runnerHeight+4);
+         $("div[status=winner]").height((runnerHeight*2+20));
+         }
+       }, 1500);
+
+        }
+
+var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
+
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+        width = sub_width - margin.left - margin.right,
+        height = 460 - margin.top - margin.bottom;
+    
+    var party_performance_trend_svg = d3.select(".party_performance_trend_svg").append("svg")
+            .attr("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width + margin.left + margin.right)+" "+(height + margin.top + margin.bottom))
+            .attr("xmlns", 'https://www.w3.org/2000/svg')
+            .attr("xlink", 'https://www.w3.org/1999/xlink')
+            .attr("version", '1.1')
+            .append("g")
+            .attr("transform", "translate(" + (margin.left+(width/2))+ "," + (margin.top+(height/2)) + ")");
+        
+    contest_data_csv = full_data.filter(function(d){return (d.YEAR==year_detail)});
+    
+    var contest_data_count = d3.nest()
+              .key(function(d) { return d.Selected_type; })
+              .rollup(function(v) { return v.length; })
+              .entries(contest_data_csv);
+
+     winning_data_csv = contest_data_csv.filter(function(d){return (d.rank==1)});
+     total_available_seats = contest_data_csv.length
+ 
+        var winning_data_count = d3.nest()
+              .key(function(d) { return d.Selected_type; })
+              .rollup(function(v) { return v.length; })
+              .entries(winning_data_csv);
+
+        winning_data_count.forEach(function(o) {
+            o.weight = o.value
+            o.width  = +o.weight;
+            contest_data_count.forEach(function(d) {
+                if(d.key==o.key){
+                    o.contest = d.value
+                }
+
+            });
+            o.score  = (o.value*100/o.contest).toFixed(2);
+            o.conversion  = (o.value*100/o.contest).toFixed(2);
+        });
+        
+        radius = Math.min(width, height) / 2,
+        innerRadius = 0.25 * radius;
+
+    var pie = d3.pie()
+        .sort(null)
+        .value(function(d) { return d.width; });
+
+        var arc = d3.arc()
+          .innerRadius(innerRadius)
+          .outerRadius(function (d) { 
+            return (radius - innerRadius) * (d.data.score / 100.0) + innerRadius; 
+          });
+
+        var outlineArc = d3.arc()
+                .innerRadius(innerRadius)
+                .outerRadius(radius);
+
+  var winning_data_count = winning_data_count.sort(function(a, b) { return b.value - a.value; })
+
+  var paths = party_performance_trend_svg.selectAll(".solidArc")
+      .data(pie(winning_data_count))
+    .enter().append("path")
+      .attr("fill", function(d) { return color_map[selection_detail][d.data.key]!=undefined? color_map[selection_detail][d.data.key] : '#363636'; })
+      .attr("class", "solidArc")
+      .attr("stroke", function(d) { return color_map[selection_detail][d.data.key]!=undefined? d3.rgb(color_map[selection_detail][d.data.key]).darker() : d3.rgb('#363636').darker() })
+      .attr("d", arc)
+      .attr('class',function (d) { return 'party_filters '+d.data.key+'s' })
+      .attr("data-title",function(d) { return  'Front : '+d.data.key+' <br/> contested seats : '+d.data.contest+' <br/> seats won : '+d.data.value+' <br/> convertion percentage : '+d.data.conversion ;});
+
+  var outerPath = party_performance_trend_svg.selectAll(".outlineArc")
+      .data(pie(winning_data_count))
+    .enter().append("path")
+      .attr("fill", "none")
+      .attr("stroke", "gray")
+      .attr("class", "outlineArc")
+      .attr("d", outlineArc);
+    
+  var max_value = d3.max(winning_data_count, function(d) { return d.values; });
+      winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});
+      winning_party = winning_party.sort(function(a, b) { return b.value - a.value; })
+  
+  party_performance_trend_svg.append("text")
+    .attr("class", "aster-score")
+    .attr("dy", ".75em")
+    .attr("text-anchor", "middle")
+    .style("fill", "rgb(99, 99, 99)")
+    .attr("font-size", radius/8)
+    .text(winning_party[0]['key'].replace('+',''));
+
+  party_performance_trend_svg.append("text")
+    .attr("class", "aster-score")
+    .attr("dy", "-.75em")
+    .attr("text-anchor", "middle")
+    .style("fill", "rgb(0, 0, 0)")
+    .attr("font-size", radius/12)
+    .text('Majority');
+    
+    $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
+
+var margin = {top: 50, right: 20, bottom: 20, left: 20},
+    sankey_width = (parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)) - margin.left - margin.right,
+    sankey_height = 600 - margin.top - margin.bottom;
+
+var formatNumber = d3.format(",.0f"), 
+    format = function(d) { return formatNumber(d); };
+    
+// append the svg canvas to the page
+var svg = d3.select(".sankey_chart").append("svg")
+    .attr("width", '100%')
+    .attr("data-height", '0.5678')
+    .attr("viewBox",'0 0 '+(sankey_width + margin.left + margin.right)+' 600')
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// Set the sankey diagram properties
+var sankey = d3.sankey()
+    .nodeWidth(60)
+    .nodePadding(5)
+    .size([sankey_width, sankey_height]);
+
+   var paths = sankey.link();
+
+   var AC_NO_2018 = _.pluck(year_data_set_2018,'AC_NO')
+   var AC_NO_2023 = _.pluck(year_data_set_2023,'AC_NO')
+  
+   var results_awaiting = []
+                    _.each(AC_NO_2018, function(d) { if(_.contains(AC_NO_2023, d)!=true) { results_awaiting.push(d);}});
+
+   var year_data_set_2018_awaiting = []
+                    _.each(year_data_set_2018, function(d) { if(_.contains(results_awaiting, d.AC_NO)) { year_data_set_2018_awaiting.push(d);}});
+
+   year_data_set_2023.forEach(function (d) {
+        d.source_year =d['O_Selected_type']
+        d.target_year =d['Selected_type'] 
+        d.combined_year =d.source_year+'_'+d.target_year 
+        });
+
+   year_data_set_2018_awaiting.forEach(function (d) {
+        d.source_year =d['Selected_type']
+        d.target_year = 'NR'
+        d.combined_year =d.source_year+'_'+d.target_year 
+        });
+
+   year_data_set_2023 = _.union(year_data_set_2023,year_data_set_2018_awaiting)
+  
+   year_data_set_2023 = year_data_set_2023.filter(function(d){return (d.source_year!='') & (d.target_year!='') })
+        
+   var data_Count = d3.nest()
+          .key(function(d) { return d.combined_year; })
+          .rollup(function(v) { return v.length; })
+          .entries(year_data_set_2023);
+
+   graph = {"nodes" : [], "links" : []};
+    
+   name_list = []
+   data_Count.forEach(function (d) {
+      graph.nodes.push({ "name": d.key.split("_")[0], "color": color_map[selection_detail][d.key.split("_")[0]] });
+      graph.nodes.push({ "name": '_'+d.key.split("_")[1], "color": color_map[selection_detail][d.key.split("_")[1]] });
+
+      graph.links.push({ "source": d.key.split("_")[0],
+                         "target": '_'+d.key.split("_")[1],
+                         "source_color": color_map[selection_detail][d.key.split("_")[0]],
+                         "target_color": color_map[selection_detail][d.key.split("_")[1]],
+                         "value": d.value });
+     });
+
+    // return only the distNDAt / unique nodes
+    graph.nodes_all = _.uniq(graph.nodes, function(item, key, a) { return item['name']; });
+    graph.nodes =[]
+   
+    graph.nodes_all.forEach(function (d, i) {
+       graph.nodes.push(d.name)
+    });
+     
+     // loop through each link replacing the text with its index from node
+     graph.links.forEach(function (d, i) {
+       graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+       graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+     });
+
+     //now loop through each nodes to make nodes an array of objects
+     // rather than an array of strings
+     graph.nodes.forEach(function (d, i) {
+       graph.nodes[i] = { "name": d };
+     });
+
+  sankey
+    .nodes(graph.nodes)
+    .links(graph.links)
+    .layout(12);
+
+svg.selectAll(".head")
+      .data(['2018','2023'])
+    .enter().append("text")
+      .attr("y", -22)
+      .attr("font-size",12)
+      .attr("x", function(d,p) { return p < 1 ?  12 : sankey_width-12 ; })
+      .attr("fill", function(d,p) { return p > 0 ? "rgb(99, 99, 99)" : "rgb(99, 99, 99)"; })
+      .attr("text-anchor", function(d,p) { return p <  1 ? 'start' : 'end'; })
+      .text('YEAR');
+
+ svg.selectAll(".head")
+      .data(['2018','2023'])
+    .enter().append("text")
+      .attr("y", -4)
+      .attr("font-size",20)
+      .attr("x", function(d,p) { return p < 1 ?  0 : sankey_width ; })
+      .attr("fill", function(d,p) { return p > 0 ? "rgb(99, 99, 99)" : "rgb(99, 99, 99)"; })
+      .attr("text-anchor", function(d,p) { return p <  1 ? 'start' : 'end'; })
+      .text(function(d) { return '('+d+')'; });
+
+// add in the links
+  var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", paths)
+      .style("stroke-width", function(d) { return Math.max(1, d.dy); })
+      .style("fill", function(d) { return d.target_color; })
+      .style("stroke", function(d) { return d.target_color; })      
+      .sort(function(a, b) { return b.dy - a.dy; })
+      .attr("data-title",function(d) { return d.target.name!='_NR'? (d.source.name == d.target.name.replace('_','') ?  d.source.name+' has retained '+format(d.value)+' seats'  : d.target.name.replace('_','') + " has got "+ format(d.value)+" seats from "+ d.source.name) : 'Results Awaiting for '+format(d.value)+" seats from "+ d.source.name});
+      
+// add in the nodes
+  var node = svg.append("g").selectAll(".node")
+      .data(graph.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { 
+          return "translate(" + d.x + "," + d.y + ")"; });
+  
+// add the rectangles for the nodes
+  node.append("rect")
+        .attr("height", function(d) { return d.dy; })
+      .attr("height", function(d) { return d.dy; })
+      .attr("width", sankey.nodeWidth())
+     .style("fill", function(d) { return color_map[selection_detail][d.name.replace('_','')]; })
+      .style("stroke", function(d) { return d3.rgb(color_map[selection_detail][d.name.replace('_','')]).darker(2); })
+       .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats'; });
+    
+  node
+    .append("text")
+    .attr("y", function(d) { return (d.dy/2)-1; })
+    .attr("x", sankey.nodeWidth()/2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "15px")
+    .attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
+    .style("fill", function(d) { return (parseInt(color_map[selection_detail][d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+    .text(function(d) { return d.dy>29 ?d.value:' '; });
+
+  node
+    .append("text")
+    .attr("y", function(d) { return (d.dy/2)+12; })
+    .attr("x", sankey.nodeWidth()/2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
+    .style("fill", function(d) { return (parseInt(color_map[selection_detail][d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+    .text(function(d) { return d.dy>29 ?d.name.replace('_',''):' '; });
+
+  $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+
+// add in the title for the nodes
+  node.append("text")
+      .attr("x", -8)
+      .attr("y", function(d) { return d.dy / 2; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end")
+      .attr("transform", null)
+      .text(function(d) { return (d.value>1|selection_detail=='Alliance') ? d.name.replace('_','') : '' })
+    .filter(function(d) { return d.x < width / 2; })
+      .attr("x", 8 + sankey.nodeWidth())
+      .attr("text-anchor", "start");
+
+// the function for moving the nodes
+  function dragmove(d) {
+    d3.select(this).attr("transform", 
+        "translate(" + d.x + "," + (
+                d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+            ) + ")");
+    sankey.relayout();
+    link.attr("d", paths);
+  }
+      });
+
+$('.party_filter').click( function(n) {
+
+ var year_selected = [];
+      $('#yearOption :selected').each(function(i, selected){
+          year_selected[i] = $(selected).val();
+      });
+
+   d3.csv("Karnataka_counting.csv", function(map_data) { 
+  
+            map_data.forEach(function(o) {
+                  o.polled_votes = parseInt(o.polled_votes);
+                  o.votes = parseInt(o.VOTES);
+                  o.YEAR = parseInt(o.YEAR);
+                  o.rank = parseInt(o['#']);
+                  o.ac = parseInt(o.AC_NO);
+                  o.Selected_type = selection_detail=='Alliance'? o.FRONT : o.PARTY; 
+                  
+                  o.vote_percent = parseFloat(o.vote_percent);
+                  });
+
+    $('input[type="text"]').val('');
+
+    d3.select('.geo_map').select('svg').remove();
+
+  map_filter(year_selected,map_data);
+  });
+  
+  
+});
+
+
+    </script>
+  </body>
+</html>
