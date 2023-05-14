@@ -613,7 +613,7 @@ function map_filter(year_selected,other_data){
           .enter().append("path")
           .style("cursor","pointer")
             .attr("class", "subunit")
-            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br>  Candidate : '+d.result.NAME+'</br> Front : '+d.result.FRONT+'</br> Party : '+d.result.PARTY+ '<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Results Awaiting <br/> Constituency : '+d.properties.ac_name})
+            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.ac_name+'</br>  Candidate : '+d.result.NAME+'</br> Party : '+d.result.PARTY+ '<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Results Awaiting <br/> Constituency : '+d.properties.ac_name})
             .attr("sub_link", function (d){ return d.properties.ac_name })
             .attr("fill", function(d) { return d.result!=undefined? color_map[selection_detail][d.result.Selected_type] : '#fff'  })
             .attr("d", path)
@@ -703,9 +703,7 @@ d3.selectAll(".sub_year_tag").append('b').text("("+year_detail+")");
 
 d3.selectAll(".successive_year_tag").append('b').text(" (2018 - 2023)");
 
-typeColumn = selection_detail=='Alliance'? 'FRONT' : 'PARTY'
-
-d3.selectAll(".type_tag").style('font-style','normal').text(typeColumn);
+d3.selectAll(".type_tag").style('font-style','normal').text('PARTY');
 
 $('.'+year_detail+'_id').addClass('active');
 acct_no = getParameterByName('acct_no');
@@ -729,7 +727,7 @@ if (window.location.href.split('#')[1]!=undefined){
     d3.csv("Karnataka_counting.csv", function(map_data) { 
 
     map_data.forEach(function(o) {
-       o.Selected_type = selection_detail=='Alliance'? o.FRONT : o.PARTY 
+       o.Selected_type = selection_detail=='Alliance'? o.PARTY : o.PARTY 
       });
 
     map_data = districts_detail!='Karnataka'? map_data.filter(function(d){ return  d['District']==districts_detail | d['Region']==districts_detail.replace('_',' ')  }) : map_data
@@ -743,8 +741,7 @@ if (window.location.href.split('#')[1]!=undefined){
     });
 
     // render the table(s)
-    typeColumn = selection_detail=='Alliance'? 'FRONT' : 'PARTY'
-    tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME',typeColumn,'votes_gained','vote_percent']); // 2 column table
+    tabulate(year_data_set_all, ['AC_NO','AC_NAME','NAME','PARTY','votes_gained','vote_percent']); // 2 column table
     
     $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
     
@@ -830,11 +827,9 @@ if (window.location.href.split('#')[1]!=undefined){
 
              function toTitleCase(e){return e.replace(/\w\S*/g,function(e){return e.charAt(0).toUpperCase()+e.substr(1).toLowerCase()})}
 
-              typeColumn = selection_detail=='Alliance'? 'FRONT' : 'PARTY'
-
               lowresult_data.append('thead')
                             .selectAll("tr")
-                            .data([[toTitleCase(typeColumn),'Seats','Seat Share','Vote Percent','Total Votes']]).enter()
+                            .data([['Party','Seats','Seat Share','Vote Percent','Total Votes']]).enter()
                             .append("tr")
                             .selectAll("th")
                                 .data(function(d,l) { return d }).enter()
@@ -978,7 +973,7 @@ if (acct_no != undefined){
         .attr("stroke-width", .5)
         .attr("stroke", function(d,i) { return d3.rgb(color_map[selection_detail][d.Selected_type]).darker(); })
         .attr("y", function(d) { return y(d.PARTY_ID); })
-        .attr("data-title",function(d) { return 'Constituency : '+d.AC_NAME+' <br/> Candidate : '+d.NAME+' <br/> Front : '+d.FRONT+'</br> Party : '+d.PARTY+' <br/> Vote Percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+        .attr("data-title",function(d) { return 'Constituency : '+d.AC_NAME+' <br/> Candidate : '+d.NAME+' </br> Party : '+d.PARTY+' <br/> Vote Percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
         .attr("height", y.bandwidth());
 
         // add the x Axis
@@ -1151,7 +1146,7 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
       .attr("stroke", function(d) { return color_map[selection_detail][d.data.key]!=undefined? d3.rgb(color_map[selection_detail][d.data.key]).darker() : d3.rgb('#363636').darker() })
       .attr("d", arc)
       .attr('class',function (d) { return 'party_filters '+d.data.key+'s' })
-      .attr("data-title",function(d) { return  'Front : '+d.data.key+' <br/> contested seats : '+d.data.contest+' <br/> seats won : '+d.data.value+' <br/> convertion percentage : '+d.data.conversion ;});
+      .attr("data-title",function(d) { return  'party : '+d.data.key+' <br/> contested seats : '+d.data.contest+' <br/> seats won : '+d.data.value+' <br/> convertion percentage : '+d.data.conversion ;});
 
   var outerPath = party_performance_trend_svg.selectAll(".outlineArc")
       .data(pie(winning_data_count))
@@ -1387,7 +1382,7 @@ $('.party_filter').click( function(n) {
                   o.YEAR = parseInt(o.YEAR);
                   o.rank = parseInt(o['#']);
                   o.ac = parseInt(o.AC_NO);
-                  o.Selected_type = selection_detail=='Alliance'? o.FRONT : o.PARTY; 
+                  o.Selected_type = o.PARTY; 
                   
                   o.vote_percent = parseFloat(o.vote_percent);
                   });
