@@ -121,7 +121,7 @@
                         <div class="row">
                             <div class="col-md-12 panel-body">
 
-                                <div class="container footer_details"></div>
+                                <div class="container footer_details seats_count"></div>
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-6">
@@ -167,7 +167,7 @@
                         <div class="row">
 
                             <div class="col-md-12 panel-body">
-                                <div class="container footer_details"></div>
+                                <div class="container footer_details seats_count"></div>
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6">
                                     <div class="row">
@@ -276,7 +276,7 @@
                         <div class="row">
                             <div class="col-md-12 panel-body">
 
-                                 <div class="container footer_details"></div>
+                                <div class="container footer_details seats_count"></div>
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6">
                                     <div class="row">
@@ -320,7 +320,7 @@
                         <div class="row">
                             <div class="col-md-12 panel-body">
                             
-                                 <div class="container footer_details"></div>
+                                <div class="container footer_details seats_count"></div>
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6">
                                     <div class="row">
@@ -362,7 +362,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 panel-body">
-                                <div class="container footer_details"></div>
+
+                                <div class="container footer_details seats_count"></div>
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6">
                                     <div class="row">
@@ -394,13 +395,9 @@
 
 <script>
 
-color_map_Alliance = {'JDS':'#008000','NR':'#E9967A', 'ADMK':'#b2d33c','AITC':'#363636','AKTP':'#363636','API':'#363636','BDJS':'#B22222','BJP':'#ff7f0e','BSP':'#363636','C(S)':'#cc99a2','CMP':'#cc0000','CMP(J)':'#363636','CMPKSC':'#363636','CPI':'#F27A67','CPI(ML)':'#363636','CPI(ML)(L)':'#363636','CPI(MLR)':'#363636','CPM':'#ff5757','CPM(U)':'#363636','DPSP':'#363636','DSGP':'#ADC6B5','IGP':'#363636','INC':'#3498DB','INC(S)':'#cc99a2','IND':'#AAC999','INL':'#008000','IUML':'#014BC6','JD(S)':'#138808','JD(U)':'#9A9E56','JKC':'#363636','JPSS':'#363636','KC':'#FF6600','KC(AMG)':'#363636','KC(B)':'#ffc0cb','KC(J)':'#CC6600','KC(M)':'#CC9900','KEC':'#FF6600','KEC(B)':'#ffc0cb','KEC(J)':'#CC6600','KEC(M)':'#CC9900','KEC(S)':'#363636','KEC(ST)':'#363636','KJ':'#363636','KJP':'#363636','KRSP':'#363636','LJD':'#00FF7F','LJP':'#363636','NCK':'#008080','NCP':'#00B2B2','NOTA':'#000','NSC':'#FF9933','OTH':'#363636','PDP':'#363636','PGP':'#363636','RMPI':'#ff0000','RSP':'#ffa500','RSP(B) ':'#363636','RSP(L)':'#f28500','SDP':'#363636','SDPI':'#363636','SHS':'#363636','SJD':'#363636','SLAP':'#363636','SP':'#1F77B4','SS':'#363636','SUCI':'#363636','SWJP':'#363636','WPI':'#363636','OTH':'#363636','ADHRI':'#363636','BDP':'#363636','KJ(S)':'#363636','NLP':'#363636','RJD':'#363636','SFB':'#363636','TTP':'#363636','KRPP':'#ffff00','SKP':'#00FFFF'}
-
-<!--{"NR":"#E9967A", "LDF":"#EE141F","UDF":"#3498DB","NDA":"#F47216","OTH" : "#363636","IND" : "#AAC999","NOTA" : "#D9D4CE",'JDS':'#008000'}
--->
 color_map_Party = {'JDS':'#008000','NR':'#E9967A', 'ADMK':'#b2d33c','AITC':'#363636','AKTP':'#363636','API':'#363636','BDJS':'#B22222','BJP':'#ff7f0e','BSP':'#363636','C(S)':'#cc99a2','CMP':'#cc0000','CMP(J)':'#363636','CMPKSC':'#363636','CPI':'#F27A67','CPI(ML)':'#363636','CPI(ML)(L)':'#363636','CPI(MLR)':'#363636','CPM':'#ff5757','CPM(U)':'#363636','DPSP':'#363636','DSGP':'#ADC6B5','IGP':'#363636','INC':'#3498DB','INC(S)':'#cc99a2','IND':'#AAC999','INL':'#008000','IUML':'#014BC6','JD(S)':'#138808','JD(U)':'#9A9E56','JKC':'#363636','JPSS':'#363636','KC':'#FF6600','KC(AMG)':'#363636','KC(B)':'#ffc0cb','KC(J)':'#CC6600','KC(M)':'#CC9900','KEC':'#FF6600','KEC(B)':'#ffc0cb','KEC(J)':'#CC6600','KEC(M)':'#CC9900','KEC(S)':'#363636','KEC(ST)':'#363636','KJ':'#363636','KJP':'#363636','KRSP':'#363636','LJD':'#00FF7F','LJP':'#363636','NCK':'#008080','NCP':'#00B2B2','NOTA':'#000','NSC':'#FF9933','OTH':'#363636','PDP':'#363636','PGP':'#363636','RMPI':'#ff0000','RSP':'#ffa500','RSP(B) ':'#363636','RSP(L)':'#f28500','SDP':'#363636','SDPI':'#363636','SHS':'#363636','SJD':'#363636','SLAP':'#363636','SP':'#1F77B4','SS':'#363636','SUCI':'#363636','SWJP':'#363636','WPI':'#363636','OTH':'#363636','ADHRI':'#363636','BDP':'#363636','KJ(S)':'#363636','NLP':'#363636','RJD':'#363636','SFB':'#363636','TTP':'#363636','KRPP':'#ffff00','SKP':'#00FFFF'}
 
-color_map = {'Alliance' : color_map_Alliance,'Party': color_map_Party}
+color_map = {'Party': color_map_Party}
 
  $(window).scroll(function() {
         if ($(this).scrollTop() >= 50) {
@@ -539,7 +536,7 @@ function map_filter(year_selected,other_data){
       function centerZoom(data){
 
         districts_detail!='Karnataka'? data.objects['karnataka.assembly'].geometries  = data.objects['karnataka.assembly'].geometries.filter(function(d) { return d.properties.district_name == districts_detail | d.properties.region_name == districts_detail.replace('_',' ') }) : data.objects['karnataka.assembly'].geometries
-        d3.selectAll('.footer_details').select('center').remove();
+        d3.selectAll('.seats_count').select('center').remove();
 
         var o = topojson.mesh(data, data.objects['karnataka.assembly'], function(a, b) { return a === b; });
 
@@ -601,7 +598,7 @@ function map_filter(year_selected,other_data){
             });
           });
  
-         d3.selectAll('.footer_details')
+         d3.selectAll('.seats_count')
              .append('center')
              .append('b')
              .text(districts_detail.replace('_',' ')+' : '+ map_data.length+' Seats')
@@ -684,7 +681,7 @@ districts_list = ['Karnataka','Mumbai Karnataka','Hyderabad Karnataka','Coastal 
 
 year_list = [2023,2018]
 
-type_list = ['Alliance','Party']
+type_list = ['Party']
 
 d3.select('.districts_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?districts='+districts_list[i].replace(' ','_')+'&year='+year_detail+'&type='+selection_detail+'#overall_view'})
 
@@ -727,7 +724,7 @@ if (window.location.href.split('#')[1]!=undefined){
     d3.csv("Karnataka_counting.csv", function(map_data) { 
 
     map_data.forEach(function(o) {
-       o.Selected_type = selection_detail=='Alliance'? o.PARTY : o.PARTY 
+       o.Selected_type = o.PARTY 
       });
 
     map_data = districts_detail!='Karnataka'? map_data.filter(function(d){ return  d['District']==districts_detail | d['Region']==districts_detail.replace('_',' ')  }) : map_data
@@ -1058,21 +1055,6 @@ if (acct_no != undefined){
                  .attrTween("d", arcTween(twoPi * value));
             }, 1500);
 
-      setTimeout(function () { 
-        var runnerHeight = -1;
-        $('div.internal_winner').each(function() {
-            if ($(this).attr('status')=='runner'){
-                if ($(this).height() > runnerHeight) {
-                    runnerHeight = $(this).height();
-                }
-            }
-        });
-         if ($('.winning_Alliance').width()>920){
-         $("div[status=runner]").height(runnerHeight+4);
-         $("div[status=winner]").height((runnerHeight*2+20));
-         }
-       }, 1500);
-
         }
 
 var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
@@ -1351,7 +1333,7 @@ svg.selectAll(".head")
       .attr("dy", ".35em")
       .attr("text-anchor", "end")
       .attr("transform", null)
-      .text(function(d) { return (d.value>1|selection_detail=='Alliance') ? d.name.replace('_','') : '' })
+      .text(function(d) { return (d.value>1)? d.name.replace('_','') : '' })
     .filter(function(d) { return d.x < width / 2; })
       .attr("x", 8 + sankey.nodeWidth())
       .attr("text-anchor", "start");
@@ -1399,5 +1381,7 @@ $('.party_filter').click( function(n) {
 
 
     </script>
+<div class="container footer_details">
+The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx"> eci.nic.in </a> and  <a target="_blank" href="https://eciresults.nic.in/"> eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
   </body>
 </html>
