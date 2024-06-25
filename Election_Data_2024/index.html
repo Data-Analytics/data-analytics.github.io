@@ -88,8 +88,6 @@
         <p class="form-inline header_form">
         <label value="state_val" class="text_label">States : </label>
         <select multiple="multiple" id="state_val_id" class="select_state"></select>&nbsp;&nbsp;
-        <label value="date_val" class="text_label">Election Date : </label>
-        <select multiple="multiple" id="date_val_id" class="select_date"></select>&nbsp;&nbsp;
         <label value="category_val" class="text_label">Category : </label>
         <select multiple="multiple" id="category_val_id" class="select_category"></select>&nbsp;&nbsp;        
         <input type="button" value="submit" class="state_filter"></input> 
@@ -187,18 +185,19 @@
                     </div>
                       
                     <p class="form-inline header_form" >
-                        <label align="left" class="text_label">Search:</label>
-                        <input type="text" class="geo_search" placeholder="eg: Autonomous District ">&nbsp;&nbsp;
-                        <label value="year" class="text_label">based on 2014 : </label>
-                        <select multiple="multiple" id="year_2014" class="select_year" style="width: 115px!important;"></select>&nbsp;
-                        <label value="year" class="text_label">based on 2019 : </label>
-                        <select multiple="multiple" id="year_2019" class="select_year" style="width: 115px!important;"></select>&nbsp;
-                        <label value="year" class="text_label">based on 2024 : </label>
-                        <select multiple="multiple" id="year_2024" class="select_year" style="width: 115px!important;"></select>&nbsp;
-                        
+                        <label value="year" class="text_label">Based on 2014 : </label>
+                        <select multiple="multiple" id="year_2014" class="select_year"></select>&nbsp;
+                        <label value="year" class="text_label">Based on 2019 : </label>
+                        <select multiple="multiple" id="year_2019" class="select_year"></select>&nbsp;
+                        <label value="year" class="text_label">Based on 2024 : </label>
+                        <select multiple="multiple" id="year_2024" class="select_year"></select>&nbsp;
                         <input type="button" value="submit" class="party_filter"></input> 
                     </p>
-                       
+        			<p class="form-inline header_form" >
+					<label align="left" class="text_label">Search :</label>
+					<input type="text" class="geo_search" placeholder="eg: Autonomous District ">&nbsp;&nbsp;
+                        
+                    </p>                           
                      <div class="chart">  
                         <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,0)">
@@ -1934,8 +1933,8 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
     $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
 
 var margin = {top: 50, right: 20, bottom: 20, left: 20},
-    sankey_width = 1200 - margin.left - margin.right,
-    sankey_height = 1200 - margin.top - margin.bottom;
+    sankey_width = (parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)) - margin.left - margin.right,
+    sankey_height = 600 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"), 
     format = function(d) { return formatNumber(d); };
@@ -1947,7 +1946,7 @@ var formatNumber = d3.format(",.0f"),
 var svg = d3.select(".sankey_chart").append("svg")
     .attr("width", '100%')
     .attr("data-height", '0.5678')
-    .attr("viewBox",'0 0 1200 1200')
+    .attr("viewBox",'0 0 '+(sankey_width + margin.left + margin.right)+' 600')
   .append("g")
     .attr("transform", 
           "translate(" + margin.left + "," + margin.top + ")");
@@ -2015,11 +2014,11 @@ year_data_set_2024.forEach(function (d) {
  svg.selectAll(".head")
       .data(['2019','2024'])
     .enter().append("text")
-      .attr("y", -4)
+      .attr("y", -12)
       .attr("font-size",21)
-      .attr("x", function(d,p) { return p < 1 ?  50 : 1110 ; })
+      .attr("x", function(d,p) { return p < 1 ?  12 : sankey_width-12 ; })
       .attr("fill", function(d,p) { return p > 0 ? "rgb(99, 99, 99)" : "rgb(99, 99, 99)"; })
-      .attr("text-anchor", function(d,p) { return p <  1 ? 'middle' : 'middle'; })
+      .attr("text-anchor", function(d,p) { return p <  1 ? 'start' : 'end'; })
       .text(function(d) { return 'year('+d+')'; });
 
 // add in the links
