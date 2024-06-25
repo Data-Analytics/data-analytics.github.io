@@ -1352,7 +1352,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     d3.csv("parliament.csv", function(map_full_data) { 
     
     state_list = _.uniq(map_full_data, function(item,a) { return item['STATE']; });
-    date_list = _.uniq(map_full_data, function(item,a) { return item['Date']; });
+    //date_list = _.uniq(map_full_data, function(item,a) { return item['Date']; });
     category_list = _.uniq(map_full_data, function(item,a) { return item['Category']; });
 	
     if (execute_status!='refresh')
@@ -1367,15 +1367,15 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .property("selected", function (d) { return execute_status[0].indexOf(d['STATE'])>-1; })
                     .text(function (d) { return d['STATE']; });
                     
-    d3.select("#date_val_id").selectAll('option').remove();
-    var select_box = d3.select('#date_val_id')
-                .selectAll("option")
-                    .data(date_list) 
-                    .enter().append("option")
-                    .attr("value", function (d) { return d['Date']; })
-                    .attr("class","name")
-                    .property("selected", function (d) { return execute_status[1].indexOf(d['Date'])>-1; })
-                    .text(function (d) { return d['Date']; });    
+  //   d3.select("#date_val_id").selectAll('option').remove();
+//     var select_box = d3.select('#date_val_id')
+//                 .selectAll("option")
+//                     .data(date_list) 
+//                     .enter().append("option")
+//                     .attr("value", function (d) { return d['Date']; })
+//                     .attr("class","name")
+//                     .property("selected", function (d) { return execute_status[1].indexOf(d['Date'])>-1; })
+//                     .text(function (d) { return d['Date']; });    
 
     d3.select("#category_val_id").selectAll('option').remove();
     var select_box = d3.select('#category_val_id')
@@ -1390,11 +1390,11 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     var map_data_state = []
                     _.each(map_full_data, function(d) { if(_.contains(execute_status[0], d['STATE'])) { map_data_state.push(d);}});
    
-    var map_data_date = []
-                    _.each(map_data_state, function(d) { if(_.contains(execute_status[1], d['Date'])) { map_data_date.push(d);}});
+    //var map_data_date = []
+    //                _.each(map_data_state, function(d) { if(_.contains(execute_status[1], d['Date'])) { map_data_date.push(d);}});
  
     var map_data = []
-                    _.each(map_data_date, function(d) { if(_.contains(execute_status[2], d['Category'])) { map_data.push(d);}});
+                    _.each(map_data_state, function(d) { if(_.contains(execute_status[2], d['Category'])) { map_data.push(d);}});
     
     }else{
     var select_box = d3.select('#state_val_id')
@@ -1406,14 +1406,14 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("selected","")
                     .text(function (d) { return d['STATE']; });
                     
-    var select_box = d3.select('#date_val_id')
-                .selectAll("option")
-                    .data(date_list) 
-                    .enter().append("option")
-                    .attr("value", function (d) { return d['Date']; })
-                    .attr("class","name")
-                    .attr("selected","")
-                    .text(function (d) { return d['Date']; });
+//     var select_box = d3.select('#date_val_id')
+//                 .selectAll("option")
+//                     .data(date_list) 
+//                     .enter().append("option")
+//                     .attr("value", function (d) { return d['Date']; })
+//                     .attr("class","name")
+//                     .attr("selected","")
+//                     .text(function (d) { return d['Date']; });
 
     var select_box = d3.select('#category_val_id')
                 .selectAll("option")
@@ -1447,15 +1447,15 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("selected","")
                     .text(function (d) { return d['STATE']; });
                     
-    d3.select("#date_val_id").selectAll('option').remove();
-    var select_box = d3.select('#date_val_id')
-                .selectAll("option")
-                    .data(date_list) 
-                    .enter().append("option")
-                    .attr("value", function (d) { return d['Date']; })
-                    .attr("class","name")
-                    .attr("selected","")
-                    .text(function (d) { return d['Date']; });    
+//     d3.select("#date_val_id").selectAll('option').remove();
+//     var select_box = d3.select('#date_val_id')
+//                 .selectAll("option")
+//                     .data(date_list) 
+//                     .enter().append("option")
+//                     .attr("value", function (d) { return d['Date']; })
+//                     .attr("class","name")
+//                     .attr("selected","")
+//                     .text(function (d) { return d['Date']; });    
 
     d3.select("#category_val_id").selectAll('option').remove();
     var select_box = d3.select('#category_val_id')
@@ -2144,11 +2144,11 @@ $('.party_filter').click( function(n) {
       var map_data_state = []
                     _.each(map_full_data, function(d) { if(_.contains(state_values, d['STATE'])) { map_data_state.push(d);}});
  
-    var map_data_date = []
-                    _.each(map_data_state, function(d) { if(_.contains(date_values, d['Date'])) { map_data_date.push(d);}});
- 
-    var map_data = []
-                    _.each(map_data_date, function(d) { if(_.contains(category_values, d['Category'])) { map_data.push(d);}});
+   //  var map_data_date = []
+//                     _.each(map_data_state, function(d) { if(_.contains(date_values, d['Date'])) { map_data_date.push(d);}});
+//  
+     var map_data = []
+                    _.each(map_data_state, function(d) { if(_.contains(category_values, d['Category'])) { map_data.push(d);}});
  
     map_data.forEach(function(o) {
           o.polled_votes = parseInt(o.polled_votes);
