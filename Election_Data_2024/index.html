@@ -101,7 +101,7 @@
         			<select multiple="multiple" id="state_val_id" class="select_state" style="margin-top:10px!important"></select>&nbsp;&nbsp;
         			<label value="category_val" class="text_label" style="margin-top:10px!important">Category : </label>
         			<select multiple="multiple" id="category_val_id" class="select_category" style="margin-top:10px!important" ></select>&nbsp;&nbsp;&nbsp;        
-        			<input type="button" value="submit" class="state_filter" style="width: 120px!important;"></input> 
+        			<input type="button" value="submit" class="state_filter" style="width: 100px!important;margin:10px!important;"></input> 
         			</p>
         	</div>
         </div>
@@ -185,7 +185,7 @@
                         <select multiple="multiple" id="year_2019" class="select_year"></select>&nbsp;
                         <label value="year" class="text_label">Based on 2024 : </label>
                         <select multiple="multiple" id="year_2024" class="select_year"></select>&nbsp;
-                        <input type="button" value="submit" class="party_filter" style="width: 100px;!important"></input> 
+                        <input type="button" value="submit" class="party_filter" style="width:80px;!important;margin:10px!important"></input> 
                     </p>
         			<p class="form-inline header_form" >
 					<label align="left" class="text_label">Search :</label>
@@ -1068,11 +1068,15 @@ if (acct_no != undefined & execute_status=='refresh'){
 
     data_set = map_data.filter(function(d){return (d.YEAR==year_detail)& (d.PC_NO==acct_no)&  (d.ST_CD==st_no)& (d.rank<10) })
     
-    var margin = {top: 10, right: 30, bottom: 15, left: 60},
-                horz_width = 960 - margin.left - margin.right,
+    
+    var horizontal_width = parseInt(d3.select('.horizontal_bar').style('width'), 10);
+
+    var horizontal_width = horizontal_width<540? 540 : horizontal_width
+
+    var margin = {top: 10, right: 30, bottom: 15, left: 78},
+                horz_width = horizontal_width*1.2 - margin.left - margin.right,
                 horz_height = 320 - margin.top - margin.bottom;
-    
-    
+                    
    d3.select('.horizontal_bar').select('svg').remove();
    
     var horizontal_bar_svg = d3.select(".horizontal_bar").append("svg")
@@ -1138,7 +1142,7 @@ if (acct_no != undefined & execute_status=='refresh'){
         .attr("x",x(d3.max(data_set, function(d){ return d.votes; })))
         .attr("y", y(deposit_party_id) + (y.bandwidth()*1.1)+13)
         .style("fill", "rgb(99, 99, 99)")
-        .style("font-size","13px")
+        .style("font-size","16px")
         .style("text-anchor", "end")
         .attr("data-title","Guide line: 1/6 of polled votes<br/> (16.66 % approx)")
         .text("Deposit Threshold");
@@ -1153,16 +1157,17 @@ if (acct_no != undefined & execute_status=='refresh'){
         .attr("data-title",function(d) { return 'Constituency : '+d.PC_NAME+' <br/> Candidate : '+d.CANDIDATE+' <br/> party : '+d.PARTY_CODE+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
         .attr("height", y.bandwidth());
              
-     horizontal_bar_svg.selectAll("text")
+     horizontal_bar_svg.selectAll("text.details")
         .data(data_set)
       .enter().append("text")
+        .attr("class","details")
         .attr("y", function(d) { return y(d.PARTY_ID)+(y.bandwidth()*4/5); })
         .style("text-anchor", "start")
         .attr("fill", "#444")
-        .style("font-size","13px")
-        .text(function(d) { return addThousandsSeparator(d.votes)+' votes'; })
-        .attr("x", function(d) { return  x(d.votes)+3; });
-
+        .style("font-size","16px")
+        .attr("x", function(d) { return  x(d.votes)+3; })
+        .text(function(d) { return addThousandsSeparator(d.votes)+' votes'; });
+        
         // add the x Axis
         horizontal_bar_svg.append("g")
            .attr("transform", "translate(0," + (horz_height- margin.top - margin.bottom) + ")")
