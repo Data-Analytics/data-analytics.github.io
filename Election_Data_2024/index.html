@@ -77,7 +77,6 @@
                     <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>India parliament Election Results 2024, 'A visual guide to the check out the comparison of India parliament elections from 2014 to 2024</p>
                     <p class="synopsis">This interactive map will bring you results, from the national standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
                     <p class="synopsis">It aims to make the past 3 parliament elections in India  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
-
                 </div>
             </div>
         </div>
@@ -603,11 +602,17 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values){
     $("path").tooltip({container: 'body', html: true, placement:'top'});
     $("rect").tooltip({container: 'body', html: true, placement:'top'});
          
-    sub_width_mapped = 840
-   
+    sub_width_mapped = 600
+    
+	   if (state_values.length==36){
+			map_height = 860
+	   }else{
+	   		map_height = 600
+	   }
+	   		
        var margin = {top: 20, right: 20, bottom: 20, left: 20},
         width = sub_width_mapped - margin.left - margin.right,
-        height = 560 - margin.top - margin.bottom;
+        height = map_height - margin.top - margin.bottom;
 
       var projection = d3.geoMercator();
 
