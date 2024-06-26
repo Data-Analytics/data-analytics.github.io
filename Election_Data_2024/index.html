@@ -648,9 +648,8 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values){
       // It also returns the boundary itself in case you want to draw it to the map
       function centerZoom(data){
         
-        filtered_states_geo_map = state_values//_.uniq(_.pluck(map_data, 'STATE'));
-        
-        //console.log(filtered_states_geo_map);
+        filtered_states_geo_map = state_values
+
          
         data.objects['india_pc'].geometries  = data.objects['india_pc'].geometries.filter(function(d) { return filtered_states_geo_map.includes(d.properties.st_name) });
              
@@ -704,7 +703,7 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values){
       function drawSubUnits(dataMaps){
 
        mapper_data_view = topojson.feature(dataMaps, dataMaps.objects['india_pc']).features
-//       console.log(map_data,mapper_data_view)
+
        mapper_data_view.forEach(function(o) {
             map_data.forEach(function(g){
               if (o.properties.pc_no == g.PC_NO  & o.properties.st_name == g.STATE){
@@ -799,15 +798,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .property("selected", function (d) { return execute_status[0].indexOf(d['STATE'])>-1; })
                     .text(function (d) { return d['STATE']; });
                     
-  //   d3.select("#date_val_id").selectAll('option').remove();
-//     var select_box = d3.select('#date_val_id')
-//                 .selectAll("option")
-//                     .data(date_list) 
-//                     .enter().append("option")
-//                     .attr("value", function (d) { return d['Date']; })
-//                     .attr("class","name")
-//                     .property("selected", function (d) { return execute_status[1].indexOf(d['Date'])>-1; })
-//                     .text(function (d) { return d['Date']; });    
+ 
 
     d3.select("#category_val_id").selectAll('option').remove();
     var select_box = d3.select('#category_val_id')
@@ -822,8 +813,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     var map_data_state = []
                     _.each(map_full_data, function(d) { if(_.contains(execute_status[0], d['STATE'])) { map_data_state.push(d);}});
    
-    //var map_data_date = []
-    //                _.each(map_data_state, function(d) { if(_.contains(execute_status[1], d['Date'])) { map_data_date.push(d);}});
+
  
     var map_data = []
                     _.each(map_data_state, function(d) { if(_.contains(execute_status[2], d['Category'])) { map_data.push(d);}});
@@ -838,14 +828,6 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("selected","")
                     .text(function (d) { return d['STATE']; });
                     
-//     var select_box = d3.select('#date_val_id')
-//                 .selectAll("option")
-//                     .data(date_list) 
-//                     .enter().append("option")
-//                     .attr("value", function (d) { return d['Date']; })
-//                     .attr("class","name")
-//                     .attr("selected","")
-//                     .text(function (d) { return d['Date']; });
 
     var select_box = d3.select('#category_val_id')
                 .selectAll("option")
@@ -879,15 +861,6 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("selected","")
                     .text(function (d) { return d['STATE']; });
                     
-//     d3.select("#date_val_id").selectAll('option').remove();
-//     var select_box = d3.select('#date_val_id')
-//                 .selectAll("option")
-//                     .data(date_list) 
-//                     .enter().append("option")
-//                     .attr("value", function (d) { return d['Date']; })
-//                     .attr("class","name")
-//                     .attr("selected","")
-//                     .text(function (d) { return d['Date']; });    
 
     d3.select("#category_val_id").selectAll('option').remove();
     var select_box = d3.select('#category_val_id')
@@ -1373,7 +1346,6 @@ var margin = {top: 50, right: 20, bottom: 20, left: 20},
 
 var formatNumber = d3.format(",.0f"), 
     format = function(d) { return formatNumber(d); };
-    //color = d3.scale.category20b();
     
    d3.select('.sankey_chart').select('svg').remove();
  
@@ -1590,9 +1562,6 @@ $('.party_filter').click( function(n) {
       var map_data_state = []
                     _.each(map_full_data, function(d) { if(_.contains(state_values, d['STATE'])) { map_data_state.push(d);}});
  
-   //  var map_data_date = []
-//                     _.each(map_data_state, function(d) { if(_.contains(date_values, d['Date'])) { map_data_date.push(d);}});
-//  
      var map_data = []
                     _.each(map_data_state, function(d) { if(_.contains(category_values, d['Category'])) { map_data.push(d);}});
  
