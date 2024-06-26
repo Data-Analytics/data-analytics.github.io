@@ -1153,10 +1153,13 @@ if (acct_no != undefined & execute_status=='refresh'){
       .enter().append("rect")
         .style("fill", function(d,i) { return color_map[d.PARTY_CODE]; })
         .attr("width", function(d) {return x(d.votes); } )
+        .attr("stroke-width", .5)
+        .attr("stroke", function(d,i) { return d3.rgb(color_map[d.PARTY_CODE]).darker(); })        
         .attr("y", function(d) { return y(d.PARTY_ID); })
         .attr("data-title",function(d) { return 'Constituency : '+d.PC_NAME+' <br/> Candidate : '+d.CANDIDATE+' <br/> party : '+d.PARTY_CODE+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
         .attr("height", y.bandwidth());
-             
+
+                
      horizontal_bar_svg.selectAll("text.details")
         .data(data_set)
       .enter().append("text")
