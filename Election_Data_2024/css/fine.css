@@ -1,0 +1,76 @@
+body{
+    background-color: #EEEEEE;
+}
+
+.links line {
+    stroke-opacity: 1;
+}
+
+text {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.footer_details{
+    font-size :10px;
+    margin-top: -10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 2px;
+}
+
+.sub_footer_details{
+    font-size :12px;
+    margin-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 2px;
+    text-align :center;
+}
+.filer_heads{
+    width:100%;
+}
+
+.filer_labels{
+    width:100%;
+}
+
+li>label{
+    text-align:left !important;
+}
+
+.panel-body{
+   padding-top:0px;
+   padding-bottom:0px;
+}
+
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #0AACD4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
