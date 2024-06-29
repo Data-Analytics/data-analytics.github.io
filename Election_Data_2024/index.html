@@ -355,6 +355,7 @@
     </div>
     </div> 
     
+ 
  <div id="Constituency_partyTrend">
         <div class="container-fluid">
     <div class="container">
@@ -723,7 +724,7 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values){
           .enter().append("path")
           .style("cursor","pointer")
             .attr("class", "subunit")
-            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.pc_name+'</br>  Candidate : '+d.result.CANDIDATE+'</br> Party : '+d.result.PARTY_CODE+ '<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Filtered Out <br/> Constituency : '+d.properties.pc_name})
+            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.pc_name+'</br>  Candidate : '+d.result.CANDIDATE+'</br> Party : '+d.result.PARTY_CODE+ '<br/>'+d.result.PARTY +'<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Filtered Out <br/> Constituency : '+d.properties.pc_name})
             .attr("sub_link", function (d){ return d.properties.pc_name })
             .attr("fill", function(d) { return d.result!=undefined? d.result.color_code : '#fff'  })
             .style("stroke", "rgb(221, 221, 221)")
@@ -1156,7 +1157,7 @@ if (acct_no != undefined & execute_status=='refresh'){
         .attr("stroke-width", .5)
         .attr("stroke", function(d,i) { return d3.rgb(color_map[d.PARTY_CODE]).darker(); })        
         .attr("y", function(d) { return y(d.PARTY_ID); })
-        .attr("data-title",function(d) { return 'Constituency : '+d.PC_NAME+' <br/> Candidate : '+d.CANDIDATE+' <br/> party : '+d.PARTY_CODE+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+        .attr("data-title",function(d) { return 'Constituency : '+d.PC_NAME+' <br/> Candidate : '+d.CANDIDATE+' <br/> party : '+d.PARTY_CODE+' <br/>'+d.PARTY+' <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
         .attr("height", y.bandwidth());
 
                 
@@ -1200,11 +1201,21 @@ if (acct_no != undefined & execute_status=='refresh'){
                 .attr("version", '1.1')
                 .append("g")
                 .attr("transform", "translate(" + progress_width/2 + "," + progress_height*7/12+ ")");
-    
+ 
+ 
+ 		var progress_bar_defs = progress_bar_svg
+ 								.append('defs')
+ 								.append('clipPath')
+ 								.attr('id','circleView')
+ 								.append('circle')
+ 								.attr('cx',0)
+ 								.attr('cy',0)
+ 								.attr('r',d3.min([progress_width,progress_height])*.27)
+   
         value_data = data_set.filter(function(d){return (d.rank==1) })
+        fontSize = 16;
         
         value = value_data[0]['votes']/parseFloat(value_data[0]['polled_votes']);
-        fontSize = 16;
         
         var arcs_val = d3.arc()
                     .innerRadius(d3.min([progress_width,progress_height])*.27)
@@ -1224,12 +1235,24 @@ if (acct_no != undefined & execute_status=='refresh'){
                             .attr("class", "foreground")
                             .attr("d", arcs_val);
 
-        var text = progress_bar_svg.append("text")
+		if (value_data[0]['IMAGE']){
+        var image = progress_bar_svg.append('image')
+                    .attr("xlink:href", value_data[0]['IMAGE'])
+                .attr("x", -d3.min([progress_width,progress_height])*.27)
+                .attr("y", -d3.min([progress_width,progress_height])*.27)
+                .attr("clip-path", "url(#circleView)")
+                .attr("width", d3.min([progress_width,progress_height])*.54)
+                
+        }else{
+             var text = progress_bar_svg.append("text")
                     .attr("text-anchor", "middle")
                     .attr("dy", ".35em")
                     .style("fill", "rgb(99, 99, 99)")
                     .attr("font-size", fontSize)
-                    .text((value*100).toFixed(2) + "%");
+                    .text((value*100).toFixed(2) + "%");   
+        }
+                
+
                     
         var text = progress_bar_svg.append("text")
                     .attr("text-anchor", "middle")
