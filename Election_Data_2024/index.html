@@ -719,6 +719,13 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values){
             });
           });
 
+      var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+      
+      	filtered_state_value = state_values.join().replaceAll('&','and');
+      	
         g.selectAll(".subunit")
             .data(mapper_data_view)
           .enter().append("path")
@@ -731,7 +738,7 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values){
 			.style("stroke-width","0.5px")
             .attr("d", path)
             .on("click", clicked)
-           .on('dblclick',function(d){ return d.result!=undefined? window.open('?year='+d.result.YEAR+'&acct_no='+d.result.PC_NO+'&st_no='+d.result.ST_CD+"#perConstituency","_self"):''  });
+           .on('dblclick',function(d){ return d.result!=undefined? window.open('?filtered_state='+filtered_state_value+'&year='+d.result.YEAR+'&acct_no='+d.result.PC_NO+'&st_no='+d.result.ST_CD+"#perConstituency","_self"):''  });
 
     
     $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
@@ -781,6 +788,16 @@ $(".successive_year_tag").append(" (2019 - 2024)");
 $('.'+year_detail+'_id').addClass('active');
 acct_no = getParameterByName('acct_no');
 st_no = getParameterByName('st_no');
+filtered_state_list = getParameterByName('filtered_state');
+if (filtered_state_list == undefined){ filtered_state_list = 'ALL'; }
+filtered_state_list = filtered_state_list.replaceAll(' and ',' & ')
+
+
+if (filtered_state_list){
+ filtered_state_list = filtered_state_list.split(',')
+}else{
+filtered_state_list = []
+}
 
 function execute_data(execute_status){
 
@@ -789,11 +806,12 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     d3.csv("parliament.csv", function(map_full_data) { 
     
     state_list = _.uniq(map_full_data, function(item,a) { return item['STATE']; });
-    //date_list = _.uniq(map_full_data, function(item,a) { return item['Date']; });
+
     category_list = _.uniq(map_full_data, function(item,a) { return item['Category']; });
 	
     if (execute_status!='refresh')
     {    
+       
     d3.select("#state_val_id").selectAll('option').remove();
     var select_box = d3.select('#state_val_id')
                 .selectAll("option")
@@ -804,8 +822,6 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .property("selected", function (d) { return execute_status[0].indexOf(d['STATE'])>-1; })
                     .text(function (d) { return d['STATE']; });
                     
- 
-
     d3.select("#category_val_id").selectAll('option').remove();
     var select_box = d3.select('#category_val_id')
                 .selectAll("option")
@@ -813,25 +829,30 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .enter().append("option")
                     .attr("value", function (d) { return d['Category']; })
                     .attr("class","name")
-                    .property("selected", function (d) { return execute_status[2].indexOf(d['Category'])>-1; })
+                    .property("selected", function (d) { return execute_status[1].indexOf(d['Category'])>-1; })
                     .text(function (d) { return d['Category']; });                        
                     
     var map_data_state = []
                     _.each(map_full_data, function(d) { if(_.contains(execute_status[0], d['STATE'])) { map_data_state.push(d);}});
    
 
- 
     var map_data = []
-                    _.each(map_data_state, function(d) { if(_.contains(execute_status[2], d['Category'])) { map_data.push(d);}});
+                    _.each(map_data_state, function(d) { if(_.contains(execute_status[1], d['Category'])) { map_data.push(d);}});
     
     }else{
+    
+    if (filtered_state_list[0]=='ALL'){
+    	filtered_state_list = _.pluck(state_list, 'STATE') 
+    }
+    
+        
     var select_box = d3.select('#state_val_id')
                 .selectAll("option")
                     .data(state_list) 
                     .enter().append("option")
                     .attr("value", function (d) { return d['STATE']; })
                     .attr("class","name")
-                    .attr("selected","")
+                    .property("selected",function (d) { return filtered_state_list.indexOf(d['STATE'])>-1; })
                     .text(function (d) { return d['STATE']; });
                     
 
@@ -843,15 +864,17 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("class","name")
                     .attr("selected","")
                     .text(function (d) { return d['Category']; });                    
-     
-    var map_data = map_full_data
+
+    var map_data = []
+                    _.each(map_full_data, function(d) { if(_.contains(filtered_state_list, d['STATE'])) { map_data.push(d);}});
+   
     
     }    
      
     if (map_data.length==0){
         alert('There is No election results for the Selected combination');
         $("#state_val_id option").attr("selected", "selected");
-        $("#date_val_id option").attr("selected", "selected");
+
         $("#category_val_id option").attr("selected", "selected");
         
         var map_data = map_full_data
@@ -880,7 +903,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     
     }
      $("#state_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
-     $("#date_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
+
      $("#category_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
     
     var full_data = map_data
@@ -1064,6 +1087,8 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
           o.cd = o.ST_CD;
           o.vote_percent = parseFloat(o.vote_percent);
           });
+
+		 $('html, body').animate({ scrollTop: $('#perConstituency').offset().top }, 'slow');
 
 if (acct_no != undefined & execute_status=='refresh'){
 
@@ -1251,8 +1276,6 @@ if (acct_no != undefined & execute_status=='refresh'){
                     .attr("font-size", fontSize)
                     .text((value*100).toFixed(2) + "%");   
         }
-                
-
                     
         var text = progress_bar_svg.append("text")
                     .attr("text-anchor", "middle")
@@ -1584,11 +1607,7 @@ $('.party_filter').click( function(n) {
           state_values[i] = $(selected).val();
       });
       
-   var date_values = [];
-      $('#date_val_id :selected').each(function(i, selected){
-          date_values[i] = $(selected).val();
-      });      
-      
+           
    var category_values = [];
       $('#category_val_id :selected').each(function(i, selected){
           category_values[i] = $(selected).val();
@@ -1625,17 +1644,13 @@ $('.state_filter').click( function(n) {
           state_values[i] = $(selected).val();
       });
 
- var date_values = [];
-      $('#date_val_id :selected').each(function(i, selected){
-          date_values[i] = $(selected).val();
-      });
 
  var category_values = [];
       $('#category_val_id :selected').each(function(i, selected){
           category_values[i] = $(selected).val();
       });
       
-execute_data([state_values,date_values,category_values])
+execute_data([state_values,category_values])
 
 });
 
