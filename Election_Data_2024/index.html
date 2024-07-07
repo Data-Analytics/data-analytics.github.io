@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<!------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     24-06-2024
+ Modified:    24-06-2024
+ Copyright:  (c) sushanth 2024
+ Licence:     protected(not suppose to use it directly)
+-------------------------------------------------------------->
+<html>
+  <head>
+ <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sushanth">
+  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2024 India Election,India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024'">
+  <meta name="news_keywords" content="India polls, India parliament polls, India elections, India parliament elections, election news, India news, india news">
+  <meta name="keywords" content="India polls, India parliament polls, India elections, India parliament elections, election news, India news, india news">
+  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/basic.css" rel="stylesheet">
+  <link href="css/feature.css" rel="stylesheet">
+  <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link href="css/custom-styles.css" rel="stylesheet">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css">
+  <link rel="shortcut icon" href="/./images/logo.png">
+  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/d3.v4.min.js"></script>
+  <script type="text/javascript" src="js/sankey.js"></script>
+  <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
+  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>  
+  <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> 
+  <meta property="og:title"  content="parliament ELECTIONS 2014 - 2024 (India)" /> 
+  <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2024/" /> 
+  <meta property="og:description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024'" /> 
+  <html itemscope itemtype="https://schema.org/Blog">
+  <meta itemprop="description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024'">
+  <meta itemprop="name" content="India Parliament ELECTIONS 2014 - 2024 (India)">
+  <meta property="og:image" content="https://data-analytics.github.io/images/lok_sabha.jpg" /> 
+  <meta itemprop="image" content="https://data-analytics.github.io/images/lok_sabha.jpg">
+  <script type="text/javascript" src="js/topojson.min.js"></script>
+  <title>parliament Elections 2014 - 2024 (India)</title>  
+    <style>
+
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", sans-serif;
+      }
+
+      .subunit {
+        stroke: #333;
+        stroke-width: 1px;
+      }
+      .subunit-boundary {
+        fill: none;
+        stroke: #3a403d;
+      }
+
+      .place-label {
+        font-size: .7em;
+        text-shadow: 0px 0px 2px #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid header-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-logo">
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>India parliament Election Results 2024, 'A visual guide to the check out the comparison of India parliament elections from 2014 to 2024</p>
+                    <p class="synopsis">This interactive map will bring you results, from the national standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
+                    <p class="synopsis">It aims to make the past 3 parliament elections in India  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container">
+           <div class="row">           
+                <div class=" col-md-4 panel-body">        
+        			<div class="dropdown header_year">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li data-year="2024" class="2024_id"><a href="?year=2024#overall_view">2024 results</a></li>
+                                <li data-year="2019" class="2019_id"><a href="?year=2019#overall_view">2019 results</a></li>
+                                <li data-year="2014" class="2014_id"><a href="?year=2014#overall_view">2014 results</a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class=" col-md-8 panel-body">                         
+			        <p class="form-inline header_form">
+        			<label value="state_val" class="text_label" style="margin-top:10px!important">States : </label>
+        			<select multiple="multiple" id="state_val_id" class="select_state" style="margin-top:10px!important"></select>&nbsp;&nbsp;
+        			<label value="category_val" class="text_label" style="margin-top:10px!important">Category : </label>
+        			<select multiple="multiple" id="category_val_id" class="select_category" style="margin-top:10px!important" ></select>&nbsp;&nbsp;&nbsp;        
+        			<input type="button" value="submit" class="state_filter" style="width: 100px!important;margin:10px!important;"></input> 
+        			</p>
+        	</div>
+        </div>
+    </div>    
+                
+    <div id="overall_view">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>parliament Election Results <i class="year_tag"></i> Party Standings</h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+
+                       <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                          <g class="headers" transform="translate(80,0)">
+                              <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
+                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
+                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
+                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+                              <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
+                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                              <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
+                              <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
+                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
+                              <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
+                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
+                              <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
+                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
+                              <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
+                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
+                              <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
+                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
+                              <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                              <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+                              </g>                      
+                            </svg>
+                    <div class="col-md-12"> 
+                     <div class="overall_view_report">                     
+                     </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="individual_hold" class="map_hider">
+    <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>parliament Elections View By Individual Elections <i class="year_tag"></i></h2>
+                </div>    
+            </div>
+            <div class="row">           
+                <div class=" col-md-12 panel-body">
+            
+                      
+                    <p class="form-inline header_form" >
+                        <label value="year" class="text_label">Based on 2014 : </label>
+                        <select multiple="multiple" id="year_2014" class="select_year"></select>&nbsp;
+                        <label value="year" class="text_label">Based on 2019 : </label>
+                        <select multiple="multiple" id="year_2019" class="select_year"></select>&nbsp;
+                        <label value="year" class="text_label">Based on 2024 : </label>
+                        <select multiple="multiple" id="year_2024" class="select_year"></select>&nbsp;
+                        <input type="button" value="submit" class="party_filter" style="width:80px;!important;margin:10px!important"></input> 
+                    </p>
+        			<p class="form-inline header_form" >
+					<label align="left" class="text_label">Search :</label>
+					<input type="text" class="geo_search" placeholder="eg: Arunachal West ">&nbsp;&nbsp;
+                        
+                    </p>                           
+                     <div class="chart">  
+                        <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                            <g class="headers" transform="translate(80,0)">
+                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
+                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
+                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
+                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
+                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
+                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
+                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
+                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
+                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
+                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
+                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
+                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
+                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
+                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
+                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
+                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                              <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+                            </g>
+                            </svg>
+                        <div class="geo_map">
+                        </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    </div>
+
+    <div id="perConstituency">
+    <div class="container-fluid detail_display">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2 class="headers_constituency">parliament Elections year <i class="year_tag"></i> for Constituency<i class="constituency_tag"></i> in <i class="state_tag"></i></h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+                     <div class="chart">  
+                       <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                          <g class="headers" transform="translate(80,0)">
+                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
+                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
+                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
+                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+                              <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
+                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                              <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
+                              <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
+                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
+                              <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
+                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
+                              <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
+                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
+                              <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
+                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
+                              <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
+                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
+                              <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                              <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+                              </g>                      
+                            </svg>
+                        <div class="col-md-4 panel-body">
+                        <div class="progress_bar"></div>
+                        </div>
+                          <div class="col-md-8 panel-body">
+                        <div class="horizontal_bar"></div>
+                        </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    </div>
+
+    <div id="overall_view">
+    <div class="container-fluid">
+        <div class="container">
+          
+            <div class="row">
+            <div class="col-md-12 panel panel-default">   
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>party wise performance trend <i class="year_tag"></i></h2>
+                </div>    
+           </div>    
+            <div class="row">           
+                <div class=" col-md-12 panel-body">
+                      
+                        <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                            <g class="headers" transform="translate(80,15)">
+                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
+                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
+                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
+                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
+                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
+                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
+                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
+                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
+                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
+                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
+                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
+                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
+                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
+                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
+                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
+                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+                            </g>
+                        </svg>
+                    
+                          <div class="party_performance_trend_svg">
+                         </div>
+
+                </div>
+          </div>
+            
+            </div>
+            </div>
+    </div>
+    </div>
+    </div> 
+    
+ 
+ <div id="Constituency_partyTrend">
+        <div class="container-fluid">
+    <div class="container">
+            <div class="row">
+            <div class="col-md-12 panel panel-default">   
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Constituency wise Winner results detail view <i class="year_tag"></i></h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+
+              
+                     <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                            <g class="headers" transform="translate(80,15)">
+                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
+                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
+                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
+                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
+                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
+                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
+                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
+                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
+                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
+                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
+                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
+                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
+                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
+                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
+                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
+                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>      
+                            </g>
+                        </svg>
+                        <div class="party_trend"></div>
+                </div>
+          </div>
+            
+            </div>
+            </div>
+            
+    
+    </div>
+    </div>
+    </div>
+    
+    <div id="sankeyFlow">
+    <div class="container-fluid">
+    <div class="container">
+          
+            <div class="row">
+            <div class="col-md-12 panel panel-default">   
+            <div class="row">
+                <div class="col-md-12 panel-heading1">
+                    <h2>Party Transitions Trend across successive elections<i class="successive_year_tag"></i></h2>
+                </div>    
+           </div>
+           <div class="row">           
+                <div class=" col-md-12 panel-body">
+                    
+                         <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                            <g class="headers" transform="translate(80,15)">
+                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
+                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
+                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
+                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
+                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
+                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
+                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
+                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
+                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
+                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
+                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
+                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
+                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
+                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
+                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
+                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>      
+                            </g>
+                        </svg>
+                    <div  class="sankey_chart">
+                    
+                    </div>
+                </div>
+          </div>
+            
+            </div>
+            </div>
+    </div>
+    </div>
+    </div>
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    <script>
+
+
+ $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {
+            $('#return-to-top').fadeIn(200);
+        }else {
+            $('#return-to-top').fadeOut(200);
+        }
+    });
+
+    $('#return-to-top').click(function() {
+        $('body,html').animate({
+            scrollTop : 0
+        }, 500);
+    });
+
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+ function tabulate(data, columns,color_map) {
+        
+        $('.party_trend').empty()
+                
+        var table = d3.select('.party_trend')
+                        .append('table')
+                        .attr("id","myTable")
+                        .attr("class","table table-bordered");
+    
+        var thead = table.append('thead').attr("class","data_head")
+        var tbody = table.append('tbody');
+
+        // append the header row
+        thead.append('tr')
+          .selectAll('th')
+          .data(columns).enter()
+          .append('th')
+            .attr("class","dynatable-head")
+           
+            .text(function (column) { return column.toUpperCase(); });
+
+        // create a row for each object in the data
+        var rows = tbody.selectAll('tr')
+          .data(data)
+          .enter()
+          .append('tr');
+
+        // create a cell in each row for each column
+        var cells = rows.selectAll('td')
+          .data(function (row) {
+            return columns.map(function (column) {
+              return {column: column, value: row[column]};
+            });
+          })
+          .enter()
+          .append('td')
+          .attr("bgcolor",function(d) { return color_map[d.value] })  
+          .append("font")
+          .style("color",function(d) { return color_map[d.value] == undefined ? "#636363" : ((parseInt(color_map[d.value].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff') })                          
+          .text(function (d) { return d.value; });
+
+      return table;
+   
+    }
+
+
+function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_map){
+    var centered;
+
+    map_data = other_data.filter(function(d){return (d.YEAR==year_detail) & (d['#']==1) })
+
+    map_data_14 = other_data.filter(function(d){return (d.YEAR==2014) & (d['#']==1) })
+    map_data_19 = other_data.filter(function(d){return (d.YEAR==2019) & (d['#']==1) })
+    map_data_24 = other_data.filter(function(d){return (d.YEAR==2024) & (d['#']==1) })
+
+    map_data.forEach(function(o) {
+        map_data_14.forEach(function(o_14) {
+           if ((o_14.PC_NO== o.PC_NO) & (o_14.ST_CD==o.ST_CD)) {
+                o['14_PARTY'] = o_14['PARTY_CODE']
+              }
+        });
+        map_data_19.forEach(function(o_19) {
+           if ((o_19.PC_NO == o.PC_NO)& (o_19.ST_CD==o.ST_CD)){
+                o['19_PARTY'] = o_19['PARTY_CODE']
+              }
+        });
+        map_data_24.forEach(function(o_24) {
+           if ((o_24.PC_NO == o.PC_NO)& (o_24.ST_CD==o.ST_CD)){
+                o['24_PARTY'] = o_24['PARTY_CODE']
+              }
+        });        
+    });
+     
+    var map_data_2014 = []
+                    _.each(map_data, function(d) { if(_.contains(year_2014, d['14_PARTY'])) { map_data_2014.push(d);}});
+
+    var map_data_2019 = []
+                    _.each(map_data_2014, function(d) { if(_.contains(year_2019, d['19_PARTY'])) { map_data_2019.push(d);}});
+
+    var map_data = []
+                    _.each(map_data_2019, function(d) { if(_.contains(year_2024, d['24_PARTY'])) { map_data.push(d);}});
+
+        
+      var constituency_list = [] 
+      map_data.forEach(function(o) {
+        
+        constituency_list.push(o.PC_NAME);
+        
+       })
+       
+  function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+  
+    $("circle").tooltip({container: 'body', html: true, placement:'top'});
+    $("path").tooltip({container: 'body', html: true, placement:'top'});
+    $("rect").tooltip({container: 'body', html: true, placement:'top'});
+         
+    sub_width_mapped = 600
+    
+	   if (state_values.length==36){
+			map_height = 860
+	   }else{
+	   		map_height = 600
+	   }
+	   		
+       var margin = {top: 20, right: 20, bottom: 20, left: 20},
+        width = sub_width_mapped - margin.left - margin.right,
+        height = map_height - margin.top - margin.bottom;
+
+      var projection = d3.geoMercator();
+
+      var path = d3.geoPath()
+          .projection(projection)
+          .pointRadius(2);
+
+	  d3.select('.geo_map').select('svg').remove();
+
+      var svg = d3.select(".geo_map").append("svg")
+            .attr("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width)+" "+(height))
+            .attr("xmlns", 'https://www.w3.org/2000/svg')
+            .attr("xlink", 'https://www.w3.org/1999/xlink')
+            .attr("version", '1.1');
+
+        svg.append("rect")
+            .attr("class", "background")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("fill",'none')
+            .attr("pointer-events",'all')
+            .on("click", clicked)
+
+
+      var g = svg.append("g");
+    
+      d3.json("india_pc.json", function(error, data) {
+
+        if (error) throw error;
+        var boundary = centerZoom(data);
+        drawSubUnits(data);
+       
+      });
+
+      // This function "centers" and "zooms" a map by setting its projection's scale and translate according to its outer boundary
+      // It also returns the boundary itself in case you want to draw it to the map
+      function centerZoom(data){
+        
+        filtered_states_geo_map = state_values
+
+         
+        data.objects['india_pc'].geometries  = data.objects['india_pc'].geometries.filter(function(d) { return filtered_states_geo_map.includes(d.properties.st_name) });
+        
+        $('.geo_search').attr('placeholder', 'eg: '+data.objects['india_pc'].geometries[0].properties.pc_name);
+        
+        var o = topojson.mesh(data, data.objects['india_pc'], function(a, b) { return a === b; });
+
+        projection
+            .scale(1)
+            .translate([0, 0]);
+
+        var b = path.bounds(o),
+            s = 1 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+            t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+        projection
+            .scale(s)
+            .translate(t);
+
+        return o;
+      }
+
+      function addThousandsSeparator(t){
+          var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+    
+    function clicked(d) {
+          
+      var x, y, k;
+      if (d && centered !== d) {
+        var centroid = path.centroid(d);
+        x = centroid[0];
+        y = centroid[1];
+        k = 4;
+        centered = d;
+      }else {
+        x = width / 2;
+        y = height / 2;
+        k = 1;
+        centered = null;
+      }
+
+      g.selectAll("path")
+          .classed("active", centered && function(d) { return d === centered; });
+
+      g.transition()
+          .duration(750)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
+          .style("stroke-width", 1.5 / k + "px");
+
+    }
+
+     constituency_list =[]
+      function drawSubUnits(dataMaps){
+
+       mapper_data_view = topojson.feature(dataMaps, dataMaps.objects['india_pc']).features
+
+       mapper_data_view.forEach(function(o) {
+            map_data.forEach(function(g){
+              if (o.properties.pc_no == g.PC_NO  & o.properties.st_name == g.STATE){
+                constituency_list.push(o.properties.pc_name);
+                o.result = g
+              }
+            });
+          });
+
+      var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+      
+      	filtered_state_value = state_values.join().replaceAll('&','and');
+      	
+        g.selectAll(".subunit")
+            .data(mapper_data_view)
+          .enter().append("path")
+          .style("cursor","pointer")
+            .attr("class", "subunit")
+            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.pc_name+'</br>  Candidate : '+d.result.CANDIDATE+'</br> Party : '+d.result.PARTY_CODE+ '<br/>('+d.result.PARTY +')<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Filtered Out <br/> Constituency : '+d.properties.pc_name})
+            .attr("sub_link", function (d){ return d.properties.pc_name })
+            .attr("fill", function(d) { return d.result!=undefined? d.result.color_code : '#fff'  })
+            .style("stroke", "rgb(221, 221, 221)")
+			.style("stroke-width","0.5px")
+            .attr("d", path)
+            .on("click", clicked)
+           .on('dblclick',function(d){ return d.result!=undefined? window.open('?filtered_state='+filtered_state_value+'&year='+d.result.YEAR+'&acct_no='+d.result.PC_NO+'&st_no='+d.result.ST_CD+"#perConstituency","_self"):''  });
+
+    
+    $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
+
+var lastsearch = '';
+    var $box = {};
+    
+    function add_search(search, chart) {
+      var $chart = $(chart);
+      $(search).on('keypress, change, keyup', function(event) {
+        var search = $(this).val();
+        if (lastsearch != search) {
+          lastsearch = search;
+          var re = new RegExp( "^" + search, "i" );
+          $('path', $chart).each(function(){
+              $(this).css('fill-opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+          });
+        }
+        if (event.keyCode==13){
+            $(document.activeElement).filter(':input:focus').blur();
+        }
+      });
+    }
+   add_search('.geo_search', '.geo_map');
+   
+   var Industry = constituency_list;
+    
+    $( ".geo_search" ).autocomplete({
+    source: function(req, responseFn) {
+        var re = $.ui.autocomplete.escapeRegex(req.term);
+        var matcher = new RegExp( "^" + re, "i" );
+        var a = $.grep( Industry, function(item,index){
+            return matcher.test(item);
+        });
+        responseFn( a );
+    }
+    });
+    
+    
+    }
+   
+      }
+year_detail = getParameterByName('year');
+if (year_detail == undefined){ year_detail= 2024; }
+$(".year_tag").append("("+year_detail+")");
+$(".successive_year_tag").append(" (2019 - 2024)");
+$('.'+year_detail+'_id').addClass('active');
+acct_no = getParameterByName('acct_no');
+st_no = getParameterByName('st_no');
+filtered_state_list = getParameterByName('filtered_state');
+if (filtered_state_list == undefined){ filtered_state_list = 'ALL'; }
+filtered_state_list = filtered_state_list.replaceAll(' and ',' & ')
+
+
+if (filtered_state_list){
+ filtered_state_list = filtered_state_list.split(',')
+}else{
+filtered_state_list = []
+}
+
+function execute_data(execute_status){
+
+if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(); }
+
+    d3.csv("parliament.csv", function(map_full_data) { 
+    
+ 
+    state_list = _.uniq(map_full_data, function(item,a) { return item['STATE']; });
+
+    category_list = _.uniq(map_full_data, function(item,a) { return item['Category']; });
+	
+    PARTY_CODE_LIST = _.uniq(map_full_data, function(item,a) { return item['PARTY_CODE'] });
+  	
+	color_map = {}
+    PARTY_CODE_LIST.forEach(function(pcl) {
+		color_map[pcl['PARTY_CODE']] = pcl['color_code']
+    });
+
+	
+    if (execute_status!='refresh')
+    {    
+       
+    d3.select("#state_val_id").selectAll('option').remove();
+    var select_box = d3.select('#state_val_id')
+                .selectAll("option")
+                    .data(state_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['STATE']; })
+                    .attr("class","name")
+                    .property("selected", function (d) { return execute_status[0].indexOf(d['STATE'])>-1; })
+                    .text(function (d) { return d['STATE']; });
+                    
+    d3.select("#category_val_id").selectAll('option').remove();
+    var select_box = d3.select('#category_val_id')
+                .selectAll("option")
+                    .data(category_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['Category']; })
+                    .attr("class","name")
+                    .property("selected", function (d) { return execute_status[1].indexOf(d['Category'])>-1; })
+                    .text(function (d) { return d['Category']; });                        
+                    
+    var map_data_state = []
+                    _.each(map_full_data, function(d) { if(_.contains(execute_status[0], d['STATE'])) { map_data_state.push(d);}});
+   
+
+    var map_data = []
+                    _.each(map_data_state, function(d) { if(_.contains(execute_status[1], d['Category'])) { map_data.push(d);}});
+    
+    }else{
+    
+    if (filtered_state_list[0]=='ALL'){
+    	filtered_state_list = _.pluck(state_list, 'STATE') 
+    }
+    
+        
+    var select_box = d3.select('#state_val_id')
+                .selectAll("option")
+                    .data(state_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['STATE']; })
+                    .attr("class","name")
+                    .property("selected",function (d) { return filtered_state_list.indexOf(d['STATE'])>-1; })
+                    .text(function (d) { return d['STATE']; });
+                    
+
+    var select_box = d3.select('#category_val_id')
+                .selectAll("option")
+                    .data(category_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['Category']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['Category']; });                    
+
+    var map_data = []
+                    _.each(map_full_data, function(d) { if(_.contains(filtered_state_list, d['STATE'])) { map_data.push(d);}});
+   
+    
+    }    
+     
+    if (map_data.length==0){
+        alert('There is No election results for the Selected combination');
+        $("#state_val_id option").attr("selected", "selected");
+
+        $("#category_val_id option").attr("selected", "selected");
+        
+        var map_data = map_full_data
+        
+        
+    d3.select("#state_val_id").selectAll('option').remove();
+    var select_box = d3.select('#state_val_id')
+                .selectAll("option")
+                    .data(state_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['STATE']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['STATE']; });
+                    
+
+    d3.select("#category_val_id").selectAll('option').remove();
+    var select_box = d3.select('#category_val_id')
+                .selectAll("option")
+                    .data(category_list) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['Category']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['Category']; });            
+                    
+    }
+     $("#state_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
+
+     $("#category_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
+    
+    var full_data = map_data
+    
+    year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
+    year_data_set_all.forEach(function(o) {
+       o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
+    });
+
+    tabulate(year_data_set_all, ['ST_CD','PC_NO','STATE','PC_NAME','CANDIDATE','PARTY_CODE','votes_gained','vote_percent'],color_map); // 2 column table
+    
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
+    
+    function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
+  
+    year_data_set_sum = map_data.filter(function(d){return (d.YEAR==year_detail)})
+
+    year_data_set_sum_overall = d3.sum(year_data_set_sum, function(d){
+        return parseInt(d.VOTES);
+    });
+
+    var year_data_set_sum_party = d3.nest()
+              .key(function(d) { return d['PARTY_CODE']; })
+              .rollup(function(v) { return d3.sum(v, function(d) {return parseInt(d.VOTES);})  })
+              .entries(year_data_set_sum);
+   
+    year_data_set_2014 = map_data.filter(function(d){return (d.YEAR==2014 & d['#']==1)  })
+    year_data_set_2019 = map_data.filter(function(d){return (d.YEAR==2019 & d['#']==1)  })
+    year_data_set_2024 = map_data.filter(function(d){return (d.YEAR==2024 & d['#']==1)  })
+    
+      year_data_set_2019.forEach(function(p) {
+        year_data_set_2024.forEach(function(o) {
+
+            if((p.PC_NO==o.PC_NO) & (p.ST_CD==o.ST_CD))
+            {
+            o['O_PARTY'] = p['PARTY_CODE']
+            }
+            });
+        });
+    
+    party_2014 = _.uniq(year_data_set_2014, function(item, key, a) { return item['PARTY_CODE']; });
+    party_2019 = _.uniq(year_data_set_2019, function(item, key, a) { return item['PARTY_CODE']; });
+    party_2024 = _.uniq(year_data_set_2024, function(item, key, a) { return item['PARTY_CODE']; });
+    
+    d3.select("#year_2014").selectAll('option').remove();
+    d3.select("#year_2019").selectAll('option').remove();
+    d3.select("#year_2024").selectAll('option').remove();
+    
+    var select_box = d3.select('#year_2014')
+                .selectAll("option")
+                    .data(party_2014.filter(function(d) { return d['PARTY_CODE']!='' })) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['PARTY_CODE']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['PARTY_CODE']; });
+
+      var select_box = d3.select('#year_2019')     
+                .selectAll("option")
+                    .data(party_2019.filter(function(d) { return d['PARTY_CODE']!='' }))
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['PARTY_CODE']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['PARTY_CODE']; });
+
+      var select_box = d3.select('#year_2024')     
+                .selectAll("option")
+                    .data(party_2024.filter(function(d) { return d['PARTY_CODE']!='' }))
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['PARTY_CODE']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['PARTY_CODE']; });
+
+
+      $("#year_2014").multipleSelect({ placeholder: "Here is the placeholder" });
+      $("#year_2019").multipleSelect({ placeholder: "Here is the placeholder" });
+      $("#year_2024").multipleSelect({ placeholder: "Here is the placeholder" });
+
+      var year_2024 = [];
+      $('#year_2024 :selected').each(function(i, selected){
+          year_2024[i] = $(selected).val();
+      });
+ 
+      var year_2019 = [];
+      $('#year_2019 :selected').each(function(i, selected){
+          year_2019[i] = $(selected).val();
+      });
+
+      var year_2014 = [];
+      $('#year_2014 :selected').each(function(i, selected){
+            year_2014[i] = $(selected).val();
+      });
+
+      var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+      
+      map_filter(year_2014,year_2019,year_2024,map_data,state_values,color_map);
+    
+    
+      var year_data_sets = d3.nest()
+              .key(function(d) { return d['PARTY_CODE']; })
+              .rollup(function(v) { return v.length;  })
+              .entries(year_data_set_all);
+   
+      year_data_sets.sort(function(a, b) { return b.value - a.value; })
+  
+      heading_colors = []
+       year_data_sets.forEach(function(o) {
+          heading_colors.push(color_map[o.key])
+          year_data_set_sum_party.forEach(function(p) {
+            if (p.key==o.key){
+              o.party_vote_percent = parseFloat(100*p.value/year_data_set_sum_overall).toFixed(2);
+              o.party_votes = addThousandsSeparator(p.value)
+            }
+        });
+       })
+
+        max_seats = d3.max(year_data_sets, function(d) { return d.value; });
+
+        $('.overall_view_report').empty();
+
+        lowresult_data  = d3.select('.overall_view_report')
+                             .selectAll('div')
+                            .data([year_data_sets])
+                            .enter()
+                            .append("div")
+                            .append("table")
+                            .attr("class","table table-condensed party-summary")
+
+              lowresult_data.append('thead')
+                            .selectAll("tr")
+                            .data([['Party','Seats','Seat Share','Vote Percent','Total Votes']]).enter()
+                            .append("tr")
+                            .selectAll("th")
+                                .data(function(d,l) { return d }).enter()
+                                .append('th')
+                                .style("max-width",'10px')
+                                .style("font-size",'15px')
+                                .style("text-align",'center')                                
+                                .append("font")
+                                .attr("color","#636363")
+                                .text(function(o,i) { return o });
+
+              lowresult_data.append('tbody')
+                                .selectAll("tr")
+                                .data(function(o) { return o }).enter()
+                                .append("tr")
+                                .selectAll("td")
+                                    .data(function(d,l) { return [d.key,d.value,l+':'+(d.value*100/max_seats).toFixed(2),d.party_vote_percent+'%',d.party_votes] }).enter()
+                                    .append('td')
+                                    .attr('class',function(d) { return d+'s'})
+                                    .style("max-width",'10px')
+                                    .style("font-size",'15px')
+	                                .style("text-align",'center')                                    
+                                    .text(function(o,i) { return i!=2? o:'' })
+                                    .append('div')
+                                    .attr('class',function(d,i) { return i!=2? '':'progress'; })
+                                    .append('div')
+                                    .attr('class','progress-bar progress-bar-striped')
+                                    .attr('role','progressbar')
+                                    .attr('aria-valuenow','70')
+                                    .attr('aria-valuemin','0')
+                                    .attr('aria-valuemax','100')
+                                    .style('background-color',function(d,i) { return i!=2? '':heading_colors[parseInt(d.split(':')[0])]; })
+                                    .style('width',function(d,i) { return i!=2? '0%':d.split(':')[1]+'%'; });
+                                    
+                                   
+            d3.selectAll('.removed_data').remove();
+
+         map_data.forEach(function(o) {
+          o.polled_votes = parseInt(o.polled_votes);
+          o.votes = parseInt(o.VOTES);
+          o.YEAR = parseInt(o.YEAR);
+          o.rank = parseInt(o['#']);
+          o.ac = parseInt(o.PC_NO);
+          o.cd = o.ST_CD;
+          o.vote_percent = parseFloat(o.vote_percent);
+          });
+
+		 $('html, body').animate({ scrollTop: $('#perConstituency').offset().top }, 'slow');
+
+if (acct_no != undefined & execute_status=='refresh'){
+
+    data_set = map_data.filter(function(d){return (d.YEAR==year_detail)& (d.PC_NO==acct_no)&  (d.ST_CD==st_no)& (d.rank<10) })
+    
+    
+    var horizontal_width = parseInt(d3.select('.horizontal_bar').style('width'), 10);
+
+    var horizontal_width = horizontal_width<540? 540 : horizontal_width
+
+    var margin = {top: 10, right: 30, bottom: 15, left: 78},
+                horz_width = horizontal_width*1.2 - margin.left - margin.right,
+                horz_height = 320 - margin.top - margin.bottom;
+                    
+   d3.select('.horizontal_bar').select('svg').remove();
+   
+    var horizontal_bar_svg = d3.select(".horizontal_bar").append("svg")
+                .attr("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+(horz_width)+" "+(horz_height))
+                .attr("xmlns", 'https://www.w3.org/2000/svg')
+                .attr("xlink", 'https://www.w3.org/1999/xlink')
+                .attr("version", '1.1')
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top/4 + ")");
+
+    // set the ranges
+   var y = d3.scaleBand()
+           .range([horz_height - margin.top - margin.bottom, 0])
+           .padding(0.2);
+
+   var x = d3.scaleLinear()
+           .range([0, horz_width-(margin.left*5/2)]);
+           
+    var constituency_name = ''; 
+    var state_name = '';     
+    data_set.forEach(function(o) {    
+        constituency_name = o.PC_NAME;
+        state_name = o.STATE;
+        o.PARTY_ID = o['#']+'. '+o.PARTY_CODE
+      });
+   
+    data_set = data_set.sort(function(a, b){ return d3.descending(a.rank, b.rank); })
+    
+    deposit_data_set = data_set.filter(function(d){return (d.votes>=d.polled_votes/6) })
+    
+    var layer = horizontal_bar_svg.selectAll(".layer")
+        .data(data_set)
+        .enter().append("g")
+        .attr("class", "layer");
+        
+        d3.selectAll(".tick > text")
+            .style("font-size", "13px")    
+     
+        $(".constituency_tag").append("( "+constituency_name+" )");
+        $(".state_tag").append("( "+state_name+" )");
+    
+        x.domain([0, d3.max(data_set, function(d){ return d.votes; })])
+        y.domain(data_set.map(function(d) { return d.PARTY_ID; }));
+
+        
+    deposit_data_set = deposit_data_set.sort(function(a, b){ return d3.ascending(a.rank, b.rank); })
+    
+    deposit_party_id = deposit_data_set[deposit_data_set.length-1]['PARTY_ID'];
+     
+    horizontal_bar_svg.append("g")
+            .attr("class", "guide_deposit")
+        .append("line")
+            .attr('stroke-width',1)
+            .style("stroke", "rgb(99, 99, 99)")
+            .attr("x1", x(0))
+            .attr("x2", x(d3.max(data_set, function(d){ return d.votes; })))
+            .attr("y1", y(deposit_party_id) + (y.bandwidth()*1.1))
+            .attr("y2", y(deposit_party_id) + (y.bandwidth()*1.1));
+            
+     horizontal_bar_svg.append("text")
+        .attr("x",x(d3.max(data_set, function(d){ return d.votes; })))
+        .attr("y", y(deposit_party_id) + (y.bandwidth()*1.1)+13)
+        .style("fill", "rgb(99, 99, 99)")
+        .style("font-size","13px")
+        .style("text-anchor", "end")
+        .attr("data-title","Guide line: 1/6 of polled votes<br/> (16.66 % approx)")
+        .text("Deposit Threshold");
+
+    // append the rectangles for the bar chart
+     horizontal_bar_svg.selectAll("rect")
+        .data(data_set)
+      .enter().append("rect")
+        .style("fill", function(d,i) { return color_map[d.PARTY_CODE]; })
+        .attr("width", function(d) {return x(d.votes); } )
+        .attr("stroke-width", .5)
+        .attr("stroke", function(d,i) { return d3.rgb(color_map[d.PARTY_CODE]).darker(); })        
+        .attr("y", function(d) { return y(d.PARTY_ID); })
+        .attr("data-title",function(d) { return 'Constituency : '+d.PC_NAME+' <br/> Candidate : '+d.CANDIDATE+' <br/> party : '+d.PARTY_CODE+' <br/> ('+d.PARTY+') <br/> percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/> votes : '+addThousandsSeparator(d.votes)+'<br/> polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+        .attr("height", y.bandwidth());
+
+                
+     horizontal_bar_svg.selectAll("text.details")
+        .data(data_set)
+      .enter().append("text")
+        .attr("class","details")
+        .attr("y", function(d) { return y(d.PARTY_ID)+(y.bandwidth()*4/5); })
+        .style("text-anchor", "start")
+        .attr("fill", "#444")
+        .style("font-size","16px")
+        .attr("x", function(d) { return  x(d.votes)+3; })
+        .text(function(d) { return addThousandsSeparator(d.votes)+' votes'; });
+        
+        // add the x Axis
+        horizontal_bar_svg.append("g")
+           .attr("transform", "translate(0," + (horz_height- margin.top - margin.bottom) + ")")
+           .call(d3.axisBottom(x).ticks(4).tickFormat(d3.format(".2s")));
+
+        // add the y Axis
+        horizontal_bar_svg.append("g")
+           .call(d3.axisLeft(y));
+
+        var twoPi = 2 * Math.PI;
+        
+        var sub_width = parseInt(d3.select('.progress_bar').style('width'), 10);
+    
+        var margin = {top: 20, right: 20, bottom: 20, left: 20},
+                progress_width = sub_width - margin.left - margin.right,
+                progress_height = 250 - margin.top - margin.bottom;
+    
+    
+       d3.select('.progress_bar').select('svg').remove();
+   
+        var progress_bar_svg = d3.select(".progress_bar").append("svg")
+                .attr("width", "100%")
+                .attr("data-height","0.54")
+                .attr("viewBox","0 0 "+(progress_width)+" "+(progress_height))
+                .attr("xmlns", 'https://www.w3.org/2000/svg')
+                .attr("xlink", 'https://www.w3.org/1999/xlink')
+                .attr("version", '1.1')
+                .append("g")
+                .attr("transform", "translate(" + progress_width/2 + "," + progress_height*7/12+ ")");
+ 
+ 
+ 		var progress_bar_defs = progress_bar_svg
+ 								.append('defs')
+ 								.append('clipPath')
+ 								.attr('id','circleView')
+ 								.append('circle')
+ 								.attr('cx',0)
+ 								.attr('cy',0)
+ 								.attr('r',d3.min([progress_width,progress_height])*.27)
+   
+        value_data = data_set.filter(function(d){return (d.rank==1) })
+        fontSize = 16;
+        
+        value = value_data[0]['votes']/parseFloat(value_data[0]['polled_votes']);
+        
+        var arcs_val = d3.arc()
+                    .innerRadius(d3.min([progress_width,progress_height])*.27)
+                    .outerRadius(d3.min([progress_width,progress_height])*.4)
+                    .startAngle(0);
+
+        var background = progress_bar_svg
+                        .append("path")
+                        .datum({ endAngle : twoPi})
+                        .style("fill", "#ddd")
+                        .attr("d", arcs_val);
+
+        var foreground = progress_bar_svg
+                            .append("path")
+                            .datum({ endAngle : 0})
+                            .style("fill", color_map[value_data[0]['PARTY_CODE']])
+                            .attr("class", "foreground")
+                            .attr("d", arcs_val);
+
+		if (value_data[0]['IMAGE']){
+        var image = progress_bar_svg.append('image')
+                    .attr("xlink:href", value_data[0]['IMAGE'])
+                .attr("x", -d3.min([progress_width,progress_height])*.27)
+                .attr("y", -d3.min([progress_width,progress_height])*.27)
+                .attr("clip-path", "url(#circleView)")
+                .attr("width", d3.min([progress_width,progress_height])*.54)
+                
+        }else{
+             var text = progress_bar_svg.append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("dy", ".35em")
+                    .style("fill", "rgb(99, 99, 99)")
+                    .attr("font-size", fontSize)
+                    .text((value*100).toFixed(2) + "%");   
+        }
+                    
+        var text = progress_bar_svg.append("text")
+                    .attr("text-anchor", "middle")
+                    .attr("y", -100)
+                    .attr("dy", ".35em")
+                    .style("fill", "rgb(99, 99, 99)")
+                    .attr("font-size", fontSize)
+                    .text('Winning Party ('+value_data[0]['PARTY_CODE']+')');
+
+            function arcTween(newAngle) {
+              return function(d) {
+               var interpolate = d3.interpolate(d.endAngle, newAngle);
+               return function(t) {
+                 d.endAngle = interpolate(t);
+                 return arcs_val(d);
+               };
+              };
+            }
+
+            d3.interval(function() {
+              foreground.transition()
+                 .duration(750)
+                 .attrTween("d", arcTween(twoPi * value));
+            }, 1500);
+
+        }
+
+var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
+
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+        width = sub_width - margin.left - margin.right,
+        height = 460 - margin.top - margin.bottom;
+
+    
+   d3.select('.party_performance_trend_svg').select('svg').remove();
+  
+    var party_performance_trend_svg = d3.select(".party_performance_trend_svg").append("svg")
+            .attr("width", "100%")
+            .attr("data-height","0.54")
+            .attr("viewBox","0 0 "+(width + margin.left + margin.right)+" "+(height + margin.top + margin.bottom))
+            .attr("xmlns", 'https://www.w3.org/2000/svg')
+            .attr("xlink", 'https://www.w3.org/1999/xlink')
+            .attr("version", '1.1')
+            .append("g")
+            .attr("transform", "translate(" + (margin.left+(width/2))+ "," + (margin.top+(height/2)) + ")");
+        
+    contest_data_csv = full_data.filter(function(d){return (d.YEAR==year_detail)});
+    
+    var contest_data_count = d3.nest()
+              .key(function(d) { return d.PARTY_CODE; })
+              .rollup(function(v) { return v.length; })
+              .entries(contest_data_csv);
+
+     winning_data_csv = contest_data_csv.filter(function(d){return (d.rank==1)});
+    
+        var winning_data_count = d3.nest()
+              .key(function(d) { return d.PARTY_CODE; })
+              .rollup(function(v) { return v.length; })
+              .entries(winning_data_csv);
+
+        winning_data_count.forEach(function(o) {
+            o.weight = o.value
+            o.width  = +o.weight;
+            contest_data_count.forEach(function(d) {
+                if(d.key==o.key){
+                    o.contest = d.value
+                }
+
+            });
+            o.score  = (o.value*100/o.contest).toFixed(2);            
+        });
+        
+        radius = Math.min(width, height) / 2,
+        innerRadius = 0.3 * radius;
+
+    var pie = d3.pie()
+        .sort(null)
+        .value(function(d) { return d.width; });
+
+        var arc = d3.arc()
+          .innerRadius(innerRadius)
+          .outerRadius(function (d) { 
+            return (radius - innerRadius) * (d.data.score / 100.0) + innerRadius; 
+          });
+
+        var outlineArc = d3.arc()
+                .innerRadius(innerRadius)
+                .outerRadius(radius);
+
+  var winning_data_count = winning_data_count.sort(function(a, b) { return b.value - a.value; })
+
+  var paths = party_performance_trend_svg.selectAll(".solidArc")
+      .data(pie(winning_data_count))
+    .enter().append("path")
+      .attr("fill", function(d) { return color_map[d.data.key]!=undefined? color_map[d.data.key] : '#363636'; })
+      .attr("class", "solidArc")
+      .attr("stroke", function(d) { return color_map[d.data.key]!=undefined? d3.rgb(color_map[d.data.key]).darker() : d3.rgb('#363636').darker() })
+      .attr("d", arc)
+      .attr('class',function (d) { return 'party_filters '+d.data.key+'s' })
+      .attr("data-title",function(d) { return  'party : '+d.data.key+' <br/> contested seats : '+d.data.contest+' <br/> seats won : '+d.data.value+' <br/> convertion percentage : '+d.data.score ;});
+
+  var outerPath = party_performance_trend_svg.selectAll(".outlineArc")
+      .data(pie(winning_data_count))
+    .enter().append("path")
+      .attr("fill", "none")
+      .attr("stroke", "gray")
+      .attr("class", "outlineArc")
+      .attr("d", outlineArc);  
+    
+  var max_value = d3.max(winning_data_count, function(d) { return d.values; });
+  winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});
+  winning_party = winning_party.sort(function(a, b) { return b.value - a.value; })
+   
+  party_performance_trend_svg.append("text")
+    .attr("class", "aster-score")
+    .attr("dy", ".35em")
+    .attr("text-anchor", "middle")
+    .style("fill", "rgb(99, 99, 99)")
+    .attr("font-size", 22)    // text-align: right
+    .text(winning_party[0]['key']);
+    
+    $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
+
+var margin = {top: 50, right: 20, bottom: 20, left: 20},
+    sankey_width = (parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)) - margin.left - margin.right,
+    sankey_height = 600 - margin.top - margin.bottom;
+
+var formatNumber = d3.format(",.0f"), 
+    format = function(d) { return formatNumber(d); };
+    
+   d3.select('.sankey_chart').select('svg').remove();
+ 
+// append the svg canvas to the page
+var svg = d3.select(".sankey_chart").append("svg")
+    .attr("width", '100%')
+    .attr("data-height", '0.5678')
+    .attr("viewBox",'0 0 '+(sankey_width + margin.left + margin.right)+' 600')
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// Set the sankey diagram properties
+var sankey = d3.sankey()
+    .nodeWidth(60)
+    .nodePadding(5)
+    .size([sankey_width, sankey_height]);
+
+var paths = sankey.link();
+
+year_data_set_2024.forEach(function (d) {
+        d.source_year =d['O_PARTY']
+        d.target_year =d['PARTY_CODE'] 
+        d.combined_year =d.source_year+'_'+d.target_year 
+        });
+
+        year_data_set_2024 = year_data_set_2024.filter(function(d){return (d.source_year!='') & (d.target_year!='') })
+        
+        var data_Count = d3.nest()
+              .key(function(d) { return d.combined_year; })
+              .rollup(function(v) { return v.length; })
+              .entries(year_data_set_2024);
+        
+  graph = {"nodes" : [], "links" : []};
+    
+    name_list = []
+   data_Count.forEach(function (d) {
+      graph.nodes.push({ "name": d.key.split("_")[0], "color": color_map[d.key.split("_")[0]] });
+      graph.nodes.push({ "name": '_'+d.key.split("_")[1], "color": color_map[d.key.split("_")[1]] });
+
+      graph.links.push({ "source": d.key.split("_")[0],
+                         "target": '_'+d.key.split("_")[1],
+                         "source_color": color_map[d.key.split("_")[0]],
+                         "target_color": color_map[d.key.split("_")[1]],
+                         "value": d.value });
+     });
+     
+    // return only the distinct / unique nodes
+    graph.nodes_all = _.uniq(graph.nodes, function(item, key, a) { return item['name']; });
+    graph.nodes =[]
+   
+    graph.nodes_all.forEach(function (d, i) {       
+       graph.nodes.push(d.name)
+    });
+     
+     // loop through each link replacing the text with its index from node
+     graph.links.forEach(function (d, i) {
+       graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+       graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+     });
+
+     //now loop through each nodes to make nodes an array of objects
+     // rather than an array of strings
+     graph.nodes.forEach(function (d, i) {       
+       graph.nodes[i] = { "name": d };
+     });
+
+  sankey
+    .nodes(graph.nodes)
+    .links(graph.links)
+    .layout(12);
+
+svg.selectAll(".head")
+      .data(['2019','2024'])
+    .enter().append("text")
+      .attr("y", -22)
+      .attr("font-size",12)
+      .attr("x", function(d,p) { return p < 1 ?  12 : sankey_width-12 ; })
+      .attr("fill", function(d,p) { return p > 0 ? "rgb(99, 99, 99)" : "rgb(99, 99, 99)"; })
+      .attr("text-anchor", function(d,p) { return p <  1 ? 'start' : 'end'; })
+      .text('YEAR');
+
+ svg.selectAll(".head")
+      .data(['2018','2023'])
+    .enter().append("text")
+      .attr("y", -4)
+      .attr("font-size",20)
+      .attr("x", function(d,p) { return p < 1 ?  0 : sankey_width ; })
+      .attr("fill", function(d,p) { return p > 0 ? "rgb(99, 99, 99)" : "rgb(99, 99, 99)"; })
+      .attr("text-anchor", function(d,p) { return p <  1 ? 'start' : 'end'; })
+      .text(function(d) { return '('+d+')'; });
+
+      
+// add in the links
+  var link = svg.append("g").selectAll(".link")
+      .data(graph.links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", paths)
+      .style("stroke-width", function(d) { return Math.max(1, d.dy); })
+      .style("fill", function(d) { return d.target_color; })
+      .style("stroke", function(d) { return d.target_color; })      
+      .sort(function(a, b) { return b.dy - a.dy; })
+      .attr("data-title",function(d) { return d.source.name == d.target.name.replace('_','') ?  d.source.name+' has retained '+format(d.value)+' seats'  : d.target.name.replace('_','') + " has got "+ format(d.value)+" seats from "+ d.source.name; });
+
+// add in the nodes
+  var node = svg.append("g").selectAll(".node")
+      .data(graph.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { 
+          return "translate(" + d.x + "," + d.y + ")"; })
+    .call(d3.drag()
+      .subject(function(d) {
+            return d;
+          })
+          .on("start", function() {
+            this.parentNode.appendChild(this);
+          })
+      .on("drag", dragmove));
+  
+// add the rectangles for the nodes
+  node.append("rect")
+      .attr("height", function(d) { return d.dy; })
+      .attr("width", sankey.nodeWidth())
+     .style("fill", function(d) { return color_map[d.name.replace('_','')]; })
+      .style("stroke", function(d) { return d3.rgb(color_map[d.name.replace('_','')]).darker(2); })
+       .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats'; });
+    
+  node
+    .append("text")
+    .attr("y", function(d) { return (d.dy/2)-1; })
+    .attr("x", sankey.nodeWidth()/2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "15px")
+    .attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
+    .style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+    .text(function(d) { return d.dy>40 ?d.value:' '; });
+
+  node
+    .append("text")
+    .attr("y", function(d) { return (d.dy/2)+12; })
+    .attr("x", sankey.nodeWidth()/2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
+    .style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+    .text(function(d) { return d.dy>29 ?d.name.replace('_',''):' '; });
+
+  $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+  $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'});
+
+// add in the title for the nodes
+  node.append("text")
+      .attr("x", -6)
+      .attr("y", function(d) { return d.dy / 2; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end")
+      .attr("transform", null)
+      .text(function(d) { return d.name.replace('_',''); })
+    .filter(function(d) { return d.x < width / 2; })
+      .attr("x", 6 + sankey.nodeWidth())
+      .attr("text-anchor", "start");
+
+// the function for moving the nodes
+  function dragmove(d) {
+    d3.select(this).attr("transform", 
+        "translate(" + d.x + "," + (
+                d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+            ) + ")");
+    sankey.relayout();
+    link.attr("d", paths);
+  }
+  
+    
+      });
+
+$('.party_filter').click( function(n) {
+
+ var year_2024 = [];
+      $('#year_2024 :selected').each(function(i, selected){
+          year_2024[i] = $(selected).val();
+      });
+      
+ var year_2019 = [];
+      $('#year_2019 :selected').each(function(i, selected){
+          year_2019[i] = $(selected).val();
+      });
+
+ var year_2014 = [];
+        $('#year_2014 :selected').each(function(i, selected){
+            year_2014[i] = $(selected).val();
+        });
+        
+   d3.csv("parliament.csv", function(map_full_data) { 
+       
+  	PARTY_CODE_LIST = _.uniq(map_full_data, function(item,a) { return item['PARTY_CODE'] });
+  	
+	color_map = {}
+    PARTY_CODE_LIST.forEach(function(pcl) {
+		color_map[pcl['PARTY_CODE']] = pcl['color_code']
+    });
+        
+    var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+             
+    var category_values = [];
+      $('#category_val_id :selected').each(function(i, selected){
+          category_values[i] = $(selected).val();
+      });      
+            
+      
+    var map_data_state = []
+                    _.each(map_full_data, function(d) { if(_.contains(state_values, d['STATE'])) { map_data_state.push(d);}});
+ 
+    var map_data = []
+                    _.each(map_data_state, function(d) { if(_.contains(category_values, d['Category'])) { map_data.push(d);}});
+ 
+    map_data.forEach(function(o) {
+          o.polled_votes = parseInt(o.polled_votes);
+          o.votes = parseInt(o.VOTES);
+          o.YEAR = parseInt(o.YEAR);
+          o.rank = parseInt(o['#']);
+          o.ac = parseInt(o.PC_NO);
+          o.vote_percent = parseFloat(o.vote_percent);
+          });
+    d3.select('.geo_map').select('svg').remove();
+    map_filter(year_2014,year_2019,year_2024,map_data,state_values,color_map);
+  });
+});
+
+}
+
+execute_data('refresh')
+
+$('.state_filter').click( function(n) {
+
+ var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+
+
+ var category_values = [];
+      $('#category_val_id :selected').each(function(i, selected){
+          category_values[i] = $(selected).val();
+      });
+      
+execute_data([state_values,category_values])
+
+});
+
+  
+    
+    </script>
+<div class="container footer_details">
+The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx"> eci.nic.in </a> and  <a target="_blank" href="https://eciresults.nic.in/"> eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
+  </body>
+</html>
