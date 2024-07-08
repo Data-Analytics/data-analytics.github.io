@@ -17,7 +17,7 @@
   <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2024 India Election,India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024'">
   <meta name="news_keywords" content="India polls, India parliament polls, India elections, India parliament elections, election news, India news, india news">
   <meta name="keywords" content="India polls, India parliament polls, India elections, India parliament elections, election news, India news, india news">
-  <link href="css/bootstrap.css" rel="stylesheet">    
+  <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/basic.css" rel="stylesheet">
   <link href="css/feature.css" rel="stylesheet">
   <link href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -27,26 +27,35 @@
   <link href="css/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css">
   <link rel="shortcut icon" href="/./images/logo.png">
-  <script type="text/javascript" src="js/jquery.min.js"></script>  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/d3.v4.min.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script> 
   <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
   <script type="text/javascript" src="js/bootstrap.min.js"></script>  
   <script type="text/javascript" src="js/underscore-min.js"></script>
-  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>  
+  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> 
-  <meta property="og:title"  content="parliament ELECTIONS 2014 - 2024 (India)" /> 
-  <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2024/" /> 
-  <meta property="og:description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024'" /> 
+  <meta property="og:title"  content="parliament ELECTIONS 2014 - 2024 (India)" />
+  <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2024/" />
+  <meta property="og:description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024'" />
   <html itemscope itemtype="https://schema.org/Blog">
   <meta itemprop="description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024'">
   <meta itemprop="name" content="India Parliament ELECTIONS 2014 - 2024 (India)">
-  <meta property="og:image" content="https://data-analytics.github.io/images/lok_sabha.jpg" /> 
+  <meta property="og:image" content="https://data-analytics.github.io/images/lok_sabha.jpg" />
   <meta itemprop="image" content="https://data-analytics.github.io/images/lok_sabha.jpg">
   <script type="text/javascript" src="js/topojson.min.js"></script>
-  <title>parliament Elections 2014 - 2024 (India)</title>  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45813188-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-45813188-1');
+</script>
+  <title>parliament Elections 2014 - 2024 (India)</title>
     <style>
 
       body {
@@ -84,9 +93,9 @@
 
     <div class="container-fluid">
         <div class="container">
-           <div class="row">           
-                <div class=" col-md-4 panel-body">        
-        			<div class="dropdown header_year">
+           <div class="row">
+                <div class=" col-md-4 panel-body">
+                    <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
                                 <li data-year="2024" class="2024_id"><a href="?year=2024#overall_view">2024 results</a></li>
@@ -95,15 +104,15 @@
                             </ul>
                     </div>
                 </div>
-                <div class=" col-md-8 panel-body">                         
-			        <p class="form-inline header_form">
-        			<label value="state_val" class="text_label" style="margin-top:10px!important">States : </label>
-        			<select multiple="multiple" id="state_val_id" class="select_state" style="margin-top:10px!important"></select>&nbsp;&nbsp;
-        			<label value="category_val" class="text_label" style="margin-top:10px!important">Category : </label>
-        			<select multiple="multiple" id="category_val_id" class="select_category" style="margin-top:10px!important" ></select>&nbsp;&nbsp;&nbsp;        
-        			<input type="button" value="submit" class="state_filter" style="width: 100px!important;margin:10px!important;"></input> 
-        			</p>
-        	</div>
+                <div class=" col-md-8 panel-body">
+                    <p class="form-inline header_form">
+                    <label value="state_val" class="text_label" style="margin-top:10px!important">States : </label>
+                    <select multiple="multiple" id="state_val_id" class="select_state" style="margin-top:10px!important"></select>&nbsp;&nbsp;
+                    <label value="category_val" class="text_label" style="margin-top:10px!important">Category : </label>
+                    <select multiple="multiple" id="category_val_id" class="select_category" style="margin-top:10px!important" ></select>&nbsp;&nbsp;
+                    <input type="button" value="submit" class="state_filter" style="width: 100px!important;margin:10px!important;"></input> 
+                    </p>
+            </div>
         </div>
     </div>    
                 
@@ -115,9 +124,9 @@
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>parliament Election Results <i class="year_tag"></i> Party Standings</h2>
-                </div>    
+                </div>
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
 
                        <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
@@ -150,10 +159,10 @@
                               <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
                               <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
                               <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                              </g>                      
+                              </g>
                             </svg>
                     <div class="col-md-12"> 
-                     <div class="overall_view_report">                     
+                     <div class="overall_view_report">
                      </div>
                     </div>
                 </div>
@@ -172,12 +181,11 @@
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>parliament Elections View By Individual Elections <i class="year_tag"></i></h2>
-                </div>    
+                </div>
             </div>
-            <div class="row">           
+            <div class="row">
                 <div class=" col-md-12 panel-body">
             
-                      
                     <p class="form-inline header_form" >
                         <label value="year" class="text_label">Based on 2014 : </label>
                         <select multiple="multiple" id="year_2014" class="select_year"></select>&nbsp;
@@ -187,12 +195,12 @@
                         <select multiple="multiple" id="year_2024" class="select_year"></select>&nbsp;
                         <input type="button" value="submit" class="party_filter" style="width:80px;!important;margin:10px!important"></input> 
                     </p>
-        			<p class="form-inline header_form" >
-					<label align="left" class="text_label">Search :</label>
-					<input type="text" class="geo_search" placeholder="eg: Arunachal West ">&nbsp;&nbsp;
+                    <p class="form-inline header_form" >
+                    <label align="left" class="text_label">Search :</label>
+                    <input type="text" class="geo_search" placeholder="eg: Arunachal West ">&nbsp;&nbsp;
                         
-                    </p>                           
-                     <div class="chart">  
+                    </p>
+                     <div class="chart">
                         <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,0)">
                               <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
@@ -244,9 +252,9 @@
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2 class="headers_constituency">parliament Elections year <i class="year_tag"></i> for Constituency<i class="constituency_tag"></i> in <i class="state_tag"></i></h2>
-                </div>    
+                </div>
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
                      <div class="chart">  
                        <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
@@ -279,7 +287,7 @@
                               <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
                               <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
                               <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                              </g>                      
+                              </g>
                             </svg>
                         <div class="col-md-4 panel-body">
                         <div class="progress_bar"></div>
@@ -301,13 +309,13 @@
         <div class="container">
           
             <div class="row">
-            <div class="col-md-12 panel panel-default">   
+            <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>party wise performance trend <i class="year_tag"></i></h2>
-                </div>    
-           </div>    
-            <div class="row">           
+                </div>
+           </div>
+            <div class="row">
                 <div class=" col-md-12 panel-body">
                       
                         <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
@@ -353,23 +361,20 @@
             </div>
     </div>
     </div>
-    </div> 
-    
- 
+    </div>
+     
  <div id="Constituency_partyTrend">
         <div class="container-fluid">
     <div class="container">
             <div class="row">
-            <div class="col-md-12 panel panel-default">   
+            <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
                     <h2>Constituency wise Winner results detail view <i class="year_tag"></i></h2>
-                </div>    
+                </div>
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
-
-              
                      <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
                               <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
@@ -408,7 +413,6 @@
             
             </div>
             </div>
-            
     
     </div>
     </div>
@@ -425,7 +429,7 @@
                     <h2>Party Transitions Trend across successive elections<i class="successive_year_tag"></i></h2>
                 </div>    
            </div>
-           <div class="row">           
+           <div class="row">
                 <div class=" col-md-12 panel-body">
                     
                          <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
@@ -457,7 +461,7 @@
                               <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
                               <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
                               <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>      
+                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
                             </g>
                         </svg>
                     <div  class="sankey_chart">
@@ -474,7 +478,6 @@
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
     <script>
 
-
  $(window).scroll(function() {
         if ($(this).scrollTop() >= 50) {
             $('#return-to-top').fadeIn(200);
@@ -488,7 +491,6 @@
             scrollTop : 0
         }, 500);
     });
-
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -598,12 +600,12 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_
          
     sub_width_mapped = 600
     
-	   if (state_values.length==36){
-			map_height = 860
-	   }else{
-	   		map_height = 600
-	   }
-	   		
+       if (state_values.length==36){
+            map_height = 860
+       }else{
+               map_height = 600
+       }
+               
        var margin = {top: 20, right: 20, bottom: 20, left: 20},
         width = sub_width_mapped - margin.left - margin.right,
         height = map_height - margin.top - margin.bottom;
@@ -614,7 +616,7 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_
           .projection(projection)
           .pointRadius(2);
 
-	  d3.select('.geo_map').select('svg').remove();
+      d3.select('.geo_map').select('svg').remove();
 
       var svg = d3.select(".geo_map").append("svg")
             .attr("width", "100%")
@@ -632,7 +634,6 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_
             .attr("pointer-events",'all')
             .on("click", clicked)
 
-
       var g = svg.append("g");
     
       d3.json("india_pc.json", function(error, data) {
@@ -649,7 +650,6 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_
         
         filtered_states_geo_map = state_values
 
-         
         data.objects['india_pc'].geometries  = data.objects['india_pc'].geometries.filter(function(d) { return filtered_states_geo_map.includes(d.properties.st_name) });
         
         $('.geo_search').attr('placeholder', 'eg: '+data.objects['india_pc'].geometries[0].properties.pc_name);
@@ -719,8 +719,8 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_
           state_values[i] = $(selected).val();
       });
       
-      	filtered_state_value = state_values.join().replaceAll('&','and');
-      	
+          filtered_state_value = state_values.join().replaceAll('&','and');
+          
         g.selectAll(".subunit")
             .data(mapper_data_view)
           .enter().append("path")
@@ -730,12 +730,11 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_
             .attr("sub_link", function (d){ return d.properties.pc_name })
             .attr("fill", function(d) { return d.result!=undefined? d.result.color_code : '#fff'  })
             .style("stroke", "rgb(221, 221, 221)")
-			.style("stroke-width","0.5px")
+            .style("stroke-width","0.5px")
             .attr("d", path)
             .on("click", clicked)
            .on('dblclick',function(d){ return d.result!=undefined? window.open('?filtered_state='+filtered_state_value+'&year='+d.result.YEAR+'&acct_no='+d.result.PC_NO+'&st_no='+d.result.ST_CD+"#perConstituency","_self"):''  });
 
-    
     $("path").tooltip({container: '.geo_map', html: true, placement:'top'});
 
 var lastsearch = '';
@@ -772,7 +771,6 @@ var lastsearch = '';
     }
     });
     
-    
     }
    
       }
@@ -787,7 +785,6 @@ filtered_state_list = getParameterByName('filtered_state');
 if (filtered_state_list == undefined){ filtered_state_list = 'ALL'; }
 filtered_state_list = filtered_state_list.replaceAll(' and ',' & ')
 
-
 if (filtered_state_list){
  filtered_state_list = filtered_state_list.split(',')
 }else{
@@ -799,22 +796,20 @@ function execute_data(execute_status){
 if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(); }
 
     d3.csv("parliament.csv", function(map_full_data) { 
-    
  
     state_list = _.uniq(map_full_data, function(item,a) { return item['STATE']; });
 
     category_list = _.uniq(map_full_data, function(item,a) { return item['Category']; });
-	
+    
     PARTY_CODE_LIST = _.uniq(map_full_data, function(item,a) { return item['PARTY_CODE'] });
-  	
-	color_map = {}
+      
+    color_map = {}
     PARTY_CODE_LIST.forEach(function(pcl) {
-		color_map[pcl['PARTY_CODE']] = pcl['color_code']
+        color_map[pcl['PARTY_CODE']] = pcl['color_code']
     });
 
-	
     if (execute_status!='refresh')
-    {    
+    {
        
     d3.select("#state_val_id").selectAll('option').remove();
     var select_box = d3.select('#state_val_id')
@@ -846,7 +841,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     }else{
     
     if (filtered_state_list[0]=='ALL'){
-    	filtered_state_list = _.pluck(state_list, 'STATE') 
+        filtered_state_list = _.pluck(state_list, 'STATE') 
     }
     
         
@@ -872,9 +867,8 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     var map_data = []
                     _.each(map_full_data, function(d) { if(_.contains(filtered_state_list, d['STATE'])) { map_data.push(d);}});
    
-    
-    }    
-     
+    }
+
     if (map_data.length==0){
         alert('There is No election results for the Selected combination');
         $("#state_val_id option").attr("selected", "selected");
@@ -882,7 +876,6 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
         $("#category_val_id option").attr("selected", "selected");
         
         var map_data = map_full_data
-        
         
     d3.select("#state_val_id").selectAll('option').remove();
     var select_box = d3.select('#state_val_id')
@@ -893,7 +886,6 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("class","name")
                     .attr("selected","")
                     .text(function (d) { return d['STATE']; });
-                    
 
     d3.select("#category_val_id").selectAll('option').remove();
     var select_box = d3.select('#category_val_id')
@@ -904,7 +896,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("class","name")
                     .attr("selected","")
                     .text(function (d) { return d['Category']; });            
-                    
+
     }
      $("#state_val_id").multipleSelect({ placeholder: "Here is the placeholder" });
 
@@ -965,7 +957,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("selected","")
                     .text(function (d) { return d['PARTY_CODE']; });
 
-      var select_box = d3.select('#year_2019')     
+      var select_box = d3.select('#year_2019')
                 .selectAll("option")
                     .data(party_2019.filter(function(d) { return d['PARTY_CODE']!='' }))
                     .enter().append("option")
@@ -974,7 +966,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("selected","")
                     .text(function (d) { return d['PARTY_CODE']; });
 
-      var select_box = d3.select('#year_2024')     
+      var select_box = d3.select('#year_2024')
                 .selectAll("option")
                     .data(party_2024.filter(function(d) { return d['PARTY_CODE']!='' }))
                     .enter().append("option")
@@ -982,7 +974,6 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("class","name")
                     .attr("selected","")
                     .text(function (d) { return d['PARTY_CODE']; });
-
 
       $("#year_2014").multipleSelect({ placeholder: "Here is the placeholder" });
       $("#year_2019").multipleSelect({ placeholder: "Here is the placeholder" });
@@ -1009,8 +1000,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
       });
       
       map_filter(year_2014,year_2019,year_2024,map_data,state_values,color_map);
-    
-    
+
       var year_data_sets = d3.nest()
               .key(function(d) { return d['PARTY_CODE']; })
               .rollup(function(v) { return v.length;  })
@@ -1041,7 +1031,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                             .append("table")
                             .attr("class","table table-condensed party-summary")
 
-              lowresult_data.append('thead')
+             lowresult_data.append('thead')
                             .selectAll("tr")
                             .data([['Party','Seats','Seat Share','Vote Percent','Total Votes']]).enter()
                             .append("tr")
@@ -1065,7 +1055,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                     .attr('class',function(d) { return d+'s'})
                                     .style("max-width",'10px')
                                     .style("font-size",'15px')
-	                                .style("text-align",'center')                                    
+                                    .style("text-align",'center')                                    
                                     .text(function(o,i) { return i!=2? o:'' })
                                     .append('div')
                                     .attr('class',function(d,i) { return i!=2? '':'progress'; })
@@ -1077,7 +1067,6 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                     .attr('aria-valuemax','100')
                                     .style('background-color',function(d,i) { return i!=2? '':heading_colors[parseInt(d.split(':')[0])]; })
                                     .style('width',function(d,i) { return i!=2? '0%':d.split(':')[1]+'%'; });
-                                    
                                    
             d3.selectAll('.removed_data').remove();
 
@@ -1091,12 +1080,11 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
           o.vote_percent = parseFloat(o.vote_percent);
           });
 
-		 $('html, body').animate({ scrollTop: $('#perConstituency').offset().top }, 'slow');
+         $('html, body').animate({ scrollTop: $('#perConstituency').offset().top }, 'slow');
 
 if (acct_no != undefined & execute_status=='refresh'){
 
     data_set = map_data.filter(function(d){return (d.YEAR==year_detail)& (d.PC_NO==acct_no)&  (d.ST_CD==st_no)& (d.rank<10) })
-    
     
     var horizontal_width = parseInt(d3.select('.horizontal_bar').style('width'), 10);
 
@@ -1105,7 +1093,7 @@ if (acct_no != undefined & execute_status=='refresh'){
     var margin = {top: 10, right: 30, bottom: 15, left: 78},
                 horz_width = horizontal_width*1.2 - margin.left - margin.right,
                 horz_height = 320 - margin.top - margin.bottom;
-                    
+
    d3.select('.horizontal_bar').select('svg').remove();
    
     var horizontal_bar_svg = d3.select(".horizontal_bar").append("svg")
@@ -1217,7 +1205,6 @@ if (acct_no != undefined & execute_status=='refresh'){
                 progress_width = sub_width - margin.left - margin.right,
                 progress_height = 250 - margin.top - margin.bottom;
     
-    
        d3.select('.progress_bar').select('svg').remove();
    
         var progress_bar_svg = d3.select(".progress_bar").append("svg")
@@ -1230,15 +1217,14 @@ if (acct_no != undefined & execute_status=='refresh'){
                 .append("g")
                 .attr("transform", "translate(" + progress_width/2 + "," + progress_height*7/12+ ")");
  
- 
- 		var progress_bar_defs = progress_bar_svg
- 								.append('defs')
- 								.append('clipPath')
- 								.attr('id','circleView')
- 								.append('circle')
- 								.attr('cx',0)
- 								.attr('cy',0)
- 								.attr('r',d3.min([progress_width,progress_height])*.27)
+         var progress_bar_defs = progress_bar_svg
+                                 .append('defs')
+                                 .append('clipPath')
+                                 .attr('id','circleView')
+                                 .append('circle')
+                                 .attr('cx',0)
+                                 .attr('cy',0)
+                                 .attr('r',d3.min([progress_width,progress_height])*.27)
    
         value_data = data_set.filter(function(d){return (d.rank==1) })
         fontSize = 16;
@@ -1263,7 +1249,7 @@ if (acct_no != undefined & execute_status=='refresh'){
                             .attr("class", "foreground")
                             .attr("d", arcs_val);
 
-		if (value_data[0]['IMAGE']){
+        if (value_data[0]['IMAGE']){
         var image = progress_bar_svg.append('image')
                     .attr("xlink:href", value_data[0]['IMAGE'])
                 .attr("x", -d3.min([progress_width,progress_height])*.27)
@@ -1312,7 +1298,6 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
         width = sub_width - margin.left - margin.right,
         height = 460 - margin.top - margin.bottom;
 
-    
    d3.select('.party_performance_trend_svg').select('svg').remove();
   
     var party_performance_trend_svg = d3.select(".party_performance_trend_svg").append("svg")
@@ -1348,7 +1333,7 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
                 }
 
             });
-            o.score  = (o.value*100/o.contest).toFixed(2);            
+            o.score  = (o.value*100/o.contest).toFixed(2);
         });
         
         radius = Math.min(width, height) / 2,
@@ -1428,11 +1413,11 @@ var sankey = d3.sankey()
 
 var paths = sankey.link();
 
-year_data_set_2024.forEach(function (d) {
+    year_data_set_2024.forEach(function (d) {
         d.source_year =d['O_PARTY']
-        d.target_year =d['PARTY_CODE'] 
+        d.target_year =d['PARTY_CODE']
         d.combined_year =d.source_year+'_'+d.target_year 
-        });
+    });
 
         year_data_set_2024 = year_data_set_2024.filter(function(d){return (d.source_year!='') & (d.target_year!='') })
         
@@ -1491,7 +1476,7 @@ svg.selectAll(".head")
       .text('YEAR');
 
  svg.selectAll(".head")
-      .data(['2018','2023'])
+      .data(['2019','2024'])
     .enter().append("text")
       .attr("y", -4)
       .attr("font-size",20)
@@ -1500,7 +1485,6 @@ svg.selectAll(".head")
       .attr("text-anchor", function(d,p) { return p <  1 ? 'start' : 'end'; })
       .text(function(d) { return '('+d+')'; });
 
-      
 // add in the links
   var link = svg.append("g").selectAll(".link")
       .data(graph.links)
@@ -1582,8 +1566,6 @@ svg.selectAll(".head")
     sankey.relayout();
     link.attr("d", paths);
   }
-  
-    
       });
 
 $('.party_filter').click( function(n) {
@@ -1605,23 +1587,22 @@ $('.party_filter').click( function(n) {
         
    d3.csv("parliament.csv", function(map_full_data) { 
        
-  	PARTY_CODE_LIST = _.uniq(map_full_data, function(item,a) { return item['PARTY_CODE'] });
-  	
-	color_map = {}
+    PARTY_CODE_LIST = _.uniq(map_full_data, function(item,a) { return item['PARTY_CODE'] });
+      
+    color_map = {}
     PARTY_CODE_LIST.forEach(function(pcl) {
-		color_map[pcl['PARTY_CODE']] = pcl['color_code']
+        color_map[pcl['PARTY_CODE']] = pcl['color_code']
     });
         
     var state_values = [];
       $('#state_val_id :selected').each(function(i, selected){
           state_values[i] = $(selected).val();
       });
-             
+    
     var category_values = [];
       $('#category_val_id :selected').each(function(i, selected){
           category_values[i] = $(selected).val();
-      });      
-            
+      });
       
     var map_data_state = []
                     _.each(map_full_data, function(d) { if(_.contains(state_values, d['STATE'])) { map_data_state.push(d);}});
@@ -1653,7 +1634,6 @@ $('.state_filter').click( function(n) {
           state_values[i] = $(selected).val();
       });
 
-
  var category_values = [];
       $('#category_val_id :selected').each(function(i, selected){
           category_values[i] = $(selected).val();
@@ -1663,8 +1643,6 @@ execute_data([state_values,category_values])
 
 });
 
-  
-    
     </script>
 <div class="container footer_details">
 The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx"> eci.nic.in </a> and  <a target="_blank" href="https://eciresults.nic.in/"> eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
