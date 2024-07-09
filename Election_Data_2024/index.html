@@ -1001,23 +1001,46 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
       
       map_filter(year_2014,year_2019,year_2024,map_data,state_values,color_map);
 
-      var year_data_sets = d3.nest()
-              .key(function(d) { return d['PARTY_CODE']; })
-              .rollup(function(v) { return v.length;  })
-              .entries(year_data_set_all);
-   
-      year_data_sets.sort(function(a, b) { return b.value - a.value; })
-  
-      heading_colors = []
-       year_data_sets.forEach(function(o) {
-          heading_colors.push(color_map[o.key])
-          year_data_set_sum_party.forEach(function(p) {
-            if (p.key==o.key){
-              o.party_vote_percent = parseFloat(100*p.value/year_data_set_sum_overall).toFixed(2);
-              o.party_votes = addThousandsSeparator(p.value)
+        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/12.5) })
+
+                filtered_party_8_list = _.pluck(year_data_set_sum_party_8_percent, 'key')
+                 
+              var year_data_sets = d3.nest()
+                      .key(function(d) { return d['PARTY_CODE']; })
+                      .rollup(function(v) { return v.length;  })
+                      .entries(year_data_set_all);
+           
+           seat_party_list = _.pluck(year_data_sets, 'key')
+
+            const difference_party = filtered_party_8_list.reduce((result, element) => {
+            if (seat_party_list.indexOf(element) === -1) {
+                result.push(element);
             }
-        });
-       })
+            return result;
+        }, []);
+
+        filtered_party_8_list = year_data_set_sum_party_8_percent.filter(function(d){ return difference_party.includes(d.key)})
+
+              year_data_sets.sort(function(a, b) { return b.value - a.value; })
+           
+           filtered_party_8_list.forEach(function(fp) {
+         year_data_sets.push({'key': fp.key , 'value': 0 })
+           
+           });
+
+              heading_colors = []
+               year_data_sets.forEach(function(o) {
+                  heading_colors.push(color_map[o.key])
+                  year_data_set_sum_party.forEach(function(p) {
+                    if (p.key==o.key){
+                      o.party_vote_percent = parseFloat(100*p.value/year_data_set_sum_overall).toFixed(2);
+                      o.party_votes = addThousandsSeparator(p.value)
+                      o.party_votes_int = p.value
+                    }
+                });
+               })
+
+        year_data_sets.sort(function(a, b) { return b.value - a.value || b.party_votes_int - a.party_votes_int ; })
 
         max_seats = d3.max(year_data_sets, function(d) { return d.value; });
 
@@ -1040,7 +1063,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                 .append('th')
                                 .style("max-width",'10px')
                                 .style("font-size",'15px')
-                                .style("text-align",'center')                                
+                                .style("text-align",'center')
                                 .append("font")
                                 .attr("color","#636363")
                                 .text(function(o,i) { return o });
@@ -1055,7 +1078,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                     .attr('class',function(d) { return d+'s'})
                                     .style("max-width",'10px')
                                     .style("font-size",'15px')
-                                    .style("text-align",'center')                                    
+                                    .style("text-align",'center')
                                     .text(function(o,i) { return i!=2? o:'' })
                                     .append('div')
                                     .attr('class',function(d,i) { return i!=2? '':'progress'; })
@@ -1132,7 +1155,7 @@ if (acct_no != undefined & execute_status=='refresh'){
         .attr("class", "layer");
         
         d3.selectAll(".tick > text")
-            .style("font-size", "13px")    
+            .style("font-size", "13px")
      
         $(".constituency_tag").append("( "+constituency_name+" )");
         $(".state_tag").append("( "+state_name+" )");
