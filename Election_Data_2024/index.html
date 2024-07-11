@@ -1001,7 +1001,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
       
       map_filter(year_2014,year_2019,year_2024,map_data,state_values,color_map);
 
-        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/12.5) })
+        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/20) })
 
                 filtered_party_8_list = _.pluck(year_data_set_sum_party_8_percent, 'key')
                  
@@ -1028,19 +1028,23 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
            
            });
 
-              heading_colors = []
                year_data_sets.forEach(function(o) {
-                  heading_colors.push(color_map[o.key])
                   year_data_set_sum_party.forEach(function(p) {
                     if (p.key==o.key){
                       o.party_vote_percent = parseFloat(100*p.value/year_data_set_sum_overall).toFixed(2);
                       o.party_votes = addThousandsSeparator(p.value)
                       o.party_votes_int = p.value
+                      o.color =  color_map[o.key]
                     }
                 });
                })
 
         year_data_sets.sort(function(a, b) { return b.value - a.value || b.party_votes_int - a.party_votes_int ; })
+
+              heading_colors = []
+               year_data_sets.forEach(function(o) {
+                  heading_colors.push(color_map[o.key])
+               });
 
         max_seats = d3.max(year_data_sets, function(d) { return d.value; });
 
