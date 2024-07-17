@@ -3,7 +3,7 @@
  Name:        data-analytics.github.io
  Purpose:     Data visualisation and analytics examples 
  Author:      sushanth
- Created:     24-06-2024
+ Created:     17-07-2024
  Modified:    24-06-2024
  Copyright:  (c) sushanth 2024
  Licence:     protected(not suppose to use it directly)
@@ -128,7 +128,8 @@
            </div>
            <div class="row">
                 <div class=" col-md-12 panel-body">
-
+                       <div class="container footer_details seats_count"></div>
+                                
                        <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                           <g class="headers" transform="translate(80,0)">
                               <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
@@ -185,19 +186,19 @@
             </div>
             <div class="row">
                 <div class=" col-md-12 panel-body">
-            
+                    <div class="container footer_details seats_count_detail seats_count"></div>
+                                            
                     <p class="form-inline header_form" >
                         <label value="year" class="text_label" style="margin-top:10px!important">Based on 2009 : </label>
-                        <select multiple="multiple" id="year_2009" class="select_year" style="margin-top:10px!important;width:135px!important;"></select>&nbsp;                    
+                        <select multiple="multiple" id="year_2009" class="select_year" style="margin-top:10px!important;width:135px!important;" ></select>&nbsp;                    
                         <label value="year" class="text_label" style="margin-top:10px!important">Based on 2014 : </label>
                         <select multiple="multiple" id="year_2014" class="select_year" style="margin-top:10px!important;width:135px!important;"></select>&nbsp;
                         <label value="year" class="text_label" style="margin-top:10px!important">Based on 2019 : </label>
                         <select multiple="multiple" id="year_2019" class="select_year" style="margin-top:10px!important;width:135px!important;"></select>&nbsp;
                         <label value="year" class="text_label" style="margin-top:10px!important">Based on 2024 : </label>
-                        <select multiple="multiple" id="year_2024" class="select_year" style="margin-top:10px!important;width:135px!important;"></select>&nbsp;
+                        <select multiple="multiple" id="year_2024" class="select_year" style="margin-top:10px!important;width:135px!important;" ></select>&nbsp;
                         <input type="button" value="submit" class="party_filter" style="width:80px;!important;margin:10px!important"></input> 
                     </p>
-                 
                     <p class="form-inline header_form" >
                     <label align="left" class="text_label">Search :</label>
                     <input type="text" class="geo_search" placeholder="eg: Arunachal West ">&nbsp;&nbsp;
@@ -258,7 +259,7 @@
                 </div>
            </div>
            <div class="row">
-                <div class=" col-md-12 panel-body">
+                <div class=" col-md-12 panel-body">                
                      <div class="chart">  
                        <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                           <g class="headers" transform="translate(80,0)">
@@ -320,7 +321,8 @@
            </div>
             <div class="row">
                 <div class=" col-md-12 panel-body">
-                      
+                        <div class="container footer_details seats_count"></div>
+                                          
                         <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
                               <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
@@ -378,6 +380,7 @@
            </div>
            <div class="row">
                 <div class=" col-md-12 panel-body">
+                    <div class="container footer_details seats_count"></div>                
                      <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
                               <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
@@ -434,7 +437,8 @@
            </div>
            <div class="row">
                 <div class=" col-md-12 panel-body">
-                    
+                         <div class="container footer_details seats_count"></div>
+                                        
                          <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
                             <g class="headers" transform="translate(80,15)">
                               <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
@@ -551,7 +555,7 @@ function getParameterByName(name, url) {
     }
 
 
-function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_values,color_map){
+function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_values,color_map,party_filter){
     var centered;
 
     map_data = other_data.filter(function(d){return (d.YEAR==year_detail) & (d['#']==1) })
@@ -584,6 +588,8 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
         });        
     });
 
+	var map_data_all = map_data
+
     var map_data_2009 = []
                     _.each(map_data, function(d) { if(_.contains(year_2009, d['09_PARTY'])) { map_data_2009.push(d);}});
      
@@ -595,7 +601,6 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
 
     var map_data = []
                     _.each(map_data_2019, function(d) { if(_.contains(year_2024, d['24_PARTY'])) { map_data.push(d);}});
-
         
       var constituency_list = [] 
       map_data.forEach(function(o) {
@@ -712,7 +717,7 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
 
     }
 
-     constituency_list =[]
+      constituency_list =[]
       function drawSubUnits(dataMaps){
 
        mapper_data_view = topojson.feature(dataMaps, dataMaps.objects['india_pc']).features
@@ -726,19 +731,39 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
             });
           });
 
-      var state_values = [];
-      $('#state_val_id :selected').each(function(i, selected){
+        var state_values = [];
+      	
+      	$('#state_val_id :selected').each(function(i, selected){
           state_values[i] = $(selected).val();
-      });
+      	});
       
-          filtered_state_value = state_values.join().replaceAll('&','and');
-          
+        filtered_state_value = state_values.join().replaceAll('&','and');
+
+        if (party_filter==true) {
+                  
+        d3.selectAll(".seats_count_detail").selectAll('center').remove();
+           
+        d3.selectAll('.seats_count_detail')
+             .append('center')
+             .append('b')
+             .text('Total '+ map_data.length+' Seats')
+        }else{
+
+        d3.selectAll(".seats_count").selectAll('center').remove();
+           
+        d3.selectAll('.seats_count')
+             .append('center')
+             .append('b')
+             .text('Total '+ map_data.length+' Seats')
+        
+        }
+        
         g.selectAll(".subunit")
             .data(mapper_data_view)
           .enter().append("path")
           .style("cursor","pointer")
             .attr("class", "subunit")
-            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.pc_name+'</br>  Candidate : '+d.result.CANDIDATE+'</br> Party : '+d.result.PARTY_CODE+ '<br/>('+d.result.PARTY +')<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Filtered Out <br/> Constituency : '+d.properties.pc_name})
+            .attr("data-title", function (d){ return d.result!=undefined? 'Constituency : '+d.properties.pc_name+'</br> State : '+d.properties.st_name+'</br>  Candidate : '+d.result.CANDIDATE+'</br> Party : '+d.result.PARTY_CODE+ '<br/>('+d.result.PARTY +')<br/> Votes : '+addThousandsSeparator(d.result.votes)+'<br/> Vote percent: '+d.result.vote_percent.toFixed(2)+'% <br/> Polled Votes: '+addThousandsSeparator(d.result.polled_votes)+' <br/> Year: '+d.result.YEAR : ' Filtered Out <br/> Constituency : '+d.properties.pc_name+' </br> State : '+d.properties.st_name })
             .attr("sub_link", function (d){ return d.properties.pc_name })
             .attr("fill", function(d) { return d.result!=undefined? d.result.color_code : '#fff'  })
             .style("stroke", "rgb(221, 221, 221)")
@@ -788,8 +813,14 @@ var lastsearch = '';
       }
 year_detail = getParameterByName('year');
 if (year_detail == undefined){ year_detail= 2024; }
+year_detail_year_map = { 2024: [2019,2024],
+		2019:[2014,2019],
+		2014:[2009,2014],
+		2009:[2009,2014]
+	}
+    
 $(".year_tag").append("("+year_detail+")");
-$(".successive_year_tag").append(" (2019 - 2024)");
+$(".successive_year_tag").append(" ("+year_detail_year_map[year_detail][0]+" - "+year_detail_year_map[year_detail][1]+")");
 $('.'+year_detail+'_id').addClass('active');
 acct_no = getParameterByName('acct_no');
 st_no = getParameterByName('st_no');
@@ -826,6 +857,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     if (execute_status!='refresh')
     {
 
+    filtered_map = true
     filtered_state_value = execute_status[0].join().replaceAll('&','and');
           
     d3.select('.year_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?filtered_state='+filtered_state_value+'&year='+year_list[i]+'#overall_view'})
@@ -858,6 +890,8 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     _.each(map_data_state, function(d) { if(_.contains(execute_status[1], d['Category'])) { map_data.push(d);}});
     
     }else{
+        
+    filtered_map = false
     
     if (filtered_state_list[0]=='ALL'){
         filtered_state_list = _.pluck(state_list, 'STATE') 
@@ -953,8 +987,16 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     year_data_set_2019 = map_data.filter(function(d){return (d.YEAR==2019 & d['#']==1)  })
     year_data_set_2024 = map_data.filter(function(d){return (d.YEAR==2024 & d['#']==1)  })
     
-      year_data_set_2019.forEach(function(p) {
-        year_data_set_2024.forEach(function(o) {
+	
+	year_detail_map = {	2024:[year_data_set_2024,year_data_set_2019],
+		2019:[year_data_set_2019,year_data_set_2014],
+		2014:[year_data_set_2014,year_data_set_2009],
+		2009:[year_data_set_2014,year_data_set_2009]
+	}
+    
+ 
+      year_detail_map[year_detail][1].forEach(function(p) {
+        year_detail_map[year_detail][0].forEach(function(o) {
 
             if((p.PC_NO==o.PC_NO) & (p.ST_CD==o.ST_CD))
             {
@@ -1039,7 +1081,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
           state_values[i] = $(selected).val();
       });
       
-      map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map);
+      map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map,false);
 
         year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/20) })
 
@@ -1489,18 +1531,18 @@ var sankey = d3.sankey()
 
 var paths = sankey.link();
 
-    year_data_set_2024.forEach(function (d) {
+    year_detail_map[year_detail][0].forEach(function (d) {
         d.source_year =d['O_PARTY']
         d.target_year =d['PARTY_CODE']
         d.combined_year =d.source_year+'_'+d.target_year 
     });
 
-        year_data_set_2024 = year_data_set_2024.filter(function(d){return (d.source_year!='') & (d.target_year!='') })
+        year_detail_map[year_detail][0] = year_detail_map[year_detail][0].filter(function(d){return (d.source_year!='') & (d.target_year!='') })
         
         var data_Count = d3.nest()
               .key(function(d) { return d.combined_year; })
               .rollup(function(v) { return v.length; })
-              .entries(year_data_set_2024);
+              .entries(year_detail_map[year_detail][0]);
         
   graph = {"nodes" : [], "links" : []};
     
@@ -1542,7 +1584,7 @@ var paths = sankey.link();
     .layout(12);
 
 svg.selectAll(".head")
-      .data(['2019','2024'])
+      .data(year_detail_year_map[year_detail])
     .enter().append("text")
       .attr("y", -22)
       .attr("font-size",12)
@@ -1552,7 +1594,7 @@ svg.selectAll(".head")
       .text('YEAR');
 
  svg.selectAll(".head")
-      .data(['2019','2024'])
+      .data(year_detail_year_map[year_detail])
     .enter().append("text")
       .attr("y", -4)
       .attr("font-size",20)
@@ -1700,7 +1742,7 @@ $('.party_filter').click( function(n) {
           o.vote_percent = parseFloat(o.vote_percent);
           });
     d3.select('.geo_map').select('svg').remove();
-    map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map);
+    map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map,true);
   });
 });
 
