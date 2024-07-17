@@ -23,7 +23,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sushanth">
-  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2024 India Election,India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024', Visualizing the history of General Elections in India with data">
+  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2024 India Election,India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2009 to 2024', Visualizing the history of General Elections in India with data">
   <meta name="news_keywords" content="India polls, India parliament polls, India elections, India parliament elections, election news, India news, india news, Visualizing the history of General Elections in India with data">
   <meta name="keywords" content="India polls, India parliament polls, India elections, India parliament elections, election news, India news, india news, Visualizing the history of General Elections in India with data">
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -45,16 +45,16 @@
   <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> 
-  <meta property="og:title"  content="parliament ELECTIONS 2014 - 2024 (India)" />
+  <meta property="og:title"  content="parliament ELECTIONS 2009 - 2024 (India)" />
   <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2024/" />
-  <meta property="og:description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024', Visualizing the history of General Elections in India with data" />
+  <meta property="og:description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2009 to 2024', Visualizing the history of General Elections in India with data" />
   <html itemscope itemtype="https://schema.org/Blog">
-  <meta itemprop="description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2014 to 2024', Visualizing the history of General Elections in India with data">
-  <meta itemprop="name" content="India Parliament ELECTIONS 2014 - 2024 (India)">
+  <meta itemprop="description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2009 to 2024', Visualizing the history of General Elections in India with data">
+  <meta itemprop="name" content="India Parliament ELECTIONS 2009 - 2024 (India)">
   <meta property="og:image" content="https://data-analytics.github.io/images/lok_sabha.jpg" />
   <meta itemprop="image" content="https://data-analytics.github.io/images/lok_sabha.jpg">
   <script type="text/javascript" src="js/topojson.min.js"></script>
-  <title>parliament Elections 2014 - 2024 (India)</title>
+  <title>parliament Elections 2009 - 2024 (India)</title>
     <style>
 
       body {
@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 header-logo">
-                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>India parliament Election Results 2024, 'A visual guide to the check out the comparison of India parliament elections from 2014 to 2024</p>
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>India parliament Election Results 2024, 'A visual guide to the check out the comparison of India parliament elections from 2009 to 2024</p>
                     <p class="synopsis">This interactive map will bring you results, from the national standings aggregated seat share to state level standings aggregated seat share down to individual candidates and constituencies. Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
                     <p class="synopsis">It aims to make the past 3 parliament elections in India  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
                 </div>
@@ -96,20 +96,21 @@
                 <div class=" col-md-4 panel-body">
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
-                            <ul class="dropdown-menu" role="menu">
+                            <ul class="dropdown-menu year_dropdown" role="menu">
                                 <li data-year="2024" class="2024_id"><a href="?year=2024#overall_view">2024 results</a></li>
                                 <li data-year="2019" class="2019_id"><a href="?year=2019#overall_view">2019 results</a></li>
-                                <li data-year="2014" class="2014_id"><a href="?year=2014#overall_view">2014 results</a></li>
+                                <li data-year="2014" class="2014_id"><a href="?year=2014#overall_view">2014 results</a></li>                                
+                                <li data-year="2009" class="2009_id"><a href="?year=2009#overall_view">2009 results</a></li>
                             </ul>
                     </div>
                 </div>
                 <div class=" col-md-8 panel-body">
                     <p class="form-inline header_form">
-                    <label value="state_val" class="text_label" style="margin-top:10px!important">States : </label>
+                    <label value="state_val" class="text_label" style="margin-top:10px!important">States / UTs : </label>
                     <select multiple="multiple" id="state_val_id" class="select_state" style="margin-top:10px!important"></select>&nbsp;&nbsp;
                     <label value="category_val" class="text_label" style="margin-top:10px!important">Category : </label>
                     <select multiple="multiple" id="category_val_id" class="select_category" style="margin-top:10px!important" ></select>&nbsp;&nbsp;
-                    <input type="button" value="submit" class="state_filter" style="width: 100px!important;margin:10px!important;"></input> 
+                    <input type="button" value="submit" class="state_filter" style="width: 80px!important;margin:10px!important;"></input> 
                     </p>
             </div>
         </div>
@@ -186,12 +187,14 @@
                 <div class=" col-md-12 panel-body">
             
                     <p class="form-inline header_form" >
+                        <label value="year" class="text_label">Based on 2009 : </label>
+                        <select multiple="multiple" id="year_2009" class="select_year" style="width:135px;!important;" ></select>&nbsp;                    
                         <label value="year" class="text_label">Based on 2014 : </label>
-                        <select multiple="multiple" id="year_2014" class="select_year"></select>&nbsp;
+                        <select multiple="multiple" id="year_2014" class="select_year" style="width:135px;!important;"></select>&nbsp;
                         <label value="year" class="text_label">Based on 2019 : </label>
-                        <select multiple="multiple" id="year_2019" class="select_year"></select>&nbsp;
+                        <select multiple="multiple" id="year_2019" class="select_year" style="width:135px;!important;"></select>&nbsp;
                         <label value="year" class="text_label">Based on 2024 : </label>
-                        <select multiple="multiple" id="year_2024" class="select_year"></select>&nbsp;
+                        <select multiple="multiple" id="year_2024" class="select_year" style="width:135px;!important;" ></select>&nbsp;
                         <input type="button" value="submit" class="party_filter" style="width:80px;!important;margin:10px!important"></input> 
                     </p>
                     <p class="form-inline header_form" >
@@ -547,16 +550,22 @@ function getParameterByName(name, url) {
     }
 
 
-function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_map){
+function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_values,color_map){
     var centered;
 
     map_data = other_data.filter(function(d){return (d.YEAR==year_detail) & (d['#']==1) })
 
+    map_data_09 = other_data.filter(function(d){return (d.YEAR==2009) & (d['#']==1) })
     map_data_14 = other_data.filter(function(d){return (d.YEAR==2014) & (d['#']==1) })
     map_data_19 = other_data.filter(function(d){return (d.YEAR==2019) & (d['#']==1) })
     map_data_24 = other_data.filter(function(d){return (d.YEAR==2024) & (d['#']==1) })
 
     map_data.forEach(function(o) {
+        map_data_09.forEach(function(o_09) {
+           if ((o_09.PC_NO== o.PC_NO) & (o_09.ST_CD==o.ST_CD)) {
+                o['09_PARTY'] = o_09['PARTY_CODE']
+              }
+        });    
         map_data_14.forEach(function(o_14) {
            if ((o_14.PC_NO== o.PC_NO) & (o_14.ST_CD==o.ST_CD)) {
                 o['14_PARTY'] = o_14['PARTY_CODE']
@@ -573,9 +582,12 @@ function map_filter(year_2014,year_2019,year_2024,other_data,state_values,color_
               }
         });        
     });
+
+    var map_data_2009 = []
+                    _.each(map_data, function(d) { if(_.contains(year_2009, d['09_PARTY'])) { map_data_2009.push(d);}});
      
     var map_data_2014 = []
-                    _.each(map_data, function(d) { if(_.contains(year_2014, d['14_PARTY'])) { map_data_2014.push(d);}});
+                    _.each(map_data_2009, function(d) { if(_.contains(year_2014, d['14_PARTY'])) { map_data_2014.push(d);}});
 
     var map_data_2019 = []
                     _.each(map_data_2014, function(d) { if(_.contains(year_2019, d['19_PARTY'])) { map_data_2019.push(d);}});
@@ -784,6 +796,9 @@ filtered_state_list = getParameterByName('filtered_state');
 if (filtered_state_list == undefined){ filtered_state_list = 'ALL'; }
 filtered_state_list = filtered_state_list.replaceAll(' and ',' & ')
 
+year_list = [2024,2019,2014,2009]
+
+
 if (filtered_state_list){
  filtered_state_list = filtered_state_list.split(',')
 }else{
@@ -809,6 +824,10 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
 
     if (execute_status!='refresh')
     {
+
+    filtered_state_value = execute_status[0].join().replaceAll('&','and');
+          
+    d3.select('.year_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?filtered_state='+filtered_state_value+'&year='+year_list[i]+'#overall_view'})
        
     d3.select("#state_val_id").selectAll('option').remove();
     var select_box = d3.select('#state_val_id')
@@ -843,6 +862,9 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
         filtered_state_list = _.pluck(state_list, 'STATE') 
     }
     
+    filtered_state_value = filtered_state_list.join().replaceAll('&','and');
+        
+    d3.select('.year_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?filtered_state='+filtered_state_value+'&year='+year_list[i]+'#overall_view'})
         
     var select_box = d3.select('#state_val_id')
                 .selectAll("option")
@@ -924,7 +946,8 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
               .key(function(d) { return d['PARTY_CODE']; })
               .rollup(function(v) { return d3.sum(v, function(d) {return parseInt(d.VOTES);})  })
               .entries(year_data_set_sum);
-   
+
+    year_data_set_2009 = map_data.filter(function(d){return (d.YEAR==2009 & d['#']==1)  })   
     year_data_set_2014 = map_data.filter(function(d){return (d.YEAR==2014 & d['#']==1)  })
     year_data_set_2019 = map_data.filter(function(d){return (d.YEAR==2019 & d['#']==1)  })
     year_data_set_2024 = map_data.filter(function(d){return (d.YEAR==2024 & d['#']==1)  })
@@ -938,15 +961,26 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
             }
             });
         });
-    
+
+    party_2009 = _.uniq(year_data_set_2009, function(item, key, a) { return item['PARTY_CODE']; });    
     party_2014 = _.uniq(year_data_set_2014, function(item, key, a) { return item['PARTY_CODE']; });
     party_2019 = _.uniq(year_data_set_2019, function(item, key, a) { return item['PARTY_CODE']; });
     party_2024 = _.uniq(year_data_set_2024, function(item, key, a) { return item['PARTY_CODE']; });
-    
+
+    d3.select("#year_2009").selectAll('option').remove();    
     d3.select("#year_2014").selectAll('option').remove();
     d3.select("#year_2019").selectAll('option').remove();
     d3.select("#year_2024").selectAll('option').remove();
-    
+
+    var select_box = d3.select('#year_2009')
+                .selectAll("option")
+                    .data(party_2009.filter(function(d) { return d['PARTY_CODE']!='' })) 
+                    .enter().append("option")
+                    .attr("value", function (d) { return d['PARTY_CODE']; })
+                    .attr("class","name")
+                    .attr("selected","")
+                    .text(function (d) { return d['PARTY_CODE']; });
+                        
     var select_box = d3.select('#year_2014')
                 .selectAll("option")
                     .data(party_2014.filter(function(d) { return d['PARTY_CODE']!='' })) 
@@ -974,6 +1008,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                     .attr("selected","")
                     .text(function (d) { return d['PARTY_CODE']; });
 
+      $("#year_2009").multipleSelect({ placeholder: "Here is the placeholder" });
       $("#year_2014").multipleSelect({ placeholder: "Here is the placeholder" });
       $("#year_2019").multipleSelect({ placeholder: "Here is the placeholder" });
       $("#year_2024").multipleSelect({ placeholder: "Here is the placeholder" });
@@ -993,12 +1028,17 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
             year_2014[i] = $(selected).val();
       });
 
+      var year_2009 = [];
+      $('#year_2009 :selected').each(function(i, selected){
+            year_2009[i] = $(selected).val();
+      });
+
       var state_values = [];
       $('#state_val_id :selected').each(function(i, selected){
           state_values[i] = $(selected).val();
       });
       
-      map_filter(year_2014,year_2019,year_2024,map_data,state_values,color_map);
+      map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map);
 
         year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/20) })
 
@@ -1111,7 +1151,16 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
 if (acct_no != undefined & execute_status=='refresh'){
 
     data_set = map_data.filter(function(d){return (d.YEAR==year_detail)& (d.PC_NO==acct_no)&  (d.ST_CD==st_no)& (d.rank<10) })
-    
+
+      var state_values = [];
+      $('#state_val_id :selected').each(function(i, selected){
+          state_values[i] = $(selected).val();
+      });
+      
+    filtered_state_value = state_values.join().replaceAll('&','and');
+          
+    d3.select('.year_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?filtered_state='+filtered_state_value+'&year='+year_list[i]+'&acct_no='+acct_no+'&st_no='+st_no+'#perConstituency'})
+        
     var horizontal_width = parseInt(d3.select('.horizontal_bar').style('width'), 10);
 
     var horizontal_width = horizontal_width<540? 540 : horizontal_width
@@ -1611,6 +1660,11 @@ $('.party_filter').click( function(n) {
             year_2014[i] = $(selected).val();
         });
         
+ var year_2009 = [];
+        $('#year_2009 :selected').each(function(i, selected){
+            year_2009[i] = $(selected).val();
+        });
+                
    d3.csv("parliament.csv", function(map_full_data) { 
        
     PARTY_CODE_LIST = _.uniq(map_full_data, function(item,a) { return item['PARTY_CODE'] });
@@ -1645,7 +1699,7 @@ $('.party_filter').click( function(n) {
           o.vote_percent = parseFloat(o.vote_percent);
           });
     d3.select('.geo_map').select('svg').remove();
-    map_filter(year_2014,year_2019,year_2024,map_data,state_values,color_map);
+    map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map);
   });
 });
 
