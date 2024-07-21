@@ -3,8 +3,8 @@
  Name:        data-analytics.github.io
  Purpose:     Data visualisation and analytics examples 
  Author:      sushanth
- Created:     17-07-2024
- Modified:    24-06-2024
+ Created:     24-06-2024
+ Modified:    21-07-2024
  Copyright:  (c) sushanth 2024
  Licence:     protected(not suppose to use it directly)
 -------------------------------------------------------------->
@@ -84,7 +84,7 @@
                 <div class="col-md-12 header-logo">
                     <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>India parliament Election Results 2024, 'A visual guide to the check out the comparison of India parliament elections from 2009 to 2024</p>
                     <p class="synopsis">This interactive map will bring you results, from the national standings aggregated seat share to state level standings aggregated seat share down to individual candidates and constituencies. Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
-                    <p class="synopsis">It aims to make the past 4 parliament elections in India  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
+                    <p class="synopsis">It aims to make the past 3 parliament elections in India more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
                 </div>
             </div>
         </div>
@@ -755,7 +755,6 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
              .append('center')
              .append('b')
              .text('Total '+ map_data.length+' Seats')
-        
         }
         
         g.selectAll(".subunit")
@@ -829,7 +828,6 @@ if (filtered_state_list == undefined){ filtered_state_list = 'ALL'; }
 filtered_state_list = filtered_state_list.replaceAll(' and ',' & ')
 
 year_list = [2024,2019,2014,2009]
-
 
 if (filtered_state_list){
  filtered_state_list = filtered_state_list.split(',')
@@ -1765,9 +1763,8 @@ $('.state_filter').click( function(n) {
 execute_data([state_values,category_values])
 
 });
-
     </script>
 <div class="container footer_details">
-The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx"> eci.nic.in </a> and  <a target="_blank" href="https://eciresults.nic.in/"> eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
+The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://www.eci.gov.in/statistical-reports"> eci.gov.in </a> and  <a target="_blank" href="https://results.eci.gov.in/"> results.eci.gov</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
   </body>
 </html>
