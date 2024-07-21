@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html manifest="demo.appcache" ng-app="VisApp">
+<!------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     24-06-2013
+ Modified:    21-07-2024
+ Copyright:  (c) sushanth 2024
+ Licence:     protected(not suppose to use it directly)
+-------------------------------------------------------------->
+<html>
   <head>
    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2NT40QYX2"></script>
-<script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2NT40QYX2"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-J2NT40QYX2');
-</script>    
+  </script>  
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,6 +69,22 @@
         VisApp.controller("visCtrl",function($scope){
             $scope.employees = [
 
+  {
+    "title": "(Odisha) Election",
+    "thumbnail": "lok_sabha.jpg",
+    "url": "Election_Data_2024/Odisha.html",
+    "author": "self",
+    "visualisation_type": "geomap",
+    "description": "Odisha Assembly Election Results 2024, 'A visual guide to the check out the comparison of Odisha Assembly elections from 2019 to 2024"
+  },
+ {
+    "title": "(AP) Election",
+    "thumbnail": "lok_sabha.jpg",
+    "url": "Election_Data_2024/Andhra_Pradesh.html",
+    "author": "self",
+    "visualisation_type": "geomap",
+    "description": "Andhra Pradesh Assembly Election Results 2024, 'A visual guide to the check out the comparison of Andhra Pradesh Assembly elections from 2019 to 2024"
+  },
   {
     "title": "Parliament Election",
     "thumbnail": "lok_sabha.jpg",
