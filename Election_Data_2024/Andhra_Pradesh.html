@@ -1,6 +1,24 @@
 <!DOCTYPE html>
+<!------------------------------------------------------------
+ Name:        data-analytics.github.io
+ Purpose:     Data visualisation and analytics examples 
+ Author:      sushanth
+ Created:     24-06-2024
+ Modified:    21-07-2024
+ Copyright:  (c) sushanth 2024
+ Licence:     protected(not suppose to use it directly)
+-------------------------------------------------------------->
 <html>
   <head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2NT40QYX2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J2NT40QYX2');
+</script>
   <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -770,6 +788,8 @@ if (window.location.href.split('#')[1]!=undefined){
 
 if (acct_no != undefined){
 
+    d3.select('.year_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?year='+year_list[i]+'&type=Party&districts='+districts_detail+'&acct_no='+acct_no+'#perConstituency'})
+    
     data_set = map_data.filter(function(d){return (d.YEAR==year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
     
     deposit_data_set = data_set.filter(function(d){return (d.VOTES>=d.polled_votes/6) })
@@ -1270,13 +1290,9 @@ $('.party_filter').click( function(n) {
 
   map_filter(year_selected,map_data);
   });
-  
-  
 });
-
-
     </script>
 <div class="container footer_details">
-The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx"> eci.nic.in </a> and  <a target="_blank" href="https://eciresults.nic.in/"> eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
+The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://www.eci.gov.in/statistical-reports"> eci.gov.in </a> and  <a target="_blank" href="https://results.eci.gov.in/"> results.eci.gov</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
   </body>
 </html>
