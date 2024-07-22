@@ -1081,7 +1081,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
       
       map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map,false);
 
-        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/20) })
+        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/25) })
 
                 filtered_party_8_list = _.pluck(year_data_set_sum_party_8_percent, 'key')
                  
