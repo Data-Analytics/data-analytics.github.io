@@ -790,7 +790,9 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
 	var legend_count = Math.floor(legend_width/60)
     
     var map_winner_data_sum_party = map_winner_data_sum_party.slice(0, legend_count);
-        
+
+       d3.selectAll('.legends').selectAll('svg').remove();
+	    
         var legends_data  = d3.selectAll('.legends')
 					        .append("svg")
 					         .attr("data-height",60)
