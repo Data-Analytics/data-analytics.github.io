@@ -792,27 +792,26 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     legend_width_diff = legend_width - (legend_count*60)
     
     var map_winner_data_sum_party = map_winner_data_sum_party.slice(0, legend_count);
-        
-                                           
+                                                   
         d3.selectAll('.legends').selectAll('svg').remove();
 
         var legends_data  = d3.selectAll('.legends')
-					        .append("svg")
-					         .attr("data-height",60)
-      				         .attr("viewBox","0 0 "+(legend_width)+" 50")
-                             .attr("xmlns","https://www.w3.org/2000/svg")
-                             .attr("xlink:xlink","https://www.w3.org/1999/xlink")
-                             .attr("version","1.1")
-                             .append("g")
-                             .attr("class","headers")
-  							 .attr("transform", "translate("+(legend_width_diff/2)+",0)")
+				     .append("svg")
+				     .attr("data-height",60)
+      				     .attr("viewBox","0 0 "+(legend_width)+" 50")
+				     .attr("xmlns","https://www.w3.org/2000/svg")
+				     .attr("xlink:xlink","https://www.w3.org/1999/xlink")
+				     .attr("version","1.1")
+				     .append("g")
+				     .attr("class","headers")
+				     .attr("transform", "translate("+(legend_width_diff/2)+",0)")
                               
          var legends_detail_data  = legends_data.selectAll('g')
                             .data(map_winner_data_sum_party)
                             .enter()
                             .append("g")
                             .attr("class","sub_headers")
-							.attr("transform", function(d,i){ return "translate("+(i*60)+",0)"})
+			     .attr("transform", function(d,i){ return "translate("+(i*60)+",0)"})
 						
 		legends_detail_data.append('rect')
                                 .attr("x","0")
@@ -821,9 +820,9 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                 .attr("height","20")
                                 .attr("class","party-legend")
                                 .attr("data-toggle","highlight")
-								.attr("data-party",function(d) { return d.key })
-								.attr("fill",function(d) { return color_map[d.key] })
-								.attr("stroke",function(d) { return d3.rgb(color_map[d.key]).darker() })
+				.attr("data-party",function(d) { return d.key })
+				.attr("fill",function(d) { return color_map[d.key] })
+				.attr("stroke",function(d) { return d3.rgb(color_map[d.key]).darker() })
 						     
 		legends_detail_data.append('text')
                                 .attr("x","30")
@@ -833,9 +832,9 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                 .style("font-size","13px")
                                 .attr("class","party-legend")
                                 .attr("data-toggle","highlight")
-								.attr("data-party",function(d) { return d.key })
-								.style("fill", function(d) { return (parseInt(color_map[d.key.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
-								.text(function(d) { return d.key })
+				.attr("data-party",function(d) { return d.key })
+				.style("fill", function(d) { return (parseInt(color_map[d.key.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+				text(function(d) { return d.key })
 															
     year_data_set_all.forEach(function(o) {
        o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
@@ -862,15 +861,13 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     year_data_set_2014 = map_data.filter(function(d){return (d.YEAR==2014 & d['#']==1)  })
     year_data_set_2019 = map_data.filter(function(d){return (d.YEAR==2019 & d['#']==1)  })
     year_data_set_2024 = map_data.filter(function(d){return (d.YEAR==2024 & d['#']==1)  })
-    
-	
+    	
 	year_detail_map = {	2024:[year_data_set_2024,year_data_set_2019],
 		2019:[year_data_set_2019,year_data_set_2014],
 		2014:[year_data_set_2014,year_data_set_2009],
 		2009:[year_data_set_2014,year_data_set_2009]
 	}
     
- 
       year_detail_map[year_detail][1].forEach(function(p) {
         year_detail_map[year_detail][0].forEach(function(o) {
 
@@ -885,6 +882,11 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     party_2014 = _.uniq(year_data_set_2014, function(item, key, a) { return item['PARTY_CODE']; });
     party_2019 = _.uniq(year_data_set_2019, function(item, key, a) { return item['PARTY_CODE']; });
     party_2024 = _.uniq(year_data_set_2024, function(item, key, a) { return item['PARTY_CODE']; });
+
+    party_2009 = party_2009.sort(function(a, b){ return d3.ascending(a.PARTY_CODE, b.PARTY_CODE); })
+    party_2014 = party_2014.sort(function(a, b){ return d3.ascending(a.PARTY_CODE, b.PARTY_CODE); })
+    party_2019 = party_2019.sort(function(a, b){ return d3.ascending(a.PARTY_CODE, b.PARTY_CODE); })
+    party_2024 = party_2024.sort(function(a, b){ return d3.ascending(a.PARTY_CODE, b.PARTY_CODE); }) 
 
     d3.select("#year_2009").selectAll('option').remove();    
     d3.select("#year_2014").selectAll('option').remove();
