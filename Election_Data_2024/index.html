@@ -789,10 +789,13 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     
 	var legend_count = Math.floor(legend_width/60)
     
+    legend_width_diff = legend_width - (legend_count*60)
+    
     var map_winner_data_sum_party = map_winner_data_sum_party.slice(0, legend_count);
+        
+                                           
+        d3.selectAll('.legends').selectAll('svg').remove();
 
-       d3.selectAll('.legends').selectAll('svg').remove();
-	    
         var legends_data  = d3.selectAll('.legends')
 					        .append("svg")
 					         .attr("data-height",60)
@@ -802,6 +805,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                              .attr("version","1.1")
                              .append("g")
                              .attr("class","headers")
+  							 .attr("transform", "translate("+(legend_width_diff/2)+",0)")
                               
          var legends_detail_data  = legends_data.selectAll('g')
                             .data(map_winner_data_sum_party)
@@ -826,6 +830,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                 .attr("y","20")
                                 .attr("dy",".35em")
                                 .attr("text-anchor","middle")
+                                .style("font-size","13px")
                                 .attr("class","party-legend")
                                 .attr("data-toggle","highlight")
 								.attr("data-party",function(d) { return d.key })
@@ -954,7 +959,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
       
       map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map,false);
 
-        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/20) })
+        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/25) })
 
                 filtered_party_8_list = _.pluck(year_data_set_sum_party_8_percent, 'key')
                  
