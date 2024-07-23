@@ -4,7 +4,7 @@
  Purpose:     Data visualisation and analytics examples 
  Author:      sushanth
  Created:     24-06-2024
- Modified:    21-07-2024
+ Modified:    23-07-2024
  Copyright:  (c) sushanth 2024
  Licence:     protected(not suppose to use it directly)
 -------------------------------------------------------------->
@@ -49,7 +49,7 @@
   <meta property="og:url"   content="https://data-analytics.github.io/Election_Data_2024/" />
   <meta property="og:description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2009 to 2024', Visualizing the history of General Elections in India with data" />
   <html itemscope itemtype="https://schema.org/Blog">
-  <meta itemprop="description" content="India parliament Election Results 2024 'A visual guide to the check out the comparison of India parliament elections, from 2009 to 2024', Visualizing the history of General Elections in India with data">
+  <meta itemprop="description" content="This interactive map will bring you results, from the national standings aggregated seat share to state level standings aggregated seat share down to individual candidates and constituencies. Our Analytics And Advanced Visualization helps to bring in-depth Analysis.">
   <meta itemprop="name" content="India Parliament ELECTIONS 2009 - 2024 (India)">
   <meta property="og:image" content="https://data-analytics.github.io/images/lok_sabha.jpg" />
   <meta itemprop="image" content="https://data-analytics.github.io/images/lok_sabha.jpg">
@@ -129,39 +129,8 @@
            <div class="row">
                 <div class=" col-md-12 panel-body">
                        <div class="container footer_details seats_count"></div>
-                                
-                       <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
-                          <g class="headers" transform="translate(80,0)">
-                              <rect class="party-legend" data-party="AAP" data-highlight="[data-party=AAP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
-                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
-                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
-                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
-                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
-                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
-                              <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
-                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
-                              <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
-                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
-                              <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
-                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
-                              <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
-                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
-                              <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
-                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
-                              <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
-                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
-                              <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
-                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
-                              <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
-                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-                              <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                              </g>
-                            </svg>
+                       <div class="legends"></div>
+
                     <div class="col-md-12"> 
                      <div class="overall_view_report">
                      </div>
@@ -187,7 +156,8 @@
             <div class="row">
                 <div class=" col-md-12 panel-body">
                     <div class="container footer_details seats_count_detail seats_count"></div>
-                                            
+
+                    <div class="legends"></div>                                            
                     <p class="form-inline header_form" >
                         <label value="year" class="text_label" style="margin-top:10px!important">Based on 2009 : </label>
                         <select multiple="multiple" id="year_2009" class="select_year" style="margin-top:10px!important;width:135px!important;" ></select>&nbsp;                    
@@ -205,38 +175,6 @@
                         
                     </p>
                      <div class="chart">
-                        <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
-                            <g class="headers" transform="translate(80,0)">
-                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
-                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
-                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
-                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
-                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
-                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
-                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
-                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
-                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
-                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
-                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
-                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
-                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
-                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
-                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
-                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
-                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
-                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
-                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
-                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
-                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
-                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-                              <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                            </g>
-                            </svg>
                         <div class="geo_map">
                         </div>
                         </div>
@@ -261,38 +199,8 @@
            <div class="row">
                 <div class=" col-md-12 panel-body">                
                      <div class="chart">  
-                       <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
-                          <g class="headers" transform="translate(80,0)">
-                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
-                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
-                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
-                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
-                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
-                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
-                              <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
-                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
-                              <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
-                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
-                              <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
-                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
-                              <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
-                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
-                              <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
-                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
-                              <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
-                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
-                              <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
-                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
-                              <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
-                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-                              <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                              </g>
-                            </svg>
+                      <div class="legends"></div>
+
                         <div class="col-md-4 panel-body">
                         <div class="progress_bar"></div>
                         </div>
@@ -322,39 +230,8 @@
             <div class="row">
                 <div class=" col-md-12 panel-body">
                         <div class="container footer_details seats_count"></div>
-                                          
-                        <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
-                            <g class="headers" transform="translate(80,15)">
-                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
-                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
-                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
-                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
-                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
-                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
-                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
-                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
-                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
-                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
-                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
-                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
-                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
-                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
-                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
-                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
-                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
-                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
-                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
-                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
-                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
-                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                            </g>
-                        </svg>
+                       <div class="legends"></div>                                          
+
                     
                           <div class="party_performance_trend_svg">
                          </div>
@@ -381,38 +258,8 @@
            <div class="row">
                 <div class=" col-md-12 panel-body">
                     <div class="container footer_details seats_count"></div>                
-                     <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
-                            <g class="headers" transform="translate(80,15)">
-                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
-                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
-                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
-                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
-                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
-                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
-                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
-                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
-                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
-                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
-                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
-                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
-                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
-                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
-                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
-                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
-                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
-                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
-                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
-                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
-                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
-                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>      
-                            </g>
-                        </svg>
+                     <div class="legends"></div>
+
                         <div class="party_trend"></div>
                 </div>
           </div>
@@ -438,39 +285,8 @@
            <div class="row">
                 <div class=" col-md-12 panel-body">
                          <div class="container footer_details seats_count"></div>
-                                        
-                         <svg data-height="0.54" viewBox="0 0 1200 40" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
-                            <g class="headers" transform="translate(80,15)">
-                              <rect class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#0E6D37"></rect>
-                              <text class="party-legend" data-party="SP" data-highlight="[data-party=SP]" data-toggle="highlight" x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">SP</text>
-                              <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#c0392b"></rect>
-                              <text class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
-                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
-                              <text class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-                              <rect class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4A9F88"></rect>
-                              <text class="party-legend" data-party="AITC" data-highlight="[data-party=AITC]" data-toggle="highlight" x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">AITC</text>
-                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
-                              <text class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
-                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
-                              <text class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-                              <rect class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#228B22"></rect>
-                              <text class="party-legend" data-party="JD(U)" data-highlight="[data-party=JD(U)]" data-toggle="highlight" x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">JD(U)</text>
-                              <rect class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FAEA75"></rect>
-                              <text class="party-legend" data-party="MG" data-highlight="[data-party=MG]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCP</text>
-                              <rect class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#08406F"></rect>
-                              <text class="party-legend" data-party="YSRCP" data-highlight="[data-party=YSRCP]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">YSRCP</text>
-                              <rect class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#F6AD02"></rect>
-                              <text class="party-legend" data-party="SS" data-highlight="[data-party=SS]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SS</text>
-                              <rect class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#AB9005"></rect>
-                              <text class="party-legend" data-party="TDP" data-highlight="[data-party=TDP]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TDP</text>
-                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#CEB58C"></rect>
-                              <text class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
-                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-                              <text class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-                            </g>
-                        </svg>
+                       <div class="legends"></div>                                        
+                         
                     <div  class="sankey_chart">
                     
                     </div>
@@ -840,7 +656,7 @@ function execute_data(execute_status){
 if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(); }
 
     d3.csv("parliament.csv", function(map_full_data) { 
- 
+ 	 
     state_list = _.uniq(map_full_data, function(item,a) { return item['STATE']; });
 
     category_list = _.uniq(map_full_data, function(item,a) { return item['Category']; });
@@ -958,7 +774,62 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
     
     var full_data = map_data
     
+    map_winner_data = map_full_data.filter(function(d){return (d['#']==1)  })
+    
+    var map_winner_data_sum_party = d3.nest()
+              .key(function(d) { return d['PARTY_CODE']; })
+              .rollup(function(v) { return v.length;  })
+              .entries(map_winner_data);
+    
+    map_winner_data_sum_party.sort(function(a, b) { return b.value - a.value; })
+  
     year_data_set_all = map_data.filter(function(d){return (d.YEAR==year_detail & d['#']==1)  })
+    
+    var legend_width = parseInt(d3.select('.legends').style('width'), 10)
+    
+	var legend_count = Math.floor(legend_width/80)
+    
+    var map_winner_data_sum_party = map_winner_data_sum_party.slice(0, legend_count);
+        
+        var legends_data  = d3.selectAll('.legends')
+					        .append("svg")
+					         .attr("data-height",50)
+      				         .attr("viewBox","0 0 "+(legend_width)+" 50")            
+                             .attr("xmlns","https://www.w3.org/2000/svg")
+                             .attr("xlink:xlink","https://www.w3.org/1999/xlink")
+                             .attr("version","1.1")
+                             .append("g")
+                             .attr("class","headers")
+                              
+         var legends_detail_data  = legends_data.selectAll('g')
+                            .data(map_winner_data_sum_party)
+                            .enter()
+                            .append("g")
+                            .attr("class","sub_headers")
+							.attr("transform", function(d,i){ return "translate("+(i*80)+",0)"})
+						
+		legends_detail_data.append('rect')
+                                .attr("x","0")
+                                .attr("y","10")
+                                .attr("width","80")
+                                .attr("height","20")
+                                .attr("class","party-legend")
+                                .attr("data-toggle","highlight")                                
+								.attr("data-party",function(d) { return d.key })
+								.attr("fill",function(d) { return color_map[d.key] })
+								.attr("stroke",function(d) { return d3.rgb(color_map[d.key]).darker() })
+						     
+		legends_detail_data.append('text')
+                                .attr("x","40")
+                                .attr("y","20")
+                                .attr("dy",".35em")                                
+                                .attr("text-anchor","middle")
+                                .attr("class","party-legend")
+                                .attr("data-toggle","highlight")                                    
+								.attr("data-party",function(d) { return d.key })
+								.style("fill", function(d) { return (parseInt(color_map[d.key.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
+								.text(function(d) { return d.key })
+															
     year_data_set_all.forEach(function(o) {
        o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
     });
@@ -1081,7 +952,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
       
       map_filter(year_2009,year_2014,year_2019,year_2024,map_data,state_values,color_map,false);
 
-        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/25) })
+        year_data_set_sum_party_8_percent = year_data_set_sum_party.filter(function(d){return (d.value > year_data_set_sum_overall/20) })
 
                 filtered_party_8_list = _.pluck(year_data_set_sum_party_8_percent, 'key')
                  
@@ -1763,6 +1634,7 @@ $('.state_filter').click( function(n) {
 execute_data([state_values,category_values])
 
 });
+
     </script>
 <div class="container footer_details">
 The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth </a> using data from <a target="_blank" href="https://www.eci.gov.in/statistical-reports"> eci.gov.in </a> and  <a target="_blank" href="https://results.eci.gov.in/"> results.eci.gov</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece"> Sushanth</a>.</div>
