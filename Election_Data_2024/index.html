@@ -298,7 +298,7 @@
     </div>
     </div>
     </div>
-<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+     <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
     <script>
 
  $(window).scroll(function() {
@@ -343,7 +343,6 @@ function getParameterByName(name, url) {
           .data(columns).enter()
           .append('th')
             .attr("class","dynatable-head")
-           
             .text(function (column) { return column.toUpperCase(); });
 
         // create a row for each object in the data
@@ -404,7 +403,7 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
         });        
     });
 
-	var map_data_all = map_data
+    var map_data_all = map_data
 
     var map_data_2009 = []
                     _.each(map_data, function(d) { if(_.contains(year_2009, d['09_PARTY'])) { map_data_2009.push(d);}});
@@ -418,11 +417,9 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
     var map_data = []
                     _.each(map_data_2019, function(d) { if(_.contains(year_2024, d['24_PARTY'])) { map_data.push(d);}});
         
-      var constituency_list = [] 
-      map_data.forEach(function(o) {
-        
+    var constituency_list = [] 
+      map_data.forEach(function(o) {    
         constituency_list.push(o.PC_NAME);
-        
        })
        
   function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
@@ -436,7 +433,7 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
        if (state_values.length==36){
             map_height = 860
        }else{
-               map_height = 600
+            map_height = 600
        }
                
        var margin = {top: 20, right: 20, bottom: 20, left: 20},
@@ -530,7 +527,6 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
           .duration(750)
           .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + Math.sqrt(k) + ")translate(" + -x + "," + -y + ")")
           .style("stroke-width", 1.5 / k + "px");
-
     }
 
       constituency_list =[]
@@ -563,6 +559,7 @@ function map_filter(year_2009,year_2014,year_2019,year_2024,other_data,state_val
              .append('center')
              .append('b')
              .text('Total '+ map_data.length+' Seats')
+		
         }else{
 
         d3.selectAll(".seats_count").selectAll('center').remove();
@@ -834,7 +831,7 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
                                 .attr("data-toggle","highlight")
 				.attr("data-party",function(d) { return d.key })
 				.style("fill", function(d) { return (parseInt(color_map[d.key.replace('_','')].replace('#', ''), 16) > 0xffffff / 2) ? '#000' : '#fff';})
-				text(function(d) { return d.key })
+				.text(function(d) { return d.key })
 															
     year_data_set_all.forEach(function(o) {
        o.votes_gained = addThousandsSeparator(parseInt(o.VOTES))
