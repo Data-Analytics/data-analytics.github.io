@@ -1037,8 +1037,9 @@ if (acct_no == undefined |execute_status!='refresh'){ $(".detail_display").hide(
 
 if (acct_no != undefined & execute_status=='refresh'){
 
+      
     data_set = map_data.filter(function(d){return (d.YEAR==year_detail)& (d.PC_NO==acct_no)&  (d.ST_CD==st_no)& (d.rank<10) })
-
+     
       var state_values = [];
       $('#state_val_id :selected').each(function(i, selected){
           state_values[i] = $(selected).val();
@@ -1048,6 +1049,18 @@ if (acct_no != undefined & execute_status=='refresh'){
 
     d3.select('.year_dropdown').selectAll('li').select('a').attr('href',function(d,i){ return '?filtered_state='+filtered_state_value+'&year='+year_list[i]+'&acct_no='+acct_no+'&st_no='+st_no+'#perConstituency'})
 
+    var constituency_name = '';
+    var state_name = '';
+    data_set.forEach(function(o) {
+        constituency_name = o.PC_NAME;
+        state_name = o.STATE;
+        o.PARTY_ID = o['#']+'. '+o.PARTY_CODE
+      });
+        
+    $(".constituency_tag").append("( "+constituency_name+" )");
+    $(".state_tag").append("( "+state_name+" )");
+    
+    if (data_set.length>1){
     var horizontal_width = parseInt(d3.select('.horizontal_bar').style('width'), 10);
 
     var horizontal_width = horizontal_width<540? 540 : horizontal_width
@@ -1076,17 +1089,13 @@ if (acct_no != undefined & execute_status=='refresh'){
    var x = d3.scaleLinear()
            .range([0, horz_width-(margin.left*5/2)]);
            
-    var constituency_name = '';
-    var state_name = '';
-    data_set.forEach(function(o) {
-        constituency_name = o.PC_NAME;
-        state_name = o.STATE;
-        o.PARTY_ID = o['#']+'. '+o.PARTY_CODE
-      });
-   
+
+           
     data_set = data_set.sort(function(a, b){ return d3.descending(a.rank, b.rank); })
     
     deposit_data_set = data_set.filter(function(d){return (d.votes>=d.polled_votes/6) })
+    
+    console.log(deposit_data_set);
     
     var layer = horizontal_bar_svg.selectAll(".layer")
         .data(data_set)
@@ -1095,10 +1104,7 @@ if (acct_no != undefined & execute_status=='refresh'){
         
         d3.selectAll(".tick > text")
             .style("font-size", "13px")
-     
-        $(".constituency_tag").append("( "+constituency_name+" )");
-        $(".state_tag").append("( "+state_name+" )");
-    
+
         x.domain([0, d3.max(data_set, function(d){ return d.votes; })])
         y.domain(data_set.map(function(d) { return d.PARTY_ID; }));
 
@@ -1158,7 +1164,7 @@ if (acct_no != undefined & execute_status=='refresh'){
            .call(d3.axisLeft(y));
 
         $("rect").tooltip({container: '.horizontal_bar', html: true, placement:'top'});
-        
+        }
         var twoPi = 2 * Math.PI;
         
         var sub_width = parseInt(d3.select('.progress_bar').style('width'), 10);
@@ -1192,7 +1198,8 @@ if (acct_no != undefined & execute_status=='refresh'){
         fontSize = 16;
         
         value = value_data[0]['votes']/parseFloat(value_data[0]['polled_votes']);
-        
+
+        if (value_data[0]['votes']==0){ value  =1 }
         var arcs_val = d3.arc()
                     .innerRadius(d3.min([progress_width,progress_height])*.27)
                     .outerRadius(d3.min([progress_width,progress_height])*.4)
@@ -1225,7 +1232,7 @@ if (acct_no != undefined & execute_status=='refresh'){
                     .attr("dy", ".35em")
                     .style("fill", "rgb(99, 99, 99)")
                     .attr("font-size", fontSize)
-                    .text((value*100).toFixed(2) + "%");   
+                    .text((value*100).toFixed(2) + "%");
         }
                     
         var text = progress_bar_svg.append("text")
