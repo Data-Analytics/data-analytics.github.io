@@ -4,8 +4,8 @@
  Purpose:     Data visualisation and analytics examples 
  Author:      sushanth
  Created:     28-01-2016
- Modified:    12-06-2021
- Copyright:  (c) sushanth 2021
+ Modified:    04-05-2026
+ Copyright:  (c) sushanth 2026
  Licence:     protected(not suppose to use it directly)
 -------------------------------------------------------------->
 <html manifest="election.appcache" >
@@ -14,9 +14,9 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sushanth">
-  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2021 Tamil Nadu Election,Tamil Nadu Assembly Election Results 2021 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2021'.">
-  <meta name="news_keywords" content="visual guide, visual charts, tamil nadu polls, tamil nadu assembly polls, stalin, annamalai, eps, ops, admk, dmk, bjp, inc, NDA, INDIA, ttv, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
-  <meta name="keywords" content="visual guide, visual charts, tamil nadu polls, tamil nadu assembly polls, stalin, annamalai, eps, ops, admk, dmk, bjp, inc, NDA, INDIA, ttv, jayalalithaa, chennai floods, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
+  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2026 Tamil Nadu Election,Tamil Nadu Assembly Election Results 2026 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2026', Which of the Alliances might get the stronghold in Tamil Nadu? What will be the next political face.">
+  <meta name="news_keywords" content="visual guide, visual charts, tamil nadu polls, tamil nadu assembly polls, stalin, udhayanidhi, eps, vijay, admk, dmk, bjp, tvk, inc, SPA, NDA, INDIA, ttv, jayalalithaa, mgr, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
+  <meta name="keywords" content="visual guide, visual charts, tamil nadu polls, tamil nadu assembly polls, stalin, udhayanidhi, eps, vijay, admk, dmk, bjp, tvk, inc, SPA, NDA, INDIA, ttv, jayalalithaa, mgr, tamil nadu elections, tamil nadu assembly elections, chennai news, tamil nadu news, india news">
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/basic.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/feature.css">
@@ -34,23 +34,23 @@
   <script type="text/javascript" src="/./javascripts/angular.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/underscore-min.js"></script>
-  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js"></script>
+  <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1967 - 2021 (TAMIL NADU)" />
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1967 - 2026 (TAMIL NADU)" />
   <meta property="og:url"   content="https://data-analytics.github.io/Election_Data/tamil_nadu.html" />
-  <meta property="og:description" content="Tamil Nadu Assembly Election Results 2021 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2021'" />
+  <meta property="og:description" content="Tamil Nadu Assembly Election Results 2026 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2026'" />
   <meta property="og:image" content="/./images/tn.png" />
   <html itemscope itemtype="https://schema.org/Blog">
-  <meta itemprop="description" content="Tamil Nadu Assembly Election Results 2021 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2021'">
-  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1967 - 2021 (TAMIL NADU)">
+  <meta itemprop="description" content="Tamil Nadu Assembly Election Results 2026 'A visual guide to the check out the history of Tamil Nadu Assembly elections, from 1967 until 2026'">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1967 - 2026 (TAMIL NADU)">
   <meta itemprop="image" content="/./images/tn.png">
-  <title>Assembly Elections 1967 - 2021 (Tamil Nadu)</title>
+  <title>Assembly Elections 1967 - 2026 (Tamil Nadu)</title>
   <style>
   .uneditable-input, input[type=text], select, textarea {
-    width: 150px !important;
+    width: 130px !important;
     margin: 0 auto;
-}
+	}
   </style>
 </head>
 <body>
@@ -60,11 +60,9 @@
         <div class="container">
             <div class="row">
    <div class="col-md-12 header-logo">
-       
-       <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Tamil Nadu Assembly Election Results 2021, 'A visual guide to the check out the history of Tamil Nadu Assembly elections from 1967 until 2021</p>
+       <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Tamil Nadu Assembly Election Results 2026, 'A visual guide to the check out the history of Tamil Nadu Assembly elections from 1967 until 2026</p>
        <p class="synopsis">This interactive map will bring you results, from state standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
-       <p class="synopsis">It aims to make the past 16  Assembly elections in Tamil Nadu  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
-
+       <p class="synopsis">It aims to make the past 17 Assembly elections in Tamil Nadu  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
    </div>
    
             </div>
@@ -86,57 +84,57 @@
 
        <div class="dropdown header_year">
            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
-  <ul class="dropdown-menu" role="menu">
-          
-      <li data-year="2021" id="2021_flow"><a href="?year=2021#overall_view">2021 results</a></li>
-      <li data-year="2016" id="2016_flow"><a href="?year=2016#overall_view">2016 results</a></li>
-      <li data-year="2011" id="2011_flow"><a href="?year=2011#overall_view">2011 results</a></li>
-      <li data-year="2006" id="2006_flow"><a href="?year=2006#overall_view">2006 results</a></li>
-      <li data-year="2001" id="2001_flow"><a href="?year=2001#overall_view">2001 results</a></li>
-      <li data-year="1996" id="1996_flow"><a href="?year=1996#overall_view">1996 results</a></li>
-      <li data-year="1991" id="1991_flow"><a href="?year=1991#overall_view">1991 results</a></li>
-      <li data-year="1989" id="1989_flow"><a href="?year=1989#overall_view">1989 results</a></li>
-      <li data-year="1984" id="1984_flow"><a href="?year=1984#overall_view">1984 results</a></li>
-      <li data-year="1980" id="1980_flow"><a href="?year=1980#overall_view">1980 results</a></li>
-      <li data-year="1977" id="1977_flow"><a href="?year=1977#overall_view">1977 results</a></li>
-      <li data-year="1971" id="1971_flow"><a href="?year=1971#overall_view">1971 results</a></li>
-      <li data-year="1967" id="1967_flow"><a href="?year=1967#overall_view">1967 results</a></li>
-      
-  </ul>
+              <ul class="dropdown-menu" role="menu">
+                  <li data-year="2026" id="2026_flow"><a href="?year=2026#overall_view">2026 results</a></li>          
+                  <li data-year="2021" id="2021_flow"><a href="?year=2021#overall_view">2021 results</a></li>
+                  <li data-year="2016" id="2016_flow"><a href="?year=2016#overall_view">2016 results</a></li>
+                  <li data-year="2011" id="2011_flow"><a href="?year=2011#overall_view">2011 results</a></li>
+                  <li data-year="2006" id="2006_flow"><a href="?year=2006#overall_view">2006 results</a></li>
+                  <li data-year="2001" id="2001_flow"><a href="?year=2001#overall_view">2001 results</a></li>
+                  <li data-year="1996" id="1996_flow"><a href="?year=1996#overall_view">1996 results</a></li>
+                  <li data-year="1991" id="1991_flow"><a href="?year=1991#overall_view">1991 results</a></li>
+                  <li data-year="1989" id="1989_flow"><a href="?year=1989#overall_view">1989 results</a></li>
+                  <li data-year="1984" id="1984_flow"><a href="?year=1984#overall_view">1984 results</a></li>
+                  <li data-year="1980" id="1980_flow"><a href="?year=1980#overall_view">1980 results</a></li>
+                  <li data-year="1977" id="1977_flow"><a href="?year=1977#overall_view">1977 results</a></li>
+                  <li data-year="1971" id="1971_flow"><a href="?year=1971#overall_view">1971 results</a></li>
+                  <li data-year="1967" id="1967_flow"><a href="?year=1967#overall_view">1967 results</a></li>
+                  
+              </ul>
          </div><br/><br/>
        <div class="row">
           <svg data-height="0.54" viewBox="0 0 1200 30" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
-<g class="headers" transform="translate(80,0)">
-    <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#c0392b"></rect>
-    <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
-    <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#b2d33c"></rect>
-    <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">ADMK</text>
-    <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
-    <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
-    <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
-    <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
-    <rect class="party-legend" data-party="VCK" data-highlight="[data-party=VCK]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4747ff"></rect>
-    <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">VCK</text>
-    <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
-    <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
-    <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
-    <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
-    <rect class="party-legend" data-party="PMK" data-highlight="[data-party=PMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#d35400"></rect>
-    <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">PMK</text>
-    <rect class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#f1c40f"></rect>
-    <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
-    <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
-    <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
-    <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
-    <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
-    <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
-    <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
-    <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
-    <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
-    </g>
-  </svg>
+            <g class="headers" transform="translate(80,0)">
+                <rect class="party-legend" data-party="DMK" data-highlight="[data-party=DMK]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#c0392b"></rect>
+                <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">DMK</text>
+                <rect class="party-legend" data-party="ADMK" data-highlight="[data-party=ADMK]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#b2d33c"></rect>
+                <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">ADMK</text>
+                <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                <rect class="party-legend" data-party="VCK" data-highlight="[data-party=VCK]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#4747ff"></rect>
+                <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">VCK</text>
+                <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                <rect class="party-legend" data-party="PMK" data-highlight="[data-party=PMK]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#d35400"></rect>
+                <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">PMK</text>
+                <rect class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#f1c40f"></rect>
+                <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
+                <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+                <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
+                <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+                <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
+                <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
+                <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
+                <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
+                <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+            </g>
+          </svg>
        <div class="col-md-2"></div>
        <div class="col-md-8">
         <div class="overall_view_report">
@@ -170,25 +168,28 @@
             
        <div class="dropdown header_year">
            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
-  <ul class="dropdown-menu" role="menu">
-      <li data-year="2021" id="extra_2021"><a href="?extra_year=2021#individual_hold">2021 results</a></li> 
-      <li data-year="2016" id="extra_2016"><a href="?extra_year=2016#individual_hold">2016 results</a></li>
-      <li data-year="2011" id="extra_2011"><a href="?extra_year=2011#individual_hold">2011 results</a></li>
-  </ul>
+              <ul class="dropdown-menu" role="menu">
+                  <li data-year="2026" id="extra_2026"><a href="?extra_year=2026#individual_hold">2026 results</a></li> 
+                  <li data-year="2021" id="extra_2021"><a href="?extra_year=2021#individual_hold">2021 results</a></li> 
+                  <li data-year="2016" id="extra_2016"><a href="?extra_year=2016#individual_hold">2016 results</a></li>
+                  <li data-year="2011" id="extra_2011"><a href="?extra_year=2011#individual_hold">2011 results</a></li>
+              </ul>
        </div>
          
        <p class="form-inline header_form" >
            <label align="left" >Search:</label>
            <input type="text" class="geo_search" placeholder="eg: chennai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <label value="year">based on 2011 : </label>
+           <label value="sub-based"> based on</label>  
+           <label value="year">2011 : </label>
            <select multiple="multiple" id="year_2011" class="select_year"></select>&nbsp;&nbsp;
-           <label value="year">based on 2016 : </label>
-           <select multiple="multiple" id="year_2016" class="select_year"></select>
-           <label value="year">based on 2021 : </label>
-           <select multiple="multiple" id="year_2021" class="select_year"></select>
+           <label value="year">2016 : </label>
+           <select multiple="multiple" id="year_2016" class="select_year"></select>&nbsp;&nbsp;
+           <label value="year">2021 : </label>
+           <select multiple="multiple" id="year_2021" class="select_year"></select>&nbsp;&nbsp;
+           <label value="year">2026 : </label>
+           <select multiple="multiple" id="year_2026" class="select_year"></select>&nbsp;&nbsp;
            <input type="button" value="submit" class="party_filter"></input>
        </p>
-           
           
         <div class="chart">
          
@@ -214,8 +215,8 @@
     <text class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -495,6 +496,7 @@
          <div class="dropdown header_year">
            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
   <ul class="dropdown-menu" role="menu">
+          <li data-year="2026" id="2026"><a href="?year=2026#individual">2026 results</a></li>
           <li data-year="2021" id="2021"><a href="?year=2021#individual">2021 results</a></li>
           <li data-year="2016" id="2016"><a href="?year=2016#individual">2016 results</a></li>
           <li data-year="2011" id="2011"><a href="?year=2011#individual">2011 results</a></li>
@@ -540,8 +542,8 @@
     <text class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -597,8 +599,8 @@
     <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -640,6 +642,7 @@
 <div class="dropdown header_year">
            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
   <ul class="dropdown-menu" role="menu">
+          <li data-year="2026" id="2026_flow"><a href="?year=2026#party_Trend">2026 results</a></li>
           <li data-year="2021" id="2021_flow"><a href="?year=2021#party_Trend">2021 results</a></li>
           <li data-year="2016" id="2016_flow"><a href="?year=2016#party_Trend">2016 results</a></li>
           <li data-year="2011" id="2011_flow"><a href="?year=2011#party_Trend">2011 results</a></li>
@@ -679,8 +682,8 @@
     <text class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -721,6 +724,7 @@
        <div class="dropdown header_year">
            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
            <ul class="dropdown-menu" role="menu">
+           <li data-year="2021_2026" id="2021_2026"><a href="?flowyear=2021_2026#sankeyFlow">2026 results</a></li>
            <li data-year="2016_2021" id="2016_2021"><a href="?flowyear=2016_2021#sankeyFlow">2021 results</a></li>
            <li data-year="2011_2016" id="2011_2016"><a href="?flowyear=2011_2016#sankeyFlow">2016 results</a></li>
            <li data-year="2001_2006" id="2001_2006"><a href="?flowyear=2001_2006#sankeyFlow">2006 results</a></li>
@@ -758,8 +762,8 @@
     <text class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -774,7 +778,6 @@
             
             </div>
             </div>
-            
     
     </div>
     </div>
@@ -786,7 +789,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
    <div class="col-md-12 panel-heading1">
-       <h2>Assembly Elections 1967 - 2021 (Tamil Nadu)</h2>
+       <h2>Assembly Elections 1967 - 2026 (Tamil Nadu)</h2>
    </div>
            </div>
            <div class="row">
@@ -814,8 +817,8 @@
     <text class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -838,7 +841,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
    <div class="col-md-12 panel-heading1">
-       <h2>Assembly Elections 1967 - 2021 (Vote Comparison)</h2>
+       <h2>Assembly Elections 1967 - 2026 (Vote Comparison)</h2>
    </div>
            </div>
            <div class="row">
@@ -874,8 +877,8 @@
     <text class="party-legend" data-party="DMDK" data-highlight="[data-party=DMDK]" data-toggle="highlight" x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -900,7 +903,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
    <div class="col-md-12 panel-heading1">
-       <h2>Constituency wise party trend 1967 - 2021 (Tamil Nadu)</h2>
+       <h2>Constituency wise party trend 1967 - 2026 (Tamil Nadu)</h2>
    </div>
            </div>
            <div class="row">
@@ -928,8 +931,8 @@
     <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -958,7 +961,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
    <div class="col-md-12 panel-heading1">
-       <h2 class="details_constituency">Assembly Elections 1967 - 2021 for Constituency<i class="constituency_tag_percent"></i></h2>
+       <h2 class="details_constituency">Assembly Elections 1967 - 2026 for Constituency<i class="constituency_tag_percent"></i></h2>
    </div>
            </div>
            <div class="row">
@@ -986,8 +989,8 @@
     <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">DMDK</text>
     <rect class="party-legend" data-party="NCO" data-highlight="[data-party=NCO]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
     <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">NCO</text>
-    <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
-    <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+    <rect class="party-legend" data-party="TVK" data-highlight="[data-party=TVK]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#8b0000"></rect>
+    <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">TVK</text>
     <rect class="party-legend" data-party="MDMK" data-highlight="[data-party=MDMK]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#9b59b6"></rect>
     <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">MDMK</text>
     <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
@@ -1028,7 +1031,7 @@
         }, 500);
     });
 
-color_map = {"IJK":"#363636","NTK":"#363636","BSP":"#363636","ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","DMDK":"#f1c40f","DMK":"#c0392b","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","GNLF":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MDMK":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","MUL":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","OTH":"#363636","Others":"#363636","PF":"#363636","PMC":"#363636","PMK":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","VCK":"#4747ff","VCK(M)":"#4747ff","TMK":"#363636","WBSP":"#363636","WPI":"#363636","NOTA":"#000","MNM":"#363636","AMMK":"#363636","MIP":"#363636","SDPI":"#363636","MIM":"#363636","NPP":"#363636","TMC":"#c79712","SMK":"#363636"};
+color_map = {"IJK":"#363636","NTK":"#363636","BSP":"#363636","ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON":"#ff7f0e","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","DMDK":"#f1c40f","DMK":"#c0392b","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","GNLF":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MDMK":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","MUL":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","OTH":"#363636","Others":"#363636","PF":"#363636","PMC":"#363636","PMK":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","VCK":"#4747ff","VCK(M)":"#4747ff","TMK":"#363636","WBSP":"#363636","WPI":"#363636","NOTA":"#000","MNM":"#363636","AMMK":"#363636","MIP":"#363636","SDPI":"#363636","MIM":"#363636","NPP":"#363636","TMC":"#c79712","SMK":"#363636","TVK":"#8b0000","AMMK":"#363636"};
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -1068,18 +1071,18 @@ if (cons_id == undefined){ $(".detail_percent_display").hide(); }
 else{ $(".detail_percent_display").show();}
         
 if ((extra_year_detail == undefined) && (year_detail >= 2009)){ extra_year_detail= year_detail; }
-if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2021; }
+if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2026; }
 
 if (year_detail == undefined){ year_detail= extra_year_detail; }
 if (flowyear_detail != undefined){ year_detail= flowyear_detail.split("_")[1] }
-if (flowyear_detail == undefined){ flowyear_detail = '2016_2021'}
+if (flowyear_detail == undefined){ flowyear_detail = '2021_2026'}
 
-if ([1967,1971,1977,1980,1984,1989,1991,1996,2001,2006,2011,2016,2021].indexOf(parseInt(year_detail))<0)
-{ year_detail =2021,extra_year_detail=2021; }
+if ([1967,1971,1977,1980,1984,1989,1991,1996,2001,2006,2011,2016,2021,2026].indexOf(parseInt(year_detail))<0)
+{ year_detail =2026,extra_year_detail=2026; }
 
 if (year_detail <2009){ $('#individual_hold').hide() }
 
-sankey_flow_year = ["2016_2021","2011_2016","2001_2006","1996_2001","1991_1996","1989_1991","1984_1989","1980_1984","1977_1980","1967_1971"];
+sankey_flow_year = ["2021_2026","2016_2021","2011_2016","2001_2006","1996_2001","1991_1996","1989_1991","1984_1989","1980_1984","1977_1980","1967_1971"];
 
 sankey_flow_value = ''
 sankey_flow_year.forEach(function(entry) {
@@ -1133,7 +1136,7 @@ var svg = d3.select(".stacked_bar").append("svg")
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var party_names = ['DMK','ADMK','INC','CPM','VCK','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','IUML','PT','MNMK','AIFB','TMC','Others'];
+var party_names = ['DMK','ADMK','INC','CPM','VCK','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','IUML','PT','MNMK','AIFB','TMC','TVK','AMMK','Others'];
   
  data.forEach(function(d) {
         var y0 = 0;
@@ -1268,7 +1271,7 @@ function data_scatter(type_votes){
    return d3.sum(d, function(g) {return g.polled_votes; });
   }).entries(stay_data_csv.filter(function(d){return (d.rank==1) }));
 
-   mapper_party = ['DMK','ADMK','INC','CPM','VCK','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','IUML','PT','MNMK','AIFB','TMC'];
+   mapper_party = ['TVK','AMMK','DMK','ADMK','INC','CPM','VCK','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','IUML','PT','MNMK','AIFB','TMC'];
 
    data_mapper_data = stay_data_csv.filter(function(d) { return mapper_party.indexOf(d.PARTY) >-1 })
   
@@ -1299,7 +1302,7 @@ function data_scatter(type_votes){
         });
     dataset_spark.push(year_sub_mapper)    
     });
-    //console.log(dataset_spark,data_value_total);
+
     //Width and height
     var width_data = 1050;
     var height_data = 450;
@@ -1822,7 +1825,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
    cons_layers.push(cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) }))
             });
             
-        var party_names = ['DMK','ADMK','INC','CPM','VCK','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','IUML','PT','MNMK','AIFB','TMC','Others'];
+		var party_names = ['DMK','ADMK','INC','CPM','VCK','CPI','PMK','DMDK','NCO','JNP','MDMK','IND','BJP','IUML','PT','MNMK','AIFB','TMC','TVK','AMMK','Others'];
     
             year_stack=[];
             cons_layers.forEach(function (year) {    
@@ -1898,7 +1901,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
        });     
             });
    
- cons_x.domain([1967,1971,1977,1980,1984,1989,1991,1996,2001,2006,2011,2016,2021]);
+ cons_x.domain([1967,1971,1977,1980,1984,1989,1991,1996,2001,2006,2011,2016,2021,2026]);
  cons_y.domain([0, d3.max(year_stack, function(d) { return d.total; })]);
 
  percent_svg.append("g")
@@ -2047,9 +2050,9 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     
     $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
 
-    function map_filter(year_2011,year_2016,year_2021){
+    function map_filter(year_2011,year_2016,year_2021,year_2026){
 
-    data_csv = data_csv.filter(function(d){return ((d.YEAR==2011) |(d.YEAR==2016) |(d.YEAR==2021)) & (d.rank==1) })
+    data_csv = data_csv.filter(function(d){return ((d.YEAR==2011) |(d.YEAR==2016) |(d.YEAR==2021) |(d.YEAR==2026)) & (d.rank==1) })
 
     sub_click = _.pluck(party_2011.filter(function(d) { return d[2011]!='' }),2011)
 
@@ -2075,14 +2078,19 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
     data_csv_2021 = data_csv_2021.filter(function(d){return (d.YEAR==2021) & (d.rank==1) })
 
+    var data_csv_2026 = []
+       _.each(data_csv, function(d) { if(_.contains(year_2026, d.PARTY)) { data_csv_2026.push(d);}});
+
+    data_csv_2026 = data_csv_2026.filter(function(d){return (d.YEAR==2026) & (d.rank==1) })
+
     cons_2011 = _.pluck(_.uniq(data_csv_2011, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
     cons_2016 = _.pluck(_.uniq(data_csv_2016, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
     cons_2021 = _.pluck(_.uniq(data_csv_2021, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
+    cons_2026 = _.pluck(_.uniq(data_csv_2026, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
   
   Array.prototype.extend = function (other_array) {
       /* you should include a test to check whether other_array really is an array */
-      other_array.forEach(function(v) {this.push(v)}, this);    
-
+      other_array.forEach(function(v) {this.push(v)}, this);
    }
 
 
@@ -2092,8 +2100,10 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
        _.each(data_set, function(d) { if(_.contains(cons_2011, d.AC_NAME)) { data_set_sub.push(d);}});
     var data_set_sub_2 = []
        _.each(data_set_sub, function(d) { if(_.contains(cons_2016, d.AC_NAME)) { data_set_sub_2.push(d);}});
+    var data_set_sub_3 = []
+       _.each(data_set_sub_2, function(d) { if(_.contains(cons_2021, d.AC_NAME)) { data_set_sub_3.push(d);}});
     var data_set = []
-       _.each(data_set_sub_2, function(d) { if(_.contains(cons_2021, d.AC_NAME)) { data_set.push(d);}});
+       _.each(data_set_sub_3, function(d) { if(_.contains(cons_2026, d.AC_NAME)) { data_set.push(d);}});
 
     constituency_color = {}
     Candidate = {}
@@ -2119,13 +2129,13 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     
     d3.selectAll("a").each( function(d, i){
         if (d3.select(this).attr("acct_no")!=undefined)
-        {    
+        {
             d3.select(this).attr("xlink:href",'?extra_year='+extra_year_detail+'&acct_no='+d3.select(this).attr("acct_no")+'#perConstituency')
         }
      });
  
     d3.selectAll("polygon").each( function(d, i){
-    
+
     if (PARTY[d3.select(this).attr("id")] !=undefined)
     {    
     d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/>Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/>party : '+PARTY[d3.select(this).attr("id")]+' <br/>percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/>votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/>polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))
@@ -2175,27 +2185,18 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         responseFn( a );
     }
     });
-    
-/*    $(".party-legend").mouseover(function(){
-    
-        d3.selectAll('.party_filters').style("opacity",'0.1');
-        d3.selectAll('polygon').style("fill-opacity",'0.1');
-        d3.selectAll('.'+$(this).attr("data-party")).style("fill-opacity",'1');
-        d3.selectAll('.'+$(this).attr("data-party")+'s').style("opacity",'1');
-    })
 
-    $(".party-legend").mouseout(function(){
-    
-        d3.selectAll('.party_filters').style("opacity",'1');
-        d3.selectAll('polygon').style("fill-opacity",'1');
-    })*/
-        
     $("polygon").tooltip({container: 'body', html: true, placement:'top'});
       
   }
 
 $('.party_filter').click( function(n) {
 
+ var year_2026 = [];
+      $('#year_2026 :selected').each(function(i, selected){
+          year_2026[i] = $(selected).val();
+      });
+
  var year_2021 = [];
       $('#year_2021 :selected').each(function(i, selected){
           year_2021[i] = $(selected).val();
@@ -2211,10 +2212,15 @@ $('.party_filter').click( function(n) {
             year_2011[i] = $(selected).val();
         });
 
-  map_filter(year_2011,year_2016,year_2021);
+  map_filter(year_2011,year_2016,year_2021,year_2026);
 
 });
 
+ var year_2026 = [];
+      $('#year_2026 :selected').each(function(i, selected){
+          year_2026[i] = $(selected).val();
+      });
+
  var year_2021 = [];
       $('#year_2021 :selected').each(function(i, selected){
           year_2021[i] = $(selected).val();
@@ -2229,7 +2235,8 @@ $('.party_filter').click( function(n) {
         $('#year_2011 :selected').each(function(i, selected){
             year_2011[i] = $(selected).val();
         });
-  map_filter(year_2011,year_2016,year_2021);
+
+  map_filter(year_2011,year_2016,year_2021,year_2026);
   
   });
 
@@ -2264,6 +2271,7 @@ d3.csv("tn_data.csv", function(error, data) {
   party_2011 = _.uniq(data, function(item, key, a) {  return item[2011]; });
   party_2016 = _.uniq(data, function(item, key, a) {  return item[2016]; });
   party_2021 = _.uniq(data, function(item, key, a) {  return item[2021]; });
+  party_2026 = _.uniq(data, function(item, key, a) {  return item[2026]; });
 
  var select_box = d3.select('#year_2011')
    .selectAll("option")
@@ -2274,7 +2282,7 @@ d3.csv("tn_data.csv", function(error, data) {
        .attr("selected","")
        .text(function (d) { return d[2011]; });
 
- var select_box = d3.select('#year_2016')     
+ var select_box = d3.select('#year_2016')
    .selectAll("option")
        .data(party_2016.filter(function(d) { return d[2016]!='' }))
        .enter().append("option")
@@ -2283,7 +2291,7 @@ d3.csv("tn_data.csv", function(error, data) {
        .attr("selected","")
        .text(function (d) { return d[2016]; });
 
- var select_box = d3.select('#year_2021')     
+ var select_box = d3.select('#year_2021')
    .selectAll("option")
        .data(party_2021.filter(function(d) { return d[2021]!='' }))
        .enter().append("option")
@@ -2291,6 +2299,15 @@ d3.csv("tn_data.csv", function(error, data) {
        .attr("class","name")
        .attr("selected","")
        .text(function (d) { return d[2021]; });
+
+ var select_box = d3.select('#year_2026')
+   .selectAll("option")
+       .data(party_2026.filter(function(d) { return d[2026]!='' }))
+       .enter().append("option")
+       .attr("value", function (d) { return d[2026]; })
+       .attr("class","name")
+       .attr("selected","")
+       .text(function (d) { return d[2026]; });
 
 $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
 
@@ -2482,7 +2499,7 @@ d3.text("tn_data.csv", function(error, data) {
         
 </script>
 <div class="container footer_details">
-The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth </a>using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx">eci.nic.in </a>and  <a target="_blank" href="https://eciresults.nic.in/">eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth</a>.</div>
+The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth </a>using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx">eci.nic.in </a>and  <a target="_blank" href="https://eciresults.nic.in/">eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth</a>.
 </div>
 </body>
 </html>

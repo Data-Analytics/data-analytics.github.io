@@ -4,8 +4,8 @@
  Purpose:     Data visualisation and analytics examples 
  Author:      sushanth
  Created:     28-01-2016
- Modified:    12-06-2021
- Copyright:  (c) sushanth 2021
+ Modified:    04-05-2026
+ Copyright:  (c) sushanth 2026
  Licence:     protected(not suppose to use it directly)
 ---------------------------------------------------------------->
 <html manifest="election.appcache" >
@@ -14,7 +14,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sushanth">
-  <meta name="description" content="Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2021', Which of the Dravidian duos might get the stronghold in Kerala? What will be the pre-poll alliances? For the state march is a crucial month to predict next political face.">
+  <meta name="description" content="This Interactive Map Tells You Everything You Need to Know About the 2026 kerala Election,Kerala Assembly Election Results 2026 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2026', Which of the Front might get the stronghold in Kerala? What will be the next political face.">
   <meta name="news_keywords" content="Kerala polls, Kerala assembly polls, jayalalithaa, chennai floods, Kerala elections, Kerala assembly elections, chennai news, Kerala news, india news">
   <meta name="keywords" content="Kerala polls, Kerala assembly polls, jayalalithaa, chennai floods, Kerala elections, Kerala assembly elections, chennai news, Kerala news, india news">
   <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
@@ -25,29 +25,30 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/custom-styles.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" media="screen" href="/./css/multiple-select.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
   <link rel="shortcut icon" href="/./images/logo.png">
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/sankey.js"></script>
   <script type="text/javascript" src="/./javascripts/google-analyitcs.js"></script>
+  <script type="text/javascript" src="/./javascripts/angular.min.js"></script>  
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/underscore-min.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.10.3.min.js" ></script>
   <script type="text/javascript" src="/./javascripts/jquery.multiple.select.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
-  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1957 - 2021(Kerala)" />
+  <meta property="og:title"  content="ASSEMBLY ELECTIONS 1957 - 2026(Kerala)" />
   <meta property="og:url"   content="https://data-analytics.github.io/Election_Data/kerala.html" />
-  <meta property="og:description" content="Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2021'" />
+  <meta property="og:description" content="Kerala Assembly Election Results 2026 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2026'" />
   <meta property="og:image" content="/./images/kl.jpg" />
   <html itemscope itemtype="https://schema.org/Blog">
-  <meta itemprop="description" content="Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2021'">
-  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1957 - 2021(Kerala)">
+  <meta itemprop="description" content="Kerala Assembly Election Results 2026 'A visual guide to the check out the history of Kerala Assembly elections, from 1957 until 2026'">
+  <meta itemprop="name" content="ASSEMBLY ELECTIONS 1957 - 2026(Kerala)">
   <meta itemprop="image" content="/./images/kl.jpg">
-  <title>Assembly Elections 1957 - 2021(Kerala)</title>
+  <title>Assembly Elections 1957 - 2026(Kerala)</title>
   <style>
   .uneditable-input, input[type=text], select, textarea {
-    width: 150px !important;
+    width: 130px !important;
     margin: 0 auto;
 }
   </style>
@@ -55,15 +56,15 @@
 </head>
 <body>
 
-      <div class="se-pre-BJP"></div>
+      <div class="se-pre-con"></div>
       <div class="container-fluid header-style">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 header-logo">
                     
-                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Kerala Assembly Election Results 2021 'A visual guide to the check out the history of Kerala Assembly elections from 1957 until 2021</p>
+                    <p class="heading-part"><a class="fa fa-home fa-2" id="home" href="/./"></a>Kerala Assembly Election Results 2026 'A visual guide to the check out the history of Kerala Assembly elections from 1957 until 2026</p>
                     <p class="synopsis">This interactive map will bring you results, from state standings down to individual candidates and constituencies.Our Analytics And Advanced Visualization helps to bring in-depth Analysis.</p>
-                    <p class="synopsis">It aims to make the past 16  Assembly elections in Kerala  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
+                    <p class="synopsis">It aims to make the past 17  Assembly elections in Kerala  more easily understandable for the lay audience, allowing them to explore and discover insights.</p>
 
                 </div>
                 
@@ -87,27 +88,60 @@
                         <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
-                                <li data-year="2021" id="2021"><a href="?year=2021#overall_view">2021 results</a></li>
-                                <li data-year="2016" id="2016"><a href="?year=2016#overall_view">2016 results</a></li>
-                                <li data-year="2011" id="2011"><a href="?year=2011#overall_view">2011 results</a></li>
-                                <li data-year="2006" id="2006"><a href="?year=2006#overall_view">2006 results</a></li>
-                                <li data-year="2001" id="2001"><a href="?year=2001#overall_view">2001 results</a></li>
-                                <li data-year="1996" id="1996"><a href="?year=1996#overall_view">1996 results</a></li>
-                                <li data-year="1991" id="1991"><a href="?year=1991#overall_view">1991 results</a></li>
-                                <li data-year="1987" id="1987"><a href="?year=1987#overall_view">1987 results</a></li>
-                                <li data-year="1982" id="1982"><a href="?year=1982#overall_view">1982 results</a></li>
-                                <li data-year="1980" id="1980"><a href="?year=1980#overall_view">1980 results</a></li>
-                                <li data-year="1977" id="1977"><a href="?year=1977#overall_view">1977 results</a></li>
-                                <li data-year="1970" id="1970"><a href="?year=1970#overall_view">1970 results</a></li>
-                                <li data-year="1967" id="1967"><a href="?year=1967#overall_view">1967 results</a></li>
-                                <li data-year="1965" id="1965"><a href="?year=1965#overall_view">1965 results</a></li>
-                                <li data-year="1962" id="1962"><a href="?year=1962#overall_view">1962 results</a></li>
-                                <li data-year="1957" id="1957"><a href="?year=1957#overall_view">1957 results</a></li>
+                                <li data-year="2026" id="2026_flow"><a href="?year=2026#overall_view">2026 results</a></li>
+                                <li data-year="2021" id="2021_flow"><a href="?year=2021#overall_view">2021 results</a></li>
+                                <li data-year="2016" id="2016_flow"><a href="?year=2016#overall_view">2016 results</a></li>
+                                <li data-year="2011" id="2011_flow"><a href="?year=2011#overall_view">2011 results</a></li>
+                                <li data-year="2006" id="2006_flow"><a href="?year=2006#overall_view">2006 results</a></li>
+                                <li data-year="2001" id="2001_flow"><a href="?year=2001#overall_view">2001 results</a></li>
+                                <li data-year="1996" id="1996_flow"><a href="?year=1996#overall_view">1996 results</a></li>
+                                <li data-year="1991" id="1991_flow"><a href="?year=1991#overall_view">1991 results</a></li>
+                                <li data-year="1987" id="1987_flow"><a href="?year=1987#overall_view">1987 results</a></li>
+                                <li data-year="1982" id="1982_flow"><a href="?year=1982#overall_view">1982 results</a></li>
+                                <li data-year="1980" id="1980_flow"><a href="?year=1980#overall_view">1980 results</a></li>
+                                <li data-year="1977" id="1977_flow"><a href="?year=1977#overall_view">1977 results</a></li>
+                                <li data-year="1970" id="1970_flow"><a href="?year=1970#overall_view">1970 results</a></li>
+                                <li data-year="1967" id="1967_flow"><a href="?year=1967#overall_view">1967 results</a></li>
+                                <li data-year="1965" id="1965_flow"><a href="?year=1965#overall_view">1965 results</a></li>
+                                <li data-year="1962" id="1962_flow"><a href="?year=1962#overall_view">1962 results</a></li>
+                                <li data-year="1957" id="1957_flow"><a href="?year=1957#overall_view">1957 results</a></li>
                             </ul>
                         </div>
 
                     <br/><br/>
                     <div class="row">
+                        <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
+                          <g class="headers" transform="translate(80,0)">
+                              <rect  class="party-legend" data-party="BAC" data-highlight="[data-party=BAC]" data-toggle="highlight" x="0.0" width="67.1428571429" height="20" fill="#A99888"></rect>
+                              <text x="33.5714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">BAC</text>
+                              <rect class="party-legend" data-party="INC(U)" data-highlight="[data-party=INC(U)]" data-toggle="highlight" x="67.1428571429" width="67.1428571429" height="20" fill="#4A9F88"></rect>
+                              <text x="100.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">INC(U)</text>
+                              <rect class="party-legend" data-party="INC" data-highlight="[data-party=INC]" data-toggle="highlight" x="134.285714286" width="67.1428571429" height="20" fill="#3498DB"></rect>
+                              <text x="167.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">INC</text>
+                              <rect class="party-legend" data-party="CPM" data-highlight="[data-party=CPM]" data-toggle="highlight" x="201.428571429" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text x="235.0" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPM</text>
+                              <rect class="party-legend" data-party="IUML" data-highlight="[data-party=IUML]" data-toggle="highlight" x="268.571428571" width="67.1428571429" height="20" fill="#014BC6"></rect>
+                              <text x="302.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">IUML</text>
+                              <rect class="party-legend" data-party="OTH" data-highlight="[data-party=OTH]" data-toggle="highlight" x="335.714285714" width="67.1428571429" height="20" fill="#222"></rect>
+                              <text x="369.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">Others</text>
+                              <rect class="party-legend" data-party="CPI" data-highlight="[data-party=CPI]" data-toggle="highlight" x="402.857142857" width="67.1428571429" height="20" fill="#ff5757"></rect>
+                              <text x="436.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#fff">CPI</text>
+                              <rect class="party-legend" data-party="RSP" data-highlight="[data-party=RSP]" data-toggle="highlight" x="470.0" width="67.1428571429" height="20" fill="#F8F907"></rect>
+                              <text x="503.571428571" y="10.0" text-anchor="middle" dy=".35em" fill="#000">RSP</text>
+                              <rect class="party-legend" data-party="KEC" data-highlight="[data-party=KEC]" data-toggle="highlight" x="537.142857143" width="67.1428571429" height="20" fill="#FFAD01"></rect>
+                              <text x="570.714285714" y="10.0" text-anchor="middle" dy=".35em" fill="#000">KEC</text>
+                              <rect class="party-legend" data-party="SSP" data-highlight="[data-party=SSP]" data-toggle="highlight" x="604.285714286" width="67.1428571429" height="20" fill="#1f77b4"></rect>
+                              <text x="637.857142857" y="10.0" text-anchor="middle" dy=".35em" fill="#000">SSP</text>
+                              <rect class="party-legend" data-party="JNP" data-highlight="[data-party=JNP]" data-toggle="highlight" x="671.428571429" width="67.1428571429" height="20" fill="#9A9E56"></rect>
+                              <text x="705.0" y="10.0" text-anchor="middle" dy=".35em" fill="#000">JNP</text>
+                              <rect class="party-legend" data-party="PSP" data-highlight="[data-party=PSP]" data-toggle="highlight" x="738.571428571" width="67.1428571429" height="20" fill="#FFD380"></rect>
+                              <text x="772.142857143" y="10.0" text-anchor="middle" dy=".35em" fill="#000">PSP</text>
+                              <rect class="party-legend" data-party="IND" data-highlight="[data-party=IND]" data-toggle="highlight" x="805.714285714" width="67.1428571429" height="20" fill="#bdc3c7"></rect>
+                              <text x="839.285714286" y="10.0" text-anchor="middle" dy=".35em" fill="#000">IND</text>
+                              <rect class="party-legend" data-party="BJP" data-highlight="[data-party=BJP]" data-toggle="highlight" x="872.857142857" width="67.1428571429" height="20" fill="#ff7f0e"></rect>
+                              <text x="906.428571429" y="10.0" text-anchor="middle" dy=".35em" fill="#000">BJP</text>
+                              </g>
+                            </svg>
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
                      <div class="overall_view_report">
@@ -137,27 +171,30 @@
            <div class="row">
                 <div class=" col-md-12 panel-body">
             
-                      <div class="dropdown header_year">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li data-year="2021" id="extra_2021"><a href="?extra_year=2021#individual_hold">2021 results</a></li>
-                                <li data-year="2016" id="extra_2016"><a href="?extra_year=2016#individual_hold">2016 results</a></li>
-                                <li data-year="2011" id="extra_2011"><a href="?extra_year=2011#individual_hold">2011 results</a></li>
-                                    
-                            </ul>
-                      </div>
-                      
-                              <p class="form-inline header_form" >
-                                 <label align="left" >Search:</label>
-                                 <input type="text" class="geo_search" placeholder="eg: THIRUVANANTHAPURAM">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                 <label value="year">based on 2011 : </label>
-                                 <select multiple="multiple" id="year_2011" class="select_year"></select>&nbsp;&nbsp;
-                                 <label value="year">based on 2016 : </label>
-                                 <select multiple="multiple" id="year_2016" class="select_year"></select>
-                                 <label value="year">based on 2021 : </label>
-                                 <select multiple="multiple" id="year_2021" class="select_year"></select>
-                                 <input type="button" value="submit" class="party_filter"></input>
-                            </p>
+                   <div class="dropdown header_year">
+                       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
+                          <ul class="dropdown-menu" role="menu">
+                              <li data-year="2026" id="extra_2026"><a href="?extra_year=2026#individual_hold">2026 results</a></li> 
+                              <li data-year="2021" id="extra_2021"><a href="?extra_year=2021#individual_hold">2021 results</a></li> 
+                              <li data-year="2016" id="extra_2016"><a href="?extra_year=2016#individual_hold">2016 results</a></li>
+                              <li data-year="2011" id="extra_2011"><a href="?extra_year=2011#individual_hold">2011 results</a></li>
+                          </ul>
+                   </div>
+                     
+                   <p class="form-inline header_form" >
+                       <label align="left" >Search:</label>
+                       <input type="text" class="geo_search" placeholder="eg: chennai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <label value="sub-based"> based on</label>  
+                       <label value="year">2011 : </label>
+                       <select multiple="multiple" id="year_2011" class="select_year"></select>&nbsp;&nbsp;
+                       <label value="year">2016 : </label>
+                       <select multiple="multiple" id="year_2016" class="select_year"></select>&nbsp;&nbsp;
+                       <label value="year">2021 : </label>
+                       <select multiple="multiple" id="year_2021" class="select_year"></select>&nbsp;&nbsp;
+                       <label value="year">2026 : </label>
+                       <select multiple="multiple" id="year_2026" class="select_year"></select>&nbsp;&nbsp;
+						<input type="button" value="submit" class="party_filter"></input>
+					</p>
                         
                      <div class="chart">
                         <svg data-height="0.54" viewBox="0 0 1200 25" style="width: 100%;" xmlns="https://www.w3.org/2000/svg" xlink:xlink="https://www.w3.org/1999/xlink" version="1.1">
@@ -364,6 +401,7 @@
                       <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                    <li data-year="2026" id="2026"><a href="?year=2026#individual">2026 results</a></li>
                                     <li data-year="2021" id="2021"><a href="?year=2021#individual">2021 results</a></li>
                                     <li data-year="2016" id="2016"><a href="?year=2016#individual">2016 results</a></li>
                                     <li data-year="2011" id="2011"><a href="?year=2011#individual">2011 results</a></li>
@@ -512,6 +550,7 @@
                         <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                             <ul class="dropdown-menu" role="menu">
+                                    <li data-year="2026" id="2026_flow"><a href="?year=2026#party_Trend">2026 results</a></li>
                                     <li data-year="2021" id="2021_flow"><a href="?year=2021#party_Trend">2021 results</a></li>
                                     <li data-year="2016" id="2016_flow"><a href="?year=2016#party_Trend">2016 results</a></li>
                                     <li data-year="2011" id="2011_flow"><a href="?year=2011#party_Trend">2011 results</a></li>
@@ -595,7 +634,7 @@
                     <div class="dropdown header_year">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Year</button>
                         <ul class="dropdown-menu" role="menu">
-
+                        <li data-year="2021_2026" id="2021_2026"><a href="?flowyear=2021_2026#sankeyFlow">2026 results</a></li>
                         <li data-year="2016_2021" id="2016_2021"><a href="?flowyear=2016_2021#sankeyFlow">2021 results</a></li>
                         <li data-year="2011_2016" id="2011_2016"><a href="?flowyear=2011_2016#sankeyFlow">2016 results</a></li>
                         <li data-year="2001_2006" id="2001_2006"><a href="?flowyear=2001_2006#sankeyFlow">2006 results</a></li>
@@ -663,7 +702,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
-                    <h2>Assembly Elections 1957 - 2021(Kerala)</h2>
+                    <h2>Assembly Elections 1957 - 2026(Kerala)</h2>
                 </div>
            </div>
            <div class="row">
@@ -715,7 +754,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
-                    <h2>Assembly Elections 1957 - 2021 (Vote Comparison)</h2>
+                    <h2>Assembly Elections 1957 - 2026 (Vote Comparison)</h2>
                 </div>
            </div>
            <div class="row">
@@ -774,7 +813,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
-                    <h2>Constituency wise party trend 1957 - 2021 (Kerala)</h2>
+                    <h2>Constituency wise party trend 1957 - 2026 (Kerala)</h2>
                 </div>
            </div>
            <div class="row">
@@ -832,7 +871,7 @@
             <div class="col-md-12 panel panel-default">
             <div class="row">
                 <div class="col-md-12 panel-heading1">
-                    <h2 class="details_constituency">Assembly Elections 1957 - 2021 for Constituency<i class="constituency_tag_percent"></i></h2>
+                    <h2 class="details_constituency">Assembly Elections 1957 - 2026 for Constituency<i class="constituency_tag_percent"></i></h2>
                 </div>
            </div>
            <div class="row">
@@ -887,7 +926,7 @@
 <script type="text/javascript">
 
     $(window).load(function() {
-        $(".se-pre-BJP").fadeOut("slow");;
+        $(".se-pre-con").fadeOut("slow");;
     });
 
     $(window).scroll(function() {
@@ -903,7 +942,7 @@
         }, 500);
     });
 
-color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","DMDK":"#f1c40f","DMK":"#c0392b","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","GNLF":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MDMK":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","IUML":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","PMK":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","TMC":"#4747ff","TMC(M)":"#4747ff","TMK":"#363636","VCK":"#363636","BSP":"#363636","WBSP":"#363636","WPI":"#363636","OTH":"#363636","ADHRI":"#363636","API":"#363636","SDPI":"#363636","NLP":"#363636","LJD":"#363636","RMPI":"#363636","NCK":"#363636","DSGP":"#363636","SFB":"#363636","NSC":"#363636","BDJS":"#363636","CMP":"#363636","TTP":"#363636","SS":"#363636","BDP":"#363636","KJP":"#363636","KJ(S)":"#363636","RSP(L)":"#363636","JKC":"#363636"};
+color_map = {"ADK(JL)":"#363636","ADK(JR)":"#363636","ADMK":"#b2d33c","AIFB":"#FFAD01","AINRC":"#B78332","AITC":"#4A9F88","AKD":"#363636","BAC":"#A99888","BBC":"#363636","BJP":"#ff7f0e","BJS":"#363636","BLD":"#363636","C(S)":"#363636","CMPKSC":"#363636","CON(S)":"#363636","CPI":"#F27A67","CPI(M)":"#363636","CPM":"#ff5757","CPM(K)":"#363636","DIC":"#363636","DMDK":"#f1c40f","DMK":"#c0392b","DSP(P)":"#363636","DSP(PC)":"#363636","FB":"#363636","FB(S)":"#363636","FBL":"#014BC6","FBL(MG)":"#363636","FBL(RG)":"#363636","FBM":"#363636","GKC":"#363636","GL":"#363636","GNLF":"#363636","GOJAM":"#363636","HMS":"#363636","IC(S)":"#363636","ICS":"#363636","ICS(SCS)":"#363636","IGL":"#363636","IML":"#363636","INC":"#3498DB","INC(U)":"#4A9F88","IND":"#bdc3c7","INL":"#363636","ISP":"#363636","IUML":"#014BC6","JD":"#363636","JD(S)":"#363636","JKP":"#363636","JKP(N)":"#363636","JNP":"#9A9E56","JP":"#363636","JPSS":"#363636","KC":"#363636","KCJ":"#363636","KCM":"#363636","KCP":"#363636","KCS":"#363636","KEC":"#FFAD01","KEC(B)":"#363636","KEC(J)":"#363636","KC(J)":"#363636","KEC(M)":"#FFAD01","KMPP":"#363636","KRSP":"#363636","KSP":"#363636","LKD":"#363636","LSS":"#363636","MDMK":"#981D97","MFB":"#363636","ML":"#363636","MLO":"#363636","MNMK":"#363636","IUML":"#014BC6","NA":"#363636","NCO":"#1F77B4","NCP":"#363636","NDF":"#363636","NDP":"#363636","NSC":"#363637","Others":"#363636","PF":"#363636","PMC":"#363636","PMK":"#d35400","PML":"#363636","PSP":"#FFD380","PT":"#363636","RCI":"#363636","RCPI(RB)":"#363636","RJD":"#363636","RSP":"#F8F907","RSPK(B)":"#363636","SBP":"#363636","SJD":"#363636","SOP":"#363636","SP":"#363636","SSP":"#1F77B4","SUC":"#363636","SUCI":"#363636","SWA":"#363636","TMC":"#4747ff","TMC(M)":"#4747ff","TMK":"#363636","VCK":"#363636","BSP":"#363636","WBSP":"#363636","WPI":"#363636","OTH":"#363636","ADHRI":"#363636","API":"#363636","SDPI":"#363636","NLP":"#363636","LJD":"#363636","RMPI":"#363636","NCK":"#363636","DSGP":"#363636","SFB":"#363636","NSC":"#363636","BDJS":"#363636","CMP":"#363636","TTP":"#363636","SS":"#363636","BDP":"#363636","KJP":"#363636","KJ(S)":"#363636","RSP(L)":"#363636","JKC":"#363636"};
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -942,33 +981,33 @@ if (cons_id == undefined){ $(".detail_percent_display").hide(); }
 else{ $(".detail_percent_display").show();}
   
 if ((extra_year_detail == undefined) && (year_detail >= 2009)){ extra_year_detail= year_detail; }
-if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2021; }
+if ((extra_year_detail == undefined) && (year_detail <= 2009)){ extra_year_detail= 2026; }
    
 if (year_detail == undefined){ year_detail= extra_year_detail; }
 if (flowyear_detail != undefined){ year_detail= flowyear_detail.split("_")[1] }
-if (flowyear_detail == undefined){ flowyear_detail= '2016_2021'; }
+if (flowyear_detail == undefined){ flowyear_detail= '2021_2026'; }
  
-if ([1957,1960,1965,1967,1970,1977,1980,1982,1987,1991,1996,2001,2006,2011,2016,2021].indexOf(parseInt(year_detail))<0)
-{ year_detail =2021,extra_year_detail=2021; }
+if ([1957,1960,1965,1967,1970,1977,1980,1982,1987,1991,1996,2001,2006,2011,2016,2021,2026].indexOf(parseInt(year_detail))<0)
+{ year_detail =2026,extra_year_detail=2026; }
 
 if (year_detail <2009){ $('#individual_hold').hide() }
 
-sankey_flow_year = ["2016_2021","2011_2016","2001_2006","1996_2001","1991_1996","1987_1991","1982_1987",
+sankey_flow_year = ["2021_2026","2016_2021","2011_2016","2001_2006","1996_2001","1991_1996","1987_1991","1982_1987",
 "1980_1982","1977_1980","1967_1970","1965_1967","1957_1960","1957_1960"]
 
 sankey_flow_value = ''
 sankey_flow_year.forEach(function(entry) {
     if (entry.indexOf('_'+year_detail)>0){
-    sankey_flow_value = entry;
+        sankey_flow_value = entry;
     };
 });
 
 if (sankey_flow_value!='')
 {
-  flowyear_detail = sankey_flow_value
+    flowyear_detail = sankey_flow_value
 }
 else{
-  $('#sankeyFlow').hide()
+    $('#sankeyFlow').hide()
 }
 
 $('#'+year_detail+'').addClass('active');
@@ -1008,7 +1047,8 @@ var svg = d3.select(".stacked_bar").append("svg")
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var party_names = ['INC','CPM','CPI','IUML','KEC','RSP','BJP','SSP','KEC(M)','PSP','INC(U)','JNP','IND','Others'];
+      var party_names = ['INC','CPM','CPI','IUML','KEC','RSP','BJP','SSP','KEC(M)','PSP','INC(U)','JNP','IND','Others'];
+   
   
  data.forEach(function(d) {
         var y0 = 0;
@@ -1034,6 +1074,7 @@ var svg = d3.select(".stacked_bar").append("svg")
   party.selectAll("rect")
       .data(function(d) { return d.party; })
       .enter().append("rect")
+      .attr('class',function (d) { return 'party_filters '+d.name+'s' })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.y1); })
       .attr("height", function(d) { return y(d.y0) - y(d.y1); })
@@ -1046,7 +1087,7 @@ var svg = d3.select(".stacked_bar").append("svg")
   party.selectAll(".value")
     .data(function(d) { return d.party; })
     .enter().append("text")
-    .attr("class", "value")
+    .attr('class',function (d) { return 'value party_filters '+d.name+'s' })
     .attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)-1; })
     .attr("x", x.rangeBand()/2)
     .attr("text-anchor", "middle")
@@ -1058,7 +1099,7 @@ var svg = d3.select(".stacked_bar").append("svg")
   party.selectAll(".name")
     .data(function(d) { return d.party; })
     .enter().append("text")
-    .attr("class", "name")
+    .attr('class',function (d) { return 'name party_filters '+d.name+'s' })
     .attr("y", function(d) { return ((y(d.y1)+y(d.y0))/2)+12; })
     .attr("x", x.rangeBand()/2)
     .attr("text-anchor", "middle")
@@ -1069,11 +1110,9 @@ var svg = d3.select(".stacked_bar").append("svg")
 
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
       $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});
-
-       year_data_set = data.filter(function(d){return (d.YEAR==year_detail) })
-
-      year_data_sets = year_data_set[0].party.filter(function(d){return (d.value>0) })
-      
+    
+      year_data_set = data.filter(function(d){return (d.YEAR==year_detail) })
+      year_data_sets = year_data_set[0].party.filter(function(d){return (d.value>0) })      
       year_data_sets.sort(function(a, b) { return b.value - a.value; })
       
       heading_colors = []
@@ -1084,57 +1123,58 @@ var svg = d3.select(".stacked_bar").append("svg")
       max_seats = d3.max(year_data_sets, function(d) { return d.value; });
       
       lowresult_data  = d3.select('.overall_view_report')
-                                         .selectAll('div')
-                                        .data([year_data_sets])
-                                        .enter()
-                                        .append("div")
-                                        .append("table")
-                                        .attr("class","table table-condensed party-summary")
-
-                        lowresult_data.append('thead')
-                                .selectAll("tr")
-                                .data([['Party','Seats','Seat Share']]).enter()
-                                .append("tr")
-                                .selectAll("th")
-                                    .data(function(d,l) { return d }).enter()
-                                    .append('th')
-                                    .style("max-width",'10px')
-                                    .style("font-size",'15px')
-                                    .append("font")
-                                    .attr("color","#636363")
-                                    .text(function(o,i) { return o });
-                                    
-                        lowresult_data.append('tbody')
-                                .selectAll("tr")
-                                .data(function(o) { return o }).enter()
-                                .append("tr")
-                                .selectAll("td")
-                                    .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
-                                    .append('td')
-                                    .attr('class',function(d) { return d+'s sublines'})
-                                    .style("max-width",'10px')
-                                    .style("font-size",'15px')
-                                    .text(function(o,i) { return i<2? o:'' })
-                                    .append('div')
-                                    .attr('class',function(d,i) { return i<2? 'removed_data':'progress'; })
-                                    .append('div')
-                                    .attr('class','progress-bar progress-bar-striped')
-                                    .attr('role','progressbar')
-                                    .attr('aria-valuenow','10')
-                                    .attr('aria-valuemin','0')
-                                    .attr('aria-valuemax','10')
-                                    .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
-                                    .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
-     
-      d3.selectAll('.removed_data').remove();
-  });
+  .selectAll('div')
+ .data([year_data_sets])
+ .enter()
+ .append("div")
+ .append("table")
+ .attr("class","table table-condensed party-summary")
     
+     lowresult_data.append('thead')
+      .selectAll("tr")
+      .data([['Party','Seats','Seat Share']]).enter()
+      .append("tr")
+      .selectAll("th")
+          .data(function(d,l) { return d }).enter()
+          .append('th')
+          .style("max-width",'10px')
+          .style("font-size",'15px')
+          .append("font")
+          .attr("color","#636363")
+          .text(function(o,i) { return o });
+
+           lowresult_data.append('tbody')
+      .selectAll("tr")
+      .data(function(o) { return o }).enter()
+      .append("tr")
+      .selectAll("td")
+          .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
+          .append('td')
+          .attr('class',function(d) { return d+'s'})
+          .style("max-width",'10px')
+          .style("font-size",'15px')
+          .text(function(o,i) { return i<2? o:'' })
+          .append('div')
+          .attr('class',function(d,i) { return i<2? '':'progress'; })
+          .append('div')
+          .attr('class','progress-bar progress-bar-striped')
+          .attr('role','progressbar')
+          .attr('aria-valuenow','70')
+          .attr('aria-valuemin','0')
+          .attr('aria-valuemax','100')
+          .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
+          .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
+         
+            d3.selectAll('.removed_data').remove();
+  });
+  
+
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
     
 d3.csv("assembly_kerala_detail.csv", function(data_csv) {
  
- 
- var stay_data_csv = data_csv
+var stay_data_csv = data_csv;
+
 function data_scatter(type_votes){
     
   var data_value_total = d3.nest()
@@ -1144,7 +1184,7 @@ function data_scatter(type_votes){
   }).entries(stay_data_csv.filter(function(d){return (d.rank==1) }));
 
    mapper_party = ['INC','CPM','CPI','IUML','KEC','RSP','BJP','SSP','KEC(M)','PSP','INC(U)','JNP','IND'];
- 
+
    data_mapper_data = stay_data_csv.filter(function(d) { return mapper_party.indexOf(d.PARTY) >-1 })
   
   var data_value = d3.nest()
@@ -1159,28 +1199,28 @@ function data_scatter(type_votes){
         percent_mapper[d.key]=d.values;
     });
     
-    
-    dataset_spark    = [];
+    dataset_spark  = [];
     mapper_party.forEach(function(k) {
         year_sub_mapper=[]
         data_value.forEach(function(o) {
             o.values.forEach(function(l) {
-                if(k==l.key){
-                    data_dict ={x:parseInt(o.key),party:k,votes_count:l.values,votes_percent:l.values*100/(percent_mapper[parseInt(o.key)]) }                    
-                    data_dict['y'] = data_dict[type_votes]
-                    year_sub_mapper.push(data_dict)
-                } 
-                });
+
+   if(k==l.key){
+       data_dict ={x:parseInt(o.key),party:k,votes_count:l.values,votes_percent:l.values*100/(percent_mapper[parseInt(o.key)]) }       
+       data_dict['y'] = data_dict[type_votes] 
+       year_sub_mapper.push(data_dict)
+   } 
+   });
         });
     dataset_spark.push(year_sub_mapper)    
     });
-    
+
     //Width and height
     var width_data = 1050;
-    var height_data = 400;
+    var height_data = 450;
     var padding = 50;
       
-    // Define axis ranges & scales               
+    // Define axis ranges & scales  
     var yExtents = d3.extent(d3.merge(dataset_spark), function (d) { return d.y; });
     var xExtents = d3.extent(d3.merge(dataset_spark), function (d) { return d.x; });
          
@@ -1188,10 +1228,9 @@ function data_scatter(type_votes){
            .domain([xExtents[0], xExtents[1]])
            .range([padding, width_data - padding * .5]);
 
-    var yScale = d3.scale.sqrt()
+    var yScale = d3.scale.sqrt()//.log().base(1)//.pow().exponent(.35)
            .domain([0, yExtents[1]])
            .range([height_data - padding, padding]);
-
 
     // Create SVG element
     var multi_svg = d3.select(".multi_sparkline")
@@ -1204,7 +1243,7 @@ function data_scatter(type_votes){
             .attr("xlink", 'https://www.w3.org/1999/xlink')
             .attr("version", '1.1');
 
-            // Define lines
+    // Define lines
     var line = d3.svg.line()
            .x(function(d) { return x(d.x); })
            .y(function(d) { return y(d.y1, d.y2, d.y3); });
@@ -1214,17 +1253,19 @@ function data_scatter(type_votes){
 
     pathContainers.enter().append('g')
     .attr('class', 'line');
-    
+
     pathContainers.selectAll('path')
     .data(function (d) { return [d]; })// continues the data from the pathContainer
     .enter().append('path')
+      .attr('cla',function (d) { return d })
+      .attr('class',function (d) { return 'party_filters '+d[0]['party']+'s' })
       .attr('stroke',function (d) { return color_map[d[0]['party']]; })
       .attr('d', d3.svg.line()
         .x(function (d) { return xScale(d.x); })
         .y(function (d) { return yScale(d.y); })
       );
 
-         // what to do when we mouse over a bubble
+    // what to do when we mouse over a bubble
     var mouseOn = function() { 
         var circle = d3.select(this);
 
@@ -1245,7 +1286,7 @@ function data_scatter(type_votes){
             .attr("y2", height_data - padding)
             .style("stroke", circle.style("fill"))
             .transition().delay(200).duration(400).styleTween("opacity", 
-                        function() { return d3.interpolate(0, 1); })
+           function() { return d3.interpolate(0, 1); })
 
         multi_svg.append("g")
             .attr("class", "guide")
@@ -1257,7 +1298,7 @@ function data_scatter(type_votes){
             .attr("y2", circle.attr("cy"))
             .style("stroke", circle.style("fill"))
             .transition().delay(200).duration(400).styleTween("opacity", 
-                        function() { return d3.interpolate(0, 1); });
+           function() { return d3.interpolate(0, 1); });
 
     // function to move mouseover item to front of SVG stage, in case
     // another bubble overlaps it
@@ -1283,13 +1324,15 @@ function data_scatter(type_votes){
 
         // fade out guide lines, then remove them
         d3.selectAll(".guide").transition().duration(100).styleTween("opacity", 
-                        function() { return d3.interpolate(1, 0); })
+           function() { return d3.interpolate(1, 0); })
             .remove()
     }; 
+    
     // add circles
     pathContainers.selectAll('circle')
     .data(function (d) { return d; })
     .enter().append('circle')
+    .attr('class',function (d) { return 'party_filters '+d.party+'s' })
     .attr('stroke',function (d) { return d3.rgb(color_map[d.party]).darker(); })
     .attr('stroke-width','.5')
     .attr('fill',function (d) { return color_map[d.party]; })
@@ -1300,12 +1343,12 @@ function data_scatter(type_votes){
     .on("mouseover", mouseOn)
     .on("mouseout", mouseOff);
     
-       //Define X axis
+    //Define X axis
     var xAxis = d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
             .tickFormat(d3.format("d"))
-            .ticks(5);
+            .ticks(7);
 
     //Define Y axis
     var yAxis = d3.svg.axis()
@@ -1329,7 +1372,6 @@ function data_scatter(type_votes){
     .attr("transform", "translate(" + padding + ",0)")
     .call(yAxis);
     
-    
     multi_svg.append("text")
         .attr("class", "x labels")
         .attr("text-anchor", "end")
@@ -1349,7 +1391,7 @@ function data_scatter(type_votes){
         .text(type_votes.replace("_", " ")+'*');
         
       $("circle").tooltip({container: '.multi_sparkline', html: true, placement:'top'});
-
+      
 }
 
 data_scatter('votes_count')
@@ -1368,11 +1410,9 @@ $('#count_votes').click( function(n) {
         countButton['attr']('class', null);
     });
     
-
-
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 1200 - margin.left - margin.right,
-    height = 340 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
     
     var svg = d3.select(".tree_map").append("svg")
             .attr("width", "100%")
@@ -1414,12 +1454,13 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .entries(filter_data_csv);
         
     data_root["values"] = nest
-        
+    
   var cell = svg.data([data_root]).selectAll("g")
       .data(treemap.nodes)
     .enter().append("a")
       .attr("xlink:href",function(d) { return '?year='+d.year+'&acct_no='+d.AC_NO+"#perConstituency" })
       .append("rect")
+      .attr('class',function (d) { return 'party_filters '+d.PARTY+'s' })
       .attr("x", function(d) { return d.x; })
       .attr("y", function(d) { return d.y; })
       .attr("width", function(d) { return d.dx; })
@@ -1431,7 +1472,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       .style("stroke-width", 0.5);        
 
       $("rect").tooltip({container: '.tree_map', html: true, placement:'top'});
-              
+      
     var lastsearch = '';
     var $box = {};
     
@@ -1443,65 +1484,65 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
           lastsearch = search;
           var re = new RegExp( "^" + search, "i" );
           $('rect', $chart).each(function(){
-              $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+ $(this).css('fill-opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
           });
         }
       });
     }
 
-    add_search_tree('.search', '.tree_map');
-    
-
+ add_search_tree('.search', '.tree_map');
  var Industry = constituency_list;
     
     $( ".search" ).autocomplete({
     source: function(req, responseFn) {
         var re = $.ui.autocomplete.escapeRegex(req.term);
         var matcher = new RegExp( "^" + re, "i" );
-        var a = $.grep( Industry, function(item,index){
+        var a = $.grep(Industry, function(item,index){
             return matcher.test(item);
         });
         responseFn( a );
-    }    
+    }
     });
     
     if (acct_no != undefined){
+    
     if(extra_year_detail_sub != undefined){
         data_set = data_csv.filter(function(d){return (d.year==extra_year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
-    }else {
+        }
+    else {
         data_set = data_csv.filter(function(d){return (d.year==year_detail)& (d.AC_NO==acct_no)& (d.rank<12) })
-    }
-            
+        }
+
     deposit_data_set = data_set.filter(function(d){return (d.VOTES>=d.polled_votes/6) })
 
-    var margin = {top: 10, right: 30, bottom: 15, left: 60},
-                width = 960 - margin.left - margin.right,
-                height = 320 - margin.top - margin.bottom;
+    var margin = {top: 10, right: 30, bottom: 15, left: 65},
+   width = 960 - margin.left - margin.right,
+   height = 320 - margin.top - margin.bottom;
     
     var horizontal_bar_svg = d3.select(".horizontal_bar").append("svg")
-                .attr("width", "100%")
-                .attr("data-height","0.54")
-                .attr("viewBox","0 0 "+(width)+" "+(height))
-                .attr("xmlns", 'https://www.w3.org/2000/svg')
-                .attr("xlink", 'https://www.w3.org/1999/xlink')
-                .attr("version", '1.1')
-                .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top/4 + ")");
+   .attr("width", "100%")
+   .attr("data-height","0.54")
+   .attr("viewBox","0 0 "+(width)+" "+(height))
+   .attr("xmlns", 'https://www.w3.org/2000/svg')
+   .attr("xlink", 'https://www.w3.org/1999/xlink')
+   .attr("version", '1.1')
+   .append("g")
+   .attr("transform", "translate(" + margin.left + "," + margin.top/4 + ")");
     
     var constituency_name = '';
     
-    data_set.forEach(function(o) {
+    data_set.forEach(function(o) {    
         constituency_name = o.AC_NAME;
       });
           
     var layers = d3.layout.stack()(['VOTES'].map(function(period) {
         return data_set.map(function(d) {
-          return {x: d['rank']+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : d.color, party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes,rank:d.rank };
+          return {x: d['rank']+': '+d.PARTY, y: parseFloat(d[period]), votes: parseFloat(d[period]), color : color_map[d.PARTY], party:d.PARTY,constituency:d.AC_NAME,name:d.NAME,polled_votes:d.polled_votes,rank:d.rank };
         });
     }));
    
    layers[0] = layers[0].sort(function(a, b){ return d3.ascending(a.rank, b.rank); })
-
+   
    var yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; });});
 
     var yScale = d3.scale.ordinal()
@@ -1511,7 +1552,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     var x = d3.scale.linear()
         .domain([0, yGroupMax])
         .range([0, width-(margin.left*5/2)]);
-
+    
     var color = d3.scale.ordinal()
         .range(["#7aa1c2","#72d8f2","#f3daa4","#66ca9b","#f7f7f7","#f7f7f7"]);
     
@@ -1526,7 +1567,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .tickSize(0)
         .tickPadding(9)
         .orient("left");
-
+    
     var layer = horizontal_bar_svg.selectAll(".layer")
         .data(layers)
         .enter().append("g")
@@ -1535,30 +1576,29 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         d3.selectAll(".tick >text")
             .style("font-size", "13px")    
   
-  
     var rect = layer.selectAll("rect")
         .data(function(d) { return  d; })
         .enter().append("rect")
         .attr("y", function(d) { return yScale(d.x); })
         .attr("height", yScale.rangeBand())
         .attr("x", function(d) { return  x(d.y0); })
-        .attr("width", function(d) { return x(d.y); })
-        .style("fill", function(d,i) { return color_map[d.party]; })
-        .style("stroke", function(d,i) { return d3.rgb(color_map[d.party]).darker(); })
+        .style("fill", function(d,i) { return d.color; })
+        .style("stroke", function(d,i) { return d3.rgb(d.color).darker(); })
         .attr("data-title",function(d) { return 'Constituency : '+d.constituency+' <br/>Candidate : '+d.name+' <br/>party : '+d.party+' <br/>percentage : '+(parseFloat((d.votes/d.polled_votes))*100).toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.votes)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
-      
+        .attr("width", function(d) { return x(d.y); });
+        
     var rect = layer.selectAll("text")
         .data(function(d) { return  d; })
         .enter().append("text")
         .attr("y", function(d) { return yScale(d.x)+(yScale.rangeBand()*4/5); })
-        .attr("x", function(d) { return  x(d.y)+3; })
         .style("text-anchor", "start")
         .attr("fill", "#444")
         .style("font-size","13px")
         .text(function(d) { return addThousandsSeparator(d.votes)+' votes'; })
+        .attr("x", function(d) { return  x(d.y)+3; });
         
         $(".constituency_tag").append("("+constituency_name+")");
-
+    
     layer.append("g")
             .attr("class", "guide_deposit")
         .append("line")
@@ -1577,7 +1617,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .style("text-anchor", "end")
         .attr("data-title","Guide line: 1/6 of polled votes<br/>(16.66 % approx)")
         .text("Deposit Threshold");
-    
+   
     horizontal_bar_svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + (height -margin.bottom - margin.top) + ")")
@@ -1590,12 +1630,12 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
     horizontal_bar_svg.append("text")
         .attr("x", width-margin.left-margin.left-margin.right)
-        .attr("y", height-(margin.top/2)-35)
+        .attr("y", height-(margin.top/2)-30)
         .style("fill", "rgb(99, 99, 99)")
         .style("font-size","13px")
         .style("text-anchor", "end")
         .text("Votes");
-              
+ 
     horizontal_bar_svg.append("g")
         .attr("class", "y axis")
         .attr("transform", "translate(0,0)")
@@ -1612,18 +1652,18 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         var sub_width = parseInt(d3.select('.progress_bar').style('width'), 10);
     
         var margin = {top: 20, right: 20, bottom: 20, left: 20},
-                width = sub_width - margin.left - margin.right,
-                height = 250 - margin.top - margin.bottom;
+   width = sub_width - margin.left - margin.right,
+   height = 250 - margin.top - margin.bottom;
     
         var progress_bar_svg = d3.select(".progress_bar").append("svg")
-                .attr("width", "100%")
-                .attr("data-height","0.54")
-                .attr("viewBox","0 0 "+(width)+" "+(height))
-                .attr("xmlns", 'https://www.w3.org/2000/svg')
-                .attr("xlink", 'https://www.w3.org/1999/xlink')
-                .attr("version", '1.1')
-                .append("g")
-                .attr("transform", "translate(" + width/2 + "," + height*7/12+ ")");
+   .attr("width", "100%")
+   .attr("data-height","0.54")
+   .attr("viewBox","0 0 "+(width)+" "+(height))
+   .attr("xmlns", 'https://www.w3.org/2000/svg')
+   .attr("xlink", 'https://www.w3.org/1999/xlink')
+   .attr("version", '1.1')
+   .append("g")
+   .attr("transform", "translate(" + width/2 + "," + height*7/12+ ")");
     
         value_data = data_set.filter(function(d){return (d.rank==1) })
         
@@ -1632,205 +1672,206 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         fontSize = 16;
         
         var arcs = d3.svg.arc()
-                    .innerRadius(d3.min([width,height])*.27)
-                    .outerRadius(d3.min([width,height])*.4)
-                    .startAngle(0);
+       .innerRadius(d3.min([width,height])*.27)
+       .outerRadius(d3.min([width,height])*.4)
+       .startAngle(0);
 
         var background = progress_bar_svg
-                        .append("path")
-                        .datum({ endAngle : twoPi})
-                        .style("fill", "#ddd")
-                        .attr("d", arcs);
+           .append("path")
+           .datum({ endAngle : twoPi})
+           .style("fill", "#ddd")
+           .attr("d", arcs);
 
         var foreground = progress_bar_svg
-                            .append("path")
-                            .datum({ endAngle : 0})
-                            .style("fill", color_map[value_data[0]['PARTY']])
-                            .attr("class", "foreground")
-                            .attr("d", arcs);
+  .append("path")
+  .datum({ endAngle : 0})
+  .style("fill", color_map[value_data[0]['PARTY']])
+  .attr("class", "foreground")
+  .attr("d", arcs);
 
             foreground
-                .transition()
-                .duration(1000)
-                .ease("linear")
-                .attrTween("d", function(d) {
-                var interpolate = d3.interpolate(d.endAngle, twoPi * value)
-                return function(t) {
-                d.endAngle = interpolate(t);
-                return arcs(d);
+   .transition()
+   .delay(1000)
+   .duration(500)
+   .ease("linear")
+   .attrTween("d", function(d) {
+   var interpolate = d3.interpolate(d.endAngle, twoPi * value)
+   return function(t) {
+   d.endAngle = interpolate(t);
+   return arcs(d);
             }
             });
 
         var text = progress_bar_svg.append("text")
-                    .attr("text-anchor", "middle")
-                    .attr("dy", ".35em")
-                    .style("fill", "rgb(99, 99, 99)")
-                    .attr("font-size", fontSize)
-                    .text((value*100).toFixed(2) + "%");
-                    
+       .attr("text-anchor", "middle")
+       .attr("dy", ".35em")
+       .style("fill", "rgb(99, 99, 99)")
+       .attr("font-size", fontSize)
+       .text((value*100).toFixed(2) + "%");
+       
         var text = progress_bar_svg.append("text")
-                    .attr("text-anchor", "middle")
-                    .attr("y", -100)
-                    .attr("dy", ".35em")
-                    .style("fill", "rgb(99, 99, 99)")
-                    .attr("font-size", fontSize)
-                    .text('Winning Party ('+value_data[0]['PARTY']+')');
+       .attr("text-anchor", "middle")
+       .attr("y", -100)
+       .attr("dy", ".35em")
+       .style("fill", "rgb(99, 99, 99)")
+       .attr("font-size", fontSize)
+       .text('Winning Party ('+value_data[0]['PARTY']+')');
 
         }
+        if (cons_id != undefined){
+        
 
-    if (cons_id != undefined){
-            
             cons_set = data_csv.filter(function(d){ return (d.AC_NAME==cons_id) })
             
             year_list = [];
             cons_set.forEach(function (d) {
-                 
-                year_list.push(parseInt(d['YEAR']))
-                
+    
+   year_list.push(parseInt(d['YEAR']))
+   
             });
             
             year_list = _.uniq(year_list);
-                
+   
             var cons_layers =[]    
             year_list.forEach(function (period) {
-                cons_layers.push(cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) }))
+   cons_layers.push(cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) }))
             });
             
-        
-            var party_names = ['INC','CPM','CPI','IUML','KEC','RSP','BJP','SSP','KEC(M)','PSP','INC(U)','JNP','IND','Others'];
-    
+         var party_names = ['INC','CPM','CPI','IUML','KEC','RSP','BJP','SSP','KEC(M)','PSP','INC(U)','JNP','IND','Others'];
+   
+ 
             year_stack=[];
             cons_layers.forEach(function (year) {    
-                party_view = {'year': parseInt(year[0]['YEAR'])};            
-                
-                sub_party ={}
-                ind_party = []
-                year.forEach(function (d) {
-                    sub_party[d.PARTY] = parseInt(d.VOTES)
-                    if (d.PARTY=='IND'){
-                        ind_party.push(parseInt(d.VOTES)
-                        );
-                    }
-                    else{
-                        sub_party[d.PARTY] = parseInt(d.VOTES)
-                    }
-                });
-                
-                if (ind_party.length>0){
-                    sub_party['IND'] = _.reduce(_.values(ind_party), function(a, b){ return a + b; }, 0)    
-                }
-                
-                party_names.forEach(function (o) {
-                   if (sub_party[o]!=undefined){
-                        party_view[o] = sub_party[o];
-                        sub_party = _.omit(sub_party,o)
-                    }
-                   else{ party_view[o] = 0 }    
-                });
-                
-                var other_party = _.reduce(_.values(sub_party), function(a, b){ return a + b; }, 0)
-                party_view['Others'] = other_party                
-                year_stack.push(party_view)
+   party_view = {'year': parseInt(year[0]['YEAR'])};            
+   
+   sub_party ={}
+   ind_party = []
+   year.forEach(function (d) {
+       sub_party[d.PARTY] = parseInt(d.VOTES)
+       if (d.PARTY=='IND'){
+           ind_party.push(parseInt(d.VOTES)
+           );
+       }
+       else{
+           sub_party[d.PARTY] = parseInt(d.VOTES)
+       }
+   });
+   
+   if (ind_party.length>0){
+       sub_party['IND'] = _.reduce(_.values(ind_party), function(a, b){ return a + b; }, 0)    
+   }
+   
+   party_names.forEach(function (o) {
+      if (sub_party[o]!=undefined){
+           party_view[o] = sub_party[o];
+           sub_party = _.omit(sub_party,o)
+       }
+      else{ party_view[o] = 0 }    
+   });
+   
+   var other_party = _.reduce(_.values(sub_party), function(a, b){ return a + b; }, 0)
+   party_view['Others'] = other_party   
+   year_stack.push(party_view)
             });
             
             var cons_margin = {top: 20, right: 20, bottom: 35, left: 20},
-                cons_width = 1200 - cons_margin.left - cons_margin.right,
-                cons_height = 400 - cons_margin.top - cons_margin.bottom;
+   cons_width = 1200 - cons_margin.left - cons_margin.right,
+   cons_height = 400 - cons_margin.top - cons_margin.bottom;
 
             var cons_x = d3.scale.ordinal()
-                .rangeRoundBands([0, cons_width], .2);
+   .rangeRoundBands([0, cons_width], .2);
 
             var cons_y = d3.scale.linear()
-                .range([cons_height, 0]);
+   .range([cons_height, 0]);
 
             var cons_xAxis = d3.svg.axis()
-                .scale(cons_x)
-                .orient("bottom");
+   .scale(cons_x)
+   .orient("bottom");
 
             var cons_yAxis = d3.svg.axis()
-                .scale(cons_y)
-                .orient("left");
+   .scale(cons_y)
+   .orient("left");
 
             var percent_svg = d3.select(".percent_stackedbar").append("svg")
-                        .style("width", "100%")
-                        .attr("data-height","0.54")
-                        .attr("viewBox","0 0 "+(cons_width + cons_margin.left + cons_margin.right)+" "+(cons_height + cons_margin.top + cons_margin.bottom))
-                        .append("g")
-                        .attr("transform", "translate(" + cons_margin.left + "," + cons_margin.top + ")");
+           .style("width", "100%")
+           .attr("data-height","0.54")
+           .attr("viewBox","0 0 "+(cons_width + cons_margin.left + cons_margin.right)+" "+(cons_height + cons_margin.top + cons_margin.bottom))
+           .append("g")
+           .attr("transform", "translate(" + cons_margin.left + "," + cons_margin.top + ")");
 
             year_stack.forEach(function(d) {
-                    var y0 = 0;
-                    d.party = party_names.map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name],value: +d[name],YEAR:d['year']}; });
-                    d.count_total = d.party[d.party.length - 1].y1;
-                    d.party.forEach(function(o) { o.y0 /= y0; o.y1 /= y0; o.y0= o.y0*100,o.y1=o.y1*100 });
-                    d.total = d.party[d.party.length - 1].y1;
-              });
-              
+       var y0 = 0;
+       d.party = party_names.map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name],value: +d[name],YEAR:d['year']}; });
+       d.count_total = d.party[d.party.length - 1].y1;
+       d.party.forEach(function(o) { o.y0 /= y0; o.y1 /= y0; o.y0= o.y0*100,o.y1=o.y1*100 });
+       d.total = d.party[d.party.length - 1].y1;
+ });
+ 
             year_stack.forEach(function(sub_stack) {
-                sub_stack.party.forEach(function(l) {
-                        l.percent = parseFloat((l.value*100/sub_stack.count_total).toFixed(2));
-                        l.polled_votes = sub_stack.count_total;    
-                    });        
+   sub_stack.party.forEach(function(l) {
+           l.percent = parseFloat((l.value*100/sub_stack.count_total).toFixed(2));
+           l.polled_votes = sub_stack.count_total;    
+       });     
             });
-                
-              cons_x.domain([1957,1960,1965,1967,1970,1977,1980,1982,1987,1991,1996,2001,2006,2011,2016]);
-              cons_y.domain([0, d3.max(year_stack, function(d) { return d.total; })]);
+   
+ cons_x.domain([1967,1971,1977,1980,1984,1989,1991,1996,2001,2006,2011,2016,2021,2026]);
+ cons_y.domain([0, d3.max(year_stack, function(d) { return d.total; })]);
 
-              percent_svg.append("g")
-                    .attr("class", "x axis")
-                    .attr("transform", "translate(0," + cons_height + ")")
-                    .call(cons_xAxis);
+ percent_svg.append("g")
+       .attr("class", "x axis")
+       .attr("transform", "translate(0," + cons_height + ")")
+       .call(cons_xAxis);
 
-              var percent_party = percent_svg.selectAll(".party")
-                  .data(year_stack)
-                  .enter().append("g")
-                  .attr("class", "party")
-                  .attr("transform", function(d) { return "translate(" + cons_x(d['year']) + ",0)"; });
+ var percent_party = percent_svg.selectAll(".party")
+     .data(year_stack)
+     .enter().append("g")
+     .attr("class", "party")
+     .attr("transform", function(d) { return "translate(" + cons_x(d['year']) + ",0)"; });
 
-              percent_party.selectAll("rect")
-                  .data(function(d) { return d.party; })
-                  .enter().append("rect")
-                  .attr('class',function (d) { return 'party_filters '+d.name+'s' })
-                  .attr("width", cons_x.rangeBand())
-                  .attr("y", function(d) { return cons_y(d.y1); })
-                  .attr("height", function(d) { return cons_y(d.y0) - cons_y(d.y1); })
-                  .style("fill", function(d) { return color_map[d.name] })
-                  .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
-                  .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
-                  .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
-                  
-              percent_party.selectAll(".value")
-                .data(function(d) { return d.party; })
-                .enter().append("text")
-                .attr('class',function (d) { return 'value party_filters '+d.name+'s' })
-                .attr("y", function(d) { return ((cons_y(d.y1)+cons_y(d.y0))/2)-1; })
-                .attr("x", cons_x.rangeBand()/2)
-                .attr("text-anchor", "middle")
-                .style("font-size", "15px")
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
-                .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
-                .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.percent.toFixed(0)+'%':' '; });
+ percent_party.selectAll("rect")
+     .data(function(d) { return d.party; })
+     .enter().append("rect")
+     .attr('class',function (d) { return 'party_filters '+d.name+'s' })
+     .attr("width", cons_x.rangeBand())
+     .attr("y", function(d) { return cons_y(d.y1); })
+     .attr("height", function(d) { return cons_y(d.y0) - cons_y(d.y1); })
+     .style("fill", function(d) { return color_map[d.name] })
+     .style("stroke", function(d) { return d3.rgb(color_map[d.name]).darker(); })
+     .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+     .on("mouseover", function() { d3.select(this).attr("stroke-width", 5);})
+     .on("mouseout", function() { d3.select(this).attr("stroke-width", 1);});
+     
+ percent_party.selectAll(".value")
+   .data(function(d) { return d.party; })
+   .enter().append("text")
+   .attr('class',function (d) { return 'value party_filters '+d.name+'s' })
+   .attr("y", function(d) { return ((cons_y(d.y1)+cons_y(d.y0))/2)-1; })
+   .attr("x", cons_x.rangeBand()/2)
+   .attr("text-anchor", "middle")
+   .style("font-size", "15px")
+     .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+   .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
+   .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.percent.toFixed(0)+'%':' '; });
 
-              percent_party.selectAll(".name")
-                .data(function(d) { return d.party; })
-                .enter().append("text")
-                .attr('class',function (d) { return 'name party_filters '+d.name+'s' })
-                .attr("y", function(d) { return ((cons_y(d.y1)+cons_y(d.y0))/2)+12; })
-                .attr("x", cons_x.rangeBand()/2)
-                .attr("text-anchor", "middle")
-                .style("font-size", "12px")
-                  .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
-                .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
-                .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.name:' '; });
+ percent_party.selectAll(".name")
+   .data(function(d) { return d.party; })
+   .enter().append("text")
+   .attr('class',function (d) { return 'name party_filters '+d.name+'s' })
+   .attr("y", function(d) { return ((cons_y(d.y1)+cons_y(d.y0))/2)+12; })
+   .attr("x", cons_x.rangeBand()/2)
+   .attr("text-anchor", "middle")
+   .style("font-size", "12px")
+     .attr("data-title",function(d) { return 'Year : '+d.YEAR+'<br/>Constituency : '+cons_id+' <br/>party : '+d.name+' <br/>percentage : '+d.percent.toFixed(2)+'%  <br/>votes : '+addThousandsSeparator(d.value)+'<br/>polled votes : '+addThousandsSeparator(d.polled_votes)+'' ;})
+   .style("fill", function(d) { return (parseInt(color_map[d.name].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
+   .text(function(d) { return (cons_y(d.y0) - cons_y(d.y1))>29 ?d.name:' '; });
 
             $("rect").tooltip({container: '.percent_stackedbar', html: true, placement:'top'});
             $("text").tooltip({container: '.percent_stackedbar', html: true, placement:'top'});
             
             $(".constituency_tag_percent").append("("+cons_id+")");
         
-        }
-    
+        }    
+            
     var sub_width = parseInt(d3.select('.party_performance_trend_svg').style('width'), 10)
         
     var margin = {top: 20, right: 20, bottom: 20, left: 20},
@@ -1849,26 +1890,26 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         
     contest_data_csv = data_csv.filter(function(d){return (d.year==year_detail)});
         
-        var contest_data_count = d3.nest()
-              .key(function(d) { return d.PARTY; })
-              .rollup(function(v) { return v.length; })
-              .entries(contest_data_csv);
-              
+    var contest_data_count = d3.nest()
+ .key(function(d) { return d.PARTY; })
+ .rollup(function(v) { return v.length; })
+ .entries(contest_data_csv);
+ 
     winning_data_csv = contest_data_csv.filter(function(d){return (d.rank==1)});
     
         var winning_data_count = d3.nest()
-              .key(function(d) { return d.PARTY; })
-              .rollup(function(v) { return v.length; })
-              .entries(winning_data_csv);
-              
+ .key(function(d) { return d.PARTY; })
+ .rollup(function(v) { return v.length; })
+ .entries(winning_data_csv);
          
         winning_data_count.forEach(function(o) {
             o.weight = o.values
             o.width  = +o.weight;
             contest_data_count.forEach(function(d) {
-                if(d.key==o.key){
-                    o.contest = d.values
-                }
+   if(d.key==o.key){
+       o.contest = d.values
+   } 
+
             });
             o.score  = (o.values*100/o.contest).toFixed(2);            
         });
@@ -1880,49 +1921,19 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         .sort(null)
         .value(function(d) { return d.width; });
 
-    var arc = d3.svg.arc()
+        var arc = d3.svg.arc()
           .innerRadius(innerRadius)
           .outerRadius(function (d) { 
             return (radius - innerRadius) * (d.data.score / 100.0) + innerRadius; 
           });
 
         var outlineArc = d3.svg.arc()
-                .innerRadius(innerRadius)
-                .outerRadius(radius);
+   .innerRadius(innerRadius)
+   .outerRadius(radius);
 
-  var path = party_performance_trend_svg.selectAll(".solidArc")
-      .data(pie(winning_data_count))
-    .enter().append("path")
-      .attr("fill", function(d) { return color_map[d.data.key]; })
-      .attr("class", "solidArc")
-      .attr("stroke", function(d) { return d3.rgb(color_map[d.data.key]).darker(); })
-      .attr("d", arc)
-      .attr("data-title",function(d) { return  'party : '+d.data.key+' <br/>contested seats : '+d.data.contest+' <br/>seats won : '+d.data.values+' <br/>convertion percentage : '+d.data.score ;});
+    function map_filter(year_2011,year_2016,year_2021,year_2026){
 
-  var outerPath = party_performance_trend_svg.selectAll(".outlineArc")
-      .data(pie(winning_data_count))
-    .enter().append("path")
-      .attr("fill", "none")
-      .attr("stroke", "gray")
-      .attr("class", "outlineArc")
-      .attr("d", outlineArc);  
-    
-  var max_value = d3.max(winning_data_count, function(d) { return d.values; });
-  winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});
-  
-  party_performance_trend_svg.append("text")
-    .attr("class", "aster-score")
-    .attr("dy", ".35em")
-    .attr("text-anchor", "middle")
-    .style("fill", "rgb(99, 99, 99)")
-    .attr("font-size", 22)    // text-align: right
-    .text(winning_party[0]['key']);
-    
-  $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
-
-    function map_filter(year_2011,year_2016,year_2021){
-
-    data_csv = data_csv.filter(function(d){return ((d.YEAR==2011) |(d.YEAR==2016) |(d.YEAR==2021)) & (d.rank==1) })
+    data_csv = data_csv.filter(function(d){return ((d.YEAR==2011) |(d.YEAR==2016) |(d.YEAR==2021) |(d.YEAR==2026)) & (d.rank==1) })
 
     sub_click = _.pluck(party_2011.filter(function(d) { return d[2011]!='' }),2011)
 
@@ -1948,14 +1959,21 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
 
     data_csv_2021 = data_csv_2021.filter(function(d){return (d.YEAR==2021) & (d.rank==1) })
 
+    var data_csv_2026 = []
+       _.each(data_csv, function(d) { if(_.contains(year_2026, d.PARTY)) { data_csv_2026.push(d);}});
+
+    data_csv_2026 = data_csv_2026.filter(function(d){return (d.YEAR==2026) & (d.rank==1) })
+
     cons_2011 = _.pluck(_.uniq(data_csv_2011, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
     cons_2016 = _.pluck(_.uniq(data_csv_2016, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
     cons_2021 = _.pluck(_.uniq(data_csv_2021, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
+    cons_2026 = _.pluck(_.uniq(data_csv_2026, function(item, key, a) { return item['AC_NAME']; }), 'AC_NAME');
   
-     Array.prototype.extend = function (other_array) {
-                 /* you should include a test to check whether other_array really is an array */
-                 other_array.forEach(function(v) {this.push(v)}, this);    
+  Array.prototype.extend = function (other_array) {
+      /* you should include a test to check whether other_array really is an array */
+      other_array.forEach(function(v) {this.push(v)}, this);
    }
+
 
     data_set = data_csv.filter(function(d){return (d.YEAR==extra_year_detail) & (d.rank==1) })
 
@@ -1963,8 +1981,10 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
        _.each(data_set, function(d) { if(_.contains(cons_2011, d.AC_NAME)) { data_set_sub.push(d);}});
     var data_set_sub_2 = []
        _.each(data_set_sub, function(d) { if(_.contains(cons_2016, d.AC_NAME)) { data_set_sub_2.push(d);}});
+    var data_set_sub_3 = []
+       _.each(data_set_sub_2, function(d) { if(_.contains(cons_2021, d.AC_NAME)) { data_set_sub_3.push(d);}});
     var data_set = []
-       _.each(data_set_sub_2, function(d) { if(_.contains(cons_2021, d.AC_NAME)) { data_set.push(d);}});
+       _.each(data_set_sub_3, function(d) { if(_.contains(cons_2026, d.AC_NAME)) { data_set.push(d);}});
 
     constituency_color = {}
     Candidate = {}
@@ -1973,7 +1993,6 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     votes = {}
     polled_votes = {}
     constituency_list =[]
-
      data_set.forEach(function(o) {
       o.rank = parseInt(o.rank);
       o.year = parseInt(o.YEAR);
@@ -1986,35 +2005,34 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
       Candidate[o.AC_NAME] = o.NAME
       PARTY[o.AC_NAME] = o.PARTY
       percent_votes[o.AC_NAME] = (parseFloat((o.votes/o.polled_votes))*100).toFixed(2)
-    
+          
       });
     
-
     d3.selectAll("a").each( function(d, i){
         if (d3.select(this).attr("acct_no")!=undefined)
-        {    
+        {
             d3.select(this).attr("xlink:href",'?extra_year='+extra_year_detail+'&acct_no='+d3.select(this).attr("acct_no")+'#perConstituency')
         }
      });
-     
+ 
     d3.selectAll("polygon").each( function(d, i){
-  
-      if (PARTY[d3.select(this).attr("id")] !=undefined)
-    {
-          
-        d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/>Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/>party : '+PARTY[d3.select(this).attr("id")]+' <br/>percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/>votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/>polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))
-        d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+PARTY[d3.select(this).attr("id")]+' '+Candidate[d3.select(this).attr("id")] ;})
-        d3.select(this).style("fill", constituency_color[d3.select(this).attr("id")] )
-        d3.select(this).style("stroke","#ddd")
-        d3.select(this).style("stroke-width", 2)
-      }
+
+    if (PARTY[d3.select(this).attr("id")] !=undefined)
+    {    
+    d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+' <br/>Candidate : '+Candidate[d3.select(this).attr("id")]+' <br/>party : '+PARTY[d3.select(this).attr("id")]+' <br/>percentage : '+percent_votes[d3.select(this).attr("id")]+'%  <br/>votes : '+addThousandsSeparator(votes[d3.select(this).attr("id")])+'<br/>polled votes : '+addThousandsSeparator(polled_votes[d3.select(this).attr("id")]))
+    d3.select(this).attr("sub_link",function(d) { return d3.select(this).attr("id")+' '+PARTY[d3.select(this).attr("id")]+' '+Candidate[d3.select(this).attr("id")] ;})
+    d3.select(this).style("fill", constituency_color[d3.select(this).attr("id")] )
+    d3.select(this).style("stroke","#ddd")
+    d3.select(this).style("stroke-width", 2)
+    d3.select(this).attr("class", PARTY[d3.select(this).attr("id")])
+    
+    }
     else{
     d3.select(this).style("fill", '#fff' )
     d3.select(this).style("stroke","#ddd")
     d3.select(this).style("stroke-width", 2)
     d3.select(this).attr("data-title",'Constituency : '+d3.select(this).attr("id")+'<br/>Election Canceled ')
-    }   
-        
+    }
     });
     
     var lastsearch = '';
@@ -2028,16 +2046,15 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
           lastsearch = search;
           var re = new RegExp( "^" + search, "i" );
           $('polygon', $chart).each(function(){
-              $(this).css('opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
+ $(this).css('fill-opacity', re.test($(this).attr("sub_link")) ? '1.0': '0.1');
           });
         }
       });
     }
 
    add_search('.geo_search', '.geo_map');
-    
 
-     var Industry = constituency_list;
+   var Industry = constituency_list;
     
     $( ".geo_search" ).autocomplete({
     source: function(req, responseFn) {
@@ -2049,14 +2066,49 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
         responseFn( a );
     }
     });
-    
-    $("polygon").tooltip({container: 'body', html: true, placement:'top'});
 
+    $("polygon").tooltip({container: 'body', html: true, placement:'top'});
       
   }
+  
+  var path = party_performance_trend_svg.selectAll(".solidArc")
+      .data(pie(winning_data_count))
+    .enter().append("path")
+      .attr("fill", function(d) { return color_map[d.data.key]!=undefined? color_map[d.data.key] : '#363636'; })
+      .attr("class", "solidArc")
+      .attr("stroke", function(d) { return color_map[d.data.key]!=undefined? d3.rgb(color_map[d.data.key]).darker() : d3.rgb('#363636').darker() })
+      .attr("d", arc)
+      .attr('class',function (d) { return 'party_filters '+d.data.key+'s' })
+      .attr("data-title",function(d) { return  'party : '+d.data.key+' <br/>contested seats : '+d.data.contest+' <br/>seats won : '+d.data.values+' <br/>convertion percentage : '+d.data.score ;});
+
+  var outerPath = party_performance_trend_svg.selectAll(".outlineArc")
+      .data(pie(winning_data_count))
+    .enter().append("path")
+      .attr("fill", "none")
+      .attr("stroke", "gray")
+      .attr("class", "outlineArc")
+      .attr("d", outlineArc);  
+    
+  var max_value = d3.max(winning_data_count, function(d) { return d.values; });
+  winning_party = winning_data_count.filter(function(d){return (d.values==max_value)});
+  
+  party_performance_trend_svg.append("text")
+    .attr("class", "aster-score")
+    .attr("dy", ".35em")
+    .attr("text-anchor", "middle")
+    .style("fill", "rgb(99, 99, 99)")
+    .attr("font-size", 22)    // text-align: right
+    .text(winning_party[0]['key']);
+    
+    $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
 
 $('.party_filter').click( function(n) {
 
+ var year_2026 = [];
+      $('#year_2026 :selected').each(function(i, selected){
+          year_2026[i] = $(selected).val();
+      });
+
  var year_2021 = [];
       $('#year_2021 :selected').each(function(i, selected){
           year_2021[i] = $(selected).val();
@@ -2071,12 +2123,16 @@ $('.party_filter').click( function(n) {
         $('#year_2011 :selected').each(function(i, selected){
             year_2011[i] = $(selected).val();
         });
-
-  map_filter(year_2011,year_2016,year_2021);
-
+		
+  map_filter(year_2011,year_2016,year_2021,year_2026);
 
 });
 
+ var year_2026 = [];
+      $('#year_2026 :selected').each(function(i, selected){
+          year_2026[i] = $(selected).val();
+      });
+
  var year_2021 = [];
       $('#year_2021 :selected').each(function(i, selected){
           year_2021[i] = $(selected).val();
@@ -2091,12 +2147,12 @@ $('.party_filter').click( function(n) {
         $('#year_2011 :selected').each(function(i, selected){
             year_2011[i] = $(selected).val();
         });
-  map_filter(year_2011,year_2016,year_2021);
 
-    });
+  map_filter(year_2011,year_2016,year_2021,year_2026);
+  
+  });
 
-
- var margin = {top: 20, right: 20, bottom: 20, left: 20},
+var margin = {top: 50, right: 20, bottom: 20, left: 20},
     width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -2121,34 +2177,33 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-
-
 // load the data (using the timelyportfolio csv method)
 d3.csv("kerala_data.csv", function(error, data) {
 
   party_2011 = _.uniq(data, function(item, key, a) {  return item[2011]; });
   party_2016 = _.uniq(data, function(item, key, a) {  return item[2016]; });
   party_2021 = _.uniq(data, function(item, key, a) {  return item[2021]; });
+  party_2026 = _.uniq(data, function(item, key, a) {  return item[2026]; });
   
- var select_box = d3.select('#year_2011')     
-                .selectAll("option")
-                    .data(party_2011.filter(function(d) { return d[2011]!='' })) 
-                    .enter().append("option")
-                    .attr("value", function (d) { return d[2011]; })
-                    .attr("class","name")
-                    .attr("selected","")
-                    .text(function (d) { return d[2011]; });
+ var select_box = d3.select('#year_2011')
+   .selectAll("option")
+       .data(party_2011.filter(function(d) { return d[2011]!='' })) 
+       .enter().append("option")
+       .attr("value", function (d) { return d[2011]; })
+       .attr("class","name")
+       .attr("selected","")
+       .text(function (d) { return d[2011]; });
 
- var select_box = d3.select('#year_2016')     
-                .selectAll("option")
-                    .data(party_2016.filter(function(d) { return d[2016]!='' }))
-                    .enter().append("option")
-                    .attr("value", function (d) { return d[2016]; })
-                    .attr("class","name")
-                    .attr("selected","")
-                    .text(function (d) { return d[2016]; });
+ var select_box = d3.select('#year_2016')
+   .selectAll("option")
+       .data(party_2016.filter(function(d) { return d[2016]!='' }))
+       .enter().append("option")
+       .attr("value", function (d) { return d[2016]; })
+       .attr("class","name")
+       .attr("selected","")
+       .text(function (d) { return d[2016]; });
 
- var select_box = d3.select('#year_2021')     
+ var select_box = d3.select('#year_2021')
    .selectAll("option")
        .data(party_2021.filter(function(d) { return d[2021]!='' }))
        .enter().append("option")
@@ -2157,10 +2212,18 @@ d3.csv("kerala_data.csv", function(error, data) {
        .attr("selected","")
        .text(function (d) { return d[2021]; });
 
+ var select_box = d3.select('#year_2026')
+   .selectAll("option")
+       .data(party_2026.filter(function(d) { return d[2026]!='' }))
+       .enter().append("option")
+       .attr("value", function (d) { return d[2026]; })
+       .attr("class","name")
+       .attr("selected","")
+       .text(function (d) { return d[2026]; });
 
 $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
 
-    data.forEach(function (d) {
+data.forEach(function (d) {
         d.source_year =d[flowyear_detail.substring(0, 4)]
         d.target_year =d[flowyear_detail.substring(5, 9)] 
         d.combined_year =d[flowyear_detail.substring(0, 4)]+'_'+d[flowyear_detail.substring(5, 9)] 
@@ -2169,10 +2232,10 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
         data = data.filter(function(d){return (d.source_year!='') & (d.target_year!='') })
         
         var data_Count = d3.nest()
-              .key(function(d) { return d.combined_year; })
-              .rollup(function(v) { return v.length; })
-              .entries(data);
-      
+ .key(function(d) { return d.combined_year; })
+ .rollup(function(v) { return v.length; })
+ .entries(data);
+        
   graph = {"nodes" : [], "links" : []};
     
     name_list = []
@@ -2182,10 +2245,10 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
       graph.nodes.push({ "name": '_'+d.key.split("_")[1], "color": color_map[d.key.split("_")[1]] });
 
       graph.links.push({ "source": d.key.split("_")[0],
-                         "target": '_'+d.key.split("_")[1],
-                         "source_color": color_map[d.key.split("_")[0]],
-                         "target_color": color_map[d.key.split("_")[1]],
-                         "value": d.values });
+            "target": '_'+d.key.split("_")[1],
+            "source_color": color_map[d.key.split("_")[0]],
+            "target_color": color_map[d.key.split("_")[1]],
+            "value": d.values });
      });
      
      // return only the distinct / unique nodes
@@ -2210,8 +2273,6 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
     .links(graph.links)
     .layout(32);
 
-    //var party_colors = {'INC(U)':'#4A9F88','BJP':'#ff7f0e','CPI':'#ff5757','CPM':'#ff5757','BAC':'#A99888','Others':'#222','INC':'#3498DB','IND':'#bdc3c7','PSP':'#FFD380','RSP':'#F8F907','IUML':'#014BC6','CPI(M)':'#ff5757','KEC':'#FFAD01'}
-
  svg.selectAll(".head")
       .data([flowyear_detail.substring(0, 4),flowyear_detail.substring(5, 9)])
     .enter().append("text")
@@ -2221,7 +2282,6 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
       .attr("fill", function(d,p) { return p >0 ? "rgb(99, 99, 99)" : "rgb(99, 99, 99)"; })
       .attr("text-anchor", function(d,p) { return p <  1 ? 'middle' : 'middle'; })
       .text(function(d) { return 'year('+d+')'; });
-
 
       
 // add in the links
@@ -2235,7 +2295,7 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
       .style("stroke", function(d) { return d.target_color; })
       .sort(function(a, b) { return b.dy - a.dy; })
       .attr("data-title",function(d) { return d.source.name == d.target.name.replace('_','') ?  d.source.name+' has retained '+format(d.value)+' seats'  : d.target.name.replace('_','') + " has got "+ format(d.value)+" seats from "+ d.source.name; });
-        
+
 // add in the nodes
   var node = svg.append("g").selectAll(".node")
       .data(graph.nodes)
@@ -2256,7 +2316,7 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
      .style("fill", function(d) { return color_map[d.name.replace('_','')]; })
       .style("stroke", function(d) { return d3.rgb(color_map[d.name.replace('_','')]).darker(2); })
        .attr('data-title',function(d) { return d.name.replace('_','') + "\n" + format(d.value)+' Seats'; });
-
+    
   node
     .append("text")
     .attr("y", function(d) { return (d.dy/2)-1; })
@@ -2276,7 +2336,7 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
     .attr("data-title", function(d) { return d.name.replace('_','')+' : '+format(d.value)+' seats'; })
     .style("fill", function(d) { return (parseInt(color_map[d.name.replace('_','')].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff';})
     .text(function(d) { return d.dy>29 ?d.name.replace('_',''):' '; });
-    
+
   $("text").tooltip({container: '.sankey_chart', html: true, placement:'top'});
   $("rect").tooltip({container: '.sankey_chart', html: true, placement:'top'});
   $("path").tooltip({container: '.sankey_chart', html: true, placement:'top'});
@@ -2297,61 +2357,65 @@ $(".select_year").multipleSelect({ placeholder: "Here is the placeholder" });
   function dragmove(d) {
     d3.select(this).attr("transform", 
         "translate(" + d.x + "," + (
-                d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+   d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
             ) + ")");
     sankey.relayout();
     link.attr("d", path);
   }
-
+  
 });
-
  
 // load the data (using the timelyportfolio csv method)
 d3.text("kerala_data.csv", function(error, data) {
 
-   var parsedCSV = d3.csv.parseRows(data);
-   
+   var parsedCSV = d3.csv.parseRows(data); 
    var container = d3.select(".party_trend")
-                      .append("table")
-                       .attr("id","myTable")
-                       .attr("class","table table-bordered");
-                       
+         .append("table")
+          .attr("id","myTable")
+          .attr("class","table table-bordered");
+          
             container.selectAll("thead")
-                .data([parsedCSV[0]]).enter()
-                .append("thead")
-                .attr("class","data_head")
-                .append("tr")
+   .data([parsedCSV[0]]).enter()
+   .append("thead")
+   .attr("class","data_head")
+   .append("tr")
             .selectAll("th")
-                .data(function(d) { return d; }).enter()
-                .append("th")
-                 .attr("class","dynatable-head")
-                 .append("font")
-                    .attr("color","#636363")
-                .text(function(d) { return d; })
+   .data(function(d) { return d; }).enter()
+   .append("th")
+    .attr("class","dynatable-head")
+    .append("font")
+       .attr("color","#636363")
+   .text(function(d) { return d; })
 
             if (0 >-1) { parsedCSV.splice(0, 1);}
-                    
-                container
-                    .append("tbody")
-                     .selectAll("tr")
-                        .data(parsedCSV).enter()
-                        .append("tr")
-                    .selectAll("td")
-                        .data(function(d) { return d; }).enter()
-                        .append("td")
-                        .attr("bgcolor",function(d) { return color_map[d] })
-                        .append("font")
-                        .append('a')
-                        .style("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff') })
-                        .attr("href",function(d,i) { return  i==0? '?cons_id='+d+'#detailConstituency' : '#Constituency_partyTrend' })
-                        .attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff') })
-                        .text(function(d) { return d; })
+       
+   container
+       .append("tbody")
+        .selectAll("tr")
+           .data(parsedCSV).enter()
+           .append("tr")
+       .selectAll("td")
+           .data(function(d) { return d; }).enter()
+           .append("td")
+           .attr("bgcolor",function(d) { return color_map[d] })
+           .append("font")
+           .append('a')
+           .style("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff') })
+           .attr("href",function(d,i) { return  i==0? '?cons_id='+d+'#detailConstituency' : '#Constituency_partyTrend' })
+           .attr("color",function(d) { return color_map[d] == undefined ? "#636363" : ((parseInt(color_map[d].replace('#', ''), 16) >0xffffff / 2) ? '#000' : '#fff') })
+           .text(function(d) { return d; });
 
-      $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
+    $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
    
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".party_filter")?.click();
+});
+  
 </script>
 <div class="container footer_details">
-The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth </a>using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx">eci.nic.in </a>and  <a target="_blank" href="https://eciresults.nic.in/">eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth</a>.</div>
+The data was compiled by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth </a>using data from <a target="_blank" href="https://eci.nic.in/eci_main1/ElectionStatistics.aspx">eci.nic.in </a>and  <a target="_blank" href="https://eciresults.nic.in/">eciresults</a>. The visualisation was designed and built by <a target="_blank" href="https://in.linkedin.com/in/sushanthece">Sushanth</a>.
+</div>
 </body>
 </html>
