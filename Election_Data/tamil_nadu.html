@@ -1136,7 +1136,7 @@ var svg = d3.select(".stacked_bar").append("svg")
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var party_names = ['DMK','INC','SWA','CPM','IND','PSP','CPI','SSP','AIFB','NCO','IUML','ADMK','JNP','GKC','AKD','ADK(JL)','ADK(JR)','TMC','JD','PMK','ICS(SCS)','PT','BJP','MDMK','VCK','DMDK','MNMK','TVK','AMMK'];
+var party_names = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK','ADK(JL)','SWA','JNP','NCO','AIFB','BJP','PSP','GKC','MDMK','VCK','IUML','PT','SSP','ADK(JR)','JD','MNMK','AKD','ICS(SCS)','AMMK'];
   
  data.forEach(function(d) {
         var y0 = 0;
@@ -1271,7 +1271,7 @@ function data_scatter(type_votes){
    return d3.sum(d, function(g) {return g.polled_votes; });
   }).entries(stay_data_csv.filter(function(d){return (d.rank==1) }));
 
-   mapper_party = ['DMK','INC','SWA','CPM','IND','PSP','CPI','SSP','AIFB','NCO','IUML','ADMK','JNP','GKC','AKD','ADK(JL)','ADK(JR)','TMC','JD','PMK','ICS(SCS)','PT','BJP','MDMK','VCK','DMDK','MNMK','TVK','AMMK'];
+   mapper_party = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK','ADK(JL)','SWA','JNP','NCO','AIFB','BJP','PSP','GKC','MDMK','VCK','IUML','PT','SSP','ADK(JR)','JD','MNMK','AKD','ICS(SCS)','AMMK'];
 
    data_mapper_data = stay_data_csv.filter(function(d) { return mapper_party.indexOf(d.PARTY) >-1 })
   
@@ -1820,7 +1820,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
    cons_layers.push(cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) }))
             });
             
-		var party_names = ['DMK','INC','SWA','CPM','IND','PSP','CPI','SSP','AIFB','NCO','IUML','ADMK','JNP','GKC','AKD','ADK(JL)','ADK(JR)','TMC','JD','PMK','ICS(SCS)','PT','BJP','MDMK','VCK','DMDK','MNMK','TVK','AMMK'];
+		var party_names = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK','ADK(JL)','SWA','JNP','NCO','AIFB','BJP','PSP','GKC','MDMK','VCK','IUML','PT','SSP','ADK(JR)','JD','MNMK','AKD','ICS(SCS)','AMMK'];
     
             year_stack=[];
             cons_layers.forEach(function (year) {    
