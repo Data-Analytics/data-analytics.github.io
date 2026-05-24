@@ -438,7 +438,7 @@ Thirumangalam,SWA,1967,Tamil Nadu,133,2,GEN,M.P. RAJAN,M,0,,17062,60503,#222,Mad
 Thirumangalam,IND,1967,Tamil Nadu,133,3,GEN,KAMALAM,F,0,,13890,60503,#bdc3c7,Madurai
 Thirumangalam,IND,1967,Tamil Nadu,133,4,GEN,PETHINAYACKER,M,0,,6246,60503,#bdc3c7,Madurai
 Thirumangalam,IND,1967,Tamil Nadu,133,5,GEN,M.C.S. ARUMUGAM,M,0,,2986,60503,#bdc3c7,Madurai
-Usilampatti,FBL,1967,Tamil Nadu,134,1,GEN,P.K.M. THEVAR,M,0,,44714,62004,#222,Madurai
+Usilampatti,AIFB,1967,Tamil Nadu,134,1,GEN,P.K.M. THEVAR,M,0,,44714,62004,#222,Madurai
 Usilampatti,INC,1967,Tamil Nadu,134,2,GEN,A.M.N. THEVAR,M,0,,16225,62004,#2ecc71,Madurai
 Usilampatti,IND,1967,Tamil Nadu,134,3,GEN,A. YOUGARAJU,M,0,,1065,62004,#bdc3c7,Madurai
 Nilakkottai,DMK,1967,Tamil Nadu,135,1,SC,A. MUNIYANDI,M,0,,37601,65151,#c0392b,Dindigul
@@ -1192,16 +1192,16 @@ Cumbum,CPM,1971,Tamil Nadu,129,3,GEN,HUSSAIN MEER P.,M,0,,2273,70562,#ff5757,The
 Theni,DMK,1971,Tamil Nadu,130,1,GEN,PALANIVELRAJAN,M,0,,45785,71533,#c0392b,
 Theni,NCO,1971,Tamil Nadu,130,2,GEN,RAMASAMY,M,0,,25748,71533,#1F77B4,
 Andipatti,SWA,1971,Tamil Nadu,131,1,GEN,GURUSAMY NAIDU N. V.,M,0,,20814,57225,#222,Theni
-Andipatti,FBL,1971,Tamil Nadu,131,2,GEN,PARAMASIVAM S.,M,0,,16682,57225,#222,Theni
+Andipatti,AIFB,1971,Tamil Nadu,131,2,GEN,PARAMASIVAM S.,M,0,,16682,57225,#222,Theni
 Andipatti,IND,1971,Tamil Nadu,131,3,GEN,VELUCHAMY NAICKER K. V.,M,0,,15469,57225,#bdc3c7,Theni
 Andipatti,IND,1971,Tamil Nadu,131,4,GEN,DAS MUTHU GOUNDER T.,M,0,,4260,57225,#bdc3c7,Theni
-Sedapatti,FBL,1971,Tamil Nadu,132,1,GEN,THAVAMANI THEVAR V.,M,0,,20334,55459,#222,
+Sedapatti,AIFB,1971,Tamil Nadu,132,1,GEN,THAVAMANI THEVAR V.,M,0,,20334,55459,#222,
 Sedapatti,SWA,1971,Tamil Nadu,132,2,GEN,RAMAKRISHNAN M. K.,M,0,,15388,55459,#222,
 Sedapatti,IND,1971,Tamil Nadu,132,3,GEN,S. NAICKER SEENIVASAN M. S.,M,0,,14443,55459,#bdc3c7,
 Sedapatti,IND,1971,Tamil Nadu,132,4,GEN,SUBBAIH P. K.,M,0,,5294,55459,#bdc3c7,
-Thirumangalam,FBL,1971,Tamil Nadu,133,1,GEN,M. C. A. RETHINASAMY THEVAR,M,0,,36468,64016,#222,Madurai
+Thirumangalam,AIFB,1971,Tamil Nadu,133,1,GEN,M. C. A. RETHINASAMY THEVAR,M,0,,36468,64016,#222,Madurai
 Thirumangalam,NCO,1971,Tamil Nadu,133,2,GEN,N. S. V. CHITHAN,M,0,,27548,64016,#1F77B4,Madurai
-Usilampatti,FBL,1971,Tamil Nadu,134,1,GEN,P. K. MOOKIAH THEVAR,M,0,,49292,66201,#222,Madurai
+Usilampatti,AIFB,1971,Tamil Nadu,134,1,GEN,P. K. MOOKIAH THEVAR,M,0,,49292,66201,#222,Madurai
 Usilampatti,IND,1971,Tamil Nadu,134,2,GEN,S. ANDI THEVAR,M,0,,16909,66201,#bdc3c7,Madurai
 Nilakkottai,DMK,1971,Tamil Nadu,135,1,SC,MUNIYANDI A.,M,0,,38583,63123,#c0392b,Dindigul
 Nilakkottai,NCO,1971,Tamil Nadu,135,2,SC,PONNAMMAL A. S.,M,0,,24540,63123,#1F77B4,Dindigul
@@ -1241,7 +1241,7 @@ Athoor,IND,1971,Tamil Nadu,145,3,GEN,SADASIVAM R.,M,0,,3013,70675,#bdc3c7,Dindig
 Vedasandur,DMK,1971,Tamil Nadu,146,1,GEN,MUTHUSAMY P.,M,0,,36746,67821,#c0392b,Dindigul
 Vedasandur,NCO,1971,Tamil Nadu,146,2,GEN,NANJUNDAROW S.,M,0,,23007,67821,#1F77B4,Dindigul
 Vedasandur,CPM,1971,Tamil Nadu,146,3,GEN,VARADARAJAN N.,M,0,,8068,67821,#ff5757,Dindigul
-Aravakurichi,MUL,1971,Tamil Nadu,147,1,GEN,ABDUL JABBAR,M,0,,34164,56846,#222,Karur
+Aravakurichi,IUML,1971,Tamil Nadu,147,1,GEN,ABDUL JABBAR,M,0,,34164,56846,#222,Karur
 Aravakurichi,SWA,1971,Tamil Nadu,147,2,GEN,KADASAMY GOUNDER S.,M,0,,18859,56846,#222,Karur
 Aravakurichi,IND,1971,Tamil Nadu,147,3,GEN,RENGASWAMY GOUNDER K.,M,0,,2653,56846,#bdc3c7,Karur
 Aravakurichi,IND,1971,Tamil Nadu,147,4,GEN,KRISHNAN P. V.,M,0,,1170,56846,#bdc3c7,Karur
@@ -1408,7 +1408,7 @@ Kadaladi,IND,1971,Tamil Nadu,197,5,SC,RAJAM TIRUMATHI P. R.,M,0,,531,48597,#bdc3
 Kadaladi,IND,1971,Tamil Nadu,197,6,SC,KRISHNAN S.,M,0,,242,48597,#bdc3c7,
 Mudhukulathur,IND,1971,Tamil Nadu,198,1,GEN,KADHER BATCHA ALIAS VELLAICHIND,M,0,,18267,55591,#bdc3c7,Ramanathapuram
 Mudhukulathur,NCO,1971,Tamil Nadu,198,2,GEN,SUBRAMONIAM R. C.,M,0,,17532,55591,#1F77B4,Ramanathapuram
-Mudhukulathur,FBL,1971,Tamil Nadu,198,3,GEN,RATHINA THEVAR R.,M,0,,17244,55591,#222,Ramanathapuram
+Mudhukulathur,AIFB,1971,Tamil Nadu,198,3,GEN,RATHINA THEVAR R.,M,0,,17244,55591,#222,Ramanathapuram
 Mudhukulathur,IND,1971,Tamil Nadu,198,4,GEN,ABDUL KADER C.,M,0,,2227,55591,#bdc3c7,Ramanathapuram
 Mudhukulathur,IND,1971,Tamil Nadu,198,5,GEN,DURAIRAJ THEVAR S.,M,0,,321,55591,#bdc3c7,Ramanathapuram
 Paramakudi,DMK,1971,Tamil Nadu,199,1,SC,SIRAIMEETTAN T. K.,M,0,,42614,72260,#c0392b,Ramanathapuram
@@ -1420,11 +1420,11 @@ Sivaganga,IND,1971,Tamil Nadu,200,3,GEN,DL NAGASUNDARAM,M,0,,2685,70310,#bdc3c7,
 Sivaganga,IND,1971,Tamil Nadu,200,4,GEN,MUTHULAKSHMI,M,0,,651,70310,#bdc3c7,Sivaganga
 Manamadurai,DMK,1971,Tamil Nadu,201,1,GEN,T. SONIAH,M,0,,42584,74989,#c0392b,Sivaganga
 Manamadurai,NCO,1971,Tamil Nadu,201,2,GEN,S. SANKARALINGAM,M,0,,32405,74989,#1F77B4,Sivaganga
-Kariapatti,FBL,1971,Tamil Nadu,202,1,GEN,PERUMAL A. R.,M,0,,31499,61360,#222,
+Kariapatti,AIFB,1971,Tamil Nadu,202,1,GEN,PERUMAL A. R.,M,0,,31499,61360,#222,
 Kariapatti,NCO,1971,Tamil Nadu,202,2,GEN,MUTHUVEL SERVAL M.,M,0,,22175,61360,#1F77B4,
 Kariapatti,IND,1971,Tamil Nadu,202,3,GEN,DAVID RAMASAMY S.,M,0,,7096,61360,#bdc3c7,
 Kariapatti,IND,1971,Tamil Nadu,202,4,GEN,MEYYA THEVAR V.,M,0,,590,61360,#bdc3c7,
-Aruppukkottai,FBL,1971,Tamil Nadu,203,1,GEN,SOWDI SUNDARA BHARATHI,M,0,,37021,65332,#222,Virudhunagar
+Aruppukkottai,AIFB,1971,Tamil Nadu,203,1,GEN,SOWDI SUNDARA BHARATHI,M,0,,37021,65332,#222,Virudhunagar
 Aruppukkottai,SWA,1971,Tamil Nadu,203,2,GEN,VEERASAMY M.,M,0,,27908,65332,#222,Virudhunagar
 Aruppukkottai,IND,1971,Tamil Nadu,203,3,GEN,SENTHOORANATHAN S.,M,0,,403,65332,#bdc3c7,Virudhunagar
 Virudhunagar,DMK,1971,Tamil Nadu,204,1,GEN,P. SEENIVASAN,M,0,,31455,63060,#c0392b,Virudhunagar
@@ -1433,7 +1433,7 @@ Virudhunagar,IND,1971,Tamil Nadu,204,3,GEN,K. M. ARUNACHALAM,M,0,,727,63060,#bdc
 Virudhunagar,IND,1971,Tamil Nadu,204,4,GEN,A. SEENIVASAN,M,0,,712,63060,#bdc3c7,Virudhunagar
 Virudhunagar,IND,1971,Tamil Nadu,204,5,GEN,G. THIAGARAJAN,M,0,,180,63060,#bdc3c7,Virudhunagar
 Virudhunagar,IND,1971,Tamil Nadu,204,6,GEN,G. MARIMUTHU,M,0,,108,63060,#bdc3c7,Virudhunagar
-Sattur,FBL,1971,Tamil Nadu,205,1,GEN,ALAGU THEVAR S.,M,0,,32610,58827,#222,Virudhunagar
+Sattur,AIFB,1971,Tamil Nadu,205,1,GEN,ALAGU THEVAR S.,M,0,,32610,58827,#222,Virudhunagar
 Sattur,SWA,1971,Tamil Nadu,205,2,GEN,DORAIRAJ NAICKER R,M,0,,24216,58827,#222,Virudhunagar
 Sattur,IND,1971,Tamil Nadu,205,3,GEN,SOLAIMALAI P.,M,0,,921,58827,#bdc3c7,Virudhunagar
 Sattur,IND,1971,Tamil Nadu,205,4,GEN,SRINIVASAN V.,M,0,,528,58827,#bdc3c7,Virudhunagar
@@ -1452,7 +1452,7 @@ Vilathikulam,NCO,1971,Tamil Nadu,209,2,GEN,SUBBA REDDIAR K.,M,0,,22097,56834,#1F
 Vilathikulam,IND,1971,Tamil Nadu,209,3,GEN,RAMALINGAM S.,M,0,,2154,56834,#bdc3c7,Thoothukkudi
 Kovilpatti,CPI,1971,Tamil Nadu,210,1,GEN,ALAGARSAMY S.,M,0,,38844,62490,#f27a67,Thoothukkudi
 Kovilpatti,NCO,1971,Tamil Nadu,210,2,GEN,SUBBA NAICKER L.,M,0,,23646,62490,#1F77B4,Thoothukkudi
-Ottapidaram,FBL,1971,Tamil Nadu,211,1,SC,M. MUTHIAH,M,0,,27571,48442,#222,Thoothukkudi
+Ottapidaram,AIFB,1971,Tamil Nadu,211,1,SC,M. MUTHIAH,M,0,,27571,48442,#222,Thoothukkudi
 Ottapidaram,SWA,1971,Tamil Nadu,211,2,SC,K. MANOHARAN,M,0,,17861,48442,#222,Thoothukkudi
 Ottapidaram,IND,1971,Tamil Nadu,211,3,SC,V. SUBBIAH,M,0,,1851,48442,#bdc3c7,Thoothukkudi
 Ottapidaram,IND,1971,Tamil Nadu,211,4,SC,S. AYYA PILLAI,M,0,,1159,48442,#bdc3c7,Thoothukkudi
@@ -1477,7 +1477,7 @@ Gangaikondan,IND,1971,Tamil Nadu,219,3,SC,KARUNANITHI M. P.,M,0,,3221,56032,#bdc
 Gangaikondan,IND,1971,Tamil Nadu,219,4,SC,PADMANABHAN P.,M,0,,1641,56032,#bdc3c7,
 Tirunelveli,DMK,1971,Tamil Nadu,220,1,GEN,P. PADMANABHAN,M,0,,43325,69698,#c0392b,Tirunelveli
 Tirunelveli,NCO,1971,Tamil Nadu,220,2,GEN,RAJATHIKUNGHITHAPATHAM,M,0,,26373,69698,#1F77B4,Tirunelveli
-Melapalayam,MUL,1971,Tamil Nadu,221,1,GEN,M. KATHER MOHIDEEN S.,M,0,,35470,62519,#222,
+Melapalayam,IUML,1971,Tamil Nadu,221,1,GEN,M. KATHER MOHIDEEN S.,M,0,,35470,62519,#222,
 Melapalayam,NCO,1971,Tamil Nadu,221,2,GEN,SHANMUGAVEL C.,M,0,,21785,62519,#1F77B4,
 Melapalayam,IND,1971,Tamil Nadu,221,3,GEN,SUSAI MARIYAN M.,M,0,,3743,62519,#bdc3c7,
 Melapalayam,IND,1971,Tamil Nadu,221,4,GEN,SHEIK THAMBI P.,M,0,,1031,62519,#bdc3c7,
@@ -2377,7 +2377,7 @@ Thirumangalam,INC,1977,Tamil Nadu,137,2,GEN,N.S.V. CHITHAN,M,0,,27720,66582,#2ec
 Thirumangalam,DMK,1977,Tamil Nadu,137,3,GEN,U.M. KANNUCHAMY,M,0,,3948,66582,#c0392b,Madurai
 Thirumangalam,JNP,1977,Tamil Nadu,137,4,GEN,M. BALASAMY THEVAR,M,0,,3901,66582,#9A9E56,Madurai
 Thirumangalam,IND,1977,Tamil Nadu,137,5,GEN,R. JAGANATHAN,M,0,,1520,66582,#bdc3c7,Madurai
-Usilampatti,FBL,1977,Tamil Nadu,138,1,GEN,P.K. MOOKAIH THAVER,M,0,,35361,57084,#222,Madurai
+Usilampatti,AIFB,1977,Tamil Nadu,138,1,GEN,P.K. MOOKAIH THAVER,M,0,,35361,57084,#222,Madurai
 Usilampatti,INC,1977,Tamil Nadu,138,2,GEN,N.S. PONNIAH,M,0,,11422,57084,#2ecc71,Madurai
 Usilampatti,JNP,1977,Tamil Nadu,138,3,GEN,K.N. A. NATARAJAN,M,0,,5034,57084,#9A9E56,Madurai
 Usilampatti,DMK,1977,Tamil Nadu,138,4,GEN,T.K.P. RATHINAM,M,0,,4356,57084,#c0392b,Madurai
@@ -2403,7 +2403,7 @@ Madurai West,ADMK,1977,Tamil Nadu,142,1,GEN,T.P.M. PERIYASWAMY,M,0,,32342,75103,
 Madurai West,DMK,1977,Tamil Nadu,142,2,GEN,PON. MUTHURAMALINGAM,M,0,,16211,75103,#c0392b,Madurai
 Madurai West,JNP,1977,Tamil Nadu,142,3,GEN,A.C. KAMARAJ,M,0,,13168,75103,#9A9E56,Madurai
 Madurai West,CPI,1977,Tamil Nadu,142,4,GEN,K.T.K. TENGAMANI,M,0,,12190,75103,#f27a67,Madurai
-Madurai West,FBL,1977,Tamil Nadu,142,5,GEN,S. MAYANDI,M,0,,1192,75103,#222,Madurai
+Madurai West,AIFB,1977,Tamil Nadu,142,5,GEN,S. MAYANDI,M,0,,1192,75103,#222,Madurai
 Madurai Central,ADMK,1977,Tamil Nadu,143,1,GEN,N. LOKSHMINARAYANAN,M,0,,29399,73687,#b2d33c,Madurai
 Madurai Central,INC,1977,Tamil Nadu,143,2,GEN,A. RATHINAM,M,0,,16420,73687,#2ecc71,Madurai
 Madurai Central,DMK,1977,Tamil Nadu,143,3,GEN,S. PANDY,M,0,,14676,73687,#c0392b,Madurai
@@ -2725,7 +2725,7 @@ Kadaladi,IND,1977,Tamil Nadu,202,8,GEN,MOHAMED SULTAN,M,0,,204,70264,#bdc3c7,
 Mudhukulathur,INC,1977,Tamil Nadu,203,1,GEN,S. BALAKRISHNAN,M,0,,17709,73392,#2ecc71,Ramanathapuram
 Mudhukulathur,IND,1977,Tamil Nadu,203,2,GEN,V. MUNISAMY,M,0,,14844,73392,#bdc3c7,Ramanathapuram
 Mudhukulathur,ADMK,1977,Tamil Nadu,203,3,GEN,S.M. KARUMALAIYAN,M,0,,14652,73392,#b2d33c,Ramanathapuram
-Mudhukulathur,FBL,1977,Tamil Nadu,203,4,GEN,K. THANUKODI THEVAR,M,0,,12035,73392,#222,Ramanathapuram
+Mudhukulathur,AIFB,1977,Tamil Nadu,203,4,GEN,K. THANUKODI THEVAR,M,0,,12035,73392,#222,Ramanathapuram
 Mudhukulathur,DMK,1977,Tamil Nadu,203,5,GEN,T. VELUCHAMY,M,0,,7716,73392,#c0392b,Ramanathapuram
 Mudhukulathur,JNP,1977,Tamil Nadu,203,6,GEN,A. HABEEB MOHAMED,M,0,,5524,73392,#9A9E56,Ramanathapuram
 Mudhukulathur,IND,1977,Tamil Nadu,203,7,GEN,M. KALIMUTHU,M,0,,405,73392,#bdc3c7,Ramanathapuram
@@ -2756,7 +2756,7 @@ Virudhunagar,JNP,1977,Tamil Nadu,206,2,GEN,A.S.A. ARUMUGAM,M,0,,22820,74298,#9A9
 Virudhunagar,DMK,1977,Tamil Nadu,206,3,GEN,K.S. KANDASWAMY,M,0,,8331,74298,#c0392b,Virudhunagar
 Virudhunagar,INC,1977,Tamil Nadu,206,4,GEN,S. NARVANEETHA KRISHNAN,M,0,,7520,74298,#2ecc71,Virudhunagar
 Virudhunagar,IND,1977,Tamil Nadu,206,5,GEN,V. CHINNIAH,M,0,,1747,74298,#bdc3c7,Virudhunagar
-Virudhunagar,FBL,1977,Tamil Nadu,206,6,GEN,A. VELU,M,0,,803,74298,#222,Virudhunagar
+Virudhunagar,AIFB,1977,Tamil Nadu,206,6,GEN,A. VELU,M,0,,803,74298,#222,Virudhunagar
 Sivakasi,JNP,1977,Tamil Nadu,207,1,GEN,K. RAMASAMY,M,0,,24518,78800,#9A9E56,Virudhunagar
 Sivakasi,INC,1977,Tamil Nadu,207,2,GEN,DHARWAR,M,0,,22746,78800,#2ecc71,Virudhunagar
 Sivakasi,ADMK,1977,Tamil Nadu,207,3,GEN,K. PONNUPANDIAN,M,0,,22315,78800,#b2d33c,Virudhunagar
@@ -2782,7 +2782,7 @@ Vilathikulam,INC,1977,Tamil Nadu,210,2,GEN,K. SUBBA REDDIAR,M,0,,22001,66125,#2e
 Vilathikulam,DMK,1977,Tamil Nadu,210,3,GEN,A.K. KONDU REDDIAR,M,0,,8720,66125,#c0392b,Thoothukkudi
 Vilathikulam,JNP,1977,Tamil Nadu,210,4,GEN,A.A. ARULANANDAM,M,0,,8452,66125,#9A9E56,Thoothukkudi
 Vilathikulam,IND,1977,Tamil Nadu,210,5,GEN,RAMASWAMY REDDIAR,M,0,,706,66125,#bdc3c7,Thoothukkudi
-Vilathikulam,FBL,1977,Tamil Nadu,210,6,GEN,K.P. GANAPATHY,M,0,,579,66125,#222,Thoothukkudi
+Vilathikulam,AIFB,1977,Tamil Nadu,210,6,GEN,K.P. GANAPATHY,M,0,,579,66125,#222,Thoothukkudi
 Vilathikulam,IND,1977,Tamil Nadu,210,7,GEN,T. THOMAS,M,0,,283,66125,#bdc3c7,Thoothukkudi
 Ottapidaram,INC,1977,Tamil Nadu,211,1,SC,O.S. VELUCHAMI,M,0,,22629,54517,#2ecc71,Thoothukkudi
 Ottapidaram,ADMK,1977,Tamil Nadu,211,2,SC,O. THANGARAJ,M,0,,16801,54517,#b2d33c,Thoothukkudi
@@ -2824,7 +2824,7 @@ Alangulam,JNP,1977,Tamil Nadu,217,2,GEN,R. NAVANEETHAKRISHNAPANDIAN,M,0,,18342,7
 Alangulam,INC,1977,Tamil Nadu,217,3,GEN,S. UKKIRAMAPANDIAN,M,0,,17997,70987,#2ecc71,Tirunelveli
 Alangulam,DMK,1977,Tamil Nadu,217,4,GEN,P. THAMBIDURAI,M,0,,11592,70987,#c0392b,Tirunelveli
 Alangulam,IND,1977,Tamil Nadu,217,5,GEN,S. ARULAPPAN NADAR,M,0,,1024,70987,#bdc3c7,Tirunelveli
-Alangulam,FBL,1977,Tamil Nadu,217,6,GEN,T. THIRUMARAN,M,0,,861,70987,#222,Tirunelveli
+Alangulam,AIFB,1977,Tamil Nadu,217,6,GEN,T. THIRUMARAN,M,0,,861,70987,#222,Tirunelveli
 Alangulam,IND,1977,Tamil Nadu,217,7,GEN,S. SUBBIAH THEVAR,M,0,,663,70987,#bdc3c7,Tirunelveli
 Alangulam,IND,1977,Tamil Nadu,217,8,GEN,M. ROYAPPAN NADAR,M,0,,325,70987,#bdc3c7,Tirunelveli
 Tirunelveli,ADMK,1977,Tamil Nadu,218,1,GEN,G.R. EDMUND,M,0,,26419,68622,#b2d33c,Tirunelveli
@@ -3527,10 +3527,10 @@ Andipatti,IND,1980,Tamil Nadu,135,5,GEN,"MUTHUSAMY, S.",M,0,,455,74415,#bdc3c7,T
 Sedapatti,ADMK,1980,Tamil Nadu,136,1,GEN,"MUTHIAH, R.",M,0,,42012,70169,#b2d33c,
 Sedapatti,DMK,1980,Tamil Nadu,136,2,GEN,"THANGARASAN, R. S.",M,0,,28157,70169,#c0392b,
 Thirumangalam,INC,1980,Tamil Nadu,137,1,GEN,"CHITTHAN, N. S. V.",M,0,,35181,75766,#2ecc71,Madurai
-Thirumangalam,FBL,1980,Tamil Nadu,137,2,GEN,"PERUMAL, A. R.",M,0,,31679,75766,#222,Madurai
+Thirumangalam,AIFB,1980,Tamil Nadu,137,2,GEN,"PERUMAL, A. R.",M,0,,31679,75766,#222,Madurai
 Thirumangalam,JNP,1980,Tamil Nadu,137,3,GEN,"INGARSAL, K. A.",M,0,,8033,75766,#9A9E56,Madurai
 Thirumangalam,IND,1980,Tamil Nadu,137,4,GEN,"KRISHNAN, S.",M,0,,873,75766,#bdc3c7,Madurai
-Usilampatti,FBL,1980,Tamil Nadu,138,1,GEN,"ANDI THEVAR, S.",M,0,,33857,71029,#222,Madurai
+Usilampatti,AIFB,1980,Tamil Nadu,138,1,GEN,"ANDI THEVAR, S.",M,0,,33857,71029,#222,Madurai
 Usilampatti,IND,1980,Tamil Nadu,138,2,GEN,"MUTHURAMALINGAM, P. K. M.",M,0,,21534,71029,#bdc3c7,Madurai
 Usilampatti,DMK,1980,Tamil Nadu,138,3,GEN,"SANTHANA THEVAR, L.",M,0,,15033,71029,#c0392b,Madurai
 Usilampatti,IND,1980,Tamil Nadu,138,4,GEN,"KARUTHA PANDIAN, T. K.",M,0,,605,71029,#bdc3c7,Madurai
@@ -5471,7 +5471,7 @@ Royapuram,IND,1989,Tamil Nadu,1,25,GEN,HASAMUCK,M,0,,26,82142,#bdc3c7,Chennai
 Royapuram,IND,1989,Tamil Nadu,1,26,GEN,R. VENKATESWARAN,M,0,,21,82142,#bdc3c7,Chennai
 Royapuram,IND,1989,Tamil Nadu,1,27,GEN,P. VELMURUGAN,M,0,,14,82142,#bdc3c7,Chennai
 Harbour,DMK,1989,Tamil Nadu,2,1,GEN,M. KARUNANIDHI,M,0,,41632,69669,#c0392b,Chennai
-Harbour,MUL,1989,Tamil Nadu,2,2,GEN,K.A. WAHAB,M,0,,9641,69669,#222,Chennai
+Harbour,IUML,1989,Tamil Nadu,2,2,GEN,K.A. WAHAB,M,0,,9641,69669,#222,Chennai
 Harbour,ADK(JL),1989,Tamil Nadu,2,3,GEN,C.P. PATTABIRA-MAN,M,0,,8086,69669,#222,Chennai
 Harbour,ADK(JR),1989,Tamil Nadu,2,4,GEN,THURAIMUGAM KHAJA MOHIDEEN,M,0,,7055,69669,#222,Chennai
 Harbour,BJP,1989,Tamil Nadu,2,5,GEN,J. MADANAGOPAL RAO,M,0,,1752,69669,#ff7f0e,Chennai
@@ -5644,7 +5644,7 @@ T-Nagar,IND,1989,Tamil Nadu,9,28,GEN,"LAKSHMANAN, M.",M,0,,20,115667,#bdc3c7,Che
 T-Nagar,IND,1989,Tamil Nadu,9,29,GEN,"SELVARAYAN, T.P.",M,0,,19,115667,#bdc3c7,Chennai
 Thousand Lights,DMK,1989,Tamil Nadu,10,1,GEN,"STALIN, M. K.",M,0,,50818,100448,#c0392b,Chennai
 Thousand Lights,ADK(JL),1989,Tamil Nadu,10,2,GEN,"THAMBIDURAI, S.S.R.",M,0,,30184,100448,#222,Chennai
-Thousand Lights,MUL,1989,Tamil Nadu,10,3,GEN,MOHAMED EHIYA,M,0,,10349,100448,#222,Chennai
+Thousand Lights,IUML,1989,Tamil Nadu,10,3,GEN,MOHAMED EHIYA,M,0,,10349,100448,#222,Chennai
 Thousand Lights,ADK(JR),1989,Tamil Nadu,10,4,GEN,"SYED FASIUDDIN, G.M.",M,0,,6616,100448,#222,Chennai
 Thousand Lights,IND,1989,Tamil Nadu,10,5,GEN,ALI FITHRATH,M,0,,478,100448,#bdc3c7,Chennai
 Thousand Lights,IND,1989,Tamil Nadu,10,6,GEN,NEWS ANUDAN.,M,0,,471,100448,#bdc3c7,Chennai
@@ -6096,7 +6096,7 @@ Pernambattu,IND,1989,Tamil Nadu,38,6,SC,"SAMANNAN, K.",M,0,,296,98431,#bdc3c7,
 Pernambattu,IND,1989,Tamil Nadu,38,7,SC,SUBRAMANI,M,0,,224,98431,#bdc3c7,
 Vaniyambadi,DMK,1989,Tamil Nadu,39,1,GEN,"ABDUL SAMAD, P.",M,0,,39723,96421,#c0392b,Vellore
 Vaniyambadi,ADK(JL),1989,Tamil Nadu,39,2,GEN,KULASEKARA PANDIYAN N.,M,0,,22614,96421,#222,Vellore
-Vaniyambadi,MUL,1989,Tamil Nadu,39,3,GEN,ABDUL SAMAD A.K.,M,0,,21599,96421,#222,Vellore
+Vaniyambadi,IUML,1989,Tamil Nadu,39,3,GEN,ABDUL SAMAD A.K.,M,0,,21599,96421,#222,Vellore
 Vaniyambadi,IND,1989,Tamil Nadu,39,4,GEN,"SOLAIPPAN, N.",M,0,,6657,96421,#bdc3c7,Vellore
 Vaniyambadi,IND,1989,Tamil Nadu,39,5,GEN,"VENKATESAN, A.",M,0,,1633,96421,#bdc3c7,Vellore
 Vaniyambadi,BJP,1989,Tamil Nadu,39,6,GEN,"VELAYUDAM, G.K.",M,0,,1084,96421,#ff7f0e,Vellore
@@ -6887,7 +6887,7 @@ Singanallur,IND,1989,Tamil Nadu,104,17,GEN,"BALASUBRAMANIAN, M.",M,0,,57,129195,
 Singanallur,IND,1989,Tamil Nadu,104,18,GEN,"REDDY, K.S.",M,0,,50,129195,#bdc3c7,Coimbatore
 Coimbatore North,DMK,1989,Tamil Nadu,105,1,GEN,"RAMANATHAN, M.",M,0,,39667,90572,#c0392b,Coimbatore
 Coimbatore North,ADK(JL),1989,Tamil Nadu,105,2,GEN,"BALASUBRAMANIAN, T.S.",M,0,,13982,90572,#222,Coimbatore
-Coimbatore North,MUL,1989,Tamil Nadu,105,3,GEN,"ABDUL JABBAR, M.",M,0,,13708,90572,#222,Coimbatore
+Coimbatore North,IUML,1989,Tamil Nadu,105,3,GEN,"ABDUL JABBAR, M.",M,0,,13708,90572,#222,Coimbatore
 Coimbatore North,BJP,1989,Tamil Nadu,105,4,GEN,"RANGARAJU, P.",M,0,,10456,90572,#ff7f0e,Coimbatore
 Coimbatore North,ADK(JR),1989,Tamil Nadu,105,5,GEN,"LAIKATH ALIKHAN, K.",M,0,,7001,90572,#222,Coimbatore
 Coimbatore North,IND,1989,Tamil Nadu,105,6,GEN,"NATARAJAN, M.",M,0,,2604,90572,#bdc3c7,Coimbatore
@@ -7326,7 +7326,7 @@ Sedapatti,ADK(JL),1989,Tamil Nadu,136,2,GEN,"MUTHIAH, R.",M,0,,22895,93210,#222,
 Sedapatti,INC,1989,Tamil Nadu,136,3,GEN,"KANDASAMI, A.T.",M,0,,21749,93210,#2ecc71,
 Sedapatti,IND,1989,Tamil Nadu,136,4,GEN,"GANAPATHI, T.P.",M,0,,8237,93210,#bdc3c7,
 Sedapatti,TNC(K),1989,Tamil Nadu,136,5,GEN,"SELVARASU, S.",M,0,,5111,93210,#222,
-Sedapatti,FBL,1989,Tamil Nadu,136,6,GEN,"THAVAMANI THEVAR, V.",M,0,,4983,93210,#222,
+Sedapatti,AIFB,1989,Tamil Nadu,136,6,GEN,"THAVAMANI THEVAR, V.",M,0,,4983,93210,#222,
 Sedapatti,IND,1989,Tamil Nadu,136,7,GEN,"PANDI, K.",M,0,,299,93210,#bdc3c7,
 Sedapatti,IND,1989,Tamil Nadu,136,8,GEN,APPAN R.P.K.,M,0,,290,93210,#bdc3c7,
 Sedapatti,IND,1989,Tamil Nadu,136,9,GEN,"RAJARAM, A.",M,0,,111,93210,#bdc3c7,
@@ -7345,7 +7345,7 @@ Thirumangalam,IND,1989,Tamil Nadu,137,11,GEN,"RAJU, A.P.",M,0,,108,95967,#bdc3c7
 Usilampatti,DMK,1989,Tamil Nadu,138,1,GEN,"VALLARASU, P.N.",M,0,,29116,86285,#c0392b,Madurai
 Usilampatti,INC,1989,Tamil Nadu,138,2,GEN,"PANDIAN, V.",M,0,,15525,86285,#2ecc71,Madurai
 Usilampatti,ADK(JL),1989,Tamil Nadu,138,3,GEN,"THAVASI, K.",M,0,,13106,86285,#222,Madurai
-Usilampatti,FBL,1989,Tamil Nadu,138,4,GEN,"ANDITHEVAR, S.",M,0,,9090,86285,#222,Madurai
+Usilampatti,AIFB,1989,Tamil Nadu,138,4,GEN,"ANDITHEVAR, S.",M,0,,9090,86285,#222,Madurai
 Usilampatti,IND,1989,Tamil Nadu,138,5,GEN,"MUTHURAMALINGAM, P.K.M",M,0,,8776,86285,#bdc3c7,Madurai
 Usilampatti,IND,1989,Tamil Nadu,138,6,GEN,"RAMASAMI, P.",M,0,,8473,86285,#bdc3c7,Madurai
 Usilampatti,BJP,1989,Tamil Nadu,138,7,GEN,"PITCHAITHEVAR, M.",M,0,,554,86285,#ff7f0e,Madurai
@@ -7472,7 +7472,7 @@ Samayanallur,IND,1989,Tamil Nadu,145,11,SC,K. JERAYAMAN,M,0,,61,140212,#bdc3c7,
 Melur,INC,1989,Tamil Nadu,146,1,GEN,"RANAMANICKAM, K.V.V.",M,0,,41158,113054,#2ecc71,Madurai
 Melur,DMK,1989,Tamil Nadu,146,2,GEN,"THIAGARAJAN, KR.",M,0,,32508,113054,#c0392b,Madurai
 Melur,ADMK,1989,Tamil Nadu,146,3,GEN,"PARAMASIVAN, A.M.",M,0,,31470,113054,#b2d33c,Madurai
-Melur,FBL,1989,Tamil Nadu,146,4,GEN,"DHARMAR ABMALAM, N.",M,0,,3675,113054,#222,Madurai
+Melur,AIFB,1989,Tamil Nadu,146,4,GEN,"DHARMAR ABMALAM, N.",M,0,,3675,113054,#222,Madurai
 Melur,IND,1989,Tamil Nadu,146,5,GEN,"POSALAN, P.R.",M,0,,2176,113054,#bdc3c7,Madurai
 Melur,IND,1989,Tamil Nadu,146,6,GEN,"ALAGARSAMY, U.",M,0,,480,113054,#bdc3c7,Madurai
 Melur,IND,1989,Tamil Nadu,146,7,GEN,KUPPUSAMY MUPPANAR K.P.,M,0,,279,113054,#bdc3c7,Madurai
@@ -8042,7 +8042,7 @@ Kadaladi,IND,1989,Tamil Nadu,202,8,GEN,"RAJENDRAN, S.",M,0,,152,107650,#bdc3c7,
 Mudhukulathur,DMK,1989,Tamil Nadu,203,1,GEN,"KATHER BATCHA ALIAS VELLACHAMY, S.",M,0,,30787,92908,#c0392b,Ramanathapuram
 Mudhukulathur,INC,1989,Tamil Nadu,203,2,GEN,"KRISHNAN, P.K.",M,0,,20383,92908,#2ecc71,Ramanathapuram
 Mudhukulathur,ADK(JL),1989,Tamil Nadu,203,3,GEN,"MURUGAN, K.",M,0,,18970,92908,#222,Ramanathapuram
-Mudhukulathur,FBL,1989,Tamil Nadu,203,4,GEN,"THANIKODI THEVAR, K.",M,0,,9388,92908,#222,Ramanathapuram
+Mudhukulathur,AIFB,1989,Tamil Nadu,203,4,GEN,"THANIKODI THEVAR, K.",M,0,,9388,92908,#222,Ramanathapuram
 Mudhukulathur,TNC(K),1989,Tamil Nadu,203,5,GEN,"SATHIAH, T.",M,0,,4542,92908,#222,Ramanathapuram
 Mudhukulathur,IND,1989,Tamil Nadu,203,6,GEN,ARUNASALAM.R,M,0,,4251,92908,#bdc3c7,Ramanathapuram
 Mudhukulathur,IND,1989,Tamil Nadu,203,7,GEN,"VELUCHAMY, T.",M,0,,3006,92908,#bdc3c7,Ramanathapuram
@@ -8056,7 +8056,7 @@ Mudhukulathur,IND,1989,Tamil Nadu,203,14,GEN,ADAIKALASAMYDORAI S.,M,0,,33,92908,
 Aruppukkottai,DMK,1989,Tamil Nadu,204,1,GEN,"THANGAPANDIAN, V.",M,0,,44990,98688,#c0392b,Virudhunagar
 Aruppukkottai,ADK(JL),1989,Tamil Nadu,204,2,GEN,"PANCHAVARNAM, V.S.",M,0,,29467,98688,#222,Virudhunagar
 Aruppukkottai,INC,1989,Tamil Nadu,204,3,GEN,"CHELLIAH, R.",M,0,,18466,98688,#2ecc71,Virudhunagar
-Aruppukkottai,FBL,1989,Tamil Nadu,204,4,GEN,"PERUMAL, A.R.",M,0,,3521,98688,#222,Virudhunagar
+Aruppukkottai,AIFB,1989,Tamil Nadu,204,4,GEN,"PERUMAL, A.R.",M,0,,3521,98688,#222,Virudhunagar
 Aruppukkottai,IND,1989,Tamil Nadu,204,5,GEN,"DHANUSHOKODI, L.",M,0,,419,98688,#bdc3c7,Virudhunagar
 Aruppukkottai,IND,1989,Tamil Nadu,204,6,GEN,"RAMARAJ, K.R.",M,0,,286,98688,#bdc3c7,Virudhunagar
 Aruppukkottai,IND,1989,Tamil Nadu,204,7,GEN,"RAJU, C.",M,0,,246,98688,#bdc3c7,Virudhunagar
@@ -8286,7 +8286,7 @@ Tirunelveli,IND,1989,Tamil Nadu,218,13,GEN,"SUBBIAH ACHARI, A.",M,0,,82,106862,#
 Tirunelveli,IND,1989,Tamil Nadu,218,14,GEN,"THANGARAJ, T.",M,0,,71,106862,#bdc3c7,Tirunelveli
 Tirunelveli,IND,1989,Tamil Nadu,218,15,GEN,"VIJAYAN, I",M,0,,41,106862,#bdc3c7,Tirunelveli
 Palayamkottai,DMK,1989,Tamil Nadu,219,1,GEN,"GURUNATHAN, S.",M,0,,34046,98943,#c0392b,Tirunelveli
-Palayamkottai,MUL,1989,Tamil Nadu,219,2,GEN,"KHAJA MOHIDEEN, S.A.",M,0,,31615,98943,#222,Tirunelveli
+Palayamkottai,IUML,1989,Tamil Nadu,219,2,GEN,"KHAJA MOHIDEEN, S.A.",M,0,,31615,98943,#222,Tirunelveli
 Palayamkottai,ADK(JR),1989,Tamil Nadu,219,3,GEN,RAJASELVAM,M,0,,16738,98943,#222,Tirunelveli
 Palayamkottai,ADK(JL),1989,Tamil Nadu,219,4,GEN,"KARUPPIAH, A.",M,0,,13321,98943,#222,Tirunelveli
 Palayamkottai,IND,1989,Tamil Nadu,219,5,GEN,GASPAR RAJA G.,M,0,,802,98943,#bdc3c7,Tirunelveli
@@ -8519,7 +8519,7 @@ Harbour,IND,1991,Tamil Nadu,2,18,GEN,ANNAMALAI S.,M,0,,16,63564,#bdc3c7,Chennai
 Harbour,IND,1991,Tamil Nadu,2,19,GEN,PANNEERSELVAM M.,M,0,,10,63564,#bdc3c7,Chennai
 Dr. Radhakrishnan Nagar,ADMK,1991,Tamil Nadu,3,1,GEN,MADHUSUDHNAN E.,M,0,,66710,110639,#b2d33c,Chennai
 Dr. Radhakrishnan Nagar,JD,1991,Tamil Nadu,3,2,GEN,RAJASEKARAN V.,M,0,,41758,110639,#222,Chennai
-Dr. Radhakrishnan Nagar,MUL,1991,Tamil Nadu,3,3,GEN,GULAM HUSEIEN A.M.,M,0,,941,110639,#222,Chennai
+Dr. Radhakrishnan Nagar,IUML,1991,Tamil Nadu,3,3,GEN,GULAM HUSEIEN A.M.,M,0,,941,110639,#222,Chennai
 Dr. Radhakrishnan Nagar,BJP,1991,Tamil Nadu,3,4,GEN,JAGANATHAN V.R.,M,0,,636,110639,#ff7f0e,Chennai
 Dr. Radhakrishnan Nagar,TMM,1991,Tamil Nadu,3,5,GEN,DIWAN AHMED A.,M,0,,111,110639,#222,Chennai
 Dr. Radhakrishnan Nagar,IND,1991,Tamil Nadu,3,6,GEN,GANESH M.,M,0,,104,110639,#bdc3c7,Chennai
@@ -8649,7 +8649,7 @@ Thousand Lights,IND,1991,Tamil Nadu,10,24,GEN,JAYARAMAN K.,M,0,,16,98092,#bdc3c7
 Chepauk,INC,1991,Tamil Nadu,11,1,GEN,ZEENATH SHERIFFDEEN,F,0,,29605,58482,#2ecc71,Chennai
 Chepauk,DMK,1991,Tamil Nadu,11,2,GEN,ANBAZHAGAN.K,M,0,,25149,58482,#c0392b,Chennai
 Chepauk,BJP,1991,Tamil Nadu,11,3,GEN,KARTHIKEYAN G.,M,0,,2559,58482,#ff7f0e,Chennai
-Chepauk,MUL,1991,Tamil Nadu,11,4,GEN,SHAM SHAHABUDDIN S.K.,M,0,,609,58482,#222,Chennai
+Chepauk,IUML,1991,Tamil Nadu,11,4,GEN,SHAM SHAHABUDDIN S.K.,M,0,,609,58482,#222,Chennai
 Chepauk,JP,1991,Tamil Nadu,11,5,GEN,MOHAMED ALI M.,M,0,,134,58482,#222,Chennai
 Chepauk,IND,1991,Tamil Nadu,11,6,GEN,SARAVANAN D.V.,M,0,,84,58482,#bdc3c7,Chennai
 Chepauk,IND,1991,Tamil Nadu,11,7,GEN,RAVIKUMAR T.,M,0,,79,58482,#bdc3c7,Chennai
@@ -9250,7 +9250,7 @@ Anaicut,IND,1991,Tamil Nadu,47,10,GEN,MOHANRAJ N.S.,M,0,,137,94484,#bdc3c7,Vello
 Anaicut,IND,1991,Tamil Nadu,47,11,GEN,RAJENDRAN K.,M,0,,130,94484,#bdc3c7,Vellore
 Vellore,INC,1991,Tamil Nadu,48,1,GEN,GNANASEKARAN C.,M,0,,60698,104111,#2ecc71,Vellore
 Vellore,DMK,1991,Tamil Nadu,48,2,GEN,RAMALINGAM A.M.,M,0,,37632,104111,#c0392b,Vellore
-Vellore,MUL,1991,Tamil Nadu,48,3,GEN,HABIBULLAH M.M.,M,0,,3973,104111,#222,Vellore
+Vellore,IUML,1991,Tamil Nadu,48,3,GEN,HABIBULLAH M.M.,M,0,,3973,104111,#222,Vellore
 Vellore,JP,1991,Tamil Nadu,48,4,GEN,LOGANATHAN R.,M,0,,828,104111,#222,Vellore
 Vellore,IND,1991,Tamil Nadu,48,5,GEN,SHARIEF M.Z.,M,0,,185,104111,#bdc3c7,Vellore
 Vellore,TMM,1991,Tamil Nadu,48,6,GEN,STALIN K.,M,0,,181,104111,#222,Vellore
@@ -9540,7 +9540,7 @@ Yercaud,JP,1991,Tamil Nadu,87,5,ST,ANDI K.,M,0,,449,82021,#222,Salem
 Salem-I,INC,1991,Tamil Nadu,88,1,GEN,JAYARAMAN S.R.,M,0,,72792,110335,#2ecc71,
 Salem-I,DMK,1991,Tamil Nadu,88,2,GEN,SUBASH G.K.,M,0,,31698,110335,#c0392b,
 Salem-I,BJP,1991,Tamil Nadu,88,3,GEN,RAMANATHAN V.,M,0,,2130,110335,#ff7f0e,
-Salem-I,MUL,1991,Tamil Nadu,88,4,GEN,KHADER HUSSAIN M.B.,M,0,,1806,110335,#222,
+Salem-I,IUML,1991,Tamil Nadu,88,4,GEN,KHADER HUSSAIN M.B.,M,0,,1806,110335,#222,
 Salem-I,JP,1991,Tamil Nadu,88,5,GEN,KANNAMMA GANAPATHY M.,F,0,,1010,110335,#222,
 Salem-I,IND,1991,Tamil Nadu,88,6,GEN,ARTHANARIASAMY CHETTY T.B.S.,M,0,,125,110335,#bdc3c7,
 Salem-I,IND,1991,Tamil Nadu,88,7,GEN,SELVAKUMARAN P.M.,M,0,,102,110335,#bdc3c7,
@@ -9741,7 +9741,7 @@ Singanallur,TMC,1991,Tamil Nadu,104,15,GEN,RAJASEKARAN G.,M,0,,76,122727,#4747ff
 Coimbatore North,INC,1991,Tamil Nadu,105,1,GEN,SELVARAJ K.,M,0,,41194,80640,#2ecc71,Coimbatore
 Coimbatore North,DMK,1991,Tamil Nadu,105,2,GEN,RAMANATHAN M.,M,0,,24696,80640,#c0392b,Coimbatore
 Coimbatore North,BJP,1991,Tamil Nadu,105,3,GEN,MANI ALIAS MOOKAMBIKAI MANI,M,0,,11718,80640,#ff7f0e,Coimbatore
-Coimbatore North,MUL,1991,Tamil Nadu,105,4,GEN,ABDUL SALAM P.K.,M,0,,988,80640,#222,Coimbatore
+Coimbatore North,IUML,1991,Tamil Nadu,105,4,GEN,ABDUL SALAM P.K.,M,0,,988,80640,#222,Coimbatore
 Coimbatore North,IND,1991,Tamil Nadu,105,5,GEN,RAMACHANDARAN A.S.,M,0,,397,80640,#bdc3c7,Coimbatore
 Coimbatore North,IND,1991,Tamil Nadu,105,6,GEN,MUST HAFA KAMAL A.M.,M,0,,306,80640,#bdc3c7,Coimbatore
 Coimbatore North,JP,1991,Tamil Nadu,105,7,GEN,RAMARAJ J.R.,M,0,,243,80640,#222,Coimbatore
@@ -10155,7 +10155,7 @@ Thirumangalam,IND,1991,Tamil Nadu,137,8,GEN,P. SUBBIAH,M,0,,183,96774,#bdc3c7,Ma
 Thirumangalam,IND,1991,Tamil Nadu,137,9,GEN,V. VEERAPAN,M,0,,171,96774,#bdc3c7,Madurai
 Thirumangalam,IND,1991,Tamil Nadu,137,10,GEN,P.K. ATHARAMALAI,M,0,,144,96774,#bdc3c7,Madurai
 Usilampatti,ADMK,1991,Tamil Nadu,138,1,GEN,R. PANDIAMMAL,F,0,,41654,82818,#b2d33c,Madurai
-Usilampatti,FBL,1991,Tamil Nadu,138,2,GEN,P.N. VALLARASU,M,0,,38460,82818,#222,Madurai
+Usilampatti,AIFB,1991,Tamil Nadu,138,2,GEN,P.N. VALLARASU,M,0,,38460,82818,#222,Madurai
 Usilampatti,BJP,1991,Tamil Nadu,138,3,GEN,R.S. BOSE,M,0,,638,82818,#ff7f0e,Madurai
 Usilampatti,PMK,1991,Tamil Nadu,138,4,GEN,A. THANGAVELU,M,0,,606,82818,#d35400,Madurai
 Usilampatti,IND,1991,Tamil Nadu,138,5,GEN,M.K. VELLAICHAMY,M,0,,390,82818,#bdc3c7,Madurai
@@ -10672,7 +10672,7 @@ Srirangam,IND,1991,Tamil Nadu,165,5,GEN,L. MARIMUTHY,M,0,,407,116957,#bdc3c7,Tir
 Srirangam,IND,1991,Tamil Nadu,165,6,GEN,S. PANDU,M,0,,248,116957,#bdc3c7,Tiruchirappalli
 Tiruchirapalli-I,ADMK,1991,Tamil Nadu,166,1,GEN,S. AROKIASAMY,M,0,,42774,75471,#b2d33c,
 Tiruchirapalli-I,DMK,1991,Tamil Nadu,166,2,GEN,A. MALARAMANNAN,M,0,,27839,75471,#c0392b,
-Tiruchirapalli-I,MUL,1991,Tamil Nadu,166,3,GEN,M. RAJMOHAMED,M,0,,2301,75471,#222,
+Tiruchirapalli-I,IUML,1991,Tamil Nadu,166,3,GEN,M. RAJMOHAMED,M,0,,2301,75471,#222,
 Tiruchirapalli-I,BJP,1991,Tamil Nadu,166,4,GEN,S. P. PALANIYAPPAN,M,0,,1389,75471,#ff7f0e,
 Tiruchirapalli-I,JP,1991,Tamil Nadu,166,5,GEN,A. T. M. PARAMASIVAM,M,0,,333,75471,#222,
 Tiruchirapalli-I,IND,1991,Tamil Nadu,166,6,GEN,A. XAVIER DURAIRAJ,M,0,,233,75471,#bdc3c7,
@@ -10686,7 +10686,7 @@ Tiruchirapalli-I,IND,1991,Tamil Nadu,166,12,GEN,T. RAJA,M,0,,36,75471,#bdc3c7,
 Tiruchirapalli-I,IND,1991,Tamil Nadu,166,14,GEN,P. THIRUGNANASSAMBANDAM,M,0,,20,75471,#bdc3c7,
 Tiruchirapalli-Ii,ADMK,1991,Tamil Nadu,167,1,GEN,MALA SELVI G. R.,F,0,,54664,95597,#b2d33c,
 Tiruchirapalli-Ii,DMK,1991,Tamil Nadu,167,2,GEN,ANBIL POYYAMOZHI,M,0,,34120,95597,#c0392b,
-Tiruchirapalli-Ii,MUL,1991,Tamil Nadu,167,3,GEN,KADER MOHIDEEN K. M.,M,0,,4240,95597,#222,
+Tiruchirapalli-Ii,IUML,1991,Tamil Nadu,167,3,GEN,KADER MOHIDEEN K. M.,M,0,,4240,95597,#222,
 Tiruchirapalli-Ii,BJP,1991,Tamil Nadu,167,4,GEN,DEV ANANTH K. S.,M,0,,1259,95597,#ff7f0e,
 Tiruchirapalli-Ii,JP,1991,Tamil Nadu,167,5,GEN,VELUSAMY E.,M,0,,591,95597,#222,
 Tiruchirapalli-Ii,IND,1991,Tamil Nadu,167,6,GEN,MASTHAN,M,0,,213,95597,#bdc3c7,
@@ -10899,7 +10899,7 @@ Tiruvadanai,IND,1991,Tamil Nadu,196,5,GEN,SAVARIYAR,M,0,,309,104461,#bdc3c7,Rama
 Tiruvadanai,TMM,1991,Tamil Nadu,196,6,GEN,DAMOTHARAN,M,0,,261,104461,#222,Ramanathapuram
 Ilayangudi,ADMK,1991,Tamil Nadu,197,1,GEN,MA.SA.MA. RAMACHANDRAN,M,0,,52994,85582,#b2d33c,
 Ilayangudi,DMK,1991,Tamil Nadu,197,2,GEN,N. NALLASETHUPATHI,M,0,,28864,85582,#c0392b,
-Ilayangudi,MUL,1991,Tamil Nadu,197,3,GEN,N. H. MOHAMED CASSIM,M,0,,2784,85582,#222,
+Ilayangudi,IUML,1991,Tamil Nadu,197,3,GEN,N. H. MOHAMED CASSIM,M,0,,2784,85582,#222,
 Ilayangudi,IND,1991,Tamil Nadu,197,4,GEN,S. JEYARANI,F,0,,346,85582,#bdc3c7,
 Ilayangudi,IND,1991,Tamil Nadu,197,5,GEN,M. SELVAM,M,0,,325,85582,#bdc3c7,
 Ilayangudi,IND,1991,Tamil Nadu,197,6,GEN,A. MANI,M,0,,269,85582,#bdc3c7,
@@ -10934,7 +10934,7 @@ Ramanathapuram,IND,1991,Tamil Nadu,201,10,GEN,MAN I A.,M,0,,65,105098,#bdc3c7,Ra
 Ramanathapuram,IND,1991,Tamil Nadu,201,11,GEN,BASKARAN P.,M,0,,45,105098,#bdc3c7,Ramanathapuram
 Kadaladi,ADMK,1991,Tamil Nadu,202,1,GEN,SATHIAMOORTHY V.,M,0,,56552,101619,#b2d33c,
 Kadaladi,DMK,1991,Tamil Nadu,202,2,GEN,KALIMUTHU K.,M,0,,27098,101619,#c0392b,
-Kadaladi,MUL,1991,Tamil Nadu,202,3,GEN,MOHAMED MUBARAK ALIM,M,0,,17230,101619,#222,
+Kadaladi,IUML,1991,Tamil Nadu,202,3,GEN,MOHAMED MUBARAK ALIM,M,0,,17230,101619,#222,
 Kadaladi,JP,1991,Tamil Nadu,202,4,GEN,VELUSAMY NADAR V. A.,M,0,,240,101619,#222,
 Kadaladi,IND,1991,Tamil Nadu,202,5,GEN,MANGALESWARAN M. R.,M,0,,187,101619,#bdc3c7,
 Kadaladi,TMM,1991,Tamil Nadu,202,6,GEN,RAJENDRAN P.,M,0,,178,101619,#222,
@@ -11088,13 +11088,13 @@ Sankarankovil,IND,1991,Tamil Nadu,213,4,SC,SURIAKANTHI N.,F,0,,484,106043,#bdc3c
 Sankarankovil,TMM,1991,Tamil Nadu,213,5,SC,MADASAMY S.,M,0,,251,106043,#222,Tirunelveli
 Vasudevanallur,INC,1991,Tamil Nadu,214,1,SC,ESWARAN R.,M,0,,54688,93835,#2ecc71,Tirunelveli
 Vasudevanallur,CPM,1991,Tamil Nadu,214,2,SC,KRISHNAN R.,M,0,,34374,93835,#ff5757,Tirunelveli
-Vasudevanallur,MUL,1991,Tamil Nadu,214,3,SC,PAULRAJ K.,M,0,,3567,93835,#222,Tirunelveli
+Vasudevanallur,IUML,1991,Tamil Nadu,214,3,SC,PAULRAJ K.,M,0,,3567,93835,#222,Tirunelveli
 Vasudevanallur,TMM,1991,Tamil Nadu,214,4,SC,MADASAMY S.,M,0,,572,93835,#222,Tirunelveli
 Vasudevanallur,IND,1991,Tamil Nadu,214,5,SC,KARADI MADASAMY V.,M,0,,420,93835,#bdc3c7,Tirunelveli
 Vasudevanallur,IND,1991,Tamil Nadu,214,6,SC,MANIKKAM A.,M,0,,214,93835,#bdc3c7,Tirunelveli
 Kadayanallur,ADMK,1991,Tamil Nadu,215,1,GEN,S. NAGOORMEERAN,M,0,,55681,98387,#b2d33c,Tirunelveli
 Kadayanallur,DMK,1991,Tamil Nadu,215,2,GEN,SAMSUDEEN ALIAS KATHIRAVAN,M,0,,27971,98387,#c0392b,Tirunelveli
-Kadayanallur,MUL,1991,Tamil Nadu,215,3,GEN,V.S. KAMARUDEEN,M,0,,8215,98387,#222,Tirunelveli
+Kadayanallur,IUML,1991,Tamil Nadu,215,3,GEN,V.S. KAMARUDEEN,M,0,,8215,98387,#222,Tirunelveli
 Kadayanallur,BJP,1991,Tamil Nadu,215,4,GEN,R. MAILERUMPERUMAL,M,0,,5316,98387,#ff7f0e,Tirunelveli
 Kadayanallur,TMM,1991,Tamil Nadu,215,5,GEN,SELVAKUMAR ALIAS I.S.S. RAJAN,M,0,,377,98387,#222,Tirunelveli
 Kadayanallur,IND,1991,Tamil Nadu,215,6,GEN,MYDEEN PITCHAI,M,0,,268,98387,#bdc3c7,Tirunelveli
@@ -11106,7 +11106,7 @@ Kadayanallur,IND,1991,Tamil Nadu,215,11,GEN,M.S. ESAKKIA PILLAI ALIAS DURAI PILL
 Tenkasi,INC,1991,Tamil Nadu,216,1,GEN,PETER ALPHONSE S.,M,0,,65142,104893,#2ecc71,Tirunelveli
 Tenkasi,DMK,1991,Tamil Nadu,216,2,GEN,RAMAKRISHNAN S.,M,0,,28263,104893,#c0392b,Tirunelveli
 Tenkasi,BJP,1991,Tamil Nadu,216,3,GEN,SASTHA R.T.,M,0,,7228,104893,#ff7f0e,Tirunelveli
-Tenkasi,MUL,1991,Tamil Nadu,216,4,GEN,CHELLATHURAI N.,M,0,,3185,104893,#222,Tirunelveli
+Tenkasi,IUML,1991,Tamil Nadu,216,4,GEN,CHELLATHURAI N.,M,0,,3185,104893,#222,Tirunelveli
 Tenkasi,TMM,1991,Tamil Nadu,216,5,GEN,KUMAR M.,M,0,,273,104893,#222,Tirunelveli
 Tenkasi,IND,1991,Tamil Nadu,216,6,GEN,BALRAJ A.,M,0,,271,104893,#bdc3c7,Tirunelveli
 Tenkasi,IND,1991,Tamil Nadu,216,7,GEN,POORVAMPRAKASH T.S.P.,M,0,,172,104893,#bdc3c7,Tirunelveli
@@ -11139,7 +11139,7 @@ Tirunelveli,IND,1991,Tamil Nadu,218,12,GEN,BAGAVATHILA PILLAI P.,M,0,,52,100516,
 Tirunelveli,IND,1991,Tamil Nadu,218,13,GEN,KARUPPASAMI R.,M,0,,41,100516,#bdc3c7,Tirunelveli
 Palayamkottai,ADMK,1991,Tamil Nadu,219,1,GEN,DHARAMALINGAM P.,M,0,,45141,97909,#b2d33c,Tirunelveli
 Palayamkottai,TMC,1991,Tamil Nadu,219,2,GEN,KARUPPASAMY PANDIAN V.,M,0,,38250,97909,#4747ff,Tirunelveli
-Palayamkottai,MUL,1991,Tamil Nadu,219,3,GEN,MUHAMMED MEERAN MOHIDEEN L.K.S.,M,0,,12429,97909,#222,Tirunelveli
+Palayamkottai,IUML,1991,Tamil Nadu,219,3,GEN,MUHAMMED MEERAN MOHIDEEN L.K.S.,M,0,,12429,97909,#222,Tirunelveli
 Palayamkottai,TMM,1991,Tamil Nadu,219,4,GEN,DANIEL RATHINAM I.,M,0,,474,97909,#222,Tirunelveli
 Palayamkottai,JP,1991,Tamil Nadu,219,5,GEN,NOORL HAMEEM A.,M,0,,341,97909,#222,Tirunelveli
 Palayamkottai,IND,1991,Tamil Nadu,219,6,GEN,MOHAMMED MATHAR M.,M,0,,247,97909,#bdc3c7,Tirunelveli
@@ -11213,7 +11213,7 @@ Tiruchendur,ADMK,1991,Tamil Nadu,225,1,GEN,CHELLADURAI A.,M,0,,54442,92864,#b2d3
 Tiruchendur,DMK,1991,Tamil Nadu,225,2,GEN,PANDIAN A.S.,M,0,,27794,92864,#c0392b,Thoothukkudi
 Tiruchendur,BJP,1991,Tamil Nadu,225,3,GEN,POOVANAM K.,M,0,,4615,92864,#ff7f0e,Thoothukkudi
 Tiruchendur,IND,1991,Tamil Nadu,225,4,GEN,PACKIARAJ A.,M,0,,3016,92864,#bdc3c7,Thoothukkudi
-Tiruchendur,MUL,1991,Tamil Nadu,225,5,GEN,KAYAL MAHABOOB,M,0,,2039,92864,#222,Thoothukkudi
+Tiruchendur,IUML,1991,Tamil Nadu,225,5,GEN,KAYAL MAHABOOB,M,0,,2039,92864,#222,Thoothukkudi
 Tiruchendur,IND,1991,Tamil Nadu,225,6,GEN,PAULPANDIYAN,M,0,,202,92864,#bdc3c7,Thoothukkudi
 Tiruchendur,JP,1991,Tamil Nadu,225,7,GEN,JOSEPH A.,M,0,,177,92864,#222,Thoothukkudi
 Tiruchendur,TMM,1991,Tamil Nadu,225,8,GEN,ANDREWS,M,0,,84,92864,#222,Thoothukkudi
@@ -14638,7 +14638,7 @@ Thirumangalam,IND,1996,Tamil Nadu,137,14,GEN,S. PANDI,M,0,,72,106622,#bdc3c7,Mad
 Thirumangalam,IND,1996,Tamil Nadu,137,15,GEN,K.M. RAJA,M,0,,70,106622,#bdc3c7,Madurai
 Thirumangalam,IND,1996,Tamil Nadu,137,16,GEN,K. BALASUBRAMANIAN,M,0,,61,106622,#bdc3c7,Madurai
 Thirumangalam,IND,1996,Tamil Nadu,137,17,GEN,S. NALLIAH THEVAR,M,0,,47,106622,#bdc3c7,Madurai
-Usilampatti,FBL,1996,Tamil Nadu,138,1,GEN,P.N. VALLARASU,M,0,,75324,98877,#222,Madurai
+Usilampatti,AIFB,1996,Tamil Nadu,138,1,GEN,P.N. VALLARASU,M,0,,75324,98877,#222,Madurai
 Usilampatti,ADMK,1996,Tamil Nadu,138,2,GEN,P. VELUCHAMY,M,0,,19421,98877,#b2d33c,Madurai
 Usilampatti,IND,1996,Tamil Nadu,138,3,GEN,M. PERUMAL,M,0,,3582,98877,#bdc3c7,Madurai
 Usilampatti,IND,1996,Tamil Nadu,138,4,GEN,C. LENIN,M,0,,131,98877,#bdc3c7,Madurai
@@ -17493,7 +17493,7 @@ Thirumangalam,MDMK,2001,Tamil Nadu,137,3,GEN,SWAMINATHAN K.R.,M,0,,9591,110268,#
 Thirumangalam,IND,2001,Tamil Nadu,137,4,GEN,MATHIYALAGAN M.R.,M,0,,1177,110268,#bdc3c7,Madurai
 Thirumangalam,JD(U),2001,Tamil Nadu,137,5,GEN,RAJASEKARAN M,M,0,,809,110268,#222,Madurai
 Thirumangalam,IND,2001,Tamil Nadu,137,6,GEN,KARMEGAM R,M,0,,693,110268,#bdc3c7,Madurai
-Usilampatti,FBL,2001,Tamil Nadu,138,1,GEN,SANTHANAM.L,M,0,,39248,90594,#222,Madurai
+Usilampatti,AIFB,2001,Tamil Nadu,138,1,GEN,SANTHANAM.L,M,0,,39248,90594,#222,Madurai
 Usilampatti,DMK,2001,Tamil Nadu,138,2,GEN,RAMASAMY.S.O,M,0,,30181,90594,#c0392b,Madurai
 Usilampatti,IND,2001,Tamil Nadu,138,3,GEN,KATHIRAVAN.P.V,M,0,,9834,90594,#bdc3c7,Madurai
 Usilampatti,JP,2001,Tamil Nadu,138,4,GEN,MURUGAN.A,M,0,,7455,90594,#222,Madurai
@@ -17704,7 +17704,7 @@ Srirangam,IND,2001,Tamil Nadu,165,4,GEN,PAUL FELOMINRAJ EASU.J,M,0,,1042,137531,
 Srirangam,IND,2001,Tamil Nadu,165,5,GEN,ANBUSELVAN.M,M,0,,941,137531,#bdc3c7,Tiruchirappalli
 Srirangam,IND,2001,Tamil Nadu,165,6,GEN,RAMAR.M,M,0,,544,137531,#bdc3c7,Tiruchirappalli
 Tiruchirapalli-I,DMK,2001,Tamil Nadu,166,1,GEN,PARANIKUMOR. B.,M,0,,31421,73192,#c0392b,
-Tiruchirapalli-I,MUL,2001,Tamil Nadu,166,2,GEN,KADHER MOHIDEEN. M.,M,0,,30497,73192,#222,
+Tiruchirapalli-I,IUML,2001,Tamil Nadu,166,2,GEN,KADHER MOHIDEEN. M.,M,0,,30497,73192,#222,
 Tiruchirapalli-I,MDMK,2001,Tamil Nadu,166,3,GEN,MALAR MANNAN.A.,M,0,,9003,73192,#9b59b6,
 Tiruchirapalli-I,JD(U),2001,Tamil Nadu,166,4,GEN,ARUMUGAM.K.C.,M,0,,802,73192,#222,
 Tiruchirapalli-I,IND,2001,Tamil Nadu,166,5,GEN,RAJAMANI. K.,M,0,,418,73192,#bdc3c7,
