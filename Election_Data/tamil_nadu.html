@@ -1271,7 +1271,7 @@ function data_scatter(type_votes){
    return d3.sum(d, function(g) {return g.polled_votes; });
   }).entries(stay_data_csv.filter(function(d){return (d.rank==1) }));
 
-   mapper_party = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK','ADK(JL)','SWA','JNP','NCO','AIFB','BJP','PSP','GKC','MDMK','VCK','IUML','PT','SSP','ADK(JR)','JD','MNMK','AKD','ICS(SCS)','AMMK'];
+   mapper_party = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK','ADK(JL)','SWA','JNP','NCO','AIFB','BJP','PSP','GKC','MDMK','VCK','IUML','PT','SSP','ADK(JR)','JD','MNMK','AKD','ICS(SCS)','AMMK','NTK','MNM'];
 
    data_mapper_data = stay_data_csv.filter(function(d) { return mapper_party.indexOf(d.PARTY) >-1 })
   
@@ -1820,7 +1820,7 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
    cons_layers.push(cons_set.filter(function(d){ return (parseInt(d.YEAR)==period) }))
             });
             
-		var party_names = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK','ADK(JL)','SWA','JNP','NCO','AIFB','BJP','PSP','GKC','MDMK','VCK','IUML','PT','SSP','ADK(JR)','JD','MNMK','AKD','ICS(SCS)','AMMK','Others','NOTA'];
+		var party_names = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK','ADK(JL)','SWA','JNP','NCO','AIFB','BJP','PSP','GKC','MDMK','VCK','IUML','PT','SSP','ADK(JR)','JD','MNMK','AKD','ICS(SCS)','AMMK','Others','NTK','MNM','NOTA'];
     
             year_stack=[];
             cons_layers.forEach(function (year) {    
