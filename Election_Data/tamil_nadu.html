@@ -1240,6 +1240,7 @@ var party_names = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK'
           .append('th')
           .style("max-width",'50px')
           .style("font-size",'15px')
+		  .style('text-align',function(d,i) { return i==4? 'center':'start'})
           .append("font")
           .attr("color","#636363")
           .text(function(o,i) { return o });
@@ -1254,6 +1255,7 @@ var party_names = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK'
           .attr('class',function(d) { return d+'s'})
           .style("max-width",'50px')
           .style("font-size",'15px')
+		  .style('text-align',function(d,i) { return i==4? 'center':'start'})
           .text(function(o,i) { return i!=2? o:'' })
           .append('div')
           .attr('class',function(d,i) { return i!=2? '':'progress'; })
@@ -1265,7 +1267,6 @@ var party_names = ['DMK','ADMK','INC','TVK','CPM','TMC','CPI','PMK','IND','DMDK'
           .attr('aria-valuemax','100')
           .style('background-color',function(d,i) { return i!=2? '':heading_colors[parseInt(d.split(':')[0])]; })
           .style('width',function(d,i) { return i!=2? '0%':d.split(':')[1]+'%'; });
-         
             d3.selectAll('.removed_data').remove();
   });
   });
