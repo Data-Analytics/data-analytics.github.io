@@ -44,6 +44,15 @@
   <meta itemprop="name" content="ASSEMBLY ELECTIONS 1964 - 2026 (Pondicherry)">
   <meta itemprop="image" content="/./images/py.png">
   <title>Assembly Elections 1964 - 2026 (Pondicherry)</title>
+  <style>
+  .uneditable-input, input[type=text], select, textarea {
+    width: 130px !important;
+    margin: 0 auto;
+	}
+	.progress{
+	width: 85%;
+	}
+  </style>  
 </head>
 <body>
       <div class="se-pre-con"></div>
@@ -149,13 +158,13 @@
                               <text x="973.571428572" y="10.0" text-anchor="middle" dy=".35em" fill="#000">AINRC</text>
                           </g>
                         </svg>
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                     <div class="overall_view_report">
-                     </div>
-                    </div>
-                    <div class="col-md-2"></div>
-                    </div>
+					   <div class="col-md-1"></div>
+					   <div class="col-md-10">
+						<div class="overall_view_report">
+						</div>
+					   </div>
+					   <div class="col-md-1"></div>
+					   </div>
                 </div>
             </div>
             </div>
@@ -923,6 +932,7 @@ $('#'+flowyear_detail+'').addClass('active');
 $(".successive_year_tag").append("("+flowyear_detail.replace('_', ' to ')+")");
 
 d3.json("overall_py.json", function(data) { 
+d3.csv("overall_py_vote_share.csv", function(data_csv_vote_share) { 
         
 var margin = {top: 20, right: 20, bottom: 35, left: 20},
     width = 1200 - margin.left - margin.right,
@@ -1011,6 +1021,8 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
       $("rect").tooltip({container: '.stacked_bar', html: true, placement:'top'});
       $("text").tooltip({container: '.stacked_bar', html: true, placement:'top'});
      
+	  data_party_vote_share_year = data_csv_vote_share.filter(function(d){return (d.YEAR==year_detail) });
+	  
       year_data_set = data.filter(function(d){return (d.YEAR==year_detail) })
 
       year_data_sets = year_data_set[0].party.filter(function(d){return (d.value>0) })
@@ -1020,6 +1032,14 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
       heading_colors = []
       year_data_sets.forEach(function(o) {
         heading_colors.push(color_map[o.name])
+		 data_party_vote_share = data_party_vote_share_year.filter(function(d){return (d.PARTY==o.name) });
+		 if (data_party_vote_share.length!=0){
+		 o.votes = addThousandsSeparator(data_party_vote_share[0]['VOTES'])
+		 o.vote_percent = (data_party_vote_share[0]['VOTES']*100/data_party_vote_share[0]['polled_votes']).toFixed(2)
+		 }else{
+		 o.votes = ''
+		 o.vote_percent = ''
+		 }
       })
 
       max_seats = d3.max(year_data_sets, function(d) { return d.value; });
@@ -1034,12 +1054,13 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
                         
                         lowresult_data.append('thead')
                                 .selectAll("tr")
-                                .data([['Party','Seats','Seat Share']]).enter()
+								.data([['Party','Seats','Seat Share','Votes','Vote %']]).enter()
                                 .append("tr")
                                 .selectAll("th")
                                     .data(function(d,l) { return d }).enter()
                                     .append('th')
-                                    .style("max-width",'10px')
+                                    .style("max-width",'50px')
+									.style('text-align',function(d,i) { return i==4? 'center':'start'})
                                     .style("font-size",'15px')
                                     .append("font")
                                     .attr("color","#636363")
@@ -1050,27 +1071,28 @@ var party_names = ['INC','DMK','ADMK','AINRC','JNP','CPI','TMC(M)','NCO','PMK','
                                 .data(function(o) { return o }).enter()
                                 .append("tr")
                                 .selectAll("td")
-                                    .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2)] }).enter()
+ 	      			                .data(function(d,l) { return [d.name,d.value,l+':'+(d.value*100/max_seats).toFixed(2),d.votes,d.vote_percent] }).enter()
                                     .append('td')
                                     .attr('class',function(d) { return d+'s'})
-                                    .style("max-width",'10px')
+                                    .style("max-width",'50px')
                                     .style("font-size",'15px')
-                                    .text(function(o,i) { return i<2? o:'' })
+                                    .style('text-align',function(d,i) { return i==4? 'center':'start'})
+									.text(function(o,i) { return i!=2? o:'' })
                                     .append('div')
-                                    .attr('class',function(d,i) { return i<2? '':'progress'; })
+                                    .attr('class',function(d,i) { return i!=2? '':'progress'; })
                                     .append('div')
                                     .attr('class','progress-bar progress-bar-striped')
                                     .attr('role','progressbar')
                                     .attr('aria-valuenow','70')
                                     .attr('aria-valuemin','0')
                                     .attr('aria-valuemax','100')
-                                    .style('background-color',function(d,i) { return i<2? '':heading_colors[parseInt(d.split(':')[0])]; })
-                                    .style('width',function(d,i) { return i<2? '0%':d.split(':')[1]+'%'; });
+                                    .style('background-color',function(d,i) { return i!=2? '':heading_colors[parseInt(d.split(':')[0])]; })
+                                    .style('width',function(d,i) { return i!=2? '0%':d.split(':')[1]+'%'; });
      
      d3.selectAll('.removed_data').remove();
 
   });
-        
+  });      
 function addThousandsSeparator(t){var a=t;if(parseFloat(t)){t=new String(t);var e=t.split(".");e[0]=e[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g,"$1,").split("").reverse().join(""),a=e.join(".")}return a}
     
 d3.csv("assembly_pondi_detail.csv", function(data_csv) {
@@ -1852,8 +1874,8 @@ var margin = {top: 20, right: 20, bottom: 35, left: 20},
     .text(winning_party[0]['key']);
     
       $("path").tooltip({container: '.party_performance_trend_svg', html: true, placement:'top'});
-      
-        });
+
+        });      
         
 var margin = {top: 50, right: 20, bottom: 20, left: 20},
     width = 1200 - margin.left - margin.right,
@@ -2067,8 +2089,7 @@ d3.text("pondi_data.csv", function(error, data) {
                         .text(function(d) { return d; })
 
     $('#myTable').DataTable({ "sScrollX": "100%", "sScrollXInner": "150%" });
-    
-});
+});    
 
 </script>
 <div class="container footer_details">
